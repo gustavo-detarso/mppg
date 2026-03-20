@@ -1,0 +1,78 @@
+Quero que você produza uma atividade acadêmica completa a partir do tema [TEMA], usando como modelo estrutural e visual o arquivo .org que vou anexar.
+
+Tarefa:
+1. Pesquise no [BASE DE DADOS / SITE, ex.: Semantic Scholar] artigos sobre [TEMA].
+2. Priorize [TIPO DE ESTUDO, ex.: artigo de revisão, revisão sistemática, literature review, systematic review].
+3. Selecione o artigo mais adequado ao objetivo da atividade.
+4. Organize a busca e a seleção segundo a lógica do PRISMA 2020.
+5. Entregue:
+   - um arquivo .org completo, no mesmo estilo do arquivo-modelo anexado;
+   - um arquivo SVG externo com o fluxograma PRISMA;
+   - o .org já preparado para referenciar esse SVG corretamente.
+
+Instruções obrigatórias:
+- Use o arquivo .org anexado como referência de estrutura, tom, organização e estilo acadêmico.
+- Não invente dados. Se algum número do PRISMA for resultado da sua triagem da busca, deixe isso claro. Se houver números internos do artigo selecionado, diferencie explicitamente os números da sua busca dos números da revisão do artigo.
+- Faça a busca com termos adequados ao tema, em linguagem compatível com a base consultada.
+- Explique:
+  1. a estratégia de busca;
+  2. os critérios de inclusão e exclusão;
+  3. a justificativa da escolha do artigo;
+  4. o problema de pesquisa do artigo;
+  5. o argumento central;
+  6. o desenho metodológico;
+  7. os principais achados.
+- Estruture o texto em linguagem acadêmica clara, em português.
+- O arquivo .org deve sair pronto para exportação.
+- O fluxograma PRISMA deve ser gerado como SVG externo, e não desenhado em PlantUML.
+- No .org, use apenas um método de inserção da figura. Não misture link simples de imagem com bloco LaTeX redundante.
+- Prepare o .org para usar o SVG de forma limpa e estável.
+
+Exigências específicas para o SVG:
+- O SVG deve ter aparência acadêmica limpa, organizada e próxima do padrão visual do PRISMA 2020.
+- Nenhuma caixa pode ter texto extrapolando os limites.
+- Nenhuma legenda, nota, título ou subtítulo pode sobrepor caixas, setas ou margens.
+- Ajuste manualmente largura, altura, line breaks, padding interno e espaçamento vertical.
+- Garanta folga inferior suficiente para notas e observações.
+- Se uma caixa tiver muitas linhas, aumente a altura da caixa e, se necessário, a altura total do canvas.
+- Garanta que o viewBox e o tamanho do canvas sejam compatíveis com todo o conteúdo.
+- O texto deve ficar totalmente contido em cada bloco.
+- Antes de entregar, revise o SVG para verificar:
+  - ausência de sobreposição;
+  - ausência de texto vazando;
+  - alinhamento correto das caixas;
+  - setas bem posicionadas;
+  - respiro visual adequado.
+
+Exigências específicas para o .org:
+- Entregue o .org completo, e não apenas trechos.
+- O .org deve conter título, contextualização, estratégia de busca, critérios de seleção, quadro PRISMA, tabela dos estudos triados e síntese do artigo final.
+- Inclua a referência ao SVG de forma limpa.
+- Se optar por bloco LaTeX para o SVG, deixe o arquivo coerente para esse pipeline.
+- Não deixe duplicidade de chamada da figura.
+- O caminho do SVG no .org deve ser simples e consistente com o nome do arquivo entregue.
+
+Saída esperada:
+1. Texto da atividade completo.
+2. Arquivo .org final.
+3. Arquivo .svg final.
+4. Pequena explicação final informando:
+   - qual artigo foi selecionado;
+   - qual foi a lógica PRISMA usada;
+   - qual é o nome exato do arquivo .org;
+   - qual é o nome exato do arquivo .svg.
+
+Tema da atividade:
+[TEMA]
+
+Base principal de busca:
+[BASE DE DADOS]
+
+Recorte desejado:
+[EX.: artigos recentes; apenas revisões; período 2020-2026; idioma inglês/português etc.]
+
+Palavras-chave iniciais:
+[PALAVRAS-CHAVE]
+
+Observação importante:
+Se houver qualquer risco de extrapolação visual no fluxograma, corrija antes de entregar. Não entregue SVG com caixa estourando, nota sobreposta, texto cortado, desalinhamento ou canvas insuficiente.

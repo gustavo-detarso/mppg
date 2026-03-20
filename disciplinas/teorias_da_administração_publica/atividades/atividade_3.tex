@@ -1,0 +1,305 @@
+% Created 2026-03-17 ter 15:16
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{fgv-header}
+\author{Gustavo M. Mendes de Tarso}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado de Políticas Públicas e Governo \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias de Administração Pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Trabalho}                & Aplicação do protocolo PRISMA 2020 a artigo empírico \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Título do trabalho}      & Busca, seleção e síntese de artigo empírico sobre burocracia de nível de rua, tecnologia e inteligência artificial \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+
+\FGVNewPage
+
+\section{Introdução}
+\label{sec:orge7ff8bf}
+
+Este trabalho apresenta, em formato alinhado ao \textbf{PRISMA 2020}, o fluxo de identificação, triagem, elegibilidade e inclusão de um \textbf{artigo acadêmico empírico} relacionado ao tema da disciplina \textbf{Teorias de Administração Pública}, com ênfase em sua articulação com \textbf{tecnologia} e \textbf{inteligência artificial}. O recorte adotado procurou preservar o mesmo ponto de partida metodológico exposto em aula: busca no campo da \textbf{Administração Pública} a partir de termos localizados no \textbf{título, resumo ou palavras-chave}, com preferência por \textbf{artigos revisados por pares} e publicados em \textbf{inglês}. Sobre esse universo inicial, foram acrescentados descritores relacionados a \textbf{IA}, \textbf{tomada de decisão}, \textbf{burocracia} e \textbf{implementação}.
+
+A escolha desse recorte é coerente com os conteúdos da disciplina por três razões principais. Em primeiro lugar, porque os debates contemporâneos em Administração Pública já incorporam tópicos como \textbf{transformação digital}, \textbf{algoritmos} e \textbf{inteligência artificial} como problemas empíricos relevantes. Em segundo lugar, porque a disciplina enfatiza que a pesquisa em Administração Pública é tipicamente voltada a problemas concretos de governo, gestão e implementação. Em terceiro lugar, porque a própria estrutura analítica mobilizada em aula valoriza a apresentação clara de \textbf{problema de pesquisa}, \textbf{objetivo}, \textbf{método} e \textbf{achados}, exatamente o formato adotado neste trabalho.
+
+Como esta atividade foi desenvolvida fora de uma interface autenticada de base indexadora, a busca foi \textbf{operacionalizada com a mesma lógica apresentada na aula} e a seleção final foi verificada a partir de \textbf{metadados públicos, páginas de periódicos e versões abertas dos artigos}. O objetivo não foi produzir uma revisão exaustiva, mas demonstrar, de maneira transparente, um processo de busca e seleção compatível com a declaração PRISMA 2020.
+
+Ao final do processo, foi selecionado o artigo \textbf{“Just like I thought”: Street-level bureaucrats trust AI recommendations if they confirm their professional judgment} (Selten, Robeer e Grimmelikhuijsen, 2023), por ser o estudo que melhor conecta um dos eixos centrais da disciplina — a \textbf{burocracia de nível de rua} — com o uso de \textbf{inteligência artificial} na decisão pública.
+
+\section{Estratégia de busca}
+\label{sec:org3737226}
+
+\subsection{Pergunta orientadora}
+\label{sec:org8ad7521}
+
+\begin{quote}
+Qual artigo empírico, aderente ao campo da administração pública, melhor articula os temas da disciplina com tecnologia e inteligência artificial, especialmente nos eixos burocracia, discricionariedade, implementação e tomada de decisão?
+\end{quote}
+
+\subsection{Base e lógica de busca}
+\label{sec:org807b51d}
+
+A busca partiu do mesmo padrão metodológico exibido no material da aula:
+\begin{itemize}
+\item \textbf{Scopus} como referência do corpus de Administração Pública;
+\item ocorrência do termo de interesse em \textbf{título, resumo ou palavras-chave};
+\item preferência por \textbf{artigos revisados por pares} e \textbf{publicados em inglês}.
+\end{itemize}
+
+A partir desse núcleo, foram acrescidos descritores relacionados a inteligência artificial e tecnologia, seguidos de triagem manual para retenção apenas de \textbf{artigos empíricos} com aderência efetiva ao debate da disciplina.
+
+\subsection{Query de trabalho (formato compatível com a lógica da Scopus)}
+\label{sec:org7cf57ad}
+
+\begin{quote}
+TITLE-ABS-KEY("public administration")
+AND TITLE-ABS-KEY("artificial intelligence" OR algorithm* OR "digital transformation")
+AND TITLE-ABS-KEY("street-level bureaucr*" OR bureaucr* OR "decision making" OR governance)
+AND NOT TITLE-ABS-KEY(review OR "systematic review" OR "literature review")
+\end{quote}
+
+\subsection{Fontes operacionais consultadas nesta sessão}
+\label{sec:org3479cc7}
+\begin{itemize}
+\item Material da disciplina (\textbf{slides} e textos-base)
+\item Páginas abertas de periódicos científicos
+\item Repositórios institucionais com metadados e/ou PDF
+\item Registros DOI e páginas de metadados acadêmicos
+\end{itemize}
+
+\subsection{Critérios de inclusão}
+\label{sec:orgf0baf58}
+\begin{itemize}
+\item artigo de periódico;
+\item estudo empírico;
+\item aderência ao campo da administração pública;
+\item presença explícita de tecnologia e/ou inteligência artificial no problema de pesquisa;
+\item conexão substantiva com ao menos um eixo da disciplina, como burocracia, discricionariedade, implementação, governança ou tomada de decisão;
+\item disponibilidade de resumo e de informações metodológicas suficientes para avaliação, preferencialmente com acesso ao texto completo.
+\end{itemize}
+
+\subsection{Critérios de exclusão}
+\label{sec:org072cb97}
+\begin{itemize}
+\item revisões de literatura, artigos ensaísticos ou agendas de pesquisa;
+\item preprints não revisados por pares;
+\item estudos com foco predominantemente técnico-computacional, sem centralidade para o debate em administração pública;
+\item estudos empíricos sobre adoção tecnológica cujo vínculo com os eixos teóricos centrais da disciplina fosse apenas periférico.
+\end{itemize}
+
+\section{PRISMA 2020}
+\label{sec:org583665e}
+
+\subsection{Fluxo textual dos estudos}
+\label{sec:org64238bb}
+
+\subsubsection{Identificação}
+\label{sec:org034e22f}
+\begin{itemize}
+\item Registros identificados por busca focalizada: \textbf{n = 8}
+\begin{itemize}
+\item Registros sobre IA, decisão pública e burocracia/organizações públicas: \textbf{n = 8}
+\end{itemize}
+
+\item Registros removidos antes da triagem: \textbf{n = 1}
+\begin{itemize}
+\item Duplicata do artigo selecionado em página de periódico e repositório institucional: \textbf{n = 1}
+\item Remoção por outros motivos: \textbf{n = 0}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Triagem}
+\label{sec:org03fb0ca}
+\begin{itemize}
+\item Registros triados por título, resumo e metadados: \textbf{n = 7}
+\item Registros excluídos na triagem: \textbf{n = 3}
+\begin{itemize}
+\item Revisão de literatura, scoping review ou agenda de pesquisa: \textbf{n = 2}
+\item Preprint não revisado por pares: \textbf{n = 1}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Elegibilidade}
+\label{sec:orgdaef0e9}
+\begin{itemize}
+\item Relatórios buscados para recuperação em texto completo: \textbf{n = 4}
+\item Relatórios não recuperados: \textbf{n = 0}
+
+\item Relatórios avaliados para elegibilidade: \textbf{n = 4}
+\item Relatórios excluídos após leitura do texto completo: \textbf{n = 3}
+\begin{itemize}
+\item Foco principal em adoção organizacional de IA, com ligação apenas indireta à burocracia de nível de rua e à discricionariedade: \textbf{n = 2}
+\item Ênfase em accountability subjetiva mediada por IA, menos aderente ao recorte priorizado de decisão e implementação: \textbf{n = 1}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Inclusão}
+\label{sec:orgc9b47a2}
+\begin{itemize}
+\item Estudos incluídos na síntese qualitativa: \textbf{n = 1}
+\end{itemize}
+
+\subsection{Tabela-resumo do fluxo PRISMA 2020}
+\label{sec:orgd639311}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+\toprule
+Etapa PRISMA 2020 & n \\
+\midrule
+Registros identificados & 8 \\
+Registros removidos antes da triagem & 1 \\
+Registros triados & 7 \\
+Registros excluídos na triagem & 3 \\
+Relatórios buscados para recuperação & 4 \\
+Relatórios não recuperados & 0 \\
+Relatórios avaliados para elegibilidade & 4 \\
+Relatórios excluídos após leitura completa & 3 \\
+Estudos incluídos na síntese qualitativa & 1 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+\subsection{Estudos classificados no fluxo}
+\label{sec:orgb72bd66}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}m{0.18\textwidth} >{\raggedright\arraybackslash}m{0.14\textwidth} >{\raggedright\arraybackslash}m{0.22\textwidth}}
+\toprule
+Estudo & Situação no fluxo & Tipo & Motivo \\
+\midrule
+Selten, Robeer e Grimmelikhuijsen (2023), \textit{“Just like I thought”: Street-level bureaucrats trust AI recommendations if they confirm their professional judgment} & Incluído & Artigo empírico & Melhor articulação entre burocracia de nível de rua, discricionariedade e IA \\
+Deng e Sun (2025), \textit{How does the usage of artificial intelligence affect felt administrative accountability of street-level bureaucrats?} & Excluído na elegibilidade & Artigo empírico & Foco principal em accountability percebida, menos aderente ao recorte de decisão e implementação \\
+Ribeiro e Segatto (2025), \textit{Inteligência artificial nas organizações públicas brasileiras: heterogeneidades e capacidades em tecnologia da informação} & Excluído na elegibilidade & Artigo empírico & Estudo organizacional relevante, mas com vínculo indireto ao eixo de burocracia de nível de rua \\
+Omonov e Ahn (2025), \textit{Towards Smart Public Administration: A TOE-Based Empirical Study of AI Chatbot Adoption in a Transitioning Government Context} & Excluído na elegibilidade & Artigo empírico & Ênfase em adoção de chatbot e framework TOE, com menor diálogo com os eixos teóricos centrais da disciplina \\
+Kaun, Larsson e colaboradores (2024), \textit{Automating public administration: citizens' attitudes towards automated decision-making across Estonia, Sweden, and Germany} & Excluído na triagem & Artigo empírico & Foco em atitudes dos cidadãos, e não na burocracia, organização ou implementação \\
+Gillingham, Morley e Floridi (2024), \textit{The Effects of AI on Street-Level Bureaucracy: A Scoping Review} & Excluído na triagem & Revisão de literatura & Não é artigo empírico \\
+Johannesson e Arnesen (2025), \textit{How Using Artificial Intelligence in Public Administration Shifts Citizens' Expectations of Street-Level Bureaucracy} & Excluído na triagem & Preprint & Não revisado por pares \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+\clearpage
+\clearpage
+\subsection{Representação esquemática em PlantUML}
+\label{sec:org2f52f52}
+
+\FGVAutoSVG
+  {prisma_empirico_ia_teorias_adm_publica_fluxo}
+  {Fluxograma PRISMA 2020 da seleção do artigo empírico.}
+  {fig:prisma2020_fluxo}
+
+\section{Resumo do artigo selecionado}
+\label{sec:org74649b8}
+
+\subsection{Referência do estudo}
+\label{sec:orgfe084f4}
+
+Selten, Friso; Robeer, Marcel; Grimmelikhuijsen, Stephan. \textbf{“Just like I thought”: Street-level bureaucrats trust AI recommendations if they confirm their professional judgment}. \emph{Public Administration Review}, v. 83, n. 2, p. 263-278, 2023.
+
+\subsection{Problema e objetivo de pesquisa}
+\label{sec:orgdb1b6df}
+
+O problema central do artigo é diretamente compatível com um dos núcleos da disciplina: \textbf{como burocratas de nível de rua interagem com tecnologias de inteligência artificial quando essas tecnologias passam a participar da tomada de decisão pública}. Mais especificamente, o estudo procura responder o que acontece quando uma recomendação produzida por IA \textbf{confirma} ou \textbf{contradiz} o julgamento profissional intuitivo de um burocrata de nível de rua.
+
+O objetivo do artigo é duplo. O primeiro é investigar de que forma recomendações de IA afetam a \textbf{decisão} de burocratas de nível de rua. O segundo é examinar se a chamada \textbf{explainable AI} aumenta a confiança dos agentes públicos nessas recomendações. Em termos teóricos, o estudo confronta duas possibilidades: de um lado, a \textbf{automation bias}, isto é, a tendência de seguir a máquina; de outro, a \textbf{confirmation bias}, isto é, a tendência de confiar mais na IA quando ela apenas reforça o que o agente já acreditava.
+
+Essa formulação faz uma ponte clara entre os temas da aula, porque recoloca em chave contemporânea debates clássicos sobre \textbf{discricionariedade}, \textbf{implementação}, \textbf{autonomia decisória} e \textbf{controle} no nível da burocracia de rua. Em vez de perguntar apenas como o burocrata interpreta normas, o artigo pergunta como ele reage quando uma tecnologia algorítmica entra no processo decisório.
+
+\subsection{Método utilizado}
+\label{sec:orgcc0d1e6}
+
+O artigo adota um \textbf{desenho experimental} com forte aderência empírica ao contexto profissional estudado. Os autores aplicaram um \textbf{experimento fatorial 2 × 2, com medidas repetidas}, utilizando um sistema simulado de \textbf{predictive policing} concebido para ser realista no contexto da polícia holandesa.
+
+A amostra foi composta por \textbf{124 policiais de nível de rua} nos Países Baixos. Cada participante respondeu a \textbf{três vinhetas} semelhantes, resultando em \textbf{294 observações} no total. Os tratamentos combinaram duas dimensões:
+\begin{itemize}
+\item recomendação de IA \textbf{congruente} ou \textbf{incongruente} com o julgamento profissional intuitivo do policial;
+\item recomendação \textbf{explicada} ou \textbf{não explicada} pela IA.
+\end{itemize}
+
+Com isso, o estudo pôde testar, de maneira controlada, se os policiais \textbf{confiam}, \textbf{aceitam} e \textbf{seguem} mais uma recomendação algorítmica quando ela está alinhada ao seu conhecimento profissional prévio e se a explicação do sistema altera esse comportamento.
+
+Do ponto de vista das diretrizes de pesquisa discutidas em aula, trata-se sobretudo de uma \textbf{pesquisa explicativa}, pois busca identificar o efeito de uma condição causal — o tipo de recomendação da IA — sobre crenças e comportamentos de agentes públicos.
+
+\subsection{Principais achados}
+\label{sec:org1a2f4c2}
+
+Os resultados do estudo mostram que os policiais \textbf{não seguem cegamente} as recomendações da IA. Ao contrário, eles tendem a \textbf{confiar} e \textbf{seguir} essas recomendações quando elas \textbf{confirmam} seu julgamento profissional anterior. Em outras palavras, o padrão dominante observado é mais compatível com \textbf{viés de confirmação} do que com \textbf{viés de automação}.
+
+O segundo achado relevante é que a \textbf{IA explicável} não produziu aumento estatisticamente significativo de confiança nas recomendações algorítmicas. Isso significa que, ao menos neste contexto, oferecer explicações adicionais sobre a lógica da recomendação não foi suficiente para superar o peso do julgamento profissional já formado pelo agente.
+
+O terceiro achado é normativamente ambivalente. Por um lado, a persistência da discricionariedade humana pode funcionar como mecanismo de correção de recomendações algorítmicas enviesadas, injustas ou falhas. Por outro lado, o mesmo padrão limita a expectativa de que sistemas de IA, mesmo quando concebidos para promover maior justiça ou neutralidade, consigam corrigir automaticamente os vieses humanos. O estudo mostra, portanto, que a interação entre burocrata e algoritmo é mais complexa do que uma simples substituição da decisão humana pela decisão automatizada.
+
+\subsection{Por que este artigo foi o selecionado}
+\label{sec:orgc805ddd}
+
+Entre os estudos empíricos encontrados, este foi o mais aderente ao conteúdo da disciplina por quatro razões principais. Primeiro, porque se ancora diretamente na literatura de \textbf{burocracia de nível de rua}. Segundo, porque trata de \textbf{discricionariedade} e \textbf{tomada de decisão}, dois temas centrais do campo. Terceiro, porque examina um problema contemporâneo da administração pública — a incorporação de IA em decisões operacionais — sem abandonar a linguagem teórica do curso. Quarto, porque oferece um método empírico claro, replicável e facilmente apresentável no formato de \textbf{problema, objetivo, método e achados}.
+
+\section{Considerações finais}
+\label{sec:orgd6132f3}
+
+A aplicação do PRISMA 2020 ao recorte aqui adotado mostra que o encontro entre \textbf{teorias da administração pública} e \textbf{inteligência artificial} já produz um conjunto relevante de estudos, mas nem todos dialogam igualmente com os eixos centrais da disciplina. Parte dessa literatura é formada por revisões, agendas de pesquisa ou estudos mais próximos da adoção tecnológica organizacional. Quando o objetivo é encontrar \textbf{um artigo empírico} que articule, de forma mais densa, os temas da aula com IA, o eixo da \textbf{burocracia de nível de rua} se revelou particularmente promissor.
+
+O artigo selecionado evidencia que a introdução de IA na administração pública não elimina o papel do burocrata. Ao contrário, a tecnologia passa a compor um novo ambiente decisório, no qual persistem discricionariedade, julgamento profissional, confiança seletiva e possibilidades de viés. Nesse sentido, a IA não substitui os dilemas clássicos da administração pública; ela os reconfigura.
+
+Por isso, o estudo de Selten, Robeer e Grimmelikhuijsen é particularmente útil para a disciplina. Ele permite atualizar a discussão sobre implementação e discricionariedade com base em um problema contemporâneo, mostrando que a análise de tecnologia pública só ganha densidade explicativa quando é articulada aos conceitos clássicos do campo.
+
+\section{Referências}
+\label{sec:org50faae0}
+
+ALON-BARKAT, Sharon; BUSUIOC, Madalina. \textbf{Public Administration Meets Artificial Intelligence: Towards a Meaningful Behavioral Research Agenda on Algorithmic Decision-Making in Government}. Journal of Behavioral Public Administration, 2024.
+
+DENG, Yi; SUN, Yu. \textbf{How does the usage of artificial intelligence affect felt administrative accountability of street-level bureaucrats? The mediating effect of perceived discretion}. Public Management Review, 2025.
+
+GILLINGHAM, Cara; MORLEY, Jessica; FLORIDI, Luciano. \textbf{The Effects of AI on Street-Level Bureaucracy: A Scoping Review}. 2024.
+
+JOHANNESSON, Mikael Poul; ARNESEN, Sveinung. \textbf{How Using Artificial Intelligence in Public Administration Shifts Citizens’ Expectations of Street-Level Bureaucracy}. SocArXiv, 2025.
+
+KAUN, Anne; LARSSON, Anders Olof; et al. \textbf{Automating public administration: citizens' attitudes towards automated decision-making across Estonia, Sweden, and Germany}. Information, Communication \& Society, 2024.
+
+OMONOV, Mansur Samadovich; AHN, Yonghan. \textbf{Towards Smart Public Administration: A TOE-Based Empirical Study of AI Chatbot Adoption in a Transitioning Government Context}. Administrative Sciences, 2025.
+
+RIBEIRO, Manuella Maia; SEGATTO, Catarina Ianni. \textbf{Inteligência artificial nas organizações públicas brasileiras: heterogeneidades e capacidades em tecnologia da informação}. Revista de Administração Pública, v. 59, n. 1, e2024-0066, 2025.
+
+SELTEN, Friso; ROBEER, Marcel; GRIMMELIKHUIJSEN, Stephan. \textbf{“Just like I thought”: Street-level bureaucrats trust AI recommendations if they confirm their professional judgment}. Public Administration Review, v. 83, n. 2, p. 263-278, 2023.
+\end{document}
