@@ -1,0 +1,281 @@
+#+OPTIONS: toc:nil num:t H:3 ^:nil
+#+STARTUP: overview
+#+LATEX_HEADER: \usepackage{fgv-header}
+#+LATEX: \FGVNewPage
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado em Políticas Públicas e Governo \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias da Administração Pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Aluno(s)}                & Gustavo Magalhães Mendes de Tarso \\
+\textbf{Data}                    & 21 de março de 2026 \\
+\textbf{Título do trabalho}      & Busca, seleção e análise de artigo empírico sobre governança, compliance e gestão de riscos no serviço público \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \FGVNewPage
+
+* Introdução
+
+Este trabalho organiza a etapa de triagem e elegibilidade de estudos recuperados sobre governança, compliance e gestão de riscos no serviço público, em alinhamento com a lógica do PRISMA 2020 e com o objetivo da disciplina de identificar um artigo empírico para análise aprofundada. O recorte adotado privilegia evidências empíricas produzidas no campo da administração pública, especialmente estudos que examinem mecanismos institucionais, organizacionais ou operacionais de governança, integridade, controle interno, accountability, compliance e gestão de riscos em organizações públicas.
+
+A busca foi orientada por descritores em português e inglês, aplicados nas bases Semantic Scholar e Scopus, com prioridade para artigos publicados entre 2022 e 2026, em inglês ou português, e com disponibilidade de texto completo verificável. Como os candidatos já foram previamente filtrados quanto à existência de acesso ao texto completo, a triagem concentrou-se na aderência temática ao problema de pesquisa, no caráter empírico do estudo e na proximidade com o campo da administração pública.
+
+Entre os registros fornecidos, observou-se heterogeneidade temática relevante: alguns estudos tratam diretamente de governança, risco, controle, integridade ou fiscalização no setor público; outros, embora localizados pela estratégia de busca, apresentam aderência periférica, por incidirem sobre liderança, desenvolvimento regional, saúde, governança fundiária ou infraestrutura ambiental sem centralidade em mecanismos de governança, compliance ou gestão de riscos no serviço público. Ao final, foi selecionado o estudo que melhor combina aderência substantiva ao recorte, natureza empírica, foco em organização pública e disponibilidade verificável de PDF.
+
+O artigo selecionado ao final do processo foi *“Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission”*. A escolha final se justifica porque O artigo "Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission" foi selecionado por ser o candidato que melhor satisfaz, de forma simultânea, os critérios de aderência temática, empiricidade e pertinência ao campo da administração pública. O título indica claramente um estudo de caso empírico em órgão público de controle e integridade — a Comissão Nacional Anticorrupção da Tailândia — diretamente relacionado a mecanismos de triagem de denúncias, prevenção de irregularidades e apoio à fiscalização, todos fortemente conectados aos eixos de governança, compliance, integridade pública e gestão de riscos no serviço público. Além disso, o registro apresenta full_text_verified=true e PDF verificável em acesso direto na PLOS ONE (https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0338633&type=printable), atendendo à exigência metodológica de disponibilidade comprovada do texto completo. Entre os candidatos, é o estudo com melhor equilíbrio entre foco institucional público, mecanismo concreto de controle/compliance e clareza de desenho empírico.
+
+Também é importante registrar uma distinção metodológica. Neste trabalho, o *PRISMA 2020* foi utilizado para organizar o *fluxo da busca e da seleção* nas bases consultadas. O artigo selecionado foi analisado a partir de seus metadados e, obrigatoriamente, de um *texto completo com link verificável para download*.
+
+* Estratégia de busca
+
+** Pergunta orientadora
+
+#+begin_quote
+Qual artigo empírico, publicado entre 2022 e 2026 e recuperado nas bases Semantic Scholar e Scopus, apresenta evidências mais aderentes sobre mecanismos de governança, compliance e gestão de riscos na administração pública, com foco no serviço público e com texto completo verificável?
+#+end_quote
+
+** Bases consultadas
+
+- Semantic Scholar, Scopus
+
+** Base e lógica de busca
+
+A lógica de busca partiu da combinação de três blocos conceituais: (i) administração pública e governança pública; (ii) compliance, integridade, accountability, controle interno e gestão de riscos; e (iii) marcadores de pesquisa empírica, como estudo de caso, survey, análise quantitativa e análise qualitativa. Em Scopus, essa lógica foi operacionalizada no campo TITLE-ABS-KEY; em Semantic Scholar, empregou-se a mesma estrutura booleana em busca ampla por metadados.
+
+Em termos analíticos, a triagem priorizou estudos empíricos que investigassem mecanismos de governança, fiscalização, supervisão, procurement, prevenção de fraude, screening de denúncias, desenho institucional orientado a risco ou instrumentos de compliance no setor público. Foram favorecidos trabalhos cujo título já indicasse, de forma inequívoca, incidência sobre administração pública, serviço público, organizações governamentais, setor público ou políticas/instituições públicas. Estudos com foco predominantemente tecnológico, jurídico-abstrato, psicológico ou setorial sem conexão nítida com o problema central foram excluídos na triagem ou na elegibilidade.
+
+** Queries por base
+
+- *Semantic Scholar*: =("governança pública" OR "public governance" OR "governança no setor público" OR "public sector governance" OR "administração pública" OR "public administration") AND (compliance OR "compliance público" OR "public compliance" OR "integridade pública" OR "public integrity" OR "gestão de riscos" OR "risk management" OR "controle interno" OR "internal control" OR accountability) AND ("estudo empírico" OR "empirical study" OR "evidências empíricas" OR "empirical evidence" OR "case study" OR survey OR "quantitative analysis" OR "qualitative analysis")=
+- *Scopus*: =TITLE-ABS-KEY(("governança pública" OR "public governance" OR "governança no setor público" OR "public sector governance" OR "administração pública" OR "public administration") AND (compliance OR "compliance público" OR "public compliance" OR "integridade pública" OR "public integrity" OR "gestão de riscos" OR "risk management" OR "controle interno" OR "internal control" OR accountability) AND ("estudo empírico" OR "empirical study" OR "evidências empíricas" OR "empirical evidence" OR "case study" OR survey OR "quantitative analysis" OR "qualitative analysis"))=
+
+** Critérios de inclusão
+
+- Artigo recuperado entre os candidatos fornecidos, com full_text_verified=true e link de PDF/download verificável.
+- Publicação no período de 2022 a 2026.
+- Idioma aceitável: português ou inglês.
+- Estudo empírico, incluindo estudo de caso, survey, análise quantitativa, análise qualitativa ou desenho misto.
+- Aderência explícita ao campo da administração pública, governança pública ou setor público.
+- Foco substantivo em pelo menos um dos eixos do recorte: governança, compliance, integridade, accountability, controle interno, supervisão, procurement público ou gestão de riscos.
+- Presença de campo empírico identificável em organização, órgão, sistema, programa ou contexto governamental.
+- Suficiência de informações no título e nos metadados fornecidos para inferir pertinência temática mínima ao objetivo da atividade.
+
+** Critérios de exclusão
+
+- Estudos sem caráter empírico identificável a partir dos dados fornecidos.
+- Artigos com foco principal em temas apenas periféricos ao recorte, como liderança geral, confiança organizacional, desenvolvimento regional, infraestrutura ambiental ou mecanismos setoriais sem centralidade em governança, compliance ou gestão de riscos públicos.
+- Estudos predominantemente tecnológicos ou jurídicos cujo vínculo com mecanismos de governança, compliance ou risco na administração pública seja indireto ou secundário.
+- Trabalhos centrados em contextos não públicos ou sem clara incidência sobre organizações governamentais.
+- Artigos cujo título e metadados não permitam sustentar aderência suficiente ao objetivo da atividade.
+- Registros que, embora no setor público, se afastem do núcleo analítico priorizado em favor de temas mais amplos de gestão, inovação ou prestação de serviços.
+
+** Observações de execução
+
+- Excluído antes da triagem por falta de texto completo verificável: Institutionalizing Predictive AI in Public Administration: Algorithmic Governance and the Case of a Wildfire Forecasting System.
+- Excluído antes da triagem por falta de texto completo verificável: Why do politicians employ public–private partnerships? Results from a mixed-method study.
+- Excluído antes da triagem por falta de texto completo verificável: Increasing Citizen Satisfaction with E-Public Administration: SERVQUAL and Holistic Governance Model in Comparison.
+- Excluído antes da triagem por falta de texto completo verificável: Navigating the Accountability Paradoxes of Financial Resource Abundance in the Post-Pandemic Public Service Delivery.
+- Excluído antes da triagem por falta de texto completo verificável: A Demands-Resources Model of Corruptibility: Empirical Evidence on How Moral Disengagement and Harm Awareness Regulate Civil Servants’ Moral Judgment.
+- Excluído antes da triagem por falta de texto completo verificável: Bureaucratic accountability: enabler or barrier for algorithm use?.
+- Excluído antes da triagem por falta de texto completo verificável: Smart Social Contracts for Public Accountability: Blockchain Oracles and Verifiable Governance.
+- Excluído antes da triagem por falta de texto completo verificável: Corporate Foundations' Governance Mechanisms as a Tool for Stakeholder Engagement.
+- Excluído antes da triagem por falta de texto completo verificável: Post-NPM approaches to personnel management: Employee roles, motivation, and challenges in contemporary public administration.
+- Excluído antes da triagem por falta de texto completo verificável: AI and the Transformation of the Public Sector in Morocco: A Quantitative Study of Ethical Dilemmas in Governance and Law.
+- Excluído antes da triagem por falta de texto completo verificável: Regulating AI in Administrative Decision-Making: Legal Implications and Technological Innovations.
+- Excluído antes da triagem por falta de texto completo verificável: The Public's Willingness to Pay More Local Taxes to Deal With Wild Animals in the City.
+- Excluído antes da triagem por falta de texto completo verificável: Evaluating the Effectiveness of Indonesia’s Core Tax Administration System: Challenges, Early Impacts, and Lessons for Digital Tax Reform.
+- Excluído antes da triagem por falta de texto completo verificável: The environmental committee: corruption, accountability and sustainable supply chain transparency.
+- Excluído antes da triagem por falta de texto completo verificável: Introduction to the special issue ‘The implications of new public governance arrangements for street-level organisations and bureaucrats’.
+- Excluído antes da triagem por falta de texto completo verificável: The trust trifecta: How transparency, ethics, and benefits shape public confidence in government AI.
+
+* PRISMA 2020
+
+** Observação metodológica
+
+Como os dados fornecidos não incluem resumos ou descrição metodológica detalhada da maior parte dos candidatos, a decisão foi tomada com base estrita nos metadados disponíveis: título, periódico, ano, DOI, fonte, e verificação de texto completo. Assim, a classificação entre triagem e elegibilidade buscou ser conservadora. Foram mantidos para elegibilidade os estudos cuja aderência temática ao recorte pôde ser sustentada com razoável segurança a partir do título; por outro lado, registros com conexão apenas lateral foram excluídos já na triagem. A seleção final considerou conjuntamente: aderência temática, probabilidade de desenho empírico inferível do título, pertinência ao campo da administração pública e existência obrigatória de texto completo verificável com PDF acessível.
+
+** Fluxo textual dos estudos
+
+*** Identificação
+- Registros identificados nas bases consultadas (Semantic Scholar, Scopus): *n = 30*
+- Semantic Scholar: *n = 0* registros recuperados
+  - Query usada: =("governança pública" OR "public governance" OR "governança no setor público" OR "public sector governance" OR "administração pública" OR "public administration") AND (compliance OR "compliance público" OR "public compliance" OR "integridade pública" OR "public integrity" OR "gestão de riscos" OR "risk management" OR "controle interno" OR "internal control" OR accountability) AND ("estudo empírico" OR "empirical study" OR "evidências empíricas" OR "empirical evidence" OR "case study" OR survey OR "quantitative analysis" OR "qualitative analysis")=
+- Scopus: *n = 30* registros recuperados
+  - Query usada: =TITLE-ABS-KEY(("governança pública" OR "public governance" OR "governança no setor público" OR "public sector governance" OR "administração pública" OR "public administration") AND (compliance OR "compliance público" OR "public compliance" OR "integridade pública" OR "public integrity" OR "gestão de riscos" OR "risk management" OR "controle interno" OR "internal control" OR accountability) AND ("estudo empírico" OR "empirical study" OR "evidências empíricas" OR "empirical evidence" OR "case study" OR survey OR "quantitative analysis" OR "qualitative analysis"))=
+- Registros removidos antes da triagem: *n = 16*
+  - Duplicatas removidas: *n = 0*
+  - Removidos por outros motivos: *n = 16*
+
+*** Triagem
+- Registros triados por título, resumo e metadados: *n = 14*
+- Registros excluídos na triagem: *n = 6*
+  - Embora situado no setor público, o foco principal em liderança servidora e perspectiva de gênero não apresenta aderência central ao recorte de governança, compliance e gestão de riscos na administração pública.: *n = 1*
+  - O foco principal é desenvolvimento regional sustentável com IA, agricultura de precisão e turismo, sem aderência substantiva ao recorte de governança, compliance e gestão de riscos no serviço público.: *n = 1*
+  - O artigo trata de fluxos assistenciais como mecanismo organizacional e jurídico na saúde, mas sua aderência ao recorte de governança, compliance e gestão de riscos públicos é indireta e setorial.: *n = 1*
+  - O foco em identificador de entidade legal, interoperabilidade e governança digital sugere discussão predominantemente normativa e sistêmica, sem evidência suficiente de estudo empírico centrado em governança, compliance ou risco no serviço público.: *n = 1*
+  - Apesar de tratar de avaliação de risco, o objeto é erosão costeira, não mecanismos de governança, compliance ou gestão de riscos na administração pública.: *n = 1*
+  - Embora mencione transparência em organização escolar, o foco em confiança organizacional é mais próximo da psicologia organizacional do que do recorte específico de governança, compliance e gestão de riscos no serviço público.: *n = 1*
+
+*** Elegibilidade
+- Relatórios buscados para recuperação em texto completo: *n = 8*
+- Relatórios não recuperados: *n = 0*
+- Relatórios avaliados para elegibilidade: *n = 8*
+- Relatórios excluídos após leitura do texto completo: *n = 7*
+  - O artigo aborda confiança, legislação, transparência e dinâmicas sociais em governo eletrônico com blockchain, tema relevante para governança digital, mas com foco mais amplo e tecnológico do que o núcleo priorizado de mecanismos de compliance, controle interno ou gestão de riscos no serviço público.: *n = 1*
+  - Apesar de tratar de governança de IA em sistemas municipais, o foco recai sobre perspectivas éticas e smart government, com aderência menos direta ao recorte de compliance e gestão de riscos administrativos em comparação com o estudo selecionado.: *n = 1*
+  - O tema de falha de supervisão em municípios sul-africanos é bastante pertinente à governança e accountability, mas os metadados disponíveis são menos específicos quanto ao mecanismo analítico de compliance ou gestão de riscos do que o artigo selecionado.: *n = 1*
+  - É um estudo fortemente relacionado a governança e organizações orientadas a risco no setor público, mas concentra-se em policy design em organização militar hierárquica; foi preterido porque o artigo selecionado apresenta conexão mais direta com compliance, integridade e controle de irregularidades.: *n = 1*
+  - O tema de implementação do Best Value Approach em compras públicas é aderente a governança e mecanismos administrativos, porém o foco em procurement, embora relevante, é menos diretamente conectado ao eixo compliance/integridade/gestão de riscos do que o estudo selecionado.: *n = 1*
+  - O estudo sobre compliance tributário e ferramentas tecnológicas para inspeção fiscal é altamente relevante ao eixo de compliance público e prevenção de fraude, mas foi preterido porque o artigo selecionado apresenta foco mais claro em órgão público de integridade e mecanismo institucional de triagem de denúncias, com aderência mais ampla ao recorte de governança e gestão de riscos.: *n = 1*
+  - O artigo sobre governança urbana da terra em administração municipal é pertinente ao campo da governança pública, mas não evidencia centralidade em compliance, controle interno ou gestão de riscos administrativos comparável à do estudo selecionado.: *n = 1*
+
+*** Inclusão
+- Estudos incluídos na síntese qualitativa final: *n = 1*
+
+** Tabela-resumo do fluxo PRISMA 2020
+
+#+NAME: tab:prisma2020
+#+CAPTION: Síntese do fluxo PRISMA 2020 aplicado à seleção do artigo.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begingroup
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{4pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \captionof{table}{Síntese do fluxo PRISMA 2020 aplicado à seleção do artigo.}
+#+LATEX: \label{tab:prisma2020}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Etapa PRISMA 2020 & n \\
+#+LATEX: \midrule
+#+LATEX: Registros identificados & 30 \\
+#+LATEX: Registros removidos antes da triagem & 16 \\
+#+LATEX: Registros triados & 14 \\
+#+LATEX: Registros excluídos na triagem & 6 \\
+#+LATEX: Relatórios buscados para recuperação & 8 \\
+#+LATEX: Relatórios não recuperados & 0 \\
+#+LATEX: Relatórios avaliados para elegibilidade & 8 \\
+#+LATEX: Relatórios excluídos após leitura completa & 7 \\
+#+LATEX: Estudos incluídos na síntese qualitativa & 1 \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \endgroup
+
+** Estudos classificados no fluxo
+
+#+NAME: tab:estudos_fluxo
+#+CAPTION: Classificação sintética dos estudos identificados no fluxo PRISMA 2020.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begingroup
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{3pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{longtable}{>{\raggedright\arraybackslash}p{0.36\textwidth} >{\raggedright\arraybackslash}p{0.18\textwidth} >{\raggedright\arraybackslash}p{0.14\textwidth} >{\raggedright\arraybackslash}p{0.24\textwidth}}
+#+LATEX: \caption{Classificação sintética dos estudos identificados no fluxo PRISMA 2020.}\label{tab:estudos_fluxo}\\
+#+LATEX: \toprule
+#+LATEX: Estudo & Situação no fluxo & Tipo & Motivo \\ 
+#+LATEX: \midrule
+#+LATEX: \endfirsthead
+#+LATEX: \toprule
+#+LATEX: Estudo & Situação no fluxo & Tipo & Motivo \\ 
+#+LATEX: \midrule
+#+LATEX: \endhead
+#+LATEX: \midrule
+#+LATEX: \multicolumn{4}{r}{Continua na próxima página} \\ 
+#+LATEX: \endfoot
+#+LATEX: \bottomrule
+#+LATEX: \endlastfoot
+#+LATEX: Sereewatthanawut I. (2026), \textit{Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission}\\ \emph{Base(s): Scopus} & Incluído & Estudo de caso empírico & Estudo diretamente aderente ao recorte, com foco em triagem de denúncias em órgão anticorrupção, articulando governança, integridade, compliance e… \
+#+LATEX: Seceleanu A. (2026), \textit{Blockchain-based e-government in Developing Economies: Public Trust, Legislation, Transparency and Social Dynamics}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & Estudo empírico provável & O artigo aborda confiança, legislação, transparência e dinâmicas sociais em governo eletrônico com blockchain, tema relevante para governança… \
+#+LATEX: Matějková J. (2026), \textit{From Price to Performance: Implementing the Best Value Approach in Czech Public Procurement}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & Estudo empírico de implementação & O tema de implementação do Best Value Approach em compras públicas é aderente a governança e mecanismos administrativos, porém o foco em procurement,… \
+#+LATEX: Mayland K. (2026), \textit{Policy design and governance in hierarchical, risk-oriented organizations: a Danish Armed Forces case study}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & Estudo de caso empírico & É um estudo fortemente relacionado a governança e organizações orientadas a risco no setor público, mas concentra-se em policy design em organização… \
+#+LATEX: Alyileili M. (2026), \textit{Sustainable and Inclusive AI Governance in Municipal Self-Service Systems: Ethical, Smart-Government, and Generative AI Perspectives}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & Estudo empírico ou aplicado provável & Apesar de tratar de governança de IA em sistemas municipais, o foco recai sobre perspectivas éticas e smart government, com aderência menos direta ao… \
+#+LATEX: Khangala T.K. (2026), \textit{The Constitutional Promise vs. The Illiterate Reality: A Study of Oversight Failure in South African Municipalities}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & Estudo de caso empírico provável & O tema de falha de supervisão em municípios sul-africanos é bastante pertinente à governança e accountability, mas os metadados disponíveis são menos… \
+#+LATEX: Tilahun M.A. (2025), \textit{Practices and challenges of urban land governance in Debre Markos City Administration}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & Estudo empírico & O artigo sobre governança urbana da terra em administração municipal é pertinente ao campo da governança pública, mas não evidencia centralidade em… \
+#+LATEX: Shidomi V.L.R.Y. (2025), \textit{Tax Compliance and Technological Innovation: Case Study on the Development of Tools to Assist Sales Tax Inspections to Curb Tax Fraud}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & Estudo de caso empírico & O estudo sobre compliance tributário e ferramentas tecnológicas para inspeção fiscal é altamente relevante ao eixo de compliance público e prevenção… \
+#+LATEX: Lotsis S. (2026), \textit{AI, Precision Agriculture and Tourism for Sustainable Regional Development: The Case of the Aegean Islands and Crete, Greece}\\ \emph{Base(s): Scopus} & Excluído na triagem & Estudo de caso aplicado & O foco principal é desenvolvimento regional sustentável com IA, agricultura de precisão e turismo, sem aderência substantiva ao recorte de… \
+#+LATEX: Villarroel-Núñez D. (2026), \textit{Servant Leadership in the Chilean Public Sector: Validation with a Gender Perspective}\\ \emph{Base(s): Scopus} & Excluído na triagem & Não suficientemente determinado pelos metadados; provável estudo aplicado/validação & Embora situado no setor público, o foco principal em liderança servidora e perspectiva de gênero não apresenta aderência central ao recorte de… \
+#+LATEX: Barillà G.C. (2025), \textit{A New Methodology for Coastal Erosion Risk Assessment—Case Study: Calabria Region}\\ \emph{Base(s): Scopus} & Excluído na triagem & Estudo de caso metodológico & Apesar de tratar de avaliação de risco, o objeto é erosão costeira, não mecanismos de governança, compliance ou gestão de riscos na administração… \
+#+LATEX: Pastushchenko I.P. (2025), \textit{Patient service pathways as an organizational and legal mechanism of public administration in healthcare: The experience of a regional clinical hospital}\\ \emph{Base(s): Scopus} & Excluído na triagem & Estudo de caso empírico provável & O artigo trata de fluxos assistenciais como mecanismo organizacional e jurídico na saúde, mas sua aderência ao recorte de governança, compliance e… \
+#+LATEX: Meriç E. (2025), \textit{School transparency as a predictor of organizational trust}\\ \emph{Base(s): Scopus} & Excluído na triagem & Estudo empírico quantitativo provável & Embora mencione transparência em organização escolar, o foco em confiança organizacional é mais próximo da psicologia organizacional do que do… \
+#+LATEX: Wojtkiewicz K.B. (2025), \textit{The Legal Entity Identifier and Legacy Systems: Harmonisation, Interoperability, and Balance in Digital Governance}\\ \emph{Base(s): Scopus} & Excluído na triagem & Não suficientemente determinado pelos metadados; provável artigo jurídico-analítico & O foco em identificador de entidade legal, interoperabilidade e governança digital sugere discussão predominantemente normativa e sistêmica, sem… \
+#+LATEX: \end{longtable}
+#+LATEX: \normalsize
+#+LATEX: \endgroup
+
+#+LATEX: \clearpage
+
+** Representação esquemática do fluxo PRISMA 2020
+
+O fluxograma PRISMA 2020 é gerado como *SVG externo* em layout compacto, exibindo apenas as contagens de cada etapa. Os motivos detalhados de exclusão permanecem no fluxo textual e nas tabelas, para evitar sobrecarga visual na figura.
+
+#+begin_export latex
+\begin{center}
+\includesvg[width=0.78\textwidth]{atividade_governance_empirism_prisma}
+\captionof{figure}{Fluxograma PRISMA 2020 da seleção do artigo de revisão sobre Governança, compliance e gestão de riscos no serviço público.}
+\label{fig:prisma2020_fluxo}
+\end{center}
+#+end_export
+
+* Resumo do artigo selecionado
+
+** Referência do estudo
+
+Sereewatthanawut, I., Sriphon, P., Khunwipusit, P., Ajayi, B. O., Ilesanmi, A. E., Suwaree, J., & Buachoom, W. W. (2026). Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission. *PLOS ONE, 21*(1), e0338633. https://doi.org/10.1371/journal.pone.0338633
+
+** Link para download do texto completo
+
+[[https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0338633&type=printable][Download do PDF]]
+
+** Problema e objetivo de pesquisa
+
+O artigo parte do problema de que a triagem preliminar de denúncias de corrupção na National Anti-Corruption Commission (NACC), da Tailândia, ainda depende fortemente de procedimentos manuais, o que gera demora, inconsistência decisória, distribuição desigual de trabalho e perda de confiança pública. Nesse contexto, o objetivo central do estudo é desenvolver, implementar e avaliar empiricamente um protótipo baseado em inteligência artificial para apoiar a triagem inicial de alegações de corrupção, examinando se essa solução melhora a eficiência operacional, a acurácia da classificação e a adequação institucional do processo.
+
+** Argumento central
+
+O argumento central do artigo é que a incorporação de um sistema modular de IA — combinando OCR, processamento de linguagem natural e classificação automatizada com grandes modelos de linguagem — pode tornar a triagem de denúncias mais rápida, padronizada e potencialmente mais transparente no setor público, desde que sua adoção seja sensível ao contexto institucional, juridicamente alinhada e acompanhada de salvaguardas éticas, explicabilidade e supervisão humana. Assim, a contribuição da IA não é apresentada apenas em termos de eficiência técnica, mas como mecanismo de fortalecimento da governança pública e da integridade institucional.
+
+** Desenho de pesquisa
+
+Trata-se de um estudo empírico de caso único, com desenho de métodos mistos, realizado na NACC da Tailândia. A pesquisa foi conduzida em três etapas. Na primeira, houve análise institucional qualitativa do fluxo de tratamento de denúncias, com entrevistas em profundidade e grupos focais com 25 participantes estrategicamente selecionados, incluindo servidores da NACC, especialistas em TIC e profissionais do direito, além de revisão normativa da legislação anticorrupção aplicável. Na segunda etapa, os autores desenvolveram um protótipo modular com três componentes: (a) OCR para converter documentos digitalizados ou manuscritos em texto legível por máquina; (b) módulo de sumarização via NLP com uso de LLMs (Gemini-1.5-Flash e Gemma27B) orientados por prompts; e (c) módulo de classificação das denúncias em categorias de corrupção, também via inferência baseada em prompts, sem fine-tuning adicional. Na terceira etapa, o sistema foi testado empiricamente em ambiente controlado com 200 casos semissintéticos inicialmente gerados, dos quais 160 compuseram a base final de avaliação, distribuídos em 10 categorias de denúncia. O desempenho foi medido por métricas técnicas (precisão, recall, F1 e acurácia), por comparação entre tempo de processamento manual e automatizado, e por survey de satisfação com 60 usuários de áreas operacionais, em escala Likert de cinco pontos. O texto completo do artigo é verificável e acessível por link aberto do periódico, com PDF disponível em: https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0338633&type=printable.
+
+** Principais achados
+
+Os resultados mostram ganhos operacionais relevantes, embora com desempenho desigual entre módulos. No OCR, o sistema alcançou F1-score de 81,8%, precisão de 84,2% e recall de 79,6%; para texto impresso, obteve 72% de acurácia em nível de palavra e 78% em nível de caractere. No módulo de sumarização, a avaliação por especialistas e servidores da NACC produziu média de 4,74 em 5 quanto à clareza, completude e adequação contextual, além de uma redução de 79% no tempo médio de processamento em comparação ao procedimento manual. No módulo de classificação, o Gemini-1.5-Flash atingiu acurácia de 57,5%, macro-F1 de 50,7% e F1 ponderado de 58,8%, superando modelos multilíngues de base usados como benchmark, cujos resultados ficaram entre 16% e 23,1% de acurácia. Em termos de eficiência global, o tempo médio por denúncia caiu de 333,39 segundos no processo humano para 71,47 segundos com apoio do sistema, o que representa redução de 78,6%. A percepção dos usuários foi favorável: 60 participantes atribuíram satisfação média de 4,2 em 5, com destaque para rapidez, facilidade de uso e aderência ao fluxo institucional. Ao mesmo tempo, o estudo reconhece limitações importantes, como o uso de dados semissintéticos, sensibilidade a ambiguidades linguísticas em tailandês, desequilíbrio entre classes e ausência de base legal consolidada para decisões administrativas apoiadas por IA.
+
+** Justificativa da seleção final
+
+O artigo é apropriado para a atividade porque atende integralmente ao recorte proposto: apresenta evidência empírica sobre mecanismo de governança e integridade no serviço público, com foco direto em compliance anticorrupção, triagem de denúncias e mitigação de riscos institucionais na administração pública. O campo empírico é claramente público e institucional, situado na agência nacional anticorrupção da Tailândia. O estudo também explicita problema de pesquisa, método, base empírica e resultados mensuráveis, o que favorece análise acadêmica rigorosa. Além disso, o texto completo é verificável por link aberto e o artigo foi indexado em base consultada (Scopus), satisfazendo os critérios de elegibilidade definidos.
+
+** Contribuição do estudo para o tema
+
+A principal contribuição do estudo é oferecer evidência empírica aplicada sobre o uso de IA em uma função sensível da administração pública: a triagem inicial de denúncias em uma agência anticorrupção. No campo de governança, compliance e gestão de riscos, o artigo mostra como mecanismos algorítmicos podem atuar como instrumentos de apoio à integridade pública, à padronização procedimental e à redução de riscos operacionais associados à morosidade, subjetividade e backlog decisório. Além disso, o estudo avança ao articular desempenho técnico com dimensões institucionais e normativas, sustentando que a adoção de IA em contextos de accountability pública depende de explicabilidade, supervisão humana, conformidade regulatória e adequação organizacional. Trata-se, portanto, de uma contribuição relevante para a literatura sobre governança digital no setor público, especialmente em órgãos de controle e integridade.
+
+* Texto corrido para entrega
+
+Sereewatthanawut et al. (2026) analisam empiricamente a aplicação de inteligência artificial na triagem preliminar de denúncias de corrupção na National Anti-Corruption Commission (NACC), da Tailândia, oferecendo evidências relevantes para o debate sobre governança, compliance e gestão de riscos no serviço público. O problema de pesquisa decorre da constatação de que o processamento manual das denúncias produz morosidade, inconsistência e desigualdade na distribuição das cargas de trabalho, comprometendo a eficiência administrativa e a confiança pública. Diante disso, o estudo tem como objetivo desenvolver e avaliar um protótipo de IA capaz de apoiar a recepção, extração, sumarização e classificação inicial das denúncias. O desenho da pesquisa é de métodos mistos e combina análise institucional qualitativa com avaliação técnica do sistema. Na fase qualitativa, os autores realizaram entrevistas e grupos focais com 25 atores estratégicos, entre servidores da NACC, especialistas em TIC e profissionais do direito, além de revisão normativa da legislação aplicável. Na fase tecnológica, foi construído um sistema modular composto por OCR, sumarização por NLP e classificação automatizada com LLMs, especificamente Gemini-1.5-Flash e Gemma27B. Na etapa de teste, o protótipo foi avaliado com 160 casos semissintéticos distribuídos em 10 categorias de denúncia e com survey de satisfação aplicado a 60 usuários institucionais. Os resultados indicam ganhos expressivos de eficiência. O OCR atingiu F1-score de 81,8%, enquanto o módulo de sumarização recebeu média de 4,74 em 5 dos avaliadores e reduziu em 79% o tempo médio de processamento. Já o módulo de classificação obteve acurácia de 57,5% com o Gemini-1.5-Flash, superando modelos multilíngues de benchmark. No plano operacional agregado, o tempo médio por denúncia caiu de 333,39 segundos no processo manual para 71,47 segundos com apoio da IA, representando redução de 78,6%. Os usuários atribuíram satisfação média de 4,2 em 5, destacando rapidez, utilidade e facilidade de uso. Ainda assim, os autores reconhecem limitações metodológicas e institucionais, como o uso de dados semissintéticos, a dificuldade de lidar com ambiguidades linguísticas e a ausência de marco jurídico mais claro para decisões administrativas apoiadas por IA. Em síntese, o artigo demonstra que sistemas de IA podem funcionar como mecanismos de reforço à governança e ao compliance em órgãos públicos de controle, ao reduzir riscos operacionais, padronizar rotinas e ampliar a responsividade institucional, desde que sua implementação seja acompanhada de supervisão humana, transparência, conformidade normativa e salvaguardas éticas. Por isso, o estudo se mostra especialmente pertinente ao tema da atividade, ao oferecer evidência empírica concreta sobre como tecnologias digitais podem apoiar integridade, accountability e gestão de riscos na administração pública.
+
+* Referências (APA)
+
+- Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., et al. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. BMJ, 372, n71.
+
+- Sereewatthanawut, I., Sriphon, P., Khunwipusit, P., Ajayi, B. O., Ilesanmi, A. E., Suwaree, J., & Buachoom, W. W. (2026). Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission. *PLOS ONE, 21*(1), e0338633. https://doi.org/10.1371/journal.pone.0338633

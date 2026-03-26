@@ -1,0 +1,511 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/apasortcite//global/global/global}
+    \entry{freire2025automating}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f63110d04279e5fd6d00d76a923fd324}{%
+           family={Freire},
+           familyi={F\bibinitperiod},
+           given={F.\bibnamedelimi S.},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c9e4cfaee322012040ba9c2a7e201ca}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f00172ad1ba6846372b6aef3e7485fca}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={Vinicius\bibnamedelima Mendes},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=504c3e9d614dbbf5f3a74295c0910cb2}{%
+           family={Saraiva},
+           familyi={S\bibinitperiod},
+           given={Mayla\bibnamedelimb Cristina\bibnamedelimb Costa\bibnamedelima Maroni},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2d60374f973ac486a8ba50b70ddf1cc6}
+      \strng{fullhash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{fullhashraw}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{bibnamehash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{authorbibnamehash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{authornamehash}{2d60374f973ac486a8ba50b70ddf1cc6}
+      \strng{authorfullhash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{authorfullhashraw}{429ecdb0b6257d6777b8707d56c05013}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{journaltitle}{Administratie si Management Public}
+      \field{month}{11}
+      \field{title}{Automating public governance oversight: Evidence from the Federal District of Brazil}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.24818/amp/2025.45-05
+      \endverb
+      \verb{urlraw}
+      \verb https://ramp.ase.ro/vol45/45-05.pdf
+      \endverb
+      \verb{url}
+      \verb https://ramp.ase.ro/vol45/45-05.pdf
+      \endverb
+    \endentry
+    \entry{prisma2020statement}{online}{}{}
+      \name{author}{26}{}{%
+        {{un=0,uniquepart=base,hash=016b86afb0a98379bf77b3f074f34761}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Matthew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c647eae0c93ec008ebe092eb144eeee}{%
+           family={McKenzie},
+           familyi={M\bibinitperiod},
+           given={Joanne\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c342b2f9e98d8bcaabcbd5ec10522ad4}{%
+           family={Bossuyt},
+           familyi={B\bibinitperiod},
+           given={Patrick\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa885033d820893c45692b99c8b4bbc6}{%
+           family={Boutron},
+           familyi={B\bibinitperiod},
+           given={Isabelle},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8fd2430e75c6bb84661c811e408f6377}{%
+           family={Hoffmann},
+           familyi={H\bibinitperiod},
+           given={Tammy\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9da5818ae381747539d8a98ecf2d13b1}{%
+           family={Mulrow},
+           familyi={M\bibinitperiod},
+           given={Cynthia\bibnamedelima D.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1c6b0b224969ed1ccfe648b31dc7de4}{%
+           family={Shamseer},
+           familyi={S\bibinitperiod},
+           given={Larissa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=640f8392f6a7388c779d2b60fdd93350}{%
+           family={Tetzlaff},
+           familyi={T\bibinitperiod},
+           given={Jennifer\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ca61686dc125837a0d9741be62f3427}{%
+           family={Akl},
+           familyi={A\bibinitperiod},
+           given={Elie\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e822c8724e88eb518ec5eb8015bbaab0}{%
+           family={Brennan},
+           familyi={B\bibinitperiod},
+           given={Sue\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01e789422f68da54234ac2f1e791eac4}{%
+           family={Chou},
+           familyi={C\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19c8626c5dbf0aaa5ca05c6fa19ad49f}{%
+           family={Glanville},
+           familyi={G\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18acccd95580a48bd6c5f4010bb058a7}{%
+           family={Grimshaw},
+           familyi={G\bibinitperiod},
+           given={Jeremy\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa6b6295cc5b496c1858297b2a62fa5f}{%
+           family={Hróbjartsson},
+           familyi={H\bibinitperiod},
+           given={Asbjørn},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a2541509ccb6793b91fce2cf0f72dcc}{%
+           family={Lalu},
+           familyi={L\bibinitperiod},
+           given={Manoj\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0100456cf4ced53a2aab31f2c3055f6a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Tianjing},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e270d436c864242b119a3605283c8bf}{%
+           family={Loder},
+           familyi={L\bibinitperiod},
+           given={Elizabeth\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d149e7026acd95db856d30314dba9a9e}{%
+           family={Mayo-Wilson},
+           familyi={M\bibinithyphendelim W\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ed61e5ea9f906c20e5e737e3d84c854}{%
+           family={McDonald},
+           familyi={M\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7314b4cde4c01764b4b3580e015b768}{%
+           family={McGuinness},
+           familyi={M\bibinitperiod},
+           given={Luke\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d600e9a8a01053464e53fc2aadeb009b}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={Lesley\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ad8d835a95f8df394e6faf5d8e0548f}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b396572e13e5a8b08e1ee1d493aaa2a}{%
+           family={Tricco},
+           familyi={T\bibinitperiod},
+           given={Andrea\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75fdbaed8e43fddb210da313631d8639}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Vivian\bibnamedelima A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=792d7051a4c2169e6aac0073ce62ba8e}{%
+           family={Whiting},
+           familyi={W\bibinitperiod},
+           given={Penny},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af56ff14657d1110bff4b784198b0505}{%
+           family={Moher},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{69c1efa4f6ab0deea3df12876fea0709}
+      \strng{fullhash}{b37368b8b0982e5c110334919bd2e0e1}
+      \strng{fullhashraw}{b37368b8b0982e5c110334919bd2e0e1}
+      \strng{bibnamehash}{05ba61cfa6dad637b8099542e1c0243a}
+      \strng{authorbibnamehash}{05ba61cfa6dad637b8099542e1c0243a}
+      \strng{authornamehash}{69c1efa4f6ab0deea3df12876fea0709}
+      \strng{authorfullhash}{b37368b8b0982e5c110334919bd2e0e1}
+      \strng{authorfullhashraw}{b37368b8b0982e5c110334919bd2e0e1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 24 de março de 2026}
+      \field{title}{The PRISMA 2020 statement: An updated guideline for reporting systematic reviews}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.prisma-statement.org/prisma-2020
+      \endverb
+      \verb{url}
+      \verb https://www.prisma-statement.org/prisma-2020
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{freire2025automating}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f63110d04279e5fd6d00d76a923fd324}{%
+           family={Freire},
+           familyi={F\bibinitperiod},
+           given={F.\bibnamedelimi S.},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c9e4cfaee322012040ba9c2a7e201ca}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f00172ad1ba6846372b6aef3e7485fca}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={Vinicius\bibnamedelima Mendes},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=504c3e9d614dbbf5f3a74295c0910cb2}{%
+           family={Saraiva},
+           familyi={S\bibinitperiod},
+           given={Mayla\bibnamedelimb Cristina\bibnamedelimb Costa\bibnamedelima Maroni},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2d60374f973ac486a8ba50b70ddf1cc6}
+      \strng{fullhash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{fullhashraw}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{bibnamehash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{authorbibnamehash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{authornamehash}{2d60374f973ac486a8ba50b70ddf1cc6}
+      \strng{authorfullhash}{429ecdb0b6257d6777b8707d56c05013}
+      \strng{authorfullhashraw}{429ecdb0b6257d6777b8707d56c05013}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{journaltitle}{Administratie si Management Public}
+      \field{month}{11}
+      \field{title}{Automating public governance oversight: Evidence from the Federal District of Brazil}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.24818/amp/2025.45-05
+      \endverb
+      \verb{urlraw}
+      \verb https://ramp.ase.ro/vol45/45-05.pdf
+      \endverb
+      \verb{url}
+      \verb https://ramp.ase.ro/vol45/45-05.pdf
+      \endverb
+    \endentry
+    \entry{prisma2020statement}{online}{}{}
+      \name{author}{26}{}{%
+        {{un=0,uniquepart=base,hash=016b86afb0a98379bf77b3f074f34761}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Matthew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c647eae0c93ec008ebe092eb144eeee}{%
+           family={McKenzie},
+           familyi={M\bibinitperiod},
+           given={Joanne\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c342b2f9e98d8bcaabcbd5ec10522ad4}{%
+           family={Bossuyt},
+           familyi={B\bibinitperiod},
+           given={Patrick\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa885033d820893c45692b99c8b4bbc6}{%
+           family={Boutron},
+           familyi={B\bibinitperiod},
+           given={Isabelle},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8fd2430e75c6bb84661c811e408f6377}{%
+           family={Hoffmann},
+           familyi={H\bibinitperiod},
+           given={Tammy\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9da5818ae381747539d8a98ecf2d13b1}{%
+           family={Mulrow},
+           familyi={M\bibinitperiod},
+           given={Cynthia\bibnamedelima D.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1c6b0b224969ed1ccfe648b31dc7de4}{%
+           family={Shamseer},
+           familyi={S\bibinitperiod},
+           given={Larissa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=640f8392f6a7388c779d2b60fdd93350}{%
+           family={Tetzlaff},
+           familyi={T\bibinitperiod},
+           given={Jennifer\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ca61686dc125837a0d9741be62f3427}{%
+           family={Akl},
+           familyi={A\bibinitperiod},
+           given={Elie\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e822c8724e88eb518ec5eb8015bbaab0}{%
+           family={Brennan},
+           familyi={B\bibinitperiod},
+           given={Sue\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01e789422f68da54234ac2f1e791eac4}{%
+           family={Chou},
+           familyi={C\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19c8626c5dbf0aaa5ca05c6fa19ad49f}{%
+           family={Glanville},
+           familyi={G\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18acccd95580a48bd6c5f4010bb058a7}{%
+           family={Grimshaw},
+           familyi={G\bibinitperiod},
+           given={Jeremy\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa6b6295cc5b496c1858297b2a62fa5f}{%
+           family={Hróbjartsson},
+           familyi={H\bibinitperiod},
+           given={Asbjørn},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a2541509ccb6793b91fce2cf0f72dcc}{%
+           family={Lalu},
+           familyi={L\bibinitperiod},
+           given={Manoj\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0100456cf4ced53a2aab31f2c3055f6a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Tianjing},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e270d436c864242b119a3605283c8bf}{%
+           family={Loder},
+           familyi={L\bibinitperiod},
+           given={Elizabeth\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d149e7026acd95db856d30314dba9a9e}{%
+           family={Mayo-Wilson},
+           familyi={M\bibinithyphendelim W\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ed61e5ea9f906c20e5e737e3d84c854}{%
+           family={McDonald},
+           familyi={M\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7314b4cde4c01764b4b3580e015b768}{%
+           family={McGuinness},
+           familyi={M\bibinitperiod},
+           given={Luke\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d600e9a8a01053464e53fc2aadeb009b}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={Lesley\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ad8d835a95f8df394e6faf5d8e0548f}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b396572e13e5a8b08e1ee1d493aaa2a}{%
+           family={Tricco},
+           familyi={T\bibinitperiod},
+           given={Andrea\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75fdbaed8e43fddb210da313631d8639}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Vivian\bibnamedelima A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=792d7051a4c2169e6aac0073ce62ba8e}{%
+           family={Whiting},
+           familyi={W\bibinitperiod},
+           given={Penny},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af56ff14657d1110bff4b784198b0505}{%
+           family={Moher},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{69c1efa4f6ab0deea3df12876fea0709}
+      \strng{fullhash}{b37368b8b0982e5c110334919bd2e0e1}
+      \strng{fullhashraw}{b37368b8b0982e5c110334919bd2e0e1}
+      \strng{bibnamehash}{05ba61cfa6dad637b8099542e1c0243a}
+      \strng{authorbibnamehash}{05ba61cfa6dad637b8099542e1c0243a}
+      \strng{authornamehash}{69c1efa4f6ab0deea3df12876fea0709}
+      \strng{authorfullhash}{b37368b8b0982e5c110334919bd2e0e1}
+      \strng{authorfullhashraw}{b37368b8b0982e5c110334919bd2e0e1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 24 de março de 2026}
+      \field{title}{The PRISMA 2020 statement: An updated guideline for reporting systematic reviews}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.prisma-statement.org/prisma-2020
+      \endverb
+      \verb{url}
+      \verb https://www.prisma-statement.org/prisma-2020
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,328 @@
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+#+begin_comment
+#+end_comment
+#+CITE_EXPORT: biblatex backend=biber,style=apa,sortcites=true,sorting=nyt,giveninits=true,maxcitenames=2,maxbibnames=20,uniquelist=minyear
+#+BIBLIOGRAPHY: atividade_o_uso_da_ai_na_governanca_do_servico_publico_federal_prisma.bib
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Teorias \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 24 de março de 2026 \\
+\textbf{Título do trabalho}      & Análise bibliográfica de estudo empírico sobre IA na governança e integridade do serviço público federal \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \clearpage
+
+* Introdução
+
+Esta triagem tem por finalidade identificar, entre os resultados recuperados nas bases Semantic Scholar e Scopus, um artigo empírico que contribua diretamente para o estudo do uso da inteligência artificial na governança do serviço público federal. O recorte temático prioriza pesquisas empíricas voltadas à governança, compliance e gestão de riscos no setor público, com ênfase em integridade, controles internos, accountability e mecanismos de supervisão. Considerando que os candidatos já foram previamente verificados quanto à disponibilidade de texto completo e acesso ao PDF, a triagem concentrou-se na aderência temática, no tipo de estudo e na proximidade com o problema substantivo da administração pública. Foram privilegiados artigos que apresentassem evidência empírica em contexto governamental, especialmente quando relacionados a supervisão, auditoria, combate à corrupção, prestação de contas e automação de funções de controle. Ao final, selecionou-se um único artigo com maior aderência ao tema central e ao objetivo da atividade.
+
+O artigo selecionado ao final do processo foi *“Automating public governance oversight: evidence from the Federal District of Brazil”*. A escolha final se justifica porque O artigo "Automating public governance oversight: evidence from the Federal District of Brazil" foi selecionado por apresentar a maior aderência ao objetivo da atividade. Pelo próprio título, trata-se de estudo com evidência empírica (“evidence”) sobre automação da supervisão da governança pública, o que dialoga diretamente com o uso de AI na governança do setor público. Além disso, o foco em oversight aproxima o estudo de temas centrais do recorte, como accountability, controles internos, monitoramento institucional e integridade. O campo empírico brasileiro também favorece a pertinência analítica para discussões sobre serviço público federal, ainda que o estudo se situe no Distrito Federal, pois oferece maior transferibilidade institucional para a administração pública brasileira do que casos distantes em contexto regulatório. A seleção também atende integralmente à exigência de acesso ao texto completo: o registro informa full_text_verified=true e disponibiliza PDF verificável para leitura e download em https://ramp.ase.ro/vol45/45-05.pdf. Em comparação com os demais candidatos, este artigo combina de forma mais precisa os quatro elementos decisivos da atividade: IA/automação, governança pública, evidência empírica e foco em supervisão/accountability.
+
+Também é importante registrar uma distinção metodológica. Neste trabalho, o *PRISMA 2020* foi utilizado para organizar o *fluxo da busca e da seleção* nas bases consultadas [cite:@prisma2020statement]. O artigo selecionado foi analisado a partir de seus metadados e, obrigatoriamente, de um *texto completo com link verificável para download* [cite:@fds2025automating].
+
+* Estratégia de busca
+
+** Pergunta orientadora
+
+#+begin_quote
+Como a inteligência artificial tem sido aplicada empiricamente à governança do setor público, especialmente em contextos de integridade, compliance, gestão de riscos, controles internos e accountability, e qual evidência é mais aderente ao recorte de governança pública com potencial de diálogo com o serviço público federal?
+#+end_quote
+
+** Bases consultadas
+
+- Semantic Scholar, Scopus
+
+** Base e lógica de busca
+
+A lógica de busca combinou três blocos principais de termos: (i) inteligência artificial, em português e inglês; (ii) governança pública, administração pública e serviço público federal; e (iii) dimensões de compliance, gestão de riscos, integridade, accountability, controles internos e auditoria pública. A esses blocos somou-se um filtro de natureza metodológica, voltado à recuperação de estudos empíricos, como empirical study, empirical research, case study, survey e mixed methods. Na triagem, a decisão considerou principalmente: aderência ao setor público; presença explícita de IA ou algoritmos aplicados à governança/controle; foco em integridade, supervisão, accountability, risco ou compliance; e caráter empírico. Estudos normativos, programáticos, excessivamente gerais ou deslocados do campo da governança pública foram excluídos, ainda que tratassem de IA.
+
+** Queries por base
+
+- *Semantic Scholar*: =("artificial intelligence" OR AI OR "inteligência artificial") AND ("public governance" OR "governança pública" OR "public sector governance" OR "governança do setor público" OR "public administration" OR "administração pública" OR "federal public service" OR "serviço público federal" OR "federal administration" OR "administração federal") AND (compliance OR "public compliance" OR "compliance público" OR "risk management" OR "gestão de riscos" OR integrity OR integridade OR accountability OR "internal controls" OR "controles internos" OR "public audit" OR "auditoria pública") AND ("empirical study" OR "empirical research" OR "case study" OR survey OR "mixed methods" OR "estudo empírico")=
+- *Scopus*: =TITLE-ABS-KEY(("artificial intelligence" OR AI OR "inteligência artificial") AND ("public governance" OR "governança pública" OR "public sector governance" OR "governança do setor público" OR "public administration" OR "administração pública" OR "federal public service" OR "serviço público federal" OR "federal administration" OR "administração federal") AND (compliance OR "public compliance" OR "compliance público" OR "risk management" OR "gestão de riscos" OR integrity OR integridade OR accountability OR "internal controls" OR "controles internos" OR "public audit" OR "auditoria pública") AND ("empirical study" OR "empirical research" OR "case study" OR survey OR "mixed methods" OR "estudo empírico"))=
+
+** Critérios de inclusão
+
+- Artigos publicados entre 2019 e 2026.
+- Textos em inglês ou português.
+- Estudos com full_text_verified=true e PDF/link de download verificável.
+- Estudos empíricos ou com evidência empírica clara, como estudo de caso, survey, análise aplicada ou investigação de campo.
+- Foco em inteligência artificial, algoritmos ou automação inteligente aplicada ao setor público.
+- Aderência à governança pública, administração pública, supervisão, accountability, integridade, compliance, gestão de riscos, controles internos ou auditoria pública.
+- Prioridade para estudos com aplicação concreta em órgãos governamentais ou contextos de controle e fiscalização pública.
+
+** Critérios de exclusão
+
+- Estudos sem aderência substantiva à governança pública ou ao setor público.
+- Artigos centrados em setores privados, desenvolvimento regional, turismo, saúde clínica ou temas alheios ao recorte.
+- Trabalhos predominantemente conceituais, normativos, ensaísticos ou de roadmap, sem base empírica identificável no título e metadados disponíveis.
+- Estudos sobre IA em governo eletrônico ou serviços públicos sem conexão suficiente com governança, integridade, controle, risco, compliance ou accountability.
+- Artigos cujo foco principal seja jurídico-doutrinário, tecnológico genérico ou intersetorial sem campo empírico público delimitado.
+- Resultados com baixa proximidade ao serviço público federal ou sem utilidade analítica direta para o objetivo da atividade, quando comparados a candidatos mais aderentes.
+
+** Observações de execução
+
+- Excluído antes da triagem por falta de texto completo verificável: Institutionalizing Predictive AI in Public Administration: Algorithmic Governance and the Case of a Wildfire Forecasting System.
+- Excluído antes da triagem por falta de texto completo verificável: Increasing Citizen Satisfaction with E-Public Administration: SERVQUAL and Holistic Governance Model in Comparison.
+- Excluído antes da triagem por falta de texto completo verificável: Regulating AI in Administrative Decision-Making: Legal Implications and Technological Innovations.
+- Excluído antes da triagem por falta de texto completo verificável: AI-Driven Cybersecurity: Protecting Human Rights in the Digital Age.
+- Excluído antes da triagem por falta de texto completo verificável: Assessing the institutional readiness and capacity for AI adoption in public audit institutions in developing countries: evidence from Ghana.
+- Excluído antes da triagem por falta de texto completo verificável: The trust trifecta: How transparency, ethics, and benefits shape public confidence in government AI.
+- Excluído antes da triagem por falta de texto completo verificável: AI-Driven Governance: Predictive Analytics and Blockchain for Smart Public Administration.
+- Excluído antes da triagem por falta de texto completo verificável: Hybrid AI and Blockchain Systems for Digital Identity in Developing Countries: Predictive Governance for Public Inclusion and Efficiency.
+- Excluído antes da triagem por falta de texto completo verificável: Transparency and accountability in AI Systems: A realistic approach in albania.
+- Excluído antes da triagem por falta de texto completo verificável: The ethical and societal implications of AI in economic policy and public administration.
+- Excluído antes da triagem por falta de texto completo verificável: CAN DIGITAL TRANSPARENCY TOOLS SYSTEMATICALLY REDUCE CORRUPTION IN GOVERNMENT? EVIDENCE FROM ESTONIA, UKRAINE AND BRAZIL.
+- Excluído antes da triagem por falta de texto completo verificável: Civil Service Ethics in Germany from an International Perspective – Between a Role Model and Latecomer.
+- Excluído antes da triagem por falta de texto completo verificável: Citizens’ intention to follow recommendations from a government-supported AI-enabled system.
+- Excluído antes da triagem por falta de texto completo verificável: THE SELF-DRIVING STATE: AUTOMATED DECISION-MAKING IN MODERN GOVERNANCE.
+- Excluído antes da triagem por falta de texto completo verificável: Introduction to Special Issue on Generative AI and Public Administration: Performance, Accountability, and Democratic Governance.
+- Excluído antes da triagem por falta de texto completo verificável: The Role of Artificial Intelligence in Public Audit: A Case Study of Digitalization in Romania’s Public Sector.
+- Excluído antes da triagem por falta de texto completo verificável: Role of AI in Combating Corruption in the U.S. Federal Government: Case Study 2019–2024.
+- Excluído antes da triagem por falta de texto completo verificável: Legal responsibility for errors caused by artificial intelligence (AI) in the public sector.
+- Excluído antes da triagem por falta de texto completo verificável: Evaluating the readiness of public institutions for AI-Driven decision making: A framework for adaptive governance.
+- Excluído antes da triagem por falta de texto completo verificável: The AI Disruption in Government: A Transformative Shift.
+- Excluído antes da triagem por falta de texto completo verificável: APPLICATION OF ARTIFFICIAL INTELLIGENCE IN THE DEVELOPMENT OF EU STRATEGIES TO STRENGTHEN THE INSTITUTION OF POLITICAL ACCOUNTABILITY.
+- Excluído antes da triagem por falta de texto completo verificável: Skills and dynamic capabilities for generative AI: embracing the Industry 5.0 paradigm and nourishing innovation in public institutions.
+- Excluído antes da triagem por falta de texto completo verificável: Generative AI and the urban AI policy challenges ahead: Trustworthy for whom?.
+- Excluído antes da triagem por falta de texto completo verificável: Technical and Socio-Legal Aspects of Smart Governance in the Context of Indian Bureaucracy.
+- Excluído antes da triagem por falta de texto completo verificável: Kazakhstan’s Digital Governance Evolution: Strategies, Challenges, and Future Prospects.
+- Excluído antes da triagem por falta de texto completo verificável: THE ACCOUNTING SYSTEM UNDERLYING THE ITAS PRINCIPLES: COMPARISON WITH IAS/IFRS AND IPSAS ACCOUNTING STANDARDS.
+- Excluído antes da triagem por falta de texto completo verificável: 6th International Congress on Blockchain and Applications, BLOCKCHAIN 2024.
+- Excluído antes da triagem por falta de texto completo verificável: Leveraging futuristic machine learning and next-generational security for e-governance.
+- Excluído antes da triagem por falta de texto completo verificável: Enhancing Transparency through Explainable Artificial Intelligence: An Exploratory Analysis on a Collusion and Corruption Scenario in Digital Government.
+- Excluído antes da triagem por falta de texto completo verificável: Enhancing Government Service Delivery: A Case Study of ACQAR Implementation and Lessons Learned from ChatGPT Integration in a Singapore Government Agency.
+- Excluído antes da triagem por falta de texto completo verificável: Revolutionizing government operations: The impact of artificial intelligence in public administration.
+- Excluído antes da triagem por falta de texto completo verificável: An explorative study of explainable AI and blockchain integration in public administration.
+- Excluído antes da triagem por falta de texto completo verificável: Applications of Blockchain and Artificial Intelligence in Finance and Governance.
+- Excluído antes da triagem por falta de texto completo verificável: Integrating AI, Blockchain, and Cloud Computing for Enhanced E-Government Solutions.
+- Excluído antes da triagem por falta de texto completo verificável: Management of Disruptive Technologies as Applied in Stages of Long-term Insurance Processes.
+- Excluído antes da triagem por falta de texto completo verificável: Designing computational intelligence techniques based smart framework for sustainable computing.
+- Excluído antes da triagem por falta de texto completo verificável: International Workshop on A Multidisciplinary Approach to Embrace Complexity and Sustainability in Megaprojects, MERIT 2023.
+- Excluído antes da triagem por falta de texto completo verificável: Natural Language Processing Applied in the Context of Economic Defense: A Case Study in a Brazilian Federal Public Administration Agency.
+- Excluído antes da triagem por falta de texto completo verificável: Vision Paper: Advancing of AI Explainability for the Use of ChatGPT in Government Agencies - Proposal of A 4-Step Framework.
+- Excluído antes da triagem por falta de texto completo verificável: 22nd IFIP WG 8.5 International Conference on Electronic Government, EGOV 2023.
+- Excluído antes da triagem por falta de texto completo verificável: 20th IFIP WG 8.5 International Conference on Electronic Government, EGOV 2021, held in conjunction with the IFIP WG 8.5 International Conference on Electronic Participation, ePart 2021 and the International Conference for E-Democracy and Open Government Conference, CeDEM 2021.
+
+* PRISMA 2020
+
+** Observação metodológica
+
+Como os metadados fornecidos não incluem resumos para a maior parte dos registros, a triagem foi realizada de modo conservador, com base em título, periódico, ano, escopo temático inferível e aderência ao objetivo da atividade. Todos os candidatos já chegaram com verificação prévia de texto completo e link de PDF acessível; por isso, a elegibilidade final concentrou-se sobretudo no alinhamento temático e no caráter empírico. A classificação entre exclusão na triagem e exclusão na elegibilidade foi usada da seguinte forma: exclusão na triagem para baixa aderência temática imediata; exclusão na elegibilidade para estudos potencialmente próximos, mas inferiores ao artigo selecionado quanto ao recorte empírico específico de governança, supervisão e accountability com uso de IA.
+
+** Fluxo textual dos estudos
+
+*** Identificação
+- Registros identificados nas bases consultadas (Semantic Scholar, Scopus): *n = 61*
+- Semantic Scholar: *n = 0* registros recuperados
+  - Query usada: =("artificial intelligence" OR AI OR "inteligência artificial") AND ("public governance" OR "governança pública" OR "public sector governance" OR "governança do setor público" OR "public administration" OR "administração pública" OR "federal public service" OR "serviço público federal" OR "federal administration" OR "administração federal") AND (compliance OR "public compliance" OR "compliance público" OR "risk management" OR "gestão de riscos" OR integrity OR integridade OR accountability OR "internal controls" OR "controles internos" OR "public audit" OR "auditoria pública") AND ("empirical study" OR "empirical research" OR "case study" OR survey OR "mixed methods" OR "estudo empírico")=
+- Scopus: *n = 61* registros recuperados
+  - Query usada: =TITLE-ABS-KEY(("artificial intelligence" OR AI OR "inteligência artificial") AND ("public governance" OR "governança pública" OR "public sector governance" OR "governança do setor público" OR "public administration" OR "administração pública" OR "federal public service" OR "serviço público federal" OR "federal administration" OR "administração federal") AND (compliance OR "public compliance" OR "compliance público" OR "risk management" OR "gestão de riscos" OR integrity OR integridade OR accountability OR "internal controls" OR "controles internos" OR "public audit" OR "auditoria pública") AND ("empirical study" OR "empirical research" OR "case study" OR survey OR "mixed methods" OR "estudo empírico"))=
+- Registros removidos antes da triagem: *n = 42*
+  - Duplicatas removidas: *n = 0*
+  - Removidos por outros motivos: *n = 42*
+
+*** Triagem
+- Registros triados por título, resumo e metadados: *n = 19*
+- Registros excluídos na triagem: *n = 8*
+  - O foco em sistemas municipais de autoatendimento, ética e smart government é mais amplo e mais próximo de governança digital e serviços do que de compliance, gestão de riscos, controles internos ou accountability.: *n = 1*
+  - Trata de desenvolvimento regional, agricultura de precisão e turismo, sem aderência suficiente ao tema de governança do serviço público, integridade, compliance ou controles internos.: *n = 1*
+  - O tema é voltado à gestão de unidades de anestesia e desempenho organizacional em contexto de saúde, sem relação clara com IA aplicada à governança pública, compliance ou accountability.: *n = 1*
+  - Aborda trustworthiness em IA em várias indústrias, sem foco específico em setor público, governança pública ou controle institucional.: *n = 1*
+  - O foco recai sobre desafios legais, responsabilidade administrativa e proteção de dados, com perfil predominantemente normativo, não prioritário frente à exigência de estudo empírico.: *n = 1*
+  - O foco em cidadania e governos latino-americanos é relevante para administração pública, mas não está suficientemente centrado em governança, compliance, riscos, controles internos ou accountability.: *n = 1*
+  - Embora trate de serviços tributários eletrônicos com IA, o foco principal parece ser melhoria de serviços e crescimento econômico, e não governança, integridade, controles internos ou accountability.: *n = 1*
+  - O próprio título indica um roteiro para transformação do setor público, sugerindo caráter programático e não empírico, o que contraria o tipo de estudo priorizado.: *n = 1*
+
+*** Elegibilidade
+- Relatórios buscados para recuperação em texto completo: *n = 11*
+- Relatórios não recuperados: *n = 0*
+- Relatórios avaliados para elegibilidade: *n = 11*
+- Relatórios excluídos após leitura do texto completo: *n = 10*
+  - Embora seja empírico e trate de triagem automatizada em comissão anticorrupção, o foco principal parece recair sobre processamento de denúncias em órgão específico, com aderência parcial ao recorte de governança, controles internos e accountability. Foi preterido por haver candidato mais diretamente centrado em supervisão da governança pública.: *n = 1*
+  - É relevante por abordar compliance tributário e ferramentas tecnológicas para inspeção fiscal, mas o foco parece mais instrumental e setorial na fiscalização tributária. Foi considerado menos aderente que o artigo selecionado para o eixo mais amplo de governança pública e oversight.: *n = 1*
+  - Apresenta estudo empírico sobre adoção de chatbot em administração pública, o que é pertinente ao setor público. Contudo, o foco principal está em adoção tecnológica, e não em integridade, supervisão, controles internos, risco ou accountability, sendo menos aderente ao recorte substantivo.: *n = 1*
+  - O título sugere relação entre IA e boa governança no setor público marroquino, mas com ênfase em desempenho público de forma ampla. Foi preterido por menor especificidade em accountability, controles internos e supervisão em comparação ao artigo selecionado.: *n = 1*
+  - É bastante próximo ao recorte por tratar de tecnologias de auditoria em agências públicas de segurança. Contudo, o título não explicita uso de IA, e a aderência ao tema central da atividade fica ligeiramente inferior à do artigo selecionado, que trata diretamente de automação da supervisão da governança pública.: *n = 1*
+  - Apesar de muito aderente tematicamente a accountability financeira e governança no setor público, o título indica foco em oportunidades e desafios estratégicos, com caráter possivelmente mais analítico-conceitual do que empírico.: *n = 1*
+  - O foco em modelo de governança de IA no setor público é pertinente, porém o título sugere formulação de modelo mais do que investigação empírica sobre integridade, compliance ou controles internos.: *n = 1*
+  - É empírico e aborda justiça administrativa com algoritmos, tema importante para governança pública. Ainda assim, sua ênfase em justiça administrativa e contexto africano o torna menos alinhado ao eixo de compliance, controles internos e accountability organizacional do que o artigo selecionado.: *n = 1*
+  - Aborda IA e modelos de governança pública em bem-estar socioeconômico, mas com escopo mais amplo e menos direcionado a mecanismos de supervisão, integridade, risco e accountability.: *n = 1*
+  - É um estudo empírico relevante sobre risco, incerteza e uso de algoritmos em decisões de política pública. Contudo, o foco está em justiça criminal e decisão de políticas, não em governança administrativa, controles internos ou supervisão institucional no setor público em sentido organizacional.: *n = 1*
+
+*** Inclusão
+- Estudos incluídos na síntese qualitativa final: *n = 1*
+
+** Tabela-resumo do fluxo PRISMA 2020
+
+#+NAME: tab:prisma2020
+#+CAPTION: Síntese do fluxo PRISMA 2020 aplicado à seleção do artigo.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begingroup
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{4pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \captionof{table}{Síntese do fluxo PRISMA 2020 aplicado à seleção do artigo.}
+#+LATEX: \label{tab:prisma2020}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Etapa PRISMA 2020 & n \\
+#+LATEX: \midrule
+#+LATEX: Registros identificados & 61 \\
+#+LATEX: Registros removidos antes da triagem & 42 \\
+#+LATEX: Registros triados & 19 \\
+#+LATEX: Registros excluídos na triagem & 8 \\
+#+LATEX: Relatórios buscados para recuperação & 11 \\
+#+LATEX: Relatórios não recuperados & 0 \\
+#+LATEX: Relatórios avaliados para elegibilidade & 11 \\
+#+LATEX: Relatórios excluídos após leitura completa & 10 \\
+#+LATEX: Estudos incluídos na síntese qualitativa & 1 \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \endgroup
+
+** Estudos classificados no fluxo
+
+#+NAME: tab:estudos_fluxo
+#+CAPTION: Classificação sintética dos estudos identificados no fluxo PRISMA 2020.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begingroup
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{3pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{longtable}{>{\raggedright\arraybackslash}p{0.36\textwidth} >{\raggedright\arraybackslash}p{0.18\textwidth} >{\raggedright\arraybackslash}p{0.14\textwidth} >{\raggedright\arraybackslash}p{0.24\textwidth}}
+#+LATEX: \caption{Classificação sintética dos estudos identificados no fluxo PRISMA 2020.}\label{tab:estudos_fluxo}\\
+#+LATEX: \toprule
+#+LATEX: Estudo & Situação no fluxo & Tipo & Motivo \\ 
+#+LATEX: \midrule
+#+LATEX: \endfirsthead
+#+LATEX: \toprule
+#+LATEX: Estudo & Situação no fluxo & Tipo & Motivo \\ 
+#+LATEX: \midrule
+#+LATEX: \endhead
+#+LATEX: \midrule
+#+LATEX: \multicolumn{4}{r}{Continua na próxima página} \\ 
+#+LATEX: \endfoot
+#+LATEX: \bottomrule
+#+LATEX: \endlastfoot
+#+LATEX: Freire F.d.S. (2025), \textit{Automating public governance oversight: evidence from the Federal District of Brazil}\\ \emph{Base(s): Scopus} & Incluído & estudo empírico com evidência aplicada & Maior aderência ao recorte por tratar de automação da supervisão da governança pública, com evidência empírica em contexto brasileiro e forte… \
+#+LATEX: Sereewatthanawut I. (2026), \textit{Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo de caso empírico & Embora seja empírico e trate de triagem automatizada em comissão anticorrupção, o foco principal parece recair sobre processamento de denúncias em… \
+#+LATEX: Aldemir C. (2025), \textit{Artificial Intelligence for Financial Accountability and Governance in the Public Sector: Strategic Opportunities and Challenges}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & não claramente identificável pelos metadados; possivelmente estratégico/conceitual & Apesar de muito aderente tematicamente a accountability financeira e governança no setor público, o título indica foco em oportunidades e desafios… \
+#+LATEX: Leocádio D. (2025), \textit{Exploration of Audit Technologies in Public Security Agencies: Empirical Research from Portugal}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & pesquisa empírica & É bastante próximo ao recorte por tratar de tecnologias de auditoria em agências públicas de segurança. \
+#+LATEX: Saida I. (2025), \textit{Synergy between Artificial Intelligence and Good Governance: Deciphering Predictive Dynamics for Optimal Public Performance in Morocco}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & aparentemente estudo empírico aplicado & O título sugere relação entre IA e boa governança no setor público marroquino, mas com ênfase em desempenho público de forma ampla. \
+#+LATEX: Shidomi V.L.R.Y. (2025), \textit{Tax Compliance and Technological Innovation: Case Study on the Development of Tools to Assist Sales Tax Inspections to Curb Tax Fraud}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo de caso empírico & É relevante por abordar compliance tributário e ferramentas tecnológicas para inspeção fiscal, mas o foco parece mais instrumental e setorial na… \
+#+LATEX: Omonov M.S. (2025), \textit{Towards Smart Public Administration: A TOE-Based Empirical Study of AI Chatbot Adoption in a Transitioning Government Context}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo empírico & Apresenta estudo empírico sobre adoção de chatbot em administração pública, o que é pertinente ao setor público. \
+#+LATEX: Adeleke F. (2024), \textit{Algorithms and Administrative Justice in Africa: A Case Study from Nigeria}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo de caso & É empírico e aborda justiça administrativa com algoritmos, tema importante para governança pública. \
+#+LATEX: Murko E. (2024), \textit{Artificial intelligence and public governance models in socioeconomic welfare: some insights from Slovenia}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & não claramente identificável pelos metadados; possivelmente estudo aplicado & Aborda IA e modelos de governança pública em bem-estar socioeconômico, mas com escopo mais amplo e menos direcionado a mecanismos de supervisão,… \
+#+LATEX: Prieto E.A.C. (2024), \textit{Governance Model for Artificial Intelligence in the Public Sector of Guayaquil, Ecuador, 2024}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & não claramente identificável pelos metadados; possivelmente estudo aplicado/modelagem & O foco em modelo de governança de IA no setor público é pertinente, porém o título sugere formulação de modelo mais do que investigação empírica… \
+#+LATEX: Hartmann K. (2021), \textit{Uncertainty, risk and the use of algorithms in policy decisions: a case study on criminal justice in the USA}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo de caso empírico & É um estudo empírico relevante sobre risco, incerteza e uso de algoritmos em decisões de política pública. \
+#+LATEX: Lotsis S. (2026), \textit{AI, Precision Agriculture and Tourism for Sustainable Regional Development: The Case of the Aegean Islands and Crete, Greece}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo de caso & Trata de desenvolvimento regional, agricultura de precisão e turismo, sem aderência suficiente ao tema de governança do serviço público, integridade,… \
+#+LATEX: Alyileili M. (2026), \textit{Sustainable and Inclusive AI Governance in Municipal Self-Service Systems: Ethical, Smart-Government, and Generative AI Perspectives}\\ \emph{Base(s): Scopus} & Excluído na triagem & não claramente identificável pelos metadados; possivelmente estudo aplicado/conceitual & O foco em sistemas municipais de autoatendimento, ética e smart government é mais amplo e mais próximo de governança digital e serviços do que de… \
+#+LATEX: Juárez-Merino M.Á. (2025), \textit{ARTIFICIAL INTELLIGENCE AND CITIZENSHIP IN LATIN AMERICAN GOVERNMENTS}\\ \emph{Base(s): Scopus} & Excluído na triagem & não claramente identificável pelos metadados & O foco em cidadania e governos latino-americanos é relevante para administração pública, mas não está suficientemente centrado em governança,… \
+#+LATEX: Sichinava D. (2025), \textit{Accelerating Economic Growth Through the Improvement of Electronic Tax Services Using Artificial Intelligence}\\ \emph{Base(s): Scopus} & Excluído na triagem & não claramente identificável pelos metadados; possivelmente estudo aplicado & Embora trate de serviços tributários eletrônicos com IA, o foco principal parece ser melhoria de serviços e crescimento econômico, e não governança,… \
+#+LATEX: Ifiss S. (2025), \textit{Artificial Intelligence and Good Governance: A Roadmap for Performance-Driven Public Sector Transformation}\\ \emph{Base(s): Scopus} & Excluído na triagem & roadmap/conceitual & O próprio título indica um roteiro para transformação do setor público, sugerindo caráter programático e não empírico, o que contraria o tipo de… \
+#+LATEX: Noitasaeng P. (2025), \textit{Efficiency Meets Excellence: The Impact of Merging High-Performance Organizations with Anesthesia Units}\\ \emph{Base(s): Scopus} & Excluído na triagem & não identificado com precisão pelos metadados & O tema é voltado à gestão de unidades de anestesia e desempenho organizacional em contexto de saúde, sem relação clara com IA aplicada à governança… \
+#+LATEX: Nastoska A. (2025), \textit{Evaluating Trustworthiness in AI: Risks, Metrics, and Applications Across Industries}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo amplo/intersetorial & Aborda trustworthiness em IA em várias indústrias, sem foco específico em setor público, governança pública ou controle institucional. \
+#+LATEX: Al-Kasasbeh H.H. (2025), \textit{Legal Challenges of Using AI and Big Data in Public Administration: Administrative Liability, Data Protection, and Public Services Efficiency}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo jurídico-normativo & O foco recai sobre desafios legais, responsabilidade administrativa e proteção de dados, com perfil predominantemente normativo, não prioritário… \
+#+LATEX: \end{longtable}
+#+LATEX: \normalsize
+#+LATEX: \endgroup
+
+#+LATEX: \clearpage
+
+** Representação esquemática do fluxo PRISMA 2020
+
+O fluxograma PRISMA 2020 é gerado como *SVG externo* em layout compacto, exibindo apenas as contagens de cada etapa. Os motivos detalhados de exclusão permanecem no fluxo textual e nas tabelas, para evitar sobrecarga visual na figura.
+
+#+begin_export latex
+\begin{center}
+\includegraphics[width=0.78\textwidth]{atividade_o_uso_da_ai_na_governanca_do_servico_publico_federal_prisma_prisma.pdf}
+\captionof{figure}{Fluxograma PRISMA 2020 da seleção do artigo de revisão sobre O uso da AI na governança do serviço público federal..}
+\label{fig:prisma2020_fluxo}
+\end{center}
+#+end_export
+
+* Resumo do artigo selecionado
+
+** Referência do estudo
+
+A referência do estudo selecionado corresponde a [cite:@fds2025automating].
+
+Freire, F. de S., Costa, G. P. C. L., Martins, V. M., & Saraiva, M. C. C. M. (2025). Automating public governance oversight: Evidence from the Federal District of Brazil. *Administratie si Management Public, 45*, 91–109. https://doi.org/10.24818/amp/2025.45-05
+
+** Link para download do texto completo
+
+[[https://ramp.ase.ro/vol45/45-05.pdf][Download do PDF]]
+
+** Problema e objetivo de pesquisa
+
+O artigo investiga em que medida a automação, por meio do sistema LARA (Automatic Administrative Resource Gatherer), pode fortalecer a transparência, a governança e o compliance no setor público do Distrito Federal, especialmente no monitoramento da publicação de atas dos Comitês Internos de Governança (CIGs). O problema de pesquisa decorre da constatação de que a existência formal de estruturas de governança não garante sua institucionalização nem a transparência ativa exigida pelas normas. Como objetivo, o estudo busca: (i) identificar os órgãos que não publicam atas dos CIGs; (ii) analisar a frequência dessa publicação; e (iii) propor melhorias para institucionalizar práticas de governança e accountability.
+
+** Argumento central
+
+O argumento central do artigo é que a automação de supervisão da governança pública, combinando inteligência artificial e web scraping, pode ampliar a capacidade estatal de monitorar transparência, compliance e integridade de forma mais eficiente, padronizada e escalável. A experiência com o LARA demonstra que ferramentas automatizadas permitem identificar falhas de institucionalização de estruturas de governança, lacunas de publicidade ativa e assimetrias de conformidade entre órgãos públicos. Assim, o uso de AI não aparece como substituto do controle humano, mas como mecanismo de apoio à accountability, ao fortalecimento dos controles internos e à maturidade institucional.
+
+** Desenho de pesquisa
+
+Trata-se de um estudo empírico aplicado, com abordagem de métodos mistos. O campo empírico compreende 47 organizações públicas do Distrito Federal, selecionadas a partir da Lei Orçamentária Anual de 2023, incluindo órgãos da administração direta, autarquias, fundações públicas, empresas públicas e sociedades de economia mista. O estudo combina: (a) análise documental das normas e evidências de governança; (b) extração automatizada de dados em websites institucionais; e (c) validação de conteúdo dos links e registros encontrados. O artefato metodológico central é o bot LARA, desenvolvido em Python com uso de bibliotecas como Requests, BeautifulSoup e pandas, além de rotinas de expressões regulares, filtragem e comparação de dados. O sistema realiza buscas automatizadas, identifica links relacionados aos CIGs, verifica se há atas publicadas e compara os resultados com bases estruturadas. A análise empírica classifica os órgãos em grupos segundo a existência de ordenação formal dos CIGs, designação de membros e publicação de atas atualizadas. Portanto, o estudo apresenta um desenho observacional, descritivo e avaliativo, orientado à mensuração de conformidade e transparência administrativa.
+
+** Principais achados
+
+Os achados mostram importantes lacunas de governança e compliance no setor público do Distrito Federal. Entre os 47 órgãos analisados, 27,7% não apresentaram evidências de estrutura formal de governança, isto é, não possuíam ato instituidor do CIG, membros designados nem registros de transparência. Apenas 57,4% alcançaram conformidade plena, com ordenação formal, membros definidos e publicação de atas para 2024 e 2025. Outros 6,4% tinham estrutura formal, mas não publicavam atas, e 8,5% publicavam atas apenas de anos anteriores, o que indica baixa institucionalização. O bot LARA obteve desempenho considerado satisfatório, com acurácia geral de 73,53% na identificação de ordenações e membros definidos; no grupo de conformidade plena, alcançou 74,07% de acerto para atos e designações e 77,78% para atas. Os resultados sugerem que fragmentação institucional, baixa padronização, limitações de digitalização e inconsistências na publicidade ativa dificultam a efetividade dos mecanismos de governança, integridade e accountability.
+
+** Justificativa da seleção final
+
+O artigo foi adequadamente selecionado para a atividade porque atende integralmente ao recorte temático e metodológico proposto. Em primeiro lugar, trata-se de um estudo empírico sobre governança, compliance e gestão de riscos no setor público, com foco em integridade, controles internos e accountability. Em segundo lugar, há uso efetivo de AI e automação, materializado no desenvolvimento e aplicação do sistema LARA para monitoramento de transparência institucional. Em terceiro lugar, o campo empírico é diretamente relevante para o tema da governança no serviço público brasileiro, ainda que situado no Distrito Federal, pois discute estruturas formais e práticas de supervisão comparáveis às da administração pública federal. Por fim, o artigo possui texto completo verificável e acessível por link de download, satisfazendo o critério de elegibilidade final exigido para a análise acadêmica.
+
+** Contribuição do estudo para o tema
+
+O estudo contribui empiricamente para a literatura sobre governança digital no setor público ao demonstrar uma aplicação concreta de AI e web scraping no monitoramento de integridade, compliance e transparência administrativa. Sua principal contribuição é oferecer um modelo replicável de supervisão automatizada da governança, útil para órgãos de controle, controladorias e gestores públicos interessados em fortalecer controles internos e accountability. Além disso, o artigo aproxima o debate sobre inteligência artificial de questões institucionais clássicas da administração pública, como governança, conformidade normativa, maturidade organizacional e transparência ativa. Ao propor a automatização da coleta e verificação de evidências de governança, o estudo amplia o repertório metodológico para avaliações de políticas e estruturas de integridade no setor público.
+
+* Texto corrido para entrega
+
+Freire, Costa, Martins e Saraiva (2025) analisam como a automação pode fortalecer a supervisão da governança pública no setor estatal, tomando como evidência empírica 47 órgãos e entidades do Distrito Federal. O problema de pesquisa parte da seguinte questão: em que medida ferramentas automatizadas baseadas em inteligência artificial e web scraping podem ampliar a transparência, o compliance e a accountability da administração pública, especialmente no acompanhamento da publicação das atas dos Comitês Internos de Governança (CIGs)? O estudo se insere de modo aderente ao debate sobre o uso da AI na governança do serviço público, ao relacionar inovação tecnológica com integridade institucional, controles internos e conformidade normativa.
+
+O argumento central do artigo sustenta que a automação da supervisão governamental pode reduzir assimetrias informacionais, melhorar o monitoramento da transparência ativa e contribuir para a institucionalização de práticas de governança. Em vez de tratar a AI como substituta da decisão humana, os autores a apresentam como instrumento de apoio ao controle, à verificação de conformidade e ao fortalecimento da maturidade administrativa. Nessa perspectiva, a ferramenta LARA (Automatic Administrative Resource Gatherer) funciona como mecanismo de rastreamento e validação de evidências públicas de governança, permitindo identificar se os órgãos possuem comitês formalizados, membros designados e atas efetivamente publicadas.
+
+Do ponto de vista metodológico, trata-se de um estudo empírico aplicado, com abordagem de métodos mistos. O desenho da pesquisa combina análise documental, extração automatizada de dados e validação de conteúdo. O universo empírico foi composto por 47 organizações do Distrito Federal, selecionadas com base na Lei Orçamentária Anual de 2023 e abrangendo administração direta, autarquias, fundações, empresas públicas e sociedades de economia mista. O bot LARA foi desenvolvido em Python e utiliza bibliotecas como Requests, BeautifulSoup e pandas para realizar buscas automatizadas, coletar links em páginas institucionais, filtrar conteúdos relevantes e comparar os dados encontrados com uma base estruturada de referência. O estudo, assim, articula uma estratégia observacional e descritiva com finalidade avaliativa, voltada à mensuração da conformidade com exigências de governança e publicidade ativa.
+
+Os principais achados revelam deficiências importantes na institucionalização da governança. Dos 47 órgãos analisados, 27,7% não apresentaram qualquer evidência de estrutura formal de governança, sem ordenação dos CIGs, membros nomeados ou registros de transparência. Apenas 57,4% dos casos atingiram conformidade plena, com atos formais, membros definidos e publicação de atas atualizadas para 2024 e 2025. Outros órgãos exibiram conformidade parcial: 6,4% tinham comitês formalizados, mas sem publicação de atas, e 8,5% publicavam documentos apenas de exercícios anteriores. O desempenho do LARA foi satisfatório, com acurácia geral de 73,53% na identificação de ordenações e membros, além de bons resultados na localização de atas. Esses achados sugerem que fragmentação institucional, insuficiente padronização, baixa digitalização e limitada capacidade administrativa ainda comprometem a transparência e a accountability.
+
+A principal contribuição do estudo está em demonstrar, de forma empiricamente sustentada, que ferramentas de AI e automação podem ser incorporadas à governança pública como instrumentos de monitoramento de compliance, integridade e controles internos. O artigo oferece um modelo replicável para órgãos de controle e administrações públicas interessadas em desenvolver mecanismos automatizados de supervisão. Além disso, reforça uma agenda contemporânea de governança digital que combina inovação tecnológica com exigências de transparência, auditabilidade e responsabilidade institucional.
+
+A seleção final do artigo se justifica porque ele atende com precisão ao escopo da atividade acadêmica. Trata-se de estudo empírico, com uso concreto de AI, voltado à governança, compliance e riscos no setor público, além de dialogar diretamente com integridade, controles internos e accountability. Ademais, o texto completo é verificável e está disponível para download, cumprindo o requisito metodológico de elegibilidade. Em síntese, o artigo constitui uma evidência relevante e atual para compreender como a automação pode apoiar a supervisão da governança pública e induzir melhorias institucionais em contextos administrativos brasileiros.
+
+#+PRINT_BIBLIOGRAPHY:

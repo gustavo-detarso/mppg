@@ -1,0 +1,539 @@
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+#+begin_comment
+#+end_comment
+#+CITE_EXPORT: biblatex backend=biber,style=apa,sortcites=true,sorting=nyt,giveninits=true,maxcitenames=2,maxbibnames=20,uniquelist=minyear
+#+BIBLIOGRAPHY: atividade_o_uso_da_ai_em_governanca_compliance_e_gestao_de_riscos_no_governo_federal_prisma.bib
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado em Políticas Públicas e Governo \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias da administração pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 24 de março de 2026 \\
+\textbf{Título do trabalho}      & Busca e análise bibliográfica de estudo empírico sobre AI em governança, compliance e riscos no serviço público \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \clearpage
+
+* Introdução
+
+Esta triagem foi orientada pelo tema do uso da inteligência artificial em governança, compliance e gestão de riscos no governo federal, com recorte em estudos empíricos sobre o serviço público. Considerando o objetivo da atividade, buscou-se identificar, entre os resultados recuperados nas bases Semantic Scholar e Scopus, um artigo que apresentasse aderência substantiva à administração pública, foco em governança, integridade, controles internos, auditoria, accountability ou gestão de riscos, e desenho empírico minimamente identificável. Como todos os candidatos já haviam sido previamente filtrados quanto à disponibilidade de texto completo verificável, a decisão concentrou-se sobretudo na aderência temática e metodológica. Em razão disso, foram priorizados estudos situados no setor público e excluídos trabalhos centrados em bancos, seguros, finanças privadas, saúde, indústria farmacêutica, energia, logística e outros setores não compatíveis com o recorte da disciplina. Também foram excluídos estudos predominantemente conceituais, normativos, ensaísticos, revisões ou mapeamentos, quando não ofereciam campo empírico claro no serviço público.
+
+O artigo selecionado ao final do processo foi *“Conversational AI for PeopleSoft HCM: Elevating Public Sector HR”*. A escolha final se justifica porque O artigo selecionado foi “Conversational AI for PeopleSoft HCM: Elevating Public Sector HR” porque é o candidato que melhor combina os requisitos centrais da atividade. Em primeiro lugar, está claramente situado no setor público, com foco em recursos humanos no setor público e em instituições governamentais e de educação superior, o que o aproxima do universo da administração pública. Em segundo lugar, apresenta interface direta com governança e compliance ao enfatizar controles de privacidade, segurança, ética e conformidade regulatória na integração de IA a sistemas públicos. Em terceiro lugar, oferece base empírica identificável ao declarar que se apoia em dados de implementação de um grande sistema universitário estadual, reportando resultados em adoção, conclusão de tarefas, volume de suporte e satisfação, o que permite discutir problema de pesquisa, método aplicado, campo empírico e achados. Além disso, o texto completo foi previamente verificado, com full_text_verified=true e PDF acessível em link verificável (https://lorojournals.com/index.php/emsj/en/article/download/1476/1431), atendendo à exigência obrigatória de elegibilidade documental. Embora não trate diretamente do governo federal brasileiro, foi o estudo empírico mais aderente ao recorte de serviço público entre os candidatos disponíveis.
+
+Também é importante registrar uma distinção metodológica. Neste trabalho, o *PRISMA 2020* foi utilizado para organizar o *fluxo da busca e da seleção* nas bases consultadas [cite:@prisma2020statement]. O artigo selecionado foi analisado a partir de seus metadados e, obrigatoriamente, de um *texto completo com link verificável para download* [cite:@thontadarya2025conversational].
+
+* Estratégia de busca
+
+** Pergunta orientadora
+
+#+begin_quote
+Como a inteligência artificial vem sendo aplicada empiricamente à governança, ao compliance e à gestão de riscos no setor público, especialmente em funções de integridade, controles internos, auditoria e accountability, e qual estudo entre os candidatos melhor atende ao recorte de administração pública com evidência empírica e texto completo verificável?
+#+end_quote
+
+** Bases consultadas
+
+- Semantic Scholar, Scopus
+
+** Base e lógica de busca
+
+A lógica de busca combinou três blocos centrais: (i) termos de tecnologia, como artificial intelligence, AI, inteligência artificial e machine learning; (ii) termos de contexto institucional, como public sector, public administration, government, federal government, serviço público e setor público; e (iii) termos de problema substantivo, como governance, compliance, risk management, accountability, integrity e internal controls. Em complemento, foram acrescentados termos de desenho metodológico, como empirical, empirical study, case study e survey, a fim de priorizar estudos com base empírica. Na etapa de triagem, a combinação foi refinada por aderência ao recorte: primeiro, verificou-se se o artigo tratava efetivamente do setor público; depois, se abordava governança, compliance, risco, integridade, controles ou accountability; por fim, se apresentava evidência empírica ou aplicação concreta, mantendo-se a exigência de texto completo verificável com PDF acessível.
+
+** Queries por base
+
+- *Semantic Scholar*: =artificial intelligence public sector compliance risk management integrity=
+- *Scopus*: =TITLE-ABS-KEY(("artificial intelligence" OR AI OR "inteligência artificial" OR "machine learning") AND ("public sector" OR "public administration" OR government OR "federal government" OR "serviço público" OR "setor público") AND (governance OR governança OR compliance OR "risk management" OR "gestão de riscos" OR accountability OR integrity OR integridade OR "internal controls" OR "controles internos") AND (empirical OR "empirical study" OR "case study" OR survey))=
+
+** Critérios de inclusão
+
+- Estudos publicados entre 2017 e 2026.
+- Textos em inglês ou português.
+- Artigos com full_text_verified=true e PDF/download_url verificável e acessível.
+- Foco substantivo em setor público, administração pública, governo, serviço público ou órgãos de controle/oversight.
+- Relação direta com governança, compliance, gestão de riscos, integridade, controles internos, auditoria pública ou accountability usando AI.
+- Preferência por estudos empíricos, como survey, estudo de caso, análise aplicada, uso de dados observacionais ou evidência empírica explícita.
+- Maior aderência ao objetivo da atividade: identificar problema de pesquisa, método, campo empírico e principais achados em contexto público.
+
+** Critérios de exclusão
+
+- Estudos cujo foco principal recaía sobre setor bancário, financeiro, seguros, fintech, farmacêutico, saúde, energia, logística, comércio ou outros contextos privados não compatíveis com o recorte.
+- Artigos conceituais, normativos, revisões, mapeamentos ou ensaios sem campo empírico claro no serviço público.
+- Trabalhos sobre uso geral de AI no setor público sem conexão suficiente com governança, compliance, risco, integridade, controle ou accountability.
+- Estudos com aderência apenas periférica ao tema, ainda que tratassem de AI e governo.
+- Registros fora do escopo temático da atividade, apesar da disponibilidade de texto completo.
+
+** Observações de execução
+
+- Excluído antes da triagem por falta de texto completo verificável: LEVERAGING ARTIFICIAL INTELLIGENCE (AI) IN PUBLIC SECTOR FINANCIAL RISK MANAGEMENT: INNOVATIONS, CHALLENGES, AND FUTURE DIRECTIONS.
+- Excluído antes da triagem por falta de texto completo verificável: Utilizing Artificial Intelligence as a Strategic Risk Management Tool for Public Sector Operations and Auditing Processes.
+- Excluído antes da triagem por falta de texto completo verificável: THE INSIGHTS OF PUBLICATIONS IN THE FIELD OF ARTIFICIAL INTELLIGENCE (AI)-BASED RISK MANAGEMENT IN PUBLIC SECTOR: A BIBLIOMETRIC OVERVIEW.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence and Big Data as Risk Management Tools in Public Services: Opportunities, Challenges, and Practical Insights.
+- Excluído antes da triagem por falta de texto completo verificável: Beyond principles: Embedding ethical AI risks in public sector risk management practice.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial intelligence for risk management: A research agenda for public-private comparison.
+- Excluído antes da triagem por falta de texto completo verificável: Integrating artificial intelligence into risk management frameworks: a mixed-methods analysis of the Palestinian banking sector.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence in Public Administration: Practice and Ethics for Talent Management in Public Sector.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial intelligence in financial risk management: A critical comparison of approaches and innovations – Part 1.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial intelligence in financial risk management: A critical comparison of approaches and innovations — Part 2.
+- Excluído antes da triagem por falta de texto completo verificável: Generative artificial intelligence in public administration: an integrated framework for regulatory compliance, ethical governance, and digital transformation.
+- Excluído antes da triagem por falta de texto completo verificável: TRANSFORMATION OF REGULATORY COMPLIANCE IN THE PUBLIC SECTOR WITH ARTIFICIAL INTELLIGENCE.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence System Risk Management Methodology Based on Generalized Blueprints.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence in Financial Services: Applications, Challenges, and Research Directions.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence,Data Privacy and Ethical Integrity in Healthcare sector: Comparing the Regulatory framework between India & UK.
+- Excluído antes da triagem por falta de texto completo verificável: Integrating Generative AI and Large Language Models in Financial Sector Risk Management: Regulatory Frameworks and Practical Applications.
+- Excluído antes da triagem por falta de texto completo verificável: Counterfeit medicines and market integrity: Strengthening regulatory intelligence through predictive analytics and cross-sector collaboration.
+- Excluído antes da triagem por falta de texto completo verificável: THE ROLE OF ARTIFICIAL INTELLIGENCE IN TRANSFORMING THE INDIAN BANKING SECTOR.
+- Excluído antes da triagem por falta de texto completo verificável: Utilizing Artificial Intelligence as a Strategic Risk Management Utilizing Artificial Intelligence as a Strategic Risk Management Tool for Public Sector Operations and Auditing Processes Tool for Public Sector Operations and Auditing Processes.
+- Excluído antes da triagem por falta de texto completo verificável: Basic Structure on Artificial Intelligence: A Revolution in Risk Management and Compliance.
+- Excluído antes da triagem por falta de texto completo verificável: Redefining Finance: The Transformational Impact of Artificial Intelligence on the Indian Banking Industry.
+- Excluído antes da triagem por falta de texto completo verificável: A Legal and Ethical Review of Artificial Intelligence Technology in Public Safety Management.
+- Excluído antes da triagem por falta de texto completo verificável: Investigating risk elements and critical success factors for AI procurement projects in the public sector: a qualitative approach based on UAE public organisations.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence in Financial Markets: Global Trends, Regulatory Challenges, and Comparative Analysis with India.
+- Excluído antes da triagem por falta de texto completo verificável: Leveraging Artificial Intelligence for Data Integrity, Transparency, and Security in Technology-enabled Improvements to Clinical Trial Data Management in Healthcare..
+- Excluído antes da triagem por falta de texto completo verificável: Improving Financial Audits and Management of Compliance using Artificial Intelligence and Secure Cloud Technology.
+- Excluído antes da triagem por falta de texto completo verificável: Integrated Framework of Blockchain Technology and Artificial Intelligence for Sustainable Supply Chain Optimization.
+- Excluído antes da triagem por falta de texto completo verificável: Impact of Artificial Intelligence on Cyber Security in Banking.
+- Excluído antes da triagem por falta de texto completo verificável: Quality Risk Management in Pharmaceutical Validation and Product Development.
+- Excluído antes da triagem por falta de texto completo verificável: Understanding Barriers to AI Use Among Public Sector Knowledge Workers.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence, Organizational Learning, and Sustainable Banking: Insights From Turkey for Global Business Practice.
+- Excluído antes da triagem por falta de texto completo verificável: The Challenge of European AI Risk Management: An Iron Cage for Water?.
+- Excluído antes da triagem por falta de texto completo verificável: The Effect of Artificial Intelligence and IT Governance on Audit Quality.
+- Excluído antes da triagem por falta de texto completo verificável: Beyond the veil: unpacking money laundering through economic models, emerging technologies, and government capture.
+- Excluído antes da triagem por falta de texto completo verificável: Embedding AI ethics in the data lifecycle: A framework for enterprise AI governance.
+- Excluído antes da triagem por falta de texto completo verificável: From trust to augmentation: A comprehensive survey on synergistic integration of decentralized and generative intelligence.
+- Excluído antes da triagem por falta de texto completo verificável: The rise of algorithmic governance and the dual revolution: Applications, challenges, and governance of artificial intelligence in public administration.
+- Excluído antes da triagem por falta de texto completo verificável: Positioning public sector practitioners as ‘moral crumple zones’: Mechanisms in the early use of generative AI work support tools.
+- Excluído antes da triagem por falta de texto completo verificável: Generative artificial intelligence and urban transport resilience: Rethinking sustainable mobility.
+- Excluído antes da triagem por falta de texto completo verificável: AI capacity in the public sector: Pathways from the environmental context to an organizational impact.
+- Excluído antes da triagem por falta de texto completo verificável: Leveraging AI innovation for a sustainable environment in G-7: Finance and governance roles.
+- Excluído antes da triagem por falta de texto completo verificável: The role of government policy in reducing road carnage: evidence from Zimbabwe’s public passenger transport sector.
+- Excluído antes da triagem por falta de texto completo verificável: Human-Centric automation to intelligent information integration: A mixed-methods framework for industry 5.0 manufacturing.
+- Excluído antes da triagem por falta de texto completo verificável: Incorporating AI incident reporting into telecommunications law and policy: Insights from India.
+- Excluído antes da triagem por falta de texto completo verificável: Value effect of AI innovation zones: Green premium and cost reduction pathways in environmental disclosure.
+- Excluído antes da triagem por falta de texto completo verificável: Dynamic simulation of urban agglomeration network resilience under disturbances: An integrated deep learning and agent-based approach – Case study of the Beijing-Tianjin-Hebei region.
+- Excluído antes da triagem por falta de texto completo verificável: Institutionalizing Predictive AI in Public Administration: Algorithmic Governance and the Case of a Wildfire Forecasting System.
+- Excluído antes da triagem por falta de texto completo verificável: A Review of TRiSM Frameworks in Artificial Intelligence Systems: Fundamentals, Taxonomy, Use Cases, Key Challenges and Future Directions.
+- Excluído antes da triagem por falta de texto completo verificável: Institutional complexity and technology governance: The societal diffusion of AI recruitment in South Korea.
+- Excluído antes da triagem por falta de texto completo verificável: Hybrid images of generative AI: A Q methodological study of civil servants' perceptions.
+- Excluído antes da triagem por falta de texto completo verificável: Where Risk Travels: A Dual-Path Model of Media and Governance in the Perception of AI Hallucination.
+- Excluído antes da triagem por falta de texto completo verificável: Can environmental signals influence dietary Behaviours?The impact of governmental green development attention on dietary diversity among older adults.
+- Excluído antes da triagem por falta de texto completo verificável: Digital Civil Servants: The Integration of Artificial Intelligence into Government Workflows.
+- Excluído antes da triagem por falta de texto completo verificável: Increasing Citizen Satisfaction with E-Public Administration: SERVQUAL and Holistic Governance Model in Comparison.
+- Excluído antes da triagem por falta de texto completo verificável: Public Service in the Age of AI: Institutional Strategies for Future-Ready Skill Development.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial intelligence innovation and financial information quality: Evidence from firm patent data.
+- Excluído antes da triagem por falta de texto completo verificável: Public Trust in Global AI Governance Across Geopolitical Rivals.
+- Excluído antes da triagem por falta de texto completo verificável: The role of universities in AI augmented anticipatory governance: Towards a maturity model proposition.
+- Excluído antes da triagem por falta de texto completo verificável: Nexus between tourism, renewable energy, and unemployment in South Africa. Insight from KRLS analysis.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence and Corporate Governance: Empirical Evidence from the Digital Transformation of Listed Firms.
+- Excluído antes da triagem por falta de texto completo verificável: Understanding Accountability in AI Use Within the Public Sector: Insights From State Governments in the United States.
+- Excluído antes da triagem por falta de texto completo verificável: Implementation of artificial intelligence in public administration: Prospects and challenges of the digital era.
+- Excluído antes da triagem por falta de texto completo verificável: Governance Pathways to Sustainable Development: A Global Analysis of Efficiency, Integrity, and Risk Based on Double Machine Learning and Genetic Algorithm Models.
+- Excluído antes da triagem por falta de texto completo verificável: Explainable Machine Learning for Transparent Decision-Making in E-Governance Systems.
+- Excluído antes da triagem por falta de texto completo verificável: Consent as Creative Labor: Ethical AI Governance Through University- Government-Industry Collaboration in the Creative Sector.
+- Excluído antes da triagem por falta de texto completo verificável: 24th IFIP WG 8.5 International Conference on Electronic Government, EGOV 2025.
+- Excluído antes da triagem por falta de texto completo verificável: Regulating AI in Administrative Decision-Making: Legal Implications and Technological Innovations.
+- Excluído antes da triagem por falta de texto completo verificável: Interdisciplinary Competencies for AI-Enabled Co-creation: Mapping Public Sector Skills in Poland and Ukraine.
+- Excluído antes da triagem por falta de texto completo verificável: Applying AI Ethics to ERP Software: A Critical Case Study and Comparative Analysis of an Industry Framework.
+- Excluído antes da triagem por falta de texto completo verificável: How to Demonstrate Trustworthy Use of AI in Public Services: A Case Study.
+- Excluído antes da triagem por falta de texto completo verificável: Strategic AI Governance in Saudi Higher Education: A Triple Helix Model for University-Government- Industry Integration.
+- Excluído antes da triagem por falta de texto completo verificável: A socio-technical framework for AI trust in public administration.
+- Excluído antes da triagem por falta de texto completo verificável: Public Policy for Responsible AI: The Role of Government in Shaping Ethical Triple Helix Collaborations.
+- Excluído antes da triagem por falta de texto completo verificável: Bridging Knowledge and Policy: How Universities and Governments Co- Create the Future of Responsible AI.
+- Excluído antes da triagem por falta de texto completo verificável: Public sector valuations: Current and emerging technologies, and industry readiness.
+- Excluído antes da triagem por falta de texto completo verificável: Measuring Transaction Costs in Public Sector Contracting Through Machine Learning and Contract Text.
+- Excluído antes da triagem por falta de texto completo verificável: 17th IFIP WG 8.5 International Conference on Electronic Participation, ePart 2025.
+- Excluído antes da triagem por falta de texto completo verificável: Mechanisms and multidimensional heterogeneity of artificial intelligence technology in enhancing corporate ESG performance: evidence from China.
+- Excluído antes da triagem por falta de texto completo verificável: Generalist and specialist roles of policy actors: Insights from preferences on AI regulation.
+- Excluído antes da triagem por falta de texto completo verificável: Digital Transformation and Sustainable Innovation in the GCC: The Role of AI, IoT and Blockchain.
+- Excluído antes da triagem por falta de texto completo verificável: Construction and Research of Theoretical Models for Service Design Systems in the Context of Artificial Intelligence.
+- Excluído antes da triagem por falta de texto completo verificável: Impact of Creative AI on Carbon Credit Accounting and Taxation: A Comprehensive Analysis of Existing Frameworks and SDG Goals 2030.
+- Excluído antes da triagem por falta de texto completo verificável: The Contextual Edge: LLMs and Sweden’s Public Sector Transformation.
+- Excluído antes da triagem por falta de texto completo verificável: 20th Iberian Conference on Information Systems and Technologies, CISTI 2025.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence and Human Rights in Cambodia: Pathways to Social Justice and Positive Developmental Progress.
+- Excluído antes da triagem por falta de texto completo verificável: Guardrails, Not Guesswork: A Framework for Trustworthy AI Adoption.
+- Excluído antes da triagem por falta de texto completo verificável: Ethical Challenges of AI in Public Recruitment in Morocco.
+- Excluído antes da triagem por falta de texto completo verificável: Assessing AI-Driven Human Rights Violations: A Framework for Accountability.
+- Excluído antes da triagem por falta de texto completo verificável: From Lab to Market: Industrial Pathways for Translating Academic AI Research Into Scalable Innovation.
+- Excluído antes da triagem por falta de texto completo verificável: Next-generation accreditation in healthcare: the role of digital transformation and artificial intelligence.
+- Excluído antes da triagem por falta de texto completo verificável: Integrating Cybersecurity into Sustainability: Emerging Trends and the Role of Artificial Intelligence.
+- Excluído antes da triagem por falta de texto completo verificável: AI-Driven Cybersecurity: Protecting Human Rights in the Digital Age.
+- Excluído antes da triagem por falta de texto completo verificável: Artificial intelligence and governmental low-carbon competition pressure: evidence from a 30-province panel using fixed effects and threshold regression.
+- Excluído antes da triagem por falta de texto completo verificável: A Unified Examination of Data Poisoning Across Government, Retail, Transportation, Environmental, and Educational Systems.
+- Excluído antes da triagem por falta de texto completo verificável: A hybrid AI framework for multi-target prediction of organic pollutants removal and power consumption in sewage treatment plant: A case study of Jaipur, India.
+- Excluído antes da triagem por falta de texto completo verificável: Reskilling human capital in the AI era: a human-centric conceptual ‘spider web’ model of knowledge and technology integration.
+- Excluído antes da triagem por falta de texto completo verificável: Technological and Policy Approaches to Combatting Disinformation Online.
+- Excluído antes da triagem por falta de texto completo verificável: Intelligent government service applications based on large language models: technological status, challenges, and future outlook.
+- Excluído antes da triagem por falta de texto completo verificável: The impact of governmental ecological attention on corporate ESG—empirical evidence from machine learning and text analysis.
+- Excluído antes da triagem por falta de texto completo verificável: Governing digital transformation in ports: Policy learning from the 5G-LOGINNOV project.
+- Excluído antes da triagem por falta de texto completo verificável: An IoT- and AI-Based Framework for Smart Municipal Waste Management in Urban E-Governance Systems.
+- Excluído antes da triagem por falta de texto completo verificável: Bridging the maturity-expectation gap: Generative AI in strategic decision-making for public R&D interim review.
+- Excluído antes da triagem por falta de texto completo verificável: Financial Resilience and the Sustainable Development Goals.
+- Excluído antes da triagem por falta de texto completo verificável: Administrative burden reducing in China: The digital administration reform and government–business interaction.
+- Excluído antes da triagem por falta de texto completo verificável: Beyond Publication: How e-government Platforms Use AI, Blockchain and Feedback Forums to Co-create Better Open Data.
+- Excluído antes da triagem por falta de texto completo verificável: Adapting Credit and Asset-Backed Financing to Climate Threats: AI-Driven Modeling and LLPA Policy Reform.
+- Excluído antes da triagem por falta de texto completo verificável: 24th IFIP WG 6.11 Conference on e-Business, e-Services and e-Society, I3E 2025.
+- Excluído antes da triagem por falta de texto completo verificável: 4th World Conference on Information Systems for Business Management, ISBM 2025.
+- Excluído antes da triagem por falta de texto completo verificável: Framing the Convergence of One Health and Digital Health in the Global South With a Gender-Sensitive Foresight Perspective: Delphi Study Using Latent Semantic Analysis.
+
+* PRISMA 2020
+
+** Observação metodológica
+
+A classificação distinguiu duas etapas analíticas. Foram marcados como excluido_triagem os trabalhos claramente desalinhados ao recorte temático principal, sobretudo por pertencerem a setores privados ou a temas sem relação suficiente com governança, compliance e risco no setor público. Foram marcados como excluido_elegibilidade os artigos que, embora mais próximos do tema ou do setor público, não atenderam adequadamente ao tipo de estudo priorizado ou ao foco substantivo exigido, por serem predominantemente conceituais, exploratórios, revisões, mapeamentos ou sem campo empírico suficientemente definido. Entre os candidatos, selecionou-se exatamente um artigo por apresentar a melhor combinação entre aderência ao setor público, foco em accountability/controle, presença de aplicação empírica ou evidência de implementação e disponibilidade de texto completo com link verificável.
+
+** Fluxo textual dos estudos
+
+*** Identificação
+- Registros identificados nas bases consultadas (Semantic Scholar, Scopus): *n = 200*
+- Semantic Scholar: *n = 100* registros recuperados
+  - Query usada: =artificial intelligence public sector compliance risk management integrity=
+- Scopus: *n = 100* registros recuperados
+  - Query usada: =TITLE-ABS-KEY(("artificial intelligence" OR AI OR "inteligência artificial" OR "machine learning") AND ("public sector" OR "public administration" OR government OR "federal government" OR "serviço público" OR "setor público") AND (governance OR governança OR compliance OR "risk management" OR "gestão de riscos" OR accountability OR integrity OR integridade OR "internal controls" OR "controles internos") AND (empirical OR "empirical study" OR "case study" OR survey))=
+- Registros removidos antes da triagem: *n = 109*
+  - Duplicatas removidas: *n = 0*
+  - Removidos por outros motivos: *n = 109*
+
+*** Triagem
+- Registros triados por título, resumo e metadados: *n = 91*
+- Registros excluídos na triagem: *n = 61*
+  - Foco na indústria farmacêutica privada, fora do recorte de serviço público e administração pública.: *n = 1*
+  - Foco no setor bancário, fora do recorte de serviço público.: *n = 1*
+  - Estudo sobre instituições financeiras do Reino Unido, sem aderência ao setor público.: *n = 1*
+  - Foco em fraude e compliance no setor bancário privado.: *n = 1*
+  - Foco em commodity trading, fora do setor público.: *n = 1*
+  - Foco em banco comercial de Bangladesh, fora do recorte de administração pública.: *n = 1*
+  - Tema amplo de economia global e compliance organizacional, sem foco no setor público.: *n = 1*
+  - Foco em sistemas contábeis e finanças, sem aderência ao serviço público.: *n = 1*
+  - Foco em banking e finanças islâmicas, fora do setor público.: *n = 1*
+  - Foco em bancos, fora do serviço público.: *n = 1*
+  - Trata de serviços financeiros em nuvem, sem foco em administração pública.: *n = 1*
+  - Foco em serviços financeiros e setor bancário.: *n = 1*
+  - Foco no setor financeiro dos EUA, não no setor público.: *n = 1*
+  - Foco em AML no setor bancário sul-africano, fora do recorte de serviço público.: *n = 1*
+  - Foco em organizações financeiras e bancárias, fora do setor público.: *n = 1*
+  - Estudo empírico no setor financeiro da Jordânia, não em administração pública.: *n = 1*
+  - Foco em serviços financeiros e RegTech, fora do recorte do setor público.: *n = 1*
+  - Foco em pesquisa clínica e saúde, fora da administração pública.: *n = 1*
+  - Foco em cadeia farmacêutica, não no setor público.: *n = 1*
+  - Foco em seguros, fora do recorte de administração pública.: *n = 1*
+  - Foco em instituições financeiras dos EUA, sem aderência ao setor público.: *n = 1*
+  - Foco em instituições financeiras, não no serviço público.: *n = 1*
+  - Foco em life sciences e healthcare, fora do recorte.: *n = 1*
+  - Foco em banking, fora do setor público.: *n = 1*
+  - Foco em gestão de risco financeiro, não no serviço público.: *n = 1*
+  - Foco em instituições financeiras licenciadas, fora do setor público.: *n = 1*
+  - Foco em risco financeiro, fora do setor público.: *n = 1*
+  - Foco em infraestrutura energética e cibersegurança, fora do recorte do serviço público governamental.: *n = 1*
+  - Foco em serviços financeiros e atendimento virtual, não em administração pública.: *n = 1*
+  - Foco em serviços financeiros, fora do serviço público.: *n = 1*
+  - Foco em serviços financeiros, não em administração pública.: *n = 1*
+  - Foco em RH e verificação etária, sem relação com governança pública.: *n = 1*
+  - Foco em finanças, fora do setor público.: *n = 1*
+  - Foco em microfinanças e experiência do cliente, não em administração pública.: *n = 1*
+  - Foco em seguradoras, fora do recorte de serviço público.: *n = 1*
+  - Foco em operações bancárias na Nigéria, fora do setor público.: *n = 1*
+  - Foco no mercado financeiro, sem aderência ao serviço público.: *n = 1*
+  - Mapeamento abrangente do setor bancário, fora do recorte público.: *n = 1*
+  - Foco em serviços financeiros na Índia, não em administração pública.: *n = 1*
+  - Foco em banking e forecasting financeiro, fora do setor público.: *n = 1*
+  - Foco na indústria de óleo e gás, fora do serviço público.: *n = 1*
+  - Foco em infraestrutura crítica e segurança nacional, sem centralidade em governança pública, compliance e accountability administrativa.: *n = 1*
+  - Apesar de mencionar bancos públicos, o foco é green finance e fintech no setor bancário, não administração pública governamental.: *n = 1*
+  - Foco em fintech e transações financeiras online, fora do recorte público.: *n = 1*
+  - Foco em FinTech e sustentabilidade, sem aderência ao serviço público.: *n = 1*
+  - Tema de ambientes urbanos inteligentes e recomendação, sem relação com governança, compliance e risco no serviço público.: *n = 1*
+  - Foco em logística e decisão sustentável, fora do recorte.: *n = 1*
+  - Foco em empresas de turismo e ESG, fora do serviço público.: *n = 1*
+  - Fora do tema de IA, governança pública e compliance.: *n = 1*
+  - Foco em parques urbanos, sem relação com o recorte da atividade.: *n = 1*
+  - Foco em litigância de IA, fora do recorte de administração pública com governança e risco.: *n = 1*
+  - Foco em desenvolvimento regional, agricultura e turismo, fora do recorte.: *n = 1*
+  - Foco em emissões urbanas, fora do recorte de governança/compliance/risco no serviço público.: *n = 1*
+  - Foco em decisão financeira e governança de dados em finanças, não em setor público.: *n = 1*
+  - Tema educacional, sem relação com governança, compliance e risco no governo.: *n = 1*
+  - Foco em extremismo e contraterrorismo, fora do recorte administrativo proposto.: *n = 1*
+  - Foco em cidades inteligentes e circularidade urbana, sem aderência ao problema de compliance/risco/accountability.: *n = 1*
+  - Foco em segurança hídrica de datacenters, fora do recorte.: *n = 1*
+  - Foco em comunidades econômicas digitais, sem aderência ao recorte da atividade.: *n = 1*
+  - Foco em governo digital e produtividade florestal, não em governança/compliance/risco com IA.: *n = 1*
+  - Foco em ética algorítmica na saúde, fora do recorte.: *n = 1*
+
+*** Elegibilidade
+- Relatórios buscados para recuperação em texto completo: *n = 30*
+- Relatórios não recuperados: *n = 0*
+- Relatórios avaliados para elegibilidade: *n = 30*
+- Relatórios excluídos após leitura do texto completo: *n = 29*
+  - Embora trate de administração pública e gestão de riscos em IA, adota abordagem conceitual-regulatória, sem desenho empírico compatível com o tipo priorizado.: *n = 1*
+  - Tema aderente à auditoria pública e risco no setor público, mas os metadados não permitem confirmar campo empírico ou método empírico robusto.: *n = 1*
+  - Trata de accountability e oversight no setor público, mas é uma análise legal comparativa, não um estudo empírico do serviço público.: *n = 1*
+  - Apesar de tratar de accountability e transparência em gestão pública, propõe framework com base em revisão, sem campo empírico definido.: *n = 1*
+  - Muito aderente ao setor público e à auditoria, porém explicitamente conceitual/exploratória, sem estudo empírico primário.: *n = 1*
+  - Tema relevante para governança de IA, porém sem foco específico em setor público nem em estudo empírico do serviço público.: *n = 1*
+  - Trata do setor público, mas de forma ampla e prospectiva, sem estudo empírico claramente definido.: *n = 1*
+  - Tem aderência ao setor público, mas o foco é potencial e riscos gerais da IA, sem centralidade em governança, compliance, controles internos ou accountability.: *n = 1*
+  - Muito pertinente ao tema, mas o resumo indica discussão analítica com evidência ilustrativa, sem desenho empírico suficientemente delimitado.: *n = 1*
+  - Tema em serviço público e corrupção, mas com abordagem predominantemente normativa e sem campo empírico claro.: *n = 1*
+  - Inclui governo entre os setores, porém é multissetorial e centrado em ética geral de IA, não em governança pública específica.: *n = 1*
+  - Embora inclua setor governamental em eventos públicos, o foco substantivo é gestão de eventos, não governança pública, controles internos ou accountability institucional.: *n = 1*
+  - Aderente a governança e regulação de IA, porém comparativo e normativo, sem campo empírico no serviço público.: *n = 1*
+  - Empírico e em instituições públicas, mas centrado em gestão de pessoas; a relação com governança, compliance e controles internos é secundária.: *n = 1*
+  - Trata de governança responsável em organizações públicas, mas o foco principal é a norma ISO/IEC 42001, com caráter mais de revisão/aplicação normativa do que estudo empírico do recorte substantivo.: *n = 1*
+  - Relaciona tecnologia e sistemas regulatórios públicos, mas não apresenta estudo empírico claro sobre governança, compliance e risco com IA.: *n = 1*
+  - Aderente a risco e compliance em órgão público aduaneiro, mas o resumo sugere artigo de recomendação e iniciativas, sem delineamento empírico suficiente em comparação com o selecionado.: *n = 1*
+  - Trata de governança pública, transparência e accountability, mas é centrado em ERP; a IA aparece apenas como evolução futura, não como objeto empírico central.: *n = 1*
+  - Próximo ao setor público, mas baseado em modelagem e avaliações simuladas, não em estudo empírico do tipo priorizado sobre governança/compliance/risco.: *n = 1*
+  - Trata de governo e compliance, mas é uma visão técnica de segurança distribuída, sem estudo empírico delimitado em governança/compliance/accountability.: *n = 1*
+  - Muito próximo ao tema por tratar de finanças públicas, transparência e riscos, mas o foco principal é gestão orçamentária e metodologias propostas; apresenta menor centralidade em integridade, controles internos e accountability com IA do que o artigo selecionado.: *n = 1*
+  - Empírico e no setor público policial, mas centrado em satisfação cidadã e confiança no governo, não em governança, compliance, controles internos ou gestão de riscos.: *n = 1*
+  - Trata de governança e IA, mas foca percepção de gestores públicos, sem ênfase substantiva em compliance, risco, integridade ou accountability.: *n = 1*
+  - Relaciona IA e auditoria, mas não está claramente situado no setor público nem no recorte substantivo prioritário.: *n = 1*
+  - Muito próximo ao tema AI-for-government, porém trata-se de estudo de mapeamento, não empírico aplicado ao problema substantivo.: *n = 1*
+  - Altamente aderente por tratar de comissão anticorrupção e triagem de denúncias com IA, mas não foi selecionado por insuficiência de metadados no resumo fornecido para sustentar, nesta triagem, a descrição do método, do campo e dos achados com a mesma segurança do artigo incluído.: *n = 1*
+  - Próximo do tema de governança municipal e ética em IA, porém sem evidência de estudo empírico claro no recorte de compliance/risco.: *n = 1*
+  - Tema de serviços públicos proativos com IA, mas sem foco em governança, compliance e risco nem desenho empírico definido.: *n = 1*
+  - Tema regulatório interessante, mas distante do foco em serviço público, integridade, controles internos e accountability usando AI.: *n = 1*
+
+*** Inclusão
+- Estudos incluídos na síntese qualitativa final: *n = 1*
+
+** Tabela-resumo do fluxo PRISMA 2020
+
+#+NAME: tab:prisma2020
+#+CAPTION: Síntese do fluxo PRISMA 2020 aplicado à seleção do artigo.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begingroup
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{4pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \captionof{table}{Síntese do fluxo PRISMA 2020 aplicado à seleção do artigo.}
+#+LATEX: \label{tab:prisma2020}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Etapa PRISMA 2020 & n \\
+#+LATEX: \midrule
+#+LATEX: Registros identificados & 200 \\
+#+LATEX: Registros removidos antes da triagem & 109 \\
+#+LATEX: Registros triados & 91 \\
+#+LATEX: Registros excluídos na triagem & 61 \\
+#+LATEX: Relatórios buscados para recuperação & 30 \\
+#+LATEX: Relatórios não recuperados & 0 \\
+#+LATEX: Relatórios avaliados para elegibilidade & 30 \\
+#+LATEX: Relatórios excluídos após leitura completa & 29 \\
+#+LATEX: Estudos incluídos na síntese qualitativa & 1 \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \endgroup
+
+** Estudos classificados no fluxo
+
+#+NAME: tab:estudos_fluxo
+#+CAPTION: Classificação sintética dos estudos identificados no fluxo PRISMA 2020.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begingroup
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{3pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{longtable}{>{\raggedright\arraybackslash}p{0.36\textwidth} >{\raggedright\arraybackslash}p{0.18\textwidth} >{\raggedright\arraybackslash}p{0.14\textwidth} >{\raggedright\arraybackslash}p{0.24\textwidth}}
+#+LATEX: \caption{Classificação sintética dos estudos identificados no fluxo PRISMA 2020.}\label{tab:estudos_fluxo}\\
+#+LATEX: \toprule
+#+LATEX: Estudo & Situação no fluxo & Tipo & Motivo \\ 
+#+LATEX: \midrule
+#+LATEX: \endfirsthead
+#+LATEX: \toprule
+#+LATEX: Estudo & Situação no fluxo & Tipo & Motivo \\ 
+#+LATEX: \midrule
+#+LATEX: \endhead
+#+LATEX: \midrule
+#+LATEX: \multicolumn{4}{r}{Continua na próxima página} \\ 
+#+LATEX: \endfoot
+#+LATEX: \bottomrule
+#+LATEX: \endlastfoot
+#+LATEX: Pramod Santhebachahalli Thontadarya (2025), \textit{Conversational AI for PeopleSoft HCM: Elevating Public Sector HR}\\ \emph{Base(s): Semantic Scholar} & Incluído & estudo de implementação com dados empíricos & Estudo empírico em contexto de setor público, com foco em IA aplicada a sistemas de RH públicos sob requisitos de privacidade, segurança, ética e… \
+#+LATEX: Amraoui S. (2026), \textit{A Dynamic AI Maturity Model for Agile Audit: A Roadmap for Enhanced Effectiveness and Innovation}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & proposta de modelo & Relaciona IA e auditoria, mas não está claramente situado no setor público nem no recorte substantivo prioritário. \
+#+LATEX: Guitton C. (2026), \textit{A validation study of frameworks for responsible automatically processable regulation}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo de validação & Tema regulatório interessante, mas distante do foco em serviço público, integridade, controles internos e accountability usando AI. \
+#+LATEX: Sereewatthanawut I. (2026), \textit{Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo de caso empírico & Altamente aderente por tratar de comissão anticorrupção e triagem de denúncias com IA, mas não foi selecionado por insuficiência de metadados no… \
+#+LATEX: Sivaraman S.K. (2026), \textit{Perception of the Use of Artificial Intelligence (AI) in Governance by Public Affairs Managers in Nigeria}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo perceptivo & Trata de governança e IA, mas foca percepção de gestores públicos, sem ênfase substantiva em compliance, risco, integridade ou accountability. \
+#+LATEX: Nikiforova A. (2026), \textit{Proactive Public Services in the Age of Artificial Intelligence: Towards Post-Bureaucratic Governance}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & capítulo conceitual & Tema de serviços públicos proativos com IA, mas sem foco em governança, compliance e risco nem desenho empírico definido. \
+#+LATEX: Chrysoula Mouchtari; Athanasios Davalas (2026), \textit{Review of the ISO/IEC 42001 Artificial Intelligence Management System Standard - Application in Public Organizations and Businesses}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & pesquisa temática e bibliométrica com estudos de caso & Trata de governança responsável em organizações públicas, mas o foco principal é a norma ISO/IEC 42001, com caráter mais de revisão/aplicação… \
+#+LATEX: Čišić D. (2026), \textit{Semantic Mapping of AI-for-Government Research: Uncovering the Knowledge Architecture of Digital-Era Governance}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & mapeamento semântico/bibliométrico & Muito próximo ao tema AI-for-government, porém trata-se de estudo de mapeamento, não empírico aplicado ao problema substantivo. \
+#+LATEX: Alyileili M. (2026), \textit{Sustainable and Inclusive AI Governance in Municipal Self-Service Systems: Ethical, Smart-Government, and Generative AI Perspectives}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & análise conceitual/prospectiva & Próximo do tema de governança municipal e ética em IA, porém sem evidência de estudo empírico claro no recorte de compliance/risco. \
+#+LATEX: Shankar Subramanian Iyer; Raman Subramanian; Brinitha Raji; R. Arora (2026), \textit{The Ethical Implications of Artificial Intelligence in Decision-Making: Balancing Innovation with Accountability and Integrity}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & survey quantitativo multissetorial & Inclui governo entre os setores, porém é multissetorial e centrado em ética geral de IA, não em governança pública específica. \
+#+LATEX: Alhefaity S.R.S.A. (2026), \textit{Trust in government as a mediator in the relationship between AI implementation and citizen satisfaction: Evidence from UAE Policing}\\ \emph{Base(s): Scopus} & Excluído na elegibilidade & estudo empírico de mediação & Empírico e no setor público policial, mas centrado em satisfação cidadã e confiança no governo, não em governança, compliance, controles internos ou… \
+#+LATEX: Dolores Genaro-Moya; A. M. López-Hernández; Mariia Godz (2025), \textit{Artificial Intelligence and Public Sector Auditing: Challenges and Opportunities for Supreme Audit Institutions}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise conceitual e exploratória & Muito aderente ao setor público e à auditoria, porém explicitamente conceitual/exploratória, sem estudo empírico primário. \
+#+LATEX: Faisal Abdul-Hafez Al-Shawabkeh; Khalid Al-Jasmi (2025), \textit{Artificial Intelligence and Transparency Management in the Public Sector: A Comparative Legal Study on Accountability and Oversight in European and American Laws}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & estudo jurídico-comparado & Trata de accountability e oversight no setor público, mas é uma análise legal comparativa, não um estudo empírico do serviço público. \
+#+LATEX: Juan Carlos Rodríguez Luna (2025), \textit{Auditing Artificial Intelligence in Public Management: A Framework for Accountability, Transparency, and Ethical Governance}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & revisão sistemática/proposição de framework & Apesar de tratar de accountability e transparência em gestão pública, propõe framework com base em revisão, sem campo empírico definido. \
+#+LATEX: Amir Al-Maamari (2025), \textit{Between Innovation and Oversight: A Cross-Regional Study of AI Risk Management Frameworks in the EU, U.S., UK, and China}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise comparativa qualitativa & Aderente a governança e regulação de IA, porém comparativo e normativo, sem campo empírico no serviço público. \
+#+LATEX: Sanjiv Kumar Bhagat (2025), \textit{ERP in Public Sector Governance: Transforming Transparency and Accountability}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & artigo aplicado/descritivo & Trata de governança pública, transparência e accountability, mas é centrado em ERP; a IA aparece apenas como evolução futura, não como objeto… \
+#+LATEX: Maram Ali Alrashdi; Wafaa Abdulmnan Bukhari; Dr. Mansour Al-Ansari (2025), \textit{Enhancing Risk Management in Event Planning (The Role of Artificial Intelligence in Predictive Analysis and Crisis Mitigation)}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & survey quantitativo & Embora inclua setor governamental em eventos públicos, o foco substantivo é gestão de eventos, não governança pública, controles internos ou… \
+#+LATEX: Jayant Bhat; D. Sundar (2025), \textit{Leveraging Generative AI in ERP Systems: Use Cases for Higher Education and Public Sector Operations}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise qualitativa com simulação & Próximo ao setor público, mas baseado em modelagem e avaliações simuladas, não em estudo empírico do tipo priorizado sobre… \
+#+LATEX: E. V. Bezvikonnaya (2025), \textit{Potential and Risks of Using Artificial Intelligence in the Public Sector of the Subjects of the Russian Federation}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & estudo exploratório com dados secundários e survey & Tem aderência ao setor público, mas o foco é potencial e riscos gerais da IA, sem centralidade em governança, compliance, controles internos ou… \
+#+LATEX: Kelvin M Mwita; F. Kitole (2025), \textit{Potential benefits and challenges of artificial intelligence in human resource management in public institutions}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & estudo transversal com questionários & Empírico e em instituições públicas, mas centrado em gestão de pessoas; a relação com governança, compliance e controles internos é secundária. \
+#+LATEX: N.S. Asatova; G. Mazhiyeva (2025), \textit{Public finance management using artificial intelligence}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & estudo aplicado com análise sistemática, estatística e especialistas & Muito próximo ao tema por tratar de finanças públicas, transparência e riscos, mas o foco principal é gestão orçamentária e metodologias propostas;… \
+#+LATEX: Tamás Szádeczky; Zsolt Bederna (2025), \textit{Risk, regulation, and governance: evaluating artificial intelligence across diverse application scenarios}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise regulatória/conceitual & Tema relevante para governança de IA, porém sem foco específico em setor público nem em estudo empírico do serviço público. \
+#+LATEX: Rishabh Gupta (2025), \textit{Securing Distributed Systems in Government and Public Sector: A Technical Overview}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & visão técnica & Trata de governo e compliance, mas é uma visão técnica de segurança distribuída, sem estudo empírico delimitado em… \
+#+LATEX: S. Vijayakumar (2025), \textit{Technology-centric and Data-Driven Customs Risk Management for Supply Chain Security}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & artigo aplicado/setorial & Aderente a risco e compliance em órgão público aduaneiro, mas o resumo sugere artigo de recomendação e iniciativas, sem delineamento empírico… \
+#+LATEX: Nethaji Kapavarapu (2025), \textit{The Impact of Cloud Technology and Integration Solutions on Public Sector Regulatory Systems}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & artigo analítico/prospectivo & Relaciona tecnologia e sistemas regulatórios públicos, mas não apresenta estudo empírico claro sobre governança, compliance e risco com IA. \
+#+LATEX: Krzysztof Kaczmarek; M. Karpiuk; Andrea Spaziani (2025), \textit{Use of artificial intelligence in public sector: threats and prospects}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise geral/conceitual & Trata do setor público, mas de forma ampla e prospectiva, sem estudo empírico claramente definido. \
+#+LATEX: Jayant Bhat; D. Sundar; Yashovardhan Jayaram (2024), \textit{AI Governance in Public Sector Enterprise Systems: Ensuring Trust, Compliance, and Ethics}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise com evidência ilustrativa & Muito pertinente ao tema, mas o resumo indica discussão analítica com evidência ilustrativa, sem desenho empírico suficientemente delimitado. \
+#+LATEX: V.I. Kuzava; N. Lytvyn (2024), \textit{ARTIFICIAL INTELLIGENCE IN THE PUBLIC SERVICE: PROBLEMS AND PROSPECTS FOR IMPLEMENTATION IN UKRAINE}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise normativa/exploratória & Tema em serviço público e corrupção, mas com abordagem predominantemente normativa e sem campo empírico claro. \
+#+LATEX: Lazar (Plesa) Teodora Nicoleta; Popescu Constanţa (2024), \textit{Artificial Intelligence in External Public Audit and its Role in the Management of Risk Areas in the Public Sector}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & análise exploratória/conceitual & Tema aderente à auditoria pública e risco no setor público, mas os metadados não permitem confirmar campo empírico ou método empírico robusto. \
+#+LATEX: Gandung Troy Sulistyantoro; Akhsanul Khaq; Md Zubair Kasem Khan; Al Amin; A. Hussain; Peretasan Menggunakan; Akun Pegawai (2024), \textit{Shaping Artificial Intelligence Governance and Risk Management in the Public Sector: Regulatory Insights}\\ \emph{Base(s): Semantic Scholar} & Excluído na elegibilidade & estudo conceitual/normativo & Embora trate de administração pública e gestão de riscos em IA, adota abordagem conceitual-regulatória, sem desenho empírico compatível com o tipo… \
+#+LATEX: Liu Y. (2026), \textit{A CatBoost-Based Prediction Framework for Logistics Industry Prosperity Index to Support Sustainable Decision-Making: An Empirical Study from China}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo empírico & Foco em logística e decisão sustentável, fora do recorte. \
+#+LATEX: Lotsis S. (2026), \textit{AI, Precision Agriculture and Tourism for Sustainable Regional Development: The Case of the Aegean Islands and Crete, Greece}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo de caso & Foco em desenvolvimento regional, agricultura e turismo, fora do recorte. \
+#+LATEX: Maccaro A. (2026), \textit{Algorithmic ethics and healthcare pluralism: rethinking care between automation and global inequality}\\ \emph{Base(s): Scopus} & Excluído na triagem & ensaio teórico & Foco em ética algorítmica na saúde, fora do recorte. \
+#+LATEX: Choowan P. (2026), \textit{Artificial Intelligence in Data Governance for Financial Decision-Making: A Systematic Review}\\ \emph{Base(s): Scopus} & Excluído na triagem & revisão sistemática & Foco em decisão financeira e governança de dados em finanças, não em setor público. \
+#+LATEX: Thu Hương Triệu (2026), \textit{Artificial intelligence risk management framework in Financial and Banking Organizations: Proposed model and approach}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & modelo proposto & Foco em organizações financeiras e bancárias, fora do setor público. \
+#+LATEX: Wang C. (2026), \textit{Can the Application of Artificial Intelligence Technology Enhance the ESG Performance of Tourism Enterprises?}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo empírico & Foco em empresas de turismo e ESG, fora do serviço público. \
+#+LATEX: Yogesh Kumar (2026), \textit{Establishing Robust Data Governance Structures for Artificial Intelligence Deployment in Financial Institutions: A Compliance and Trust Perspective}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & artigo conceitual/aplicado & Foco em instituições financeiras, não no serviço público. \
+#+LATEX: Koengkan M. (2026), \textit{Exploring the Influence of Female Political Participation on CO₂ and Greenhouse Gas Emissions: Insights from the European Union}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo empírico & Fora do tema de IA, governança pública e compliance. \
+#+LATEX: Shah S.H. (2026), \textit{Four water insecurity concerns about datacenters driving the AI revolution}\\ \emph{Base(s): Scopus} & Excluído na triagem & artigo analítico & Foco em segurança hídrica de datacenters, fora do recorte. \
+#+LATEX: Li M. (2026), \textit{Has the development of artificial intelligence promoted urban pollutant and carbon emission reduction? Evidence from China}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo empírico & Foco em emissões urbanas, fora do recorte de governança/compliance/risco no serviço público. \
+#+LATEX: Raghupathi W. (2026), \textit{Identifying Key Issues in Artificial Intelligence Litigation: A Machine Learning Text Analytic Approach}\\ \emph{Base(s): Scopus} & Excluído na triagem & análise textual com ML & Foco em litigância de IA, fora do recorte de administração pública com governança e risco. \
+#+LATEX: Cai Y. (2026), \textit{Identifying the Nonlinear Impact Mechanisms of Urban Park Vitality: A Case Study of Changsha}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo de caso & Foco em parques urbanos, sem relação com o recorte da atividade. \
+#+LATEX: Alharthi S. (2026), \textit{Personalization in smart urban environments: a taxonomy and survey of recommender systems}\\ \emph{Base(s): Scopus} & Excluído na triagem & survey/taxonomia & Tema de ambientes urbanos inteligentes e recomendação, sem relação com governança, compliance e risco no serviço público. \
+#+LATEX: Trivedi A. (2026), \textit{Smart Cities and Urban Circularity: Advancing Sustainable Transformation through Digital Twins, AI, and Capacity Building}\\ \emph{Base(s): Scopus} & Excluído na triagem & capítulo analítico & Foco em cidades inteligentes e circularidade urbana, sem aderência ao problema de compliance/risco/accountability. \
+#+LATEX: Vinod Kumar T.M. (2026), \textit{The Indo-Pacific E-Gateways in Digital Economic Communities}\\ \emph{Base(s): Scopus} & Excluído na triagem & capítulo analítico & Foco em comunidades econômicas digitais, sem aderência ao recorte da atividade. \
+#+LATEX: Chen H. (2026), \textit{The impact of digital government development on total factor productivity in forestry: evidence from China}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo empírico & Foco em governo digital e produtividade florestal, não em governança/compliance/risco com IA. \
+#+LATEX: Mohammad Fawwaz Mohammad Matalkah; Abd Alhade Mossa Hasan Rshdan; Heyam Sami Ahmad Alzobui; F. Alazzam; K. Aldrou; B. Jarah (2026), \textit{The mediating role of data analytics between artificial intelligence and legal compliance in the financial sector in Jordan}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & quantitativo com SEM & Estudo empírico no setor financeiro da Jordânia, não em administração pública. \
+#+LATEX: Ganaie N.A. (2026), \textit{The role of artificial intelligence in radicalisation, recruitment and terrorist propaganda: deconstructing violent extremism and reimagining counterterrorism in contemporary digital ecosystems}\\ \emph{Base(s): Scopus} & Excluído na triagem & análise temática & Foco em extremismo e contraterrorismo, fora do recorte administrativo proposto. \
+#+LATEX: Okulicz-Kozaryn W. (2026), \textit{Will AI Replace Us? Changing the University Teacher Role}\\ \emph{Base(s): Scopus} & Excluído na triagem & estudo social & Tema educacional, sem relação com governança, compliance e risco no governo. \
+#+LATEX: N. Devaraju; Dr. Prathap B N Prathap; Dr. Kiran Kumar M (2025), \textit{A Study on the Role of Fintech in Accelerating Green Finance with Reference to Public Sector Banks}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo setorial & Apesar de mencionar bancos públicos, o foco é green finance e fintech no setor bancário, não administração pública governamental. \
+#+LATEX: Swapna Reddy Anugu (2025), \textit{AI in Financial Services: Revolutionizing Fraud Detection and Risk Management}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & artigo analítico & Foco em serviços financeiros, fora do serviço público. \
+#+LATEX: Iboro Akpan Essien; Joshua Oluwagbenga Ajayi; Eseoghene Daniel Erigha; Ehimah Obuse; Noah Ayanbode (2025), \textit{AI-Driven Governance Systems for Proactive Regulatory Compliance and Fraud Risk Management in Financial Service Environments}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & review & Foco em serviços financeiros e RegTech, fora do recorte do setor público. \
+#+LATEX: Uttama Reddy Sanepalli (2025), \textit{AI-Driven Predictive Analytics and Intelligent Automation in Modern Banking: A Comprehensive Framework for Risk Management and Financial Forecasting}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & framework com validação experimental & Foco em banking e forecasting financeiro, fora do setor público. \
+#+LATEX: Zakia Sultana Munmun; Mohammad Didar Hossain; Israt jahan; Shamoli Akther; Abdullah Al Masum (2025), \textit{AI-Driven Project Risk Management: Leveraging artificial intelligence to predict, mitigate, and manage project risks in critical infrastructure and national security projects}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo aplicado com casos & Foco em infraestrutura crítica e segurança nacional, sem centralidade em governança pública, compliance e accountability administrativa. \
+#+LATEX: Bridget Nnenna Chukwu (2025), \textit{AI-Driven Risk Management: Strengthening Cybersecurity and Market Stability in the US Financial Sector}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & revisão analítica & Foco no setor financeiro dos EUA, não no setor público. \
+#+LATEX: Shaista Anwar; Nael Sayedahmed; Suja Pradeep (2025), \textit{AI-driven risk management in online financial transactions: Enhancing cybersecurity in the fintech ERA}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo quantitativo & Foco em fintech e transações financeiras online, fora do recorte público. \
+#+LATEX: Evgenia Temchenko (2025), \textit{ARTIFICIAL INTELLIGENCE IN BANKING: A COMPREHENSIVE MAPPING OF APPLICATIONS, CHALLENGES, AND STRATEGIC IMPLICATIONS}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & structured review & Mapeamento abrangente do setor bancário, fora do recorte público. \
+#+LATEX: Vikas Bhargaw; Saman Khan; Shubhi Jain; Amit Kumar; Srimati Yeshwant Naik (2025), \textit{ARTIFICIAL INTELLIGENCE IN FINANCIAL RISK MANAGEMENT: PREDICTIVE ANALYTICS AND ETHICAL CONCERNS}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & análise com casos e literatura & Foco em gestão de risco financeiro, não no serviço público. \
+#+LATEX: K. Mammadova; E.R. Mammadov (2025), \textit{ARTIFICIAL INTELLIGENCE IN INSURANCE PROCESSES: FRAUD DETECTION AND RISK MITIGATION}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo setorial & Foco em seguros, fora do recorte de administração pública. \
+#+LATEX: B. Abongo (2025), \textit{Adoption of Artificial Intelligence Technology and Its Impact on Insurance Company Performance in Kenya}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & pesquisa descritiva & Foco em seguradoras, fora do recorte de serviço público. \
+#+LATEX: Dr. Goldi Soni (2025), \textit{Advancing and Transforming Finance through Artificial Intelligence: Development and Applications}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & review & Foco em finanças, fora do setor público. \
+#+LATEX: Z. Sain; H. Adinugraha (2025), \textit{Artificial Intelligence and Islamic Finance: Enhancing Sharia Compliance and Social Impact in Banking 4.0}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & survey quantitativo & Foco em banking e finanças islâmicas, fora do setor público. \
+#+LATEX: G. Stephen (2025), \textit{Artificial Intelligence and Program Management in the Pharmaceutical Industry: Streamlining Decision-Making, Clinical Trials, Regulatory Compliance, Commercialization, and Risk Management}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo setorial/aplicado & Foco na indústria farmacêutica privada, fora do recorte de serviço público e administração pública. \
+#+LATEX: I. Olatunbosun; Abosede Rebecca Olatunbosun (2025), \textit{Artificial Intelligence and Risk Management in Financial Institutions: Evidence from the UK Banking Sector}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & survey quantitativo & Estudo sobre instituições financeiras do Reino Unido, sem aderência ao setor público. \
+#+LATEX: Jdidi Boussetta (2025), \textit{Artificial Intelligence and the Financial Market - Unraveling the Transformative Potential and Innovative Applications}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & análise com evidência e casos & Foco no mercado financeiro, sem aderência ao serviço público. \
+#+LATEX: Dr. S. Prema; Dr. R. Dhanalakshmi (2025), \textit{Artificial Intelligence in Financial Services: A Transformative Force in the Banking Sector}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & revisão narrativa & Foco em serviços financeiros e setor bancário. \
+#+LATEX: Aiswarya Cherian; A. T.T (2025), \textit{Artificial Intelligence in Microfinance: Enhancing Customer Experience at ESAF Bank}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo de caso & Foco em microfinanças e experiência do cliente, não em administração pública. \
+#+LATEX: Shreeja Nuta; Archita Sai Mattam; Nithisha Reddy Marri; Shivani Polenwar (2025), \textit{Artificial Intelligence in Pharmaceutical Supply Chain Management}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & revisão & Foco em cadeia farmacêutica, não no setor público. \
+#+LATEX: L. Kuanova; A.N. Otegen; G. Kenzhegulova; P. Karácsony (2025), \textit{Artificial intelligence-based risk management for the banking sector: impact and challenges}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & método misto & Foco no setor bancário, fora do recorte de serviço público. \
+#+LATEX: Temilola Aderonke Onalaja; riscilla Samuel Nwachukwu; Folake Ajoke Bankole; Tewogbade Lateefat (2025), \textit{Digital Finance Transformation Model: Designing Risk and Control in Artificial Intelligence-Driven Accounting Systems}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo conceitual & Foco em sistemas contábeis e finanças, sem aderência ao serviço público. \
+#+LATEX: Deni Sunaryo; Hamdan Hamdan; Dita Ayu Pramesylia; Wilda Oktariani; Ema Imelda (2025), \textit{Digital Transformation in Financial Risk Management: Opportunities, Challenges, and Future Trends}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & artigo analítico & Foco em risco financeiro, fora do setor público. \
+#+LATEX: John Wesly Sajja; Govindaraja Babu Komarina (2025), \textit{Enhancing compliance and data integrity in life sciences and healthcare with S/4HANA: A data management and governance framework}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & framework com case studies & Foco em life sciences e healthcare, fora do recorte. \
+#+LATEX: Hipólito M. Rodríguez-Casavilca; David Mauricio; J. M. M. Villanueva (2025), \textit{Evolution of Artificial Intelligence-Based OT Cybersecurity Models in Energy Infrastructures: Services, Technical Means, Facilities and Algorithms}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & revisão sistemática & Foco em infraestrutura energética e cibersegurança, fora do recorte do serviço público governamental. \
+#+LATEX: Anbarasu Aladiyan (2025), \textit{Financial services in the cloud: Regulatory compliance and AI-driven risk management}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & artigo analítico/setorial & Trata de serviços financeiros em nuvem, sem foco em administração pública. \
+#+LATEX: Rashmi Gujrati; Hayri Uygun (2025), \textit{Integrating Artificial Intelligence and Blockchain for Assessing the Financial Risk of Fraud in Banking Sector}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & método misto/case analysis & Foco em fraude e compliance no setor bancário privado. \
+#+LATEX: Md Musa Ali; Shaharia Ferdausi; Kanis Fatema; Md Rakib Mahmud; Md Refadul Hoque (2025), \textit{Leveraging Artificial Intelligence in finance and virtual visitor oversight: Advancing digital financial assistance via AI-powered technologies}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & análise com casos & Foco em serviços financeiros e atendimento virtual, não em administração pública. \
+#+LATEX: Hima Devadas; P. Ayyappan (2025), \textit{Revolution of Financial Services - Role of AI in Effective Risk Management and Fraud Detection}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & survey & Foco em serviços financeiros na Índia, não em administração pública. \
+#+LATEX: Agboola Apooyin (2025), \textit{Risk management and compliance in a Globalized Economy: Navigating Regulatory Challenges and Strategic Adaptations}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & ensaio/revisão aplicada & Tema amplo de economia global e compliance organizacional, sem foco no setor público. \
+#+LATEX: Tomasz Nieborak (2025), \textit{Sustainable development in the era of FinTech and artificial intelligence}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & ensaio analítico & Foco em FinTech e sustentabilidade, sem aderência ao serviço público. \
+#+LATEX: Dr. Sushil Kumar Singh; Dr. Parimalendu Bandyopadhyay; Dr. Arvind Mishra (2025), \textit{THE ROLE OF ARTIFICIAL INTELLIGENCE IN ENHANCING COMPLIANCE IN BANKS}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & survey quantitativo & Foco em bancos, fora do serviço público. \
+#+LATEX: N. Almasria; Diala Ershaid; Yaser Ahmad Jalghoum; Amer Almajali (2025), \textit{THE ROLE OF FINTECH IN TRANSFORMING RISK MANAGEMENT AND FINANCIAL SERVICES: A SYSTEMATIC REVIEW AND META-ANALYSIS}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & revisão sistemática e meta-análise & Foco em serviços financeiros, não em administração pública. \
+#+LATEX: Manu Arora (2025), \textit{The Role of Artificial Intelligence in Enhancing Commodity Trading and Risk Management Solutions}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo setorial & Foco em commodity trading, fora do setor público. \
+#+LATEX: Radhityana Luktri Utami (2025), \textit{The Role of Artificial Intelligence in Human Resource Management: Enhancing Employee Age Verification for Legal Compliance and Workforce Optimization}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo aplicado/conceitual & Foco em RH e verificação etária, sem relação com governança pública. \
+#+LATEX: Devanand N Kapate; Nishant L Sikwal; Shashikumar Bhambhani (2025), \textit{The Role of Artificial Intelligence in Risk Management in Banking}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo descritivo/revisão & Foco em banking, fora do setor público. \
+#+LATEX: Lu Wei (2025), \textit{The Utilization of Artificial Intelligence in Financial Risk Management}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & método misto & Foco em instituições financeiras licenciadas, fora do setor público. \
+#+LATEX: Chikeluba Uzoamaka; Bello Sunday Ade (2025), \textit{redictive Roles of Customer-Centric and Risk Management AI Applications in Optimizing Banking Operations in Nigeria}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo quantitativo preditivo & Foco em operações bancárias na Nigéria, fora do setor público. \
+#+LATEX: Oladipupo Dopamu; Joseph Adesiyan; Femi Oke (2024), \textit{Artificial intelligence and US financial institutions: Review of AI-assisted regulatory compliance for cybersecurity}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & review & Foco em instituições financeiras dos EUA, sem aderência ao setor público. \
+#+LATEX: Anita Jumai; Anita Jumai Ehidiamen; O. Oladapo (2024), \textit{Innovative approaches to risk management in clinical research: Balancing ethical standards, regulatory compliance, and intellectual property concerns}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & revisão & Foco em pesquisa clínica e saúde, fora da administração pública. \
+#+LATEX: Howard Chitimira; Elfas Torerai; Lisa Jana (2024), \textit{Leveraging Artificial Intelligence to Combat Money Laundering and Related Crimes in the Banking Sector in South Africa}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & análise jurídica/aplicada & Foco em AML no setor bancário sul-africano, fora do recorte de serviço público. \
+#+LATEX: Tanni Majumder (2024), \textit{The Evaluating Impact of Artificial Intelligence on Risk Management and Fraud Detection in the Commercial Bank in Bangladesh}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & estudo descritivo/setorial & Foco em banco comercial de Bangladesh, fora do recorte de administração pública. \
+#+LATEX: Onoriode Reginald; Aziza; Onoriode Reginald Aziza; Ngozi Samuel Uzougbo; Munachi Chikodili Ugwu (2023), \textit{The impact of artificial intelligence on regulatory compliance in the oil and gas industry}\\ \emph{Base(s): Semantic Scholar} & Excluído na triagem & artigo aplicado com casos & Foco na indústria de óleo e gás, fora do serviço público. \
+#+LATEX: \end{longtable}
+#+LATEX: \normalsize
+#+LATEX: \endgroup
+
+#+LATEX: \clearpage
+
+** Representação esquemática do fluxo PRISMA 2020
+
+O fluxograma PRISMA 2020 é gerado como *SVG externo* em layout compacto, exibindo apenas as contagens de cada etapa. Os motivos detalhados de exclusão permanecem no fluxo textual e nas tabelas, para evitar sobrecarga visual na figura.
+
+#+begin_export latex
+\begin{center}
+\includegraphics[width=0.78\textwidth]{atividade_o_uso_da_ai_em_governanca_compliance_e_gestao_de_riscos_no_governo_federal_prisma_prisma.pdf}
+\captionof{figure}{Fluxograma PRISMA 2020 da seleção do artigo de revisão sobre O uso da AI em governança, compliance e gestão de riscos no governo federal..}
+\label{fig:prisma2020_fluxo}
+\end{center}
+#+end_export
+
+* Resumo do artigo selecionado
+
+** Referência do estudo
+
+A referência do estudo selecionado corresponde a [cite:@thontadarya2025conversational].
+
+Thontadarya, P. S. (2025). Conversational AI for PeopleSoft HCM: Elevating public sector HR. *European Modern Studies Journal, 9*(4), 359–368. https://doi.org/10.59573/emsj.9(4).2025.36
+
+** Link para download do texto completo
+
+[[https://lorojournals.com/index.php/emsj/en/article/download/1476/1431][Download do PDF]]
+
+** Problema e objetivo de pesquisa
+
+O artigo investiga como a inteligência artificial conversacional pode ser integrada ao Oracle PeopleSoft HCM 9.2 em organizações públicas, de modo a melhorar a experiência do usuário e a eficiência operacional sem comprometer exigências de compliance, segurança, privacidade e governança. O problema de pesquisa é explicitado na introdução: compreender como implementar a AI conversacional de forma fluida em um sistema legado de RH do setor público, preservando conformidade regulatória e controles institucionais.
+
+** Argumento central
+
+O argumento central do estudo é que a AI conversacional, quando implementada por meio de uma arquitetura de middleware acoplada a controles robustos de governança, pode modernizar sistemas legados de RH no setor público sem substituição integral da plataforma. Segundo o autor, essa integração reduz barreiras de uso, amplia o acesso a serviços de RH, melhora indicadores operacionais e de satisfação e, ao mesmo tempo, pode manter aderência a requisitos de accountability, trilhas de auditoria, segregação de funções, privacidade de dados e conformidade regulatória.
+
+** Desenho de pesquisa
+
+Trata-se de um estudo empírico aplicado, apresentado como estudo de caso de implementação. O campo empírico é um grande sistema universitário estadual, descrito como parte do setor público, com aproximadamente 35 mil empregados distribuídos em múltiplos campi. O artigo combina descrição da arquitetura técnica, estratégia de implantação em fases e comparação de indicadores antes e depois da implementação da AI conversacional no PeopleSoft HCM. Embora o texto apresente resultados quantitativos de desempenho (por exemplo, redução de chamados de suporte, aumento de adoção e melhoria de satisfação), o delineamento metodológico não detalha com precisão procedimentos de coleta, período de observação, técnicas estatísticas, critérios de validade interna nem protocolos formais de análise. Assim, o estudo pode ser classificado como estudo de caso organizacional com abordagem predominantemente descritiva e avaliativa, apoiado em métricas operacionais de implementação.
+
+** Principais achados
+
+Os principais achados reportados são: (1) redução de 40% no volume de chamados Tier-1 ao help desk em seis meses; (2) resolução de 68% das interações no primeiro contato sem escalonamento humano; (3) aumento de 60% no uso de autosserviço móvel em RH; (4) queda do tempo médio de sessão para transações comuns de 7,5 para 2,3 minutos; (5) melhora da satisfação do usuário de 3,2/5 para 4,4/5; (6) redução de 28% no tempo de processamento de transações; e (7) diminuição de 45% nos erros de entrada de dados. No plano de governança e compliance, o artigo sustenta que a adoção foi viabilizada por controles como arquitetura de compliance em camadas, integração com o modelo de segurança já existente, controle de acesso baseado em papéis, minimização de dados, retenção estruturada de conversas, trilhas de auditoria e previsão de supervisão humana para processos sensíveis. Esses elementos são apresentados como essenciais para conciliar inovação com integridade, privacidade e accountability.
+
+** Justificativa da seleção final
+
+O artigo pode ser selecionado porque atende a critérios operacionais importantes da atividade: possui texto completo verificável e acessível por PDF; está situado no setor público; apresenta base empírica derivada de implementação real; e discute explicitamente governança, compliance, segurança, privacidade, auditoria e controles associados ao uso de AI. Além disso, oferece métricas objetivas de resultado e um campo empírico identificável. Contudo, a seleção deve ser acompanhada de ressalvas metodológicas: o estudo está mais voltado à modernização de RH público do que, estritamente, à governança pública federal; o desenho metodológico é pouco transparente; e parte das referências e comparações mobilizadas no texto parece heterogênea e, em alguns pontos, pouco robusta. Portanto, é um artigo aproveitável para a atividade, sobretudo como evidência aplicada sobre AI, controles e compliance no serviço público, mas requer leitura crítica quanto ao rigor científico.
+
+** Contribuição do estudo para o tema
+
+A principal contribuição do estudo está em articular uma evidência empírica, ainda que de escopo único, sobre uso de AI no setor público em interface com governança, compliance e gestão de riscos. O artigo contribui ao mostrar que a modernização de sistemas legados por AI conversacional pode ser tratada não apenas como melhoria de experiência do usuário, mas como arranjo institucional e tecnológico dependente de controles internos, governança de dados, rastreabilidade e mitigação de riscos éticos e regulatórios. Para o recorte da atividade, o estudo é relevante por aproximar AI de integridade administrativa e accountability em um contexto público concreto, ainda que focado em RH e não diretamente em órgãos do governo federal.
+
+* Texto corrido para entrega
+
+Thontadarya (2025) analisa a integração de inteligência artificial conversacional ao Oracle PeopleSoft HCM 9.2 em um contexto de recursos humanos do setor público, com base em dados de implementação em um grande sistema universitário estadual. O problema de pesquisa do artigo consiste em compreender como a AI conversacional pode ser incorporada a um sistema legado de RH para melhorar a experiência do usuário e a eficiência dos processos sem violar exigências de compliance, segurança, privacidade e governança próprias de organizações públicas. Em termos substantivos, o estudo dialoga com o tema da governança, compliance e gestão de riscos ao sustentar que a inovação tecnológica, para ser institucionalmente viável no setor público, precisa ser acompanhada de controles internos, trilhas de auditoria, segregação de acessos, minimização de dados e mecanismos de supervisão humana.
+
+O argumento central do autor é que a AI conversacional pode funcionar como uma camada de modernização sobre sistemas legados, dispensando sua substituição integral e tornando os serviços de RH mais acessíveis, intuitivos e eficientes. Essa transformação ocorreria por meio de uma arquitetura de middleware, capaz de conectar processamento de linguagem natural às funcionalidades existentes do PeopleSoft, ao mesmo tempo em que preserva os requisitos regulatórios e os controles de segurança da organização. Com isso, a AI deixaria de ser apenas uma ferramenta de automação e passaria a compor um padrão de integração estratégica orientado por governança.
+
+Do ponto de vista metodológico, o artigo se configura como um estudo de caso empírico e aplicado. O campo empírico é um sistema universitário estadual de grande porte, com cerca de 35 mil empregados, em que a solução foi implementada de forma faseada. O texto informa comparações entre indicadores anteriores e posteriores à implementação, incluindo métricas de suporte, adoção, satisfação e eficiência operacional. Apesar disso, o artigo não detalha suficientemente os procedimentos de coleta e análise dos dados, tampouco apresenta desenho analítico rigorosamente explicitado, hipótese formal, período exato de observação ou técnicas estatísticas mais sofisticadas. Assim, sua evidência é útil, mas deve ser interpretada como predominantemente descritiva e demonstrativa.
+
+Os resultados reportados são expressivos. O estudo indica redução de 40% no volume de chamados de suporte de primeiro nível em seis meses, resolução de 68% das interações sem escalonamento humano, aumento de 60% no uso do autosserviço móvel em RH, redução do tempo médio de transação de 7,5 para 2,3 minutos, elevação da satisfação do usuário de 3,2/5 para 4,4/5, redução de 28% no tempo de processamento e queda de 45% nos erros de entrada de dados. Esses achados sugerem que a AI conversacional pode produzir ganhos concretos de eficiência e usabilidade em serviços públicos administrativos. Para além do desempenho, o artigo enfatiza que tais resultados dependem de um arranjo de governança tecnológica que inclua controle de acesso baseado em papéis, retenção regulada de dados conversacionais, princípios de privacidade desde a concepção, trilhas de auditoria e revisão humana de processos sensíveis.
+
+A contribuição do estudo para a atividade acadêmica está em mostrar que o uso de AI no setor público pode ser analisado simultaneamente sob as lentes de transformação digital e de governança, compliance e gestão de riscos. Embora o caso esteja centrado em RH universitário, e não diretamente em órgãos do governo federal, ele oferece evidência empírica relevante sobre integridade operacional, accountability e controles internos associados à adoção de AI. Em especial, o artigo reforça a ideia de que soluções baseadas em linguagem natural, para serem compatíveis com o serviço público, precisam ser institucionalizadas por mecanismos de governança de dados e conformidade regulatória.
+
+Em síntese, o artigo foi adequadamente selecionado para a atividade porque possui texto completo verificável, apresenta um caso empírico no setor público e trata explicitamente de compliance, segurança, governança e risco no uso de AI. Ainda assim, sua utilização deve ser acompanhada de leitura crítica, pois o rigor metodológico é limitado e a conexão com governança pública federal é indireta. Mesmo com essas restrições, o estudo é pertinente como evidência aplicada sobre como a AI pode apoiar serviços públicos administrativos preservando controles, rastreabilidade e accountability.
+
+#+PRINT_BIBLIOGRAPHY:
