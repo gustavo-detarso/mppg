@@ -1,0 +1,476 @@
+{
+  "bib_file": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/atividade_inteligencia_artificial_em_governanca_no_servico_publico_prisma.bib",
+  "config": {
+    "disciplina": "Teorias",
+    "professor": "Buta",
+    "curso": "Teorias",
+    "tema": "Inteligência artificial em governança no serviço público",
+    "recorte": "Inteligência artificial em governança no serviço público",
+    "objetivo": "Inteligência artificial em governança no serviço público",
+    "bases": [
+      "semantic_scholar",
+      "scopus"
+    ],
+    "bases_label": "Semantic Scholar, Scopus",
+    "tipo_estudo": "estudos empíricos",
+    "estilo_citacao": "APA",
+    "periodo": "2022-2026",
+    "idiomas": [
+      "inglês",
+      "português"
+    ],
+    "palavras_chave": [
+      "inteligência artificial",
+      "artificial intelligence",
+      "IA",
+      "AI",
+      "governança pública",
+      "public governance",
+      "governança no serviço público",
+      "governança governamental",
+      "public sector governance",
+      "government governance",
+      "serviço público",
+      "public sector",
+      "public service",
+      "administração pública",
+      "public administration",
+      "setor público",
+      "government sector",
+      "tomada de decisão",
+      "decision-making",
+      "automatização governamental",
+      "government automation",
+      "algoritmos no setor público",
+      "algorithms in the public sector",
+      "estudo empírico",
+      "empirical study",
+      "empirical research",
+      "case study",
+      "survey",
+      "mixed methods",
+      "avaliação de impacto",
+      "impact evaluation",
+      "estudos empíricos",
+      "Inteligência artificial em governança no serviço público",
+      "governance",
+      "governança",
+      "governanca",
+      "governanca publica",
+      "setor publico",
+      "servico publico",
+      "administracao publica"
+    ],
+    "query_bilingue": true,
+    "queries": {
+      "semantic_scholar": "(\"artificial intelligence\" OR \"AI\" OR \"inteligência artificial\" OR \"IA\") AND (\"public governance\" OR \"governança pública\" OR \"public sector governance\" OR \"governança no serviço público\" OR \"public administration\" OR \"administração pública\" OR \"public sector\" OR \"setor público\" OR \"public service\" OR \"serviço público\") AND (\"empirical study\" OR \"empirical research\" OR \"case study\" OR survey OR \"mixed methods\" OR \"avaliação de impacto\" OR \"estudo empírico\")",
+      "scopus": "TITLE-ABS-KEY((\"artificial intelligence\" OR AI OR \"inteligência artificial\" OR IA) AND (\"public governance\" OR \"governança pública\" OR \"public sector governance\" OR \"governança no serviço público\" OR \"public administration\" OR \"administração pública\" OR \"public sector\" OR \"setor público\" OR \"public service\" OR \"serviço público\") AND (\"empirical study\" OR \"empirical research\" OR \"case study\" OR survey OR \"mixed methods\" OR \"impact evaluation\" OR \"estudo empírico\" OR \"avaliação de impacto\"))"
+    },
+    "arquivo_orientacao": null,
+    "model": "gpt-5.4",
+    "titulo_trabalho": "Inteligência artificial na governança do serviço público uma análise bibliográfica de estudos empíricos",
+    "incluir_resumo_artigo_ia": true,
+    "comando_exportacao_pdf": null
+  },
+  "audit": {
+    "identified_total": 30,
+    "duplicates_removed": 0,
+    "other_removed": 21,
+    "screened_total": 9,
+    "per_source": [
+      {
+        "source": "semantic_scholar",
+        "label": "Semantic Scholar",
+        "query": "(\"artificial intelligence\" OR \"AI\" OR \"inteligência artificial\" OR \"IA\") AND (\"public governance\" OR \"governança pública\" OR \"public sector governance\" OR \"governança no serviço público\" OR \"public administration\" OR \"administração pública\" OR \"public sector\" OR \"setor público\" OR \"public service\" OR \"serviço público\") AND (\"empirical study\" OR \"empirical research\" OR \"case study\" OR survey OR \"mixed methods\" OR \"avaliação de impacto\" OR \"estudo empírico\")",
+        "retrieved": 0,
+        "warnings": []
+      },
+      {
+        "source": "scopus",
+        "label": "Scopus",
+        "query": "TITLE-ABS-KEY((\"artificial intelligence\" OR AI OR \"inteligência artificial\" OR IA) AND (\"public governance\" OR \"governança pública\" OR \"public sector governance\" OR \"governança no serviço público\" OR \"public administration\" OR \"administração pública\" OR \"public sector\" OR \"setor público\" OR \"public service\" OR \"serviço público\") AND (\"empirical study\" OR \"empirical research\" OR \"case study\" OR survey OR \"mixed methods\" OR \"impact evaluation\" OR \"estudo empírico\" OR \"avaliação de impacto\"))",
+        "retrieved": 30,
+        "warnings": []
+      }
+    ],
+    "warnings": [
+      "Excluído antes da triagem por falta de texto completo verificável: Transforming legal texts into computational logic: Enhancing next generation public sector automation through explainable AI decision support.",
+      "Excluído antes da triagem por falta de texto completo verificável: Positioning public sector practitioners as ‘moral crumple zones’: Mechanisms in the early use of generative AI work support tools.",
+      "Excluído antes da triagem por falta de texto completo verificável: AI capacity in the public sector: Pathways from the environmental context to an organizational impact.",
+      "Excluído antes da triagem por falta de texto completo verificável: A survey of physics-informed AI for complex urban systems.",
+      "Excluído antes da triagem por falta de texto completo verificável: The role of government policy in reducing road carnage: evidence from Zimbabwe’s public passenger transport sector.",
+      "Excluído antes da triagem por falta de texto completo verificável: Institutionalizing Predictive AI in Public Administration: Algorithmic Governance and the Case of a Wildfire Forecasting System.",
+      "Excluído antes da triagem por falta de texto completo verificável: Generative AI in Public-Sector Retirement Plans: Behavioral Segmentation Beyond Demographics.",
+      "Excluído antes da triagem por falta de texto completo verificável: A Review of TRiSM Frameworks in Artificial Intelligence Systems: Fundamentals, Taxonomy, Use Cases, Key Challenges and Future Directions.",
+      "Excluído antes da triagem por falta de texto completo verificável: Street review: A participatory AI-based framework for assessing streetscape inclusivity.",
+      "Excluído antes da triagem por falta de texto completo verificável: Employment situation of young ophthalmologists in Spain.",
+      "Excluído antes da triagem por falta de texto completo verificável: Public Service in the Age of AI: Institutional Strategies for Future-Ready Skill Development.",
+      "Excluído antes da triagem por falta de texto completo verificável: Increasing Citizen Satisfaction with E-Public Administration: SERVQUAL and Holistic Governance Model in Comparison.",
+      "Excluído antes da triagem por falta de texto completo verificável: How media exposure interacts with information sensitivity to shape the privacy paradox: a study on personal information disclosure intention in AI-powered digital twin cities.",
+      "Excluído antes da triagem por falta de texto completo verificável: A case study on citizen perceived service quality experience in e-government services between citizen satisfaction and citizen loyalty with special reference to artificial intelligence.",
+      "Excluído antes da triagem por falta de texto completo verificável: The Impact of Government Health Spending on Household Consumption: An AI-Driven Empirical Study.",
+      "Excluído antes da triagem por falta de texto completo verificável: Artificial Intelligence in Public Administrations: A Reflection on Its Adoption in Moroccan Universities, P-USMBA–as a Case Study.",
+      "Excluído antes da triagem por falta de texto completo verificável: How to Demonstrate Trustworthy Use of AI in Public Services: A Case Study.",
+      "Excluído antes da triagem por falta de texto completo verificável: Interdisciplinary Competencies for AI-Enabled Co-creation: Mapping Public Sector Skills in Poland and Ukraine.",
+      "Excluído antes da triagem por falta de texto completo verificável: AI Implementation for Social Benefit. Use Cases in Public Sector.",
+      "Excluído antes da triagem por falta de texto completo verificável: Regulating AI in Administrative Decision-Making: Legal Implications and Technological Innovations.",
+      "Excluído antes da triagem por falta de texto completo verificável: Generalist and specialist roles of policy actors: Insights from preferences on AI regulation."
+    ]
+  },
+  "counts": {
+    "identified": 30,
+    "removed_pre": 21,
+    "duplicates_removed": 0,
+    "other_removed": 21,
+    "screened": 9,
+    "excluded_screening": 4,
+    "full_text_sought": 5,
+    "not_retrieved": 0,
+    "full_text_assessed": 5,
+    "excluded_full_text": 4,
+    "included_qualitative": 1
+  },
+  "selected": {
+    "paper_id": "scopus:2-s2.0-105028014787",
+    "title": "Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission",
+    "year": 2026,
+    "venue": "Plos One",
+    "authors": [
+      "Sereewatthanawut I."
+    ],
+    "doi": "10.1371/journal.pone.0338633",
+    "url": "https://api.elsevier.com/content/abstract/scopus_id/105028014787",
+    "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0338633&type=printable",
+    "tldr": null,
+    "abstract": "",
+    "full_text_verified": true,
+    "full_text_source": "landing page do DOI (resolução via landing page)",
+    "full_text_note": "PDF identificável e acessível a partir da landing page.",
+    "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/atividade_inteligencia_artificial_em_governanca_no_servico_publico_prisma_fulltext_cache/efficient_ai_driven_allegation_screening_a_case_study_of_thailands_national_anti_6a0977d96498.pdf",
+    "downloaded_pdf_note": "PDF baixado localmente com sucesso.",
+    "sources": [
+      "Scopus"
+    ],
+    "source_ids": {
+      "scopus": "2-s2.0-105028014787"
+    }
+  },
+  "triage": {
+    "pergunta_orientadora": "Como a inteligência artificial tem sido aplicada empiricamente à governança no serviço público, especialmente em processos decisórios, controle, mediação institucional e prestação de serviços, entre 2022 e 2026?",
+    "introducao": "A incorporação de inteligência artificial (IA) ao setor público tem ampliado o debate sobre governança, capacidade estatal, qualidade decisória, automação de processos e relação entre Estado e cidadãos. No recorte desta atividade, o interesse concentra-se em estudos sobre IA em governança no serviço público, com prioridade para evidências empíricas publicadas entre 2022 e 2026, em inglês ou português, nas bases Semantic Scholar e Scopus. Considerando os candidatos recuperados, a triagem foi orientada pela aderência temática ao contexto governamental ou de administração pública, pela presença de aplicação concreta ou análise empírica, e pela compatibilidade com o foco em governança pública. Também foi observada, de modo obrigatório, a disponibilidade de texto completo com link verificável de download, condição já atendida pelo conjunto fornecido. Entre os registros, distinguem-se trabalhos conceituais, revisões, frameworks normativos e estudos de caso aplicados ao setor público. Para a seleção final, privilegiou-se o artigo com maior alinhamento simultâneo ao tema central, ao recorte de governança pública e ao tipo de estudo empírico.",
+    "base_logica_busca": "A lógica de busca combinou três blocos conceituais por operadores booleanos AND: (i) termos de inteligência artificial, em português e inglês; (ii) termos relativos à governança pública, administração pública, serviço público e setor público; e (iii) termos indicativos de delineamentos empíricos, como empirical study, empirical research, case study, survey, mixed methods e avaliação de impacto. Esse encadeamento buscou maximizar a recuperação de estudos sobre uso de IA em contextos governamentais, reduzindo resultados excessivamente técnicos, empresariais ou puramente teóricos. Na triagem, foram priorizados artigos que explicitassem aplicação no setor público e que apresentassem indícios de investigação empírica ou estudo de caso.",
+    "criterios_inclusao": [
+      "Publicação entre 2022 e 2026.",
+      "Idioma em inglês ou português.",
+      "Vinculação explícita à inteligência artificial no contexto de governança pública, administração pública, serviço público ou setor público.",
+      "Aderência ao recorte temático de IA em governança no serviço público.",
+      "Prioridade para estudo empírico, estudo de caso, survey, mixed methods ou avaliação aplicada.",
+      "Texto completo com verificação de acesso e link de download do PDF verificável.",
+      "Maior proximidade com processos de governança, decisão, controle, implementação ou prestação de serviços públicos."
+    ],
+    "criterios_exclusao": [
+      "Estudos predominantemente conceituais, normativos ou propositivos sem base empírica identificável no título e nos metadados fornecidos.",
+      "Revisões sistemáticas ou agendas de pesquisa, por não corresponderem ao tipo de estudo priorizado.",
+      "Trabalhos cujo foco principal seja empreendedorismo, infraestrutura crítica, sustentabilidade urbana ampla ou cidades inteligentes sem centralidade em governança no serviço público.",
+      "Artigos mais próximos de desenvolvimento de modelo, framework ou maturidade organizacional sem aplicação empírica clara ao setor público governamental.",
+      "Estudos sobre administração pública em sentido amplo, mas sem evidência suficiente de relação central com governança pública mediada por IA.",
+      "Registros com menor aderência temática comparativa em relação aos demais candidatos, ainda que possuam texto completo verificável."
+    ],
+    "observacao_metodologica": "A triagem foi realizada exclusivamente com base nos metadados fornecidos pelo usuário, sem inferências não sustentadas por resumo, texto integral ou informação bibliográfica adicional. Como os candidatos já foram pré-filtrados quanto à verificabilidade do texto completo, esse critério foi tratado como condição necessária satisfeita para todos; a decisão final concentrou-se, portanto, na aderência temática e no tipo de estudo. Dada a ausência de resumos nos registros, a classificação entre elegibilidade e exclusão foi feita de forma conservadora, privilegiando títulos que indicassem claramente contexto governamental e desenho empírico. Exatamente um artigo foi incluído, conforme instrução da atividade.",
+    "selected_paper_id": "scopus:2-s2.0-105028014787",
+    "selected_paper_justification": "O artigo \"Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission\" foi selecionado por apresentar o melhor alinhamento com o tema de inteligência artificial em governança no serviço público e com a prioridade por estudos empíricos. Pelo próprio título, trata-se de um estudo de caso aplicado a uma instituição pública de controle e integridade, a National Anti-Corruption Commission da Tailândia, o que o insere diretamente no campo da governança pública, especialmente em funções de triagem, decisão administrativa e apoio ao controle institucional. Entre os candidatos, é o registro que combina de modo mais explícito: uso de IA, contexto governamental, aplicação prática e delineamento empírico. Além disso, atende ao requisito obrigatório de texto completo verificável, com full_text_verified=true e link direto de download do PDF em periódico PLOS ONE (pdf_url verificável), o que reforça sua elegibilidade final.",
+    "decisions": [
+      {
+        "paper_id": "scopus:2-s2.0-105020866897",
+        "stage": "excluido_elegibilidade",
+        "tipo_estudo": "estudo empírico",
+        "motivo": "Embora indique evidência aplicada em contexto estatal (policiamento nos Emirados Árabes Unidos), o foco principal parece concentrar-se em satisfação do cidadão e confiança no governo, com menor centralidade em governança no serviço público do que o estudo de caso selecionado."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105029852328",
+        "stage": "excluido_triagem",
+        "tipo_estudo": "consulta a especialistas / estudo aplicado",
+        "motivo": "O título sugere foco em infraestrutura crítica, segurança nacional e empreendedorismo sustentável, não em governança no serviço público como eixo central da análise."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105029180564",
+        "stage": "excluido_triagem",
+        "tipo_estudo": "framework/modelo aplicado",
+        "motivo": "O estudo centra-se em modelo de maturidade de IA para auditoria ágil, com orientação instrumental e organizacional; não há evidência suficiente, pelos metadados, de aplicação empírica diretamente situada na governança pública ou no serviço público."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105031404845",
+        "stage": "excluido_triagem",
+        "tipo_estudo": "revisão sistemática",
+        "motivo": "Apesar da aderência temática parcial à administração pública, trata-se de revisão sistemática e agenda de pesquisa, não do tipo de estudo empírico priorizado."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105031518832",
+        "stage": "excluido_elegibilidade",
+        "tipo_estudo": "framework de política / estudo propositivo",
+        "motivo": "O artigo dialoga com governo de Dubai e transformação digital, mas o título caracteriza principalmente um framework de política para mapeamento de talentos e validação de credenciais, com menor evidência de estudo empírico de governança pública no sentido priorizado."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105031216320",
+        "stage": "excluido_triagem",
+        "tipo_estudo": "análise estratégica / discussão aplicada",
+        "motivo": "O foco está em cidades inteligentes na África, com escopo amplo de transformação urbana sustentável; a relação com governança no serviço público mediada por IA é indireta e menos específica."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105028014787",
+        "stage": "incluido",
+        "tipo_estudo": "estudo de caso empírico",
+        "motivo": "Estudo de caso claramente empírico, aplicado a órgão público de combate à corrupção, com uso de IA em processo institucional de triagem e decisão, alta aderência ao tema de governança no serviço público e texto completo com PDF verificável."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105028669571",
+        "stage": "excluido_elegibilidade",
+        "tipo_estudo": "discussão conceitual/normativa",
+        "motivo": "O título indica forte aderência temática à governança de IA em sistemas municipais de autoatendimento, mas enfatiza perspectivas éticas e de smart government, sem sinalização suficientemente clara de desenho empírico."
+      },
+      {
+        "paper_id": "scopus:2-s2.0-105014493348",
+        "stage": "excluido_elegibilidade",
+        "tipo_estudo": "análise exploratória/conceitual",
+        "motivo": "Embora trate de IA generativa em administrações públicas, o título sugere discussão exploratória sobre presença institucional da tecnologia, sem evidência explícita de estudo empírico comparável ao artigo selecionado."
+      }
+    ]
+  },
+  "analysis": {
+    "referencia_completa": "Sereewatthanawut, I., Sriphon, P., Khunwipusit, P., Ajayi, B. O., Ilesanmi, A. E., Suwaree, J., & Buachoom, W. W. (2026). Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission. *PLoS ONE, 21*(1), e0338633. https://doi.org/10.1371/journal.pone.0338633",
+    "problema_objetivo": "O artigo enfrenta o problema da baixa eficiência, morosidade e inconsistência no processo preliminar de triagem de denúncias de corrupção na National Anti-Corruption Commission (NACC) da Tailândia, cujo fluxo ainda depende majoritariamente de procedimentos manuais. Nesse contexto, o objetivo do estudo é desenvolver, implementar e avaliar um protótipo orientado por inteligência artificial capaz de automatizar etapas da recepção, extração, sumarização e classificação de denúncias, buscando aumentar a velocidade, a padronização e a capacidade institucional de resposta no setor público.",
+    "argumento_central": "O argumento central do artigo é que a inteligência artificial, quando aplicada de forma modular, responsável e sensível ao contexto institucional, pode fortalecer a governança pública em órgãos de integridade ao melhorar a triagem inicial de denúncias. A combinação de OCR, NLP e classificação baseada em grandes modelos de linguagem permite reduzir o tempo de processamento, ampliar a consistência procedimental e apoiar a transparência e a accountability, desde que sua adoção seja acompanhada por supervisão humana, aderência regulatória e cuidados éticos.",
+    "desenho_pesquisa": "Trata-se de um estudo de caso aplicado, com desenho de métodos mistos. Na etapa qualitativa, os autores realizaram análise institucional do processo da NACC, com entrevistas em profundidade e grupos focais com 25 atores estratégicos, incluindo servidores da comissão, especialistas em TIC e juristas, além de revisão legal do marco regulatório pertinente. Na etapa de desenvolvimento tecnológico, foi construído um protótipo modular com três componentes: (1) OCR baseado em Tesseract adaptado ao idioma tailandês; (2) módulo de sumarização por NLP com uso de LLMs generalistas (Gemini-1.5-Flash e Gemma27B) via prompt engineering, sem fine-tuning; e (3) módulo de classificação de denúncias em categorias de corrupção, também por inferência baseada em prompts. Na etapa quantitativa, o sistema foi testado em ambiente controlado com 200 casos semissintéticos, dos quais 160 foram validados para análise, distribuídos em dez categorias de denúncia. A avaliação contemplou métricas técnicas de desempenho (acurácia, precisão, recall e F1), comparação do tempo de processamento entre triagem manual e automatizada e survey de satisfação com 60 participantes, em escala Likert, sobre utilidade, usabilidade e confiança.",
+    "principais_achados": "Os resultados indicam ganhos relevantes de eficiência e desempenho operacional, ainda que com limitações classificatórias importantes. O módulo de OCR alcançou F1-score de 81,8%, precisão de 84,2% e recall de 79,6%; para texto impresso, obteve 72% de acurácia em nível de palavra e 78% em nível de caractere. O módulo de sumarização foi bem avaliado por especialistas e servidores, com média de 4,74 em 5 quanto à clareza, completude e adequação contextual, além de reduzir em 79% o tempo médio de processamento em relação ao método manual. Já o módulo de classificação atingiu acurácia geral de 57,5% com o modelo Gemini-1.5-Flash e 52,0% com Gemma27B, superando com ampla margem modelos multilíngues de baseline em zero-shot e embedding similarity. No plano operacional, o sistema reduziu o tempo médio por denúncia de 333,39 segundos para 71,47 segundos, correspondendo a uma redução de 78,6%. A satisfação dos usuários foi elevada, com média de 4,2 em 5, destacando rapidez, facilidade de uso e aderência ao fluxo institucional. Em contrapartida, o artigo reconhece limitações decorrentes do uso de dados semissintéticos, do desbalanceamento entre classes e da dificuldade dos modelos em lidar com ambiguidades linguísticas e categorias juridicamente próximas.",
+    "contribuicao_estudo": "A principal contribuição do estudo está em oferecer evidência empírica, aplicada e situada sobre o uso de inteligência artificial na governança do serviço público, especialmente em um órgão de combate à corrupção. O artigo avança o debate ao sair do plano normativo ou prospectivo e demonstrar, por meio de um caso concreto, como sistemas de IA podem ser incorporados a processos administrativos de triagem e encaminhamento de denúncias. Contribui ainda ao propor uma arquitetura sociotécnica modular, compatível com necessidades institucionais, com potencial de integração a plataformas já existentes e de adaptação a outros órgãos públicos. Do ponto de vista teórico-normativo, o estudo aproxima a adoção de IA da public value theory, sustentando que inovação digital no setor público deve ser avaliada não apenas por eficiência, mas também por legitimidade, transparência, justiça procedimental e confiança pública.",
+    "justificativa_selecao_final": "O artigo justifica plenamente sua seleção para uma atividade acadêmica sobre inteligência artificial em governança no serviço público porque aborda diretamente o emprego de IA em uma função central de governança pública: a gestão institucional de denúncias e o fortalecimento da accountability em órgão estatal de integridade. Trata-se de estudo recente, publicado em periódico indexado e de ampla circulação internacional, com texto completo verificável e acessível. Além da aderência temática, o trabalho apresenta forte pertinência metodológica, ao combinar análise institucional, desenvolvimento tecnológico e avaliação empírica de desempenho. Também oferece discussão crítica sobre transparência, supervisão humana, regulação, legitimidade e riscos éticos, aspectos essenciais para o debate acadêmico sobre IA no setor público. Sua utilidade é elevada tanto para fundamentação teórica quanto para exemplificação prática de aplicações de IA em rotinas governamentais.",
+    "texto_corrido_entrega": "Sereewatthanawut et al. (2026) analisam a aplicação da inteligência artificial na triagem preliminar de denúncias de corrupção na National Anti-Corruption Commission (NACC) da Tailândia, oferecendo um estudo de caso altamente pertinente ao debate sobre inteligência artificial em governança no serviço público. O problema investigado decorre da forte dependência de procedimentos manuais no recebimento, leitura, classificação e encaminhamento de denúncias, o que produz lentidão, inconsistência decisória, sobrecarga administrativa e redução da confiança pública. Diante desse cenário, o objetivo do artigo é desenvolver e avaliar um protótipo baseado em inteligência artificial capaz de automatizar etapas-chave da triagem inicial, com vistas a ampliar a eficiência, a consistência procedimental e a capacidade institucional de resposta. O argumento central do estudo sustenta que a IA, quando implementada de maneira modular e alinhada ao contexto legal e organizacional, pode aprimorar a governança pública ao fortalecer práticas de transparência, accountability e integridade administrativa, sem prescindir de supervisão humana e salvaguardas éticas.\n\nO desenho de pesquisa é de métodos mistos e combina análise qualitativa institucional com avaliação técnica quantitativa. Na primeira etapa, os autores realizaram entrevistas em profundidade e grupos focais com 25 atores estratégicos, entre servidores da NACC, especialistas em tecnologia da informação e juristas, para mapear gargalos, necessidades operacionais e condicionantes regulatórios. Em seguida, desenvolveram um protótipo modular composto por três partes: um módulo de OCR para converter documentos escaneados e manuscritos em texto legível por máquina; um módulo de NLP para extração e sumarização das informações essenciais das denúncias; e um módulo classificatório apoiado em grandes modelos de linguagem, especificamente Gemini-1.5-Flash e Gemma27B, empregados por meio de prompt engineering, sem ajuste fino adicional. Na etapa de validação, o sistema foi testado com 160 casos semissintéticos, distribuídos em dez categorias de denúncias, sendo analisado por métricas de desempenho técnico, comparação de tempo entre triagem manual e automatizada e avaliação de satisfação de 60 usuários.\n\nOs principais achados mostram que a IA trouxe ganhos expressivos de eficiência operacional, ainda que a acurácia classificatória permaneça moderada. O módulo de OCR obteve F1-score de 81,8%, precisão de 84,2% e recall de 79,6%, com desempenho razoável também em cenários de ruído documental. O módulo de sumarização foi muito bem avaliado por especialistas, alcançando média de 4,74 em 5, e reduziu em 79% o tempo de processamento em relação ao método manual. Já a classificação das denúncias atingiu acurácia geral de 57,5% com Gemini-1.5-Flash, superando de modo significativo modelos multilíngues de referência em zero-shot. O ganho mais expressivo apareceu no plano da eficiência administrativa: o tempo médio por denúncia caiu de 333,39 segundos para 71,47 segundos, uma redução de 78,6%. Além disso, a percepção dos usuários foi positiva, com média de satisfação de 4,2 em 5, especialmente quanto à rapidez, facilidade de uso e compatibilidade com o fluxo institucional.\n\nA contribuição do artigo para a literatura é relevante porque fornece evidência empírica concreta sobre a adoção de inteligência artificial em um processo de governança pública sensível e de alto impacto, qual seja, a triagem de denúncias de corrupção em um órgão estatal. O estudo é particularmente valioso por articular eficiência tecnológica e valor público, argumentando que a transformação digital no setor público deve ser julgada não apenas por ganhos de produtividade, mas também por seus efeitos sobre legitimidade institucional, justiça procedimental, transparência e confiança social. Ao mesmo tempo, os autores reconhecem limitações importantes, como o uso de base semissintética, o desbalanceamento entre categorias e as dificuldades dos modelos em lidar com ambiguidades linguísticas e proximidades semânticas entre tipos de infração. Essas restrições impedem interpretações excessivamente otimistas e reforçam a necessidade de supervisão humana, explicabilidade e adequação normativa.\n\nPara uma atividade acadêmica sobre inteligência artificial em governança no serviço público, o artigo é especialmente adequado porque une aderência temática, atualidade, rigor metodológico e utilidade analítica. Ele permite discutir a IA não apenas como inovação tecnológica, mas como instrumento de reorganização de processos decisórios, redistribuição de trabalho administrativo e fortalecimento institucional em contextos de accountability pública. Além disso, o estudo problematiza aspectos indispensáveis ao debate contemporâneo, como regulação, transparência algorítmica, proteção de dados, legitimidade das decisões automatizadas e desenho sociotécnico da implementação. Por essas razões, trata-se de uma referência consistente para fundamentar reflexões acadêmicas sobre os potenciais e limites da inteligência artificial aplicada à governança no serviço público."
+  },
+  "candidates": [
+    {
+      "paper_id": "scopus:2-s2.0-105020866897",
+      "title": "Trust in government as a mediator in the relationship between AI implementation and citizen satisfaction: Evidence from UAE Policing",
+      "year": 2026,
+      "venue": "Multidisciplinary Science Journal",
+      "authors": [
+        "Alhefaity S.R.S.A."
+      ],
+      "doi": "10.31893/multiscience.2026292",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105020866897",
+      "pdf_url": "https://malque.pub/ojs/index.php/msj/article/download/12341/5261",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105020866897"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105029852328",
+      "title": "Expert views on integrating robots, drones, cameras, and AI into critical infrastructure protection and national security: an opportunity for sustainable entrepreneurship",
+      "year": 2026,
+      "venue": "International Entrepreneurship and Management Journal",
+      "authors": [
+        "Hynek N."
+      ],
+      "doi": "10.1007/s11365-026-01177-x",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105029852328",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11365-026-01177-x.pdf",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105029852328"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105029180564",
+      "title": "A Dynamic AI Maturity Model for Agile Audit: A Roadmap for Enhanced Effectiveness and Innovation",
+      "year": 2026,
+      "venue": "Journal of Computer Science",
+      "authors": [
+        "Amraoui S."
+      ],
+      "doi": "10.3844/jcssp.2026.87.99",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105029180564",
+      "pdf_url": "https://thescipub.com/pdf/jcssp.2026.87.99.pdf",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105029180564"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105031404845",
+      "title": "Technological Innovation and Sustainability in Public Administration: A Systematic Review and Research Agenda",
+      "year": 2026,
+      "venue": "Administrative Sciences",
+      "authors": [
+        "Pini B."
+      ],
+      "doi": "10.3390/admsci16020080",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105031404845",
+      "pdf_url": "https://mdpi-res.com/d_attachment/admsci/admsci-16-00080/article_deploy/admsci-16-00080.pdf?version=1770284226",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105031404845"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105031518832",
+      "title": "SkillChain DX: A Policy Framework for AI-Driven Talent Mapping and Blockchain-Based Credential Validation in Dubai Government",
+      "year": 2026,
+      "venue": "Applied Sciences Switzerland",
+      "authors": [
+        "Al-Jaziri S.A."
+      ],
+      "doi": "10.3390/app16042114",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105031518832",
+      "pdf_url": "https://www.mdpi.com/2076-3417/16/4/2114/pdf?version=1771683560",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105031518832"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105031216320",
+      "title": "Advancing Smart Cities in Africa: Barriers, Potentials, and Strategic Pathways for Sustainable Urban Transformation",
+      "year": 2026,
+      "venue": "Smart Cities",
+      "authors": [
+        "Das D.K."
+      ],
+      "doi": "10.3390/smartcities9020038",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105031216320",
+      "pdf_url": "https://mdpi-res.com/d_attachment/smartcities/smartcities-09-00038/article_deploy/smartcities-09-00038.pdf?version=1771511811",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105031216320"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105028014787",
+      "title": "Efficient AI-driven allegation screening: A case study of Thailand’s National Anti-Corruption Commission",
+      "year": 2026,
+      "venue": "Plos One",
+      "authors": [
+        "Sereewatthanawut I."
+      ],
+      "doi": "10.1371/journal.pone.0338633",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105028014787",
+      "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0338633&type=printable",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/atividade_inteligencia_artificial_em_governanca_no_servico_publico_prisma_fulltext_cache/efficient_ai_driven_allegation_screening_a_case_study_of_thailands_national_anti_6a0977d96498.pdf",
+      "downloaded_pdf_note": "PDF baixado localmente com sucesso.",
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105028014787"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105028669571",
+      "title": "Sustainable and Inclusive AI Governance in Municipal Self-Service Systems: Ethical, Smart-Government, and Generative AI Perspectives",
+      "year": 2026,
+      "venue": "Sustainability Switzerland",
+      "authors": [
+        "Alyileili M."
+      ],
+      "doi": "10.3390/su18020849",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105028669571",
+      "pdf_url": "https://www.mdpi.com/2071-1050/18/2/849/pdf?version=1768467332",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105028669571"
+      }
+    },
+    {
+      "paper_id": "scopus:2-s2.0-105014493348",
+      "title": "A Silent Partner: The Shadow Presence of Generative Artificial Intelligence in Public Administrations",
+      "year": 2026,
+      "venue": "Lecture Notes in Computer Science",
+      "authors": [
+        "Tangi L."
+      ],
+      "doi": "10.1007/978-3-032-02515-9_5",
+      "url": "https://api.elsevier.com/content/abstract/scopus_id/105014493348",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/978-3-032-02515-9_5.pdf",
+      "tldr": null,
+      "abstract": "",
+      "full_text_verified": true,
+      "full_text_source": "landing page do DOI (resolução via landing page)",
+      "full_text_note": "PDF identificável e acessível a partir da landing page.",
+      "downloaded_pdf_path": null,
+      "downloaded_pdf_note": null,
+      "sources": [
+        "Scopus"
+      ],
+      "source_ids": {
+        "scopus": "2-s2.0-105014493348"
+      }
+    }
+  ]
+}

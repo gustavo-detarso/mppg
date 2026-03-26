@@ -1,0 +1,45 @@
+Você está inferindo o contexto-base de um paper acadêmico em português a partir de:
+1. um template Org-mode do paper;
+2. documentos-base, que fornecem conteúdo substantivo;
+3. documentos de orientação, que definem regras, estrutura e expectativas do professor.
+
+Sua tarefa é produzir um contexto-base AMPLO, fiel ao roteiro e aos textos, sem afunilar prematuramente o paper em um episódio empírico muito específico, salvo se isso estiver explicitamente exigido pelos documentos de orientação ou fortemente concentrado nos textos-base.
+
+Regras obrigatórias:
+- não invente autores, obras, eventos, conceitos ou exigências do professor;
+- não reduza o paper a um único caso específico sem necessidade;
+- preserve margem para que dois temas adicionais possam ser escolhidos depois;
+- dê preferência a conceitos, problemas analíticos e recortes suficientemente amplos;
+- use linguagem acadêmica clara, precisa e sem jargão desnecessário;
+- formule uma pergunta de pesquisa ampla, mas investigável;
+- formule uma hipótese ampla, sem fechamento excessivo do caso;
+- proponha combinações de temas adicionais que sejam plausíveis à luz dos textos.
+
+Template do paper:
+{template_text}
+
+Documentos-base:
+{base_docs}
+
+Documentos de orientação:
+{guidance_docs}
+
+Retorne JSON com exatamente estes campos:
+- tema
+- recorte_amplo
+- objetivo_amplo
+- pergunta_ampla
+- hipotese_ampla
+- palavras_chave
+- temas_adicionais_candidatos
+- combinacoes_sugeridas
+- observacoes_sobre_limites_do_recorte
+
+Formato esperado para combinacoes_sugeridas:
+[
+  {{
+    "tema_adicional_1": "...",
+    "tema_adicional_2": "...",
+    "justificativa": "..."
+  }}
+]

@@ -1,0 +1,169 @@
+#+TITLE: ${1:Título do paper}
+#+AUTHOR: ${2:Gustavo Tarso}
+#+DATE: \\today
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+
+#+LATEX_HEADER: \usepapercover
+#+LATEX_HEADER: \institution{${3:Faculdade Getúlio Vargas}}
+#+LATEX_HEADER: \programname{${4:Mestrado Profissional em Políticas Públicas e Governo}}
+#+LATEX_HEADER: \coursename{${5:Nome do curso}}
+#+LATEX_HEADER: \disciplinename{${6:Nome da disciplina}}
+#+LATEX_HEADER: \professorname{${7:Nome do professor}}
+#+LATEX_HEADER: \cityname{${8:Brasília}}
+#+LATEX_HEADER: \papertype{${9:Paper apresentado como requisito de avaliação da disciplina}}
+#+LATEX_HEADER: \covernote{${10:Versão em Org-mode com referências via BibLaTeX.}}
+
+#+CITE_EXPORT: biblatex backend=biber,style=apa,sortcites=true,sorting=nyt,giveninits=true,maxcitenames=2,maxbibnames=20,uniquelist=minyear
+#+BIBLIOGRAPHY: ${11:referencias.bib}
+
+#+LATEX: \makemytitle
+
+#+begin_comment
+METADADOS ESTRATÉGICOS DO PAPER
+
+TEMA_PRINCIPAL: ${11:Preencher ou deixar a IA inferir}
+TEMA_ADICIONAL_1: ${12:Preencher ou deixar a IA inferir}
+TEMA_ADICIONAL_2: ${13:Preencher ou deixar a IA inferir}
+AUTOR_OBRIGATORIO_1: ${14:Preencher se houver}
+AUTOR_OBRIGATORIO_2: ${15:Preencher se houver}
+AUTOR_OBRIGATORIO_3: ${16:Preencher se houver}
+AUTOR_COMPLEMENTAR_1: ${17:Opcional}
+AUTOR_COMPLEMENTAR_2: ${18:Opcional}
+RECORTE_EMPIRICO: ${19:Preencher ou deixar a IA inferir}
+PERGUNTA_DE_PESQUISA: ${20:Preencher ou deixar a IA inferir}
+HIPOTESE: ${21:Preencher ou deixar a IA inferir}
+OBJETIVO_GERAL: ${22:Preencher ou deixar a IA inferir}
+METODOLOGIA: ${23:Análise bibliográfica e argumentativa}
+CONCLUSAO_ESPERADA: ${24:Preencher ou deixar a IA inferir}
+
+PROMPT-MESTRE PARA A IA
+
+Objetivo:
+Gerar um paper acadêmico completo, em português, com linguagem formal, analítica e coesa, evitando tom genérico, resumos soltos e enumeração mecânica de autores.
+
+Regras gerais:
+1. Preservar a estrutura técnica do arquivo .org.
+2. Não remover cabeçalho, bibliografia ou configuração de citação.
+3. Não inserir numeração manual nas seções.
+4. Não inventar referências bibliográficas, DOI, dados, autores ou fatos não sustentados pelos documentos fornecidos ou pelo arquivo .bib.
+5. Se faltar dado específico, manter formulação honesta e provisória, sem fabricar informação.
+6. O paper deve ter pergunta, tese, desenvolvimento e conclusão.
+7. O tom deve ser compatível com pós-graduação em ciência política, administração pública ou políticas públicas.
+8. Os autores obrigatórios devem aparecer de modo substantivo, com diálogo real entre argumentos.
+9. A análise deve mostrar interpretação própria, conectando teoria e empiria.
+10. A conclusão não deve trazer evidência nova nem abrir discussão paralela.
+
+Lógica de composição:
+A. Resumo: tema, problema, pergunta, objetivo, hipótese ou tese, metodologia, argumento central e relevância.
+B. Introdução: contextualização, delimitação, pergunta, hipótese, justificativa e estrutura.
+C. Referencial teórico: conceitos centrais, autores em diálogo, convergências, divergências, limites e posição analítica do paper.
+D. Análise: aplicação dos conceitos ao recorte empírico ou problema analisado, mostrando como a literatura explica ou não o caso.
+E. Conclusão: retomada da pergunta, síntese da resposta, reafirmação ou ajuste da hipótese e contribuição principal.
+
+Critérios de qualidade:
+- clareza argumentativa
+- densidade analítica
+- coesão entre seções
+- fidelidade à bibliografia
+- precisão conceitual
+- redação acadêmica fluida
+
+Modo de adaptação:
+Se este template for reutilizado para outro paper, preservar a estrutura-base e substituir apenas os blocos analíticos necessários, mantendo o padrão formal e a aderência ao enunciado da disciplina.
+#+end_comment
+
+#+begin_abstract
+${25:Escreva aqui um resumo acadêmico completo, com problema, pergunta de pesquisa, objetivo, hipótese ou tese, metodologia, argumento e relevância.}
+#+end_abstract
+
+* Introdução
+#+begin_comment
+INSTRUÇÃO PARA A IA
+
+Escrever uma introdução com 3 a 6 parágrafos.
+Ela deve apresentar o tema, delimitar o problema, formular a pergunta de pesquisa, anunciar o objetivo geral, explicitar a hipótese ou tese central, justificar a relevância e antecipar a estrutura do paper.
+Evitar abertura vaga ou histórica demais.
+#+end_comment
+
+${26:A introdução do paper parte do problema de...}
+
+* Problema de pesquisa e hipótese
+#+begin_comment
+INSTRUÇÃO PARA A IA
+
+Construir o núcleo lógico do paper.
+A pergunta deve ser precisa e investigável.
+A hipótese deve ser clara, argumentativa e coerente com a bibliografia.
+Se o caso não comportar hipótese formal, formular uma tese central explícita.
+#+end_comment
+
+** Pergunta de pesquisa
+${27:Em que medida... ?}
+
+** Hipótese ou tese central
+${28:Este paper sustenta que...}
+
+** Objetivo geral
+${29:O objetivo deste paper é analisar...}
+
+** Metodologia
+${30:O paper adota abordagem bibliográfica e argumentativa, articulando os textos-base ao problema formulado.}
+
+* Referencial teórico
+#+begin_comment
+INSTRUÇÃO PARA A IA
+
+Desenvolver um referencial teórico que defina os conceitos centrais, coloque os autores em diálogo e articule o tema principal com os temas adicionais.
+Evitar formato de fichamento.
+Explicitar qual interpretação orienta o paper.
+#+end_comment
+
+** ${31:Conceito central 1}
+${32:}
+
+** ${33:Conceito central 2}
+${34:}
+
+** ${35:Conceito central 3 ou eixo de articulação}
+${36:}
+
+** Debate teórico e posicionamento analítico
+${37:}
+
+* Análise
+#+begin_comment
+INSTRUÇÃO PARA A IA
+
+Esta seção deve ser a mais autoral do paper.
+Aplicar o referencial ao recorte empírico ou problema analisado.
+Conectar teoria e caso de modo explícito.
+Demonstrar por que o caso confirma, qualifica, tensiona ou desafia a literatura.
+Evitar repetir os autores sem interpretação própria.
+#+end_comment
+
+** Recorte empírico ou problema analisado
+${38:O recorte empírico considerado neste paper é...}
+
+** Aplicação dos conceitos ao caso
+${39:}
+
+** Discussão crítica
+${40:}
+
+* Conclusão
+#+begin_comment
+INSTRUÇÃO PARA A IA
+
+Retomar a pergunta de pesquisa e mostrar como o paper a respondeu.
+Reafirmar ou reformular a hipótese à luz da análise.
+Indicar a principal contribuição analítica sem introduzir argumentos ou evidências novas.
+#+end_comment
+
+${41:Em síntese, o paper argumentou que...}
+
+#+PRINT_BIBLIOGRAPHY:

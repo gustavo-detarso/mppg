@@ -1,0 +1,23 @@
+A partir do paper acadêmico abaixo, gere três elementos finais de capa em português:
+1. title: um título final acadêmico, preciso e elegante;
+2. paper_type: uma descrição curta e formal do tipo do trabalho para a capa;
+3. cover_note: uma nota filosófica breve, sóbria, reflexiva e compatível com um paper acadêmico.
+
+Regras:
+- não use tom místico, esotérico ou grandiloquente;
+- não invente fatos novos além do que está no paper;
+- o título deve ter aproximadamente entre 8 e 18 palavras;
+- o campo paper_type deve ter uma frase curta, institucional e objetiva;
+- o campo cover_note deve ter entre 1 e 3 frases curtas, com tom reflexivo e acadêmico;
+- a nota filosófica deve soar elegante, mas discreta.
+
+Contexto resumido:
+{contexto}
+
+Paper em Org-mode:
+{org_text}
+
+Retorne JSON com exatamente estes campos:
+- title
+- paper_type
+- cover_note

@@ -1,0 +1,260 @@
+#+TITLE: Título da dissertação
+#+SUBTITLE: Subtítulo da dissertação, se houver
+#+AUTHOR: Seu Nome Completo
+#+DATE: 2026
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t ^:{}
+#+STARTUP: overview
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: report
+#+LATEX_CLASS_OPTIONS: [12pt,oneside,a4paper]
+#+LATEX_HEADER: \usepackage{fgv-dissertacao}
+#+LATEX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{svg}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \autor{Seu Nome Completo}
+#+LATEX_HEADER: \titulo{Título da dissertação}
+#+LATEX_HEADER: \subtitulo{Subtítulo da dissertação, se houver}
+#+LATEX_HEADER: \cidade{Brasília}
+#+LATEX_HEADER: \ano{2026}
+#+LATEX_HEADER: \instituicao{Fundação Getulio Vargas}
+#+LATEX_HEADER: \escola{Escola de Políticas Públicas e Governo}
+#+LATEX_HEADER: \programa{Mestrado Profissional em Políticas Públicas e Governo}
+#+LATEX_HEADER: \curso{Mestrado Profissional em Políticas Públicas e Governo}
+#+LATEX_HEADER: \areadeconcentracao{Administração Pública e Governo}
+#+LATEX_HEADER: \linhapesquisa{Governança, integridade e gestão pública}
+#+LATEX_HEADER: \orientador{Prof. Dr. Nome do Orientador}
+#+LATEX_HEADER: \coorientador{Prof. Dr. Nome do Coorientador}
+#+LATEX_HEADER: \naturezatrabalho{Dissertação apresentada à Escola de Políticas Públicas e Governo da Fundação Getulio Vargas como requisito parcial para obtenção do título de Mestre em Políticas Públicas e Governo.}
+#+LATEX_HEADER: \dataaprovacao{__/__/2026}
+#+LATEX_HEADER: \membrobancaum{Prof. Dr. Nome do primeiro membro}
+#+LATEX_HEADER: \membrobancadois{Prof. Dr. Nome do segundo membro}
+#+LATEX_HEADER: \membrobancatres{Prof. Dr. Nome do terceiro membro}
+#+LATEX_HEADER: \palavraschave{governança; integridade; gestão de riscos; políticas públicas; administração pública}
+#+LATEX_HEADER: \keywords{governance; integrity; risk management; public policy; public administration}
+#+LATEX_HEADER: \addbibresource{referencias.bib}
+
+#+begin_export latex
+\capa
+\folhaderosto
+\folhadeaprovacao
+
+\begin{dedicatoria}
+Dedico este trabalho à minha família, pelo apoio incondicional em todas as etapas da trajetória acadêmica e profissional.
+\end{dedicatoria}
+
+\begin{agradecimentos}
+Agradeço aos professores do programa, aos colegas de curso e a todas as pessoas que contribuíram, direta ou indiretamente, para a realização desta pesquisa.
+\end{agradecimentos}
+
+\begin{epigrafe}
+\textit{“A administração pública existe para produzir valor público de forma legítima, eficiente e sustentável.”}
+\end{epigrafe}
+
+\begin{resumo}
+Este trabalho analisa [tema da pesquisa] a partir de [recorte teórico, empírico e metodológico]. O objetivo geral consiste em [objetivo geral]. Para tanto, adota-se uma abordagem [qualitativa, quantitativa ou mista], com base em [procedimentos metodológicos]. Os resultados indicam [síntese dos achados]. Conclui-se que [síntese da conclusão].
+\end{resumo}
+
+\begin{abstractacademico}
+This dissertation analyzes [research theme] based on [theoretical, empirical, and methodological scope]. The general objective is to [general objective]. To achieve this, the study adopts a [qualitative, quantitative, or mixed] approach, based on [methodological procedures]. The findings indicate [summary of findings]. It is concluded that [summary of conclusion].
+\end{abstractacademico}
+
+\listoffigures
+\listoftables
+\tableofcontents
+\elementostextuais
+#+end_export
+
+* Introdução
+A introdução deve apresentar, de forma articulada, o tema, o problema de pesquisa, a justificativa, os objetivos e a organização da dissertação. Este capítulo precisa situar o leitor no debate teórico e empírico que será desenvolvido ao longo do trabalho.
+
+** Contextualização do tema
+Nesta subseção, apresente o contexto em que o problema de pesquisa se insere. Explique o cenário institucional, político, social ou administrativo relacionado ao objeto estudado.
+
+** Problema de pesquisa
+Formule o problema de pesquisa em linguagem analítica e precisa. Uma boa prática é apresentá-lo em forma de pergunta.
+
+Exemplo:
+
+#+begin_quote
+Em que medida mecanismos de integridade e gestão de riscos contribuem para aumentar a efetividade e a sustentabilidade de políticas públicas em organizações do setor público?
+#+end_quote
+
+** Hipótese ou pressupostos
+Se a pesquisa comportar hipótese, declare-a claramente. Em trabalhos qualitativos, é possível trabalhar com pressupostos analíticos em vez de hipótese formal.
+
+** Objetivo geral
+O objetivo geral expressa o propósito central da dissertação.
+
+Exemplo:
+
+#+begin_quote
+Analisar de que modo mecanismos de integridade e gestão de riscos influenciam a efetividade e a sustentabilidade de políticas públicas no setor público brasileiro.
+#+end_quote
+
+** Objetivos específicos
+Os objetivos específicos detalham as etapas analíticas necessárias para atingir o objetivo geral.
+
+1. Identificar os principais mecanismos de integridade aplicáveis ao contexto estudado.
+2. Examinar os instrumentos de gestão de riscos mobilizados pela organização analisada.
+3. Avaliar a relação entre esses mecanismos e a efetividade das políticas públicas observadas.
+4. Propor recomendações para o aprimoramento institucional.
+
+** Justificativa
+A justificativa deve demonstrar a relevância acadêmica, institucional, social e prática do estudo.
+
+** Estrutura da dissertação
+Ao final da introdução, descreva resumidamente a organização dos capítulos.
+
+* Referencial teórico
+Este capítulo apresenta os conceitos, autores e debates que fundamentam a análise. Evite transformar o referencial em mera revisão descritiva; o ideal é construir um argumento teórico coerente.
+
+** Governança pública
+Apresente os principais conceitos de governança pública, suas variações conceituais e sua relação com coordenação, accountability, desempenho e legitimidade.
+
+Conforme \textcite{secchi2009}, a administração pública contemporânea passou a incorporar modelos analíticos distintos, entre os quais se destacam a burocracia, a nova gestão pública e a governança pública.
+
+** Integridade e compliance no setor público
+Discuta o conceito de integridade, seus instrumentos, suas bases normativas e sua relação com prevenção de desvios, conformidade e confiança institucional.
+
+** Gestão de riscos em políticas públicas
+Apresente autores, marcos normativos e modelos de gestão de riscos aplicáveis ao setor público.
+
+** Articulação entre governança, integridade e gestão de riscos
+Nesta subseção, construa a ponte conceitual central da dissertação.
+
+* Metodologia
+Este capítulo deve explicitar como a pesquisa foi realizada, permitindo replicabilidade e transparência analítica.
+
+** Tipo de pesquisa
+Classifique a pesquisa quanto à abordagem, aos objetivos e aos procedimentos.
+
+Exemplo:
+
+- abordagem qualitativa;
+- objetivo explicativo;
+- procedimento de estudo de caso.
+
+** Delimitação do objeto
+Explique qual organização, política, programa, período ou unidade de análise foi selecionada.
+
+** Técnicas de coleta de dados
+Descreva as técnicas utilizadas, como análise documental, entrevistas, questionários, observação, bases administrativas ou mineração de dados.
+
+** Técnicas de análise
+Explique como os dados foram tratados. Por exemplo: análise de conteúdo, estatística descritiva, análise inferencial, análise documental comparada ou triangulação metodológica.
+
+** Aspectos éticos e limitações
+Informe restrições metodológicas, éticas ou operacionais da pesquisa.
+
+* Análise e discussão dos resultados
+Este é o núcleo empírico da dissertação. O ideal é organizar a discussão em eixos analíticos coerentes com os objetivos específicos.
+
+** Caracterização do caso estudado
+Apresente a instituição, política ou programa analisado.
+
+** Evidências empíricas
+Desenvolva a análise dos dados de forma interpretativa, sempre articulando resultados e referencial teórico.
+
+** Exemplo de citação longa
+#+begin_export latex
+\begin{citacao}
+A governança pública envolve mecanismos de liderança, estratégia e controle postos em prática para avaliar, direcionar e monitorar a atuação da gestão, com vistas à condução de políticas públicas e à prestação de serviços de interesse da sociedade.
+\end{citacao}
+#+end_export
+
+** Exemplo de figura
+#+CAPTION: Exemplo de fluxo analítico da pesquisa.
+#+NAME: fig:fluxo-pesquisa
+[[./figuras/fluxo-pesquisa.png]]
+
+#+begin_export latex
+\fonte{Elaboração própria.}
+#+end_export
+
+** Exemplo de tabela em Org
+#+NAME: tab:indicadores-exemplo
+#+CAPTION: Indicadores exemplificativos da análise.
+| Indicador             | Descrição resumida                          | Resultado |
+|----------------------+----------------------------------------------+-----------|
+| Efetividade          | Grau de alcance dos objetivos da política    | Alto      |
+| Integridade          | Presença de controles e mecanismos preventivos | Médio   |
+| Gestão de riscos     | Maturidade dos processos de gestão de riscos | Médio     |
+| Sustentabilidade     | Capacidade de manutenção dos resultados      | Alto      |
+
+#+begin_export latex
+\fonte{Elaboração própria.}
+#+end_export
+
+** Exemplo de tabela em LaTeX puro
+#+begin_export latex
+\begin{table}[H]
+\centering
+\caption{Exemplo de tabela em formato \textit{tabularx}}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3cm}X>{\raggedright\arraybackslash}p{2.5cm}}
+\toprule
+Categoria & Descrição & Situação \\
+\midrule
+Governança & Mecanismos de coordenação, direção e monitoramento & Consolidada \\
+Integridade & Regras, controles e práticas de prevenção de desvios & Em desenvolvimento \\
+Riscos & Identificação, avaliação e tratamento de riscos & Parcialmente estruturada \\
+\bottomrule
+\end{tabularx}
+\fonte{Elaboração própria.}
+\end{table}
+#+end_export
+
+** Discussão
+Nesta subseção, discuta criticamente os resultados à luz da literatura apresentada no referencial teórico.
+
+* Considerações finais
+Retome o problema de pesquisa, sintetize os principais resultados, indique as contribuições do estudo, reconheça limitações e apresente agenda futura de pesquisa.
+
+** Síntese dos achados
+Apresente de forma direta os principais resultados.
+
+** Contribuições
+Destaque as contribuições teóricas, metodológicas e práticas.
+
+** Limitações do estudo
+Apresente as limitações de forma objetiva.
+
+** Agenda futura
+Sugira novas possibilidades de investigação.
+
+#+begin_export latex
+\elementospostextuais
+\printbibliography[title={REFERÊNCIAS}]
+\appendix
+#+end_export
+
+* Apêndice A -- Instrumento de coleta de dados
+Apêndices são materiais produzidos pelo próprio autor e utilizados para complementar a compreensão do estudo.
+
+Exemplo de itens que podem entrar em apêndice:
+
+1. roteiro de entrevista;
+2. questionário aplicado;
+3. protocolo de análise documental;
+4. quadro analítico elaborado pelo autor.
+
+#+begin_export latex
+\annex
+#+end_export
+
+* Anexo A -- Documento institucional
+Anexos são documentos não elaborados pelo autor, mas relevantes para compreensão da pesquisa.
+
+Exemplo de anexos:
+
+1. norma institucional;
+2. fluxograma oficial;
+3. documento administrativo;
+4. relatório externo.

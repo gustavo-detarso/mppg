@@ -1,0 +1,651 @@
+% referencias.bib
+% Modelo abrangente para uso com Org-mode + LaTeX + biblatex/biblatex-abnt
+% Codificacao: UTF-8
+% Observacao: este arquivo contem exemplos prontos dos tipos mais comuns
+% em dissertacoes, teses e artigos academicos no Brasil.
+
+% =========================================================
+% 1. LIVRO
+% =========================================================
+@book{weber1922,
+  author       = {Max Weber},
+  title        = {Economia e sociedade},
+  subtitle     = {Fundamentos da sociologia compreensiva},
+  publisher    = {Editora Universidade de Brasília},
+  location     = {Brasília},
+  year         = {1922},
+  edition      = {4},
+  volumes      = {2},
+  isbn         = {9788523000000},
+  langid       = {portuguese},
+  keywords     = {burocracia, sociologia, estado}
+}
+
+% Livro com organizador/editor em vez de autor
+@book{dahl1961,
+  editor       = {Robert A. Dahl},
+  title        = {Modern Political Analysis},
+  publisher    = {Prentice Hall},
+  location     = {Englewood Cliffs},
+  year         = {1961},
+  edition      = {2},
+  langid       = {english},
+  keywords     = {politica, analise-politica}
+}
+
+% =========================================================
+% 2. CAPITULO DE LIVRO / PARTE DE LIVRO
+% =========================================================
+@incollection{abrucio1998,
+  author       = {Fernando Luiz Abrucio},
+  title        = {Os barões da federação e a redemocratização brasileira},
+  booktitle    = {Os barões da federação},
+  publisher    = {Hucitec},
+  location     = {São Paulo},
+  year         = {1998},
+  pages        = {35--62},
+  isbn         = {9788500000000},
+  langid       = {portuguese},
+  keywords     = {federalismo, estados, governadores}
+}
+
+@inbook{easton1965,
+  author       = {David Easton},
+  title        = {A systems analysis of political life},
+  chapter      = {3},
+  booktitle    = {A systems analysis of political life},
+  publisher    = {Wiley},
+  location     = {New York},
+  year         = {1965},
+  pages        = {45--78},
+  langid       = {english},
+  keywords     = {sistemas, ciencia-politica}
+}
+
+% =========================================================
+% 3. MULTIVOLUME / OBRA EM VARIOS VOLUMES
+% =========================================================
+@mvbook{bobbio1998,
+  author       = {Norberto Bobbio and Nicola Matteucci and Gianfranco Pasquino},
+  title        = {Dicionário de política},
+  publisher    = {Editora UnB},
+  location     = {Brasília},
+  year         = {1998},
+  volumes      = {2},
+  langid       = {portuguese},
+  keywords     = {politica, dicionario}
+}
+
+@book{bobbio1998v1,
+  author       = {Norberto Bobbio and Nicola Matteucci and Gianfranco Pasquino},
+  title        = {Dicionário de política},
+  volume       = {1},
+  publisher    = {Editora UnB},
+  location     = {Brasília},
+  year         = {1998},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 4. ARTIGO DE PERIODICO
+% =========================================================
+@article{lotta2019,
+  author       = {Gabriela Lotta and Vanessa Elias de Oliveira},
+  title        = {Momentos da recentralização nas políticas públicas no Brasil},
+  journaltitle = {Revista de Administração Pública},
+  year         = {2019},
+  volume       = {53},
+  number       = {3},
+  pages        = {1--20},
+  doi          = {10.1590/0034-761220180156},
+  issn         = {0034-7612},
+  langid       = {portuguese},
+  keywords     = {recentralizacao, federalismo, politicas-publicas}
+}
+
+@article{arretche2012,
+  author       = {Marta Arretche},
+  title        = {Democracia, federalismo e centralização no Brasil},
+  journaltitle = {Revista Brasileira de Ciências Sociais},
+  year         = {2012},
+  volume       = {27},
+  number       = {80},
+  pages        = {1--23},
+  url          = {https://www.scielo.br/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  keywords     = {democracia, federalismo, brasil}
+}
+
+% Artigo ahead of print / elocation
+@article{silva2025,
+  author       = {João da Silva and Maria de Souza},
+  title        = {Governança algorítmica e integridade pública},
+  journaltitle = {Revista Brasileira de Administração Pública},
+  year         = {2025},
+  volume       = {59},
+  number       = {1},
+  eid          = {e20250014},
+  doi          = {10.0000/rbap.2025.14},
+  langid       = {portuguese},
+  keywords     = {governanca, integridade, inteligencia-artificial}
+}
+
+% =========================================================
+% 5. TRABALHO EM EVENTO / ANAIS / PROCEEDINGS
+% =========================================================
+@inproceedings{santos2024,
+  author       = {Ana Santos and Bruno Lima},
+  title        = {Uso de inteligência artificial na avaliação de risco regulatório},
+  booktitle    = {Anais do Encontro Nacional de Administração Pública},
+  eventtitle   = {Encontro Nacional de Administração Pública},
+  venue        = {Brasília},
+  date         = {2024-09-10/2024-09-13},
+  publisher    = {Associação Brasileira de Administração Pública},
+  location     = {Brasília},
+  year         = {2024},
+  pages        = {233--248},
+  langid       = {portuguese},
+  keywords     = {ia, risco, regulacao}
+}
+
+@proceedings{enap2024,
+  editor       = {Carlos Mendes and Paula Ribeiro},
+  title        = {Anais do Encontro Nacional de Administração Pública},
+  eventtitle   = {Encontro Nacional de Administração Pública},
+  venue        = {Brasília},
+  date         = {2024-09-10/2024-09-13},
+  publisher    = {ABAP},
+  location     = {Brasília},
+  year         = {2024},
+  isbn         = {9786500000000},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 6. DISSERTACAO, TESE, TCC
+% =========================================================
+@thesis{silva2024,
+  author       = {João da Silva},
+  title        = {Governança e integridade na administração pública brasileira},
+  type         = {Dissertação (Mestrado em Administração Pública)},
+  institution  = {Fundação Getulio Vargas},
+  location     = {Brasília},
+  year         = {2024},
+  pages        = {185},
+  url          = {https://bibliotecadigital.fgv.br/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  keywords     = {integridade, governanca, setor-publico}
+}
+
+@thesis{oliveira2023,
+  author       = {Fernanda Oliveira},
+  title        = {Sistemas informatizados e tomada de decisão em políticas públicas},
+  type         = {Tese (Doutorado em Administração)},
+  institution  = {Universidade de Brasília},
+  location     = {Brasília},
+  year         = {2023},
+  pages        = {247},
+  langid       = {portuguese},
+  keywords     = {dados, decisao, politicas-publicas}
+}
+
+% TCC/monografia via thesis
+@thesis{pereira2022,
+  author       = {Lucas Pereira},
+  title        = {Compliance público em governos locais},
+  type         = {Trabalho de Conclusão de Curso (Graduação em Administração Pública)},
+  institution  = {Universidade Federal de Goiás},
+  location     = {Goiânia},
+  year         = {2022},
+  pages        = {88},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 7. RELATORIO, TEXTO PARA DISCUSSAO, DOCUMENTO TECNICO
+% =========================================================
+@report{ocde2020,
+  author       = {{Organisation for Economic Co-operation and Development}},
+  title        = {Public Integrity Handbook},
+  type         = {OECD Handbook},
+  institution  = {OECD},
+  location     = {Paris},
+  year         = {2020},
+  doi          = {10.1787/ac8ed8e8-en},
+  langid       = {english},
+  keywords     = {integrity, governance, oecd}
+}
+
+@report{ipea2021,
+  author       = {{Instituto de Pesquisa Econômica Aplicada}},
+  title        = {Texto para Discussão 2678: Governança pública e coordenação federativa},
+  type         = {Texto para Discussão},
+  number       = {2678},
+  institution  = {IPEA},
+  location     = {Brasília},
+  year         = {2021},
+  url          = {https://www.ipea.gov.br/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  keywords     = {governanca, federacao, coordenacao}
+}
+
+% =========================================================
+% 8. LEGISLACAO, NORMA, ATO NORMATIVO, JURISPRUDENCIA
+% =========================================================
+% Para máxima compatibilidade com biblatex-abnt, usa-se @misc ou @book/@online
+% quando o tipo especializado nao estiver disponivel no sistema.
+
+@misc{brasil1988,
+  author       = {{Brasil}},
+  title        = {Constituição da República Federativa do Brasil de 1988},
+  year         = {1988},
+  note         = {Brasília, DF, 5 out. 1988},
+  url          = {https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  keywords     = {constituicao, legislacao}
+}
+
+@misc{brasil2013,
+  author       = {{Brasil}},
+  title        = {Lei nº 12.846, de 1º de agosto de 2013},
+  subtitle     = {Dispõe sobre a responsabilização administrativa e civil de pessoas jurídicas pela prática de atos contra a administração pública, nacional ou estrangeira},
+  year         = {2013},
+  note         = {Diário Oficial da União: seção 1, Brasília, DF, 2 ago. 2013},
+  url          = {https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  keywords     = {lei-anticorrupcao, legislacao, integridade}
+}
+
+@misc{cgu2017,
+  author       = {{Controladoria-Geral da União}},
+  title        = {Portaria CGU nº 1.089, de 25 de abril de 2018},
+  subtitle     = {Estabelece orientações para programas de integridade no Poder Executivo Federal},
+  year         = {2018},
+  note         = {Brasília, DF},
+  url          = {https://www.gov.br/cgu/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese}
+}
+
+@misc{abnt6023,
+  author       = {{Associação Brasileira de Normas Técnicas}},
+  title        = {NBR 6023},
+  subtitle     = {Informação e documentação --- Referências --- Elaboração},
+  year         = {2018},
+  note         = {Rio de Janeiro},
+  langid       = {portuguese},
+  keywords     = {abnt, normalizacao, referencia}
+}
+
+@misc{stf2020adi,
+  author       = {{Supremo Tribunal Federal}},
+  title        = {Ação Direta de Inconstitucionalidade 6341},
+  subtitle     = {Medidas de enfrentamento da COVID-19 e competências federativas},
+  year         = {2020},
+  note         = {Rel. Min. Marco Aurélio. Julgamento em 15 abr. 2020},
+  url          = {https://portal.stf.jus.br/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  keywords     = {stf, jurisprudencia, pandemia}
+}
+
+% =========================================================
+% 9. DOCUMENTO INSTITUCIONAL / PAGINA OFICIAL / SITE
+% =========================================================
+@online{cgu2023,
+  author       = {{Controladoria-Geral da União}},
+  title        = {Programa de Integridade Pública},
+  year         = {2023},
+  url          = {https://www.gov.br/cgu/pt-br/assuntos/etica-e-integridade/programa-de-integridade-publica},
+  urldate      = {2026-03-21},
+  organization = {Controladoria-Geral da União},
+  langid       = {portuguese},
+  keywords     = {integridade, governanca, cgu}
+}
+
+@online{tcu2024,
+  author       = {{Tribunal de Contas da União}},
+  title        = {Referencial básico de governança organizacional},
+  year         = {2024},
+  url          = {https://portal.tcu.gov.br/governanca/},
+  urldate      = {2026-03-21},
+  organization = {TCU},
+  langid       = {portuguese},
+  keywords     = {governanca, tcu}
+}
+
+@online{fgv2025,
+  author       = {{Fundação Getulio Vargas}},
+  title        = {Escola de Políticas Públicas e Governo},
+  year         = {2025},
+  url          = {https://fgv.br/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 10. JORNAL / REVISTA / MATERIA DE IMPRENSA
+% =========================================================
+@article{folha2024,
+  author       = {Mariana Carvalho},
+  title        = {Governo amplia programa de integridade em órgãos federais},
+  journaltitle = {Folha de S.Paulo},
+  year         = {2024},
+  date         = {2024-08-14},
+  url          = {https://www1.folha.uol.com.br/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  note         = {Edição online}
+}
+
+@online{economist2025,
+  author       = {{The Economist}},
+  title        = {How states are using AI to reshape public administration},
+  year         = {2025},
+  date         = {2025-11-03},
+  url          = {https://www.economist.com/},
+  urldate      = {2026-03-21},
+  langid       = {english},
+  note         = {Online edition}
+}
+
+% =========================================================
+% 11. ENCICLOPEDIA / VERBETE / DICIONARIO
+% =========================================================
+@inreference{bobbioEstado,
+  author       = {Norberto Bobbio},
+  title        = {Estado},
+  booktitle    = {Dicionário de política},
+  editor       = {Norberto Bobbio and Nicola Matteucci and Gianfranco Pasquino},
+  publisher    = {Editora UnB},
+  location     = {Brasília},
+  year         = {1998},
+  pages        = {401--409},
+  langid       = {portuguese},
+  keywords     = {estado, teoria-politica}
+}
+
+% =========================================================
+% 12. MANUAL / GUIA / DOCUMENTACAO TECNICA
+% =========================================================
+@manual{python2026,
+  author       = {{Python Software Foundation}},
+  title        = {Python Documentation},
+  year         = {2026},
+  url          = {https://docs.python.org/3/},
+  urldate      = {2026-03-21},
+  organization = {PSF},
+  langid       = {english},
+  keywords     = {python, documentacao}
+}
+
+@manual{iso31000,
+  author       = {{International Organization for Standardization}},
+  title        = {ISO 31000: Risk Management --- Guidelines},
+  year         = {2018},
+  organization = {ISO},
+  location     = {Geneva},
+  langid       = {english},
+  keywords     = {risk, iso, standard}
+}
+
+% =========================================================
+% 13. BASE DE DADOS / DATASET
+% =========================================================
+@dataset{ibge2022,
+  author       = {{Instituto Brasileiro de Geografia e Estatística}},
+  title        = {Censo Demográfico 2022: Base de dados agregados},
+  year         = {2022},
+  url          = {https://www.ibge.gov.br/},
+  urldate      = {2026-03-21},
+  version      = {1.0},
+  langid       = {portuguese},
+  keywords     = {dataset, ibge, censo}
+}
+
+@dataset{dadosgov2025,
+  author       = {{Brasil}},
+  title        = {Painel de Integridade Pública --- Base aberta},
+  year         = {2025},
+  url          = {https://dados.gov.br/},
+  urldate      = {2026-03-21},
+  version      = {2025.2},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 14. PREPRINT / WORKING PAPER
+% =========================================================
+@unpublished{moraes2025,
+  author       = {Ricardo Moraes and Paula Andrade},
+  title        = {Indicadores de integridade baseados em aprendizado de máquina},
+  year         = {2025},
+  note         = {Preprint submetido para avaliação},
+  url          = {https://osf.io/},
+  urldate      = {2026-03-21},
+  langid       = {portuguese},
+  keywords     = {preprint, integridade, machine-learning}
+}
+
+@report{nber2024,
+  author       = {James Robinson},
+  title        = {Institutions and Public Sector Capacity},
+  type         = {Working Paper},
+  number       = {32456},
+  institution  = {National Bureau of Economic Research},
+  location     = {Cambridge, MA},
+  year         = {2024},
+  doi          = {10.3386/w32456},
+  langid       = {english}
+}
+
+% =========================================================
+% 15. ENTREVISTA, COMUNICACAO PESSOAL, PALESTRA
+% =========================================================
+@misc{entrevista2026,
+  author       = {Maria Fernandes},
+  title        = {Entrevista concedida ao autor sobre governança clínica e coordenação assistencial},
+  year         = {2026},
+  note         = {Entrevista realizada em Brasília, em 10 fev. 2026},
+  langid       = {portuguese},
+  keywords     = {entrevista, fonte-primaria}
+}
+
+@misc{palestra2024,
+  author       = {Bernardo Buta},
+  title        = {Governança, risco e integridade no setor público},
+  year         = {2024},
+  note         = {Palestra proferida no Mestrado Profissional em Políticas Públicas e Governo, Fundação Getulio Vargas, Brasília, 18 set. 2024},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 16. AUDIOVISUAL: FILME, VIDEO, PODCAST
+% =========================================================
+@movie{temposmodernos1936,
+  title        = {Tempos modernos},
+  year         = {1936},
+  director     = {Charles Chaplin},
+  location     = {Estados Unidos},
+  langid       = {portuguese},
+  note         = {Filme}
+}
+
+@video{canalgov2025,
+  author       = {{Canal Gov}},
+  title        = {Seminário sobre integridade pública e transformação digital},
+  year         = {2025},
+  url          = {https://www.youtube.com/},
+  urldate      = {2026-03-21},
+  note         = {Vídeo online},
+  langid       = {portuguese}
+}
+
+@audio{podcastsaude2025,
+  author       = {Gustavo Tarso and Convidado Exemplo},
+  title        = {Saúde, gestão e inovação},
+  year         = {2025},
+  date         = {2025-07-04},
+  note         = {Podcast. Episódio 3},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 17. SOFTWARE / CODIGO / REPOSITORIO
+% =========================================================
+@software{rstats2025,
+  author       = {{R Core Team}},
+  title        = {R: A Language and Environment for Statistical Computing},
+  year         = {2025},
+  version      = {4.5.0},
+  organization = {R Foundation for Statistical Computing},
+  location     = {Vienna},
+  url          = {https://www.r-project.org/},
+  urldate      = {2026-03-21},
+  langid       = {english},
+  keywords     = {software, estatistica, r}
+}
+
+@software{pythonpandas2025,
+  author       = {{The pandas development team}},
+  title        = {pandas},
+  subtitle     = {Python Data Analysis Library},
+  year         = {2025},
+  version      = {2.3.0},
+  url          = {https://pandas.pydata.org/},
+  urldate      = {2026-03-21},
+  langid       = {english}
+}
+
+@online{githuboracle2025,
+  author       = {Gustavo Tarso},
+  title        = {Oráculo MPS},
+  year         = {2025},
+  url          = {https://github.com/exemplo/oraculo-mps},
+  urldate      = {2026-03-21},
+  note         = {Repositório de software},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 18. MATERIAL DIDATICO / APOSTILA / SLIDES
+% =========================================================
+@misc{fgvslides2025,
+  author       = {Fernando Fernandes},
+  title        = {Sistemas de Saúde no Brasil},
+  year         = {2025},
+  note         = {Slides de aula do MBA Executivo da FGV},
+  institution  = {Fundação Getulio Vargas},
+  location     = {Brasília},
+  langid       = {portuguese}
+}
+
+@misc{apostilaNashville2025,
+  author       = {Gustavo Tarso},
+  title        = {Sistema de Notação de Nashville},
+  year         = {2025},
+  note         = {Apostila didática},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 19. IMAGEM, FIGURA, MAPA, FOTOGRAFIA
+% =========================================================
+@misc{figuraFluxo2026,
+  author       = {Gustavo Tarso},
+  title        = {Fluxograma metodológico da revisão sistemática},
+  year         = {2026},
+  note         = {Figura elaborada pelo autor},
+  langid       = {portuguese}
+}
+
+@misc{fotoArquivo2024,
+  author       = {Ana Costa},
+  title        = {Fotografia do arquivo institucional do Ministério X},
+  year         = {2024},
+  note         = {Arquivo pessoal da autora},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 20. TIPO GENERICO / CASOS ESPECIAIS
+% =========================================================
+@misc{documentointerno2026,
+  author       = {{Unidade Avançada de Ceilândia}},
+  title        = {Relatório interno de ocupação assistencial},
+  year         = {2026},
+  note         = {Documento interno não publicado},
+  langid       = {portuguese},
+  keywords     = {documento-interno, relatorio}
+}
+
+@misc{email2026,
+  author       = {João Pereira},
+  title        = {Mensagem eletrônica enviada ao autor sobre critérios de certificação},
+  year         = {2026},
+  note         = {E-mail enviado em 12 mar. 2026},
+  langid       = {portuguese}
+}
+
+% =========================================================
+% 21. EXEMPLOS COM CAMPOS ADICIONAIS UTEIS
+% =========================================================
+@book{exemploCompleto2026,
+  author       = {Autor Um and Autor Dois and Autor Três},
+  title        = {Título principal da obra},
+  subtitle     = {Subtítulo da obra},
+  publisher    = {Editora Exemplo},
+  location     = {São Paulo},
+  year         = {2026},
+  edition      = {3},
+  series       = {Coleção Estudos Avançados},
+  number       = {12},
+  volume       = {2},
+  isbn         = {9786501234567},
+  doi          = {10.0000/exemplo.2026.001},
+  url          = {https://exemplo.org/livro},
+  urldate      = {2026-03-21},
+  pagetotal    = {420},
+  translator   = {Tradutor Exemplo},
+  langid       = {portuguese},
+  keywords     = {modelo, exemplo, completo},
+  abstract     = {Exemplo de entrada com vários campos possíveis no biblatex.}
+}
+
+% =========================================================
+% 22. ENTRADAS MINIMAS (PARA USO RAPIDO)
+% =========================================================
+@book{livroMinimo,
+  author       = {Nome do Autor},
+  title        = {Título do livro},
+  publisher    = {Editora},
+  location     = {Cidade},
+  year         = {2026}
+}
+
+@article{artigoMinimo,
+  author       = {Nome do Autor},
+  title        = {Título do artigo},
+  journaltitle = {Nome do Periódico},
+  year         = {2026},
+  volume       = {1},
+  number       = {1},
+  pages        = {1--10}
+}
+
+@online{siteMinimo,
+  author       = {{Instituição}},
+  title        = {Título da página},
+  year         = {2026},
+  url          = {https://exemplo.org},
+  urldate      = {2026-03-21}
+}
+
+% =========================================================
+% FIM DO ARQUIVO
+% =========================================================

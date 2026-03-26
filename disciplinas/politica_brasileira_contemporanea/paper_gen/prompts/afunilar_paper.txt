@@ -1,0 +1,35 @@
+A partir do contexto-base já inferido e da combinação temática escolhida, afunile o paper para um recorte definitivo, ainda fiel aos textos-base e ao roteiro do professor.
+
+Regras obrigatórias:
+- não invente bibliografia, eventos ou exigências do professor;
+- não force especificidade excessiva sem base textual;
+- não transforme o trabalho em resumo descritivo;
+- preserve articulação entre o tema principal e os dois temas adicionais;
+- proponha uma estrutura argumentativa clara e defensável;
+- só feche o paper em um caso ou período muito específico se isso estiver fortemente sustentado pelos materiais.
+
+Template do paper:
+{template_text}
+
+Contexto-base inferido:
+{contexto_base}
+
+Tema adicional 1 escolhido: {tema_adicional_1}
+Tema adicional 2 escolhido: {tema_adicional_2}
+
+Documentos-base:
+{base_docs}
+
+Documentos de orientação:
+{guidance_docs}
+
+Retorne JSON com exatamente estes campos:
+- tema_final
+- recorte_final
+- objetivo_final
+- pergunta_pesquisa
+- hipotese
+- estrutura_sugerida
+- autores_centrais
+- palavras_chave
+- titulo_provisorio

@@ -1,0 +1,445 @@
+#+TITLE: Guia de Citações ABNT no Org-mode com biblatex
+#+AUTHOR: ChatGPT
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:2 num:t
+
+* Visão geral
+
+Este guia mostra como citar referências no *Org-mode* usando *LaTeX + biblatex* com estilo ABNT.
+
+A lógica do fluxo é simples:
+
+1. Os dados bibliográficos ficam no arquivo =referencias.bib=.
+2. Cada obra recebe uma chave, como =weber1922=, =lotta2019=, =cgu2023=.
+3. No texto do arquivo =.org=, você cita usando comandos LaTeX.
+4. Ao final, o LaTeX gera automaticamente a seção de referências.
+
+* Estrutura mínima do projeto
+
+Exemplo de arquivos:
+
+- =dissertacao.org=
+- =fgv-dissertacao.sty=
+- =referencias.bib=
+
+No topo do arquivo =.org=, inclua:
+
+#+begin_src org
+#+LATEX_COMPILER: lualatex
+#+LATEX_HEADER: \usepackage{fgv-dissertacao}
+#+LATEX_HEADER: \addbibresource{referencias.bib}
+#+end_src
+
+No final do documento:
+
+#+begin_src org
+#+begin_export latex
+\printbibliography[heading=bibintoc,title={Referências}]
+#+end_export
+#+end_src
+
+* Regra prática
+
+- O arquivo =.bib= guarda os *dados da obra*.
+- O arquivo =.org= guarda o *texto e os comandos de citação*.
+- A forma final da referência e da citação depende do estilo do =biblatex= configurado no LaTeX.
+
+* Comandos mais úteis no corpo do texto
+
+** Citação narrativa com autor no texto
+
+Use quando o nome do autor faz parte da frase.
+
+#+begin_src org
+Segundo \textcite{lotta2019}, a recentralização pode ocorrer mesmo em arranjos formalmente descentralizados.
+#+end_src
+
+Exemplo esperado:
+
+- Segundo Lotta (2019), ...
+
+** Citação parentética
+
+Use quando a referência aparece apenas entre parênteses.
+
+#+begin_src org
+A recentralização pode ocorrer por mecanismos regulatórios e financeiros \parencite{lotta2019}.
+#+end_src
+
+Exemplo esperado:
+
+- ... (LOTTA, 2019).
+
+** Citação com página
+
+#+begin_src org
+Segundo \textcite[p. 45]{weber1922}, a burocracia moderna se organiza por regras impessoais.
+#+end_src
+
+#+begin_src org
+A burocracia moderna se organiza por regras impessoais \parencite[p. 45]{weber1922}.
+#+end_src
+
+** Citação com intervalo de páginas
+
+#+begin_src org
+\parencite[pp. 45-47]{weber1922}
+#+end_src
+
+** Mais de uma obra na mesma citação
+
+#+begin_src org
+\parencite{lotta2019,arretche2012,abrucio1998}
+#+end_src
+
+** Mesmo autor com obras diferentes
+
+#+begin_src org
+\parencite{weber1922,weber1919}
+#+end_src
+
+** Citação de autor institucional
+
+#+begin_src org
+\textcite{cgu2023} destaca a importância dos mecanismos de integridade pública.
+#+end_src
+
+#+begin_src org
+As diretrizes de integridade pública vêm sendo reforçadas nos últimos anos \parencite{cgu2023}.
+#+end_src
+
+** Citação de legislação
+
+#+begin_src org
+A publicidade e a eficiência são princípios expressos no texto constitucional \parencite{brasil1988}.
+#+end_src
+
+** Citação de jurisprudência
+
+#+begin_src org
+O entendimento do tribunal consolidou parâmetros importantes sobre controle institucional \parencite{stf2020adi6341}.
+#+end_src
+
+* Citação direta curta
+
+Use citação direta curta quando o trecho citado estiver incorporado ao parágrafo.
+
+#+begin_src org
+Como afirma \textcite[p. 45]{weber1922}, “a administração burocrática significa dominação pelo saber”.
+#+end_src
+
+Observação:
+
+- Use aspas no próprio texto.
+- Informe a página sempre que possível.
+
+* Citação direta longa
+
+Para citação longa, o melhor é usar um ambiente próprio no LaTeX. Se o seu =.sty= tiver o ambiente =citacao=, use assim:
+
+#+begin_src org
+#+begin_export latex
+\begin{citacao}
+A administração burocrática representa a forma mais racional de exercício da dominação,
+pois se funda em regras gerais, previsibilidade e especialização funcional.
+\parencite[p. 45]{weber1922}
+\end{citacao}
+#+end_export
+#+end_src
+
+Se ainda não houver esse ambiente no seu =.sty=, ele pode ser criado depois.
+
+* Citação indireta
+
+A citação indireta é a paráfrase da ideia do autor.
+
+#+begin_src org
+Segundo \textcite{arretche2012}, a distribuição de competências no federalismo brasileiro não elimina a centralidade da União.
+#+end_src
+
+#+begin_src org
+A descentralização formal não impede mecanismos de coordenação e controle central \parencite{arretche2012}.
+#+end_src
+
+* Apud
+
+O ideal acadêmico é consultar a obra original. Quando isso não for possível, pode-se registrar citação de citação com muito critério. No =biblatex=, isso não é sempre elegante automaticamente. A forma mais segura é escrever manualmente no texto.
+
+#+begin_src org
+Conforme Weber, citado por \textcite[p. 78]{autor2020}, a burocracia moderna depende de regras gerais e impessoais.
+#+end_src
+
+Ou:
+
+#+begin_src org
+A burocracia moderna depende de regras gerais e impessoais (WEBER, 1922 apud AUTOR, 2020, p. 78).
+#+end_src
+
+Nesse segundo caso, muitas vezes vale usar texto puro para manter controle total da forma.
+
+* Autor mencionado no texto, mas com reforço entre parênteses
+
+#+begin_src org
+\textcite{lotta2019} argumenta que a recentralização ocorre por múltiplos instrumentos de coordenação estatal.
+#+end_src
+
+* Sem autor pessoal definido
+
+Quando a obra tem autor institucional ou título como entrada principal, a chave do =.bib= resolve isso. Exemplo:
+
+#+begin_src org
+\parencite{ocde2020}
+#+end_src
+
+* Sem página definida
+
+Para textos institucionais, páginas podem não existir. Nesse caso:
+
+#+begin_src org
+\parencite{cgu2023}
+#+end_src
+
+* Com página e comentário adicional
+
+#+begin_src org
+\parencite[ver especialmente][p. 33]{arretche2012}
+#+end_src
+
+* Citações em notas de rodapé
+
+Você pode usar citação em nota com comandos LaTeX normais.
+
+#+begin_src org
+Este argumento foi retomado em debates posteriores.\footnote{Ver \parencite[p. 55]{abrucio1998}.}
+#+end_src
+
+* Tipos frequentes de referência e como citar
+
+** Livro
+
+#+begin_src org
+\textcite{weber1922}
+\parencite{weber1922}
+\parencite[p. 45]{weber1922}
+#+end_src
+
+** Capítulo de livro
+
+#+begin_src org
+\textcite{abrucio1998}
+\parencite{abrucio1998}
+#+end_src
+
+** Artigo científico
+
+#+begin_src org
+\textcite{lotta2019}
+\parencite{lotta2019}
+#+end_src
+
+** Dissertação ou tese
+
+#+begin_src org
+\textcite{silva2024}
+\parencite{silva2024}
+#+end_src
+
+** Relatório técnico
+
+#+begin_src org
+\textcite{ipea2023}
+\parencite{ipea2023}
+#+end_src
+
+** Site institucional
+
+#+begin_src org
+\textcite{cgu2023}
+\parencite{cgu2023}
+#+end_src
+
+** Legislação
+
+#+begin_src org
+\parencite{brasil1988}
+\parencite{lei125272011}
+#+end_src
+
+** Jurisprudência
+
+#+begin_src org
+\parencite{stf2020adi6341}
+#+end_src
+
+** Matéria jornalística
+
+#+begin_src org
+\parencite{folha2024integridade}
+#+end_src
+
+** Vídeo ou palestra
+
+#+begin_src org
+\parencite{youtube2024canalx}
+\parencite{ted2019exemplo}
+#+end_src
+
+** Podcast
+
+#+begin_src org
+\parencite{podcast2024episodio12}
+#+end_src
+
+* Seção de referências no final
+
+A forma mais comum é esta:
+
+#+begin_src org
+* Referências
+#+begin_export latex
+\printbibliography[heading=bibintoc,title={Referências}]
+#+end_export
+#+end_src
+
+Se você não quiser o título automático via LaTeX porque já criou o heading no Org, pode usar:
+
+#+begin_src org
+* Referências
+#+begin_export latex
+\printbibliography[heading=none]
+#+end_export
+#+end_src
+
+* Exemplo completo de uso no texto
+
+#+begin_src org
+* Introdução
+A discussão sobre burocracia e racionalidade permanece central no estudo da administração pública. Segundo \textcite{weber1922}, a burocracia moderna se caracteriza pela impessoalidade, pela especialização de funções e pela previsibilidade normativa.
+
+No contexto brasileiro, a distribuição formal de competências não eliminou mecanismos de coordenação central \parencite{arretche2012}. Em debates mais recentes, observa-se que a recentralização pode ocorrer por instrumentos regulatórios, financeiros e informacionais \parencite{lotta2019}.
+
+Como afirma \textcite[p. 45]{weber1922}, “a administração burocrática significa dominação pelo saber”.
+#+end_src
+
+* Erros comuns
+
+** Esquecer de declarar o arquivo =.bib=
+
+Você precisa ter no topo do arquivo:
+
+#+begin_src org
+#+LATEX_HEADER: \addbibresource{referencias.bib}
+#+end_src
+
+** Usar chave inexistente
+
+Se no texto você escrever:
+
+#+begin_src org
+\parencite{lotta2018}
+#+end_src
+
+mas a chave correta no =.bib= for =lotta2019=, a compilação não encontrará a referência.
+
+** Misturar estilos de citação manualmente sem necessidade
+
+Evite escrever tudo manualmente assim:
+
+#+begin_src org
+(Lotta, 2019)
+#+end_src
+
+Prefira:
+
+#+begin_src org
+\parencite{lotta2019}
+#+end_src
+
+Isso evita inconsistência no documento.
+
+** Não rodar o ciclo de compilação correto
+
+Com =biblatex=, o fluxo geralmente é:
+
+1. =lualatex=
+2. =biber=
+3. =lualatex=
+4. =lualatex=
+
+* Padrão recomendado para chaves no arquivo .bib
+
+Use chaves simples, previsíveis e estáveis.
+
+Exemplos bons:
+
+- =weber1922=
+- =lotta2019=
+- =arretche2012=
+- =cgu2023=
+- =brasil1988=
+- =stf2020adi6341=
+
+Evite:
+
+- =ref1=
+- =textoNovo=
+- =artigo-final-certo=
+
+* Modelo mínimo para começar
+
+** Arquivo =referencias.bib=
+
+#+begin_src bibtex
+@book{weber1922,
+  author    = {Max Weber},
+  title     = {Economia e sociedade},
+  year      = {1922},
+  publisher = {Editora UnB},
+  location  = {Brasília}
+}
+
+@article{lotta2019,
+  author       = {Gabriela Lotta and Vanessa Elias de Oliveira},
+  title        = {Momentos da recentralização nas políticas públicas no Brasil},
+  journaltitle = {Revista de Administração Pública},
+  year         = {2019},
+  volume       = {53},
+  number       = {3},
+  pages        = {1-20}
+}
+#+end_src
+
+** Uso no =.org=
+
+#+begin_src org
+* Introdução
+Segundo \textcite{lotta2019}, a recentralização pode ocorrer em arranjos formalmente descentralizados.
+
+A racionalidade burocrática está associada à previsibilidade normativa \parencite[p. 45]{weber1922}.
+
+* Referências
+#+begin_export latex
+\printbibliography[heading=bibintoc,title={Referências}]
+#+end_export
+#+end_src
+
+* Quando vale escrever manualmente
+
+Mesmo com =biblatex=, há situações em que escrever manualmente no texto pode ser melhor:
+
+- casos muito específicos de =apud=
+- documentos sem metadados confiáveis
+- referências informais, como comunicação pessoal
+- adequações finas exigidas por banca ou manual institucional
+
+Nesses casos, você pode manter a referência principal no =.bib= e controlar a redação no parágrafo.
+
+* Recomendação final
+
+Para uma dissertação com muitas referências:
+
+- mantenha tudo no =referencias.bib=
+- cite no texto com =\textcite{}= e =\parencite{}=
+- use página sempre que houver citação direta
+- padronize bem as chaves
+- revise o PDF final para verificar se o estilo ABNT ficou conforme o exigido pela instituição

@@ -1,0 +1,43 @@
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+
+#+BIBLIOGRAPHY: referencias.bib
+
+#+begin_comment
+Template base para o gerador de atividades em Org-mode.
+
+Este modelo foi pensado para:
+- usar a classe fgv-paper;
+- manter a ficha técnica gerada pelo script;
+- não gerar capa automática;
+- permitir que o script injete dinamicamente o estilo bibliográfico
+  (ABNT, APA, Chicago, MLA ou Vancouver) no cabeçalho final;
+- permitir que o script injete automaticamente o cabeçalho visual com
+  o logo da FGV à esquerda e a barra em degradê logo abaixo.
+
+O script usa o conteúdo deste arquivo apenas como modelo de cabeçalho,
+extraindo as diretivas até a primeira seção "* Introdução".
+#+end_comment
+
+* Introdução
