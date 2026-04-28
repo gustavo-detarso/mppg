@@ -1,0 +1,50 @@
+{
+  "source": "pubmed",
+  "label": "PubMed",
+  "query": "(\"state capacity\"[tiab] OR \"government effectiveness\"[tiab] OR \"public administration\"[tiab] OR \"public sector\"[tiab] OR governance[tiab]) AND (\"institutional arrangements\"[tiab] OR \"policy outcomes\"[tiab] OR \"state performance\"[tiab] OR centralization[tiab] OR decentralization[tiab] OR \"policy implementation\"[tiab]) AND (\"systematic literature review\"[tiab] OR \"literature review\"[tiab] OR \"scoping review\"[tiab] OR \"systematic review\"[tiab]) AND (\"2019\"[dp] : \"2026\"[dp]) AND (english[la] OR portuguese[la]) AND (review[pt] OR systematic review[tiab] OR meta-analysis[pt] OR scoping review[tiab] OR literature review[tiab])",
+  "retrieved": 10,
+  "warnings": [],
+  "saved_at": "2026-04-24T22:53:02.491631",
+  "pages": [
+    {
+      "header": {
+        "type": "esearch",
+        "version": "0.3"
+      },
+      "esearchresult": {
+        "count": "56",
+        "retmax": "10",
+        "retstart": "0",
+        "idlist": [
+          "36457058",
+          "37811198",
+          "33403636",
+          "38622666",
+          "36962549",
+          "40961834",
+          "37351239",
+          "36213666",
+          "41280729",
+          "30740223"
+        ],
+        "translationset": [],
+        "querytranslation": "(\"state capacity\"[Title/Abstract] OR \"government effectiveness\"[Title/Abstract] OR \"public administration\"[Title/Abstract] OR \"public sector\"[Title/Abstract] OR \"governance\"[Title/Abstract]) AND (\"institutional arrangements\"[Title/Abstract] OR \"policy outcomes\"[Title/Abstract] OR \"state performance\"[Title/Abstract] OR \"centralization\"[Title/Abstract] OR \"decentralization\"[Title/Abstract] OR \"policy implementation\"[Title/Abstract]) AND (\"systematic literature review\"[Title/Abstract] OR \"literature review\"[Title/Abstract] OR \"scoping review\"[Title/Abstract] OR \"systematic review\"[Title/Abstract]) AND 2019/01/01:2026/12/31[Date - Publication] AND (\"english\"[Language] OR \"portuguese\"[Language]) AND (\"review\"[Publication Type] OR \"systematic review\"[Title/Abstract] OR \"meta-analysis\"[Publication Type] OR \"scoping review\"[Title/Abstract] OR \"literature review\"[Title/Abstract])"
+      }
+    },
+    {
+      "efetch_xml_chars": 326950,
+      "ids": [
+        "36457058",
+        "37811198",
+        "33403636",
+        "38622666",
+        "36962549",
+        "40961834",
+        "37351239",
+        "36213666",
+        "41280729",
+        "30740223"
+      ]
+    }
+  ]
+}

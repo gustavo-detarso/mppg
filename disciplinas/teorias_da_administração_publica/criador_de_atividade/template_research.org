@@ -1,0 +1,48 @@
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+
+#+CITE_EXPORT: biblatex backend=biber,style=apa,sortcites=true,sorting=nyt,giveninits=true,maxcitenames=2,maxbibnames=20,uniquelist=minyear
+#+BIBLIOGRAPHY: referencias.bib
+
+#+begin_comment
+Template base alinhado ao cabeçalho visual da v3.7.31.
+
+Características deste modelo:
+- usa a classe fgv-paper;
+- não gera capa automática;
+- mantém a ficha técnica gerada pelo script;
+- usa figure em PDF com \includegraphics (não usa pacote svg);
+- deixa o script injetar dinamicamente o cabeçalho visual da FGV
+  com logo no canto superior esquerdo e barra azul fina logo abaixo,
+  de uma margem à outra;
+- deixa o script substituir dinamicamente o estilo bibliográfico,
+  o arquivo .bib e o bloco de figura do fluxograma.
+
+Observação:
+- o script usa este arquivo como modelo de cabeçalho e corpo inicial;
+- a ficha técnica é inserida pelo script antes da introdução;
+- após a ficha técnica, o script força a quebra com \clearpage.
+#+end_comment
+
+* Introdução

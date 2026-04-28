@@ -1,0 +1,75 @@
+[atividade]
+modo = "revisao_sistematica"
+
+[atividade.metadados]
+disciplina = "Teorias da Administração Pública"
+professor = "Bernardo Buta"
+curso = "Mestrado Profissional em Políticas Públicas e Governo"
+turma = "2026.01"
+polo = "Brasília"
+aluno = "Gustavo M. Mendes de Tarso"
+
+[pesquisa]
+tema = "Uso de inteligência artificial no governo público federal como instrumento de governança, ética, compliance e gestão de riscos."
+recorte = "Análise do uso de sistemas e aplicações de inteligência artificial por órgãos e entidades da administração pública federal brasileira, com ênfase nos instrumentos de governança, salvaguardas éticas, mecanismos de compliance e práticas de gestão de riscos associados à automação de processos, apoio à decisão, análise documental, fiscalização e prestação de serviços digitais, no período de 2019 a 2026."
+objetivo = "Investigar como a literatura acadêmica e técnico-institucional trata a adoção de inteligência artificial no governo público federal brasileiro, identificando aplicações, modelos de governança, dilemas éticos, exigências de compliance, práticas de gestão de riscos e diretrizes para uma implementação responsável, auditável e alinhada ao interesse público."
+trabalho = "Dissertação"
+tipo_estudo = "Revisão de literatura"
+periodo = "2019-2026"
+idiomas = ["inglês", "português"]
+palavras_chave = []
+bases = ["semantic_scholar", "scopus", "pubmed", "openalex", "crossref", "europe_pmc", "core"]
+
+[bibliografia]
+estilo_citacao = "APA"
+
+[busca]
+sugerir_palavras_chave_ia = true
+query_bilingue = true
+quantidade_triagem = 10
+quantidade_selecionados = 1
+salvar_busca_bruta_json = true
+incluir_analise_detalhada_ia = true
+incluir_sintese_integradora_ia = true
+
+[triagem]
+rigor = "moderado"
+usar_score_hibrido = true
+permitir_textos_nao_publicos = false
+triagem_prompt_path = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/pesquisa/dissertacao_ia_governo_publico_federal/_orientacoes_triagem_combinadas.txt"
+diretivas_extras = ""
+
+[queries]
+query_geral = ""
+query_semantic = ""
+query_scopus = ""
+query_wos = ""
+query_pubmed = ""
+query_openalex = ""
+query_crossref = ""
+query_europepmc = ""
+query_core = ""
+
+[saida]
+prefixo = "dissertacao_ia_governo_publico_federal"
+output_dir = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/pesquisa"
+criar_subdiretorio = true
+org_modelo = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/templates/template_research.org"
+exportar_pdf = true
+gerar_env_example = false
+remover_auxiliares = true
+arquivo_orientacao = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/pesquisa/dissertacao_ia_governo_publico_federal/_orientacoes_saida_combinadas.txt"
+
+[latex]
+org_latex_class_init = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/misc/academic-writing.el"
+latex_extra_path = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/misc/fgv/fgv-dissertacao.sty"
+comando_exportacao_pdf = ""
+fgv_logo_path = "/home/gustavodetarso/Documentos/.share/mgs_org/fgv.png"
+
+[openai]
+model = "gpt-5.4"
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false

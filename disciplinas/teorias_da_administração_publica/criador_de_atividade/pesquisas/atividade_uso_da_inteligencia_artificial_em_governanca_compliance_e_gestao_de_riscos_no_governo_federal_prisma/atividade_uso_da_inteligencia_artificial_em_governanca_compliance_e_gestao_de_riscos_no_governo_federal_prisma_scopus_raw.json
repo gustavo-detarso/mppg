@@ -1,0 +1,1678 @@
+{
+  "source": "scopus",
+  "label": "Scopus",
+  "query": "TITLE-ABS-KEY((\"artificial intelligence\" OR \"inteligência artificial\") AND (\"federal government\" OR \"governo federal\" OR \"public administration\" OR \"administração pública\" OR \"public sector\" OR \"setor público\") AND (governance OR governança OR compliance OR \"risk management\" OR \"gestão de riscos\" OR integrity OR integridade OR \"internal controls\" OR \"controles internos\" OR \"decision-making\" OR \"tomada de decisão\") AND (\"systematic review\" OR \"literature review\" OR \"scoping review\" OR \"revisão sistemática\" OR \"revisão de literatura\"))",
+  "retrieved": 25,
+  "warnings": [],
+  "saved_at": "2026-04-16T10:23:57.313495",
+  "pages": [
+    {
+      "search-results": {
+        "opensearch:totalResults": "95",
+        "opensearch:startIndex": "0",
+        "opensearch:itemsPerPage": "25",
+        "opensearch:Query": {
+          "@role": "request",
+          "@searchTerms": "TITLE-ABS-KEY((\"artificial intelligence\" OR \"inteligência artificial\") AND (\"federal government\" OR \"governo federal\" OR \"public administration\" OR \"administração pública\" OR \"public sector\" OR \"setor público\") AND (governance OR governança OR compliance OR \"risk management\" OR \"gestão de riscos\" OR integrity OR integridade OR \"internal controls\" OR \"controles internos\" OR \"decision-making\" OR \"tomada de decisão\") AND (\"systematic review\" OR \"literature review\" OR \"scoping review\" OR \"revisão sistemática\" OR \"revisão de literatura\"))",
+          "@startPage": "0"
+        },
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY%28%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22%29+AND+%28%22federal+government%22+OR+%22governo+federal%22+OR+%22public+administration%22+OR+%22administra%C3%A7%C3%A3o+p%C3%BAblica%22+OR+%22public+sector%22+OR+%22setor+p%C3%BAblico%22%29+AND+%28governance+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+integrity+OR+integridade+OR+%22internal+controls%22+OR+%22controles+internos%22+OR+%22decision-making%22+OR+%22tomada+de+decis%C3%A3o%22%29+AND+%28%22systematic+review%22+OR+%22literature+review%22+OR+%22scoping+review%22+OR+%22revis%C3%A3o+sistem%C3%A1tica%22+OR+%22revis%C3%A3o+de+literatura%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "first",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY%28%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22%29+AND+%28%22federal+government%22+OR+%22governo+federal%22+OR+%22public+administration%22+OR+%22administra%C3%A7%C3%A3o+p%C3%BAblica%22+OR+%22public+sector%22+OR+%22setor+p%C3%BAblico%22%29+AND+%28governance+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+integrity+OR+integridade+OR+%22internal+controls%22+OR+%22controles+internos%22+OR+%22decision-making%22+OR+%22tomada+de+decis%C3%A3o%22%29+AND+%28%22systematic+review%22+OR+%22literature+review%22+OR+%22scoping+review%22+OR+%22revis%C3%A3o+sistem%C3%A1tica%22+OR+%22revis%C3%A3o+de+literatura%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "next",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=25&count=25&query=TITLE-ABS-KEY%28%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22%29+AND+%28%22federal+government%22+OR+%22governo+federal%22+OR+%22public+administration%22+OR+%22administra%C3%A7%C3%A3o+p%C3%BAblica%22+OR+%22public+sector%22+OR+%22setor+p%C3%BAblico%22%29+AND+%28governance+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+integrity+OR+integridade+OR+%22internal+controls%22+OR+%22controles+internos%22+OR+%22decision-making%22+OR+%22tomada+de+decis%C3%A3o%22%29+AND+%28%22systematic+review%22+OR+%22literature+review%22+OR+%22scoping+review%22+OR+%22revis%C3%A3o+sistem%C3%A1tica%22+OR+%22revis%C3%A3o+de+literatura%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "last",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=70&count=25&query=TITLE-ABS-KEY%28%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22%29+AND+%28%22federal+government%22+OR+%22governo+federal%22+OR+%22public+administration%22+OR+%22administra%C3%A7%C3%A3o+p%C3%BAblica%22+OR+%22public+sector%22+OR+%22setor+p%C3%BAblico%22%29+AND+%28governance+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+integrity+OR+integridade+OR+%22internal+controls%22+OR+%22controles+internos%22+OR+%22decision-making%22+OR+%22tomada+de+decis%C3%A3o%22%29+AND+%28%22systematic+review%22+OR+%22literature+review%22+OR+%22scoping+review%22+OR+%22revis%C3%A3o+sistem%C3%A1tica%22+OR+%22revis%C3%A3o+de+literatura%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          }
+        ],
+        "entry": [
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029823393"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029823393?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105029823393&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105029823393&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105029823393",
+            "dc:identifier": "SCOPUS_ID:105029823393",
+            "eid": "2-s2.0-105029823393",
+            "dc:title": "Models, applications, and limitations of the responsible adoption of big data and artificial intelligence in public policy",
+            "dc:creator": "Vallejo Manzur J.D.",
+            "prism:publicationName": "Multidisciplinary Reviews",
+            "prism:eIssn": "25953982",
+            "prism:volume": "9",
+            "prism:issueIdentifier": "8",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-08-01",
+            "prism:coverDisplayDate": "August 2026",
+            "prism:doi": "10.31893/multirev.2026354",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "The College of Tamaulipas",
+                "affiliation-city": "Victoria City",
+                "affiliation-country": "Mexico"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "e2026354",
+            "source-id": "21101163455",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030264877"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030264877?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105030264877&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105030264877&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0160791X26000539"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105030264877",
+            "dc:identifier": "SCOPUS_ID:105030264877",
+            "eid": "2-s2.0-105030264877",
+            "dc:title": "The rise of algorithmic governance and the dual revolution: Applications, challenges, and governance of artificial intelligence in public administration",
+            "dc:creator": "Wang C.",
+            "prism:publicationName": "Technology in Society",
+            "prism:issn": "0160791X",
+            "prism:volume": "86",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-06-01",
+            "prism:coverDisplayDate": "June 2026",
+            "prism:doi": "10.1016/j.techsoc.2026.103264",
+            "pii": "S0160791X26000539",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Macao Polytechnic University",
+                "affiliation-city": "Macau",
+                "affiliation-country": "Macao"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "103264",
+            "source-id": "18676",
+            "openaccess": "1",
+            "openaccessFlag": true
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032255670"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032255670?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105032255670&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105032255670&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0038012126000480"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105032255670",
+            "dc:identifier": "SCOPUS_ID:105032255670",
+            "eid": "2-s2.0-105032255670",
+            "dc:title": "Navigating barriers to GenAI adoption in public administration: A systematic evaluation and policy roadmap",
+            "dc:creator": "Goyal R.",
+            "prism:publicationName": "Socio Economic Planning Sciences",
+            "prism:issn": "00380121",
+            "prism:volume": "105",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-06-01",
+            "prism:coverDisplayDate": "June 2026",
+            "prism:doi": "10.1016/j.seps.2026.102461",
+            "pii": "S0038012126000480",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Indian Institute of Technology Delhi",
+                "affiliation-city": "New Delhi",
+                "affiliation-country": "India"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "102461",
+            "source-id": "18291",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032184194"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032184194?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105032184194&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105032184194&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105032184194",
+            "dc:identifier": "SCOPUS_ID:105032184194",
+            "eid": "2-s2.0-105032184194",
+            "dc:title": "Increasing Citizen Satisfaction with E-Public Administration: SERVQUAL and Holistic Governance Model in Comparison",
+            "dc:creator": "Nguyen C.T.",
+            "prism:publicationName": "Proceedings of the Central and Eastern European E Dem and E Gov Days 2025 Ceee Gov Days 2025 Special Topic Multi Level Governance Ceeegov 2025",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9798400721977]"
+              }
+            ],
+            "prism:pageRange": "25-31",
+            "prism:coverDate": "2026-02-20",
+            "prism:coverDisplayDate": "20 February 2026",
+            "prism:doi": "10.1145/3773002.3774807",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Ludovika University of Public Service",
+                "affiliation-city": "Budapest",
+                "affiliation-country": "Hungary"
+              }
+            ],
+            "prism:aggregationType": "Conference Proceeding",
+            "subtype": "cp",
+            "subtypeDescription": "Conference Paper",
+            "source-id": "21101399332",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032193585"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032193585?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105032193585&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105032193585&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105032193585",
+            "dc:identifier": "SCOPUS_ID:105032193585",
+            "eid": "2-s2.0-105032193585",
+            "dc:title": "Public Service in the Age of AI: Institutional Strategies for Future-Ready Skill Development",
+            "dc:creator": "Belényesi E.",
+            "prism:publicationName": "Proceedings of the Central and Eastern European E Dem and E Gov Days 2025 Ceee Gov Days 2025 Special Topic Multi Level Governance Ceeegov 2025",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9798400721977]"
+              }
+            ],
+            "prism:pageRange": "98-109",
+            "prism:coverDate": "2026-02-20",
+            "prism:coverDisplayDate": "20 February 2026",
+            "prism:doi": "10.1145/3773002.3773648",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Ludovika University of Public Service",
+                "affiliation-city": "Budapest",
+                "affiliation-country": "Hungary"
+              }
+            ],
+            "prism:aggregationType": "Conference Proceeding",
+            "subtype": "cp",
+            "subtypeDescription": "Conference Paper",
+            "source-id": "21101399332",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031404845"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031404845?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105031404845&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105031404845&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105031404845",
+            "dc:identifier": "SCOPUS_ID:105031404845",
+            "eid": "2-s2.0-105031404845",
+            "dc:title": "Technological Innovation and Sustainability in Public Administration: A Systematic Review and Research Agenda",
+            "dc:creator": "Pini B.",
+            "prism:publicationName": "Administrative Sciences",
+            "prism:eIssn": "20763387",
+            "prism:volume": "16",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-02-01",
+            "prism:coverDisplayDate": "February 2026",
+            "prism:doi": "10.3390/admsci16020080",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Università di Parma",
+                "affiliation-city": "Parma",
+                "affiliation-country": "Italy"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "80",
+            "source-id": "21101043277",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031502352"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031502352?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105031502352&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105031502352&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105031502352",
+            "dc:identifier": "SCOPUS_ID:105031502352",
+            "eid": "2-s2.0-105031502352",
+            "dc:title": "Automated Decision Making in the Public Sector",
+            "dc:creator": "Puka K.",
+            "prism:publicationName": "Communications in Computer and Information Science",
+            "prism:issn": "18650929",
+            "prism:eIssn": "18650937",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9783032167606]"
+              }
+            ],
+            "prism:volume": "2788 CCIS",
+            "prism:pageRange": "107-120",
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "prism:doi": "10.1007/978-3-032-16761-3_8",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of Pretoria",
+                "affiliation-city": "Pretoria",
+                "affiliation-country": "South Africa"
+              }
+            ],
+            "prism:aggregationType": "Book Series",
+            "subtype": "cp",
+            "subtypeDescription": "Conference Paper",
+            "source-id": "17700155007",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105017370460"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105017370460?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105017370460&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105017370460&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105017370460",
+            "dc:identifier": "SCOPUS_ID:105017370460",
+            "eid": "2-s2.0-105017370460",
+            "dc:title": "Proactive Public Services in the Age of Artificial Intelligence: Towards Post-Bureaucratic Governance",
+            "dc:creator": "Nikiforova A.",
+            "prism:publicationName": "Lecture Notes in Computer Science",
+            "prism:issn": "03029743",
+            "prism:eIssn": "16113349",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9783032015884]"
+              }
+            ],
+            "prism:volume": "15944 LNCS",
+            "prism:pageRange": "395-413",
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "prism:doi": "10.1007/978-3-032-01589-1_25",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Tartu Ülikool",
+                "affiliation-city": "Tartu",
+                "affiliation-country": "Estonia"
+              }
+            ],
+            "prism:aggregationType": "Book Series",
+            "subtype": "cp",
+            "subtypeDescription": "Conference Paper",
+            "source-id": "25674",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033829292"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033829292?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105033829292&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105033829292&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105033829292",
+            "dc:identifier": "SCOPUS_ID:105033829292",
+            "eid": "2-s2.0-105033829292",
+            "dc:title": "Conditions of benefits and risks when algorithmic technology is implemented for public sector policing and fraud detection: a systematic literature review",
+            "dc:creator": "Poodiack Parsons S.",
+            "prism:publicationName": "AI and Society",
+            "prism:issn": "09515666",
+            "prism:eIssn": "14355655",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "prism:doi": "10.1007/s00146-026-02967-1",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universiteit Twente",
+                "affiliation-city": "Enschede",
+                "affiliation-country": "Netherlands"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "source-id": "23616",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryvor"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030533530"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030533530?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105030533530&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105030533530&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105030533530",
+            "dc:identifier": "SCOPUS_ID:105030533530",
+            "eid": "2-s2.0-105030533530",
+            "dc:title": "A socio-technical framework for AI trust in public administration",
+            "dc:creator": "Tsarouhas P.",
+            "prism:publicationName": "Transforming Government People Process and Policy",
+            "prism:issn": "17506166",
+            "prism:pageRange": "1-22",
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "prism:doi": "10.1108/TG-06-2025-0157",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of Thessaly",
+                "affiliation-city": "Volos",
+                "affiliation-country": "Greece"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "source-id": "19200156938",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105020168623"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105020168623?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105020168623&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105020168623&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105020168623",
+            "dc:identifier": "SCOPUS_ID:105020168623",
+            "eid": "2-s2.0-105020168623",
+            "dc:title": "AI-Driven Customer Experience in the Saudi Public Services: An Analysis of Opportunities and Challenges",
+            "dc:creator": "Bendary M.G.",
+            "prism:publicationName": "Lecture Notes in Networks and Systems",
+            "prism:issn": "23673370",
+            "prism:eIssn": "23673389",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9783031966217]"
+              }
+            ],
+            "prism:volume": "1502 LNNS",
+            "prism:pageRange": "278-289",
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "prism:doi": "10.1007/978-3-031-96622-4_26",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universiti Tenaga Nasional",
+                "affiliation-city": "Kajang",
+                "affiliation-country": "Malaysia"
+              }
+            ],
+            "prism:aggregationType": "Book Series",
+            "subtype": "cp",
+            "subtypeDescription": "Conference Paper",
+            "source-id": "21100901469",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105017369692"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105017369692?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105017369692&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105017369692&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105017369692",
+            "dc:identifier": "SCOPUS_ID:105017369692",
+            "eid": "2-s2.0-105017369692",
+            "dc:title": "24th IFIP WG 8.5 International Conference on Electronic Government, EGOV 2025",
+            "prism:publicationName": "Lecture Notes in Computer Science",
+            "prism:issn": "03029743",
+            "prism:eIssn": "16113349",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9783032015884]"
+              }
+            ],
+            "prism:volume": "15944 LNCS",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "citedby-count": "0",
+            "prism:aggregationType": "Book Series",
+            "subtype": "cr",
+            "subtypeDescription": "Conference Review",
+            "source-id": "25674",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105028302563"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105028302563?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105028302563&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105028302563&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105028302563",
+            "dc:identifier": "SCOPUS_ID:105028302563",
+            "eid": "2-s2.0-105028302563",
+            "dc:title": "20th Iberian Conference on Information Systems and Technologies, CISTI 2025",
+            "prism:publicationName": "Lecture Notes in Networks and Systems",
+            "prism:issn": "23673370",
+            "prism:eIssn": "23673389",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9783032107275]"
+              }
+            ],
+            "prism:volume": "1719 LNNS",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "citedby-count": "0",
+            "prism:aggregationType": "Book Series",
+            "subtype": "cr",
+            "subtypeDescription": "Conference Review",
+            "source-id": "21100901469",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030508976"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030508976?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105030508976&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105030508976&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105030508976",
+            "dc:identifier": "SCOPUS_ID:105030508976",
+            "eid": "2-s2.0-105030508976",
+            "dc:title": "PLS-SEM in public procurement research: a systematic review of theoretical foundations, constructs and empirical insights",
+            "dc:creator": "Changalima I.A.",
+            "prism:publicationName": "Journal of Public Procurement",
+            "prism:issn": "15350118",
+            "prism:eIssn": "21506930",
+            "prism:pageRange": "1-49",
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "prism:doi": "10.1108/JOPP-06-2025-0056",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "The University of Dodoma",
+                "affiliation-city": "Dodoma",
+                "affiliation-country": "Tanzania"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "source-id": "12100156347",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105027945634"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105027945634?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105027945634&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105027945634&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105027945634",
+            "dc:identifier": "SCOPUS_ID:105027945634",
+            "eid": "2-s2.0-105027945634",
+            "dc:title": "19th Iberian Conference on Information Systems and Technologies, CISTI 2024",
+            "prism:publicationName": "Lecture Notes in Networks and Systems",
+            "prism:issn": "23673370",
+            "prism:eIssn": "23673389",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9783032128874]"
+              }
+            ],
+            "prism:volume": "1753 LNNS",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "citedby-count": "0",
+            "prism:aggregationType": "Book Series",
+            "subtype": "cr",
+            "subtypeDescription": "Conference Review",
+            "source-id": "21100901469",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031478454"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031478454?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105031478454&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105031478454&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105031478454",
+            "dc:identifier": "SCOPUS_ID:105031478454",
+            "eid": "2-s2.0-105031478454",
+            "dc:title": "5th International Conference on Advanced Research in Technologies, Information, Innovation and Sustainability 2025, ARTIIS 2025",
+            "prism:publicationName": "Communications in Computer and Information Science",
+            "prism:issn": "18650929",
+            "prism:eIssn": "18650937",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9783032167606]"
+              }
+            ],
+            "prism:volume": "2788 CCIS",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "2026",
+            "citedby-count": "0",
+            "prism:aggregationType": "Book Series",
+            "subtype": "cr",
+            "subtypeDescription": "Conference Review",
+            "source-id": "17700155007",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105026653563"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105026653563?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105026653563&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105026653563&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105026653563",
+            "dc:identifier": "SCOPUS_ID:105026653563",
+            "eid": "2-s2.0-105026653563",
+            "dc:title": "Leveraging Generative AI for Public Service Innovation: A Path to Smart Government in Indonesia",
+            "dc:creator": "Alamsyah A.",
+            "prism:publicationName": "Digital Government Research and Practice",
+            "prism:issn": "26390175",
+            "prism:volume": "6",
+            "prism:issueIdentifier": "4",
+            "prism:pageRange": null,
+            "prism:coverDate": "2025-12-18",
+            "prism:coverDisplayDate": "18 December 2025",
+            "prism:doi": "10.1145/3761820",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Telkom University",
+                "affiliation-city": "Bandung",
+                "affiliation-country": "Indonesia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "50",
+            "source-id": "21101082067",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105007020276"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105007020276?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105007020276&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105007020276&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1535011825000102"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105007020276",
+            "dc:identifier": "SCOPUS_ID:105007020276",
+            "eid": "2-s2.0-105007020276",
+            "dc:title": "Modelling of critical success factors for procurement of AI systems: a study in the purview of the Indian public sector",
+            "dc:creator": "Singh S.",
+            "prism:publicationName": "Journal of Public Procurement",
+            "prism:issn": "15350118",
+            "prism:eIssn": "21506930",
+            "prism:volume": "25",
+            "prism:issueIdentifier": "4",
+            "prism:pageRange": "449-475",
+            "prism:coverDate": "2025-12-05",
+            "prism:coverDisplayDate": "5 December 2025",
+            "prism:doi": "10.1108/JOPP-07-2024-0078",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Woxsen University",
+                "affiliation-city": "Hyderabad",
+                "affiliation-country": "India"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "12100156347",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85214820920"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85214820920?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85214820920&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85214820920&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85214820920",
+            "dc:identifier": "SCOPUS_ID:85214820920",
+            "eid": "2-s2.0-85214820920",
+            "dc:title": "Herbert Simon's Legacy for Public Administration",
+            "dc:creator": "Gomes R.C.",
+            "prism:publicationName": "Public Administration",
+            "prism:issn": "00333298",
+            "prism:eIssn": "14679299",
+            "prism:volume": "103",
+            "prism:issueIdentifier": "4",
+            "prism:pageRange": "965-978",
+            "prism:coverDate": "2025-12-01",
+            "prism:coverDisplayDate": "December 2025",
+            "prism:doi": "10.1111/padm.13051",
+            "citedby-count": "6",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Fundacao Getulio Vargas",
+                "affiliation-city": "Rio de Janeiro",
+                "affiliation-country": "Brazil"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "17162",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105022901651"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105022901651?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105022901651&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105022901651&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105022901651",
+            "dc:identifier": "SCOPUS_ID:105022901651",
+            "eid": "2-s2.0-105022901651",
+            "dc:title": "The Role of Artificial Intelligence in Improving the Efficiency and Accuracy of Local Government Financial Reporting: A Systematic Literature Review",
+            "dc:creator": "Darmawati D.",
+            "prism:publicationName": "Journal of Risk and Financial Management",
+            "prism:eIssn": "19118074",
+            "prism:volume": "18",
+            "prism:issueIdentifier": "11",
+            "prism:pageRange": null,
+            "prism:coverDate": "2025-11-01",
+            "prism:coverDisplayDate": "November 2025",
+            "prism:doi": "10.3390/jrfm18110601",
+            "citedby-count": "2",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Hasanuddin University",
+                "affiliation-city": "Makassar",
+                "affiliation-country": "Indonesia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "601",
+            "source-id": "21101089551",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/86000452373"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/86000452373?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=86000452373&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=86000452373&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2398503825000074"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/86000452373",
+            "dc:identifier": "SCOPUS_ID:86000452373",
+            "eid": "2-s2.0-86000452373",
+            "dc:title": "Artificial intelligence in action: shaping the future of public sector",
+            "dc:creator": "Panda M.",
+            "prism:publicationName": "Digital Policy Regulation and Governance",
+            "prism:issn": "23985038",
+            "prism:eIssn": "23985046",
+            "prism:volume": "27",
+            "prism:issueIdentifier": "6",
+            "prism:pageRange": "668-686",
+            "prism:coverDate": "2025-10-28",
+            "prism:coverDisplayDate": "October 2025",
+            "prism:doi": "10.1108/DPRG-10-2024-0272",
+            "citedby-count": "14",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "IMI Kolkata",
+                "affiliation-city": "Kolkata",
+                "affiliation-country": "India"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21100803571",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105021102119"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105021102119?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105021102119&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105021102119&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105021102119",
+            "dc:identifier": "SCOPUS_ID:105021102119",
+            "eid": "2-s2.0-105021102119",
+            "dc:title": "Application of artificial intelligence in human capital management of the civil service: predicting career trajectories and personalized personnel development",
+            "dc:creator": "Shakhshina A.",
+            "prism:publicationName": "Periodicals of Engineering and Natural Sciences",
+            "prism:eIssn": "23034521",
+            "prism:volume": "13",
+            "prism:issueIdentifier": "4",
+            "prism:pageRange": "859-872",
+            "prism:coverDate": "2025-10-17",
+            "prism:coverDisplayDate": "17 October 2025",
+            "prism:doi": "10.21533/pen.v13.i4.1156",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Karaganda University of Kazpotrebsoyuz",
+                "affiliation-city": "Karaganda",
+                "affiliation-country": "Kazakhstan"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21100840458",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105020028174"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105020028174?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105020028174&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105020028174&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105020028174",
+            "dc:identifier": "SCOPUS_ID:105020028174",
+            "eid": "2-s2.0-105020028174",
+            "dc:title": "Using AI in Performance Management: A Global Analysis of Local Government Practices",
+            "dc:creator": "Maake G.",
+            "prism:publicationName": "Administrative Sciences",
+            "prism:eIssn": "20763387",
+            "prism:volume": "15",
+            "prism:issueIdentifier": "10",
+            "prism:pageRange": null,
+            "prism:coverDate": "2025-10-01",
+            "prism:coverDisplayDate": "October 2025",
+            "prism:doi": "10.3390/admsci15100392",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Tshwane University of Technology",
+                "affiliation-city": "Pretoria",
+                "affiliation-country": "South Africa"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "392",
+            "source-id": "21101043277",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105011647207"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105011647207?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105011647207&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105011647207&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105011647207",
+            "dc:identifier": "SCOPUS_ID:105011647207",
+            "eid": "2-s2.0-105011647207",
+            "dc:title": "Digital Platforms for the Built Environment: A Systematic Review Across Sectors and Scales",
+            "dc:creator": "Berlato M.",
+            "prism:publicationName": "Buildings",
+            "prism:eIssn": "20755309",
+            "prism:volume": "15",
+            "prism:issueIdentifier": "14",
+            "prism:pageRange": null,
+            "prism:coverDate": "2025-07-01",
+            "prism:coverDisplayDate": "July 2025",
+            "prism:doi": "10.3390/buildings15142432",
+            "citedby-count": "14",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Università degli Studi di Padova",
+                "affiliation-city": "Padua",
+                "affiliation-country": "Italy"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "2432",
+            "source-id": "26980",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105012917388"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105012917388?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105012917388&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105012917388&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105012917388",
+            "dc:identifier": "SCOPUS_ID:105012917388",
+            "eid": "2-s2.0-105012917388",
+            "dc:title": "Enhancing public sector audit education through AI-driven simulations: A systematic review",
+            "dc:creator": "Damola O.",
+            "prism:publicationName": "AI in Education Governance and Leadership Adoption Impact and Ethics",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9798337355504, 9798337355528]"
+              }
+            ],
+            "prism:pageRange": "51-66",
+            "prism:coverDate": "2025-06-25",
+            "prism:coverDisplayDate": "25 June 2025",
+            "prism:doi": "10.4018/979-8-3373-5550-4.ch003",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of South Africa",
+                "affiliation-city": "Pretoria",
+                "affiliation-country": "South Africa"
+              }
+            ],
+            "prism:aggregationType": "Book",
+            "subtype": "ch",
+            "subtypeDescription": "Book Chapter",
+            "source-id": "21101319203",
+            "openaccess": "0",
+            "openaccessFlag": false
+          }
+        ]
+      }
+    }
+  ]
+}

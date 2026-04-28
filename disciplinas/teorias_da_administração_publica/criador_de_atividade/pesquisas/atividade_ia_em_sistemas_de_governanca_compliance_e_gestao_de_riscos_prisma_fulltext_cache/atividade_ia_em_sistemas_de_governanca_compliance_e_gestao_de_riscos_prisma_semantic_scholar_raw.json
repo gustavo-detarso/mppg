@@ -1,0 +1,908 @@
+{
+  "source": "semantic_scholar",
+  "label": "Semantic Scholar",
+  "query": "\"corporate governance\" \"risk management\" \"artificial intelligence\" compliance optimization empirical",
+  "retrieved": 25,
+  "warnings": [],
+  "saved_at": "2026-04-11T10:59:28.708256",
+  "pages": [
+    {
+      "total": 476,
+      "offset": 0,
+      "next": 25,
+      "data": [
+        {
+          "paperId": "aa74ec55433a7d9cae9063bd4e377b5d98f39775",
+          "externalIds": {
+            "DOI": "10.52970/grdis.v5i3.1121",
+            "CorpusId": 279498399
+          },
+          "url": "https://www.semanticscholar.org/paper/aa74ec55433a7d9cae9063bd4e377b5d98f39775",
+          "title": "Strategic Financial Management in a Dynamic Economy: Optimizing Investment, Mitigating Risks, and Leveraging Financial Technology for Corporate Sustainability",
+          "venue": "Golden Ratio of Data in Summary",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.52970/grdis.v5i3.1121?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.52970/grdis.v5i3.1121, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This study examines the strategic importance of financial management in enhancing corporate performance, emphasizing the impact of capital structure optimization, risk management frameworks, and financial technology integration."
+          },
+          "publicationDate": "2025-06-07",
+          "authors": [
+            {
+              "authorId": "2367997050",
+              "name": "Muhammad Natser"
+            }
+          ],
+          "abstract": "Financial management plays a fundamental role in corporate sustainability, influencing investment decisions, risk mitigation, and long-term financial stability. This study examines the strategic importance of financial management in enhancing corporate performance, emphasizing the impact of capital structure optimization, risk management frameworks, and financial technology integration. Drawing from financial theories and empirical evidence, the research highlights the significance of balancing debt and equity financing, utilizing financial derivatives to manage risk exposure, and adopting technological advancements such as artificial intelligence and blockchain for financial decision-making. The study further explores the role of financial governance, liquidity management, and ethical financial practices in fostering investor confidence and regulatory compliance. Findings suggest that firms with proactive financial strategies exhibit greater resilience against economic uncertainties and market fluctuations, achieving sustainable growth and competitive advantage. The study contributes to the existing literature on corporate financial management by providing insights into effective financial planning and decision-making frameworks. The implications extend to corporate managers, policymakers, and financial institutions in developing adaptive financial policies that align with evolving economic and technological landscapes."
+        },
+        {
+          "paperId": "ff0d6037e2b1401013a24d671b8b7b6a3684d570",
+          "externalIds": {
+            "DOI": "10.56734/ijbms.v7n3a4",
+            "CorpusId": 286738379
+          },
+          "url": "https://www.semanticscholar.org/paper/ff0d6037e2b1401013a24d671b8b7b6a3684d570",
+          "title": "Artificial Intelligence Governance In Corporate Strategy: Ethical Risk, Regulatory Compliance, And Competitive Advantage",
+          "venue": "International Journal of Business &amp; Management Studies",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.56734/ijbms.v7n3a4?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.56734/ijbms.v7n3a4, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This paper argues that AI governance should be treated as a strategic governance function—anchored in board oversight and enterprise risk management—rather than a narrow technical or compliance task, and develops an AI Governance Strategic Framework (AIGSF) and an implementation roadmap that connect ethical accountability, regulatory readiness, cybersecurity resilience, and performance outcomes."
+          },
+          "publicationDate": "2026-03-19",
+          "authors": [
+            {
+              "authorId": "2425097051",
+              "name": "Dr. Yemi Martins"
+            }
+          ],
+          "abstract": "Artificial Intelligence (AI) has moved from a peripheral digital capability to a central driver of corporate strategy, reshaping decision-making, customer engagement, operations, and risk exposure. Yet the same systems that enable predictive analytics and automation can create material harms: discriminatory outcomes, privacy and security failures, opacity in decision logic, and regulatory noncompliance. These harms increasingly translate into financial loss through litigation, enforcement penalties, brand erosion, and failed deployments. This paper argues that AI governance should be treated as a strategic governance function—anchored in board oversight and enterprise risk management—rather than a narrow technical or compliance task. Using an integrative conceptual design grounded in corporate governance theory, enterprise risk management (ERM), and emerging regulation, the study develops an AI Governance Strategic Framework (AIGSF) and an implementation roadmap that connect ethical accountability, regulatory readiness, cybersecurity resilience, and performance outcomes. To strengthen practical relevance, the paper presents case illustrations across hiring, credit, consumer services, and generative AI, drawing lessons on controls such as model documentation, algorithmic audits, impact assessments, and human-in-the-loop oversight. The central contribution is a governance model that links “trustworthy AI” practices to competitive advantage through reduced uncertainty, faster deployment cycles, and higher stakeholder trust."
+        },
+        {
+          "paperId": "0b7706ed1b38a89315ba6fe5c468ae4dbdee9d0e",
+          "externalIds": {
+            "DOI": "10.71420/ijref.v3i1.246",
+            "CorpusId": 285443755
+          },
+          "url": "https://www.semanticscholar.org/paper/0b7706ed1b38a89315ba6fe5c468ae4dbdee9d0e",
+          "title": "Artificial Intelligence and Corporate Tax Risk Management: A Systematic Literature Review",
+          "venue": "International Journal of Research in Economics and Finance",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.71420/ijref.v3i1.246?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.71420/ijref.v3i1.246, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This study presents a systematic literature review examining the transformative role of artificial intelligence in corporate tax risk management, revealing that AI offers significant potential to improve efficiency and effectiveness in tax risk management, yet successful implementation requires robust governance structures, ethical organizational cultures, and supportive regulatory environments."
+          },
+          "publicationDate": "2026-02-05",
+          "authors": [
+            {
+              "authorId": "2409738604",
+              "name": "Ismail Ben-alla"
+            },
+            {
+              "authorId": "2092620933",
+              "name": "Mohammed Nmili"
+            }
+          ],
+          "abstract": "This study presents a systematic literature review examining the transformative role of artificial intelligence (AI) in corporate tax risk management. As globalization, regulatory scrutiny, and digitalization increase corporate tax complexity, AI technologies including machine learning, predictive analytics, and automated compliance systems are reshaping how organizations identify, assess, and manage tax-related risks. The review synthesizes research across taxation, corporate governance, risk management, and algorithmic decision-making, exploring AI applications in enhancing tax compliance, fraud detection, tax planning, and governance frameworks. It reveals that AI offers significant potential to improve efficiency and effectiveness in tax risk management, yet successful implementation requires robust governance structures, ethical organizational cultures, and supportive regulatory environments. Critically, the study examines challenges associated with algorithmic decision-making, including transparency, fairness, accountability, and trust. It identifies persistent research gaps concerning developing economies, long-term organizational impacts, and unintended consequences of automated tax decisions. By consolidating fragmented literature streams, the paper provides a conceptual foundation for strategically integrating AI into corporate tax risk management and offers directions for future research and policy development in this evolving field."
+        },
+        {
+          "paperId": "37c5675c48911675e1cf80d6b9e9af716fa8cc2c",
+          "externalIds": {
+            "DOI": "10.5121/ijaia.2026.17205",
+            "CorpusId": 287194058
+          },
+          "url": "https://www.semanticscholar.org/paper/37c5675c48911675e1cf80d6b9e9af716fa8cc2c",
+          "title": "STRATEGIC ADOPTION OF TRUSTWORTHY AND EXPLAINABLE AIIN ORGANIZATIONS: IMPLICATIONS FOR CORPORATE GOVERNANCE, RISK MANAGEMENT, AND FIRM PERFORMANCE",
+          "venue": "International Journal of Artificial Intelligence &amp; Applications",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5121/ijaia.2026.17205?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5121/ijaia.2026.17205, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "Examination of the strategic adoption of trustworthy and explainable AI within organizational contexts and its implications for corporate governance, risk management, and firm performance revealed a positive correlation between trustworthy and explainable AI and corporate governance, risk management and firm performance."
+          },
+          "publicationDate": "2026-03-28",
+          "authors": [
+            {
+              "authorId": "2428192351",
+              "name": "Dennis Farai Mahuni"
+            }
+          ],
+          "abstract": "The accelerated diffusion of Artificial Intelligence (AI) across industries has fundamentally reshaped corporate strategy, governance architectures, and enterprise risk management systems. While AI-driven analytics enhance predictive accuracy, operational efficiency, and strategic decision-making, the increasing reliance on complex and opaque algorithmic models has generated significant concerns regarding transparency, accountability, ethical compliance, and systemic risk. In response, the concept of Trustworthy AI—advanced prominently by the European Commission—and the development of Explainable AI (XAI) frameworks have emerged as critical governance imperatives for contemporary organizations. Trustworthy AI emphasizes lawfulness, ethical alignment, robustness, and human oversight, while explainability enhances interpretability and auditability of algorithmic outputs. This paper examines the strategic adoption of trustworthy and explainable AI within organizational contexts and analyzes its implications for corporate governance, risk management, and firm performance. Empirical findings revealed that there is a positive correlation between trustworthy and explainable AI and corporate governance, risk management and firm performance."
+        },
+        {
+          "paperId": "c7f836e722194c14c5f31cca4d13529bfaca3bbd",
+          "externalIds": {
+            "DOI": "10.30574/wjarr.2025.27.1.2607",
+            "CorpusId": 280241906
+          },
+          "url": "https://www.semanticscholar.org/paper/c7f836e722194c14c5f31cca4d13529bfaca3bbd",
+          "title": "Risk and compliance paper what role does Artificial Intelligence (AI) play in enhancing risk management practices in corporations?",
+          "venue": "World Journal of Advanced Research and Reviews",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.30574/wjarr.2025.27.1.2607?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.30574/wjarr.2025.27.1.2607, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The analysis indicates that when integrated in a proper manner, AI can enhance risk management and compliance of an organization and its resilience in a rapidly complicated and more uncertain business-based environment."
+          },
+          "publicationDate": "2025-07-30",
+          "authors": [
+            {
+              "authorId": "2391160163",
+              "name": "Tina Akpevben Aror"
+            },
+            {
+              "authorId": "2319074798",
+              "name": "Munashe Naphtali Mupa"
+            }
+          ],
+          "abstract": "Artificial Intelligence (AI) is gradually transforming the corporate risk management and compliance landscape, as it allows making decisions in a more timely and correct way. This paper evaluates the new role being played by AI in promoting effective risk management and compliance processes in organizations through the manner in which the AI technologies with the ability to collect, analyze, process, and evaluate information, including machine learning, natural language processing, and predictive analytics, are being applied with the purpose of identifying, evaluating, and mitigating the various risks. Whether it is financial fraud detection, cybersecurity, operational interruptions, or compliance, the AI tools are increasing the speed of risk detection, increasing data analysis potential, and creating support for real-time monitoring and forecasting.\n\nThe paper examines how AI aids in automating repetitive risk management and compliance tasks, thus enabling risk managers to concentrate on the high-level monitoring. As well as listing the advantages, the processes and all those concerned with the adoption of AI in the sphere of risk management and compliance are also spoken about, with the discussion touching upon data quality, model transparency, and governance. The analysis indicates that when integrated in a proper manner, AI can enhance risk management and compliance of an organization and its resilience in a rapidly complicated and more uncertain business-based environment."
+        },
+        {
+          "paperId": "6149f9cf130af42b36f6ee371ee2ae3bf1b6a7c5",
+          "externalIds": {
+            "DOI": "10.30574/wjarr.2025.25.2.0333",
+            "CorpusId": 276178010
+          },
+          "url": "https://www.semanticscholar.org/paper/6149f9cf130af42b36f6ee371ee2ae3bf1b6a7c5",
+          "title": "How blockchain-enabled smart contracts and artificial intelligence are reshaping corporate governance frameworks in fintech and logistics industries",
+          "venue": "World Journal of Advanced Research and Reviews",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.30574/wjarr.2025.25.2.0333?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.30574/wjarr.2025.25.2.0333, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This research review critically examines the profound technological disruption emerging at the intersection of advanced computational systems and organizational management strategies, demonstrating their potential to address critical challenges such as operational inefficiency, compliance complexity, and trust deficits in contemporary corporate environments."
+          },
+          "publicationDate": "2025-02-28",
+          "authors": [
+            {
+              "authorId": "2347557415",
+              "name": "Adeyinka Ogunbajo"
+            },
+            {
+              "authorId": "2347556820",
+              "name": "Adefemi Quddus"
+            },
+            {
+              "authorId": "2391215772",
+              "name": "Oluwadamilola Fisayo Adediran"
+            },
+            {
+              "authorId": "2347553837",
+              "name": "Israel Agbo-Adediran"
+            }
+          ],
+          "abstract": "The convergence of blockchain technology, smart contracts, and artificial intelligence represents a transformative technological paradigm that fundamentally reimagines corporate governance in fintech and logistics industries. This research review critically examines the profound technological disruption emerging at the intersection of advanced computational systems and organizational management strategies. By analyzing the intricate relationships between decentralized technologies, algorithmic decision-making, and traditional governance frameworks, the study reveals how these innovative technologies are reshaping organizational structures, operational transparency, and strategic decision-making processes. The investigation explores the multifaceted implications of blockchain and AI integration, demonstrating their potential to address critical challenges such as operational inefficiency, compliance complexity, and trust deficits in contemporary corporate environments. Through comprehensive empirical analysis and theoretical examination, the review illuminates the revolutionary potential of these technologies to create more adaptive, intelligent, and responsive governance ecosystems that transcend conventional organizational boundaries and limitations."
+        },
+        {
+          "paperId": "d570c2316010ec64154b573ea544cfe256866807",
+          "externalIds": {
+            "DOI": "10.53894/ijirss.v8i2.5166",
+            "CorpusId": 276926819
+          },
+          "url": "https://www.semanticscholar.org/paper/d570c2316010ec64154b573ea544cfe256866807",
+          "title": "Artificial intelligence in financial statement preparation: Enhancing accuracy, compliance, and corporate performance",
+          "venue": "International journal of innovative research and scientific studies",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.53894/ijirss.v8i2.5166?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.53894/ijirss.v8i2.5166, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The research aims to provide insights into how AI-driven financial reporting systems enhance efficiency, fraud detection, and regulatory adherence, and highlights key challenges, including concerns over algorithmic transparency, data privacy, and the cost of AI implementation."
+          },
+          "publicationDate": "2025-03-07",
+          "authors": [
+            {
+              "authorId": "2314429474",
+              "name": "Abdelrehim Awad"
+            },
+            {
+              "authorId": "2349529206",
+              "name": "Osama Akola"
+            },
+            {
+              "authorId": "121435493",
+              "name": "M. Amer"
+            },
+            {
+              "authorId": "2380906468",
+              "name": "E. Mousa"
+            }
+          ],
+          "abstract": "This study investigates the integration of Artificial Intelligence (AI) into financial statement preparation and its impact on accuracy, compliance, and corporate performance. The research aims to provide insights into how AI-driven financial reporting systems enhance efficiency, fraud detection, and regulatory adherence. A systematic review was conducted following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) methodology. The study synthesizes empirical findings from indexed databases, analyzing AI applications such as Machine Learning (ML), Natural Language Processing (NLP), and Robotic Process Automation (RPA) in financial reporting. The results indicate that AI-powered financial reporting significantly improves the accuracy and timeliness of financial disclosures, strengthens corporate governance, and enhances decision-making capabilities. AI-based fraud detection models outperform traditional auditing techniques, achieving higher accuracy and efficiency. The study also highlights key challenges, including concerns over algorithmic transparency, data privacy, and the cost of AI implementation, particularly for SMEs. AI has the potential to revolutionize financial statement preparation, improving regulatory compliance and corporate performance. However, challenges related to ethical considerations and cost barriers must be addressed to maximize AI’s benefits in financial reporting. The findings provide strategic insights for regulators, financial professionals, and policymakers to optimize AI adoption while ensuring compliance and accountability. Future research should focus on explainable AI models, long-term governance impacts, and regulatory frameworks for AI-driven financial reporting."
+        },
+        {
+          "paperId": "2aff0d48ba44ea4d6e0886fd5ed2a17993064efe",
+          "externalIds": {
+            "DOI": "10.1145/3708036.3708214",
+            "CorpusId": 275801680
+          },
+          "url": "https://www.semanticscholar.org/paper/2aff0d48ba44ea4d6e0886fd5ed2a17993064efe",
+          "title": "Research on Optimization of Enterprise Compliance Management System Based on Artificial Intelligence",
+          "venue": "Proceeding of the 2024 5th International Conference on Computer Science and Management Technology",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3708036.3708214?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3708036.3708214, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The research shows that intelligent technologies can effectively optimize the compliance management process, significantly reducing corporate violation risks and management costs."
+          },
+          "publicationDate": "2024-10-18",
+          "authors": [
+            {
+              "authorId": "2297432291",
+              "name": "Zhen Tian"
+            }
+          ],
+          "abstract": "This paper explores the optimization design and implementation of corporate compliance management systems, proposing a compliance management solution based on intelligent technologies. By constructing a system framework integrating data collection, risk assessment, and intelligent decision-making, the efficiency and accuracy of compliance management are improved. Experiments conducted with a multinational corporation as the test subject demonstrate that the system outperforms traditional methods in risk prediction accuracy, data processing speed, and cost control. The research shows that intelligent technologies can effectively optimize the compliance management process, significantly reducing corporate violation risks and management costs."
+        },
+        {
+          "paperId": "90ec54b51f5c6c04fb041509517484a5dad8f83c",
+          "externalIds": {
+            "DOI": "10.1057/s41599-025-06194-9",
+            "CorpusId": 283901622
+          },
+          "url": "https://www.semanticscholar.org/paper/90ec54b51f5c6c04fb041509517484a5dad8f83c",
+          "title": "A bibliometric analysis of governance, risk, and compliance (GRC): trends, themes, and future directions",
+          "venue": "Humanities and Social Sciences Communications",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1057/s41599-025-06194-9?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1057/s41599-025-06194-9, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2025-12-01",
+          "authors": [
+            {
+              "authorId": "2349353245",
+              "name": "Ilya Avianti"
+            },
+            {
+              "authorId": "73642262",
+              "name": "Sofik Handoyo"
+            }
+          ],
+          "abstract": null
+        },
+        {
+          "paperId": "17ccc33447668780bd9f04b4e1d9d20349efcd18",
+          "externalIds": {
+            "DOI": "10.1109/ICIMCIS68501.2025.11326907",
+            "CorpusId": 284903803
+          },
+          "url": "https://www.semanticscholar.org/paper/17ccc33447668780bd9f04b4e1d9d20349efcd18",
+          "title": "Artificial Intelligence Governance for Innovation and Resilient Data Security in Academic Institutions",
+          "venue": "2025 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS)",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICIMCIS68501.2025.11326907?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICIMCIS68501.2025.11326907, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2025-12-03",
+          "authors": [
+            {
+              "authorId": "2355924781",
+              "name": "Merryana Lestari"
+            },
+            {
+              "authorId": "2055292172",
+              "name": "Agustinus Fritz Wijaya"
+            },
+            {
+              "authorId": "2406000289",
+              "name": "Mega Kartika Sari"
+            },
+            {
+              "authorId": "2405780922",
+              "name": "Laurence Keane Leander"
+            }
+          ],
+          "abstract": "The rapid adoption of Artificial Intelligence (AI) presents a significant challenge for Indonesian higher education institutions to balance innovation with resilient data security. The study is among the first to integrated AI Governance for Innovation and Resilient Data Security (AIG-IRDS) model, including ISO/IEC 42001, ISO/IEC 27001, the NIST-AI Risk Management Framework, Zero Trust Architecture principles, and COBIT 2019, along with national regulations such as the PDP Law. This integrated model establishes an adaptive, auditable, and ambidextrous governance framework that enables institutions to sustain innovation while ensuring trust, compliance, and data resilience. The research employs a conceptual empirical hybrid design combining expert panel validation, limited case studies and a proof-of-concept evaluation two universities in Indonesia. Quantitative results reveal significant improvements of 76% in governance maturity, 77% in auditability, and 39% in AI-driven innovation measured over 12 weeks. These findings confirm the model’s effectiveness in enhancing institutional trust, compliance readiness, and secure AI adoption, while fostering innovation within a standardized governance framework. Theoretically, this study contributes by operationalizing ambidextrous AI governance, extending IT governance and risk management models. Practically, it offers a replicable blueprint for secure and ethical AI deployment in higher education aligned with both global standards and local regulatory expectations."
+        },
+        {
+          "paperId": "e2f26cc325572e3529735b9fb1995e4f88eb5510",
+          "externalIds": {
+            "DOI": "10.32782/business-navigator.79-52",
+            "CorpusId": 277867685
+          },
+          "url": "https://www.semanticscholar.org/paper/e2f26cc325572e3529735b9fb1995e4f88eb5510",
+          "title": "INTEGRATING INTERNATIONAL STANDARDS OF SUSTAINABLE DEVELOPMENT AND DIGITAL TRANSFORMATION INTO COMPLIANCE RISK MANAGEMENT",
+          "venue": "Business Navigator",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.32782/business-navigator.79-52?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.32782/business-navigator.79-52, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The article outlines the advantages that domestic enterprises may realize through the implementation of the proposed mechanism for integrating international standards on sustainable development and digital transformation into compliance risk management procedures."
+          },
+          "publicationDate": null,
+          "authors": [
+            {
+              "authorId": "2355327858",
+              "name": "Vitalii Kharchuk"
+            },
+            {
+              "authorId": "2258215562",
+              "name": "Taras Oleksiv"
+            },
+            {
+              "authorId": "2355327447",
+              "name": "Ihor Pavliukh"
+            }
+          ],
+          "abstract": "The article examines the essence and features of international standards regarding sustainable development and digital transformation that are applicable within the Eurozone. Specifically, the discussion encompasses the Global Reporting Initiative (GRI), Environmental, Social, and Governance (ESG) standards, Software as a Service (SaaS), the Corporate Sustainability Reporting Directive (CSRD), the Corporate Sustainability Due Diligence Directive (CSDD), the General Data Protection Regulation (GDPR), the NIS2 Directive (EU), and the Artificial Intelligence Act (AI Act). These standards significantly influence the emergence of compliance risks in companies' business operations. The authors substantiate the necessity to reconsider existing approaches toward the compliance risk definition by considering the diverse aspects of sustainable development and digital transformation, which have become crucial paradigms for conducting business globally. In addition, the article proposes a mechanism for integrating international standards on sustainable development and digital transformation into compliance risk management procedures. The key distinction lies in viewing compliance risk management through the lens of the organization’s business processes, which include managerial, core (operational), and support operations. In particular, aligning risk management policies with ESG standards and integrating AI tools into the policy of tracking the organization's compliance with regulatory acts and the consequences of compliance risks in company management processes. Ensure adherence to international standards and European Union directives and standards concerning sustainable development and digital transformation at every stage of the value chain within organizational operational processes. Last but not least, to uphold ethical standards within the organization and to cultivate employee competencies in the area of compliance. To sum up, the article outlines the advantages that domestic enterprises may realize through the implementation of the proposed mechanism."
+        },
+        {
+          "paperId": "a58a4aeb19ea3787dc0e821a8ca522fadd019fbd",
+          "externalIds": {
+            "DOI": "10.5937/megrev2502051s",
+            "CorpusId": 285128428
+          },
+          "url": "https://www.semanticscholar.org/paper/a58a4aeb19ea3787dc0e821a8ca522fadd019fbd",
+          "title": "Integration of artificial intelligence in corporate information security systems",
+          "venue": "Megatrend Revija",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5937/megrev2502051s?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5937/megrev2502051s, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This review explores how artificial intelligence is transforming corporate security through machine learning, anomaly detection, threat intelligence, and real-time decision-making support and emphasizes the need for strong AI governance frameworks and zero-trust architectures to ensure that implementation is both responsible and secure."
+          },
+          "publicationDate": null,
+          "authors": [
+            {
+              "authorId": "2386458666",
+              "name": "Marko Stanojević"
+            },
+            {
+              "authorId": "2407314969",
+              "name": "Danilo Izgarević"
+            }
+          ],
+          "abstract": "As the digital landscape keeps evolving, corporate security systems are facing increasingly complex and ever-changing threats that often outstrip traditional defense strategies. This review explores how artificial intelligence (AI) is transforming corporate security through machine learning, anomaly detection, threat intelligence, and real-time decision-making support. By automating those tedious tasks, sorting through heaps of data, and enabling quick responses to potential threats, AI helps organizations strengthen their digital and physical security systems. This paper dives into the challenges that come with AI integration, like making sure data is reliable, algorithms are transparent, ethical issues are addressed, and governance standards are met. Through various case studies and a look at industry tools such as IBM Watson, Darktrace, and Microsoft Security Copilot, the review highlights how AI is increasingly shaping risk management, compliance, and cost efficiency. Ultimately, it emphasizes the need for strong AI governance frameworks and zero-trust architectures to ensure that implementation is both responsible and secure."
+        },
+        {
+          "paperId": "d005f423994d85b85a3ffd6bc88c2e78a7950cde",
+          "externalIds": {
+            "DOI": "10.24136/oc.3627",
+            "CorpusId": 280598034
+          },
+          "url": "https://www.semanticscholar.org/paper/d005f423994d85b85a3ffd6bc88c2e78a7950cde",
+          "title": "Boosting IT companies’ performance through corporate governance standards: An empirical analysis",
+          "venue": "Oeconomia Copernicana",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.24136/oc.3627?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.24136/oc.3627, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The main findings of the research disclose a positive influence of the remuneration and audit committees, board independence, board gender diversity, liquidity, and company size, while board meetings frequency and indebtedness have a negative impact on the financial performance of the IT companies."
+          },
+          "publicationDate": "2025-06-30",
+          "authors": [
+            {
+              "authorId": "4232808",
+              "name": "G. Vintilă"
+            },
+            {
+              "authorId": "26946474",
+              "name": "M. Onofrei"
+            },
+            {
+              "authorId": "2293053315",
+              "name": "Alexandra-Ioana Vintilă"
+            }
+          ],
+          "abstract": "Research background: In the process of global economic development, the Information Technology (IT) sector has acquired a vital role. Digital transformation drives economic growth, making IT support essential for the efficient functioning of any state, company, or public institution. The IT industry is not only the primary source of innovation, but has also become a key provider of security in the current geopolitical context marked by unexpected challenges. Governance in IT companies is essential to ensure alignment of technology with business objectives, risk management and regulatory compliance. It contributes to transparency, accountability and cost optimization, thereby ensuring process quality and the long-term sustainability of the organization.\nPurpose of the article: The research focuses on the empirical study of the impact of corporate governance on the financial performance of the IT companies in the United States of America (US). The econometric analysis database includes 877 companies over a period of 7 years, from 2016 to 2022. This period is characterized by the mass development of emerging technologies, the increasing capabilities of artificial intelligence and adaptation to global crises—with the most relevant example being the Covid-19 pandemic. In the context of the pandemic, the need for digitalization became imperative, particularly in ensuring continuity in online education, e-commerce, and remote work. These developments underscore the growing importance of IT governance and strategic digital capabilities in shaping resilient, future-ready organizations. This study provides valuable insights into the intersection of corporate governance and organizational performance within the dynamic and rapidly evolving IT industry. By adopting an empirical approach, it goes beyond theoretical models to offer evidence-based analysis on how governance structures and standards can enhance operational efficiency, financial results, and strategic resilience.\nMethods: There are estimated multiple linear regression models using unbalanced panel data, with pooled OLS, cross-section random effects, cross-section fixed effects, cross-section, and time fixed effects. The dependent variables are represented by return on assets and return on equity, the independent variables capture the characteristics of the board of directors, while company-specific indicators are used as control variables. For each dependent variable, 24 econometrical models were performed.\nFindings & value added: The main findings of the research disclose a positive influence of the remuneration and audit committees, board independence, board gender diversity, liquidity, and company size, while board meetings frequency and indebtedness have a negative impact on the financial performance of the IT companies. The added value of this study lies in its interdisciplinary approach, combining principles of corporate governance with performance metrics specific to the digital economy. The findings have practical implications for executives, investors, and policymakers aiming to foster transparency, accountability, and innovation within technology."
+        },
+        {
+          "paperId": "5d1c074484090be9b34d9ea9dcd2781486d5785b",
+          "externalIds": {
+            "DOI": "10.61978/moneta.v3i2.916",
+            "CorpusId": 282011691
+          },
+          "url": "https://www.semanticscholar.org/paper/5d1c074484090be9b34d9ea9dcd2781486d5785b",
+          "title": "Artificial Intelligence and the Future of Financial Governance",
+          "venue": "Moneta : Journal of Economics and Finance",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.61978/moneta.v3i2.916?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.61978/moneta.v3i2.916, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "It is concluded that while AI holds enormous potential to transform global financial systems, its sustainable and equitable integration depends on balancing innovation with regulatory adaptation, transparency, and fairness."
+          },
+          "publicationDate": "2025-04-30",
+          "authors": [
+            {
+              "authorId": "2356902501",
+              "name": "Putri Ayu Lestari"
+            },
+            {
+              "authorId": "2385039537",
+              "name": "Cruift Andika"
+            }
+          ],
+          "abstract": "Artificial Intelligence (AI) is increasingly recognized as a transformative force in financial decision-making, with applications spanning risk prediction, portfolio optimization, fraud detection, corporate financial reporting, consumer finance, and market sentiment analysis. This narrative review aims to synthesize current knowledge on the opportunities and risks associated with AI adoption in the financial sector. Literature was collected from leading academic databases, including Scopus, Web of Science, and Google Scholar, using keywords such as “Artificial Intelligence,” “Financial Decision-Making,” “Risk Management,” and “Portfolio Optimization.” Inclusion criteria prioritized peer-reviewed studies published between 2010 and 2025. Findings reveal that AI consistently outperforms traditional approaches in risk prediction and credit assessment, with neural networks and hybrid models achieving predictive accuracies exceeding 85%. AI-driven robo-advisors provide higher investment returns and expand financial inclusion by reducing cost barriers. In fraud detection, adaptive algorithms achieve accuracy rates up to 90% and improve resilience against evolving threats. Corporate reporting benefits from AI-driven transparency, particularly when supported by high-quality auditing. Moreover, AI tools promote sustainable financial practices by aligning investment strategies with social and environmental objectives, while advanced models like GPT enhance market sentiment analysis. However, the review also identifies key challenges, including black-box opacity, algorithmic bias, systemic vulnerabilities, and regulatory uncertainties. Addressing these issues requires explainable AI, algorithmic audits, representative datasets, and collaborative governance mechanisms. This review concludes that while AI holds enormous potential to transform global financial systems, its sustainable and equitable integration depends on balancing innovation with regulatory adaptation, transparency, and fairness."
+        },
+        {
+          "paperId": "16e9590732739f494852e53c81f84b6194104085",
+          "externalIds": {
+            "DOI": "10.51594/farj.v7i6.1961",
+            "CorpusId": 279978260
+          },
+          "url": "https://www.semanticscholar.org/paper/16e9590732739f494852e53c81f84b6194104085",
+          "title": "Financial risk management strategies and their influence on organizational stability",
+          "venue": "Finance &amp; Accounting Research Journal",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.51594/farj.v7i6.1961?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.51594/farj.v7i6.1961, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2025-07-06",
+          "authors": [
+            {
+              "authorId": "2369092769",
+              "name": "Wasiu Eyinade"
+            },
+            {
+              "authorId": "2369090173",
+              "name": "Onyinye Jacqueline Ezeilo"
+            },
+            {
+              "authorId": "2369090145",
+              "name": "Ibidapo Abiodun Ogundeji"
+            }
+          ],
+          "abstract": "This study investigates the influence of financial risk management strategies on organizational stability, aiming to understand how diverse risk mitigation practices contribute to sustaining firm performance amid economic uncertainties. Employing a systematic literature review methodology, the study analyzes peer-reviewed articles, institutional reports, and empirical research published between 2020 and 2025. Data sources were rigorously selected using defined inclusion and exclusion criteria, and findings were synthesized through a content analysis approach. The review identifies key financial risk management strategies such as hedging, diversification, enterprise risk management frameworks, and the integration of corporate governance and regulatory compliance as critical to enhancing organizational resilience. Technological innovations, including artificial intelligence and blockchain, are found to significantly improve risk identification, monitoring, and mitigation processes. The study also highlights challenges in implementing risk management frameworks, including cultural resistance, resource constraints, and regulatory complexities. Implications for practitioners emphasize the need for dynamic, technology-enabled, and culturally embedded risk management approaches, while policymakers are encouraged to foster regulatory environments that balance oversight with innovation. Limitations of the study include potential publication bias and the rapid evolution of risk technologies not fully captured in the literature. Future research directions call for sector-specific analyses, longitudinal studies on technological impacts, and deeper exploration of sustainability-related risks. The findings underscore the imperative for organizations to adopt integrated, adaptive financial risk management practices to ensure long-term stability and competitive advantage in an increasingly volatile global economy. \nKeywords: Financial Risk Management, Organizational Stability, Enterprise Risk Management, Corporate Governance."
+        },
+        {
+          "paperId": "4316d76bd8f04bf55ce89a1168f71c37128e3887",
+          "externalIds": {
+            "DOI": "10.3390/su17093818",
+            "CorpusId": 278046954
+          },
+          "url": "https://www.semanticscholar.org/paper/4316d76bd8f04bf55ce89a1168f71c37128e3887",
+          "title": "AI-Driven Financial Transparency and Corporate Governance: Enhancing Accounting Practices with Evidence from Jordan",
+          "venue": "Sustainability",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "https://doi.org/10.3390/su17093818",
+            "status": "GOLD",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/su17093818?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/su17093818, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The impact of AI-driven financial transparency on corporate governance and regulatory reform, focusing on Jordan, is examined to contribute to the body of knowledge on AI-driven governance and provide insights for policymakers and corporate leaders."
+          },
+          "publicationDate": "2025-04-23",
+          "authors": [
+            {
+              "authorId": "97752362",
+              "name": "O. Shaban"
+            },
+            {
+              "authorId": "2357171161",
+              "name": "Arwa Omoush"
+            }
+          ],
+          "abstract": "Integrating artificial intelligence (AI) into financial transparency and corporate governance has reshaped how organizations ensure accountability, regulatory compliance, and risk management. This study examines the impact of AI-driven financial transparency on corporate governance and regulatory reform, focusing on Jordan. Utilizing a stratified random sampling approach, data were collected from 564 corporate professionals across key economic sectors. Statistical analyses, including structural equation modeling (SEM) and multiple regression analysis, reveal that AI adoption significantly enhances corporate governance effectiveness (R2 = 0.582), improves risk management (R2 = 0.502), and increases stakeholder engagement (R2 = 0.681). AI also facilitates regulatory compliance by automating monitoring processes and reducing human errors in financial disclosures. However, challenges such as bias in AI algorithms, data privacy concerns, and the need for regulatory adaptation persist. These findings contribute to the body of knowledge on AI-driven governance and provide insights for policymakers and corporate leaders."
+        },
+        {
+          "paperId": "3e1c05df8d62de0ce76db42ded81ef9c93891ce6",
+          "externalIds": {
+            "DBLP": "conf/eitce/WeiL24",
+            "DOI": "10.1145/3711129.3711250",
+            "CorpusId": 276524665
+          },
+          "url": "https://www.semanticscholar.org/paper/3e1c05df8d62de0ce76db42ded81ef9c93891ce6",
+          "title": "A Risk Prediction System for Business Management Decisions Based on Artificial Intelligence Generated Content",
+          "venue": "EITCE",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3711129.3711250?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3711129.3711250, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "A risk prediction system for enterprise operational decision-making is designed based on Artificial Intelligence Generated Content, focusing on risk prediction and control methods, indicating that the enterprise operational decision-making risk prediction system is feasible."
+          },
+          "publicationDate": "2024-10-18",
+          "authors": [
+            {
+              "authorId": "2346496875",
+              "name": "Xueling Wei"
+            },
+            {
+              "authorId": "2345403224",
+              "name": "Tao Lin"
+            }
+          ],
+          "abstract": "In response to the influencing factors and technical issues of enterprise operational decision-making risk prediction, a risk prediction system for enterprise operational decision-making is designed based on Artificial Intelligence Generated Content, focusing on risk prediction and control methods. The system utilizes tools and technologies such as large AI models and machine learning to conduct risk assessment model training, decision support model construction, and predictive compliance governance, forming a data source module along with risk identification, analysis, and evaluation modules. Through the training set, empirical risk is calculated, ultimately leading to targeted decision-making regarding enterprise operational risks. System simulation experiments were conducted using MATLAB, yielding a predicted value of -0.4419, which is close to the actual value of -0.4426. The results indicate that the enterprise operational decision-making risk prediction system is feasible."
+        },
+        {
+          "paperId": "b8593db1dbb2d4492f1bfd045bf880a1cd079f31",
+          "externalIds": {
+            "DOI": "10.22161/ijaems.116.19",
+            "CorpusId": 284466977
+          },
+          "url": "https://www.semanticscholar.org/paper/b8593db1dbb2d4492f1bfd045bf880a1cd079f31",
+          "title": "The Convergence of Supply Chain Management and Artificial Intelligence: Challenges and Opportunities",
+          "venue": "International Journal of Advanced engineering Management and Science",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.22161/ijaems.116.19?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.22161/ijaems.116.19, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "Findings indicate that AI integration delivers measurable efficiency and resilience gains but also introduces new risks related to data interoperability, explainability, cybersecurity, cybersecurity, and ethical governance."
+          },
+          "publicationDate": "2025-11-01",
+          "authors": [
+            {
+              "authorId": "2223621760",
+              "name": "Farjana Nawrin"
+            },
+            {
+              "authorId": "2402476094",
+              "name": "Prince David Hayibor"
+            },
+            {
+              "authorId": "2402476097",
+              "name": "Owen Atsu Soglohu"
+            },
+            {
+              "authorId": "2402635658",
+              "name": "Kofi Mensah Adams"
+            },
+            {
+              "authorId": "2402629694",
+              "name": "Terry Muringo Muriithi"
+            },
+            {
+              "authorId": "2349641478",
+              "name": "Farhad Akter"
+            },
+            {
+              "authorId": "2376949352",
+              "name": "J. Arthur"
+            }
+          ],
+          "abstract": "Artificial Intelligence (AI) is rapidly transforming the architecture and performance of global supply chains. The convergence of data-rich operations with machine learning (ML), reinforcement learning (RL), and generative large language models (LLMs) enables unprecedented levels of automation, foresight, and adaptability in supply chain management (SCM). This paper synthesizes recent literature (2023–2025) to examine how AI technologies reshape core SCM functions, forecasting, inventory optimization, logistics routing, procurement, and risk management, while identifying the governance and organizational challenges that shape adoption outcomes. Findings indicate that AI integration delivers measurable efficiency and resilience gains but also introduces new risks related to data interoperability, explainability, cybersecurity, and ethical governance. A governance-first operating model is proposed, emphasizing transparency, human oversight, and regulatory compliance as key enablers of sustainable AI deployment. The study concludes with a phased implementation roadmap and a future research agenda focused on responsible, interdisciplinary innovation at the intersection of AI and SCM."
+        },
+        {
+          "paperId": "c1ace643ed200c62e7b3c4b8b7a2e175f3abb4f3",
+          "externalIds": {
+            "DOI": "10.54660/.ijmrge.2021.2.1.772-780",
+            "CorpusId": 277440640
+          },
+          "url": "https://www.semanticscholar.org/paper/c1ace643ed200c62e7b3c4b8b7a2e175f3abb4f3",
+          "title": "A Conceptual Framework for AI-Driven Financial Risk Management and Corporate Governance Optimization",
+          "venue": "International Journal of Multidisciplinary Research and Growth Evaluation",
+          "year": 2021,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.54660/.ijmrge.2021.2.1.772-780?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.54660/.ijmrge.2021.2.1.772-780, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The paper presents a comprehensive conceptual framework for integrating AI-driven solutions into financial risk management and governance structures, including data sources, predictive analytics, real-time monitoring, and anomaly detection, which contribute to proactive risk mitigation and improved decision-making."
+          },
+          "publicationDate": null,
+          "authors": [
+            {
+              "authorId": "2352498400",
+              "name": "Adebanji Samuel Ogunmokun"
+            },
+            {
+              "authorId": "2352159135",
+              "name": "Emmanuel Damilare Balogun"
+            },
+            {
+              "authorId": "2352153270",
+              "name": "Kolade Olusola Ogunsola"
+            }
+          ],
+          "abstract": "This paper explores the transformative role of Artificial Intelligence (AI) in financial risk management and corporate governance optimization. As AI technologies evolve, they offer significant advancements in predicting, monitoring, and mitigating financial risks, enhancing corporate governance's transparency, accountability, and efficiency. The paper presents a comprehensive conceptual framework for integrating AI-driven solutions into financial risk management and governance structures. Key components of the framework include data sources, predictive analytics, real-time monitoring, and anomaly detection, all of which contribute to proactive risk mitigation and improved decision-making. Additionally, the framework emphasizes the importance of governance controls to ensure AI technologies' ethical and compliant deployment. The paper also addresses the challenges of AI integration, such as ethical concerns, model explainability, and regulatory adaptation. By examining real-world case studies, the paper demonstrates the practical applications of AI in enhancing financial stability and governance practices. The findings suggest that AI has the potential to reshape the future of financial ecosystems by enabling organizations to navigate risks better and ensure compliance. Finally, the paper outlines future research directions, including the need for further studies on AI ethics, cross-industry adoption, and regulatory frameworks to foster the responsible use of AI in these domains."
+        },
+        {
+          "paperId": "ada58e5214ce355bd6a2d20f8c37f46dad99f805",
+          "externalIds": {
+            "DOI": "10.54660/ijsser.2024.3.1.177-185",
+            "CorpusId": 276656845
+          },
+          "url": "https://www.semanticscholar.org/paper/ada58e5214ce355bd6a2d20f8c37f46dad99f805",
+          "title": "Enhancing corporate governance in financial institutions: Innovative solutions for compliance and performance",
+          "venue": "International Journal of Social Science Exceptional Research",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.54660/ijsser.2024.3.1.177-185?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.54660/ijsser.2024.3.1.177-185, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "In conclusion, enhancing corporate governance in financial institutions requires a comprehensive approach that integrates technology, governance frameworks, and collaboration to strengthen their governance practices, improve compliance, and drive sustainable performance in today's dynamic regulatory environment."
+          },
+          "publicationDate": null,
+          "authors": [
+            {
+              "authorId": "2345481379",
+              "name": "Oluwakemi Famoti"
+            },
+            {
+              "authorId": "2327883677",
+              "name": "Chikezie Paul-Mikki Ewim"
+            },
+            {
+              "authorId": "2345707706",
+              "name": "Okiomah Eloho"
+            },
+            {
+              "authorId": "2345610867",
+              "name": "Titilayo Priscilia Muyiwa-Ajayi"
+            },
+            {
+              "authorId": "2345481624",
+              "name": "Ogechukwu Nwanneka Ezechi"
+            },
+            {
+              "authorId": "2340614194",
+              "name": "Hope Ehiaghe Omokhoa"
+            }
+          ],
+          "abstract": "Enhancing corporate governance in financial institutions is crucial for ensuring compliance with regulations, managing risks, and improving performance. This Reviewexplores innovative solutions that financial institutions can implement to enhance corporate governance effectively. In today's complex regulatory environment, financial institutions face increasing pressure to comply with stringent governance standards while maintaining operational efficiency and competitiveness. This Reviewhighlights innovative approaches to corporate governance that address these challenges and drive sustainable performance. One key aspect of enhancing corporate governance is the adoption of technology-driven solutions. Financial institutions can leverage artificial intelligence (AI) and machine learning (ML) to automate compliance processes, improve risk management, and enhance decision-making. These technologies enable institutions to analyze vast amounts of data quickly and accurately, helping them identify potential risks and opportunities more effectively. Additionally, financial institutions can enhance corporate governance by implementing robust governance frameworks and structures. This includes establishing clear roles and responsibilities, fostering a culture of transparency and accountability, and ensuring compliance with regulatory requirements. By strengthening governance frameworks, institutions can mitigate risks, improve decision-making processes, and enhance overall performance. Furthermore, collaboration and partnerships with industry peers and regulators can also enhance corporate governance. Financial institutions can share best practices, collaborate on innovative solutions, and engage in dialogue with regulators to ensure alignment with regulatory expectations. This collaborative approach helps institutions stay ahead of regulatory developments and industry trends, enhancing their governance practices. In conclusion, enhancing corporate governance in financial institutions requires a comprehensive approach that integrates technology, governance frameworks, and collaboration. By adopting innovative solutions and best practices, financial institutions can strengthen their governance practices, improve compliance, and drive sustainable performance in today's dynamic regulatory environment."
+        },
+        {
+          "paperId": "cb82bf8ee676b6f677c7c5315f91e37ffcc8d3d9",
+          "externalIds": {
+            "DOI": "10.37420/j.emr.2024.020",
+            "CorpusId": 274809644
+          },
+          "url": "https://www.semanticscholar.org/paper/cb82bf8ee676b6f677c7c5315f91e37ffcc8d3d9",
+          "title": "Artificial Intelligence Application and Corporate Financial Distress",
+          "venue": "The Economics &amp; Management Review",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.37420/j.emr.2024.020?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.37420/j.emr.2024.020, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "Through the empirical tests of Chinese listed companies, it is found that AI technology can alleviate the financial distress of enterprises by improving the resource acquisition ability and risk management ability, and the heterogeneity tests find the effect of AI technology is better when the supply chain network more dispersed, the corporate governance environment better, as well as the enterprises controlled by state-owned property rights."
+          },
+          "publicationDate": "2024-05-04",
+          "authors": [
+            {
+              "authorId": "2335818300",
+              "name": "Rensi Li"
+            }
+          ],
+          "abstract": ": With the increasingly changeable external environment, enterprises face the threat of crisis at any time and may be in financial distress. The development of new technologies in the era of artificial intelligence (AI) provides new ideas and methods for enterprises to alleviate financial distress. We will study whether AI tech - nology can resolve the financial distress of the enterprises, and what is the impact mechanism. Through the empirical tests of Chinese listed companies, we find that AI technology can alleviate the financial distress of enterprises by improving the resource acquisition ability and risk management ability, and the heterogeneity tests find the effect of AI technology is better when the supply chain network more dispersed, the corporate governance environment better, as well as the enterprises controlled by state-owned property rights. So en - terprises should increase the research and development of AI technology application, improve corporate governance to promote the effect of AI technology greater, as well as use AI technology to provide references and advices for managers’ decision-making. We enrich the theoretical research of AI in the field of financial management, and provide new ideas for companies to alleviate financial distress in practice."
+        },
+        {
+          "paperId": "1fee4e316d707f1632b5f3f4923a43237dbc47e8",
+          "externalIds": {
+            "DOI": "10.1109/IDICAIHEI65991.2025.11379045",
+            "CorpusId": 286018437
+          },
+          "url": "https://www.semanticscholar.org/paper/1fee4e316d707f1632b5f3f4923a43237dbc47e8",
+          "title": "Artificial Intelligence - Driven Wealth Management: A Review of Reinforcement Learning, Time Series Forecasting, and Financial Decision Systems",
+          "venue": "2025 3rd DMIHER International Conference on Artificial Intelligence in Healthcare, Education and Industry (IDICAIHEI)",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/IDICAIHEI65991.2025.11379045?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/IDICAIHEI65991.2025.11379045, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2025-11-28",
+          "authors": [
+            {
+              "authorId": "2419568206",
+              "name": "Jeet Nakrani"
+            },
+            {
+              "authorId": "2419571327",
+              "name": "Dhiraj Nair"
+            },
+            {
+              "authorId": "2419585574",
+              "name": "Palak Gadekar"
+            },
+            {
+              "authorId": "2419583302",
+              "name": "Taral Dalvi"
+            },
+            {
+              "authorId": "91898937",
+              "name": "M. Tiwari"
+            }
+          ],
+          "abstract": "Artificial Intelligence (AI) is revolutionizing wealth management by enabling data- driven, real-time, and adaptive financial decision- making. This review investigates the role of advanced AI techniques, specifically Reinforcement Learning (RL), Long Short-Term Memory (LSTM), and Transformer-based models, in improving portfolio optimization, forecast accuracy, and risk mitigation. We provide a structured comparison of these approaches and examine their integration within scalable engineering frameworks such as robo-advisors and institutional trading platforms. Key challenges related to explainability, regulatory compliance, and deployment latency are also addressed through system-level design principles and risk governance strategies. The paper includes real-world use cases, performance benchmarks, and architectural insights. Conclusions identify research gaps in federated learning, sustainable AI, continual adaptation, and human-AI collaboration. This review serves as a comprehensive technical guide for practitioners and researchers looking to design AI-driven, compliant, and future-ready wealth management systems."
+        },
+        {
+          "paperId": "b5e6ad5eaaa96c65a67ffd03879500ff1e7261c2",
+          "externalIds": {
+            "DOI": "10.17323/j.jcfr.2073-0438.18.2.2024.17-25",
+            "CorpusId": 271439909
+          },
+          "url": "https://www.semanticscholar.org/paper/b5e6ad5eaaa96c65a67ffd03879500ff1e7261c2",
+          "title": "The Impact of Artificial Intelligence on Corporate Governance",
+          "venue": "Journal of Corporate Finance Research / Корпоративные Финансы | ISSN: 2073-0438",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "https://doi.org/10.17323/j.jcfr.2073-0438.18.2.2024.17-25",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.17323/j.jcfr.2073-0438.18.2.2024.17-25?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.17323/j.jcfr.2073-0438.18.2.2024.17-25, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The study’s recommendations include the establishment of ethical AI guidelines, the adoption of transparent AI practices, and the continuous monitoring of AI systems to ensure their alignment with corporate governance objectives and societal values."
+          },
+          "publicationDate": "2024-07-19",
+          "authors": [
+            {
+              "authorId": "2369462760",
+              "name": "Göktürk Kalkan"
+            }
+          ],
+          "abstract": "The advent of artificial intelligence (AI) marks a pivotal shift in the landscape of corporate governance, catalyzing a reevaluation of traditional frameworks and necessitating a forward-looking approach to decision-making, risk management, and ethical considerations. This study explores the multifaceted impact of AI on corporate governance, offering a nuanced analysis of how AI technologies are transforming the operational, strategic, and ethical dimensions of organizations. The research underscores the potential of AI to enhance decision-making processes, optimize operational efficiencies, and foster innovation by providing advanced analytical capabilities and predictive insights. However, it concurrently highlights the emergence of unprecedented challenges, including data privacy concerns, algorithmic bias, and the need for robust regulatory frameworks to mitigate risks associated with AI deployment. The article advocates for a proactive stance in redefining corporate governance models to accommodate the disruptive nature of AI, emphasizing the integration of ethical considerations and transparency in AI applications. It calls for a collaborative effort among corporate leaders, policymakers, and stakeholders to develop governance structures that not only leverage AI’s potential but also safeguard against its inherent risks. The study’s recommendations include the establishment of ethical AI guidelines, the adoption of transparent AI practices, and the continuous monitoring of AI systems to ensure their alignment with corporate governance objectives and societal values. However, it is important to note that the approach and methods used in this study are based on a qualitativeliterature review and, therefore, the generalization of the findings across different sectors and corporate governance frameworks may be limited. Additionally, the rapidly evolving nature of AI technologies poses inherent challenges to keeping up with emerging trends and potential risks."
+        },
+        {
+          "paperId": "355195e611ac250bbb920233890b402bf2300260",
+          "externalIds": {
+            "DOI": "10.2478/jles-2024-0016",
+            "CorpusId": 273895795
+          },
+          "url": "https://www.semanticscholar.org/paper/355195e611ac250bbb920233890b402bf2300260",
+          "title": "Legal Perspective on the Use of Artificial Intelligence in Corporate Governance in Nigeria: Potentials and Challenges",
+          "venue": "The Journal of Legal Studies",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "https://doi.org/10.2478/jles-2024-0016",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.2478/jles-2024-0016?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.2478/jles-2024-0016, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2024-11-06",
+          "authors": [
+            {
+              "authorId": "121101125",
+              "name": "M. P. Richard"
+            }
+          ],
+          "abstract": "Abstract From a legal standpoint, this paper critically examines the potential and challenges in deploying Artificial (AI) Intelligence in corporate governance in Nigeria. The examination revealed that leveraging AI in corporate governance could enhance corporate efficiency in Nigeria through improved decision-making, risk management, financial reporting, and stakeholder protection and engagement. However, possible bias and data privacy breaches are significant risks that pose ethical challenges when AI is deployed in corporate governance. Particularly, Nigeria is bisected by several socio-economic challenges, such as a lack of a robust AI framework and insufficient technological expertise to develop and optimize AI systems. Furthermore, Nigeria currently lacks comprehensive national AI legislation, thereby resulting in the absence of a legal basis for the effective deployment of AI in corporate governance and board management. Against this backdrop, this paper proposes an AI-based corporate governance framework, which can be adapted into future legislative reforms to streamline decision-making processes and improve board accountability and stakeholders’ protection in companies. Overall, it argues that AI legislation and policies are vital to the success of efforts to implement AI-based corporate governance in Nigeria."
+        },
+        {
+          "paperId": "7f1b58dcda3dc336160ee96ffee04635b3b2a65c",
+          "externalIds": {
+            "DOI": "10.62225/2583049x.2024.4.6.3916",
+            "CorpusId": 277426516
+          },
+          "url": "https://www.semanticscholar.org/paper/7f1b58dcda3dc336160ee96ffee04635b3b2a65c",
+          "title": "A Conceptual Model for Global Risk Management, Compliance, and Financial Governance in Multinational Corporations",
+          "venue": "International Journal of Advanced Multidisciplinary Research and Studies",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.62225/2583049x.2024.4.6.3916?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.62225/2583049x.2024.4.6.3916, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "A conceptual model designed to enhance global risk management, regulatory compliance, and financial governance in MNCs is presented, indicating that integrating AI, blockchain, and advanced risk management strategies significantly enhances regulatory compliance, financial stability, and corporate resilience."
+          },
+          "publicationDate": "2024-12-30",
+          "authors": [
+            {
+              "authorId": "2351664569",
+              "name": "Brenda Apiyo Mayienga"
+            },
+            {
+              "authorId": "2351660106",
+              "name": "Obianuju Clement Onwuzulike"
+            },
+            {
+              "authorId": "2350896476",
+              "name": "Ifeoluwa Oyeyipo"
+            },
+            {
+              "authorId": "2351658916",
+              "name": "Damilola Christiana Ayodeji"
+            },
+            {
+              "authorId": "2352720565",
+              "name": "Mark Osemedua Nwaozomudoh"
+            },
+            {
+              "authorId": "2350889738",
+              "name": "Verlinda Attipoe"
+            },
+            {
+              "authorId": "2345483645",
+              "name": "Jumai Ahmadu"
+            }
+          ],
+          "abstract": "In an increasingly interconnected global economy, multinational corporations (MNCs) face complex challenges in risk management, compliance, and financial governance. These challenges stem from diverse regulatory frameworks, geopolitical uncertainties, financial risks, and evolving technological landscapes. This paper presents a conceptual model designed to enhance global risk management, regulatory compliance, and financial governance in MNCs. The model integrates advanced risk assessment frameworks, artificial intelligence (AI)-driven compliance monitoring, and adaptive financial governance strategies to ensure resilience and efficiency. The proposed model incorporates a multi-layered risk management approach that aligns enterprise risk management (ERM) with international regulatory standards. It leverages predictive analytics and machine learning algorithms to identify, assess, and mitigate risks proactively. The compliance framework within the model integrates real-time regulatory tracking and automated reporting mechanisms, ensuring adherence to global financial regulations such as the Sarbanes-Oxley Act (SOX), Basel III, and General Data Protection Regulation (GDPR). Financial governance in MNCs necessitates transparency, accountability, and agility in decision-making. This study emphasizes the role of blockchain technology in financial reporting, fraud detection, and transaction integrity. A robust internal control system embedded within the model ensures financial discipline while addressing cross-border taxation, currency fluctuations, and cybersecurity threats. Additionally, the model incorporates governance mechanisms that foster ethical corporate behavior, stakeholder engagement, and sustainable business practices. The conceptual model is validated through a qualitative analysis of case studies from leading MNCs across various industries. The findings indicate that integrating AI, blockchain, and advanced risk management strategies significantly enhances regulatory compliance, financial stability, and corporate resilience. The study highlights the need for a dynamic, technology-driven governance framework that can adapt to evolving risks and regulatory environments. This research contributes to the body of knowledge on corporate risk management by offering a strategic roadmap for MNCs to navigate global financial uncertainties effectively. Future research should focus on empirical validation of the model using quantitative data and real-world implementation insights."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,908 @@
+{
+  "source": "semantic_scholar",
+  "label": "Semantic Scholar",
+  "query": "\"artificial intelligence\" \"federal government\" \"risk management\" \"systematic review\" governance compliance integrity",
+  "retrieved": 25,
+  "warnings": [],
+  "saved_at": "2026-04-16T10:23:57.309408",
+  "pages": [
+    {
+      "total": 162,
+      "offset": 0,
+      "next": 25,
+      "data": [
+        {
+          "paperId": "028ee2810da1fa420b1d92a8517cb95c8a98f9f0",
+          "externalIds": {
+            "DOI": "10.22624/aims/sij/v11n4p4x",
+            "CorpusId": 287429565
+          },
+          "url": "https://www.semanticscholar.org/paper/028ee2810da1fa420b1d92a8517cb95c8a98f9f0",
+          "title": "A Systematic Review of Blockchain-Based Frameworks for Privacy-Preserving Cyber Threat Intelligence Sharing and Risk Management",
+          "venue": "Advances in Multidisciplinary &amp; Scientific Research Journal Publication",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.22624/aims/sij/v11n4p4x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.22624/aims/sij/v11n4p4x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "Findings show that blockchain can enhance transparency, accountability, and trust in CTI sharing, yet significant challenges remain, including scalability, interoperability, computational overhead, and regulatory compliance."
+          },
+          "publicationDate": "2025-12-30",
+          "authors": [
+            {
+              "authorId": "2429397358",
+              "name": "Shama Chidi Egejuru"
+            },
+            {
+              "authorId": "2429398818",
+              "name": "Paul Nosike"
+            },
+            {
+              "authorId": "67130607",
+              "name": "N. C. Egejuru"
+            }
+          ],
+          "abstract": "Cyber Threat Intelligence (CTI) sharing is a key element of collaborative cyber defense, enabling organizations to anticipate, detect, and mitigate threats proactively. Traditional centralized CTI platforms, however, face ongoing challenges in trust, privacy, data integrity, and governance. Blockchain, with its decentralized, immutable, and cryptographically secure design, has emerged as a potential solution. This systematic review, conducted using the PRISMA framework, synthesizes peer-reviewed studies from 2016 to 2025, examining blockchain-based CTI architectures, privacy mechanisms, consensus protocols, incentive models, and their integration with cyber risk management. Findings show that blockchain can enhance transparency, accountability, and trust in CTI sharing, yet significant challenges remain, including scalability, interoperability, computational overhead, and regulatory compliance. The study concludes by highlighting research gaps and future directions for advancing practical blockchain enabled CTI systems.\n\nKeywords: Cybersecurity, Cyber Threat Intelligence, Blockchain, Data, Share, Privacy Preservation, \n Risk Management, Systematic Review\n\nJournal Reference Format:\nEgejuru Shama Chidi, Nosike Paul & Egejuru Ngozi Chidozie (2025): A Systematic Review of Blockchain-Based Frameworks for Privacy-Preserving Cyber Threat Intelligence Sharing and Risk Management. Social Informatics, Business, Politics, Law, Environmental Sciences & Technology Journal. Vol. 11, No. 4. Pp 55-62. www.isteams/socialinformaticsjournal. \ndx.doi.org/10.22624/AIMS/SIJ/V11N4P4x"
+        },
+        {
+          "paperId": "0b7706ed1b38a89315ba6fe5c468ae4dbdee9d0e",
+          "externalIds": {
+            "DOI": "10.71420/ijref.v3i1.246",
+            "CorpusId": 285443755
+          },
+          "url": "https://www.semanticscholar.org/paper/0b7706ed1b38a89315ba6fe5c468ae4dbdee9d0e",
+          "title": "Artificial Intelligence and Corporate Tax Risk Management: A Systematic Literature Review",
+          "venue": "International Journal of Research in Economics and Finance",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.71420/ijref.v3i1.246?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.71420/ijref.v3i1.246, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This study presents a systematic literature review examining the transformative role of artificial intelligence in corporate tax risk management, revealing that AI offers significant potential to improve efficiency and effectiveness in tax risk management, yet successful implementation requires robust governance structures, ethical organizational cultures, and supportive regulatory environments."
+          },
+          "publicationDate": "2026-02-05",
+          "authors": [
+            {
+              "authorId": "2409738604",
+              "name": "Ismail Ben-alla"
+            },
+            {
+              "authorId": "2092620933",
+              "name": "Mohammed Nmili"
+            }
+          ],
+          "abstract": "This study presents a systematic literature review examining the transformative role of artificial intelligence (AI) in corporate tax risk management. As globalization, regulatory scrutiny, and digitalization increase corporate tax complexity, AI technologies including machine learning, predictive analytics, and automated compliance systems are reshaping how organizations identify, assess, and manage tax-related risks. The review synthesizes research across taxation, corporate governance, risk management, and algorithmic decision-making, exploring AI applications in enhancing tax compliance, fraud detection, tax planning, and governance frameworks. It reveals that AI offers significant potential to improve efficiency and effectiveness in tax risk management, yet successful implementation requires robust governance structures, ethical organizational cultures, and supportive regulatory environments. Critically, the study examines challenges associated with algorithmic decision-making, including transparency, fairness, accountability, and trust. It identifies persistent research gaps concerning developing economies, long-term organizational impacts, and unintended consequences of automated tax decisions. By consolidating fragmented literature streams, the paper provides a conceptual foundation for strategically integrating AI into corporate tax risk management and offers directions for future research and policy development in this evolving field."
+        },
+        {
+          "paperId": "5f0a11a00db1afd84f7ba5778bdc1f8f80aaac4e",
+          "externalIds": {
+            "DOI": "10.30574/wjarr.2023.18.2.0833",
+            "CorpusId": 286382791
+          },
+          "url": "https://www.semanticscholar.org/paper/5f0a11a00db1afd84f7ba5778bdc1f8f80aaac4e",
+          "title": "Literature Review of Artificial Intelligence Security Governance Frameworks: Risk Management Strategies for Regulated Industries Including Healthcare, Financial Services, and Gaming",
+          "venue": "World Journal of Advanced Research and Reviews",
+          "year": 2023,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.30574/wjarr.2023.18.2.0833?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.30574/wjarr.2023.18.2.0833, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This literature review is a systematic review of AI security governance frameworks in three highly regulated areas, namely healthcare, financial services, and gaming, and indicates that financial services are the most mature area of governance (compliance score: 87/100 by 2023), whereas the gaming industry has the lowest level of audit of algorithmic bias, explainability, and compliance of cross-border data."
+          },
+          "publicationDate": "2023-05-31",
+          "authors": [
+            {
+              "authorId": "2422783478",
+              "name": "Adeyemi A. Bello"
+            },
+            {
+              "authorId": "70033055",
+              "name": "Julie L. Reneau"
+            }
+          ],
+          "abstract": "The fast development of artificial intelligence in the regulated sphere has generated an intricate and dynamic security governance environment that the current regulatory framework did not intend to tackle in all its aspects. This literature review is a systematic review of AI security governance frameworks in three highly regulated areas, namely healthcare, financial services, and gaming. In a PRISMA-conformant approach, we compiled 16 peer-reviewed articles out of an original sample of 48 Scopus documents, complemented with regulatory documents, industry report, and data on expert surveys (n=124 cybersecurity professionals). Cohen-based kappa (κ = 0.88) was used to determine the inter-rater reliability and it was found to be very high. The review assesses the NIST AI Risk Management Framework, the ISO/IEC 42001, and the EU AI Act on eight dimensions of governance. This indicates that financial services are the most mature area of governance (compliance score: 87/100 by 2023), whereas the gaming industry has the lowest level of audit of algorithmic bias, explainability, and compliance of cross-border data. The case of healthcare is full of paradoxes of good regulatory intent and poor execution. There are five important areas of governance that need to be addressed as a matter of urgency, which include AI model explainability, standards of adversarial robustness, supply chain AI risk management, cross-sector incident sharing, and adaptive regulatory sandboxing."
+        },
+        {
+          "paperId": "1a5e4b70eb8ce98bcb64be1be04cfecc6ab837f7",
+          "externalIds": {
+            "DOI": "10.25236/ajcis.2025.080311",
+            "CorpusId": 278654074
+          },
+          "url": "https://www.semanticscholar.org/paper/1a5e4b70eb8ce98bcb64be1be04cfecc6ab837f7",
+          "title": "Data Risk and Data Compliance Governance for Generative Artificial Intelligence",
+          "venue": "Academic Journal of Computing &amp; Information Science",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.25236/ajcis.2025.080311?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.25236/ajcis.2025.080311, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The findings suggest the necessity of sound data compliance governance towards the long-term evolution of generative AI and emphasize the need for multidimensional data governance that brings technology, law, and ethics into harmonious alignment."
+          },
+          "publicationDate": null,
+          "authors": [
+            {
+              "authorId": "2341189639",
+              "name": "Zhuoran Li"
+            }
+          ],
+          "abstract": ": Generative Artificial Intelligence (Generative AI), being a revolutionary technology, has exhibited varied uses across industries. However, its rapid development has also brought with it high data risks, including leakage of privacy, unauthorized access to data, improper processing of data, abuse of data, infringement of intellectual property rights, and creation of counterfeit information. This paper systematically reviews such risks and explores the current status of generative AI in global and Chinese data compliance regulation. Clarifying existing regulations and highlighting the main challenges, this study presents solutions for enhancing awareness of data privacy protection, enhancing data usage authorization management, enhancing data storage and security functions, and strengthening international cooperation and standardization. The findings suggest the necessity of sound data compliance governance towards the long-term evolution of generative AI and emphasize the need for multidimensional data governance that brings technology, law, and ethics into harmonious alignment."
+        },
+        {
+          "paperId": "e58ead0e7046b3693390bf82c4b3ef5849b0593e",
+          "externalIds": {
+            "DOI": "10.70593/deepsci.0202035",
+            "CorpusId": 286955455
+          },
+          "url": "https://www.semanticscholar.org/paper/e58ead0e7046b3693390bf82c4b3ef5849b0593e",
+          "title": "Artificial intelligence, corporate information governance, and Environmental, Social, and Governance (ESG) performance: A systematic review",
+          "venue": "International Journal of Applied Resilience and Sustainability",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.70593/deepsci.0202035?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.70593/deepsci.0202035, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The review suggests an integrative approach between Artificial Intelligence, Corporate Information Governance and ESG performance based on responsible digital governance, sustainability-minded innovation, and regulatory alignment to present a future research agenda on AI ethics, sustainable digital transformation, Governance automation, and ESG intelligent systems to inform scholars and policymakers, as well as corporate leaders."
+          },
+          "publicationDate": "2026-03-28",
+          "authors": [
+            {
+              "authorId": "2375432643",
+              "name": "Swarup Panda"
+            }
+          ],
+          "abstract": "The development of Artificial Intelligence (AI) in business decision-making has posed new risks to corporate information governance, regulatory compliance, and Environmental, Social, and Governance (ESG) performance, making transparency, accountability, and responsible innovation issues a concern. Though there is an increasing interest in AI governance, sustainable corporate governance, and ESG disclosure, the literature is still not synthesized, and data governance, algorithmic accountability, and digital sustainability have not been visualized in a coherent structure. To fill this gap, the proposed study is a systematic literature review on AI-driven governance, ESG reporting, responsible AI, and corporate sustainability performance. The review syntactically examines recent studies on the topic of AI adoption, information governance mechanisms, ethical AI, green innovation, AI-enabled ESG reporting, and digital corporate governance with the emergent themes of explainable AI, regulatory technology (RegTech), sustainable finance analytics, AI risk management, and stakeholder-centric governance models. Results show that properly-coordinated AI governance systems with corporate information governance frameworks can produce a substantial increase in ESG performance, quality disclosure, the predictive sustainability analytics, and organizational accountability. Nevertheless, the literature also points to the dangers of algorithmic bias, data privacy, automated reporting as greenwashing, and poor frameworks of AI oversight, so the need to ensure strong governance architectures. The review suggests an integrative approach between Artificial Intelligence, Corporate Information Governance and ESG performance based on responsible digital governance, sustainability-minded innovation, and regulatory alignment to present a future research agenda on AI ethics, sustainable digital transformation, Governance automation, and ESG intelligent systems to inform scholars and policymakers, as well as corporate leaders."
+        },
+        {
+          "paperId": "4a24453a74bd34921ec9d6694336e3d1c509d8cb",
+          "externalIds": {
+            "DOI": "10.47604/ijts.2164",
+            "CorpusId": 264825221
+          },
+          "url": "https://www.semanticscholar.org/paper/4a24453a74bd34921ec9d6694336e3d1c509d8cb",
+          "title": "A Systematic Review of the Use of Artificial Intelligence in Managing Innovation in E-Government Organizations Worldwide",
+          "venue": "International journal of technology and systems",
+          "year": 2023,
+          "openAccessPdf": {
+            "url": "https://www.iprjb.org/journals/index.php/IJTS/article/download/2164/2459",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.47604/ijts.2164?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.47604/ijts.2164, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The findings of this study could be resourceful for top-tier decision-makers in national and local e-government organizations, allowing them to refine their strategies for AI amalgamation and enhance service provision."
+          },
+          "publicationDate": "2023-10-30",
+          "authors": [
+            {
+              "authorId": "2263652440",
+              "name": "Mayid Alshaer"
+            }
+          ],
+          "abstract": "Purpose: This paper delivers a methodical literature review that focuses on the application of artificial intelligence (AI) to handle innovation within e-government organizations globally. \nMethodology: Showcasing meticulousness, the review utilized a structured method to scrutinize 11 academic studies obtained from established, globally renowned databases, such as Scopus and Web of Science. \nFindings: The findings underscore an expansive array of AI applications within e-government's innovation management, incorporating data-led decision processes, chatbots for effective consumer service, sentiment inspection for useful citizen critique, and predictive analysis for service refinement. Conversely, incorporating AI within e-government establishments encounters considerable hurdles regarding data presence and integrity, transparency and interoperability concerns, ethical considerations, as well as sustainability and expansion challenges. The review strongly underlines the necessity for calculated investments towards resource augmentation and technological infrastructure. \nUnique Contribution to Theory, Practice and Policy: The integration of artificial intelligence (AI) into e-government innovation may shape the direction of ensuing research in digital governance and public administration. Beneficiaries of the comprehensive insights this scholarly study offers include e-government experts, scholars, and tech innovators hailing from manifold geographical spaces. The findings of this study could be resourceful for top-tier decision-makers in national and local e-government organizations, allowing them to refine their strategies for AI amalgamation and enhance service provision."
+        },
+        {
+          "paperId": "f28c99dacd3d996ddffcba3e92aa106e6728ddf6",
+          "externalIds": {
+            "DOI": "10.55643/fcaptp.2.61.2025.4698",
+            "CorpusId": 278245684
+          },
+          "url": "https://www.semanticscholar.org/paper/f28c99dacd3d996ddffcba3e92aa106e6728ddf6",
+          "title": "THE ROLE OF FINTECH IN TRANSFORMING RISK MANAGEMENT AND FINANCIAL SERVICES: A SYSTEMATIC REVIEW AND META-ANALYSIS",
+          "venue": "Financial and credit activity problems of theory and practice",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55643/fcaptp.2.61.2025.4698?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55643/fcaptp.2.61.2025.4698, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The meta-analysis revealed that blockchain technology enhances financial security and transparency, particularly post-COVID, addressing operational risks with a modest but non-significant effect, while AI excels in fraud detection and predictive analytics."
+          },
+          "publicationDate": "2025-04-30",
+          "authors": [
+            {
+              "authorId": "2090346422",
+              "name": "N. Almasria"
+            },
+            {
+              "authorId": "133826231",
+              "name": "Diala Ershaid"
+            },
+            {
+              "authorId": "2358530774",
+              "name": "Yaser Ahmad Jalghoum"
+            },
+            {
+              "authorId": "2358535016",
+              "name": "Amer Almajali"
+            }
+          ],
+          "abstract": "Integrating artificial intelligence and blockchain in financial services has transformed risk management, enabling advanced fraud detection, compliance, and predictive analytics. However, there is a significant gap in the literature regarding a meta-analytic comparison of these technologies' effectiveness within the sector. The study aims to bridge the gap by conducting a meta-analysis, assessing the impact of AI and blockchain on various aspects of financial risk management. The study includes a meta-analysis approach, systematically synthesizing findings from recent studies on blockchain and AI in financial risk management. Following strict inclusion criteria, a comprehensive search through Scopus and Google Scholar led to the selection of 36 studies for analysis. The forest plots and summary tables were generated using Meta-Essentials, a statistical tool for meta-analyses that calculates effect sizes, confidence intervals, and pooled estimates using fixed and random effects models for accurate interpretation. The meta-analysis revealed that blockchain technology enhances financial security and transparency, particularly post-COVID, addressing operational risks with a modest but non-significant effect (HR = 1.04, 95% CI: 0.99-1.10, p = 0.11). AI demonstrated a neutral impact on risk management (HR = 0.99, 95% CI: 0.94-1.04, p = 0.71) but excelled in fraud detection and predictive analytics. Funnel plot analysis showed minimal publication bias, and forest plots confirmed consistent findings across studies. These results showed that Blockchain enhances transparency and security post-COVID, mitigating financial digital threats, while AI excels in fraud detection and predictive analytics. AI revolutionizes risk management through predictive insights, while blockchain ensures data integrity. Future research should refine sector-specific applications for both technologies."
+        },
+        {
+          "paperId": "a4c91a99f5ae7f5b40649c47a9becebfd47ca8e4",
+          "externalIds": {
+            "DOI": "10.11113/oiji2023.11n2.266",
+            "CorpusId": 270910327
+          },
+          "url": "https://www.semanticscholar.org/paper/a4c91a99f5ae7f5b40649c47a9becebfd47ca8e4",
+          "title": "Review of The Governance, Risk and Compliance Approaches For Artificial Intelligence",
+          "venue": "Open international journal of informatics",
+          "year": 2023,
+          "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.11113/oiji2023.11n2.266?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.11113/oiji2023.11n2.266, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This study endeavours to aggregate the perspectives from multiple review studies to shed light on the approaches pertaining to the governance, risk management and compliance of artificial intelligence."
+          },
+          "publicationDate": "2023-12-18",
+          "authors": [
+            {
+              "authorId": "2285320259",
+              "name": "David Lau"
+            },
+            {
+              "authorId": "2280493",
+              "name": "Ganthan Narayana Samy"
+            },
+            {
+              "authorId": "68973093",
+              "name": "Fiza Abdul Rahim"
+            },
+            {
+              "authorId": "2142987979",
+              "name": "Nurazean Maarop"
+            },
+            {
+              "authorId": "2302624972",
+              "name": "Noor Hafizah Hassan"
+            }
+          ],
+          "abstract": "Advancement in the domain of big data, computing power and internet of things continue to spur the development of algorithmic models that morphed into artificial intelligence. Notable achievements have been made in the application of artificial intelligence in image recognition, natural language processing, smart farming, personal learning assistance, and autonomous systems. As its adoption increases and proliferates into every sphere of activities, governments, businesses and organizations begin to formulate strategies and measures to facilitate its adoption even as it is still rapidly progressing. Meanwhile, artificial intelligence’s impact to the individual, organizational and societal levels as well as the mechanisms to ensure realization of its benefits and minimization of its drawbacks are actively being pursued by the academic communities. This study endeavours to aggregate the perspectives from multiple review studies to shed light on the approaches pertaining to the governance, risk management and compliance of artificial intelligence. The concepts, elements and practices relevant to the three aspects are presented together with the proposed way forward to facilitate artificial intelligence adoption by the organizations."
+        },
+        {
+          "paperId": "4de2d99d1d0eadcc28b1502abef4ce3add919d76",
+          "externalIds": {
+            "DOI": "10.1080/13669877.2025.2512080",
+            "CorpusId": 279065334
+          },
+          "url": "https://www.semanticscholar.org/paper/4de2d99d1d0eadcc28b1502abef4ce3add919d76",
+          "title": "Artificial intelligence in construction risk management: a decade of developments, challenges, and integration pathways",
+          "venue": "Journal of Risk Research",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1080/13669877.2025.2512080?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1080/13669877.2025.2512080, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "A functional taxonomy that maps AI methods to distinct risk management tasks and phases is offered and an integrated AI–risk management lifecycle framework is introduced that aligns AI capabilities with construction project needs."
+          },
+          "publicationDate": "2025-05-31",
+          "authors": [
+            {
+              "authorId": "2358888070",
+              "name": "Kun Tian"
+            },
+            {
+              "authorId": "2358877060",
+              "name": "Zicheng Zhu"
+            },
+            {
+              "authorId": "2307726188",
+              "name": "Jasper Mbachu"
+            },
+            {
+              "authorId": "2273257768",
+              "name": "Matthew Moorhead"
+            },
+            {
+              "authorId": "2284088364",
+              "name": "Amir Ghanbaripour"
+            }
+          ],
+          "abstract": "Abstract The increasing complexity and uncertainty of construction projects have driven a paradigm shift in risk management, with Artificial Intelligence (AI) emerging as a transformative tool. This systematic review examines 87 peer-reviewed studies published between 2014 and 2024, assessing the role of AI technologies—including machine learning (ML), natural language processing (NLP), knowledge-based reasoning (KBR), optimisation algorithms (OAs), and computer vision (CV)—across the construction risk management lifecycle. Using PRISMA guidelines and NVivo-based mixed-method analysis, the review identifies AI’s core functions in risk identification, assessment, response, and monitoring, while uncovering key barriers such as fragmented implementation, limited adaptability, and socio-organisational resistance. ML and CV dominate predictive and visual analysis, while NLP and KBR support compliance and rule-based decision-making; OAs optimise resource trade-offs. Despite increasing research, critical gaps persist, including fragmented AI integration, limited attention to implementation barriers, and underrepresentation of adaptive response and monitoring stages. This paper makes four specific contributions: (1) it offers a functional taxonomy that maps AI methods to distinct risk management tasks and phases; (2) it synthesizes technical, organisational, and ethical challenges hindering real-world AI adoption; (3) it introduces an integrated AI–risk management lifecycle framework that aligns AI capabilities with construction project needs; and (4) it extends classical risk epistemologies by embedding Beck’s, Power’s, and Aven’s perspectives into the discourse on AI governance. These contributions provide a structured foundation for advancing research and guiding practitioners toward responsible, resilient, and explainable AI deployment in high-stakes construction environments."
+        },
+        {
+          "paperId": "00fb98bf79ace05acc8e52b65f9ed288554bf9a5",
+          "externalIds": {
+            "DOI": "10.26577/be202515223",
+            "CorpusId": 280805809
+          },
+          "url": "https://www.semanticscholar.org/paper/00fb98bf79ace05acc8e52b65f9ed288554bf9a5",
+          "title": "Artificial intelligence-based risk management for the banking sector: impact and challenges",
+          "venue": "Journal of Economic Research &amp; Business Administration",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.26577/be202515223?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.26577/be202515223, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The research concludes that AI-driven models have the potential to revolutionize financial risk governance by enabling proactive, data-driven decision-making and fostering operational resilience."
+          },
+          "publicationDate": "2025-06-20",
+          "authors": [
+            {
+              "authorId": "2318403393",
+              "name": "L. Kuanova"
+            },
+            {
+              "authorId": "2377036407",
+              "name": "A.N. Otegen"
+            },
+            {
+              "authorId": "2323416394",
+              "name": "G. Kenzhegulova"
+            },
+            {
+              "authorId": "2370020514",
+              "name": "P. Karácsony"
+            }
+          ],
+          "abstract": "The aim of this study is to comprehensively examine the impact of artificial intelligence (AI) technologies on risk management in the banking sector. The research focuses on how machine learning, natural language processing, and predictive analytics enhance credit scoring, fraud detection, and regulatory compliance. A mixed-method approach was applied, including a systematic literature review, machine learning based analysis of open banking datasets(Kaggle), and a survey of 200 bank employees in the Middle East. The findings demonstrate that ensemble models such as XGBoost and Random Forest significantly outperform traditional techniques in prediction accuracy and classification efficiency. The scientific novelty lies in the development of a comprehensive framework for integrating AI into banking risk management systems while addressing ethical and regulatory concerns, practices, and minimize financial losses.\nFurthermore, the study identifies key challenges, including data privacy concerns, model interpretability, and regulatory constraints, that may hinder the effective integration of AI in banking. The research concludes that AI-driven models have the potential to revolutionize financial risk governance by enabling proactive, data-driven decision-making and fostering operational resilience. Strategic recommendations are provided to guide financial institutions and policymakers in implementing ethical and secure AI frameworks for sustainable innovation.\nKey words: artificial intelligence, risk management, the financial health of banks, machine learning decision-making, banking sector."
+        },
+        {
+          "paperId": "1e3b7059666671d780c63caecbde4990ee9e272c",
+          "externalIds": {
+            "DOI": "10.1590/0034-761220250042x",
+            "CorpusId": 285084334
+          },
+          "url": "https://www.semanticscholar.org/paper/1e3b7059666671d780c63caecbde4990ee9e272c",
+          "title": "Integration of governance, risk management, and integrity in public administration",
+          "venue": "Revista de Administración Pública",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1590/0034-761220250042x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1590/0034-761220250042x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": null,
+          "authors": [
+            {
+              "authorId": "2407102661",
+              "name": "Alessandro Bandeira de Oliveira"
+            },
+            {
+              "authorId": "2307313266",
+              "name": "Paulo Vitor Jordão da Gama Silva"
+            },
+            {
+              "authorId": "2408560521",
+              "name": "Josir Simeone Gomes"
+            }
+          ],
+          "abstract": "This study investigates the integration of governance, risk management, and integrity in federal public administration through a systematic literature review in Journal Citation Reports. The analysis included articles published from 2000 to 2024 in the Web of Science and Scopus databases, applying the Methodi Ordinatio protocol to select the most relevant studies. The findings indicate that governance is a structuring element, promoting a robust institutional environment to mitigate risks and strengthen public integrity. Risk management fosters an ethical, proactive, and resilient organizational culture, while public integrity, based on ethical values and anti-corruption efforts, reinforces transparency and increases social trust. The analysis highlights the strategic role of digital technologies, organizational innovation, and ethical leadership in preventing corruption and modernizing public management. As its main contribution, the research proposes an integrative theoretical model to support public policies, optimize decisions, and improve administrative practices, strengthening governance and boosting the effectiveness, transparency, and credibility of government institutions."
+        },
+        {
+          "paperId": "a3a568f2524fb10462e05d0dd415713249007cbd",
+          "externalIds": {
+            "DOI": "10.36713/epra26817",
+            "CorpusId": 287369645
+          },
+          "url": "https://www.semanticscholar.org/paper/a3a568f2524fb10462e05d0dd415713249007cbd",
+          "title": "ARTIFICIAL INTELLIGENCE AND ETHICAL RISK GOVERNANCE IN FINANCIAL DECISION-MAKING: EXAMINING FAIRNESS, ACCOUNTABILITY, AND POLICY ALIGNMENT",
+          "venue": "EPRA International Journal of Economics, Business and Management Studies",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.36713/epra26817?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.36713/epra26817, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "A triadic AI Ethical Risk Governance Model integrating fairness, accountability, and policy alignment as pillars for responsible AI in finance is proposed, vital to ensuring ethical legitimacy, public trust, and sustainable digital finance."
+          },
+          "publicationDate": "2026-04-11",
+          "authors": [
+            {
+              "authorId": "2429147835",
+              "name": "Joshua Pallapati"
+            },
+            {
+              "authorId": "2387611039",
+              "name": "Matthew Oman-Amoako"
+            }
+          ],
+          "abstract": "The rapid adoption of Artificial Intelligence (AI) in financial systems has revolutionized decision-making, risk management, and compliance processes. Yet, this transformation has also created profound ethical and governance dilemmas. While AI enhances accuracy and operational efficiency, it simultaneously amplifies issues of bias, opacity, and accountability, raising questions about the moral legitimacy and regulatory adequacy of algorithmic finance. The core problem this review addresses is the absence of an integrated governance framework that effectively aligns technological innovation with ethical responsibility and regulatory coherence. Existing systems remain fragmented: financial institutions adopt AI for competitive advantage, regulators struggle to keep pace, and ethical safeguards are often reactive or inconsistent. Consequently, fairness and accountability—essential principles for market integrity and social trust—are inadequately embedded across the AI lifecycle. This study harmonizes conceptual and policy perspectives by comparing key international frameworks, including the EU Artificial Intelligence Act (Regulation (EU) 2024/1689), the U.S. NIST AI Risk Management Framework (2023), the Blueprint for an AI Bill of Rights (2022), and Singapore’s Model AI Governance Framework (2022). Findings reveal enduring tensions between innovation and moral oversight. The paper proposes a triadic AI Ethical Risk Governance Model integrating fairness, accountability, and policy alignment as pillars for responsible AI in finance. Ultimately, embedding these principles throughout the AI lifecycle is vital to ensuring ethical legitimacy, public trust, and sustainable digital finance.\nKeywords: Ethical AI Governance, Algorithmic Fairness, Accountability and Transparency, Risk Regulation in Finance, AI Policy Alignment, Responsible Innovation."
+        },
+        {
+          "paperId": "20f462514d57ced80d32a7f45be43a5c2a43843b",
+          "externalIds": {
+            "DOI": "10.65150/ep-jsshrs/v1e6/2025-04",
+            "CorpusId": 284209722
+          },
+          "url": "https://www.semanticscholar.org/paper/20f462514d57ced80d32a7f45be43a5c2a43843b",
+          "title": "Auditing Artificial Intelligence in Public Management: A Framework for Accountability, Transparency, and Ethical Governance",
+          "venue": "Journal of Social Science and Human Research Studies",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.65150/ep-jsshrs/v1e6/2025-04?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.65150/ep-jsshrs/v1e6/2025-04, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "A comprehensive framework for auditing AI systems in public sector contexts, addressing both technical and governance dimensions is proposed, recognizing that effective AI auditing requires multi-dimensional approaches combining technical validation, ethical assessment, legal compliance verification, and stakeholder engagement."
+          },
+          "publicationDate": "2025-12-22",
+          "authors": [
+            {
+              "authorId": "2400617747",
+              "name": "Juan Carlos Rodríguez Luna"
+            }
+          ],
+          "abstract": "The integration of Artificial Intelligence (AI) in public management has transformed governmental operations, decision-making processes, and service delivery mechanisms. However, this technological adoption introduces unprecedented challenges in accountability, transparency, bias mitigation, and ethical governance. This article proposes a comprehensive framework for auditing AI systems in public sector contexts, addressing both technical and governance dimensions. Through systematic literature review and analysis of emerging regulatory frameworks, we identify critical audit domains including algorithmic transparency, data governance, decision explicability, bias detection, and compliance verification. The study examines case implementations in public procurement, social services, and administrative decision-making, drawing insights from international experiences and regulatory developments. Key findings reveal that effective AI auditing requires multi-dimensional approaches combining technical validation, ethical assessment, legal compliance verification, and stakeholder engagement. The proposed framework establishes methodological guidelines for internal auditors, external oversight bodies, and governance structures, emphasizing risk-based auditing strategies aligned with public sector accountability principles. This research contributes to the emerging discourse on AI governance in public administration by providing practical audit methodologies adaptable to diverse governmental contexts while maintaining democratic values and citizen protection standards."
+        },
+        {
+          "paperId": "78345a7d8f1e9c46a55861d65efe9e1d4e02b301",
+          "externalIds": {
+            "DBLP": "journals/fi/ElkhodrWGK24",
+            "DOI": "10.3390/fi16100378",
+            "CorpusId": 273477296
+          },
+          "url": "https://www.semanticscholar.org/paper/78345a7d8f1e9c46a55861d65efe9e1d4e02b301",
+          "title": "A Systematic Review and Multifaceted Analysis of the Integration of Artificial Intelligence and Blockchain: Shaping the Future of Australian Higher Education",
+          "venue": "Future Internet",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/fi16100378?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/fi16100378, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The research concludes that blockchain, when strategically implemented and combined with AI, has the potential to transform the Australian higher education system, significantly enhancing its integrity, efficiency, and global competitiveness."
+          },
+          "publicationDate": "2024-10-18",
+          "authors": [
+            {
+              "authorId": "2394078088",
+              "name": "Mahmoud Elkhodr"
+            },
+            {
+              "authorId": "2180964224",
+              "name": "Ketmanto Wangsa"
+            },
+            {
+              "authorId": "2524545",
+              "name": "E. Gide"
+            },
+            {
+              "authorId": "47382404",
+              "name": "Shakir Karim"
+            }
+          ],
+          "abstract": "This study explores the applications and implications of blockchain technology in the Australian higher education system, focusing on its integration with artificial intelligence (AI). By addressing critical challenges in credential verification, administrative efficiency, and academic integrity, this integration aims to enhance the global competitiveness of Australian higher education institutions. A comprehensive review of 25 recent research papers quantifies the benefits, challenges, and prospects of blockchain adoption in educational settings. Our findings reveal that 52% of the reviewed papers focus on systematic reviews, 28% focus on application-based studies, and 20% combine both approaches. The keyword analysis identified 287 total words, with “blockchain” and “education” as the most prominent themes. This study highlights blockchain’s potential to improve credential management, academic integrity, administrative efficiency, and funding mechanisms in education. However, challenges such as technical implementation (24%), regulatory compliance (32%), environmental concerns (28%), and data security risks (40%) must be addressed to achieve widespread adoption. This study also discusses critical prerequisites for successful blockchain integration, including infrastructure development, staff training, regulatory harmonisation, and the incorporation of AI for personalised learning. Our research concludes that blockchain, when strategically implemented and combined with AI, has the potential to transform the Australian higher education system, significantly enhancing its integrity, efficiency, and global competitiveness."
+        },
+        {
+          "paperId": "38cf65d5d63e8a079f8586cb2e2647104d9a3b21",
+          "externalIds": {
+            "DOI": "10.63125/7tjw3767",
+            "CorpusId": 279544738
+          },
+          "url": "https://www.semanticscholar.org/paper/38cf65d5d63e8a079f8586cb2e2647104d9a3b21",
+          "title": "THE ROLE OF PERCEIVED ENVIRONMENTAL RESPONSIBILITY IN ARTIFICIAL INTELLIGENCE-ENABLED RISK MANAGEMENT AND SUSTAINABLE DECISION-MAKING",
+          "venue": "American Journal of Advanced Technology and Engineering Solutions",
+          "year": 2024,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.63125/7tjw3767?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.63125/7tjw3767, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The findings reveal that PER functions as both a moderating and mediating variable: it amplifies trust in AI-based decisions, enhances stakeholder interpretability of complex models, and improves strategic integration of AI into environmental, social, and governance frameworks."
+          },
+          "publicationDate": "2024-04-29",
+          "authors": [
+            {
+              "authorId": "2358096121",
+              "name": "Subrato Sarker"
+            },
+            {
+              "authorId": "2369506363",
+              "name": "M. Nuruzzaman"
+            }
+          ],
+          "abstract": "As artificial intelligence (AI) becomes increasingly embedded in sustainability governance, understanding the social and ethical contexts that influence its deployment is critical. This study investigates the role of Perceived Environmental Responsibility (PER) as a central construct in moderating stakeholder trust, enhancing AI adoption, and improving the performance of AI-enabled risk management systems in environmentally sensitive decision-making. While AI offers capabilities such as predictive analytics, real-time monitoring, and environmental impact simulations, its effectiveness is often shaped by how stakeholders interpret the intentions and values of the organizations that deploy these technologies. This research explores the hypothesis that PER not only influences stakeholder acceptance of AI but also determines organizational readiness, transparency outcomes, and alignment with sustainability objectives. Using a systematic meta-analysis approach guided by PRISMA methodology, the study synthesizes findings from 122 peer-reviewed articles published between 2010 and 2024. The findings reveal that PER functions as both a moderating and mediating variable: it amplifies trust in AI-based decisions, enhances stakeholder interpretability of complex models, and improves strategic integration of AI into environmental, social, and governance (ESG) frameworks. Organizations with high PER demonstrated stronger performance in AI-based compliance reporting, emissions management, and environmental decision-making, while those with low PER experienced reputational risk, stakeholder skepticism, and underutilization of AI tools. The study contributes to the literature on stakeholder theory, responsible innovation, and sustainable technology adoption by positioning PER as a foundational variable in ethical AI integration. It also aligns PER with the principles of the Triple Bottom Line (TBL) and ESG reporting, emphasizing its operational and reputational importance in digital sustainability governance. By synthesizing evidence across sectors and regions, the research provides actionable insights for organizations seeking to implement AI responsibly. It concludes that PER is not simply a passive perception but an active enabler of technological legitimacy, ethical alignment, and long-term sustainability success in AI-supported decision environments."
+        },
+        {
+          "paperId": "c84a5437e0dadc0ef357567f0045c8014c220dae",
+          "externalIds": {
+            "DOI": "10.22495/clgrv7i3sip12",
+            "CorpusId": 283159236
+          },
+          "url": "https://www.semanticscholar.org/paper/c84a5437e0dadc0ef357567f0045c8014c220dae",
+          "title": "Corporate governance and digitalisation: A bibliometric-systematic literature review",
+          "venue": "Corporate Law &amp; Governance Review",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.22495/clgrv7i3sip12?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.22495/clgrv7i3sip12, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This study profiles the research landscape of digitalisation as a corporate governance mechanism through a bibliometric-systematic literature review of 93 articles published between 2019 and 2024 from the Scopus database, revealing an upward trend in publications."
+          },
+          "publicationDate": "2025-11-18",
+          "authors": [
+            {
+              "authorId": "2190143450",
+              "name": "Blessing Takawira"
+            },
+            {
+              "authorId": "115968912",
+              "name": "David Pooe"
+            }
+          ],
+          "abstract": "Digitalisation transforms corporate governance by enhancing transparency, compliance, and decision-making processes. This study profiles the research landscape of digitalisation as a corporate governance mechanism through a bibliometric-systematic literature review (B-SLR) of 93 articles published between 2019 and 2024 from the Scopus database. Bibliometric techniques, including co-citation analysis and bibliographic coupling, were combined with systematic content analysis using Atlas.ti to identify thematic clusters and emerging trends. The findings reveal an upward trend in publications, particularly after 2019, with four major themes emerging: risk management, corporate governance, digitalisation, and sustainable development. Key technologies, including blockchain, artificial intelligence (AI), and Industry 4.0, appear as pivotal elements in digital governance frameworks. Sustainability has emerged as a growing concern, indicating the integration of environmental, social, and governance (ESG) goals into digital transformation strategies. However, gaps persist regarding sector-specific applications and empirical insights on practical implementations. While digitalisation demonstrates transformative potential for strengthening accountability, operational efficiency, and stakeholder engagement, limited exploration of contextual factors highlights the need for deeper investigations into industry-specific dynamics. This study advances theoretical understanding while providing actionable insights for practitioners and policymakers navigating digital governance transformation."
+        },
+        {
+          "paperId": "81a21fff3292f281b9a2f7d893b3e4a13f2430ed",
+          "externalIds": {
+            "DOI": "10.1109/BDAI66031.2025.11325538",
+            "CorpusId": 284720144
+          },
+          "url": "https://www.semanticscholar.org/paper/81a21fff3292f281b9a2f7d893b3e4a13f2430ed",
+          "title": "A Study on Standardized Paths for Compliance Application of Artificial Intelligence Technology in China National Standard Archives Management",
+          "venue": "International Conference on Big Data and Artificial Intelligence",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/BDAI66031.2025.11325538?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/BDAI66031.2025.11325538, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2025-08-22",
+          "authors": [
+            {
+              "authorId": "2075362470",
+              "name": "Wei Pan"
+            },
+            {
+              "authorId": "2157140700",
+              "name": "Jingjuan Zhang"
+            },
+            {
+              "authorId": "2267881477",
+              "name": "Xianghua Zhu"
+            }
+          ],
+          "abstract": "This paper introduces the policies and regulations related to archives and standards in China. A more comprehensive definition of standard archives is proposed by combining those policies and regulations with the characteristics of standards literature. The relationship between standard record filing and standard archiving has been discussed. Subsequently, the history of China national standard archives construction has been reviewed. The possibility of compliant application of artificial intelligence (AI) technology in China national standard archives management has been explored and related risks have been analyzed. The article concludes with a recommendation that future systematic standardization efforts should focus on three dimensions: technical standards, operating procedures, and governance specifications. That means the challenges posed by the rapid iteration of AI technology to the compliant use of AI technology in China national standard archives management can be addressed through establishing an AI-driven technical standards system for the whole life cycle of China national standard archives, constructing a standards system of operating procedures for the whole process of China national standard archives in an intelligent environment, and forming a standards system of AI governance specifications to safeguard archives completeness, accuracy, usability, and security requirements."
+        },
+        {
+          "paperId": "5fdc94ec8339d80adde9be91e3f1a5047080bfbc",
+          "externalIds": {
+            "DOI": "10.9734/jerr/2025/v27i81594",
+            "CorpusId": 280567754
+          },
+          "url": "https://www.semanticscholar.org/paper/5fdc94ec8339d80adde9be91e3f1a5047080bfbc",
+          "title": "Strategic Management of AI-Powered Cybersecurity Systems: A Systematic Review",
+          "venue": "Journal of Engineering Research and Reports",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.9734/jerr/2025/v27i81594?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.9734/jerr/2025/v27i81594, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "This systematic review brings together the most recent studies on how to strategically manage AI-driven cybersecurity systems and points out the best ways to use them across industries, as well as their pros and cons."
+          },
+          "publicationDate": "2025-08-02",
+          "authors": [
+            {
+              "authorId": "2346167783",
+              "name": "Anant Wairagade"
+            }
+          ],
+          "abstract": "Artificial intelligence (AI) has changed the way we protect ourselves from cyber threats by giving us better tools for finding threats, lowering risks, and responding in real time. As cyber threats get more complicated and widespread, it is important to strategically integrate and manage AI-powered technologies in cybersecurity frameworks. This systematic review brings together the most recent studies on how to strategically manage AI-driven cybersecurity systems. It points out the best ways to use them across industries, as well as their pros and cons. 87 peer-reviewed articles from 2015 to 2024 were examined that were found in databases such Scopus, IEEE Xplore, SpringerLink, and ScienceDirect. We used the PRISMA standards to do this. The review finds five main themes: (1) AI algorithms for finding and classifying threats; (2) AI governance and risk management; (3) problems with integrating AI into security frameworks in organizations; (4) ethical and legal issues; and (5) strategic deployment and scalability. The results show that AI makes threat intelligence and adaptive reaction much better, but companies have problems with explainability, data privacy, and algorithmic bias. Human-AI collaboration, continuous learning loops, and regulatory compliance frameworks are all examples of strategic management techniques that make AI integration more effective. The evaluation also stresses that to make good AI strategy, you need to have knowledge in a variety of fields, such as data science, cyber law, and behavioral analytics. In conclusion, strategic management is very important for getting the most out of AI in cybersecurity. To create cybersecurity ecosystems that are strong, flexible, and ethical, we need to take a proactive strategy that includes aligning policies, training the workforce, and managing the lifecycle."
+        },
+        {
+          "paperId": "16e9590732739f494852e53c81f84b6194104085",
+          "externalIds": {
+            "DOI": "10.51594/farj.v7i6.1961",
+            "CorpusId": 279978260
+          },
+          "url": "https://www.semanticscholar.org/paper/16e9590732739f494852e53c81f84b6194104085",
+          "title": "Financial risk management strategies and their influence on organizational stability",
+          "venue": "Finance &amp; Accounting Research Journal",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.51594/farj.v7i6.1961?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.51594/farj.v7i6.1961, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2025-07-06",
+          "authors": [
+            {
+              "authorId": "2369092769",
+              "name": "Wasiu Eyinade"
+            },
+            {
+              "authorId": "2369090173",
+              "name": "Onyinye Jacqueline Ezeilo"
+            },
+            {
+              "authorId": "2369090145",
+              "name": "Ibidapo Abiodun Ogundeji"
+            }
+          ],
+          "abstract": "This study investigates the influence of financial risk management strategies on organizational stability, aiming to understand how diverse risk mitigation practices contribute to sustaining firm performance amid economic uncertainties. Employing a systematic literature review methodology, the study analyzes peer-reviewed articles, institutional reports, and empirical research published between 2020 and 2025. Data sources were rigorously selected using defined inclusion and exclusion criteria, and findings were synthesized through a content analysis approach. The review identifies key financial risk management strategies such as hedging, diversification, enterprise risk management frameworks, and the integration of corporate governance and regulatory compliance as critical to enhancing organizational resilience. Technological innovations, including artificial intelligence and blockchain, are found to significantly improve risk identification, monitoring, and mitigation processes. The study also highlights challenges in implementing risk management frameworks, including cultural resistance, resource constraints, and regulatory complexities. Implications for practitioners emphasize the need for dynamic, technology-enabled, and culturally embedded risk management approaches, while policymakers are encouraged to foster regulatory environments that balance oversight with innovation. Limitations of the study include potential publication bias and the rapid evolution of risk technologies not fully captured in the literature. Future research directions call for sector-specific analyses, longitudinal studies on technological impacts, and deeper exploration of sustainability-related risks. The findings underscore the imperative for organizations to adopt integrated, adaptive financial risk management practices to ensure long-term stability and competitive advantage in an increasingly volatile global economy. \nKeywords: Financial Risk Management, Organizational Stability, Enterprise Risk Management, Corporate Governance."
+        },
+        {
+          "paperId": "e27445ec42ffa8a2994bbe45ae3a8bf96a9decc2",
+          "externalIds": {
+            "DOI": "10.21512/becossjournal.v7i3.13647",
+            "CorpusId": 284937916
+          },
+          "url": "https://www.semanticscholar.org/paper/e27445ec42ffa8a2994bbe45ae3a8bf96a9decc2",
+          "title": "The Utilization of Artificial Intelligence as a Contract Review Tool for Government Procurement of Goods and Services to Mitigate Legal Risks",
+          "venue": "Business Economic, Communication, and Social Sciences Journal (BECOSS)",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.21512/becossjournal.v7i3.13647?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.21512/becossjournal.v7i3.13647, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The study concludes that the integration of AI into procurement contract management offers significant potential for bureaucratic reform and risk mitigation, but requires robust legal frameworks, clear boundaries of responsibility, and institutional readiness."
+          },
+          "publicationDate": "2025-09-30",
+          "authors": [
+            {
+              "authorId": "2408016184",
+              "name": "Siswahyudi Siswahyudi"
+            },
+            {
+              "authorId": "2132844556",
+              "name": "Suartini Suartini"
+            },
+            {
+              "authorId": "2406083797",
+              "name": "Anis Rifai"
+            }
+          ],
+          "abstract": "This study examines the application of Artificial Intelligence (AI), specifically Natural Language Processing (NLP), as a strategic tool in reviewing government procurement contracts to mitigate legal risks. Manual contract review processes are often inefficient, prone to human error, and unable to keep up with the volume and complexity of government contracts. Using a normative-judicial legal research method, the study analyzes how AI integration can enhance legal certainty, efficiency, and accountability in public procurement. Through document digitization, standardized contract formats, and audit trail systems, AI can identify ambiguous or risky clauses, verify compliance with regulations, and provide recommendations supported by legal data and precedents. The study also investigates the current legal framework in Indonesia, identifying gaps that hinder AI implementation in administrative practices. While the ITE Law and Presidential Regulations offer a foundation for digital systems in governance, there is still no specific regulation governing AI use in legal decision support. Comparative insights from the UK, US, EU, and Morocco show that AI has improved review accuracy, reduced processing time, and strengthened public sector integrity, although concerns over transparency and algorithmic accountability persist. The study concludes that the integration of AI into procurement contract management offers significant potential for bureaucratic reform and risk mitigation, but requires robust legal frameworks, clear boundaries of responsibility, and institutional readiness. With adaptive policy support, ethical oversight, and inter-agency collaboration, AI can serve as a transformative instrument for enhancing good governance, preventing legal disputes, and protecting public officials in the execution of procurement responsibilities."
+        },
+        {
+          "paperId": "c10b04b01f0e7a553e43326ade42d504eeb30d77",
+          "externalIds": {
+            "DBLP": "journals/access/BenaIMAANYA25",
+            "DOI": "10.1109/ACCESS.2025.3528941",
+            "CorpusId": 275538900
+          },
+          "url": "https://www.semanticscholar.org/paper/c10b04b01f0e7a553e43326ade42d504eeb30d77",
+          "title": "Big Data Governance Challenges Arising From Data Generated by Intelligent Systems Technologies: A Systematic Literature Review",
+          "venue": "IEEE Access",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "https://doi.org/10.1109/access.2025.3528941",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2025.3528941?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2025.3528941, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The big data governance maturity assessment model (BDG MAM), a novel framework developed to assess and enhance the maturity of BDG programs, is proposed, providing a structured roadmap for organizations to benchmark governance practices, prioritize improvements, and implement effective strategies."
+          },
+          "publicationDate": null,
+          "authors": [
+            {
+              "authorId": "2100477766",
+              "name": "Yunusa Adamu Bena"
+            },
+            {
+              "authorId": "2287231221",
+              "name": "Roliana Ibrahim"
+            },
+            {
+              "authorId": "29861021",
+              "name": "Jamilah Mahmood"
+            },
+            {
+              "authorId": "1404405096",
+              "name": "Arafat Al-dhaqm"
+            },
+            {
+              "authorId": "2299381955",
+              "name": "Ahmad Alshammari"
+            },
+            {
+              "authorId": "52428050",
+              "name": "Maged Nasser"
+            },
+            {
+              "authorId": "2329744652",
+              "name": "Muhammed Nura Yusuf"
+            },
+            {
+              "authorId": "2307717223",
+              "name": "Matthew O. Ayemowa"
+            }
+          ],
+          "abstract": "The exponential growth of intelligent systems technologies, including Artificial Intelligence (AI), Internet of Things (IoT), Machine Learning (ML), and Smart Connected Products, has intensified the difficulties of data governance. Organizations adopting these technologies face challenges in managing the volume, variety, and velocity of data while ensuring quality, security, compliance, and ethical integrity. This study investigates the state of big data governance (BDG) programs in organizations leveraging intelligent systems technologies, using a systematic literature review guided by PRISMA. A synthesis of insights from 74 peer-reviewed articles, conferences, and industry reports reveals both the significant benefits of BDG such as enhanced decision-making, operational efficiency, and regulatory compliance and persistent challenges, including fragmented governance frameworks, limited scalability, data quality issues, and ethical concerns. To address these gaps, this study proposes the big data governance maturity assessment model (BDG MAM), a novel framework developed to assess and enhance the maturity of BDG programs. The BDG MAM evaluates governance maturity across four key dimensions: people, process, data, and technology. It provides a structured roadmap for organizations to benchmark governance practices, prioritize improvements, and implement effective strategies. The model was validated through a pilot study conducted with a public higher learning institution, demonstrating its practical applicability and effectiveness in real-world scenarios. By bridging theoretical insights with practical implementation, this study advances academic discourse and provides practitioners with a robust approach to navigate the challenges of modern data governance practices, ensuring sustainable and effective management of heterogeneous data environment."
+        },
+        {
+          "paperId": "dbad73e115e4fc8c8f20c37788dc544ddf9a26fc",
+          "externalIds": {
+            "DOI": "10.47772/ijriss.2025.91200298",
+            "CorpusId": 284906245
+          },
+          "url": "https://www.semanticscholar.org/paper/dbad73e115e4fc8c8f20c37788dc544ddf9a26fc",
+          "title": "Revisiting Corporate Governance through Shariah Compliance: Evidence, Theory, and Future Research Directions from an Assisted Systematic Review",
+          "venue": "International journal of research and innovation in social science",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.47772/ijriss.2025.91200298?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.47772/ijriss.2025.91200298, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": null,
+          "publicationDate": "2026-01-16",
+          "authors": [
+            {
+              "authorId": "2389520027",
+              "name": "Samihah Hanim Mohamad"
+            },
+            {
+              "authorId": "83925961",
+              "name": "J. Sulong"
+            }
+          ],
+          "abstract": "Despite the growing importance of Shariah compliance in Islamic finance, existing research on corporate governance through Shariah compliance remains fragmented across disciplines, jurisdictions, and methodological approaches, limiting theoretical integration and practical applicability. This study aims to systematically review and synthesise the literature on corporate governance through the lens of Shariah compliance by employing an AI-assisted systematic review approach. Using Scopus AI, the review was conducted on 25 September 2025 and involved structured analysis through AI-generated summaries, expanded summaries, concept mapping, and emerging theme detection. The findings reveal that Shariah compliance functions as a substantive governance mechanism that strengthens board effectiveness, internal controls, transparency, risk management, and stakeholder trust in Islamic financial institutions and Shariah-compliant firms. The review further demonstrates that corporate governance through Shariah compliance is underpinned by an integrated theoretical framework combining agency, stewardship, and stakeholder theories, enriched by Islamic jurisprudential principles. Emerging themes indicate a shift toward sustainability-oriented governance, ESG integration, and technology enabled Shariah compliance, including blockchain and artificial intelligence applications. The study contributes theoretically by advancing a values-based governance paradigm and practically by offering insights for regulators, policymakers, and practitioners seeking to enhance ethical governance and sustainable finance. These findings highlight the evolving role of Shariah compliance as both a governance mechanism and a strategic capability in contemporary corporate governance."
+        },
+        {
+          "paperId": "523929c4f26c9b0c2eb8662c0b2798eb7e0729e4",
+          "externalIds": {
+            "DOI": "10.24840/2183-0606_013.003_0003",
+            "CorpusId": 285218911
+          },
+          "url": "https://www.semanticscholar.org/paper/523929c4f26c9b0c2eb8662c0b2798eb7e0729e4",
+          "title": "AI-Powered Digital Transformation of Government Human Resource Management: A Bibliometric and Systematic Literature Review",
+          "venue": "Journal of Innovation Management",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.24840/2183-0606_013.003_0003?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.24840/2183-0606_013.003_0003, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The study underscores the importance of adaptive regulatory frameworks that support innovation while safeguarding public interest and robust data governance strategies to manage confidentiality and cybersecurity risks, and collaborative efforts across sectors to promote ethical AI adoption and mitigate socio-economic disruptions."
+          },
+          "publicationDate": "2025-12-15",
+          "authors": [
+            {
+              "authorId": "2269562881",
+              "name": "Xiangyu Bian"
+            },
+            {
+              "authorId": "2215420828",
+              "name": "Aweewan Panyagometh"
+            },
+            {
+              "authorId": "2327929840",
+              "name": "Bin Wang"
+            },
+            {
+              "authorId": "2055574386",
+              "name": "R. Szabó"
+            }
+          ],
+          "abstract": "Recent developments in modern artificial intelligence (AI) have driven profound changes in public sector human resource management systems, offering remarkable opportunities alongside intricate challenges. Governments across the globe are progressively integrating AI tools to modernize HR operations, enhance workforce planning, and respond to evolving socio-economic demands. This research utilizes the PRISMA framework for systematic literature review to explore the role of AI in transforming government HR practices. By analyzing 47 peer-reviewed articles published from 2019 to 2023, the study identifies five central themes: ethical and governance models for AI in public administration; AI’s influence on HR functions and organizational behavior; implementation barriers and potential benefits; AI applications in digital governance and policy formulation; and innovations in HR technologies driven by big data. The findings highlight critical success factors such as strong data infrastructure, structured employee training initiatives, and well-defined ethical standards. Key challenges identified include concerns around data privacy, biased algorithms, workforce adaptation, and wider societal implications like employment shifts and changing competency needs. The study underscores the importance of: (1) adaptive regulatory frameworks that support innovation while safeguarding public interest; (2) robust data governance strategies to manage confidentiality and cybersecurity risks; (3) tailored training programs aimed at improving AI understanding among government staff; and (4) collaborative efforts across sectors to promote ethical AI adoption and mitigate socio-economic disruptions."
+        },
+        {
+          "paperId": "5ad08a07a7a9707fdb64531b8c39ced26fe56e7e",
+          "externalIds": {
+            "DOI": "10.70593/deepsci.0202033",
+            "CorpusId": 286957182
+          },
+          "url": "https://www.semanticscholar.org/paper/5ad08a07a7a9707fdb64531b8c39ced26fe56e7e",
+          "title": "Artificial intelligence in sustainable finance and Environmental, Social, and Governance (ESG) performance: A review",
+          "venue": "International Journal of Applied Resilience and Sustainability",
+          "year": 2026,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.70593/deepsci.0202033?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.70593/deepsci.0202033, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The results show that AI drastically enhances the ESG performance analysis, sustainable investment plan, and transparency of the companies and also facilitates the real-time tracking of the environmental and social risks."
+          },
+          "publicationDate": "2026-03-28",
+          "authors": [
+            {
+              "authorId": "2426604218",
+              "name": "Vibhavari Prasad Mane"
+            }
+          ],
+          "abstract": "Artificial Intelligence (AI) is rapidly changing sustainable finance and Environmental, Social, and Governance (ESG) performance in particular, but the disjointed nature of current studies does not allow us to fully comprehend how machine learning, ESG analytics, responsible AI, and sustainable investing all contribute to financial decision-making and corporate sustainability performance. Although the context of AI-based ESG scoring, green finance, and data-driven sustainability reporting develops rapidly, the literature is spread out among the fields of finance, management, and technology and requires the application of the PRISMA framework to provide a clear picture of transparency and methodological rigor in systematic reviews. The present review examined the intersection of artificial intelligence, sustainable finance, ESG performance, financial technology (FinTech), climate risk analytics, algorithmic governance, and responsible investing. The paper provides an assessment of the effectiveness of artificial intelligence methods, including machine learning, natural language processing, predictive analytics, and modeling the sustainability of big data, in improving ESG measurement, managing portfolio, risk, and disclosure to sustainability. Specific focus is placed on such new themes as AI-enabled ESG ratings, green innovation, ethical AI, regulatory technology (RegTech), and explainable AI in finance that are becoming highly influential in the international financial markets. The results show that AI drastically enhances the ESG performance analysis, sustainable investment plan, and transparency of the companies and also facilitates the real-time tracking of the environmental and social risks. Nevertheless, the literature also singles out endemic data quality issues, algorithmic bias, governance frameworks, and regulatory compliance as recent concerns that require trusted AI and sustainable digital finance ecosystems.  "
+        },
+        {
+          "paperId": "9f8f2a75d84cc5624acdc9ea5b616888357edd37",
+          "externalIds": {
+            "DOI": "10.58540/ijmebe.v3i3.1010",
+            "CorpusId": 280816422
+          },
+          "url": "https://www.semanticscholar.org/paper/9f8f2a75d84cc5624acdc9ea5b616888357edd37",
+          "title": "Fintech Disruption and Operational Risk in the Banking Sector: Evidence from a Systematic Literature Review",
+          "venue": "International Journal of Management and Business Economics",
+          "year": 2025,
+          "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.58540/ijmebe.v3i3.1010?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.58540/ijmebe.v3i3.1010, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+          },
+          "tldr": {
+            "model": "tldr@v2.0.0",
+            "text": "The results indicate that while fintech adoption offers substantial opportunities for competitiveness and customer engagement, it also necessitates proactive governance, robust cybersecurity measures, and continuous workforce upskilling."
+          },
+          "publicationDate": "2025-06-30",
+          "authors": [
+            {
+              "authorId": "2377081258",
+              "name": "Tarada Berlian Megananda"
+            },
+            {
+              "authorId": "2377080411",
+              "name": "Sulwani Husna Afrizal"
+            }
+          ],
+          "abstract": "The rapid advancement of financial technology (fintech) has significantly disrupted the traditional banking sector by introducing innovative services and business models that enhance efficiency, reduce costs, and promote financial inclusion. However, these benefits also bring emerging operational risks, such as cybersecurity threats, data privacy concerns, and regulatory compliance challenges. This systematic literature review synthesizes findings from 13 peer-reviewed journal articles published in the last five years, selected through a rigorous PRISMA-based methodology. The analysis identifies key themes, including the transformative role of technologies like artificial intelligence, blockchain, and big data analytics; the reconfiguration of risk management frameworks; and the evolving relationship between digital innovation and operational resilience. The results indicate that while fintech adoption offers substantial opportunities for competitiveness and customer engagement, it also necessitates proactive governance, robust cybersecurity measures, and continuous workforce upskilling. The discussion emphasizes the need for collaborative efforts among regulators, financial institutions, and technology providers to develop adaptive strategies that can mitigate risks in an evolving digital landscape. By addressing both the opportunities and vulnerabilities presented by fintech disruption, this review enhances our understanding of its implications for operational risk in banking and provides directions for future research."
+        }
+      ]
+    }
+  ]
+}

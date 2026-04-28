@@ -1,0 +1,46 @@
+[atividade]
+modo = "pesquisa_empirica"
+disciplina = "Teorias de Administração Pública"
+professor = "Bernardo Buta"
+curso = "Mestrado de Políticas Públicas e Governo"
+turma = "T-01"
+polo = "Brasília"
+aluno = "Hugo Bustamante Tre"
+
+[pesquisa]
+tema = "Capacidades estatais e desempenho estatal, com foco na relação entre coerção, centralização do poder e resultados de políticas públicas."
+
+recorte = "Análise da relação entre capacidades coercitivas do Estado, grau de centralização do poder político-administrativo e desempenho de políticas públicas, considerando como diferentes arranjos institucionais afetam a implementação, a efetividade e os resultados das ações estatais."
+
+objetivo = "Elaborar uma proposta de pesquisa empírica sobre a relação entre capacidades estatais, capacidade coercitiva, centralização político-administrativa e desempenho de políticas públicas, formulando problema de pesquisa, hipótese, modelo teórico e possibilidades de coleta e análise de dados."
+
+tipo_estudo = "Métodos mistos"
+idiomas = ["inglês", "português"]
+
+# Deixe vazio para a IA sugerir conceitos e palavras-chave.
+palavras_chave = []
+
+[busca]
+sugerir_palavras_chave_ia = true
+query_bilingue = true
+
+[saida]
+prefixo = "atividade_capacidades_estatais_empirica"
+output_dir = "pesquisas/"
+criar_subdiretorio = true
+org_modelo = "template.org"
+exportar_pdf = true
+gerar_env_example = false
+remover_auxiliares = true
+
+[latex]
+org_latex_class_init = "/home/gustavodetarso/.emacs.d/lisp/academic-writing.el"
+latex_extra_path = "/home/gustavodetarso/texmf/tex/latex/fgv/fgv-paper.sty"
+comando_exportacao_pdf = ""
+fgv_logo_path = "/home/gustavodetarso/Documentos/.share/mgs_org/fgv.png"
+
+[openai]
+model = "gpt-5.4"
+
+[controle]
+# Não coloque chaves de API aqui. Use o .env.
