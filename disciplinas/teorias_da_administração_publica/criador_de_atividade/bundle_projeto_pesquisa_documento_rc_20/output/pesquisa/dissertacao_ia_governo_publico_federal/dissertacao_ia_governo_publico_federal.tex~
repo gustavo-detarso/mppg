@@ -1,0 +1,563 @@
+% Created 2026-04-24 sex 15:40
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt,a4paper]{article}
+\usepackage{fgv-paper}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,arrows.meta}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{xltabular}
+\usepackage{xurl}
+\setlength{\emergencystretch}{3em}
+\Urlmuskip=0mu plus 2mu
+\sloppy
+\definecolor{FGVHeaderBlueDark}{HTML}{003A70}
+\definecolor{FGVHeaderBlueMid}{HTML}{005AA9}
+\definecolor{FGVHeaderBlueLight}{HTML}{66A9E0}
+\setlength{\headheight}{48pt}
+\setlength{\headsep}{12pt}
+\newcommand{\FGVHeaderLogoInclude}{\includegraphics[height=0.95cm]{/home/gustavodetarso/Documentos/.share/mgs_org/fgv.png}}
+\newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0,0) rectangle (\headwidth,1.2pt);\end{tikzpicture}}
+\newcommand{\FGVHeaderBlock}{\begin{minipage}[b]{\headwidth}\raggedright \FGVHeaderLogoInclude\par\vspace{0.18em}\noindent\FGVHeaderGradientRule\end{minipage}}
+\fancypagestyle{fgvreportstyle}{%
+\fancyhf{}%
+\fancyhead[L]{\makebox[\headwidth][l]{\FGVHeaderBlock}}%
+\fancyhead[C]{}%
+\fancyhead[R]{}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\fancypagestyle{plain}{%
+\fancyhf{}%
+\fancyhead[L]{\makebox[\headwidth][l]{\FGVHeaderBlock}}%
+\fancyhead[C]{}%
+\fancyhead[R]{}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+\author{Gustavo M. Mendes de Tarso}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Pt_Br}}
+\usepackage[style=backend=biber,style=apa,sortcites=true,sorting=nyt,giveninits=true,maxcitenames=2,maxbibnames=20,uniquelist=minyear]{biblatex}
+\addbibresource{/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/pesquisa/dissertacao_ia_governo_publico_federal/dissertacao_ia_governo_publico_federal.bib}
+\begin{document}
+
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado Profissional em Políticas Públicas e Governo \\
+\textbf{Turma}                   & 2026.01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias da Administração Pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 24 de abril de 2026 \\
+\textbf{Título do trabalho}      & Dissertação: Revisão de literatura \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+
+\clearpage
+
+\section{Contextualização e problema de pesquisa}
+\label{sec:org82a7381}
+
+A adoção de inteligência artificial na administração pública vem se expandindo como parte dos processos de transformação digital do Estado, com impactos sobre automação de rotinas, apoio à decisão, prestação de serviços, fiscalização e análise de dados. No entanto, o interesse acadêmico relevante para esta revisão não se limita à difusão tecnológica em sentido amplo. O problema substantivo está em compreender como a literatura discute arranjos de governança, salvaguardas éticas, accountability, compliance, supervisão institucional e gestão de riscos associados ao uso de sistemas de IA no setor público. No caso desta atividade, o recorte prioritário recai sobre a administração pública federal brasileira no período de 2019 a 2026. Como os resultados recuperados são heterogêneos e frequentemente mais amplos do que o recorte nacional-federal desejado, a triagem foi conduzida em rigor moderado, preservando o tema central como requisito obrigatório e usando recorte, objetivo e tipo de estudo como calibradores fortes do ranqueamento final.
+
+Os textos selecionados ao final do processo foram \textbf{"A INSERÇÃO DA TECNOLOGIA DE INTELIGÊNCIA ARTIFICIAL NA ADMINISTRAÇÃO PÚBLICA"}. A seleção final se justifica porque O texto selecionado, “A INSERÇÃO DA TECNOLOGIA DE INTELIGÊNCIA ARTIFICIAL NA ADMINISTRAÇÃO PÚBLICA”, foi o mais aderente ao conjunto tema-recorte-objetivo entre os candidatos disponíveis. Trata-se de revisão integrativa focada explicitamente no uso de IA no setor público/administração pública, enfatizando governança, ética, riscos e desafios de implementação — exatamente os eixos analíticos centrais da atividade. Embora não esteja delimitado exclusivamente à administração pública federal brasileira, oferece síntese útil e diretamente mobilizável para o referencial analítico da revisão, além de contar com DOI e PDF disponível. Outros textos próximos eram relevantes, mas ou permaneciam excessivamente amplos/internacionais, ou deslocavam o foco para competências, confiança regulatória europeia, nível local/municipal, ou governança pública sem IA.
+
+Também é importante registrar uma distinção metodológica. Neste trabalho, o \textbf{PRISMA 2020} foi utilizado para organizar o \textbf{fluxo da busca e da seleção} nas bases consultadas \autocite{prisma2020statement}. Os textos selecionados foram analisados a partir de seus metadados e, obrigatoriamente, de \textbf{texto completo com link verificável para download}.
+
+\subsection{Pergunta de pesquisa da revisão}
+\label{sec:orgd7a059e}
+
+\begin{quote}
+Como a literatura de revisão e de síntese acadêmico-institucional publicada entre 2019 e 2026 trata a adoção de inteligência artificial na administração pública, especialmente no setor público e na administração pública federal brasileira, com foco em aplicações, governança, ética, compliance e gestão de riscos para implementação responsável e auditável?
+\end{quote}
+
+\section{Estratégia de busca}
+\label{sec:orgecb5f10}
+
+\subsection{Bases consultadas}
+\label{sec:orgc5d85e2}
+
+\subsection{Critérios de inclusão}
+\label{sec:orgecacb81}
+
+\begin{itemize}
+\item Publicação entre 2019 e 2026.
+\item Texto em português ou inglês.
+\item Foco substantivo em inteligência artificial na administração pública, no setor público ou em organizações públicas.
+\item Discussão de pelo menos uma dimensão analítica central do estudo: governança, ética, accountability, compliance, integridade, transparência, supervisão, adoção institucional ou gestão de riscos da IA.
+\item Utilidade clara para o objetivo da revisão, ainda que o texto não cubra integralmente o recorte federal brasileiro.
+\item Preferência por revisão de literatura, revisão sistemática, scoping review, mapeamento sistemático ou síntese equivalente.
+\item Vantagem metodológica para registros com DOI e/ou acesso a texto completo quando a aderência temática fosse comparável.
+\end{itemize}
+
+\subsection{Critérios de exclusão}
+\label{sec:org99774a3}
+
+\begin{itemize}
+\item Ausência de relação substantiva com inteligência artificial no setor público ou na administração pública.
+\item Textos centrados apenas em transformação digital, governança em geral, capacidade estatal, saúde, educação, clima, economia ou outras áreas sem conexão identificável com IA no governo.
+\item Estudos sobre IA em contexto privado, clínico, biomédico, urbano ou técnico sem interface relevante com administração pública.
+\item Textos normativos ou empíricos sobre regulação de IA em sentido amplo, sem foco suficiente em uso governamental ou administração pública.
+\item Materiais sem resumo informativo e sem metadados suficientes para sustentar aderência temática mínima na triagem.
+\item Duplicatas conceituais ou versões paralelas do mesmo estudo, quando menos adequadas ao recorte da atividade.
+\end{itemize}
+
+\subsection{Observações de execução}
+\label{sec:orgb30874c}
+
+\begin{itemize}
+\item Semantic Scholar retornou 1000 registro(s), acima do limite configurado (10); os candidatos foram truncados para respeitar quantidade\_triagem.
+\item A verificação aprofundada de texto completo foi adiada para depois da triagem temática. Candidatos foram ranqueados por metadados, resumo e links já informados pelas bases; a recuperação/download do texto completo será testada apenas para os selecionados.
+\end{itemize}
+
+\section{PRISMA 2020}
+\label{sec:orgf5ab337}
+
+\subsection{Observação metodológica}
+\label{sec:orgb86c0f5}
+
+A amostra recuperada é escassa para o recorte estrito da administração pública federal brasileira com ênfase simultânea em governança, ética, compliance e gestão de riscos, especialmente no formato priorizado de revisão de literatura. Por isso, a triagem moderada privilegiou a aderência substantiva ao tema e ao objetivo, sem inflar artificialmente a pertinência de textos apenas genericamente ligados à administração pública, à regulação tecnológica ou à transformação digital. Como a instrução limita a no máximo um texto incluído, foi selecionado apenas o estudo que melhor equilibra tema central, tipo de estudo, utilidade analítica e proximidade com o objetivo da revisão.
+
+Não houve exclusões adicionais por impossibilidade de download local do PDF nesta execução.
+
+\subsection{Exclusões adicionais por impossibilidade de download local}
+\label{sec:orgda46233}
+
+Não houve exclusões adicionais por impossibilidade de download local do PDF após a triagem ranqueada.
+
+\subsection{Fluxo textual dos estudos}
+\label{sec:org829036a}
+
+\subsubsection{Identificação}
+\label{sec:org5c977c9}
+\begin{itemize}
+\item Registros identificados nas bases consultadas (Semantic Scholar, Scopus, PubMed, OpenAlex, Crossref, Europe PMC, CORE): \textbf{n = 68}
+\item Semantic Scholar: \textbf{n = 10} registros recuperados
+\begin{itemize}
+\item Query usada: \texttt{"state of the art review"}
+\end{itemize}
+\item Scopus: \textbf{n = 10} registros recuperados
+\begin{itemize}
+\item Query usada: \texttt{TITLE-ABS-KEY(("state capacity" OR "government effectiveness" OR "public administration") AND ("institutional arrangements" OR "institutional coordination" OR "policy outcomes" OR "state performance" OR centralization OR decentralization OR "policy implementation") AND ("state of the art review" OR "systematic literature review" OR "literature review" OR "scoping review")) AND PUBYEAR > 2018 AND PUBYEAR < 2027 AND (LIMIT-TO(LANGUAGE, "English") OR LIMIT-TO(LANGUAGE, "Portuguese"))}
+\end{itemize}
+\item PubMed: \textbf{n = 10} registros recuperados
+\begin{itemize}
+\item Query usada: \texttt{("state capacity"[tiab] OR "government effectiveness"[tiab] OR "public administration"[tiab] OR "public sector"[tiab] OR governance[tiab]) AND ("institutional arrangements"[tiab] OR "policy outcomes"[tiab] OR "state performance"[tiab] OR centralization[tiab] OR decentralization[tiab] OR "policy implementation"[tiab]) AND ("systematic literature review"[tiab] OR "literature review"[tiab] OR "scoping review"[tiab] OR "systematic review"[tiab]) AND ("2019"[dp] : "2026"[dp]) AND (english[la] OR portuguese[la]) AND (review[pt] OR systematic review[tiab] OR meta-analysis[pt] OR scoping review[tiab] OR literature review[tiab])}
+\end{itemize}
+\item OpenAlex: \textbf{n = 10} registros recuperados
+\begin{itemize}
+\item Query usada: \texttt{("inteligencia artificial" OR "inteligência artificial" OR IA OR AI) AND ("administração pública federal" OR "administracao publica" OR "administração pública" OR "governo federal" OR "public administration") AND ("gestao de riscos" OR "gestão de riscos" OR compliance OR governanca OR "risk management" OR "public governance") AND ("revisão de literatura" OR "revisão de escopo" OR "systematic literature review" OR revisão)}
+\end{itemize}
+\item Crossref: \textbf{n = 10} registros recuperados
+\begin{itemize}
+\item Query usada: \texttt{inteligencia artificial inteligência artificial IA administração pública federal administracao publica administração pública public administration gestao de riscos gestão de riscos compliance governanca revisão de literatura revisão de escopo systematic literature review}
+\end{itemize}
+\item Europe PMC: \textbf{n = 10} registros recuperados
+\begin{itemize}
+\item Query usada: \texttt{("administrative centralization" OR "institutional arrangements" OR "state capacity") AND ("policy outcomes" OR "policy implementation") AND ("systematic literature review" OR "literature review" OR "systematic review") AND FIRST\_PDATE:[2019-01-01 TO 2026-12-31] AND (LANG:ENG OR LANG:POR)}
+\end{itemize}
+\item CORE: \textbf{n = 8} registros recuperados
+\begin{itemize}
+\item Query usada: \texttt{AI IA "administracao publica" "administração pública" compliance}
+\end{itemize}
+\item Registros removidos antes da triagem: \textbf{n = 2}
+\begin{itemize}
+\item Duplicatas removidas: \textbf{n = 0}
+\item Removidos por outros motivos: \textbf{n = 2}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Triagem}
+\label{sec:org90bc47d}
+\begin{itemize}
+\item Registros triados por título, resumo e metadados: \textbf{n = 66}
+\item Registros excluídos na triagem: \textbf{n = 37}
+\begin{itemize}
+\item Muito relevante ao tema central e ao objetivo, pois aborda adoção e difusão de IA na administração pública com tensões éticas e fatores organizacionais. Contudo, permanece amplo e internacional, sem recorte brasileiro/federal, ficando como forte literatura de apoio, mas não o mais aderente para inclusão única.: \textbf{n = 1}
+\item Contribui para debate sobre confiança, risco e IA no setor público, mas seu eixo principal é o AI Act da União Europeia e a teoria da confiança institucional, não o uso de IA na administração pública federal brasileira nem uma visão abrangente de aplicações, compliance e governança no setor público nacional.: \textbf{n = 1}
+\item Tem boa aderência ao tema IA na gestão pública e inclui dimensão ética, mas o foco substantivo está em competências dos servidores, não em governança, compliance e gestão de riscos do uso institucional da IA. Útil como apoio periférico, porém menos central para a tríade.: \textbf{n = 1}
+\item Aborda IA em governo e serviços ao cidadão, mas o recorte é governo local português e relacionamento com cidadãos, não administração pública federal brasileira. Além disso, a revisão é parte de um desenho mais aplicado e localista.: \textbf{n = 1}
+\item É um dos textos mais próximos do recorte brasileiro e discute maturidade institucional, documentos estratégicos e marcos éticos. Contudo, não é uma revisão de literatura pura e o foco empírico recai bastante sobre IFES do Nordeste e assimetrias de maturidade, com cobertura apenas parcial dos eixos de compliance e gestão de riscos.: \textbf{n = 1}
+\item Muito pertinente a governança, riscos e integridade na administração pública federal, mas não trata de inteligência artificial como objeto central. A menção a tecnologias digitais é insuficiente para satisfazer o tema obrigatório.: \textbf{n = 1}
+\item Versão em inglês do estudo sobre governança, risco e integridade na administração pública, com a mesma limitação substantiva: ausência de foco central em IA.: \textbf{n = 1}
+\item Relevante ao tema de adoção de IA em organizações públicas, mas não é revisão de literatura e não cobre de forma central ética, compliance, governança e riscos no recorte pretendido. Além disso, é baseado em casos suíços.: \textbf{n = 1}
+\item Tem aderência parcial por tratar uso de IA e aprendizado de máquina para controle, fraude e compliance em contratações públicas, inclusive com referência ao Brasil. Contudo, não é revisão de literatura priorizada e o foco é concorrência/contratação pública, não um panorama de adoção de IA no governo federal.: \textbf{n = 1}
+\item Discute regulação, vigilância e modelos globais de IA, mas sem foco em administração pública federal brasileira ou em uso governamental concreto da IA. Aderência apenas tangencial ao objetivo.: \textbf{n = 1}
+\item Pode dialogar com automação e discricionariedade administrativa em governo digital, mas não há, pelos metadados fornecidos, foco claro em IA nem em governança ética/compliance da IA. Resumo ausente, o que reduz segurança de aderência.: \textbf{n = 1}
+\item Revisão ampla sobre IA em organizações e comportamento organizacional. Embora útil para contexto geral de implementação responsável, não está centrada em setor público nem no recorte governamental da atividade.: \textbf{n = 1}
+\item Tema próximo em ética e administração pública, mas o material é extremamente curto, sem resumo analítico útil, sem foco explícito em revisão e com escassez de informação para sustentar inclusão metodologicamente robusta.: \textbf{n = 1}
+\item Trata de segurança, privacidade e riscos em smart cities, mas não de IA na administração pública federal ou no setor público com foco governança/compliance da IA. Contexto apenas indiretamente relacionado.: \textbf{n = 1}
+\item Revisão sobre institucionalização da avaliação em administração pública. Embora pertinente ao campo administrativo, não aborda IA.: \textbf{n = 1}
+\item Aborda big data, IA e investigação criminal na polícia portuguesa, com preocupação com direitos fundamentais, mas fora do recorte brasileiro/federal e sem caráter de revisão de literatura centrada em governança da IA na administração pública.: \textbf{n = 1}
+\item Discute RegTech e SupTech em governança regulatória digital e capacidade administrativa, tema relacionado a supervisão digital, mas sem foco claro em IA na administração pública federal brasileira.: \textbf{n = 1}
+\item Trata de digital twins em política e administração pública, não de IA no foco requerido.: \textbf{n = 1}
+\item É revisão sobre gestão de pessoas na administração pública, sem relação substantiva com IA.: \textbf{n = 1}
+\item Discute transformação digital e governança pública, mas sem foco identificável em IA, ética, compliance e riscos associados à IA.: \textbf{n = 1}
+\item Revisão sobre policy capacity na COVID-19 na Ásia, sem relação com IA no setor público federal brasileiro.: \textbf{n = 1}
+\item Revisão sobre implementação de políticas públicas em geral, sem IA.: \textbf{n = 1}
+\item Registro duplicado temático do estudo sobre institucionalização da avaliação; além disso, não trata de IA.: \textbf{n = 1}
+\item Foco em sistemas de informação clínica e gestão do conhecimento em Malawi, não em IA na administração pública federal.: \textbf{n = 1}
+\item Governança ambiental e análise de poder, sem IA nem administração pública no recorte da atividade.: \textbf{n = 1}
+\item Implementação de programa educacional regional e governança colaborativa, sem IA.: \textbf{n = 1}
+\item Transformação digital em instituições de ensino superior, sem foco em IA no governo público.: \textbf{n = 1}
+\item Governança em ASEAN, sem IA.: \textbf{n = 1}
+\item Segurança hídrica transfronteiriça e governança da água, sem relação com IA na administração pública.: \textbf{n = 1}
+\item Reembolso em saúde e governança financeira; não trata de IA em administração pública.: \textbf{n = 1}
+\item Projeto de ciência de dados para gestão de incentivos europeus; não focaliza governança pública da IA nem o recorte brasileiro/federal.: \textbf{n = 1}
+\item Experimentos de política em reforma da saúde na China, sem IA.: \textbf{n = 1}
+\item Avaliação de modelos de linguagem treinados em código; totalmente fora do escopo de administração pública e governança pública da IA.: \textbf{n = 1}
+\item Política monetária, abertura comercial e crescimento econômico na África Ocidental; sem relação com o tema.: \textbf{n = 1}
+\item Soluções baseadas na natureza para ilhas de calor urbanas; fora do escopo.: \textbf{n = 1}
+\item Revisão clínica sobre trombose da veia porta; completamente fora do escopo.: \textbf{n = 1}
+\item Revisão biomédica sobre nanotecnologia contra o câncer; completamente fora do escopo.: \textbf{n = 1}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Elegibilidade}
+\label{sec:orgef8d659}
+\begin{itemize}
+\item Relatórios buscados para recuperação em texto completo: \textbf{n = 1}
+\item Relatórios não recuperados: \textbf{n = 0}
+\item Relatórios avaliados para elegibilidade: \textbf{n = 1}
+\item Relatórios excluídos após leitura do texto completo: \textbf{n = 0}
+\end{itemize}
+
+\subsubsection{Inclusão}
+\label{sec:orge06edf1}
+\begin{itemize}
+\item Estudos incluídos na síntese qualitativa final: \textbf{n = 1}
+\end{itemize}
+
+\subsection{Tabela-resumo do fluxo PRISMA 2020}
+\label{sec:orgfe5a8bb}
+
+\begingroup
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\captionof{table}{Síntese do fluxo PRISMA 2020 aplicado à seleção do artigo.}
+\label{tab:prisma2020}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+\toprule
+Etapa PRISMA 2020 & n \\
+\midrule
+Registros identificados & 68 \\
+Registros removidos antes da triagem & 2 \\
+Exclusões por impossibilidade de download local & 0 \\
+Registros triados & 66 \\
+Registros excluídos na triagem & 37 \\
+Relatórios buscados para recuperação & 1 \\
+Relatórios não recuperados & 0 \\
+Relatórios avaliados para elegibilidade & 1 \\
+Relatórios excluídos após leitura completa & 0 \\
+Estudos incluídos na síntese qualitativa & 1 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\endgroup
+
+\subsection{Estudos classificados no fluxo}
+\label{sec:orgf2b2658}
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.17\textwidth} >{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}X}
+\caption{Classificação sintética dos estudos identificados no fluxo PRISMA 2020.}\label{tab:estudos_fluxo}\\
+\toprule
+Estudo & Situação no fluxo & Tipo & Motivo \\
+\midrule
+\endfirsthead
+\toprule
+Estudo & Situação no fluxo & Tipo & Motivo \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{Continua na próxima página} \\
+\endfoot
+\bottomrule
+\endlastfoot
+Angela Luci Barbosa Serra; Hilka Pelizza Vier Machado (2024), A INSERÇÃO DA TECNOLOGIA DE INTELIGÊNCIA ARTIFICIAL NA ADMINISTRAÇÃO PÚBLICA. \emph{Base(s): Crossref} & Incluído & revisão integrativa de literatura com abordagem bibliométrica & Texto de síntese diretamente centrado na inserção da IA na administração pública/setor público, com ênfase explícita em governança, ética,… \\
+Rohit Madan; Mona Ashok (2022), AI adoption and diffusion in public administration: A systematic literature review and future research agenda. \emph{Base(s): OpenAlex} & Excluído na triagem & revisão sistemática de literatura & Muito relevante ao tema central e ao objetivo, pois aborda adoção e difusão de IA na administração pública com tensões éticas e fatores… \\
+Johann Laux; Sandra Wachter; Brent Mittelstadt (2023), Trustworthy artificial intelligence and the European Union <scp>AI</scp> act: On the conflation of trustworthiness and acceptability of risk. \emph{Base(s): OpenAlex} & Excluído na triagem & revisão narrativa/sistemática de literatura & Contribui para debate sobre confiança, risco e IA no setor público, mas seu eixo principal é o AI Act da União Europeia e a teoria da confiança… \\
+Kelen Cristina Gonzalez Melo; Paulo De Souza e Silva Neto; Maria Julia Pantoja; Jonilto Costa Sousa (2026), COMPETÊNCIAS EM INTELIGÊNCIA ARTIFICIAL NA GESTÃO PÚBLICA: EVIDÊNCIAS POR MEIO DE REVISÃO SISTEMÁTICA DA LITERATURA. \emph{Base(s): Crossref} & Excluído na triagem & revisão sistemática da literatura & Tem boa aderência ao tema IA na gestão pública e inclui dimensão ética, mas o foco substantivo está em competências dos servidores, não em… \\
+Carvalho, Ana Marta Goucha de (2023), Government Augmented Intelligence - The Use of AI to Improve Citizen Relationship Management. \emph{Base(s): CORE} & Excluído na triagem & dissertação com revisão sistemática e estudo de design science & Aborda IA em governo e serviços ao cidadão, mas o recorte é governo local português e relacionamento com cidadãos, não administração pública federal… \\
+Leandro Nunes Mariano; Alessandra Carla Ceolin; Jorge da Silva Correia-Neto (2026), INTELIGÊNCIA ARTIFICIAL E IA GENERATIVA NA ADMINISTRAÇÃO PÚBLICA: MAPEAMENTO SISTEMÁTICO E ASSIMETRIAS DE MATURIDADE. \emph{Base(s): Crossref} & Excluído na triagem & mapeamento sistemático da literatura e análise documental & É um dos textos mais próximos do recorte brasileiro e discute maturidade institucional, documentos estratégicos e marcos éticos. \\
+Alessandro Bandeira de Oliveira; Paulo Vitor Jordão da Gama Silva; Josir Simeone Gomes (2025), A integração entre governança, gestão de riscos e integridade na administração pública. \emph{Base(s): Crossref} & Excluído na triagem & revisão sistemática da literatura & Muito pertinente a governança, riscos e integridade na administração pública federal, mas não trata de inteligência artificial como objeto central. \\
+Alessandro Bandeira de Oliveira; Paulo Vitor Jordão da Gama Silva; Josir Simeone Gomes (2025), Integration of governance, risk management, and integrity in public administration. \emph{Base(s): Crossref} & Excluído na triagem & revisão sistemática da literatura & Versão em inglês do estudo sobre governança, risco e integridade na administração pública, com a mesma limitação substantiva: ausência de foco… \\
+Oliver Neumann; Katharina Guirguis; Reto Steiner (2022), Exploring artificial intelligence adoption in public organizations: a comparative case study. \emph{Base(s): OpenAlex} & Excluído na triagem & estudo de caso comparativo & Relevante ao tema de adoção de IA em organizações públicas, mas não é revisão de literatura e não cobre de forma central ética, compliance,… \\
+Alencar, Alisson Carvalho de (2020), Compliance inteligente nas contratações públicas: defesa efetiva da concorrência. \emph{Base(s): CORE} & Excluído na triagem & tese/doutorado teórico-comparativa & Tem aderência parcial por tratar uso de IA e aprendizado de máquina para controle, fraude e compliance em contratações públicas, inclusive com… \\
+CANTARINI, Paola (2024), DESGLOBALIZAÇÃO E IA: MORTE DA INTERNET GLOBALIZADA, AUMENTO DAS TECNO-AUTOCRACIAS E FIM DA ERA DA AUTORREGULAÇÃO. \emph{Base(s): CORE} & Excluído na triagem & artigo teórico-crítico & Discute regulação, vigilância e modelos globais de IA, mas sem foco em administração pública federal brasileira ou em uso governamental concreto da IA. \\
+Marienfeldt J. (2024), Does digital government hollow out the essence of street-level bureaucracy? A systematic literature review of how digital tools' foster curtailment, enablement and continuation of street-level decision-making. \emph{Base(s): Scopus} & Excluído na triagem & revisão sistemática da literatura & Pode dialogar com automação e discricionariedade administrativa em governo digital, mas não há, pelos metadados fornecidos, foco claro em IA nem em… \\
+Sarah Bankins; Anna Carmella Ocampo; Mauricio Marrone; Simon Lloyd D. Restubog; Sang Eun Woo (2023), A multilevel review of artificial intelligence in organizations: Implications for organizational behavior research and practice. \emph{Base(s): OpenAlex} & Excluído na triagem & revisão sistemática & Revisão ampla sobre IA em organizações e comportamento organizacional. \\
+Rômulo Bochimpani De Barros (2025), INTELIGÊNCIA ARTIFICIAL E GESTÃO DE PESSOAS: ÉTICA, INOVAÇÃO E DESAFIOS NA ADMINISTRAÇÃO PÚBLICA. \emph{Base(s): Crossref} & Excluído na triagem & resumo simples de congresso & Tema próximo em ética e administração pública, mas o material é extremamente curto, sem resumo analítico útil, sem foco explícito em revisão e com… \\
+Elvira Ismagilova; Laurie Hughes; Nripendra P. Rana; Yogesh K. Dwivedi (2020), Security, Privacy and Risks Within Smart Cities: Literature Review and Development of a Smart City Interaction Framework. \emph{Base(s): OpenAlex} & Excluído na triagem & literature review & Trata de segurança, privacidade e riscos em smart cities, mas não de IA na administração pública federal ou no setor público com foco… \\
+Carla Cordoncillo Acosta (2026), Mechanisms for institutionalising evaluation: A scoping review.. \emph{Base(s): PubMed} & Excluído na triagem & scoping review & Revisão sobre institucionalização da avaliação em administração pública. \\
+Neto, Renato Nascimento (2023), O Big Data e a investigação criminal na PSP: o contributo para uma possível inovação tecnológica. \emph{Base(s): CORE} & Excluído na triagem & dissertação/estudo teórico aplicado & Aborda big data, IA e investigação criminal na polícia portuguesa, com preocupação com direitos fundamentais, mas fora do recorte brasileiro/federal… \\
+Bagherifam N. (2025), Digital Regulatory Governance: The Role of RegTech and SupTech in Transforming Financial Oversight and Administrative Capacity. \emph{Base(s): Scopus} & Excluído na triagem & review & Discute RegTech e SupTech em governança regulatória digital e capacidade administrativa, tema relacionado a supervisão digital, mas sem foco claro em… \\
+Richter F. (2025), Lost in translation: why digital twins thrive in research but falter in politics and public administration. \emph{Base(s): Scopus} & Excluído na triagem & artigo & Trata de digital twins em política e administração pública, não de IA no foco requerido. \\
+Sirlei de Fátima Cordeiro; Rudy de Barros Ahrens (2022), Desafios da gestão de pessoas na administração pública: revisão bibliográfica sobre conceitos modernos da administração privada utilizados na administração pública. \emph{Base(s): Crossref} & Excluído na triagem & revisão bibliográfica/capítulo & É revisão sobre gestão de pessoas na administração pública, sem relação substantiva com IA. \\
+Jonathan G.M. (2024), Digital Transformation-driven Decentralisation of Public Governance. \emph{Base(s): Scopus} & Excluído na triagem & conference paper & Discute transformação digital e governança pública, mas sem foco identificável em IA, ética, compliance e riscos associados à IA. \\
+Mardiyanta A. (2023), Policy capacity during COVID-19 in Asia: A systematic literature review. \emph{Base(s): Scopus} & Excluído na triagem & systematic literature review & Revisão sobre policy capacity na COVID-19 na Ásia, sem relação com IA no setor público federal brasileiro. \\
+Ferreira de Sousa J.R. (2022), On public policy implementation: a systematic review of the literature and research agenda. \emph{Base(s): Scopus} & Excluído na triagem & systematic review & Revisão sobre implementação de políticas públicas em geral, sem IA. \\
+Acosta C.C. (2026), Mechanisms for institutionalising evaluation: A scoping review. \emph{Base(s): Scopus} & Excluído na triagem & scoping review & Registro duplicado temático do estudo sobre institucionalização da avaliação; além disso, não trata de IA. \\
+Kungwalo EC; Kanjo C; Kunyenje G; Chikumba PA (2026), Nexus between policy and practice in institutionalization of clinical information systems and knowledge management in developing health systems: Context of tertiary hospitals in Malawi.. \emph{Base(s): Europe PMC} & Excluído na triagem & estudo qualitativo/caso & Foco em sistemas de informação clínica e gestão do conhecimento em Malawi, não em IA na administração pública federal. \\
+Sahide MAK; Siswandi S; Sirimorok N; Fisher MR; Wong GY; Brockhaus M (2026), The SPA-cube framework: An integrated approach for analysing power dynamics in environmental governance.. \emph{Base(s): Europe PMC} & Excluído na triagem & artigo metodológico & Governança ambiental e análise de poder, sem IA nem administração pública no recorte da atividade. \\
+Li S; Lam JFI (2025), Study on the policy implementation of the Guangdong-Hong Kong-Macao joint graduate training program and regional talent development.. \emph{Base(s): Europe PMC} & Excluído na triagem & estudo de caso qualitativo & Implementação de programa educacional regional e governança colaborativa, sem IA. \\
+Lina María Castro Benavides; Johnny Alexander Tamayo Arias; Martín Arango Serna; John W. Branch; Daniel Burgos (2020), Digital Transformation in Higher Education Institutions: A Systematic Literature Review. \emph{Base(s): OpenAlex} & Excluído na triagem & systematic literature review & Transformação digital em instituições de ensino superior, sem foco em IA no governo público. \\
+Pushpanathan Sundram (2023), ASEAN as network governance: An alternative lens to evaluate policymaking and performance.. \emph{Base(s): PubMed} & Excluído na triagem & review/journal article com estudos de caso & Governança em ASEAN, sem IA. \\
+Assubayeva A; Xenarios S; Correa A; Forero J (2025), Transdisciplinary research on water security in transboundary river basins.. \emph{Base(s): Europe PMC} & Excluído na triagem & artigo aplicado & Segurança hídrica transfronteiriça e governança da água, sem relação com IA na administração pública. \\
+Ildikó Ádám; Marcelien Callenbach; Bertalan Németh; Rick A Vreman; Cecilia Tollin; Johan Pontén; Dalia Dawoud; Jamie Elvidge; Nick Crabb; Sahar Barjesteh van Waalwijk van Doorn-Khosrovani; Anke Pisters-van Roy; Áron Vincziczki; Emad Almomani; Maja Vajagic; Z Gulsen Oner; Mirna Matni; Jurij Fürst; Rabia Kahveci; Wim G Goettsch; Zoltán Kaló (2022), Outcome-based reimbursement in Central-Eastern Europe and Middle-East.. \emph{Base(s): PubMed} & Excluído na triagem & artigo com exploratory literature review & Reembolso em saúde e governança financeira; não trata de IA em administração pública. \\
+Oliveira, Nicole Furtado (2021), ETL for data science?: A case study. \emph{Base(s): CORE} & Excluído na triagem & estudo de caso/dissertação & Projeto de ciência de dados para gestão de incentivos europeus; não focaliza governança pública da IA nem o recorte brasileiro/federal. \\
+Yang X; Yang G (2025), What determines the success or failure of policy experiments?-A qualitative field study of China's healthcare reform pilots.. \emph{Base(s): Europe PMC} & Excluído na triagem & estudo qualitativo de campo & Experimentos de política em reforma da saúde na China, sem IA. \\
+Mark Chen; Jerry Tworek; Heewoo Jun; Qiming Yuan; Henrique Pondé de Oliveira Pinto; Jared Kaplan; Harrison Edwards; Yuri Burda; Nicholas Joseph; Greg Brockman; Alex Ray; Raul Puri; Gretchen Krueger; Michael Petrov; Heidy Khlaaf; Girish Sastry; Pamela Mishkin; Brooke Chan; Scott Gray; Nick Ryder; Mikhail Pavlov; Alethea Power; Łukasz Kaiser; Mohammad Bavarian; Clemens Winter; Philippe Tillet; Felipe Petroski Such; Dave Cummings; Matthias Plappert; Fotios Chantzis; Elizabeth A. Barnes; Ariel Herbert-Voss; William H. Guss; Alex Nichol; Alex Paino; Nikolas Tezak; Jie Tang; I. Babuschkin; Suchir Balaji; Shantanu Jain; William S. Saunders; Christopher Hesse; Andrew N. Carr; Jan Leike; Joshua Achiam; Vedant Misra; Evan Morikawa; Alec Radford; Matthew M. Knight; Miles Brundage; Mira Murati; Katie Mayer; Peter Welinder; Bob McGrew; Dario Amodei; Sam McCandlish; Ilya Sutskever; Wojciech Zaremba (2021), Evaluating Large Language Models Trained on Code. \emph{Base(s): OpenAlex} & Excluído na triagem & preprint técnico & Avaliação de modelos de linguagem treinados em código; totalmente fora do escopo de administração pública e governança pública da IA. \\
+Boateng SA; Enimil B; Takyi-Danquah E (2026), A methodological comparative analysis of monetary policy and trade openness on economic growth in West Africa: Does language play a role?. \emph{Base(s): Europe PMC} & Excluído na triagem & estudo quantitativo & Política monetária, abertura comercial e crescimento econômico na África Ocidental; sem relação com o tema. \\
+Alexander Hayes; Z. Jandaghian; M. Lacasse; A. Gaur; Henry Horng-Shing Lu; A. Laouadi; H. Ge; L. Wang (2022), Nature-Based Solutions (NBSs) to Mitigate Urban Heat Island (UHI) Effects in Canadian Cities. \emph{Base(s): Semantic Scholar} & Excluído na triagem & review & Soluções baseadas na natureza para ilhas de calor urbanas; fora do escopo. \\
+A. Boccatonda; S. Gentilini; Elisa Zanata; C. Simion; Carla Serra; Paolo Simioni; F. Piscaglia; E. Campello; Walter Ageno (2024), Portal Vein Thrombosis: State-of-the-Art Review. \emph{Base(s): Semantic Scholar} & Excluído na triagem & state-of-the-art review & Revisão clínica sobre trombose da veia porta; completamente fora do escopo. \\
+Ritika Sharma; Shikha Jyoti Borah; Bhawna; Sanjeev Kumar; Akanksha Gupta; Poonam Singh; V. K. Goel; Ravi Kumar; Vinod Kumar (2022), Functionalized Peptide-Based Nanoparticles for Targeted Cancer Nanotherapeutics: A State-of-the-Art Review. \emph{Base(s): Semantic Scholar} & Excluído na triagem & state-of-the-art review & Revisão biomédica sobre nanotecnologia contra o câncer; completamente fora do escopo. \\
+Çelik AA; Balcioğlu YS; Altindağ E (2026), Cross-national variations and demographic disparities in health surveillance system performance: a comparative analysis of OECD member countries.. \emph{Base(s): Europe PMC} & Excluído em rodada intermediária & não identificado & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Kshatriya M; Syal R; Als D; Muralidharan O; Akindole B; Padhani ZA; Das J; Bhutta ZA (2026), Implementation of health and health-related sustainable development goals: progress, challenges and opportunities-a systematic literature review update.. \emph{Base(s): Europe PMC} & Excluído em rodada intermediária & não identificado & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Luís Phillipe da Silva Inglat; Daduí Cordeiro Guerrieri (2025), Compras sustentáveis na administração pública federal brasileira: uma revisão de escopo. \emph{Base(s): Crossref} & Excluído em rodada intermediária & journal-article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Bernabé Vidal; Lorenzo Verger; Gustavo J Nagy (2025), Exploring the One Health-One Welfare nexus and zoonoses.. \emph{Base(s): PubMed} & Excluído em rodada intermediária & Journal Article; Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Yi C. (2025), From local government to local governance: A systematic literature review and future research agenda. \emph{Base(s): Scopus} & Excluído em rodada intermediária & Article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Mountifield C (2025), Policy analysis in sport: a review of mainstream meso-level frameworks and developing more sustainable policy for grassroots sport.. \emph{Base(s): Europe PMC} & Excluído em rodada intermediária & não identificado & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Toni Nurhadi Kumayza; Agus Pramusinto; Ambar Widaningrum (2025), Systematic Literature Review of Environmental Impact Assessments. \emph{Base(s): OpenAlex} & Excluído em rodada intermediária & article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Zeng W; Boiangiu M; Trachsel N; Jarawan E; Turbat V; Meessen B (2025), What affects the performance of hospital financing interventions in low and lower-middle income countries from the program design and implementation perspective? A scoping review.. \emph{Base(s): Europe PMC} & Excluído em rodada intermediária & não identificado & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Edward W Ansah; Samuel Maneen; Anastasia Ephraim; Janet E Y Ocloo; Mabel N Barnes; Nkosi N Botha (2024), Politics-evidence conflict in national health policy making in Africa: a scoping review.. \emph{Base(s): PubMed} & Excluído em rodada intermediária & Journal Article; Scoping Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Oliveira, Murillo Preve Cardoso de (2023), O uso da arbitragem na resolução de conflitos entre poder concedente e concessionária como meio de melhoria no nível de segurança jurídica dos contratos de infraestrutura. \emph{Base(s): CORE} & Excluído em rodada intermediária & não identificado & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Krzysztof Wach; Cong Doanh Duong; Joanna Ejdys; Rūta Kazlauskaitė; Paweł Korzyński; Grzegorz Mazurek; Joanna Paliszkiewicz; Ewa Ziemba (2023), The dark side of generative artificial intelligence: A critical analysis of controversies and risks of ChatGPT. \emph{Base(s): OpenAlex} & Excluído em rodada intermediária & article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Almas F Khattak; Aziz Ur Rahman; Madiha Khattak; Mustafa Qazi; Humaira Gilani; Arsalan Khan (2023), Toward Sustainable Healthcare Systems: A Low and Middle-Income Country's Case for Investing in Healthcare Reforms.. \emph{Base(s): PubMed} & Excluído em rodada intermediária & Journal Article; Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+SILVANO BARBOSA DE LIMA (2022), Coronavírus e outros riscos na Administração da Cadeia de Suprimentos e Logística: uma revisão de literatura. \emph{Base(s): Crossref} & Excluído em rodada intermediária & proceedings-article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Augustina Koduah; Leonard Baatiema; Anna Cronin de Chavez; Anthony Danso-Appiah; Irene A Kretchy; Irene Akua Agyepong; Natalie King; Timothy Ensor; Tolib Mirzoev (2022), Implementation of medicines pricing policies in sub-Saharan Africa: systematic review.. \emph{Base(s): PubMed} & Excluído em rodada intermediária & Systematic Review; Journal Article; Research Support, Non-U.S. Gov't & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Luke N Allen; Cervantée E K Wild; Giulia Loffreda; Mohini Kak; Mohamed Aghilla; Taher Emahbes; Atousa Bonyani; Arian Hatefi; Christopher Herbst; Haider M El Saeh (2022), Non-communicable disease policy implementation in Libya: A mixed methods assessment.. \emph{Base(s): PubMed} & Excluído em rodada intermediária & Journal Article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Tara S Allen; H. Bhatia; A. Wood; Shabnam R. Momin; M. Allison (2022), State-of-the-Art Review: Evidence on Red Meat Consumption and Hypertension Outcomes.. \emph{Base(s): Semantic Scholar} & Excluído em rodada intermediária & JournalArticle, Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+J. Awosika; D. Sohal (2021), A narrative review of systemic treatment options for hepatocellular carcinoma: state of the art review.. \emph{Base(s): Semantic Scholar} & Excluído em rodada intermediária & Review, JournalArticle & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Cepiku D. (2021), Equity in Public Services: A Systematic Literature Review. \emph{Base(s): Scopus} & Excluído em rodada intermediária & Article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+A. Siyanova (2021), Eye-tracking and ERPs in multi-word expression research: A state-of-the-art review of the method and findings. \emph{Base(s): Semantic Scholar} & Excluído em rodada intermediária & Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Mushtaq Ahmed; Muhammad Shujaat Mubarik; Muhammad Shahbaz (2021), Factors affecting the outcome of corporate sustainability policy: a review paper.. \emph{Base(s): PubMed} & Excluído em rodada intermediária & Journal Article; Systematic Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Alexsandro da Silva; Ademar Dutra (2021), Gestão de riscos no setor público: revisão da literatura internacional. \emph{Base(s): Crossref} & Excluído em rodada intermediária & journal-article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Pavan Reddy; T. Ng; Esther E. Oh; Gassan Moady; U. Elkayam (2020), Clinical Characteristics and Management of Methamphetamine‐Associated Cardiomyopathy: State‐of‐the‐Art Review. \emph{Base(s): Semantic Scholar} & Excluído em rodada intermediária & JournalArticle, Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Maciel M. Queiroz; Dmitry Ivanov; Alexandre Dolgui; Samuel Fosso Wamba (2020), Impacts of epidemic outbreaks on supply chains: mapping a research agenda amid the COVID-19 pandemic through a structured literature review. \emph{Base(s): OpenAlex} & Excluído em rodada intermediária & article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Manish Kumar; Siming You; Jingzi Beiyuan; G. Luo; Juhi K. Gupta; Sunil Kumar; Lal Singh; Shicheng Zhang; Daniel C W Tsang (2020), Lignin valorization by bacterial genus Pseudomonas: State-of-the-art review and prospects.. \emph{Base(s): Semantic Scholar} & Excluído em rodada intermediária & Review, JournalArticle & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Sadioğlu U. (2020), The Reflections of Post-Fordism on Public Administration. \emph{Base(s): Scopus} & Excluído em rodada intermediária & Article & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Chhabi Lal Ranabhat; Chun-Bae Kim; Ajanta Singh; Devaraj Acharya; Krishna Pathak; Basundhara Sharma; Shiva Raj Mishra (2019), Challenges and opportunities towards the road of universal health coverage (UHC) in Nepal: a systematic review.. \emph{Base(s): PubMed} & Excluído em rodada intermediária & Journal Article; Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+J. Jakobsen; A. Melse-Boonstra; M. Rychlik (2019), Challenges to Quantify Total Vitamin Activity: How to Combine the Contribution of Diverse Vitamers?. \emph{Base(s): Semantic Scholar} & Excluído em rodada intermediária & Review, JournalArticle & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+Krishan Kumar; D. Goyal; S. Banwait (2019), Effect of Key Parameters on Fretting Behaviour of Wire Rope: A Review. \emph{Base(s): Semantic Scholar} & Excluído em rodada intermediária & Review & Candidato recuperado na busca inicial, mas ausente da triagem final por remoção em rodada intermediária, normalmente por falha de download, falha de… \\
+\end{xltabular}
+\normalsize
+\endgroup
+
+\clearpage
+
+\subsection{Representação esquemática do fluxo PRISMA 2020}
+\label{sec:orgcc721b1}
+
+O fluxograma PRISMA 2020 é gerado como \textbf{SVG externo} em layout compacto, exibindo apenas as contagens de cada etapa. Os motivos detalhados de exclusão permanecem no fluxo textual e nas tabelas, para evitar sobrecarga visual na figura.
+
+\begin{center}
+\includegraphics[width=0.78\textwidth]{dissertacao_ia_governo_publico_federal_prisma.pdf}
+\captionof{figure}{Fluxograma PRISMA 2020 da seleção do artigo de revisão sobre Uso de inteligência artificial no governo público federal como instrumento de governança, ética, compliance e gestão de riscos..}
+\label{fig:prisma2020_fluxo}
+\end{center}
+
+\section{Textos selecionados}
+\label{sec:org5e941e7}
+
+\subsection{Aviso sobre o limite de seleção}
+\label{sec:orgb98fbd4}
+
+A seleção foi interrompida em 1 estudo porque os demais candidatos, embora por vezes úteis como literatura contextual, não mantêm aderência suficientemente clara à tríade tema-recorte-objetivo para inclusão formal sem inflacionar artificialmente o corpus. A principal limitação do conjunto recuperado é a escassez de revisões diretamente voltadas ao uso de IA na administração pública federal brasileira com ênfase simultânea em governança, ética, compliance e gestão de riscos.
+
+\subsection{Texto selecionado 1}
+\label{sec:org2bfe5b8}
+
+\subsubsection{Referência do estudo}
+\label{sec:orgeb0c8db}
+
+A referência do estudo selecionado corresponde a \autocite{serra2024a}.
+
+Serra, A. L. B., \& Machado, H. P. V. (2024). A inserção da tecnologia de inteligência artificial na administração pública: Uma revisão integrativa de literatura. \textbf{Administración Pública y Sociedad (APyS)}, (17). \url{https://doi.org/10.71047/2524.9568.n17.44467}
+
+\subsubsection{Link para o texto completo ou registro}
+\label{sec:orgc5ad37d}
+
+\href{http://revistas.unc.edu.ar/index.php/APyS/article/download/44467/46796}{Download do PDF}
+
+\subsubsection{Resumo/abstract do texto}
+\label{sec:org34a7d40}
+
+This integrative literature review aims to analyze the current state of research on the use of artificial intelligence (AI) in the public sector, highlighting the importance of proper governance and ethical considerations for its implementation. A bibliometric approach was adopted, analyzing 251 articles available in the Web of Science. Among these, 41 articles were selected for a more detailed review. After a preliminary bibliometric analysis, the chosen articles were read, followed by coding and categorization of the material. The study emphasizes the need to systematize the progress of AI in the public sector, encompassing its applications and outcomes, while also underscoring the importance of proper governance and ethics for its implementation. Upon reviewing the articles, there was a growing attention to AI governance in public administration, considering the risks and challenges associated with its implementation. The study recognizes the importance of strategies and emerging technologies for public management, highlighting the transformative potential of digital technologies. However, it points to the scarcity of research on AI in the public sector and the emerging need to systematize its advancements and outcomes.
+
+\subsubsection{Problema e objetivo de pesquisa}
+\label{sec:org167c485}
+
+O artigo parte do problema de que a produção científica sobre inteligência artificial na administração pública ainda se apresenta fragmentada, dispersa e insuficientemente sistematizada, especialmente quanto a aplicações, efeitos, riscos, governança e ética. A pergunta central formulada pelas autoras é: como se configura a produção científica sobre o uso de inteligência artificial no setor público? Em resposta a essa lacuna, o objetivo do estudo é mensurar e analisar a produção científica sobre o uso de IA no setor público, mapeando indicadores bibliométricos, padrões de citação, redes de colaboração, tópicos recorrentes e resultados reportados na literatura, além de sintetizar os principais achados dos estudos selecionados.
+
+\subsubsection{Argumento central}
+\label{sec:org780d830}
+
+O argumento central do artigo é que a inteligência artificial possui potencial transformador para a administração pública, com aplicações relevantes em serviços, apoio à decisão, automação, gestão de conhecimento e interação governo-cidadão, mas sua adoção exige estruturas adequadas de governança e atenção consistente a questões éticas e aos riscos associados. As autoras sustentam que, embora haja crescimento do interesse acadêmico sobre IA no setor público, o campo ainda é incipiente e carece de maior sistematização teórica e empírica. Assim, defendem que o avanço da IA na administração pública não deve ser analisado apenas sob a ótica da eficiência, mas também a partir de preocupações com transparência, discricionariedade administrativa, responsabilização, justiça e controle social.
+
+\subsubsection{Desenho de pesquisa}
+\label{sec:orgba6eb45}
+
+Trata-se de uma revisão integrativa de literatura combinada com análise bibliométrica. A base utilizada foi exclusivamente a Web of Science, com buscas realizadas em novembro de 2022 a partir das combinações dos termos “artificial intelligence” and “public sector” e “artificial intelligence” and “public administration”. Inicialmente foram identificados 463 documentos; após refinamento por tipo documental, eliminação de duplicatas e limpeza da base, restaram 251 artigos publicados entre 1993 e 2022 para a etapa bibliométrica. Para a revisão aprofundada, as autoras utilizaram o método ProKnow-C e critérios de reconhecimento científico baseados em número de citações, chegando a 41 artigos para leitura detalhada; após exclusão de dois textos desalinhados ao tema, o corpus analítico final ficou em 39 artigos. A análise qualitativa foi organizada em três categorias inspiradas em Zuiderwijk et al. (2021): riscos e efeitos, desafios e oportunidades e tomada de decisão automatizada. Também foram mobilizadas técnicas bibliométricas com apoio do software VOSviewer, incluindo análise de países, autores, citações e redes de colaboração.
+
+\subsubsection{Principais achados}
+\label{sec:org83d91a8}
+
+Os principais achados indicam crescimento recente da produção científica sobre IA no setor público, com concentração de publicações e citações em países como Estados Unidos, Espanha, Holanda, Austrália e Inglaterra. Entre os temas mais frequentes estão ética em IA, governança algorítmica, chatbots, automação decisória, discricionariedade burocrática, criação de valor público, cidades inteligentes e aplicações setoriais, especialmente em saúde e serviços públicos. A revisão mostra que a literatura enfatiza tanto oportunidades quanto riscos: de um lado, melhoria de eficiência, velocidade de processamento, redução de burocracia, qualificação de serviços e apoio à decisão; de outro, viés algorítmico, opacidade, assimetrias de poder, enfraquecimento do controle democrático, riscos éticos e problemas de responsabilização. O estudo destaca que a governança da IA ganhou maior centralidade nos trabalhos mais recentes, especialmente em função dos desafios associados à automação de decisões em contextos democráticos. As autoras também concluem que ainda há escassez de pesquisas consolidadas sobre IA no setor público e necessidade de sistematizar melhor aplicações, resultados e efeitos institucionais.
+
+\subsubsection{Justificativa da seleção final}
+\label{sec:org592673e}
+
+O artigo é pertinente para a atividade acadêmica porque dialoga diretamente com o núcleo temático da pesquisa: uso de inteligência artificial no setor público com ênfase em governança e ética. Sua seleção se justifica por três razões principais. Primeiro, oferece uma visão de síntese ampla e atualizada sobre aplicações de IA na administração pública, útil para contextualizar o debate e identificar categorias analíticas relevantes. Segundo, explicita que governança adequada, riscos, ética e decisão automatizada são eixos centrais da literatura, o que converge com o recorte da atividade sobre governança, compliance e gestão de riscos. Terceiro, mesmo não sendo focado no governo federal brasileiro, funciona como estudo de enquadramento teórico-institucional e de revisão de estado da arte, ajudando a fundamentar a análise de casos e normativos brasileiros entre 2019 e 2026. Como limitação, deve-se registrar que o estudo usa apenas a Web of Science e não examina especificamente mecanismos de compliance no contexto brasileiro; portanto, sua utilidade é maior como referência de base conceitual e mapeamento da literatura do que como evidência direta sobre a administração pública federal do Brasil.
+
+\subsubsection{Contribuição do estudo para o tema}
+\label{sec:org2877a96}
+
+A principal contribuição do artigo é oferecer um panorama estruturado da literatura internacional sobre inteligência artificial no setor público, combinando mapeamento bibliométrico e síntese integrativa. O estudo organiza um campo ainda disperso, identifica autores, países, artigos e agendas centrais, e propõe uma categorização útil para compreender a literatura em torno de riscos e efeitos, desafios e oportunidades e decisão automatizada. Para pesquisas sobre governança pública, a contribuição reside em mostrar que a adoção de IA não é apenas uma questão tecnológica, mas envolve escolhas institucionais, éticas e políticas. Embora não trate especificamente da administração pública federal brasileira, o artigo fornece uma base conceitual e analítica valiosa para enquadrar discussões sobre governança, ética, accountability e riscos no uso governamental da IA.
+
+\section{Síntese final de alto desempenho dos artigos selecionados}
+\label{sec:orgadabce6}
+
+Esta seção foi acrescentada para transformar a saída metodológica da revisão em uma matriz final de entrega acadêmica. Ela não altera o fluxo PRISMA, os critérios de seleção ou as decisões de triagem; apenas reorganiza os estudos incluídos em formato avaliável, com referência APA, contribuição, eixo temático, ranking de aderência e rastreabilidade.
+
+\subsection{Tabela final dos artigos selecionados com referência APA}
+\label{sec:org8297af1}
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}p{0.035\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.15\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.08\textwidth}}
+\caption{Síntese final dos artigos selecionados para a revisão, com referências em formato APA e contribuição analítica.}\label{tab:artigos_selecionados_apa_excelencia}\\
+\toprule
+ID & Referência APA & Objetivo/problema & Método/desenho & Principais achados & Contribuição para a revisão & Citação \\
+\midrule
+\endfirsthead
+\toprule
+ID & Referência APA & Objetivo/problema & Método/desenho & Principais achados & Contribuição para a revisão & Citação \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{Continua na próxima página} \\
+\endfoot
+\bottomrule
+\endlastfoot
+1 & Serra, A. L. B., \& Machado, H. P. V. (2024). A inserção da tecnologia de inteligência artificial na administração pública: Uma revisão integrativa de literatura. *Administración Pública y Sociedad (APyS)*, (17). https://doi.org/10.71047/2524.9568.n17.44467 & O artigo parte do problema de que a produção científica sobre inteligência artificial na administração pública ainda se apresenta fragmentada, dispersa e insuficientemente sistematizada, especialmente quanto a aplicações, efeitos, riscos, governança e ética. A pergunta central formulada… & Trata-se de uma revisão integrativa de literatura combinada com análise bibliométrica. A base utilizada foi exclusivamente a Web of Science, com buscas realizadas em novembro de 2022 a partir das combinações dos termos… & Os principais achados indicam crescimento recente da produção científica sobre IA no setor público, com concentração de publicações e citações em países como Estados Unidos, Espanha, Holanda, Austrália e Inglaterra. Entre os temas mais frequentes estão ética em IA, governança algorítmica, chatbots, automação… & A principal contribuição do artigo é oferecer um panorama estruturado da literatura internacional sobre inteligência artificial no setor público, combinando mapeamento bibliométrico e síntese integrativa. O estudo organiza um campo ainda disperso, identifica… & \parencite{serra2024a} \\
+\end{xltabular}
+\normalsize
+\endgroup
+
+\subsection{Ranking de aderência, rastreabilidade e força analítica}
+\label{sec:orgaf0104f}
+
+O score abaixo combina aderência atribuída na triagem, disponibilidade/rastreabilidade do texto, presença de DOI ou link verificável, multiplicidade de bases e densidade da análise estruturada. O indicador é auxiliar e não substitui a decisão metodológica PRISMA.
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}p{0.045\textwidth} >{\raggedright\arraybackslash}p{0.045\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{0.07\textwidth} >{\raggedright\arraybackslash}p{0.12\textwidth} >{\raggedleft\arraybackslash}p{0.08\textwidth} >{\raggedright\arraybackslash}p{0.12\textwidth} >{\raggedright\arraybackslash}p{0.08\textwidth}}
+\caption{Ranking dos artigos selecionados por aderência, rastreabilidade e densidade analítica.}\label{tab:ranking_aderencia_evidencia}\\
+\toprule
+Rank & ID & Estudo & Eixo analítico & Score & Força & Ader. IA & Base(s) & Citação \\
+\midrule
+\endfirsthead
+\toprule
+Rank & ID & Estudo & Eixo analítico & Score & Força & Ader. IA & Base(s) & Citação \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{Continua na próxima página} \\
+\endfoot
+\bottomrule
+\endlastfoot
+1 & 1 & A INSERÇÃO DA TECNOLOGIA DE INTELIGÊNCIA ARTIFICIAL NA ADMINISTRAÇÃO PÚBLICA & Aplicações de IA, automação e transformação digital no setor público & 91 & Muito alta & 92 & Crossref & \parencite{serra2024a} \\
+\end{xltabular}
+\normalsize
+\endgroup
+
+\subsection{Agrupamento temático do corpus selecionado}
+\label{sec:orgdbce154}
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{0.07\textwidth} >{\raggedright\arraybackslash}p{0.12\textwidth} >{\raggedleft\arraybackslash}p{0.08\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.08\textwidth} >{\raggedright\arraybackslash}X}
+\caption{Matriz de agrupamento temático dos artigos selecionados.}\label{tab:clusters_tematicos}\\
+\toprule
+Eixo temático & n & IDs & Score médio & Estudo mais forte & Citação & Leitura analítica \\
+\midrule
+\endfirsthead
+\toprule
+Eixo temático & n & IDs & Score médio & Estudo mais forte & Citação & Leitura analítica \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Aplicações de IA, automação e transformação digital no setor público & 1 & 1 & 91.0 & A INSERÇÃO DA TECNOLOGIA DE INTELIGÊNCIA ARTIFICIAL NA ADMINISTRAÇÃO PÚBLICA & \parencite{serra2024a} & Eixo complementar, útil para qualificar nuances da revisão. \\
+\end{xltabular}
+\normalsize
+\endgroup
+
+\subsection{Mapa conceitual textual da revisão}
+\label{sec:orgd5c119c}
+
+\begin{tcolorbox}[title=Mapa conceitual do corpus selecionado,colback=gray!4,colframe=gray!45,boxrule=0.4pt,sharp corners]
+\scriptsize
+\textbf{Problema de revisão} $\rightarrow$ adoção de IA no governo público federal $\rightarrow$ governança, ética, compliance e gestão de riscos.\\[3pt]
+\begin{itemize}
+\item \textbf{Aplicações de IA, automação e transformação digital no setor público}: artigos 1.
+\end{itemize}
+\normalsize
+\end{tcolorbox}
+
+\section{Síntese integradora dos textos selecionados}
+\label{sec:org67766f4}
+
+A literatura selecionada converge ao indicar que o uso de inteligência artificial (IA) na administração pública não pode ser compreendido apenas como vetor de eficiência administrativa, mas como questão eminentemente institucional, envolvendo governança, ética, responsabilização e controle dos riscos associados à automação. No corpus analisado, Serra e Machado (2024) oferecem uma síntese particularmente relevante para esta pesquisa ao demonstrar, com base em revisão integrativa e análise bibliométrica da produção internacional, que a agenda de IA no setor público tem se expandido rapidamente, mas ainda permanece fragmentada e carente de maior sistematização teórica e empírica. Esse achado dialoga diretamente com o objetivo deste estudo, que consiste em investigar como a literatura acadêmica e técnico-institucional trata a adoção de IA no governo público federal brasileiro, especialmente quanto às aplicações, aos modelos de governança, às salvaguardas éticas, às exigências de compliance e às práticas de gestão de riscos.
+
+Em termos de aderência à tríade tema-recorte-objetivo, o estudo selecionado contribui sobretudo no plano conceitual e analítico. Embora não examine especificamente órgãos e entidades da administração pública federal brasileira entre 2019 e 2026, ele estrutura categorias centrais para a análise do recorte proposto, ao mapear aplicações de IA em serviços públicos, apoio à decisão, automação, gestão do conhecimento e interação governo-cidadão, além de destacar os riscos e desafios ligados à decisão automatizada. Dessa forma, o texto ilumina dimensões substantivas do problema investigado nesta revisão: a adoção de sistemas de IA no setor público tende a ocorrer em áreas sensíveis, como análise documental, prestação de serviços, apoio à atividade administrativa e tomada de decisão, o que exige arranjos robustos de governança para assegurar transparência, auditabilidade, justiça procedimental e alinhamento ao interesse público.
+
+A principal convergência identificada na literatura sistematizada por Serra e Machado (2024) está na coexistência entre expectativas de ganho operacional e preocupações normativas. De um lado, a IA é associada a maior rapidez no processamento de informações, redução de burocracia, ampliação da capacidade analítica e potencial melhoria da qualidade dos serviços públicos. De outro, a mesma literatura enfatiza riscos de viés algorítmico, opacidade decisória, enfraquecimento do controle democrático, assimetrias de poder e dificuldades de responsabilização. Tal tensão é central para o recorte desta atividade, pois, no contexto do governo público federal brasileiro, o emprego de IA como instrumento de governança e gestão somente se mostra compatível com padrões republicanos e administrativos adequados se vier acompanhado de salvaguardas éticas, mecanismos de compliance e práticas consistentes de gestão de riscos. Em outras palavras, a automação, por si só, não constitui evidência de modernização institucional; seu valor público depende das condições normativas e organizacionais de sua implementação.
+
+Outro ponto relevante da síntese apresentada por Serra e Machado (2024) é o destaque conferido à crescente centralidade da governança da IA nos estudos mais recentes. Esse deslocamento de foco sugere uma evolução do debate: a literatura deixa de tratar a IA apenas como inovação tecnológica e passa a enquadrá-la como objeto de regulação organizacional e institucional. Essa inflexão é particularmente complementar ao objetivo desta pesquisa, pois reforça que a análise do uso de IA no governo federal brasileiro deve ir além do inventário de aplicações e considerar também quem define parâmetros de uso, quais critérios orientam a supervisão humana, como se estruturam os controles internos, de que forma são prevenidos desvios e discriminações e quais instrumentos permitem rastrear, auditar e contestar decisões automatizadas. Assim, a contribuição do estudo não está em oferecer evidência específica sobre o caso brasileiro, mas em fornecer uma moldura analítica robusta para examinar a implementação responsável da IA no setor público.
+
+Ao mesmo tempo, o corpus revela uma lacuna importante: a distância entre a literatura internacional sobre IA no setor público e as especificidades institucionais da administração pública federal brasileira. A revisão de Serra e Machado (2024) mostra que há crescente produção sobre ética, governança algorítmica e decisão automatizada, mas também evidencia que o campo ainda é incipiente e concentrado em determinados países e agendas. Isso indica a necessidade de avançar em estudos mais situados, capazes de examinar como diretrizes de governança, exigências de conformidade normativa e práticas de mitigação de riscos são efetivamente traduzidas em contextos administrativos concretos. Para o recorte desta pesquisa, essa lacuna é decisiva, porque a adoção de IA no governo federal brasileiro ocorre em ambiente institucional marcado por deveres de legalidade, motivação dos atos administrativos, proteção de dados, transparência, accountability e controle interno e externo, elementos que não podem ser inferidos automaticamente a partir da literatura internacional mais geral.
+
+Em síntese, o estudo selecionado permite sustentar que a literatura sobre IA no setor público já consolidou um diagnóstico preliminar: as aplicações de IA tendem a expandir a capacidade estatal em processamento, automação e apoio à decisão, mas introduzem riscos relevantes que deslocam o debate para a esfera da governança, da ética e da responsabilização. Para esta revisão, isso significa que o uso de IA no governo público federal brasileiro deve ser analisado menos como adoção neutra de tecnologia e mais como processo de institucionalização de instrumentos que precisam ser governados, monitorados e auditados. A contribuição integrada do corpus, portanto, está em reforçar que qualquer implementação de IA alinhada ao interesse público exige articulação entre desempenho administrativo e salvaguardas institucionais, ao passo que a principal lacuna da literatura permanece na escassez de estudos empiricamente densos e contextualizados sobre como esses princípios são operacionalizados no âmbito da administração pública federal brasileira.
+
+\printbibliography
+\end{document}

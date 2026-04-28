@@ -1,0 +1,27 @@
+{
+  "word_counts": {
+    "DEDICATÓRIA": 29,
+    "AGRADECIMENTOS": 50,
+    "EPÍGRAFE": 25,
+    "RESUMO": 316,
+    "ABSTRACT": 288,
+    "LISTA DE ILUSTRAÇÕES": 42,
+    "LISTA DE TABELAS": 33,
+    "LISTA DE ABREVIATURAS E SIGLAS": 47,
+    "LISTA DE SÍMBOLOS": 4,
+    "INTRODUÇÃO": 4884,
+    "REFERENCIAL TEÓRICO": 11635,
+    "METODOLOGIA": 5344,
+    "RESULTADOS E DISCUSSÃO": 12708,
+    "CONSIDERAÇÕES FINAIS": 3529,
+    "GLOSSÁRIO": 167,
+    "ÍNDICE": 9,
+    "documento_total": 39296
+  },
+  "configured_limits": {
+    "total": null,
+    "introducao": null,
+    "revisao": null,
+    "conclusao": null
+  }
+}

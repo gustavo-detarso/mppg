@@ -1,0 +1,1788 @@
+{
+  "source": "scopus",
+  "label": "Scopus",
+  "query": "TITLE-ABS-KEY((\"corporate governance\" OR governança OR compliance OR \"risk management\" OR \"gestão de riscos\" OR GRC OR \"governança risco e compliance\") AND (\"artificial intelligence\" OR \"inteligência artificial\" OR \"machine learning\" OR \"aprendizado de máquina\" OR analytics OR regtech OR \"technology solution*\") AND (optimization OR otimização OR \"performance improvement\" OR efficiency OR \"process optimization\") AND (\"empirical study\" OR \"empirical research\" OR \"case study\" OR survey OR \"estudo empírico\" OR \"estudo de caso\"))",
+  "retrieved": 25,
+  "warnings": [],
+  "saved_at": "2026-04-11T10:59:28.710872",
+  "pages": [
+    {
+      "search-results": {
+        "opensearch:totalResults": "1055",
+        "opensearch:startIndex": "0",
+        "opensearch:itemsPerPage": "25",
+        "opensearch:Query": {
+          "@role": "request",
+          "@searchTerms": "TITLE-ABS-KEY((\"corporate governance\" OR governança OR compliance OR \"risk management\" OR \"gestão de riscos\" OR GRC OR \"governança risco e compliance\") AND (\"artificial intelligence\" OR \"inteligência artificial\" OR \"machine learning\" OR \"aprendizado de máquina\" OR analytics OR regtech OR \"technology solution*\") AND (optimization OR otimização OR \"performance improvement\" OR efficiency OR \"process optimization\") AND (\"empirical study\" OR \"empirical research\" OR \"case study\" OR survey OR \"estudo empírico\" OR \"estudo de caso\"))",
+          "@startPage": "0"
+        },
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY%28%28%22corporate+governance%22+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+GRC+OR+%22governan%C3%A7a+risco+e+compliance%22%29+AND+%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22+OR+%22machine+learning%22+OR+%22aprendizado+de+m%C3%A1quina%22+OR+analytics+OR+regtech+OR+%22technology+solution*%22%29+AND+%28optimization+OR+otimiza%C3%A7%C3%A3o+OR+%22performance+improvement%22+OR+efficiency+OR+%22process+optimization%22%29+AND+%28%22empirical+study%22+OR+%22empirical+research%22+OR+%22case+study%22+OR+survey+OR+%22estudo+emp%C3%ADrico%22+OR+%22estudo+de+caso%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "first",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY%28%28%22corporate+governance%22+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+GRC+OR+%22governan%C3%A7a+risco+e+compliance%22%29+AND+%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22+OR+%22machine+learning%22+OR+%22aprendizado+de+m%C3%A1quina%22+OR+analytics+OR+regtech+OR+%22technology+solution*%22%29+AND+%28optimization+OR+otimiza%C3%A7%C3%A3o+OR+%22performance+improvement%22+OR+efficiency+OR+%22process+optimization%22%29+AND+%28%22empirical+study%22+OR+%22empirical+research%22+OR+%22case+study%22+OR+survey+OR+%22estudo+emp%C3%ADrico%22+OR+%22estudo+de+caso%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "next",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=25&count=25&query=TITLE-ABS-KEY%28%28%22corporate+governance%22+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+GRC+OR+%22governan%C3%A7a+risco+e+compliance%22%29+AND+%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22+OR+%22machine+learning%22+OR+%22aprendizado+de+m%C3%A1quina%22+OR+analytics+OR+regtech+OR+%22technology+solution*%22%29+AND+%28optimization+OR+otimiza%C3%A7%C3%A3o+OR+%22performance+improvement%22+OR+efficiency+OR+%22process+optimization%22%29+AND+%28%22empirical+study%22+OR+%22empirical+research%22+OR+%22case+study%22+OR+survey+OR+%22estudo+emp%C3%ADrico%22+OR+%22estudo+de+caso%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "last",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=1030&count=25&query=TITLE-ABS-KEY%28%28%22corporate+governance%22+OR+governan%C3%A7a+OR+compliance+OR+%22risk+management%22+OR+%22gest%C3%A3o+de+riscos%22+OR+GRC+OR+%22governan%C3%A7a+risco+e+compliance%22%29+AND+%28%22artificial+intelligence%22+OR+%22intelig%C3%AAncia+artificial%22+OR+%22machine+learning%22+OR+%22aprendizado+de+m%C3%A1quina%22+OR+analytics+OR+regtech+OR+%22technology+solution*%22%29+AND+%28optimization+OR+otimiza%C3%A7%C3%A3o+OR+%22performance+improvement%22+OR+efficiency+OR+%22process+optimization%22%29+AND+%28%22empirical+study%22+OR+%22empirical+research%22+OR+%22case+study%22+OR+survey+OR+%22estudo+emp%C3%ADrico%22+OR+%22estudo+de+caso%22%29%29&view=STANDARD",
+            "@type": "application/json"
+          }
+        ],
+        "entry": [
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105028022829"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105028022829?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105028022829&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105028022829&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105028022829",
+            "dc:identifier": "SCOPUS_ID:105028022829",
+            "eid": "2-s2.0-105028022829",
+            "dc:title": "A survey of cyber threat intelligence in embedded system driven security for mobile health systems",
+            "dc:creator": "Ikegwu A.C.",
+            "prism:publicationName": "Journal of Cloud Computing",
+            "prism:eIssn": "2192113X",
+            "prism:volume": "15",
+            "prism:issueIdentifier": "1",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-12-01",
+            "prism:coverDisplayDate": "December 2026",
+            "prism:doi": "10.1186/s13677-025-00811-3",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Alex Ekwueme Federal University, Ndufu-Alike",
+                "affiliation-city": "Abakaliki",
+                "affiliation-country": "Nigeria"
+              },
+              {
+                "@_fa": "true",
+                "affilname": "Veritas University, Abuja",
+                "affiliation-city": "Abuja",
+                "affiliation-country": "Nigeria"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "11",
+            "source-id": "21100383744",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033814871"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033814871?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105033814871&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105033814871&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105033814871",
+            "dc:identifier": "SCOPUS_ID:105033814871",
+            "eid": "2-s2.0-105033814871",
+            "dc:title": "Spatial optimization methods for waste-to-energy facility siting: a review of GIS-MCDA approaches",
+            "dc:creator": "Alhassan S.",
+            "prism:publicationName": "Journal of Engineering and Applied Science",
+            "prism:issn": "11101903",
+            "prism:eIssn": "25369512",
+            "prism:volume": "73",
+            "prism:issueIdentifier": "1",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-12-01",
+            "prism:coverDisplayDate": "December 2026",
+            "prism:doi": "10.1186/s44147-026-00975-y",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Bayero University",
+                "affiliation-city": "Kano",
+                "affiliation-country": "Nigeria"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "120",
+            "source-id": "12474",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029443300"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029443300?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105029443300&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105029443300&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105029443300",
+            "dc:identifier": "SCOPUS_ID:105029443300",
+            "eid": "2-s2.0-105029443300",
+            "dc:title": "Scalable privacy-preserving data analytics for IoMT via FHE and zk-SNARK-enabled edge aggregation",
+            "dc:creator": "Ben Othman S.",
+            "prism:publicationName": "Scientific Reports",
+            "prism:eIssn": "20452322",
+            "prism:volume": "16",
+            "prism:issueIdentifier": "1",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-12-01",
+            "prism:coverDisplayDate": "December 2026",
+            "prism:doi": "10.1038/s41598-026-35284-0",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "King Faisal University",
+                "affiliation-city": "Al-Ahsa",
+                "affiliation-country": "Saudi Arabia"
+              }
+            ],
+            "pubmed-id": "41530395",
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "5098",
+            "source-id": "21100200805",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105034615812"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105034615812?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105034615812&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105034615812&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1474034626002909"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105034615812",
+            "dc:identifier": "SCOPUS_ID:105034615812",
+            "eid": "2-s2.0-105034615812",
+            "dc:title": "Joint Embedding Predictive Architecture for autonomous vehicle safety and security: A comprehensive survey",
+            "dc:creator": "Ferdaus M.M.",
+            "prism:publicationName": "Advanced Engineering Informatics",
+            "prism:issn": "14740346",
+            "prism:volume": "74",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-09-01",
+            "prism:coverDisplayDate": "September 2026",
+            "prism:doi": "10.1016/j.aei.2026.104598",
+            "pii": "S1474034626002909",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Department of Computer Science",
+                "affiliation-city": "New Orleans",
+                "affiliation-country": "United States"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "104598",
+            "source-id": "23640",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031000566"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031000566?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105031000566&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105031000566&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S026069172600081X"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105031000566",
+            "dc:identifier": "SCOPUS_ID:105031000566",
+            "eid": "2-s2.0-105031000566",
+            "dc:title": "“Is GenAI my supervisor?” Experiences of nursing undergraduates in using generative AI to assist in case study theses: A qualitative study",
+            "dc:creator": "Xu H.",
+            "prism:publicationName": "Nurse Education Today",
+            "prism:issn": "02606917",
+            "prism:eIssn": "15322793",
+            "prism:volume": "162",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-07-01",
+            "prism:coverDisplayDate": "July 2026",
+            "prism:doi": "10.1016/j.nedt.2026.107053",
+            "pii": "S026069172600081X",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Guangzhou University of Chinese Medicine",
+                "affiliation-city": "Guangzhou",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "107053",
+            "source-id": "28806",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033149933"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033149933?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105033149933&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105033149933&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0957417426006937"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105033149933",
+            "dc:identifier": "SCOPUS_ID:105033149933",
+            "eid": "2-s2.0-105033149933",
+            "dc:title": "An optimization approach considering consistency and classification for managing social risks of medical artificial intelligence",
+            "dc:creator": "Jiang J.",
+            "prism:publicationName": "Expert Systems with Applications",
+            "prism:issn": "09574174",
+            "prism:volume": "316",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-06-15",
+            "prism:coverDisplayDate": "15 June 2026",
+            "prism:doi": "10.1016/j.eswa.2026.131780",
+            "pii": "S0957417426006937",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "School of Economics & Management",
+                "affiliation-city": "Nanjing",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "131780",
+            "source-id": "24201",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033673650"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033673650?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105033673650&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105033673650&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105033673650",
+            "dc:identifier": "SCOPUS_ID:105033673650",
+            "eid": "2-s2.0-105033673650",
+            "dc:title": "From Forgetting to Future: A Survey of Machine Unlearning Approaches",
+            "dc:creator": "Sehgal S.",
+            "prism:publicationName": "Wiley Interdisciplinary Reviews Data Mining and Knowledge Discovery",
+            "prism:issn": "19424787",
+            "prism:eIssn": "19424795",
+            "prism:volume": "16",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-06-01",
+            "prism:coverDisplayDate": "June 2026",
+            "prism:doi": "10.1002/widm.70082",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Jaypee Institute of Information Technology",
+                "affiliation-city": "Noida",
+                "affiliation-country": "India"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "e70082",
+            "source-id": "21100228068",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105034473925"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105034473925?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105034473925&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105034473925&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0278612526000786"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105034473925",
+            "dc:identifier": "SCOPUS_ID:105034473925",
+            "eid": "2-s2.0-105034473925",
+            "dc:title": "CPDTeam: A KG-RAG-CoT dual-driven and deep reinforcement learning-augmented multi-agent framework for intelligent collaborative product development",
+            "dc:creator": "Li Y.",
+            "prism:publicationName": "Journal of Manufacturing Systems",
+            "prism:issn": "02786125",
+            "prism:volume": "86",
+            "prism:pageRange": "492-515",
+            "prism:coverDate": "2026-06-01",
+            "prism:coverDisplayDate": "June 2026",
+            "prism:doi": "10.1016/j.jmsy.2026.03.017",
+            "pii": "S0278612526000786",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "China University of Mining and Technology",
+                "affiliation-city": "Xuzhou",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "14966",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030451547"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030451547?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105030451547&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105030451547&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2773032826000076"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105030451547",
+            "dc:identifier": "SCOPUS_ID:105030451547",
+            "eid": "2-s2.0-105030451547",
+            "dc:title": "How do small and medium-sized enterprises prioritize risks when adopting industry 4.0? Balancing technical, economic, and sustainability considerations",
+            "dc:creator": "Zarea F.",
+            "prism:publicationName": "Sustainable Technology and Entrepreneurship",
+            "prism:eIssn": "27730328",
+            "prism:volume": "5",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-05-01",
+            "prism:coverDisplayDate": "1 May 2026",
+            "prism:doi": "10.1016/j.stae.2026.100134",
+            "pii": "S2773032826000076",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "QUT Business School",
+                "affiliation-city": "Brisbane",
+                "affiliation-country": "Australia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "100134",
+            "source-id": "21101167218",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105026319858"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105026319858?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105026319858&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105026319858&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2949824425004951"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105026319858",
+            "dc:identifier": "SCOPUS_ID:105026319858",
+            "eid": "2-s2.0-105026319858",
+            "dc:title": "Smart food safety in dairy production: Enose technologies with digital traceability systems – A review",
+            "dc:creator": "Akimsha R.",
+            "prism:publicationName": "Food and Humanity",
+            "prism:eIssn": "29498244",
+            "prism:volume": "6",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-05-01",
+            "prism:coverDisplayDate": "May 2026",
+            "prism:doi": "10.1016/j.foohum.2025.100991",
+            "pii": "S2949824425004951",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of Kelaniya",
+                "affiliation-city": "Kelaniya",
+                "affiliation-country": "Sri Lanka"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "100991",
+            "source-id": "21101255658",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105024334948"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105024334948?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105024334948&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105024334948&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1566253525010747"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105024334948",
+            "dc:identifier": "SCOPUS_ID:105024334948",
+            "eid": "2-s2.0-105024334948",
+            "dc:title": "A survey of physics-informed AI for complex urban systems",
+            "dc:creator": "Xu E.",
+            "prism:publicationName": "Information Fusion",
+            "prism:issn": "15662535",
+            "prism:eIssn": "18726305",
+            "prism:volume": "129",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-05-01",
+            "prism:coverDisplayDate": "May 2026",
+            "prism:doi": "10.1016/j.inffus.2025.104012",
+            "pii": "S1566253525010747",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Beijing National Research Center for Information Science and Technology",
+                "affiliation-city": "Beijing",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "104012",
+            "source-id": "26099",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030338824"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030338824?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105030338824&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105030338824&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1474034626001758"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105030338824",
+            "dc:identifier": "SCOPUS_ID:105030338824",
+            "eid": "2-s2.0-105030338824",
+            "dc:title": "Generative inverse design of steel gridshell joints with multi-objective optimisation",
+            "dc:creator": "Chen M.T.",
+            "prism:publicationName": "Advanced Engineering Informatics",
+            "prism:issn": "14740346",
+            "prism:volume": "72",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-05-01",
+            "prism:coverDisplayDate": "May 2026",
+            "prism:doi": "10.1016/j.aei.2026.104483",
+            "pii": "S1474034626001758",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Shanghai Jiao Tong University",
+                "affiliation-city": "Shanghai",
+                "affiliation-country": "China"
+              },
+              {
+                "@_fa": "true",
+                "affilname": "State Key Laboratory of Ocean Engineering",
+                "affiliation-city": "Shanghai",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "104483",
+            "source-id": "23640",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031672804"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105031672804?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105031672804&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105031672804&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1364815226000861"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105031672804",
+            "dc:identifier": "SCOPUS_ID:105031672804",
+            "eid": "2-s2.0-105031672804",
+            "dc:title": "An intelligent decision support framework for generating flood control emergency plan using knowledge graph and fuzzy enhanced entity recognition model",
+            "dc:creator": "Jiang R.",
+            "prism:publicationName": "Environmental Modelling and Software",
+            "prism:issn": "13648152",
+            "prism:volume": "200",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-05-01",
+            "prism:coverDisplayDate": "May 2026",
+            "prism:doi": "10.1016/j.envsoft.2026.106939",
+            "pii": "S1364815226000861",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Xi'an University of Technology",
+                "affiliation-city": "Xi'an",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "106939",
+            "source-id": "23295",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030501481"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030501481?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105030501481&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105030501481&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0141029626001859"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105030501481",
+            "dc:identifier": "SCOPUS_ID:105030501481",
+            "eid": "2-s2.0-105030501481",
+            "dc:title": "Automated design of shear wall structures using reinforcement learning with code compliance",
+            "dc:creator": "Zhao G.",
+            "prism:publicationName": "Engineering Structures",
+            "prism:issn": "01410296",
+            "prism:eIssn": "18737323",
+            "prism:volume": "353",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-04-15",
+            "prism:coverDisplayDate": "15 April 2026",
+            "prism:doi": "10.1016/j.engstruct.2026.122272",
+            "pii": "S0141029626001859",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Hunan University",
+                "affiliation-city": "Changsha",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "122272",
+            "source-id": "15652",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105025055266"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105025055266?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105025055266&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105025055266&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0886779825010168"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105025055266",
+            "dc:identifier": "SCOPUS_ID:105025055266",
+            "eid": "2-s2.0-105025055266",
+            "dc:title": "A knowledge-data dual-driven framework for predicting surrounding rock classification in TBM tunneling and generalization analysis",
+            "dc:creator": "Luo W.",
+            "prism:publicationName": "Tunnelling and Underground Space Technology",
+            "prism:issn": "08867798",
+            "prism:volume": "170",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-04-01",
+            "prism:coverDisplayDate": "April 2026",
+            "prism:doi": "10.1016/j.tust.2025.107378",
+            "pii": "S0886779825010168",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Tongji University",
+                "affiliation-city": "Shanghai",
+                "affiliation-country": "China"
+              },
+              {
+                "@_fa": "true",
+                "affilname": "Key Laboratory of Geotechnical and Underground Engineering, Ministry of Education",
+                "affiliation-city": "Shanghai",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "107378",
+            "source-id": "14642",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029035813"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029035813?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105029035813&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105029035813&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0952197626002903"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105029035813",
+            "dc:identifier": "SCOPUS_ID:105029035813",
+            "eid": "2-s2.0-105029035813",
+            "dc:title": "Data-driven model-free graph multi-agent deep reinforcement learning for voltage-voltage-ampere reactive control in active distribution networks",
+            "dc:creator": "Gao F.",
+            "prism:publicationName": "Engineering Applications of Artificial Intelligence",
+            "prism:issn": "09521976",
+            "prism:volume": "168",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-03-15",
+            "prism:coverDisplayDate": "15 March 2026",
+            "prism:doi": "10.1016/j.engappai.2026.114009",
+            "pii": "S0952197626002903",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Guangxi University",
+                "affiliation-city": "Nanning",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "114009",
+            "source-id": "24182",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032689828"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032689828?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105032689828&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105032689828&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105032689828",
+            "dc:identifier": "SCOPUS_ID:105032689828",
+            "eid": "2-s2.0-105032689828",
+            "dc:title": "AI-Enabled Management of Transfer Pricing Documentation: A Sustainable Governance Framework Integrating Compliance, Digitalization, and CSRD Requirements",
+            "dc:creator": "Boiță M.",
+            "prism:publicationName": "Sustainability Switzerland",
+            "prism:eIssn": "20711050",
+            "prism:volume": "18",
+            "prism:issueIdentifier": "5",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.3390/su18052528",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universitatea de Vest \"Vasile Goldiş”",
+                "affiliation-city": "Arad",
+                "affiliation-country": "Romania"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "2528",
+            "source-id": "21100240100",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032753087"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032753087?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105032753087&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105032753087&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105032753087",
+            "dc:identifier": "SCOPUS_ID:105032753087",
+            "eid": "2-s2.0-105032753087",
+            "dc:title": "An Intelligent Framework for Implementing AIAG–VDA FMEA and Action Priority (AP) Assessment",
+            "dc:creator": "Oancea A.V.",
+            "prism:publicationName": "Applied Sciences Switzerland",
+            "prism:eIssn": "20763417",
+            "prism:volume": "16",
+            "prism:issueIdentifier": "5",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.3390/app16052591",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "National University of Science and Technology POLITEHNICA Bucharest",
+                "affiliation-city": "Bucharest",
+                "affiliation-country": "Romania"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "2591",
+            "source-id": "21100829268",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029245431"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029245431?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105029245431&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105029245431&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105029245431",
+            "dc:identifier": "SCOPUS_ID:105029245431",
+            "eid": "2-s2.0-105029245431",
+            "dc:title": "Exploring the transition from hexagon (HxGN) enterprise asset management (EAM) to SAP EAM: Cost benefits, operational efficiencies, and real-world applications",
+            "dc:creator": "Chenna K.",
+            "prism:publicationName": "International Journal of Advanced Manufacturing Technology",
+            "prism:issn": "02683768",
+            "prism:eIssn": "14333015",
+            "prism:volume": "143",
+            "prism:issueIdentifier": "1-2",
+            "prism:pageRange": "193-212",
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.1007/s00170-026-17501-2",
+            "citedby-count": "0",
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "20428",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029039440"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105029039440?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105029039440&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105029039440&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105029039440",
+            "dc:identifier": "SCOPUS_ID:105029039440",
+            "eid": "2-s2.0-105029039440",
+            "dc:title": "Optimization of the Claus Process Using Machine Learning and Real Operational Data: A Case Study in an SRU",
+            "dc:creator": "Shokouhalaei A.",
+            "prism:publicationName": "Chemistry Africa",
+            "prism:issn": "25225758",
+            "prism:eIssn": "25225766",
+            "prism:volume": "9",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.1007/s42250-025-01560-1",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Semnan University",
+                "affiliation-city": "Semnan",
+                "affiliation-country": "Iran"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "49",
+            "source-id": "21101055713",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030856781"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105030856781?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105030856781&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105030856781&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105030856781",
+            "dc:identifier": "SCOPUS_ID:105030856781",
+            "eid": "2-s2.0-105030856781",
+            "dc:title": "Integrated SAP S/4HANA production planning with AGI warehouse management system and laboratory information management system",
+            "dc:creator": "Chenna K.",
+            "prism:publicationName": "International Journal of Advanced Manufacturing Technology",
+            "prism:issn": "02683768",
+            "prism:eIssn": "14333015",
+            "prism:volume": "143",
+            "prism:issueIdentifier": "5-6",
+            "prism:pageRange": "2393-2404",
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.1007/s00170-026-17542-7",
+            "citedby-count": "0",
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "20428",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032696192"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032696192?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105032696192&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105032696192&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105032696192",
+            "dc:identifier": "SCOPUS_ID:105032696192",
+            "eid": "2-s2.0-105032696192",
+            "dc:title": "A CatBoost-Based Prediction Framework for Logistics Industry Prosperity Index to Support Sustainable Decision-Making: An Empirical Study from China",
+            "dc:creator": "Liu Y.",
+            "prism:publicationName": "Sustainability Switzerland",
+            "prism:eIssn": "20711050",
+            "prism:volume": "18",
+            "prism:issueIdentifier": "5",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.3390/su18052178",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Lanzhou University of Finance and Economics",
+                "affiliation-city": "Lanzhou",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "2178",
+            "source-id": "21100240100",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105034213079"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105034213079?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105034213079&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105034213079&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105034213079",
+            "dc:identifier": "SCOPUS_ID:105034213079",
+            "eid": "2-s2.0-105034213079",
+            "dc:title": "Pathways to Green AI: Information Disclosure of Artificial Intelligence Within the ESG Framework of Commercial Entities",
+            "dc:creator": "Chen J.",
+            "prism:publicationName": "Sustainability Switzerland",
+            "prism:eIssn": "20711050",
+            "prism:volume": "18",
+            "prism:issueIdentifier": "6",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.3390/su18062922",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of Chinese Academy of Sciences",
+                "affiliation-city": "Beijing",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "2922",
+            "source-id": "21100240100",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105023105990"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105023105990?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105023105990&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105023105990&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105023105990",
+            "dc:identifier": "SCOPUS_ID:105023105990",
+            "eid": "2-s2.0-105023105990",
+            "dc:title": "Leveraging Artificial Intelligence for ESG Reporting: A Case Study in the European Fashion Industry",
+            "dc:creator": "Strazzullo S.",
+            "prism:publicationName": "Business Strategy and the Environment",
+            "prism:issn": "09644733",
+            "prism:eIssn": "10990836",
+            "prism:volume": "35",
+            "prism:issueIdentifier": "3",
+            "prism:pageRange": "4521-4537",
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.1002/bse.70405",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Università degli Studi di Napoli Federico II",
+                "affiliation-city": "Naples",
+                "affiliation-country": "Italy"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "23406",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105019961911"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105019961911?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105019961911&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105019961911&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1876107025005127"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019961911",
+            "dc:identifier": "SCOPUS_ID:105019961911",
+            "eid": "2-s2.0-105019961911",
+            "dc:title": "Dynamic Simulation and Optimization of an Innovative Cogeneration System Using TRNSYS, EES, and Response Surface Methodology as a Machine learning method",
+            "dc:creator": "Dezhdar A.",
+            "prism:publicationName": "Journal of the Taiwan Institute of Chemical Engineers",
+            "prism:issn": "18761070",
+            "prism:volume": "180",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-03-01",
+            "prism:coverDisplayDate": "March 2026",
+            "prism:doi": "10.1016/j.jtice.2025.106461",
+            "pii": "S1876107025005127",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Asia Pacific University of Technology and Innovation",
+                "affiliation-city": "Kuala Lumpur",
+                "affiliation-country": "Malaysia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "106461",
+            "source-id": "13900154734",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

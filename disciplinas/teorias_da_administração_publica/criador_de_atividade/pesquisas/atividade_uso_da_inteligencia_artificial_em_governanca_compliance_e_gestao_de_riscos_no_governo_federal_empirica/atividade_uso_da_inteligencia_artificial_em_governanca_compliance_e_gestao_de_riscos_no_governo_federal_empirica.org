@@ -1,0 +1,154 @@
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+#+begin_comment
+#+end_comment
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueDark}{HTML}{003A70}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueMid}{HTML}{005AA9}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueLight}{HTML}{66A9E0}
+#+LATEX_HEADER: \setlength{\headheight}{48pt}
+#+LATEX_HEADER: \setlength{\headsep}{12pt}
+#+LATEX_HEADER: \newcommand{\FGVHeaderLogoInclude}{\includegraphics[height=0.95cm]{/home/gustavodetarso/Documentos/.share/mgs_org/fgv.png}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0,0) rectangle (\headwidth,1.2pt);\end{tikzpicture}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderBlock}{\begin{minipage}[b]{\headwidth}\raggedright \FGVHeaderLogoInclude\par\vspace{0.18em}\noindent\FGVHeaderGradientRule\end{minipage}}
+#+LATEX_HEADER: \fancypagestyle{fgvreportstyle}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\makebox[\headwidth][l]{\FGVHeaderBlock}}%
+#+LATEX_HEADER: \fancyhead[C]{}%
+#+LATEX_HEADER: \fancyhead[R]{}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{plain}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\makebox[\headwidth][l]{\FGVHeaderBlock}}%
+#+LATEX_HEADER: \fancyhead[C]{}%
+#+LATEX_HEADER: \fancyhead[R]{}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado de Políticas Públicas e Governo \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias de Administração Pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 16 de abril de 2026 \\
+\textbf{Título do trabalho}      & Inteligência artificial no governo federal como instrumento de governança, compliance e gestão de riscos: Métodos mistos \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \clearpage
+
+* Introdução e contextualização
+
+A incorporação de sistemas de inteligência artificial (IA) na administração pública federal tem avançado como parte do processo de transformação digital do Estado, especialmente em atividades de apoio à análise de dados, monitoramento, priorização de casos, detecção de padrões, automação de rotinas e suporte à tomada de decisão. No campo da governança, do compliance e da gestão de riscos, a IA tende a ser mobilizada como instrumento para ampliar capacidades institucionais, fortalecer controles internos, prevenir irregularidades e melhorar a rastreabilidade decisória. Contudo, a adoção dessas soluções também produz desafios relevantes, como opacidade algorítmica, vieses, falso positivo, discriminação, dependência de bases de dados de qualidade desigual e riscos de enfraquecimento da responsabilização humana. Nesse contexto, torna-se empiricamente relevante investigar em que medida e sob quais condições o uso da IA no governo federal contribui para integridade, conformidade e qualidade da decisão administrativa, sem comprometer accountability, transparência e controle.
+
+* Problema de pesquisa
+
+#+begin_quote
+Como o uso da inteligência artificial, como instrumento de apoio à governança, ao compliance e à gestão de riscos no governo federal, afeta a integridade pública, os controles internos e a qualidade da tomada de decisão, e de que modo fatores organizacionais e regulatórios condicionam esses efeitos?
+#+end_quote
+
+* Justificativa e relevância
+
+A relevância da pesquisa decorre de pelo menos quatro fatores. Primeiro, a expansão do uso de IA no setor público federal brasileiro ocorre em ritmo mais acelerado do que a consolidação de evidências empíricas sobre seus efeitos organizacionais e institucionais. Segundo, áreas de governança, compliance e gestão de riscos são particularmente sensíveis, pois lidam com prevenção de irregularidades, responsabilização, conformidade normativa e proteção do interesse público. Terceiro, embora a IA possa ampliar capacidade analítica, padronização e tempestividade, seus benefícios dependem de condições institucionais específicas, como qualidade de dados, supervisão humana, capacidades técnicas, regras de uso e mecanismos de transparência. Quarto, o tema dialoga diretamente com debates contemporâneos de teorias de administração pública, em especial sobre capacidade estatal, governança algorítmica, accountability e transformação digital do Estado. Assim, a pesquisa pode oferecer contribuição teórica e aplicada para o desenho de arranjos institucionais mais seguros, eficazes e legítimos para o uso de IA no governo federal.
+
+* Objetivos
+
+** Objetivo geral
+
+Analisar empiricamente de que maneira o uso da inteligência artificial no governo federal, como instrumento de apoio à governança, ao compliance e à gestão de riscos, influencia a integridade pública, os controles internos e a qualidade da tomada de decisão, considerando o papel mediador e condicionante de fatores organizacionais, regulatórios e de governança de dados.
+
+** Objetivos específicos
+
+- Mapear aplicações de inteligência artificial utilizadas ou em implementação no governo federal em atividades relacionadas à governança, ao compliance, à gestão de riscos, à integridade e aos controles internos.
+- Identificar percepções de gestores, servidores e atores de controle sobre benefícios, limitações e riscos do uso da IA nesses processos.
+- Examinar a relação entre adoção de IA e resultados percebidos de melhoria de conformidade, prevenção de irregularidades, consistência decisória, rastreabilidade e capacidade de monitoramento.
+- Analisar como fatores organizacionais, tais como capacidade institucional, maturidade digital, qualificação técnica das equipes e governança de dados, condicionam os efeitos da IA.
+- Investigar o papel de fatores regulatórios e de mecanismos de accountability algorítmica, como transparência, documentação, auditabilidade e supervisão humana, sobre a legitimidade e a confiança no uso público da IA.
+- Propor um modelo analítico explicativo para o uso da IA como instrumento de apoio à governança, ao compliance e à gestão de riscos no governo federal.
+
+* Hipótese ou resposta teórica
+
+A hipótese central é que o uso da inteligência artificial no governo federal tende a produzir efeitos positivos sobre governança, compliance e gestão de riscos — especialmente em termos de ampliação da capacidade de monitoramento, padronização analítica, prevenção de irregularidades, consistência e rastreabilidade da tomada de decisão — quando sua adoção é acompanhada por elevada capacidade institucional, boa governança de dados, mecanismos de supervisão humana e dispositivos de accountability algorítmica. Em contrapartida, na ausência dessas condições, a IA pode gerar efeitos ambíguos ou negativos, ampliando opacidade, vieses, falso positivo, sobrecarga de revisão e fragilização da responsabilização decisória.
+
+* Modelo teórico
+
+O modelo teórico proposto parte da ideia de que a adoção da IA no setor público não produz efeitos lineares, mas condicionados por capacidades e arranjos institucionais. A variável independente central é o grau de adoção da IA em processos de governança, compliance e gestão de riscos, observável pela existência de sistemas, intensidade de uso, diversidade de aplicações e centralidade da IA nos fluxos decisórios. As variáveis dependentes são: (a) integridade pública e conformidade, expressas em prevenção de irregularidades, aderência normativa e fortalecimento de controles; (b) qualidade da tomada de decisão, expressa em consistência, tempestividade, rastreabilidade e suporte analítico; e (c) efetividade da gestão de riscos, expressa em capacidade de identificação, priorização e monitoramento. Como variáveis mediadoras e moderadoras, incluem-se: capacidade institucional; maturidade digital; qualidade e governança dos dados; qualificação técnica das equipes; clareza regulatória; transparência do sistema; auditabilidade; supervisão humana; e mecanismos de responsabilização. O modelo admite também variáveis de risco, como opacidade algorítmica, viés, discriminação e falso positivo, que podem reduzir ou reverter os efeitos esperados. Em termos relacionais, quanto maior a adoção da IA, maior tende a ser a capacidade analítica e de controle; entretanto, esse efeito positivo depende da presença de arranjos de governança algorítmica e de dados que mitiguem riscos e preservem accountability. Assim, os efeitos da IA são contingentes: positivos em contextos de alta capacidade e governança robusta; limitados ou problemáticos em contextos de baixa capacidade e frágil supervisão.
+
+* Proposta de condução da pesquisa
+
+Propõe-se um estudo empírico de métodos mistos, com desenho sequencial explanatório ou convergente. Em uma primeira etapa quantitativa, pode-se aplicar survey com servidores, gestores e profissionais de áreas de governança, auditoria, integridade, corregedoria, ouvidoria, gestão de riscos, tecnologia da informação e áreas finalísticas de órgãos do governo federal que já utilizem ou estejam testando soluções de IA. O questionário poderá medir intensidade de uso da IA, finalidades de uso, percepção de utilidade, efeitos sobre controles internos, integridade, qualidade da decisão, rastreabilidade, além de riscos percebidos e existência de salvaguardas institucionais. Em uma segunda etapa qualitativa, recomenda-se realizar estudos de caso múltiplos em órgãos federais selecionados, contemplando diferentes níveis de maturidade no uso de IA. Nesses casos, podem ser conduzidas entrevistas semiestruturadas com gestores, equipes técnicas, usuários e atores de controle, bem como análise documental de normativos internos, políticas de governança de dados, relatórios de auditoria, manuais, registros de projeto e documentos de contratação ou desenvolvimento de sistemas. A integração dos métodos deverá ocorrer na interpretação dos resultados, buscando explicar por que determinados arranjos institucionais geram melhores resultados em integridade, compliance e gestão de riscos do que outros. Como recorte analítico, a pesquisa pode priorizar aplicações de IA voltadas a detecção de anomalias, triagem de processos, identificação de riscos, apoio à fiscalização, classificação de documentos, análise preditiva ou suporte à decisão administrativa. A unidade de análise pode ser tanto o órgão federal quanto a aplicação específica de IA em uso.
+
+* Possibilidades de coleta de dados
+
+- Aplicação de survey com servidores e gestores de órgãos e entidades do governo federal envolvidos com governança, compliance, integridade, auditoria, gestão de riscos e transformação digital.
+- Entrevistas semiestruturadas com gestores públicos, equipes de TI, responsáveis por integridade e controle interno, auditores e usuários de sistemas baseados em IA.
+- Estudos de caso múltiplos em órgãos federais com experiências distintas de adoção de IA.
+- Análise documental de normativos, políticas institucionais, estratégias digitais, planos de transformação digital, políticas de integridade, manuais de gestão de riscos, documentos de governança de dados e relatórios de auditoria.
+- Levantamento de informações em portais institucionais, bases públicas, documentos de contratação, painéis de monitoramento e relatórios de desempenho de sistemas.
+- Observação de fluxos de trabalho ou oficinas de validação com equipes responsáveis pelos sistemas, quando houver viabilidade de acesso.
+- Coleta de indicadores administrativos sobre tempo de processamento, volume de casos analisados, detecção de inconsistências, taxa de retrabalho, registros de alertas e incidência de falso positivo, caso disponíveis.
+
+* Possibilidades de análise de dados
+
+- Estatística descritiva para caracterizar perfil de adoção de IA, áreas de aplicação, intensidade de uso e percepção dos respondentes.
+- Análise fatorial e testes de confiabilidade para validação de construtos como qualidade da decisão, integridade percebida, capacidade institucional e accountability algorítmica.
+- Modelagem de regressão múltipla ou modelagem de equações estruturais para testar associações entre adoção de IA, fatores organizacionais, mecanismos de governança e resultados percebidos.
+- Análise comparativa entre órgãos ou tipos de aplicação de IA, identificando padrões de maior ou menor efetividade.
+- Análise de conteúdo temática das entrevistas e documentos, com categorias como transparência, supervisão humana, confiança, viés, conformidade, capacidade institucional e rastreabilidade.
+- Triangulação entre dados quantitativos, qualitativos e documentais para aumentar validade interna e robustez interpretativa.
+- Construção de tipologias de arranjos institucionais de uso da IA no governo federal, distinguindo experiências mais maduras, experimentais ou de baixo controle.
+- Se houver dados administrativos, análise antes-depois ou comparações entre unidades com e sem apoio de IA, para explorar evidências de mudança em desempenho, conformidade e prevenção de irregularidades.
+
+* Conclusão
+
+A crescente incorporação de inteligência artificial (IA) na administração pública tem redefinido práticas de gestão, monitoramento e apoio à decisão em diferentes níveis de governo. No âmbito do governo federal, tais tecnologias vêm sendo mobilizadas para ampliar a capacidade estatal de processamento de informações, identificação de padrões, automação de rotinas, priorização de casos e suporte à atuação administrativa. Em áreas particularmente sensíveis, como governança, compliance e gestão de riscos, a IA apresenta potencial para fortalecer integridade, controles internos, conformidade normativa e qualidade da tomada de decisão. Ao mesmo tempo, seu uso traz desafios institucionais relevantes, relacionados à opacidade algorítmica, vieses, discriminação, dependência da qualidade dos dados, produção de falsos positivos e redefinição das fronteiras de responsabilização entre sistema e agente público.
+
+Diante desse cenário, mostra-se pertinente formular a seguinte pergunta de pesquisa: como o uso da inteligência artificial, como instrumento de apoio à governança, ao compliance e à gestão de riscos no governo federal, afeta a integridade pública, os controles internos e a qualidade da tomada de decisão, e de que modo fatores organizacionais e regulatórios condicionam esses efeitos?
+
+A relevância do problema decorre da combinação entre avanço tecnológico e insuficiência de evidências empíricas sistematizadas sobre seus efeitos concretos na administração pública federal. Embora a literatura e o debate institucional frequentemente apontem ganhos de eficiência, precisão e capacidade preventiva associados à IA, esses resultados não podem ser presumidos de modo automático. Em contextos públicos, a efetividade dessas ferramentas depende de capacidades organizacionais, qualidade da infraestrutura de dados, clareza regulatória, mecanismos de transparência e manutenção da supervisão humana. Além disso, o tema é teoricamente relevante para o campo das teorias da administração pública, pois articula debates sobre capacidade estatal, governança pública, accountability, controle, legitimidade administrativa e transformação digital do Estado.
+
+O objetivo geral da pesquisa é analisar empiricamente de que maneira o uso da inteligência artificial no governo federal, como instrumento de apoio à governança, ao compliance e à gestão de riscos, influencia a integridade pública, os controles internos e a qualidade da tomada de decisão, considerando o papel mediador e condicionante de fatores organizacionais, regulatórios e de governança de dados. Como objetivos específicos, pretende-se: mapear aplicações de IA utilizadas ou em implementação no governo federal em atividades relacionadas à governança, ao compliance, à gestão de riscos, à integridade e aos controles internos; identificar percepções de gestores, servidores e atores de controle sobre benefícios, limitações e riscos do uso da IA nesses processos; examinar a relação entre adoção de IA e resultados percebidos de melhoria de conformidade, prevenção de irregularidades, consistência decisória, rastreabilidade e capacidade de monitoramento; analisar como fatores organizacionais, tais como capacidade institucional, maturidade digital, qualificação técnica das equipes e governança de dados, condicionam os efeitos da IA; investigar o papel de fatores regulatórios e de mecanismos de accountability algorítmica, como transparência, documentação, auditabilidade e supervisão humana, sobre a legitimidade e a confiança no uso público da IA; e propor um modelo analítico explicativo para o uso da IA como instrumento de apoio à governança, ao compliance e à gestão de riscos no governo federal.
+
+Trata-se de uma proposta de pesquisa empírica com abordagem de métodos mistos. Como estratégia de condução, sugere-se um desenho sequencial explanatório. Em uma primeira etapa, será realizado levantamento quantitativo por meio de survey com servidores e gestores de órgãos e entidades do governo federal que atuem em áreas relacionadas à governança, integridade, auditoria, controle interno, gestão de riscos, tecnologia da informação e transformação digital. O instrumento poderá captar informações sobre grau de adoção da IA, tipo de aplicação, frequência de uso, finalidades institucionais, percepção de utilidade, efeitos sobre conformidade, integridade, qualidade decisória e rastreabilidade, bem como riscos percebidos e existência de salvaguardas institucionais.
+
+Na etapa qualitativa, recomenda-se a realização de estudos de caso múltiplos em órgãos federais selecionados segundo critérios de diversidade de maturidade digital, intensidade de uso da IA e natureza da aplicação. Nesses casos, poderão ser conduzidas entrevistas semiestruturadas com gestores, equipes de desenvolvimento ou contratação tecnológica, responsáveis por integridade, auditoria e gestão de riscos, além de usuários diretos dos sistemas. A análise documental deverá incluir normativos, planos institucionais, estratégias digitais, documentos de governança de dados, relatórios de auditoria, manuais operacionais, registros de contratação e outros documentos capazes de evidenciar como a IA é incorporada aos fluxos de decisão e controle. Sempre que viável, também poderão ser coletados indicadores administrativos, como tempo de processamento, volume de casos triados, incidência de alertas, taxa de retrabalho e registros de falso positivo.
+
+No tratamento dos dados quantitativos, poderão ser empregadas estatísticas descritivas, análise fatorial para validação de construtos e modelos de regressão ou equações estruturais para examinar a associação entre adoção de IA, fatores organizacionais e resultados percebidos. Já os dados qualitativos poderão ser submetidos à análise de conteúdo temática, com categorias relacionadas a governança algorítmica, integridade, capacidade institucional, transparência, supervisão humana, viés, conformidade e confiança. A triangulação entre survey, entrevistas, documentos e indicadores administrativos permitirá maior robustez analítica e melhor compreensão dos mecanismos causais envolvidos.
+
+A hipótese central da pesquisa é que o uso da inteligência artificial no governo federal tende a gerar efeitos positivos sobre governança, compliance e gestão de riscos, especialmente no fortalecimento da capacidade de monitoramento, na padronização de análises, na prevenção de irregularidades e na melhoria da consistência e rastreabilidade da tomada de decisão, desde que sua adoção seja acompanhada por adequada capacidade institucional, boa governança de dados, supervisão humana efetiva e mecanismos de accountability algorítmica. Na ausência dessas condições, os efeitos podem ser reduzidos, ambíguos ou mesmo negativos, em razão de opacidade, vieses, discriminação, excesso de falso positivo e enfraquecimento da responsabilização administrativa.
+
+O modelo teórico da pesquisa parte da adoção da IA em processos de governança, compliance e gestão de riscos como variável explicativa central. Seus efeitos incidem sobre três dimensões dependentes principais: integridade e conformidade, qualidade da tomada de decisão e efetividade da gestão de riscos. Todavia, essa relação é condicionada por variáveis mediadoras e moderadoras, como capacidade institucional, maturidade digital, qualidade e governança dos dados, qualificação técnica das equipes, clareza regulatória, transparência, auditabilidade, supervisão humana e mecanismos de responsabilização. Em paralelo, riscos algorítmicos, como opacidade, viés, discriminação e falso positivo, operam como fatores que podem degradar os resultados esperados. Desse modo, o modelo sustenta que os efeitos da IA no setor público são contingentes ao arranjo institucional em que a tecnologia é inserida: quando há governança robusta, a IA tende a reforçar integridade, controles internos e capacidade decisória; quando esses elementos são frágeis, a tecnologia pode reproduzir ou amplificar problemas preexistentes.
+
+Em síntese, a proposta de pesquisa pretende produzir evidências empíricas sobre um tema central para a administração pública contemporânea: o uso da IA não apenas como ferramenta de eficiência, mas como instrumento institucional de apoio à governança, ao compliance e à gestão de riscos. Ao articular métodos mistos, análise organizacional e enfoque em accountability algorítmica, o estudo poderá contribuir tanto para o avanço teórico do campo quanto para o aperfeiçoamento de políticas e práticas de transformação digital no governo federal.

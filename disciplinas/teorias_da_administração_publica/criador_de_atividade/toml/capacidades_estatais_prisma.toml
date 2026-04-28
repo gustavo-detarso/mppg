@@ -1,0 +1,85 @@
+[atividade]
+modo = "revisao_sistematica"
+disciplina = "Teorias de Administração Pública"
+professor = "Bernardo Buta"
+curso = "Mestrado de Políticas Públicas e Governo"
+turma = "T-01"
+polo = "Brasília"
+aluno = "Hugo Bustamante Tre"
+
+[pesquisa]
+tema = "Capacidades estatais e desempenho estatal, com foco na relação entre coerção, centralização do poder e resultados de políticas públicas."
+recorte = "Análise da relação entre capacidades coercitivas do Estado, grau de centralização do poder político-administrativo e desempenho de políticas públicas, considerando como diferentes arranjos institucionais afetam a implementação, a efetividade e os resultados das ações estatais."
+objetivo = "Investigar de que forma as capacidades estatais, especialmente a capacidade coercitiva e a centralização do poder, influenciam o desempenho estatal e os resultados de políticas públicas, identificando limites, mecanismos explicativos e possíveis tensões entre autoridade estatal, coordenação institucional e efetividade governamental."
+# Deixe vazio para o título ser sugerido pela IA.
+trabalho = ""
+tipo_estudo = "Revisão de literatura"
+periodo = "2019-2026"
+idiomas = ["inglês", "português"]
+bases = ["semantic_scholar", "scopus", "pubmed", "openalex", "crossref", "europe_pmc", "core"]
+# Vazio para a IA gerar palavras-chave a partir da tríade tema-recorte-objetivo.
+palavras_chave = []
+
+[bibliografia]
+estilo_citacao = "APA"
+
+[busca]
+# Liga a geração por IA de palavras-chave e blocos semânticos.
+sugerir_palavras_chave_ia = true
+# Mantém expansão em português + inglês quando fizer sentido.
+query_bilingue = true
+quantidade_triagem = 25
+quantidade_selecionados = 3
+salvar_busca_bruta_json = true
+incluir_analise_detalhada_ia = true
+incluir_sintese_integradora_ia = true
+
+[triagem]
+rigor = "moderado"
+# Ativa o score híbrido local + IA na triagem/ranking.
+usar_score_hibrido = true
+# Caminho opcional para um arquivo .txt/.md/.org com diretivas específicas de triagem.
+# Deixe vazio para usar apenas o bloco diretivas_extras abaixo.
+triagem_prompt_path = "./prompts/triagem_prompt.txt"
+# Diretivas digitadas diretamente no TOML.
+diretivas_extras = "./prompts/diretivas_extras.txt"
+
+permitir_textos_nao_publicos = false
+
+[queries]
+# Deixe tudo vazio para o Python montar as queries automaticamente a partir da IA.
+query_geral = ""
+query_semantic = ""
+query_scopus = ""
+query_wos = ""
+query_pubmed = ""
+query_openalex = ""
+query_crossref = ""
+query_europepmc = ""
+query_core = ""
+
+[saida]
+prefixo = "atividade_capacidades_estatais_prisma"
+output_dir = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/pesquisas"
+criar_subdiretorio = true
+org_modelo = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/template.org"
+# Caminho opcional para um arquivo textual com diretrizes gerais do trabalho.
+# Pode ser usado para complementar tema/recorte/objetivo e também influenciar a IA.
+arquivo_orientacao = ""
+exportar_pdf = true
+gerar_env_example = false
+remover_auxiliares = true
+
+[latex]
+org_latex_class_init = "/home/gustavodetarso/.emacs.d/lisp/academic-writing.el"
+latex_extra_path = "/home/gustavodetarso/texmf/tex/latex/fgv/fgv-paper.sty"
+comando_exportacao_pdf = ""
+fgv_logo_path = "/home/gustavodetarso/Documentos/.share/mgs_org/fgv.png"
+
+[openai]
+model = "gpt-5.4"
+
+[controle]
+nao_interativo = true
+salvar_config = true
+config_output = "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/pesquisas/atividade_capacidades_estatais_prisma/config_execucao.toml"

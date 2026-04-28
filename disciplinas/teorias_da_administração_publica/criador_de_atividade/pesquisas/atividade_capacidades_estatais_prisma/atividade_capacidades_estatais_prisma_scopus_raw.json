@@ -1,0 +1,1834 @@
+{
+  "source": "scopus",
+  "label": "Scopus",
+  "query": "TITLE-ABS-KEY((\"state capacity\" OR \"government effectiveness\" OR \"public administration\") AND (\"public policy outcomes\" OR \"arranjos institucionais\" OR \"coercive capacity\" OR \"institutional arrangements\" OR centralization OR decentralization OR \"policy implementation\") AND (\"systematic literature review\" OR \"integrative review\" OR \"literature review\" OR \"scoping review\")) AND PUBYEAR > 2018 AND PUBYEAR < 2027 AND (LIMIT-TO(LANGUAGE, \"English\") OR LIMIT-TO(LANGUAGE, \"Portuguese\"))",
+  "retrieved": 25,
+  "warnings": [],
+  "saved_at": "2026-04-19T12:24:35.954646",
+  "pages": [
+    {
+      "search-results": {
+        "opensearch:totalResults": "28",
+        "opensearch:startIndex": "0",
+        "opensearch:itemsPerPage": "25",
+        "opensearch:Query": {
+          "@role": "request",
+          "@searchTerms": "TITLE-ABS-KEY((\"state capacity\" OR \"government effectiveness\" OR \"public administration\") AND (\"public policy outcomes\" OR \"arranjos institucionais\" OR \"coercive capacity\" OR \"institutional arrangements\" OR centralization OR decentralization OR \"policy implementation\") AND (\"systematic literature review\" OR \"integrative review\" OR \"literature review\" OR \"scoping review\")) AND PUBYEAR > 2018 AND PUBYEAR < 2027 AND (LIMIT-TO(LANGUAGE, \"English\") OR LIMIT-TO(LANGUAGE, \"Portuguese\"))",
+          "@startPage": "0"
+        },
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY%28%28%22state+capacity%22+OR+%22government+effectiveness%22+OR+%22public+administration%22%29+AND+%28%22public+policy+outcomes%22+OR+%22arranjos+institucionais%22+OR+%22coercive+capacity%22+OR+%22institutional+arrangements%22+OR+centralization+OR+decentralization+OR+%22policy+implementation%22%29+AND+%28%22systematic+literature+review%22+OR+%22integrative+review%22+OR+%22literature+review%22+OR+%22scoping+review%22%29%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2027+AND+%28LIMIT-TO%28LANGUAGE%2C+%22English%22%29+OR+LIMIT-TO%28LANGUAGE%2C+%22Portuguese%22%29%29&view=STANDARD&sort=relevancy",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "first",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY%28%28%22state+capacity%22+OR+%22government+effectiveness%22+OR+%22public+administration%22%29+AND+%28%22public+policy+outcomes%22+OR+%22arranjos+institucionais%22+OR+%22coercive+capacity%22+OR+%22institutional+arrangements%22+OR+centralization+OR+decentralization+OR+%22policy+implementation%22%29+AND+%28%22systematic+literature+review%22+OR+%22integrative+review%22+OR+%22literature+review%22+OR+%22scoping+review%22%29%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2027+AND+%28LIMIT-TO%28LANGUAGE%2C+%22English%22%29+OR+LIMIT-TO%28LANGUAGE%2C+%22Portuguese%22%29%29&view=STANDARD&sort=relevancy",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "next",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=25&count=25&query=TITLE-ABS-KEY%28%28%22state+capacity%22+OR+%22government+effectiveness%22+OR+%22public+administration%22%29+AND+%28%22public+policy+outcomes%22+OR+%22arranjos+institucionais%22+OR+%22coercive+capacity%22+OR+%22institutional+arrangements%22+OR+centralization+OR+decentralization+OR+%22policy+implementation%22%29+AND+%28%22systematic+literature+review%22+OR+%22integrative+review%22+OR+%22literature+review%22+OR+%22scoping+review%22%29%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2027+AND+%28LIMIT-TO%28LANGUAGE%2C+%22English%22%29+OR+LIMIT-TO%28LANGUAGE%2C+%22Portuguese%22%29%29&view=STANDARD&sort=relevancy",
+            "@type": "application/json"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "last",
+            "@href": "https://api.elsevier.com/content/search/scopus?start=3&count=25&query=TITLE-ABS-KEY%28%28%22state+capacity%22+OR+%22government+effectiveness%22+OR+%22public+administration%22%29+AND+%28%22public+policy+outcomes%22+OR+%22arranjos+institucionais%22+OR+%22coercive+capacity%22+OR+%22institutional+arrangements%22+OR+centralization+OR+decentralization+OR+%22policy+implementation%22%29+AND+%28%22systematic+literature+review%22+OR+%22integrative+review%22+OR+%22literature+review%22+OR+%22scoping+review%22%29%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2027+AND+%28LIMIT-TO%28LANGUAGE%2C+%22English%22%29+OR+LIMIT-TO%28LANGUAGE%2C+%22Portuguese%22%29%29&view=STANDARD&sort=relevancy",
+            "@type": "application/json"
+          }
+        ],
+        "entry": [
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85134528012"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85134528012?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85134528012&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85134528012&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85134528012",
+            "dc:identifier": "SCOPUS_ID:85134528012",
+            "eid": "2-s2.0-85134528012",
+            "dc:title": "Policy capacity during COVID-19 in Asia: A systematic literature review",
+            "dc:creator": "Mardiyanta A.",
+            "prism:publicationName": "Journal of Public Affairs",
+            "prism:issn": "14723891",
+            "prism:eIssn": "14791854",
+            "prism:volume": "23",
+            "prism:issueIdentifier": "1",
+            "prism:pageRange": null,
+            "prism:coverDate": "2023-02-01",
+            "prism:coverDisplayDate": "February 2023",
+            "prism:doi": "10.1002/pa.2835",
+            "citedby-count": "6",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universitas Airlangga",
+                "affiliation-city": "Surabaya",
+                "affiliation-country": "Indonesia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "e2835",
+            "source-id": "12100157240",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfree2read"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Bronze"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85181257262"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85181257262?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85181257262&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85181257262&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85181257262",
+            "dc:identifier": "SCOPUS_ID:85181257262",
+            "eid": "2-s2.0-85181257262",
+            "dc:title": "Does digital government hollow out the essence of street-level bureaucracy? A systematic literature review of how digital tools' foster curtailment, enablement and continuation of street-level decision-making",
+            "dc:creator": "Marienfeldt J.",
+            "prism:publicationName": "Social Policy and Administration",
+            "prism:issn": "01445596",
+            "prism:eIssn": "14679515",
+            "prism:volume": "58",
+            "prism:issueIdentifier": "5",
+            "prism:pageRange": "831-855",
+            "prism:coverDate": "2024-09-01",
+            "prism:coverDisplayDate": "September 2024",
+            "prism:doi": "10.1111/spol.12991",
+            "citedby-count": "34",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universität Potsdam",
+                "affiliation-city": "Potsdam",
+                "affiliation-country": "Germany"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "14573",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105002032559"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105002032559?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105002032559&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105002032559&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105002032559",
+            "dc:identifier": "SCOPUS_ID:105002032559",
+            "eid": "2-s2.0-105002032559",
+            "dc:title": "From local government to local governance: A systematic literature review and future research agenda",
+            "dc:creator": "Yi C.",
+            "prism:publicationName": "Australian Journal of Public Administration",
+            "prism:issn": "03136647",
+            "prism:eIssn": "14678500",
+            "prism:volume": "84",
+            "prism:issueIdentifier": "1",
+            "prism:pageRange": "102-124",
+            "prism:coverDate": "2025-03-01",
+            "prism:coverDisplayDate": "March 2025",
+            "prism:doi": "10.1111/1467-8500.12644",
+            "citedby-count": "7",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Shanghai Jiao Tong University",
+                "affiliation-city": "Shanghai",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "16511",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105024785268"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105024785268?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105024785268&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105024785268&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0149718925001776"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105024785268",
+            "dc:identifier": "SCOPUS_ID:105024785268",
+            "eid": "2-s2.0-105024785268",
+            "dc:title": "Mechanisms for institutionalising evaluation: A scoping review",
+            "dc:creator": "Acosta C.C.",
+            "prism:publicationName": "Evaluation and Program Planning",
+            "prism:issn": "01497189",
+            "prism:eIssn": "18737870",
+            "prism:volume": "114",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-02-01",
+            "prism:coverDisplayDate": "February 2026",
+            "prism:doi": "10.1016/j.evalprogplan.2025.102710",
+            "pii": "S0149718925001776",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universitat Autònoma de Barcelona",
+                "affiliation-city": "Cerdanyola del Valles",
+                "affiliation-country": "Spain"
+              }
+            ],
+            "pubmed-id": "40961834",
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "102710",
+            "source-id": "26602",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85137331195"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85137331195?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85137331195&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85137331195&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85137331195",
+            "dc:identifier": "SCOPUS_ID:85137331195",
+            "eid": "2-s2.0-85137331195",
+            "dc:title": "On public policy implementation: a systematic review of the literature and research agenda",
+            "dc:creator": "Ferreira de Sousa J.R.",
+            "prism:publicationName": "Sociedade E Estado",
+            "prism:issn": "01026992",
+            "prism:volume": "37",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": "457-487",
+            "prism:coverDate": "2022-01-01",
+            "prism:coverDisplayDate": "2022",
+            "prism:doi": "10.1590/s0102-6992-202237020004",
+            "citedby-count": "5",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universidade Federal de Pernambuco",
+                "affiliation-city": "Recife",
+                "affiliation-country": "Brazil"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "5600153133",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85201258149"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85201258149?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85201258149&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85201258149&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1877050924015333"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85201258149",
+            "dc:identifier": "SCOPUS_ID:85201258149",
+            "eid": "2-s2.0-85201258149",
+            "dc:title": "Digital Transformation-driven Decentralisation of Public Governance",
+            "dc:creator": "Jonathan G.M.",
+            "prism:publicationName": "Procedia Computer Science",
+            "prism:eIssn": "18770509",
+            "prism:volume": "239",
+            "prism:pageRange": "1220-1229",
+            "prism:coverDate": "2024-01-01",
+            "prism:coverDisplayDate": "2024",
+            "prism:doi": "10.1016/j.procs.2024.06.290",
+            "pii": "S1877050924015333",
+            "citedby-count": "5",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Stockholms universitet",
+                "affiliation-city": "Stockholm",
+                "affiliation-country": "Sweden"
+              }
+            ],
+            "prism:aggregationType": "Conference Proceeding",
+            "subtype": "cp",
+            "subtypeDescription": "Conference Paper",
+            "source-id": "19700182801",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85107889955"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85107889955?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85107889955&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85107889955&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85107889955",
+            "dc:identifier": "SCOPUS_ID:85107889955",
+            "eid": "2-s2.0-85107889955",
+            "dc:title": "Equity in Public Services: A Systematic Literature Review",
+            "dc:creator": "Cepiku D.",
+            "prism:publicationName": "Public Administration Review",
+            "prism:issn": "00333352",
+            "prism:eIssn": "15406210",
+            "prism:volume": "81",
+            "prism:issueIdentifier": "6",
+            "prism:pageRange": "1019-1032",
+            "prism:coverDate": "2021-11-01",
+            "prism:coverDisplayDate": "November/December 2021",
+            "prism:doi": "10.1111/puar.13402",
+            "citedby-count": "93",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Università degli Studi di Roma \"Tor Vergata\"",
+                "affiliation-city": "Rome",
+                "affiliation-country": "Italy"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "17167",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105019106887"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105019106887?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105019106887&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105019106887&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019106887",
+            "dc:identifier": "SCOPUS_ID:105019106887",
+            "eid": "2-s2.0-105019106887",
+            "dc:title": "Lost in translation: why digital twins thrive in research but falter in politics and public administration",
+            "dc:creator": "Richter F.",
+            "prism:publicationName": "Data and Policy",
+            "prism:eIssn": "26323249",
+            "prism:volume": "7",
+            "prism:pageRange": null,
+            "prism:coverDate": "2025-10-20",
+            "prism:coverDisplayDate": "20 October 2025",
+            "prism:doi": "10.1017/dap.2025.10027",
+            "pii": "S2632324925100278",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of the Bundeswehr Munich",
+                "affiliation-city": "Neubiberg",
+                "affiliation-country": "Germany"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "e71",
+            "source-id": "21101144505",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85191998112"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85191998112?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85191998112&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85191998112&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85191998112",
+            "dc:identifier": "SCOPUS_ID:85191998112",
+            "eid": "2-s2.0-85191998112",
+            "dc:title": "The Reflections of Post-Fordism on Public Administration",
+            "dc:creator": "Sadioğlu U.",
+            "prism:publicationName": "Sosyoekonomi",
+            "prism:issn": "13055577",
+            "prism:volume": "28",
+            "prism:issueIdentifier": "45",
+            "prism:pageRange": "327-352",
+            "prism:coverDate": "2020-07-30",
+            "prism:coverDisplayDate": "30 July 2020",
+            "prism:doi": "10.17233/sosyoekonomi.2020.03.19",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Hacettepe Üniversitesi",
+                "affiliation-city": "Ankara",
+                "affiliation-country": "Turkey"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21101219658",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105018303848"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105018303848?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105018303848&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105018303848&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105018303848",
+            "dc:identifier": "SCOPUS_ID:105018303848",
+            "eid": "2-s2.0-105018303848",
+            "dc:title": "Demystifying the Relationship between Digitalization of Government Services and Public Trust: A Scoping Review",
+            "dc:creator": "Virnandes S.R.",
+            "prism:publicationName": "Digital Government Research and Practice",
+            "prism:issn": "26390175",
+            "prism:volume": "6",
+            "prism:issueIdentifier": "3",
+            "prism:pageRange": null,
+            "prism:coverDate": "2025-08-27",
+            "prism:coverDisplayDate": "27 August 2025",
+            "prism:doi": "10.1145/3716172",
+            "citedby-count": "4",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of Wollongong",
+                "affiliation-city": "Wollongong",
+                "affiliation-country": "Australia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "article-number": "35",
+            "source-id": "21101082067",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032255670"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105032255670?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105032255670&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105032255670&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0038012126000480"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105032255670",
+            "dc:identifier": "SCOPUS_ID:105032255670",
+            "eid": "2-s2.0-105032255670",
+            "dc:title": "Navigating barriers to GenAI adoption in public administration: A systematic evaluation and policy roadmap",
+            "dc:creator": "Goyal R.",
+            "prism:publicationName": "Socio Economic Planning Sciences",
+            "prism:issn": "00380121",
+            "prism:volume": "105",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-06-01",
+            "prism:coverDisplayDate": "June 2026",
+            "prism:doi": "10.1016/j.seps.2026.102461",
+            "pii": "S0038012126000480",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Indian Institute of Technology Delhi",
+                "affiliation-city": "New Delhi",
+                "affiliation-country": "India"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "102461",
+            "source-id": "18291",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85212671598"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85212671598?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85212671598&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85212671598&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85212671598",
+            "dc:identifier": "SCOPUS_ID:85212671598",
+            "eid": "2-s2.0-85212671598",
+            "dc:title": "Blockchain-Powered Decentralisation: A New Era of Public Governance",
+            "dc:creator": "Jonathan G.M.",
+            "prism:publicationName": "Ceur Workshop Proceedings",
+            "prism:issn": "16130073",
+            "prism:volume": "3855",
+            "prism:pageRange": null,
+            "prism:coverDate": "2024-01-01",
+            "prism:coverDisplayDate": "2024",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Stockholms universitet",
+                "affiliation-city": "Stockholm",
+                "affiliation-country": "Sweden"
+              }
+            ],
+            "prism:aggregationType": "Conference Proceeding",
+            "subtype": "cp",
+            "subtypeDescription": "Conference Paper",
+            "source-id": "21100218356",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105008827543"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105008827543?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105008827543&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105008827543&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105008827543",
+            "dc:identifier": "SCOPUS_ID:105008827543",
+            "eid": "2-s2.0-105008827543",
+            "dc:title": "Spatial planning constraints in historically marginalised areas: An integrative review",
+            "dc:creator": "Nyamwanza S.",
+            "prism:publicationName": "Town and Regional Planning",
+            "prism:issn": "1012280X",
+            "prism:eIssn": "24150495",
+            "prism:volume": "86",
+            "prism:pageRange": "62-76",
+            "prism:coverDate": "2025-06-19",
+            "prism:coverDisplayDate": "19 June 2025",
+            "prism:doi": "10.38140/trp.v86i.8765",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of Venda",
+                "affiliation-city": "Thohoyandou",
+                "affiliation-country": "South Africa"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21101123414",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85138093561"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85138093561?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85138093561&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85138093561&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85138093561",
+            "dc:identifier": "SCOPUS_ID:85138093561",
+            "eid": "2-s2.0-85138093561",
+            "dc:title": "Cooperative federalism in Brazil and the multilevel environmental management system",
+            "dc:creator": "Linck L.C.",
+            "prism:publicationName": "Desenvolvimento E Meio Ambiente",
+            "prism:issn": "1518952X",
+            "prism:eIssn": "21769109",
+            "prism:volume": "60",
+            "prism:pageRange": "271-292",
+            "prism:coverDate": "2022-07-01",
+            "prism:coverDisplayDate": "July 2022",
+            "prism:doi": "10.5380/dma.v60i0.78983",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universidade Federal Fluminense",
+                "affiliation-city": "Niteroi",
+                "affiliation-country": "Brazil"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21100872774",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105023260763"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105023260763?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105023260763&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105023260763&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105023260763",
+            "dc:identifier": "SCOPUS_ID:105023260763",
+            "eid": "2-s2.0-105023260763",
+            "dc:title": "Policy inaction and agenda setting",
+            "dc:creator": "Brown P.R.",
+            "prism:publicationName": "Handbook of Public Policy Agenda Setting",
+            "prism:isbn": [
+              {
+                "@_fa": "true",
+                "$": "[9781035318506, 9781035318513]"
+              }
+            ],
+            "prism:pageRange": "270-284",
+            "prism:coverDate": "2025-01-01",
+            "prism:coverDisplayDate": "1 January 2025",
+            "prism:doi": "10.4337/9781035318513.00029",
+            "citedby-count": "0",
+            "prism:aggregationType": "Book",
+            "subtype": "ch",
+            "subtypeDescription": "Book Chapter",
+            "source-id": "21101364977",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85213003686"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85213003686?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85213003686&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85213003686&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85213003686",
+            "dc:identifier": "SCOPUS_ID:85213003686",
+            "eid": "2-s2.0-85213003686",
+            "dc:title": "Policy Implementation in Military Organizations: The Impact of the Key Characteristics of Military Administration",
+            "dc:creator": "Mayland K.",
+            "prism:publicationName": "Scandinavian Journal of Public Administration",
+            "prism:issn": "20017405",
+            "prism:eIssn": "20017413",
+            "prism:volume": "28",
+            "prism:issueIdentifier": "4",
+            "prism:pageRange": "16-34",
+            "prism:coverDate": "2024-01-01",
+            "prism:coverDisplayDate": "2024",
+            "prism:doi": "10.58235/sjpa.2024.14627",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Roskilde Universitet",
+                "affiliation-city": "Roskilde",
+                "affiliation-country": "Denmark"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21101144403",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85201570430"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85201570430?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85201570430&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85201570430&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85201570430",
+            "dc:identifier": "SCOPUS_ID:85201570430",
+            "eid": "2-s2.0-85201570430",
+            "dc:title": "A bibliometric analysis of thematic developments in street-level bureaucracy research",
+            "dc:creator": "Santoso A.D.",
+            "prism:publicationName": "Public Administration and Policy",
+            "prism:issn": "17272645",
+            "prism:eIssn": "2517679X",
+            "prism:volume": "27",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": "206-219",
+            "prism:coverDate": "2024-09-12",
+            "prism:coverDisplayDate": "12 September 2024",
+            "prism:doi": "10.1108/PAP-06-2023-0082",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universitas Sriwijaya",
+                "affiliation-city": "Indralaya",
+                "affiliation-country": "Indonesia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "source-id": "21101076085",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85130232738"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85130232738?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85130232738&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85130232738&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85130232738",
+            "dc:identifier": "SCOPUS_ID:85130232738",
+            "eid": "2-s2.0-85130232738",
+            "dc:title": "Pivotal Issues of Democratic Governance: A Literature Review",
+            "dc:creator": "Pribadi U.",
+            "prism:publicationName": "Jurnal Ilmu Sosial Dan Ilmu Politik",
+            "prism:issn": "14104946",
+            "prism:eIssn": "25027883",
+            "prism:volume": "25",
+            "prism:issueIdentifier": "3",
+            "prism:pageRange": "255-276",
+            "prism:coverDate": "2022-01-01",
+            "prism:coverDisplayDate": "2022",
+            "prism:doi": "10.22146/jsp.63435",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Universitas Muhammadiyah Yogyakarta",
+                "affiliation-city": "Yogyakarta",
+                "affiliation-country": "Indonesia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21101017895",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85069857504"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85069857504?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85069857504&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85069857504&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85069857504",
+            "dc:identifier": "SCOPUS_ID:85069857504",
+            "eid": "2-s2.0-85069857504",
+            "dc:title": "Manufacturing pre-decisions: A comparative analysis of environmental impact statement (EIS) reviews in Brazil and Portugal",
+            "dc:creator": "Rocha C.F.",
+            "prism:publicationName": "Sustainability Switzerland",
+            "prism:eIssn": "20711050",
+            "prism:volume": "11",
+            "prism:issueIdentifier": "12",
+            "prism:pageRange": null,
+            "prism:coverDate": "2019-01-01",
+            "prism:coverDisplayDate": "2019",
+            "prism:doi": "10.3390/SU11123235",
+            "citedby-count": "16",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa",
+                "affiliation-city": "Caparica",
+                "affiliation-country": "Portugal"
+              },
+              {
+                "@_fa": "true",
+                "affilname": "Universidade Federal de Ouro Preto",
+                "affiliation-city": "Ouro Preto",
+                "affiliation-country": "Brazil"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "3235",
+            "source-id": "21100240100",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033721722"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/105033721722?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105033721722&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=105033721722&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105033721722",
+            "dc:identifier": "SCOPUS_ID:105033721722",
+            "eid": "2-s2.0-105033721722",
+            "dc:title": "A critical review of environmental sustainability policies in light of Saudi Arabia’s Vision 2030",
+            "dc:creator": "Aldosari M.S.",
+            "prism:publicationName": "Research Journal in Advanced Humanities",
+            "prism:issn": "27085945",
+            "prism:eIssn": "27085953",
+            "prism:volume": "7",
+            "prism:issueIdentifier": "1",
+            "prism:pageRange": null,
+            "prism:coverDate": "2026-01-01",
+            "prism:coverDisplayDate": "January/March 2026",
+            "prism:doi": "10.58256/2qh6kx59",
+            "citedby-count": "0",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Prince Sattam Bin Abdulaziz University",
+                "affiliation-city": "Al Kharj",
+                "affiliation-country": "Saudi Arabia"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "re",
+            "subtypeDescription": "Review",
+            "source-id": "21101101859",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118342448"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118342448?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85118342448&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85118342448&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85118342448",
+            "dc:identifier": "SCOPUS_ID:85118342448",
+            "eid": "2-s2.0-85118342448",
+            "dc:title": "Social network analysis and public policy: what’s new?",
+            "dc:creator": "Zhang W.",
+            "prism:publicationName": "Journal of Asian Public Policy",
+            "prism:issn": "17516234",
+            "prism:eIssn": "17516242",
+            "prism:volume": "16",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": "115-145",
+            "prism:coverDate": "2023-01-01",
+            "prism:coverDisplayDate": "2023",
+            "prism:doi": "10.1080/17516234.2021.1996869",
+            "citedby-count": "26",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "School of Public Administration",
+                "affiliation-city": "Chengdu",
+                "affiliation-country": "China"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "19700170065",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85170541332"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85170541332?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85170541332&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85170541332&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85170541332",
+            "dc:identifier": "SCOPUS_ID:85170541332",
+            "eid": "2-s2.0-85170541332",
+            "dc:title": "Boundary-Crossing Strategies: Managing Macro Policies in a Federal Government",
+            "dc:creator": "Cavalcante P.",
+            "prism:publicationName": "Revista De Administracao Contemporanea",
+            "prism:issn": "14156555",
+            "prism:eIssn": "19827849",
+            "prism:volume": "25",
+            "prism:issueIdentifier": "5",
+            "prism:pageRange": null,
+            "prism:coverDate": "2021-09-01",
+            "prism:coverDisplayDate": "Sept/Oct 2021",
+            "prism:doi": "10.1590/1982-7849rac2021200012.en",
+            "citedby-count": "1",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Instituto de Pesquisa Economica Aplicada",
+                "affiliation-city": "Rio de Janeiro",
+                "affiliation-country": "Brazil"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "article-number": "e200012",
+            "source-id": "21101089574",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherfullgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryvor"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85131361299"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85131361299?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85131361299&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85131361299&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85131361299",
+            "dc:identifier": "SCOPUS_ID:85131361299",
+            "eid": "2-s2.0-85131361299",
+            "dc:title": "Street-level bureaucracy in weak state institutions: a systematic review of the literature",
+            "dc:creator": "Peeters R.",
+            "prism:publicationName": "International Review of Administrative Sciences",
+            "prism:issn": "00208523",
+            "prism:eIssn": "14617226",
+            "prism:volume": "89",
+            "prism:issueIdentifier": "4",
+            "prism:pageRange": "977-995",
+            "prism:coverDate": "2023-12-01",
+            "prism:coverDisplayDate": "December 2023",
+            "prism:doi": "10.1177/00208523221103196",
+            "citedby-count": "73",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Centro de Investigación y Docencia Económicas",
+                "affiliation-city": "Mexico",
+                "affiliation-country": "Mexico"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "15807",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85055045345"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85055045345?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85055045345&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85055045345&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85055045345",
+            "dc:identifier": "SCOPUS_ID:85055045345",
+            "eid": "2-s2.0-85055045345",
+            "dc:title": "Facilitators and Barriers to Becoming Age-Friendly: A Review",
+            "dc:creator": "Menec V.",
+            "prism:publicationName": "Journal of Aging and Social Policy",
+            "prism:issn": "08959420",
+            "prism:eIssn": "15450821",
+            "prism:volume": "34",
+            "prism:issueIdentifier": "2",
+            "prism:pageRange": "175-197",
+            "prism:coverDate": "2022-01-01",
+            "prism:coverDisplayDate": "2022",
+            "prism:doi": "10.1080/08959420.2018.1528116",
+            "citedby-count": "66",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "University of Manitoba",
+                "affiliation-city": "Winnipeg",
+                "affiliation-country": "Canada"
+              }
+            ],
+            "pubmed-id": "30321112",
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "29193",
+            "openaccess": "0",
+            "openaccessFlag": false
+          },
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85184673966"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85184673966?field=author,affiliation"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85184673966&origin=inward"
+              },
+              {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85184673966&origin=inward"
+              }
+            ],
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85184673966",
+            "dc:identifier": "SCOPUS_ID:85184673966",
+            "eid": "2-s2.0-85184673966",
+            "dc:title": "Administrative and legal factors influencing the formation of sustainable development of the region in a changing external environment",
+            "dc:creator": "Aldrou K.K.A.R.",
+            "prism:publicationName": "Social and Legal Studios",
+            "prism:issn": "26174162",
+            "prism:eIssn": "26174170",
+            "prism:volume": "6",
+            "prism:issueIdentifier": "4",
+            "prism:pageRange": "18-27",
+            "prism:coverDate": "2023-12-23",
+            "prism:coverDisplayDate": "23 December 2023",
+            "prism:doi": "10.32518/sals4.2023.18",
+            "citedby-count": "5",
+            "affiliation": [
+              {
+                "@_fa": "true",
+                "affilname": "Jadara University",
+                "affiliation-city": "Irbid",
+                "affiliation-country": "Jordan"
+              }
+            ],
+            "prism:aggregationType": "Journal",
+            "subtype": "ar",
+            "subtypeDescription": "Article",
+            "source-id": "21101185818",
+            "openaccess": "1",
+            "openaccessFlag": true,
+            "freetoread": {
+              "value": [
+                {
+                  "$": "all"
+                },
+                {
+                  "$": "publisherhybridgold"
+                },
+                {
+                  "$": "repository"
+                },
+                {
+                  "$": "repositoryam"
+                }
+              ]
+            },
+            "freetoreadLabel": {
+              "value": [
+                {
+                  "$": "All Open Access"
+                },
+                {
+                  "$": "Hybrid Gold"
+                },
+                {
+                  "$": "Green"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@ requests = "*"
 python-dotenv = "*"
 pydantic = "*"
 prompt-toolkit = "*"
+pypdf = "*"
 
 [dev-packages]
 ipython = "*"
