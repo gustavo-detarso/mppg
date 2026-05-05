@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1760" viewBox="0 0 1600 1760" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxograma PRISMA 2020 — stakeholders</title>
+  <desc id="desc">Fluxograma em estilo aproximado ao padrão oficial do PRISMA 2020 para seleção de artigo de revisão sobre stakeholders no Semantic Scholar.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .section { fill: #e6e6e6; stroke: #b5b5b5; stroke-width: 1.5; }
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2.2; rx: 12; ry: 12; }
+      .smallbox { fill: #ffffff; stroke: #111111; stroke-width: 2.2; rx: 12; ry: 12; }
+      .txt { font-family: Arial, Helvetica, sans-serif; font-size: 29px; fill: #111111; }
+      .txtsmall { font-family: Arial, Helvetica, sans-serif; font-size: 26px; fill: #111111; }
+      .header { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 28px; fill: #222222; letter-spacing: 1px; }
+      .arrow { stroke: #111111; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1760"/>
+
+  <!-- Section headers -->
+  <rect class="section" x="80" y="70" width="1440" height="54" rx="6"/>
+  <text class="header" x="800" y="106" text-anchor="middle">IDENTIFICAÇÃO</text>
+
+  <rect class="section" x="80" y="560" width="1440" height="54" rx="6"/>
+  <text class="header" x="800" y="596" text-anchor="middle">TRIAGEM</text>
+
+  <rect class="section" x="80" y="1160" width="1440" height="54" rx="6"/>
+  <text class="header" x="800" y="1196" text-anchor="middle">INCLUSÃO</text>
+
+  <!-- Main flow boxes -->
+  <rect class="box" x="150" y="170" width="520" height="185" rx="12"/>
+  <text class="txt" x="410" y="220" text-anchor="middle">
+    <tspan x="410" dy="0">Registros identificados no</tspan>
+    <tspan x="410" dy="38">Semantic Scholar</tspan>
+    <tspan x="410" dy="50">(n = 6)</tspan>
+  </text>
+
+  <rect class="smallbox" x="930" y="170" width="520" height="185" rx="12"/>
+  <text class="txtsmall" x="1190" y="214" text-anchor="middle">
+    <tspan x="1190" dy="0">Registros removidos antes da</tspan>
+    <tspan x="1190" dy="34">triagem (n = 0)</tspan>
+    <tspan x="1190" dy="42">Duplicatas removidas (n = 0)</tspan>
+    <tspan x="1190" dy="34">Removidos por outros motivos (n = 0)</tspan>
+  </text>
+
+  <rect class="box" x="540" y="670" width="520" height="150" rx="12"/>
+  <text class="txt" x="800" y="726" text-anchor="middle">
+    <tspan x="800" dy="0">Registros triados</tspan>
+    <tspan x="800" dy="50">(n = 6)</tspan>
+  </text>
+
+  <rect class="smallbox" x="1080" y="650" width="390" height="225" rx="12"/>
+  <text class="txtsmall" x="1275" y="695" text-anchor="middle">
+    <tspan x="1275" dy="0">Registros excluídos</tspan>
+    <tspan x="1275" dy="34">(n = 2)</tspan>
+    <tspan x="1275" dy="42">Saúde materno-infantil</tspan>
+    <tspan x="1275" dy="34">em países de baixa e</tspan>
+    <tspan x="1275" dy="34">média renda (n = 1)</tspan>
+    <tspan x="1275" dy="38">Logística reversa em</tspan>
+    <tspan x="1275" dy="34">e-commerce (n = 1)</tspan>
+  </text>
+
+  <rect class="box" x="540" y="930" width="520" height="150" rx="12"/>
+  <text class="txt" x="800" y="986" text-anchor="middle">
+    <tspan x="800" dy="0">Relatórios buscados para</tspan>
+    <tspan x="800" dy="38">recuperação</tspan>
+    <tspan x="800" dy="50">(n = 4)</tspan>
+  </text>
+
+  <rect class="smallbox" x="1080" y="930" width="390" height="150" rx="12"/>
+  <text class="txtsmall" x="1275" y="988" text-anchor="middle">
+    <tspan x="1275" dy="0">Relatórios não</tspan>
+    <tspan x="1275" dy="34">recuperados</tspan>
+    <tspan x="1275" dy="42">(n = 0)</tspan>
+  </text>
+
+  <rect class="box" x="540" y="1275" width="520" height="150" rx="12"/>
+  <text class="txt" x="800" y="1331" text-anchor="middle">
+    <tspan x="800" dy="0">Estudo incluído na</tspan>
+    <tspan x="800" dy="38">síntese qualitativa</tspan>
+    <tspan x="800" dy="50">(n = 1)</tspan>
+  </text>
+
+  <rect class="smallbox" x="1080" y="1220" width="430" height="340" rx="12"/>
+  <text class="txtsmall" x="1275" y="1268" text-anchor="middle">
+    <tspan x="1275" dy="0">Relatórios excluídos após</tspan>
+    <tspan x="1275" dy="34">leitura completa</tspan>
+    <tspan x="1275" dy="34">(n = 3)</tspan>
+    <tspan x="1275" dy="42">Proteínas alternativas (n = 1)</tspan>
+    <tspan x="1275" dy="34">Cadeia de suprimentos</tspan>
+    <tspan x="1275" dy="34">sustentável (n = 1)</tspan>
+    <tspan x="1275" dy="38">Ensino superior e IA</tspan>
+    <tspan x="1275" dy="34">generativa (n = 1)</tspan>
+  </text>
+
+  <!-- bridging boxes on main spine -->
+  <rect class="box" x="540" y="410" width="520" height="110" rx="12"/>
+  <text class="txt" x="800" y="458" text-anchor="middle">
+    <tspan x="800" dy="0">Registros após remoções</tspan>
+    <tspan x="800" dy="44">(n = 6)</tspan>
+  </text>
+
+  <rect class="box" x="540" y="1125" width="520" height="110" rx="12"/>
+  <text class="txt" x="800" y="1173" text-anchor="middle">
+    <tspan x="800" dy="0">Relatórios avaliados para</tspan>
+    <tspan x="800" dy="34">elegibilidade (n = 4)</tspan>
+  </text>
+
+  <!-- arrows -->
+  <line class="arrow" x1="670" y1="262" x2="930" y2="262"/>
+  <line class="arrow" x1="800" y1="355" x2="800" y2="410"/>
+  <line class="arrow" x1="800" y1="520" x2="800" y2="670"/>
+  <line class="arrow" x1="1060" y1="745" x2="1080" y2="745"/>
+  <line class="arrow" x1="800" y1="820" x2="800" y2="930"/>
+  <line class="arrow" x1="1060" y1="1005" x2="1080" y2="1005"/>
+  <line class="arrow" x1="800" y1="1080" x2="800" y2="1125"/>
+  <line class="arrow" x1="1060" y1="1280" x2="1080" y2="1280"/>
+  <line class="arrow" x1="800" y1="1235" x2="800" y2="1275"/>
+
+  <!-- note -->
+  <text class="txtsmall" x="80" y="1685">
+    <tspan x="80" dy="0">Nota: diagrama com layout aproximado ao padrão visual do PRISMA 2020, adaptado à busca focalizada no Semantic Scholar.</tspan>
+  </text>
+</svg>

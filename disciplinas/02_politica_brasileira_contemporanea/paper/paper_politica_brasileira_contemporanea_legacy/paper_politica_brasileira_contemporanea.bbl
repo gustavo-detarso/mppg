@@ -1,0 +1,747 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/apasortcite//global/global/global}
+    \entry{alonso2016_changing_repertoires}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1163adb82e9abd6a7ee902812e649323}{%
+           family={Alonso},
+           familyi={A\bibinitperiod},
+           given={Angela},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac1ec8aaff2ea98821a791d3c20ab4c1}{%
+           family={Mische},
+           familyi={M\bibinitperiod},
+           given={Ann},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{fullhash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{fullhashraw}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{bibnamehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authorbibnamehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authornamehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authorfullhash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authorfullhashraw}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of Latin American Research}
+      \field{title}{Changing Repertoires and Partisan Ambivalence in the New Brazilian Protests}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1111/blar.12470
+      \endverb
+    \endentry
+    \entry{alves2024_rage_within}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=bea3d8734a21fd4f1dc9e03c655d49e9}{%
+           family={Alves},
+           familyi={A\bibinitperiod},
+           given={Vinícius\bibnamedelima Silva},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0d263d98de674f3af3571e9d9ce9f573}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Pedro\bibnamedelima Floriano},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49291c114c68284911b542580aefa34c}{%
+           family={Assis},
+           familyi={A\bibinitperiod},
+           given={Pedro\bibnamedelima Paulo},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ebd4b523b5be5243cfd67ffc9de35b79}{%
+           family={Locatelli},
+           familyi={L\bibinitperiod},
+           given={Luís\bibnamedelimb Gustavo\bibnamedelima Bruno},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{850294407f456408ce8da036d838e52d}
+      \strng{fullhash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{fullhashraw}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{bibnamehash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{authorbibnamehash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{authornamehash}{850294407f456408ce8da036d838e52d}
+      \strng{authorfullhash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{authorfullhashraw}{0f089346f0bf328ece56facc0ad09e14}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Brasileira de Ciência Política}
+      \field{note}{Rev. Bras. Ciênc. Polít., v. 43, p. 1-28, e269810, 2024. Artigo original.}
+      \field{title}{Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1590/0103-3352.2024.43.269810pt
+      \endverb
+    \endentry
+    \entry{oliveira2019_momentos_da}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=313d77eb71748c8e303036981fe5f827}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Vanessa\bibnamedelima Elias},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=cfe92c541fdcd3ebe0deb745bf87dbf0}{%
+           family={Lotta},
+           familyi={L\bibinitperiod},
+           given={Gabriela\bibnamedelima Spanghero},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{fullhash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{fullhashraw}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{bibnamehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authorbibnamehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authornamehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authorfullhash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authorfullhashraw}{89cfb5d214892f72da2d6d2a404b659b}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Planejamento e Políticas Públicas}
+      \field{note}{ppp, n. 52, jan./jun. 2019; JEL: H53.}
+      \field{title}{Momentos da recentralização: repasses e relações intergovernamentais no Brasil (1995-2014)}
+      \field{year}{2019}
+    \endentry
+    \entry{limongi2017_a_crise}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=88ec283c6ce5321ef148fd3b094ea22c}{%
+           family={Limongi},
+           familyi={L\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f64fa43d3b48ec0dfc771ffe99db2fe}{%
+           family={Figueiredo},
+           familyi={F\bibinitperiod},
+           given={Argelina\bibnamedelima Cheibub},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{fullhash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{fullhashraw}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{bibnamehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authorbibnamehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authornamehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authorfullhash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authorfullhashraw}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Novos Estudos CEBRAP}
+      \field{note}{v. 36, n. 3, p. 79-97, novembro 2017.}
+      \field{title}{A crise atual e o debate institucional}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.25091/S0101-3300201700030008
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.25091/S0101-3300201700030008
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.25091/S0101-3300201700030008
+      \endverb
+    \endentry
+    \entry{palermo2000_como_se}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ff7233d6f0ff31c612dc837e9aa80239}{%
+           family={Palermo},
+           familyi={P\bibinitperiod},
+           given={Vicente},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{fullhash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{fullhashraw}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{bibnamehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authorbibnamehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authornamehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authorfullhash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authorfullhashraw}{ff7233d6f0ff31c612dc837e9aa80239}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Dados}
+      \field{note}{ISSN 0011-5258; Dados, v. 43, n. 3, Rio de Janeiro, 2000.}
+      \field{title}{Como se Governa o Brasil? O Debate sobre Instituições Políticas e Gestão de Governo}
+      \field{year}{2000}
+    \endentry
+    \entry{perez_lian2016_explaining_military}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=befd602a5a2441aae3e3c85f9bca5e04}{%
+           family={Pérez-Liñán},
+           familyi={P\bibinithyphendelim L\bibinitperiod},
+           given={Aníbal},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0aea22ae46867a3274c53a3dc0a1a6f4}{%
+           family={Polga-Hecimovich},
+           familyi={P\bibinithyphendelim H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited, trading as Taylor & Francis Group}%
+      }
+      \strng{namehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{fullhash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{fullhashraw}{250e665ed24b113c47b67f43a9db555f}
+      \strng{bibnamehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authorbibnamehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authornamehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authorfullhash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authorfullhashraw}{250e665ed24b113c47b67f43a9db555f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Democratization}
+      \field{note}{Published online: 10 Nov 2016; ARTICLE HISTORY: Received 15 April 2016; Accepted 30 September 2016.}
+      \field{title}{Explaining military coups and impeachments in Latin America}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1080/13510347.2016.1251905
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1080/13510347.2016.1251905
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1080/13510347.2016.1251905
+      \endverb
+    \endentry
+    \entry{rocha2019_imposto_e}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e5031490ea9a913dd9274a29ff2c0c15}{%
+           family={Rocha},
+           familyi={R\bibinitperiod},
+           given={Camila},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{fullhash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{fullhashraw}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{bibnamehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authorbibnamehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authornamehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authorfullhash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authorfullhashraw}{e5031490ea9a913dd9274a29ff2c0c15}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{DADOS}
+      \field{note}{DADOS, Rio de Janeiro, vol. 62(3): e20190076, 2019, p. 1-42; Artigos Originais.}
+      \field{title}{“Imposto é Roubo!” A Formação de um Contrapúblico ultraliberal e os Protestos Pró-Impeachment de Dilma Rousseff}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1590/001152582019189
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1590/001152582019189
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1590/001152582019189
+      \endverb
+    \endentry
+    \entry{singersd_tres_partidos}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d8dd7b463a9e4a9cff52941c844b7404}{%
+           family={Singer},
+           familyi={S\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{fullhash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{fullhashraw}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{bibnamehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authorbibnamehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authornamehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authorfullhash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authorfullhashraw}{d8dd7b463a9e4a9cff52941c844b7404}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Capítulo identificado a partir do cabeçalho "4. Três partidos brasileiros". O texto extraído não informa explicitamente a obra hospedeira, ano, editora ou demais metadados.}
+      \field{title}{Três partidos brasileiros}
+    \endentry
+    \entry{vieira2022_supremocracia_e}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=640e999611e0c19826870e801d69463f}{%
+           family={Vieira},
+           familyi={V\bibinitperiod},
+           given={Oscar\bibnamedelima Vilhena},
+           giveni={O\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8c61370cae85d84a88e3920282cac39}{%
+           family={Glezer},
+           familyi={G\bibinitperiod},
+           given={Rubens},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=206f79cdf030ba28b7bab680b3e089ce}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Ana\bibnamedelimb Laura\bibnamedelima Pereira},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f1ebda673664eb7cd588d3554eede3a4}
+      \strng{fullhash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{fullhashraw}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{bibnamehash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{authorbibnamehash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{authornamehash}{f1ebda673664eb7cd588d3554eede3a4}
+      \strng{authorfullhash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{authorfullhashraw}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Novos Estudos CEBRAP}
+      \field{note}{V. 41, n. 3, p. 591-605, set.–dez. 2022. Título em inglês no documento: 'Supremocracy and Autocratic Infralegalism: The Behavior of the Brazilian Supreme Court during Bolsonaro’s Government'. Texto extraído também menciona o subtítulo/variante 'O comportamento do Supremo Tribunal Federal durante o governo Bolsonaro'.}
+      \field{title}{Supremocracia e infralegalismo autoritário}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.25091/S01013300202200030008
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.25091/501013300202200030008
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.25091/501013300202200030008
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{alonso2016_changing_repertoires}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1163adb82e9abd6a7ee902812e649323}{%
+           family={Alonso},
+           familyi={A\bibinitperiod},
+           given={Angela},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac1ec8aaff2ea98821a791d3c20ab4c1}{%
+           family={Mische},
+           familyi={M\bibinitperiod},
+           given={Ann},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{fullhash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{fullhashraw}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{bibnamehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authorbibnamehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authornamehash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authorfullhash}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \strng{authorfullhashraw}{a6a880ea4d94be56cf39cdf3324ffef1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of Latin American Research}
+      \field{title}{Changing Repertoires and Partisan Ambivalence in the New Brazilian Protests}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1111/blar.12470
+      \endverb
+    \endentry
+    \entry{alves2024_rage_within}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=bea3d8734a21fd4f1dc9e03c655d49e9}{%
+           family={Alves},
+           familyi={A\bibinitperiod},
+           given={Vinícius\bibnamedelima Silva},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0d263d98de674f3af3571e9d9ce9f573}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Pedro\bibnamedelima Floriano},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49291c114c68284911b542580aefa34c}{%
+           family={Assis},
+           familyi={A\bibinitperiod},
+           given={Pedro\bibnamedelima Paulo},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ebd4b523b5be5243cfd67ffc9de35b79}{%
+           family={Locatelli},
+           familyi={L\bibinitperiod},
+           given={Luís\bibnamedelimb Gustavo\bibnamedelima Bruno},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{850294407f456408ce8da036d838e52d}
+      \strng{fullhash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{fullhashraw}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{bibnamehash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{authorbibnamehash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{authornamehash}{850294407f456408ce8da036d838e52d}
+      \strng{authorfullhash}{0f089346f0bf328ece56facc0ad09e14}
+      \strng{authorfullhashraw}{0f089346f0bf328ece56facc0ad09e14}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Brasileira de Ciência Política}
+      \field{note}{Rev. Bras. Ciênc. Polít., v. 43, p. 1-28, e269810, 2024. Artigo original.}
+      \field{title}{Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1590/0103-3352.2024.43.269810pt
+      \endverb
+    \endentry
+    \entry{oliveira2019_momentos_da}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=313d77eb71748c8e303036981fe5f827}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Vanessa\bibnamedelima Elias},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=cfe92c541fdcd3ebe0deb745bf87dbf0}{%
+           family={Lotta},
+           familyi={L\bibinitperiod},
+           given={Gabriela\bibnamedelima Spanghero},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{fullhash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{fullhashraw}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{bibnamehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authorbibnamehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authornamehash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authorfullhash}{89cfb5d214892f72da2d6d2a404b659b}
+      \strng{authorfullhashraw}{89cfb5d214892f72da2d6d2a404b659b}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Planejamento e Políticas Públicas}
+      \field{note}{ppp, n. 52, jan./jun. 2019; JEL: H53.}
+      \field{title}{Momentos da recentralização: repasses e relações intergovernamentais no Brasil (1995-2014)}
+      \field{year}{2019}
+    \endentry
+    \entry{limongi2017_a_crise}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=88ec283c6ce5321ef148fd3b094ea22c}{%
+           family={Limongi},
+           familyi={L\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f64fa43d3b48ec0dfc771ffe99db2fe}{%
+           family={Figueiredo},
+           familyi={F\bibinitperiod},
+           given={Argelina\bibnamedelima Cheibub},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{fullhash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{fullhashraw}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{bibnamehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authorbibnamehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authornamehash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authorfullhash}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \strng{authorfullhashraw}{bae5ed25cbdc11c00ff00d5bd64bf10f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Novos Estudos CEBRAP}
+      \field{note}{v. 36, n. 3, p. 79-97, novembro 2017.}
+      \field{title}{A crise atual e o debate institucional}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.25091/S0101-3300201700030008
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.25091/S0101-3300201700030008
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.25091/S0101-3300201700030008
+      \endverb
+    \endentry
+    \entry{palermo2000_como_se}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ff7233d6f0ff31c612dc837e9aa80239}{%
+           family={Palermo},
+           familyi={P\bibinitperiod},
+           given={Vicente},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{fullhash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{fullhashraw}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{bibnamehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authorbibnamehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authornamehash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authorfullhash}{ff7233d6f0ff31c612dc837e9aa80239}
+      \strng{authorfullhashraw}{ff7233d6f0ff31c612dc837e9aa80239}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Dados}
+      \field{note}{ISSN 0011-5258; Dados, v. 43, n. 3, Rio de Janeiro, 2000.}
+      \field{title}{Como se Governa o Brasil? O Debate sobre Instituições Políticas e Gestão de Governo}
+      \field{year}{2000}
+    \endentry
+    \entry{perez_lian2016_explaining_military}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=befd602a5a2441aae3e3c85f9bca5e04}{%
+           family={Pérez-Liñán},
+           familyi={P\bibinithyphendelim L\bibinitperiod},
+           given={Aníbal},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0aea22ae46867a3274c53a3dc0a1a6f4}{%
+           family={Polga-Hecimovich},
+           familyi={P\bibinithyphendelim H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited, trading as Taylor & Francis Group}%
+      }
+      \strng{namehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{fullhash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{fullhashraw}{250e665ed24b113c47b67f43a9db555f}
+      \strng{bibnamehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authorbibnamehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authornamehash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authorfullhash}{250e665ed24b113c47b67f43a9db555f}
+      \strng{authorfullhashraw}{250e665ed24b113c47b67f43a9db555f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Democratization}
+      \field{note}{Published online: 10 Nov 2016; ARTICLE HISTORY: Received 15 April 2016; Accepted 30 September 2016.}
+      \field{title}{Explaining military coups and impeachments in Latin America}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1080/13510347.2016.1251905
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1080/13510347.2016.1251905
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1080/13510347.2016.1251905
+      \endverb
+    \endentry
+    \entry{rocha2019_imposto_e}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e5031490ea9a913dd9274a29ff2c0c15}{%
+           family={Rocha},
+           familyi={R\bibinitperiod},
+           given={Camila},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{fullhash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{fullhashraw}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{bibnamehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authorbibnamehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authornamehash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authorfullhash}{e5031490ea9a913dd9274a29ff2c0c15}
+      \strng{authorfullhashraw}{e5031490ea9a913dd9274a29ff2c0c15}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{DADOS}
+      \field{note}{DADOS, Rio de Janeiro, vol. 62(3): e20190076, 2019, p. 1-42; Artigos Originais.}
+      \field{title}{“Imposto é Roubo!” A Formação de um Contrapúblico ultraliberal e os Protestos Pró-Impeachment de Dilma Rousseff}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1590/001152582019189
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1590/001152582019189
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1590/001152582019189
+      \endverb
+    \endentry
+    \entry{singersd_tres_partidos}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d8dd7b463a9e4a9cff52941c844b7404}{%
+           family={Singer},
+           familyi={S\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{fullhash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{fullhashraw}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{bibnamehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authorbibnamehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authornamehash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authorfullhash}{d8dd7b463a9e4a9cff52941c844b7404}
+      \strng{authorfullhashraw}{d8dd7b463a9e4a9cff52941c844b7404}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Capítulo identificado a partir do cabeçalho "4. Três partidos brasileiros". O texto extraído não informa explicitamente a obra hospedeira, ano, editora ou demais metadados.}
+      \field{title}{Três partidos brasileiros}
+    \endentry
+    \entry{vieira2022_supremocracia_e}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=640e999611e0c19826870e801d69463f}{%
+           family={Vieira},
+           familyi={V\bibinitperiod},
+           given={Oscar\bibnamedelima Vilhena},
+           giveni={O\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8c61370cae85d84a88e3920282cac39}{%
+           family={Glezer},
+           familyi={G\bibinitperiod},
+           given={Rubens},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=206f79cdf030ba28b7bab680b3e089ce}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Ana\bibnamedelimb Laura\bibnamedelima Pereira},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f1ebda673664eb7cd588d3554eede3a4}
+      \strng{fullhash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{fullhashraw}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{bibnamehash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{authorbibnamehash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{authornamehash}{f1ebda673664eb7cd588d3554eede3a4}
+      \strng{authorfullhash}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \strng{authorfullhashraw}{09e746777bb7a1474ee68a6bb9fb6ebe}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Novos Estudos CEBRAP}
+      \field{note}{V. 41, n. 3, p. 591-605, set.–dez. 2022. Título em inglês no documento: 'Supremocracy and Autocratic Infralegalism: The Behavior of the Brazilian Supreme Court during Bolsonaro’s Government'. Texto extraído também menciona o subtítulo/variante 'O comportamento do Supremo Tribunal Federal durante o governo Bolsonaro'.}
+      \field{title}{Supremocracia e infralegalismo autoritário}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.25091/S01013300202200030008
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.25091/501013300202200030008
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.25091/501013300202200030008
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

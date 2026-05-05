@@ -1,0 +1,2308 @@
+{
+  "local_corpus": true,
+  "generated_at": "2026-05-04T19:19:50.573344",
+  "source_info": {
+    "input_zip": "/home/gustavodetarso/Documentos/mppg/disciplinas/02_politica_brasileira_contemporanea/paper/documentos-base.zip",
+    "input_dir": null,
+    "extracted_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/extracted",
+    "supported_suffixes": [
+      ".docx",
+      ".md",
+      ".org",
+      ".pdf",
+      ".txt"
+    ]
+  },
+  "proposal": {
+    "tema": "Estrutura institucional e dinâmica da política brasileira contemporânea",
+    "recorte": "Análise da interação entre presidencialismo de coalizão, multipartidarismo e federalismo no Brasil pós-1988, articulando seus efeitos sobre governabilidade, representação política e produção de políticas públicas a partir da bibliografia obrigatória da disciplina.",
+    "objetivo": "Analisar como o presidencialismo de coalizão, o multipartidarismo e o federalismo estruturam a governabilidade democrática no Brasil contemporâneo e condicionam a representação política, a coordenação federativa e a implementação de políticas públicas.",
+    "pergunta_pesquisa": "Como a combinação entre presidencialismo de coalizão, multipartidarismo e federalismo condiciona a governabilidade, a representação e a produção de políticas públicas no Brasil contemporâneo?"
+  },
+  "selected_all": [
+    {
+      "paper_id": "local:abramovay_lotta_2022",
+      "title": "Abramovay_Lotta_2022",
+      "year": "2022",
+      "authors": [
+        "Material fornecido pelo professor"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Abramovay_Lotta_2022.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Abramovay_Lotta_2022.pdf",
+      "bib_key": "anon2022_abramovay_lotta",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Abramovay_Lotta_2022.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:alves_et_al_2024",
+      "title": "Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil",
+      "year": "2024",
+      "authors": [
+        "Vinícius Silva Alves",
+        "Pedro Floriano Ribeiro",
+        "Pedro Paulo de Assis",
+        "Luís Gustavo Bruno Locatelli"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1590/0103-3352.2024.43.269810pt",
+      "url": "https://doi.org/10.1590/0103-3352.2024.43.269810pt",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Alves et al 2024.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Alves et al 2024.pdf",
+      "bib_key": "alves2024_rage_within",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Alves et al 2024.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:arretche_2018",
+      "title": "DEMOCRACIA E REDUÇÃO DA DESIGUALDADE ECONÔMICA NO BRASIL: A INCLUSÃO DOS OUTSIDERS",
+      "year": "2018",
+      "authors": [
+        "Marta Arretche"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.17666/339613/2018",
+      "url": "https://doi.org/10.17666/339613/2018",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Arretche 2018.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Arretche 2018.pdf",
+      "bib_key": "arretche2018_democracia_e",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Arretche 2018.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:campos_2017",
+      "title": "O que afasta pretos e pardos da representação política? Uma análise a partir das eleições legislativas de 2014",
+      "year": "2017",
+      "authors": [
+        "Luiz Augusto Campos",
+        "Carlos Machado"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1590/1678-987317256107",
+      "url": "https://doi.org/10.1590/1678-987317256107",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Campos 2017.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Campos 2017.pdf",
+      "bib_key": "campos2017_o_que",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Campos 2017.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:falleti_2005",
+      "title": "A Sequential Theory of Decentralization: Latin American Cases in Comparative Perspective",
+      "year": "2005",
+      "authors": [
+        "Tulia G. Falleti"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Falleti 2005.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Falleti 2005.pdf",
+      "bib_key": "falleti2005_a_sequential",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Falleti 2005.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:gatto_2025_gender_quotas",
+      "title": "Resistance to Gender Quotas in Latin America",
+      "year": "2025",
+      "authors": [
+        "Malu A C Gatto"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1093/9780198935346.001.0001",
+      "url": "https://doi.org/10.1093/9780198935346.001.0001",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Gatto 2025 - Gender quotas.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Gatto 2025 - Gender quotas.pdf",
+      "bib_key": "gatto2025_resistance_to",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Gatto 2025 - Gender quotas.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:limongi_2017",
+      "title": "A crise atual e o debate institucional",
+      "year": "2017",
+      "authors": [
+        "Fernando Limongi",
+        "Argelina Cheibub Figueiredo"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.25091/S0101-3300201700030008",
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Limongi 2017.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Limongi 2017.pdf",
+      "bib_key": "limongi2017_a_crise",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Limongi 2017.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:lian_2017",
+      "title": "Explaining military coups and impeachments in Latin America",
+      "year": "2016",
+      "authors": [
+        "Aníbal Pérez-Liñán",
+        "John Polga-Hecimovich"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1080/13510347.2016.1251905",
+      "url": "https://doi.org/10.1080/13510347.2016.1251905",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Li├▒an 2017.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Li├▒an 2017.pdf",
+      "bib_key": "perez_lian2016_explaining_military",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Li├▒an 2017.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:oliveira_lotta_2019_federalismo",
+      "title": "Momentos da recentralização: repasses e relações intergovernamentais no Brasil (1995-2014)",
+      "year": "2019",
+      "authors": [
+        "Vanessa Elias de Oliveira",
+        "Gabriela Spanghero Lotta"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Oliveira_Lotta_2019_federalismo.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Oliveira_Lotta_2019_federalismo.pdf",
+      "bib_key": "oliveira2019_momentos_da",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Oliveira_Lotta_2019_federalismo.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:Palermo2000Brasil",
+      "title": "Como se governa o Brasil? O debate sobre instituições políticas e gestão de governo",
+      "year": "2000",
+      "authors": [
+        "Vicente Palermo"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Palermo-V-2000-Como-se-governa-o-Brasil.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Palermo-V-2000-Como-se-governa-o-Brasil.pdf",
+      "bib_key": "palermo2000_como_se",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Palermo-V-2000-Como-se-governa-o-Brasil.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:panizza_etal_intro_and_conclusion",
+      "title": "The Politics of Patronage Appointments in Latin American Central Administrations",
+      "year": "2022",
+      "authors": [
+        "Material fornecido pelo professor"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Panizza-etal - intro and conclusion.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Panizza-etal - intro and conclusion.pdf",
+      "bib_key": "panizza2022_the_politics",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Panizza-etal - intro and conclusion.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:patchwork_leviathan_book",
+      "title": "Patchwork Leviathan: Pockets of Bureaucratic Effectiveness in Developing States",
+      "year": "2020",
+      "authors": [
+        "Erin Metz McDonnell"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": "https://www.jstor.org/stable/j.ctvp2n4hs",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Patchwork Leviathan Book.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Patchwork Leviathan Book.pdf",
+      "bib_key": "mcdonnell2020_patchwork_leviathan",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Patchwork Leviathan Book.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:peters_bringing_political_science_back_into_public_administration_rese",
+      "title": "Bringing political science back into public administration research",
+      "year": "2022",
+      "authors": [
+        "B. Guy Peters",
+        "Jon Pierre",
+        "Eva Sørensen",
+        "Jacob Torfing"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1111/gove.12705",
+      "url": "https://doi.org/10.1111/gove.12705",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Peters - Bringing political science back into public administration research.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Peters - Bringing political science back into public administration research.pdf",
+      "bib_key": "peters2022_bringing_political",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Peters - Bringing political science back into public administration research.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:rocha_2019",
+      "title": "“Imposto é Roubo!” A Formação de um Contrapúblico Ultraliberal e os Protestos Pró- Impeachment de Dilma Rousseff",
+      "year": "2019",
+      "authors": [
+        "Camila Rocha"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1590/001152582019189",
+      "url": "https://doi.org/10.1590/001152582019189",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Rocha 2019.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Rocha 2019.pdf",
+      "bib_key": "rocha2019_imposto_e",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Rocha 2019.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:sacchet_2018",
+      "title": "Why Gender Quotas Don’t Work in Brazil? The Role of the Electoral System and Political Finance",
+      "year": "2018",
+      "authors": [
+        "Teresa Sacchet"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.7440/colombiaint95.2018.02",
+      "url": "https://doi.org/10.7440/colombiaint95.2018.02",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Sacchet 2018.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Sacchet 2018.pdf",
+      "bib_key": "sacchet2018_why_gender",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Sacchet 2018.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:singer_tres_partidos_brasileiros",
+      "title": "Três partidos brasileiros",
+      "year": "s.d.",
+      "authors": [
+        "André Singer"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Singer-Tres_partidos_brasileiros.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Singer-Tres_partidos_brasileiros.pdf",
+      "bib_key": "singersd_tres_partidos",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Singer-Tres_partidos_brasileiros.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:vieira_et_al_2022_supremocracia",
+      "title": "Supremocracia e infralegalismo autoritário",
+      "year": "2022",
+      "authors": [
+        "Oscar Vilhena Vieira",
+        "Rubens Glezer",
+        "Ana Laura Pereira Barbosa"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.25091/S01013300202200030008",
+      "url": "http://dx.doi.org/10.25091/S01013300202200030008",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Vieira et al 2022_supremocracia.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Vieira et al 2022_supremocracia.pdf",
+      "bib_key": "vieira2022_supremocracia_e",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "Vieira et al 2022_supremocracia.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:alonso2016",
+      "title": "Changing Repertoires and Partisan Ambivalence in the New <scp>B</scp>razilian Protests",
+      "year": "2016",
+      "authors": [
+        "ANGELA ALONSO",
+        "ANN MISCHE"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1111/blar.12470",
+      "url": "https://doi.org/10.1111/blar.12470",
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/alonso2016.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/alonso2016.pdf",
+      "bib_key": "alonso2016_changing_repertoires",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "alonso2016.pdf",
+      "suffix": ".pdf"
+    }
+  ],
+  "selected_count": 18,
+  "fulltext_cache_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache",
+  "contexto_local_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_contexto_local.json",
+  "external_bib_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/02_politica_brasileira_contemporanea/paper/referencias.bib",
+  "external_bib_keys": [
+    "AutorAnoArtigo",
+    "AutorAnoLivro",
+    "AutorAnoCapitulo",
+    "AutorAnoEvento",
+    "AutorAnoTese",
+    "AutorAnoRelatorio",
+    "AutorAnoSite",
+    "AutorAnoDocumento",
+    "Brasil1988Constituicao",
+    "Brasil2020ADI",
+    "Palermo2000Brasil",
+    "Limongi2017Crise",
+    "PerezLinan2017Impeachment",
+    "Vieira2022Supremocracia",
+    "Falleti2005Sequencial",
+    "OliveiraLotta2019Federalismo"
+  ],
+  "local_revised_bib": {
+    "generated": true,
+    "bib_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea.bib",
+    "sidecar_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_revisado_ia.bib",
+    "keys": [
+      "anon2022_abramovay_lotta",
+      "alves2024_rage_within",
+      "arretche2018_democracia_e",
+      "campos2017_o_que",
+      "falleti2005_a_sequential",
+      "gatto2025_resistance_to",
+      "limongi2017_a_crise",
+      "perez_lian2016_explaining_military",
+      "oliveira2019_momentos_da",
+      "palermo2000_como_se",
+      "panizza2022_the_politics",
+      "mcdonnell2020_patchwork_leviathan",
+      "peters2022_bringing_political",
+      "rocha2019_imposto_e",
+      "sacchet2018_why_gender",
+      "singersd_tres_partidos",
+      "vieira2022_supremocracia_e",
+      "alonso2016_changing_repertoires"
+    ],
+    "diagnostics": [
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Abramovay_Lotta_2022.pdf",
+        "label": "Abramovay_Lotta_2022.pdf",
+        "bib_key": "anon2022_abramovay_lotta",
+        "source": "ia+sem_match_buscadores",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": true,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "misc",
+              "title": "“A Lotta Ins, a Lotta Outs”",
+              "authors": [],
+              "editors": [],
+              "year": "2015",
+              "journaltitle": null,
+              "booktitle": null,
+              "publisher": "The Rowman & Littlefield Publishing Group, Inc.",
+              "pages": "81-96",
+              "volume": null,
+              "number": null,
+              "doi": "10.5040/9798881827625.ch-006",
+              "isbn": "9798881827625",
+              "url": "https://doi.org/10.5040/9798881827625.ch-006",
+              "score": 0.36363636363636365
+            },
+            {
+              "source": "crossref",
+              "entry_type": "misc",
+              "title": "Crabtree, Lotta",
+              "authors": [
+                "William Brooks"
+              ],
+              "editors": [],
+              "year": "2015",
+              "journaltitle": null,
+              "booktitle": null,
+              "publisher": "Oxford University Press",
+              "pages": null,
+              "volume": null,
+              "number": null,
+              "doi": "10.1093/gmo/9781561592630.article.a2284122",
+              "isbn": null,
+              "url": "https://doi.org/10.1093/gmo/9781561592630.article.a2284122",
+              "score": 0.47058823529411764
+            },
+            {
+              "source": "crossref",
+              "entry_type": "incollection",
+              "title": "lotta, adj.",
+              "authors": [],
+              "editors": [],
+              "year": "2023",
+              "journaltitle": null,
+              "booktitle": "Oxford English Dictionary",
+              "publisher": "Oxford University Press",
+              "pages": null,
+              "volume": null,
+              "number": null,
+              "doi": "10.1093/oed/6775150368",
+              "isbn": null,
+              "url": "https://doi.org/10.1093/oed/6775150368",
+              "score": 0.41379310344827586
+            },
+            {
+              "source": "crossref",
+              "entry_type": "incollection",
+              "title": "Lotass, Lotta",
+              "authors": [
+                "Ulf Olsson"
+              ],
+              "editors": [],
+              "year": "2020",
+              "journaltitle": null,
+              "booktitle": "Kindlers Literatur Lexikon (KLL)",
+              "publisher": "J.B. Metzler",
+              "pages": "1-1",
+              "volume": null,
+              "number": null,
+              "doi": "10.1007/978-3-476-05728-0_15373-1",
+              "isbn": "9783476057280",
+              "url": "https://doi.org/10.1007/978-3-476-05728-0_15373-1",
+              "score": 0.5
+            },
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Reificazione: dalla lotta di classe alla lotta per il riconoscimiento",
+              "authors": [
+                "Irene Strazzeri"
+              ],
+              "editors": [],
+              "year": "2013",
+              "journaltitle": "Nómadas. Revista Crítica de Ciencias Sociales y Jurídicas",
+              "booktitle": null,
+              "publisher": "Universidad Complutense de Madrid (UCM)",
+              "pages": null,
+              "volume": "37",
+              "number": "1",
+              "doi": "10.5209/rev_noma.2013.v37.n1.42565",
+              "isbn": null,
+              "url": "https://doi.org/10.5209/rev_noma.2013.v37.n1.42565",
+              "score": 0.25
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "incollection",
+            "title": "Lotass, Lotta",
+            "authors": [
+              "Ulf Olsson"
+            ],
+            "editors": [],
+            "year": "2020",
+            "journaltitle": null,
+            "booktitle": "Kindlers Literatur Lexikon (KLL)",
+            "publisher": "J.B. Metzler",
+            "pages": "1-1",
+            "volume": null,
+            "number": null,
+            "doi": "10.1007/978-3-476-05728-0_15373-1",
+            "isbn": "9783476057280",
+            "url": "https://doi.org/10.1007/978-3-476-05728-0_15373-1",
+            "score": 0.5
+          }
+        },
+        "metadata": {
+          "entry_type": "misc",
+          "title": "Abramovay_Lotta_2022",
+          "authors": [],
+          "editors": [],
+          "year": "2022",
+          "booktitle": null,
+          "journaltitle": null,
+          "publisher": null,
+          "location": null,
+          "pages": null,
+          "volume": null,
+          "number": null,
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Alves et al 2024.pdf",
+        "label": "Alves et al 2024.pdf",
+        "bib_key": "alves2024_rage_within",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.1590/0103-3352.2024.43.269810pt",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil",
+              "authors": [
+                "Vinícius Silva Alves",
+                "Pedro Floriano Ribeiro",
+                "Pedro Paulo de Assis",
+                "Luís Gustavo Bruno Locatelli"
+              ],
+              "editors": [],
+              "year": "2024",
+              "journaltitle": "Revista Brasileira de Ciência Política",
+              "booktitle": null,
+              "publisher": "FapUNIFESP (SciELO)",
+              "pages": null,
+              "volume": "43",
+              "number": null,
+              "doi": "10.1590/0103-3352.2024.43.269810pt",
+              "isbn": null,
+              "url": "https://doi.org/10.1590/0103-3352.2024.43.269810pt",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil",
+              "authors": [
+                "Vinícius Silva Alves",
+                "Pedro Floriano Ribeiro",
+                "Pedro Paulo de Assis",
+                "Luís Gustavo Bruno Locatelli"
+              ],
+              "year": "2024",
+              "journaltitle": "Revista Brasileira de Ciência Política",
+              "booktitle": null,
+              "publisher": "Instituto de Ciência Política da Universidade de Brasília",
+              "pages": null,
+              "volume": "43",
+              "number": null,
+              "doi": "10.1590/0103-3352.2024.43.269810pt",
+              "url": "https://openalex.org/W4402404722",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil",
+              "authors": [
+                "V. Alves",
+                "Pedro Floriano Ribeiro",
+                "Pedro Paulo de Assis",
+                "L. Locatelli"
+              ],
+              "year": "2024",
+              "journaltitle": "Revista Brasileira de Ciência Política",
+              "doi": "10.1590/0103-3352.2024.43.269810pt",
+              "url": "https://www.semanticscholar.org/paper/5d26266309ef1d920a202fc5d60ee01177557a2a",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil",
+            "authors": [
+              "Vinícius Silva Alves",
+              "Pedro Floriano Ribeiro",
+              "Pedro Paulo de Assis",
+              "Luís Gustavo Bruno Locatelli"
+            ],
+            "editors": [],
+            "year": "2024",
+            "journaltitle": "Revista Brasileira de Ciência Política",
+            "booktitle": null,
+            "publisher": "FapUNIFESP (SciELO)",
+            "pages": null,
+            "volume": "43",
+            "number": null,
+            "doi": "10.1590/0103-3352.2024.43.269810pt",
+            "isbn": null,
+            "url": "https://doi.org/10.1590/0103-3352.2024.43.269810pt",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "Rage within the machine: engajamento e radicalização entre filiados e dirigentes partidários no Brasil",
+          "authors": [
+            "Vinícius Silva Alves",
+            "Pedro Floriano Ribeiro",
+            "Pedro Paulo de Assis",
+            "Luís Gustavo Bruno Locatelli"
+          ],
+          "editors": [],
+          "year": "2024",
+          "booktitle": null,
+          "journaltitle": "Revista Brasileira de Ciência Política",
+          "publisher": "FapUNIFESP (SciELO)",
+          "location": null,
+          "pages": null,
+          "volume": "43",
+          "number": null,
+          "edition": null,
+          "doi": "10.1590/0103-3352.2024.43.269810pt",
+          "isbn": null,
+          "url": "https://doi.org/10.1590/0103-3352.2024.43.269810pt",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Arretche 2018.pdf",
+        "label": "Arretche 2018.pdf",
+        "bib_key": "arretche2018_democracia_e",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.17666/339613/2018",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "DEMOCRACIA E REDUÇÃO DA DESIGUALDADE ECONÔMICA NO BRASIL: A INCLUSÃO DOS OUTSIDERS",
+              "authors": [
+                "Marta Arretche"
+              ],
+              "editors": [],
+              "year": "2018",
+              "journaltitle": "Revista Brasileira de Ciências Sociais",
+              "booktitle": null,
+              "publisher": "FapUNIFESP (SciELO)",
+              "pages": null,
+              "volume": "33",
+              "number": "96",
+              "doi": "10.17666/339613/2018",
+              "isbn": null,
+              "url": "https://doi.org/10.17666/339613/2018",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "DEMOCRACIA E REDUÇÃO DA DESIGUALDADE ECONÔMICA NO BRASIL: A INCLUSÃO DOS OUTSIDERS",
+              "authors": [
+                "Marta Arretche"
+              ],
+              "year": "2018",
+              "journaltitle": "Revista Brasileira de Ciências Sociais",
+              "booktitle": null,
+              "publisher": "National Association of Post-Graduate Research in Social Sciences",
+              "pages": null,
+              "volume": "33",
+              "number": "96",
+              "doi": "10.17666/339613/2018",
+              "url": "https://openalex.org/W2763641906",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "INEQUALITY REDUCTION AND DEMOCRACY IN BRAZIL: THE INCLUSION OF OUTSIDERS",
+              "authors": [
+                "M. Arretche"
+              ],
+              "year": "2018",
+              "journaltitle": null,
+              "doi": "10.17666/339613/2018",
+              "url": "https://www.semanticscholar.org/paper/b2623140de01ad39bcfe66b24de9c76beda9818c",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "article",
+              "title": "Inequality reduction and democracy in Brazil: The inclusion of outsiders",
+              "authors": [
+                "Arretche M."
+              ],
+              "year": "2018",
+              "journaltitle": "Revista Brasileira De Ciencias Sociais",
+              "volume": "33",
+              "number": "96",
+              "doi": "10.17666/339613/2018",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/85040553709",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "DEMOCRACIA E REDUÇÃO DA DESIGUALDADE ECONÔMICA NO BRASIL: A INCLUSÃO DOS OUTSIDERS",
+            "authors": [
+              "Marta Arretche"
+            ],
+            "editors": [],
+            "year": "2018",
+            "journaltitle": "Revista Brasileira de Ciências Sociais",
+            "booktitle": null,
+            "publisher": "FapUNIFESP (SciELO)",
+            "pages": null,
+            "volume": "33",
+            "number": "96",
+            "doi": "10.17666/339613/2018",
+            "isbn": null,
+            "url": "https://doi.org/10.17666/339613/2018",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "DEMOCRACIA E REDUÇÃO DA DESIGUALDADE ECONÔMICA NO BRASIL: A INCLUSÃO DOS OUTSIDERS",
+          "authors": [
+            "Marta Arretche"
+          ],
+          "editors": [],
+          "year": "2018",
+          "booktitle": null,
+          "journaltitle": "Revista Brasileira de Ciências Sociais",
+          "publisher": "FapUNIFESP (SciELO)",
+          "location": null,
+          "pages": null,
+          "volume": "33",
+          "number": "96",
+          "edition": null,
+          "doi": "10.17666/339613/2018",
+          "isbn": null,
+          "url": "https://doi.org/10.17666/339613/2018",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Campos 2017.pdf",
+        "label": "Campos 2017.pdf",
+        "bib_key": "campos2017_o_que",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.1590/1678-987317256107",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "O que afasta pretos e pardos da representação política? Uma análise a partir das eleições legislativas de 2014",
+              "authors": [
+                "Luiz Augusto Campos",
+                "Carlos Machado"
+              ],
+              "editors": [],
+              "year": "2017",
+              "journaltitle": "Revista de Sociologia e Política",
+              "booktitle": null,
+              "publisher": "FapUNIFESP (SciELO)",
+              "pages": "125-142",
+              "volume": "25",
+              "number": "61",
+              "doi": "10.1590/1678-987317256107",
+              "isbn": null,
+              "url": "https://doi.org/10.1590/1678-987317256107",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "O que afasta pretos e pardos da representação política? Uma análise a partir das eleições legislativas de 2014",
+              "authors": [
+                "Luiz Augusto Campos",
+                "Carlos Machado"
+              ],
+              "year": "2017",
+              "journaltitle": "Revista de Sociologia e Política",
+              "booktitle": null,
+              "publisher": "Universidade Federal do Paraná",
+              "pages": "125--142",
+              "volume": "25",
+              "number": "61",
+              "doi": "10.1590/1678-987317256107",
+              "url": "https://openalex.org/W2606735588",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "O que afasta pretos e pardos da representação política? Uma análise a partir das eleições legislativas de 2014",
+              "authors": [
+                "Luiz Augusto Campos",
+                "C. Machado"
+              ],
+              "year": "2017",
+              "journaltitle": null,
+              "doi": "10.1590/1678-987317256107",
+              "url": "https://www.semanticscholar.org/paper/a6f24104bce49a942d065200f5a33456db5fffec",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "article",
+              "title": "What averts black and browns of political representation? A 2014 legislative election analysis",
+              "authors": [
+                "Campos L."
+              ],
+              "year": "2017",
+              "journaltitle": "Revista De Sociologia E Politica",
+              "volume": "25",
+              "number": "61",
+              "doi": "10.1590/1678-987317256107",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/85017511308",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "O que afasta pretos e pardos da representação política? Uma análise a partir das eleições legislativas de 2014",
+            "authors": [
+              "Luiz Augusto Campos",
+              "Carlos Machado"
+            ],
+            "editors": [],
+            "year": "2017",
+            "journaltitle": "Revista de Sociologia e Política",
+            "booktitle": null,
+            "publisher": "FapUNIFESP (SciELO)",
+            "pages": "125-142",
+            "volume": "25",
+            "number": "61",
+            "doi": "10.1590/1678-987317256107",
+            "isbn": null,
+            "url": "https://doi.org/10.1590/1678-987317256107",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "O que afasta pretos e pardos da representação política? Uma análise a partir das eleições legislativas de 2014",
+          "authors": [
+            "Luiz Augusto Campos",
+            "Carlos Machado"
+          ],
+          "editors": [],
+          "year": "2017",
+          "booktitle": null,
+          "journaltitle": "Revista de Sociologia e Política",
+          "publisher": "FapUNIFESP (SciELO)",
+          "location": null,
+          "pages": "125-142",
+          "volume": "25",
+          "number": "61",
+          "edition": null,
+          "doi": "10.1590/1678-987317256107",
+          "isbn": null,
+          "url": "https://doi.org/10.1590/1678-987317256107",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Falleti 2005.pdf",
+        "label": "Falleti 2005.pdf",
+        "bib_key": "falleti2005_a_sequential",
+        "source": "ia",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": null,
+        "metadata": {
+          "entry_type": "article",
+          "title": "A Sequential Theory of Decentralization: Latin American Cases in Comparative Perspective",
+          "authors": [
+            "Tulia G. Falleti"
+          ],
+          "editors": [],
+          "year": "2005",
+          "booktitle": null,
+          "journaltitle": "American Political Science Review",
+          "publisher": null,
+          "location": null,
+          "pages": "327-346",
+          "volume": "99",
+          "number": "3",
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Gatto 2025 - Gender quotas.pdf",
+        "label": "Gatto 2025 - Gender quotas.pdf",
+        "bib_key": "gatto2025_resistance_to",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.1093/9780198935346.001.0001",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "book",
+              "title": "Resistance to Gender Quotas in Latin America",
+              "authors": [
+                "Malu A C Gatto"
+              ],
+              "editors": [],
+              "year": "2025",
+              "journaltitle": null,
+              "booktitle": null,
+              "publisher": "Oxford University PressOxford",
+              "pages": null,
+              "volume": null,
+              "number": null,
+              "doi": "10.1093/9780198935346.001.0001",
+              "isbn": "9780198935315",
+              "url": "https://doi.org/10.1093/9780198935346.001.0001",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "book",
+              "title": "Resistance to Gender Quotas in Latin America",
+              "authors": [
+                "Malu A. C. Gatto"
+              ],
+              "year": "2025",
+              "journaltitle": null,
+              "booktitle": null,
+              "publisher": null,
+              "pages": null,
+              "volume": null,
+              "number": null,
+              "doi": "10.1093/9780198935346.001.0001",
+              "url": "https://openalex.org/W4408383674",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Resistance to Gender Quotas in Latin America",
+              "authors": [
+                "Malu A. C. Gatto"
+              ],
+              "year": "2025",
+              "journaltitle": null,
+              "doi": "10.1093/9780198935346.001.0001",
+              "url": "https://www.semanticscholar.org/paper/6f6486d838fe92f9329da3565099c196488cd514",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "misc",
+              "title": "Resistance to Gender Quotas in Latin America",
+              "authors": [
+                "Gatto M.A.C."
+              ],
+              "year": "2025",
+              "journaltitle": "Resistance to Gender Quotas in Latin America",
+              "volume": null,
+              "number": null,
+              "doi": "10.1093/9780198935346.001.0001",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/105009176298",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "book",
+            "title": "Resistance to Gender Quotas in Latin America",
+            "authors": [
+              "Malu A C Gatto"
+            ],
+            "editors": [],
+            "year": "2025",
+            "journaltitle": null,
+            "booktitle": null,
+            "publisher": "Oxford University PressOxford",
+            "pages": null,
+            "volume": null,
+            "number": null,
+            "doi": "10.1093/9780198935346.001.0001",
+            "isbn": "9780198935315",
+            "url": "https://doi.org/10.1093/9780198935346.001.0001",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "book",
+          "title": "Resistance to Gender Quotas in Latin America",
+          "authors": [
+            "Malu A C Gatto"
+          ],
+          "editors": [],
+          "year": "2025",
+          "booktitle": null,
+          "journaltitle": null,
+          "publisher": "Oxford University PressOxford",
+          "location": null,
+          "pages": null,
+          "volume": null,
+          "number": null,
+          "edition": null,
+          "doi": "10.1093/9780198935346.001.0001",
+          "isbn": "9780198935315",
+          "url": "https://doi.org/10.1093/9780198935346.001.0001",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Limongi 2017.pdf",
+        "label": "Limongi 2017.pdf",
+        "bib_key": "limongi2017_a_crise",
+        "source": "ia",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": null,
+        "metadata": {
+          "entry_type": "article",
+          "title": "A crise atual e o debate institucional",
+          "authors": [
+            "Fernando Limongi",
+            "Argelina Cheibub Figueiredo"
+          ],
+          "editors": [],
+          "year": "2017",
+          "booktitle": null,
+          "journaltitle": "Novos Estudos CEBRAP",
+          "publisher": null,
+          "location": "São Paulo",
+          "pages": "79-97",
+          "volume": "36",
+          "number": "3",
+          "edition": null,
+          "doi": "10.25091/S0101-3300201700030008",
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Li├▒an 2017.pdf",
+        "label": "Li├▒an 2017.pdf",
+        "bib_key": "perez_lian2016_explaining_military",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.1080/13510347.2016.1251905",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Explaining military coups and impeachments in Latin America",
+              "authors": [
+                "Aníbal Pérez-Liñán",
+                "John Polga-Hecimovich"
+              ],
+              "editors": [],
+              "year": "2016",
+              "journaltitle": "Democratization",
+              "booktitle": null,
+              "publisher": "Informa UK Limited",
+              "pages": "839-858",
+              "volume": "24",
+              "number": "5",
+              "doi": "10.1080/13510347.2016.1251905",
+              "isbn": null,
+              "url": "https://doi.org/10.1080/13510347.2016.1251905",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Explaining military coups and impeachments in Latin America",
+              "authors": [
+                "Aníbal Pérez‐Liñán",
+                "John Polga–Hecimovich"
+              ],
+              "year": "2016",
+              "journaltitle": "Democratization",
+              "booktitle": null,
+              "publisher": "Taylor & Francis",
+              "pages": "839--858",
+              "volume": "24",
+              "number": "5",
+              "doi": "10.1080/13510347.2016.1251905",
+              "url": "https://openalex.org/W2553741691",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Explaining military coups and impeachments in Latin America",
+              "authors": [
+                "A. Pérez-Liñán",
+                "John Polga-Hecimovich"
+              ],
+              "year": "2017",
+              "journaltitle": "The Military’s Impact on Democratic Development",
+              "doi": "10.1080/13510347.2016.1251905",
+              "url": "https://www.semanticscholar.org/paper/484ab7380ee15ee4b541c3e1d3543fc528cf14f7",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "article",
+              "title": "Explaining military coups and impeachments in Latin America",
+              "authors": [
+                "Pérez-Liñán A."
+              ],
+              "year": "2017",
+              "journaltitle": "Democratization",
+              "volume": "24",
+              "number": "5",
+              "doi": "10.1080/13510347.2016.1251905",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/84994853607",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "Explaining military coups and impeachments in Latin America",
+            "authors": [
+              "Aníbal Pérez-Liñán",
+              "John Polga-Hecimovich"
+            ],
+            "editors": [],
+            "year": "2016",
+            "journaltitle": "Democratization",
+            "booktitle": null,
+            "publisher": "Informa UK Limited",
+            "pages": "839-858",
+            "volume": "24",
+            "number": "5",
+            "doi": "10.1080/13510347.2016.1251905",
+            "isbn": null,
+            "url": "https://doi.org/10.1080/13510347.2016.1251905",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "Explaining military coups and impeachments in Latin America",
+          "authors": [
+            "Aníbal Pérez-Liñán",
+            "John Polga-Hecimovich"
+          ],
+          "editors": [],
+          "year": "2016",
+          "booktitle": null,
+          "journaltitle": "Democratization",
+          "publisher": "Informa UK Limited",
+          "location": null,
+          "pages": "839-858",
+          "volume": "24",
+          "number": "5",
+          "edition": null,
+          "doi": "10.1080/13510347.2016.1251905",
+          "isbn": null,
+          "url": "https://doi.org/10.1080/13510347.2016.1251905",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Oliveira_Lotta_2019_federalismo.pdf",
+        "label": "Oliveira_Lotta_2019_federalismo.pdf",
+        "bib_key": "oliveira2019_momentos_da",
+        "source": "ia",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": null,
+        "metadata": {
+          "entry_type": "article",
+          "title": "Momentos da recentralização: repasses e relações intergovernamentais no Brasil (1995-2014)",
+          "authors": [
+            "Vanessa Elias de Oliveira",
+            "Gabriela Spanghero Lotta"
+          ],
+          "editors": [],
+          "year": "2019",
+          "booktitle": null,
+          "journaltitle": "Planejamento e Políticas Públicas",
+          "publisher": null,
+          "location": null,
+          "pages": "438-?",
+          "volume": null,
+          "number": "52",
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Palermo-V-2000-Como-se-governa-o-Brasil.pdf",
+        "label": "Palermo-V-2000-Como-se-governa-o-Brasil.pdf",
+        "bib_key": "palermo2000_como_se",
+        "source": "ia",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": null,
+        "metadata": {
+          "entry_type": "article",
+          "title": "Como se governa o Brasil? O debate sobre instituições políticas e gestão de governo",
+          "authors": [
+            "Vicente Palermo"
+          ],
+          "editors": [],
+          "year": "2000",
+          "booktitle": null,
+          "journaltitle": "Dados",
+          "publisher": null,
+          "location": "Rio de Janeiro",
+          "pages": null,
+          "volume": "43",
+          "number": "3",
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Panizza-etal - intro and conclusion.pdf",
+        "label": "Panizza-etal - intro and conclusion.pdf",
+        "bib_key": "panizza2022_the_politics",
+        "source": "ia",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": null,
+        "metadata": {
+          "entry_type": "book",
+          "title": "The Politics of Patronage Appointments in Latin American Central Administrations",
+          "authors": [],
+          "editors": [
+            "Francisco E. Panizza",
+            "B. Guy Peters",
+            "Conrado Ramos Larraburu"
+          ],
+          "year": "2022",
+          "booktitle": null,
+          "journaltitle": null,
+          "publisher": "University of Pittsburgh Press",
+          "location": "Pittsburgh, Pa.",
+          "pages": null,
+          "volume": null,
+          "number": null,
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Patchwork Leviathan Book.pdf",
+        "label": "Patchwork Leviathan Book.pdf",
+        "bib_key": "mcdonnell2020_patchwork_leviathan",
+        "source": "ia",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": null,
+        "metadata": {
+          "entry_type": "book",
+          "title": "Patchwork Leviathan: Pockets of Bureaucratic Effectiveness in Developing States",
+          "authors": [
+            "Erin Metz McDonnell"
+          ],
+          "editors": [],
+          "year": "2020",
+          "booktitle": null,
+          "journaltitle": null,
+          "publisher": "Princeton University Press",
+          "location": null,
+          "pages": null,
+          "volume": null,
+          "number": null,
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": "https://www.jstor.org/stable/j.ctvp2n4hs",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Peters - Bringing political science back into public administration research.pdf",
+        "label": "Peters - Bringing political science back into public administration research.pdf",
+        "bib_key": "peters2022_bringing_political",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.1111/gove.12705",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Bringing political science back into public administration research",
+              "authors": [
+                "B. Guy Peters",
+                "Jon Pierre",
+                "Eva Sørensen",
+                "Jacob Torfing"
+              ],
+              "editors": [],
+              "year": "2022",
+              "journaltitle": "Governance",
+              "booktitle": null,
+              "publisher": "Wiley",
+              "pages": "962-982",
+              "volume": "35",
+              "number": "4",
+              "doi": "10.1111/gove.12705",
+              "isbn": null,
+              "url": "https://doi.org/10.1111/gove.12705",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Bringing political science back into public administration research",
+              "authors": [
+                "B. Guy Peters",
+                "Jon Pierre",
+                "Eva Sørensen",
+                "Jacob Torfing"
+              ],
+              "year": "2022",
+              "journaltitle": "Governance",
+              "booktitle": null,
+              "publisher": "Wiley",
+              "pages": "962--982",
+              "volume": "35",
+              "number": "4",
+              "doi": "10.1111/gove.12705",
+              "url": "https://openalex.org/W4281677977",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Bringing political science back into public administration research",
+              "authors": [
+                "B. Peters",
+                "J. Pierre",
+                "E. Sørensen",
+                "J. Torfing"
+              ],
+              "year": "2022",
+              "journaltitle": "Governance. An International Journal of Policy, Administration and Institutions",
+              "doi": "10.1111/gove.12705",
+              "url": "https://www.semanticscholar.org/paper/01bbca2739c603f2f813625ef4de1fef850cf593",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "article",
+              "title": "Bringing political science back into public administration research",
+              "authors": [
+                "Peters B.G."
+              ],
+              "year": "2022",
+              "journaltitle": "Governance",
+              "volume": "35",
+              "number": "4",
+              "doi": "10.1111/gove.12705",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/85131060041",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "Bringing political science back into public administration research",
+            "authors": [
+              "B. Guy Peters",
+              "Jon Pierre",
+              "Eva Sørensen",
+              "Jacob Torfing"
+            ],
+            "editors": [],
+            "year": "2022",
+            "journaltitle": "Governance",
+            "booktitle": null,
+            "publisher": "Wiley",
+            "pages": "962-982",
+            "volume": "35",
+            "number": "4",
+            "doi": "10.1111/gove.12705",
+            "isbn": null,
+            "url": "https://doi.org/10.1111/gove.12705",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "Bringing political science back into public administration research",
+          "authors": [
+            "B. Guy Peters",
+            "Jon Pierre",
+            "Eva Sørensen",
+            "Jacob Torfing"
+          ],
+          "editors": [],
+          "year": "2022",
+          "booktitle": null,
+          "journaltitle": "Governance",
+          "publisher": "Wiley",
+          "location": null,
+          "pages": "962-982",
+          "volume": "35",
+          "number": "4",
+          "edition": null,
+          "doi": "10.1111/gove.12705",
+          "isbn": null,
+          "url": "https://doi.org/10.1111/gove.12705",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Rocha 2019.pdf",
+        "label": "Rocha 2019.pdf",
+        "bib_key": "rocha2019_imposto_e",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.1590/001152582019189",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "“Imposto é Roubo!” A Formação de um Contrapúblico Ultraliberal e os Protestos Pró- Impeachment de Dilma Rousseff",
+              "authors": [
+                "Camila Rocha"
+              ],
+              "editors": [],
+              "year": "2019",
+              "journaltitle": "Dados",
+              "booktitle": null,
+              "publisher": "FapUNIFESP (SciELO)",
+              "pages": null,
+              "volume": "62",
+              "number": "3",
+              "doi": "10.1590/001152582019189",
+              "isbn": null,
+              "url": "https://doi.org/10.1590/001152582019189",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "“Imposto é Roubo!” A Formação de um Contrapúblico Ultraliberal e os Protestos Pró- Impeachment de Dilma Rousseff",
+              "authors": [
+                "Camila Rocha"
+              ],
+              "year": "2019",
+              "journaltitle": "Dados",
+              "booktitle": null,
+              "publisher": "Universidade do Estado do Rio de Janeiro",
+              "pages": null,
+              "volume": "62",
+              "number": "3",
+              "doi": "10.1590/001152582019189",
+              "url": "https://openalex.org/W2977742652",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "“Imposto é Roubo!” A Formação de um Contrapúblico Ultraliberal e os Protestos Pró- Impeachment de Dilma Rousseff",
+              "authors": [
+                "Camila Rocha"
+              ],
+              "year": "2019",
+              "journaltitle": "Dados",
+              "doi": "10.1590/001152582019189",
+              "url": "https://www.semanticscholar.org/paper/af880ed3e41209c6c7fd1d06199ebcb6a10a3afe",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "article",
+              "title": "\"Taxation is Theft!\" - The Formation of an Ultraliberal Counter-Public and Dilma Rousseff's Pro-Impeachment Protests",
+              "authors": [
+                "Rocha C."
+              ],
+              "year": "2019",
+              "journaltitle": "Dados",
+              "volume": "62",
+              "number": "3",
+              "doi": "10.1590/001152582019189",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/85073415983",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "“Imposto é Roubo!” A Formação de um Contrapúblico Ultraliberal e os Protestos Pró- Impeachment de Dilma Rousseff",
+            "authors": [
+              "Camila Rocha"
+            ],
+            "editors": [],
+            "year": "2019",
+            "journaltitle": "Dados",
+            "booktitle": null,
+            "publisher": "FapUNIFESP (SciELO)",
+            "pages": null,
+            "volume": "62",
+            "number": "3",
+            "doi": "10.1590/001152582019189",
+            "isbn": null,
+            "url": "https://doi.org/10.1590/001152582019189",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "“Imposto é Roubo!” A Formação de um Contrapúblico Ultraliberal e os Protestos Pró- Impeachment de Dilma Rousseff",
+          "authors": [
+            "Camila Rocha"
+          ],
+          "editors": [],
+          "year": "2019",
+          "booktitle": null,
+          "journaltitle": "Dados",
+          "publisher": "FapUNIFESP (SciELO)",
+          "location": null,
+          "pages": null,
+          "volume": "62",
+          "number": "3",
+          "edition": null,
+          "doi": "10.1590/001152582019189",
+          "isbn": null,
+          "url": "https://doi.org/10.1590/001152582019189",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Sacchet 2018.pdf",
+        "label": "Sacchet 2018.pdf",
+        "bib_key": "sacchet2018_why_gender",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.7440/colombiaint95.2018.02",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Why Gender Quotas Don’t Work in Brazil? The Role of the Electoral System and Political Finance",
+              "authors": [
+                "Teresa Sacchet"
+              ],
+              "editors": [],
+              "year": "2018",
+              "journaltitle": "Colombia Internacional",
+              "booktitle": null,
+              "publisher": "Universidad de los Andes",
+              "pages": "25-54",
+              "volume": null,
+              "number": "95",
+              "doi": "10.7440/colombiaint95.2018.02",
+              "isbn": null,
+              "url": "https://doi.org/10.7440/colombiaint95.2018.02",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Why Gender Quotas Don’t Work in Brazil? The Role of the Electoral System and Political Finance",
+              "authors": [
+                "Teresa Sacchet"
+              ],
+              "year": "2018",
+              "journaltitle": "Colombia Internacional",
+              "booktitle": null,
+              "publisher": "Universidad de Los Andes",
+              "pages": "25--54",
+              "volume": null,
+              "number": "95",
+              "doi": "10.7440/colombiaint95.2018.02",
+              "url": "https://openalex.org/W2884011548",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Why Gender Quotas Don’t Work in Brazil? The Role of the Electoral System and Political Finance",
+              "authors": [
+                "Teresa Sacchet"
+              ],
+              "year": "2018",
+              "journaltitle": "Colombia Internacional",
+              "doi": "10.7440/COLOMBIAINT95.2018.02",
+              "url": "https://www.semanticscholar.org/paper/f1d96fa046012e2736e94283a1c6c921a5aea18c",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "article",
+              "title": "Why gender quotas don’t work in Brazil? The role of the electoral system and political finance",
+              "authors": [
+                "Sacchet T."
+              ],
+              "year": "2018",
+              "journaltitle": "Colombia Internacional",
+              "volume": null,
+              "number": "95",
+              "doi": "10.7440/colombiaint95.2018.02",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/85052141380",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "Why Gender Quotas Don’t Work in Brazil? The Role of the Electoral System and Political Finance",
+            "authors": [
+              "Teresa Sacchet"
+            ],
+            "editors": [],
+            "year": "2018",
+            "journaltitle": "Colombia Internacional",
+            "booktitle": null,
+            "publisher": "Universidad de los Andes",
+            "pages": "25-54",
+            "volume": null,
+            "number": "95",
+            "doi": "10.7440/colombiaint95.2018.02",
+            "isbn": null,
+            "url": "https://doi.org/10.7440/colombiaint95.2018.02",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "Why Gender Quotas Don’t Work in Brazil? The Role of the Electoral System and Political Finance",
+          "authors": [
+            "Teresa Sacchet"
+          ],
+          "editors": [],
+          "year": "2018",
+          "booktitle": null,
+          "journaltitle": "Colombia Internacional",
+          "publisher": "Universidad de los Andes",
+          "location": null,
+          "pages": "25-54",
+          "volume": null,
+          "number": "95",
+          "edition": null,
+          "doi": "10.7440/colombiaint95.2018.02",
+          "isbn": null,
+          "url": "https://doi.org/10.7440/colombiaint95.2018.02",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Singer-Tres_partidos_brasileiros.pdf",
+        "label": "Singer-Tres_partidos_brasileiros.pdf",
+        "bib_key": "singersd_tres_partidos",
+        "source": "ia+sem_match_buscadores",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": true,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "PARTIDOS POLÍTICOS BRASILEIROS",
+              "authors": [
+                "Afonso Arinos de Mello"
+              ],
+              "editors": [],
+              "year": "2017",
+              "journaltitle": "Revista da Escola Superior de Guerra",
+              "booktitle": null,
+              "publisher": "Revista da Escola Superior de Guerra",
+              "pages": "84-92",
+              "volume": "2",
+              "number": "3",
+              "doi": "10.47240/revistadaesg.v2i3.54",
+              "isbn": null,
+              "url": "https://doi.org/10.47240/revistadaesg.v2i3.54",
+              "score": 0.7272727272727273
+            },
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "OS PARTIDOS POLÍTICOS BRASILEIROS",
+              "authors": [
+                "Affonso Arinos de Mello Franco"
+              ],
+              "editors": [],
+              "year": "1969",
+              "journaltitle": "Revista da Escola Superior de Guerra",
+              "booktitle": null,
+              "publisher": "Revista da Escola Superior de Guerra",
+              "pages": "165-179",
+              "volume": null,
+              "number": "17",
+              "doi": "10.47240/revistadaesg.v0i17.448",
+              "isbn": null,
+              "url": "https://doi.org/10.47240/revistadaesg.v0i17.448",
+              "score": 0.7586206896551724
+            },
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Notas sôbre três fungos brasileiros",
+              "authors": [
+                "A. P. Viegas"
+              ],
+              "editors": [],
+              "year": "1943",
+              "journaltitle": "Bragantia",
+              "booktitle": null,
+              "publisher": "FapUNIFESP (SciELO)",
+              "pages": "31-48",
+              "volume": "3",
+              "number": "3",
+              "doi": "10.1590/s0006-87051943000300001",
+              "isbn": null,
+              "url": "https://doi.org/10.1590/s0006-87051943000300001",
+              "score": 0.6333333333333333
+            },
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Identidade política, desigualdade e partidos brasileiros",
+              "authors": [
+                "Fábio Wanderley Reis"
+              ],
+              "editors": [],
+              "year": "2010",
+              "journaltitle": "Novos Estudos - CEBRAP",
+              "booktitle": null,
+              "publisher": "FapUNIFESP (SciELO)",
+              "pages": "61-75",
+              "volume": null,
+              "number": "87",
+              "doi": "10.1590/s0101-33002010000200004",
+              "isbn": null,
+              "url": "https://doi.org/10.1590/s0101-33002010000200004",
+              "score": 0.6
+            },
+            {
+              "source": "crossref",
+              "entry_type": "incollection",
+              "title": "Partidos políticos brasileiros : o quão democráticos são?",
+              "authors": [
+                "Maria Braga",
+                "Marcus Rodrigues",
+                "Karoline Moraes",
+                "Marlon Thomazini"
+              ],
+              "editors": [],
+              "year": "2022",
+              "journaltitle": null,
+              "booktitle": "Sistematização das normas eleitorais : eixo temático VIII : partidos políticos",
+              "publisher": "Tribunal Superior Eleitoral",
+              "pages": "41-66",
+              "volume": null,
+              "number": null,
+              "doi": "10.57025/9786587461212_rod.mar",
+              "isbn": "9786587461212",
+              "url": "https://doi.org/10.57025/9786587461212_rod.mar",
+              "score": 0.5063291139240507
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Os partidos brasileiros na perspectiva dos eleitores: mudanças e continuidades na identificação partidária e na avaliação das principais legendas após 2002",
+              "authors": [
+                "Luciana Fernandes Veiga"
+              ],
+              "year": "2007",
+              "journaltitle": "Opinião Pública",
+              "booktitle": null,
+              "publisher": "University of Campinas",
+              "pages": "340--365",
+              "volume": "13",
+              "number": "2",
+              "doi": "10.1590/s0104-62762007000200005",
+              "url": "https://openalex.org/W2139882348",
+              "score": 0.24581005586592178
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Sociedade civil, Estado e autonomia: argumentos, contra-argumentos e avanços no debate",
+              "authors": [
+                "Adrián Gurza Lavalle",
+                "José Szwako"
+              ],
+              "year": "2015",
+              "journaltitle": "Opinião Pública",
+              "booktitle": null,
+              "publisher": "University of Campinas",
+              "pages": "157--187",
+              "volume": "21",
+              "number": "1",
+              "doi": "10.1590/1807-0191211157",
+              "url": "https://openalex.org/W1556786583",
+              "score": 0.25925925925925924
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Recordar é vencer: as dinâmicas e vicissitudes da construção da memória sobre o regime militar brasileiro",
+              "authors": [
+                "Marcos Napolitano"
+              ],
+              "year": "2015",
+              "journaltitle": "Antíteses",
+              "booktitle": null,
+              "publisher": "State University of Londrina",
+              "pages": "9--9",
+              "volume": "8",
+              "number": "15esp",
+              "doi": "10.5433/1984-3356.2015v8n15espp9",
+              "url": "https://openalex.org/W4301730945",
+              "score": 0.26356589147286824
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Regime político e recrutamento parlamentar: um retrato coletivo dos senadores brasileiros antes e depois da ditadura",
+              "authors": [
+                "Adriano Codato",
+                "Luiz Domingos Costa",
+                "Lucas Massimo",
+                "Flavio Madureira Heinz",
+                "Centro Universitário Internacional,  Brasil",
+                "Núcleo de Pesquisa em Sociologia Política Brasileira,  Brasil",
+                "Centro Universitário Internacional,  Brasil",
+                "Núcleo de Pesquisa em Sociologia Política Brasileira,  Brasil"
+              ],
+              "year": "2016",
+              "journaltitle": "Revista de Sociologia e Política",
+              "booktitle": null,
+              "publisher": "Universidade Federal do Paraná",
+              "pages": "47--68",
+              "volume": "24",
+              "number": "60",
+              "doi": "10.1590/1678-987316246005",
+              "url": "https://openalex.org/W2584434442",
+              "score": 0.32857142857142857
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "A influência dos ciclos políticos nos investimentos públicos em infraestrutura: um estudo nos estados brasileiros no período de 2003 a 2014",
+              "authors": [
+                "Luciano Gomes Gonçalves",
+                "Bruno Funchal",
+                "João Eudes Bezerra Filho"
+              ],
+              "year": "2017",
+              "journaltitle": "Revista de Administração Pública",
+              "booktitle": null,
+              "publisher": "Fundação Getúlio Vargas",
+              "pages": "462--481",
+              "volume": "51",
+              "number": "4",
+              "doi": "10.1590/0034-7612156337",
+              "url": "https://openalex.org/W2587962188",
+              "score": 0.25766871165644173
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "DEMOCRACIA NOS PARTIDOS POLÍTICOS BRASILEIROS: UM DIAGNÓSTICO",
+              "authors": [
+                "M. Vequi",
+                "Clovis Demarchi",
+                "Juan Felipe Orozco Ospina"
+              ],
+              "year": "2023",
+              "journaltitle": "Revista Eletrônica Direito e Política",
+              "doi": "10.14210/rdp.v18n2.p372-403",
+              "url": "https://www.semanticscholar.org/paper/e850efe1b3c1a990a603d429cf8db96f4971a206",
+              "score": 0.5411764705882353
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Difusão de ações antiéticas por partidos políticos brasileiros e as reações de usuários no Facebook",
+              "authors": [
+                "H. Medeiros",
+                "J. Diniz",
+                "D. Arruda"
+              ],
+              "year": "2016",
+              "journaltitle": null,
+              "doi": "10.1590/1809-5844201635",
+              "url": "https://www.semanticscholar.org/paper/2d0ee8dae6114233094c180dacca1c9062054218",
+              "score": 0.3709677419354839
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "PSD, UDN E PTB, OS TRÊS GRANDES PARTIDOS DA TERCEIRA REPÚBLICA",
+              "authors": [
+                "Eder Aparecido de Carvalho"
+              ],
+              "year": "2007",
+              "journaltitle": null,
+              "doi": "10.34019/1981-2140.2007.V0.17036",
+              "url": "https://www.semanticscholar.org/paper/c2d17ed725734842a6294796d0a4f8beae780b6a",
+              "score": 0.4235294117647059
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Ideologia e Partidos no Brasil: reflexão e prática a partir dos programas de governo",
+              "authors": [
+                "N. Salles"
+              ],
+              "year": "2021",
+              "journaltitle": "Revista Política Hoje",
+              "doi": "10.51359/1808-8708.2021.246797",
+              "url": "https://www.semanticscholar.org/paper/114b47315b2128ab8120aa397f97fdb19dd20e1b",
+              "score": 0.4074074074074074
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Academia da Saúde, Academia da Cidade e Academia ao Ar Livre nas agendas política e governamental dos estados brasileiros",
+              "authors": [
+                "T. D. Silva",
+                "S. S. Souza",
+                "Fernando Augusto Starepravo"
+              ],
+              "year": "2020",
+              "journaltitle": "Revista Brasileira de Atividade Física & Saúde",
+              "doi": "10.12820/rbafs.25e0163",
+              "url": "https://www.semanticscholar.org/paper/47197a14f2e951f1e8ae18d7d5d2866f5e6f9321",
+              "score": 0.30344827586206896
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "OS PARTIDOS POLÍTICOS BRASILEIROS",
+            "authors": [
+              "Affonso Arinos de Mello Franco"
+            ],
+            "editors": [],
+            "year": "1969",
+            "journaltitle": "Revista da Escola Superior de Guerra",
+            "booktitle": null,
+            "publisher": "Revista da Escola Superior de Guerra",
+            "pages": "165-179",
+            "volume": null,
+            "number": "17",
+            "doi": "10.47240/revistadaesg.v0i17.448",
+            "isbn": null,
+            "url": "https://doi.org/10.47240/revistadaesg.v0i17.448",
+            "score": 0.7586206896551724
+          }
+        },
+        "metadata": {
+          "entry_type": "incollection",
+          "title": "Três partidos brasileiros",
+          "authors": [
+            "André Singer"
+          ],
+          "editors": [],
+          "year": "s.d.",
+          "booktitle": null,
+          "journaltitle": null,
+          "publisher": null,
+          "location": null,
+          "pages": null,
+          "volume": null,
+          "number": null,
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Vieira et al 2022_supremocracia.pdf",
+        "label": "Vieira et al 2022_supremocracia.pdf",
+        "bib_key": "vieira2022_supremocracia_e",
+        "source": "ia",
+        "known_doi": null,
+        "known_doi_source": null,
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": null,
+        "metadata": {
+          "entry_type": "article",
+          "title": "Supremocracia e infralegalismo autoritário",
+          "authors": [
+            "Oscar Vilhena Vieira",
+            "Rubens Glezer",
+            "Ana Laura Pereira Barbosa"
+          ],
+          "editors": [],
+          "year": "2022",
+          "booktitle": null,
+          "journaltitle": "Novos Estudos CEBRAP",
+          "publisher": null,
+          "location": "São Paulo",
+          "pages": "591-605",
+          "volume": "41",
+          "number": "3",
+          "edition": null,
+          "doi": "10.25091/S01013300202200030008",
+          "isbn": null,
+          "url": "http://dx.doi.org/10.25091/S01013300202200030008",
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/alonso2016.pdf",
+        "label": "alonso2016.pdf",
+        "bib_key": "alonso2016_changing_repertoires",
+        "source": "enriquecido_buscadores:crossref+doi_extraido_texto",
+        "known_doi": "10.1111/blar.12470",
+        "known_doi_source": "extraido_texto",
+        "inference_error": null,
+        "metadata_incomplete_after_enrichment": false,
+        "metadata_enrichment": {
+          "enabled": true,
+          "min_score": 0.82,
+          "sources": [
+            "crossref",
+            "openalex",
+            "semantic_scholar",
+            "scopus"
+          ],
+          "candidates": [
+            {
+              "source": "crossref",
+              "entry_type": "article",
+              "title": "Changing Repertoires and Partisan Ambivalence in the New <scp>B</scp>razilian Protests",
+              "authors": [
+                "ANGELA ALONSO",
+                "ANN MISCHE"
+              ],
+              "editors": [],
+              "year": "2016",
+              "journaltitle": "Bulletin of Latin American Research",
+              "booktitle": null,
+              "publisher": "Wiley",
+              "pages": "144-159",
+              "volume": "36",
+              "number": "2",
+              "doi": "10.1111/blar.12470",
+              "isbn": null,
+              "url": "https://doi.org/10.1111/blar.12470",
+              "score": 1.0
+            },
+            {
+              "source": "openalex",
+              "entry_type": "article",
+              "title": "Changing Repertoires and Partisan Ambivalence in the New <scp>B</scp>razilian Protests",
+              "authors": [
+                "Angela Alonso",
+                "Ann Mische"
+              ],
+              "year": "2016",
+              "journaltitle": "Bulletin of Latin American Research",
+              "booktitle": null,
+              "publisher": "Wiley",
+              "pages": "144--159",
+              "volume": "36",
+              "number": "2",
+              "doi": "10.1111/blar.12470",
+              "url": "https://openalex.org/W2309876509",
+              "score": 1.0
+            },
+            {
+              "source": "semantic_scholar",
+              "entry_type": "article",
+              "title": "Changing Repertoires and Partisan Ambivalence in the New Brazilian Protests",
+              "authors": [
+                "A. Alonso",
+                "A. Mische"
+              ],
+              "year": "2017",
+              "journaltitle": null,
+              "doi": "10.1111/BLAR.12470",
+              "url": "https://www.semanticscholar.org/paper/b41f0aa04a23b21607be7cba4e51ea691f22c34d",
+              "score": 1.0
+            },
+            {
+              "source": "scopus",
+              "entry_type": "article",
+              "title": "Changing Repertoires and Partisan Ambivalence in the New Brazilian Protests",
+              "authors": [
+                "Alonso A."
+              ],
+              "year": "2017",
+              "journaltitle": "Bulletin of Latin American Research",
+              "volume": "36",
+              "number": "2",
+              "doi": "10.1111/blar.12470",
+              "url": "https://api.elsevier.com/content/abstract/scopus_id/84962487711",
+              "score": 1.0
+            }
+          ],
+          "selected": {
+            "source": "crossref",
+            "entry_type": "article",
+            "title": "Changing Repertoires and Partisan Ambivalence in the New <scp>B</scp>razilian Protests",
+            "authors": [
+              "ANGELA ALONSO",
+              "ANN MISCHE"
+            ],
+            "editors": [],
+            "year": "2016",
+            "journaltitle": "Bulletin of Latin American Research",
+            "booktitle": null,
+            "publisher": "Wiley",
+            "pages": "144-159",
+            "volume": "36",
+            "number": "2",
+            "doi": "10.1111/blar.12470",
+            "isbn": null,
+            "url": "https://doi.org/10.1111/blar.12470",
+            "score": 1.0
+          }
+        },
+        "metadata": {
+          "entry_type": "article",
+          "title": "Changing Repertoires and Partisan Ambivalence in the New <scp>B</scp>razilian Protests",
+          "authors": [
+            "ANGELA ALONSO",
+            "ANN MISCHE"
+          ],
+          "editors": [],
+          "year": "2016",
+          "booktitle": null,
+          "journaltitle": "Bulletin of Latin American Research",
+          "publisher": "Wiley",
+          "location": null,
+          "pages": "144-159",
+          "volume": "36",
+          "number": "2",
+          "edition": null,
+          "doi": "10.1111/blar.12470",
+          "isbn": null,
+          "url": "https://doi.org/10.1111/blar.12470",
+          "note": null
+        }
+      }
+    ],
+    "metadata_diagnostics_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_metadados_diagnostico.json"
+  }
+}

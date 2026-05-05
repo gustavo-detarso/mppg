@@ -1,6 +1,0 @@
-openai
-requests
-python-dotenv
-pydantic
-pypdf
-python-docx

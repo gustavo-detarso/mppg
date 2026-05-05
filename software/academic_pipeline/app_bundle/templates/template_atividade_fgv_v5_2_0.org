@@ -1,0 +1,61 @@
+#+TITLE: {{TITULO_TRABALHO}}
+#+AUTHOR: {{ALUNO}}
+#+DATE: {{DATA}}
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+CITE_EXPORT: biblatex apa
+#+BIBLIOGRAPHY: referencias.bib
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \newcommand{\FGVActivityLogo}{misc/logos/fgv.png}
+
+# INSTRUÇÕES PARA O GERADOR/IA:
+# - Substitua todos os placeholders {{...}} por valores do TOML ou por texto adequado.
+# - Use {{CONTEUDO}} para inserir o documento final completo em Org-mode.
+# - O conteúdo pode ser resumo, fichamento, resposta discursiva, ensaio ou atividade completa.
+# - Quando houver vários textos locais, compare convergências, divergências e complementaridades.
+# - Cite os textos locais com Org Cite, usando as chaves disponíveis: [cite:@chave].
+# - Não use caminhos absolutos: a imagem abaixo só aparece se misc/logos/fgv.png existir no bundle.
+
+#+begin_export latex
+\IfFileExists{\FGVActivityLogo}{%
+\begin{center}
+\includegraphics[height=1.05cm]{\FGVActivityLogo}
+\end{center}
+\vspace{0.4em}
+\noindent\color{gray!55}\rule{\textwidth}{0.5pt}\color{black}
+\vspace{1.0em}
+}{}
+
+\begin{center}
+{\Large\bfseries {{TITULO_TRABALHO}}\par}
+\end{center}
+\vspace{0.8em}
+#+end_export
+
+* Ficha técnica
+
+| Campo | Informação |
+|-------+------------|
+| Curso | {{CURSO}} |
+| Turma | {{TURMA}} |
+| Polo | {{POLO}} |
+| Disciplina | {{DISCIPLINA}} |
+| Professor(a) | {{PROFESSOR}} |
+| Aluno(a) | {{ALUNO}} |
+| Data | {{DATA}} |
+| Tipo de entrega | {{TIPO_DOCUMENTO}} |
+
+{{CONTEUDO}}
+
+* Referências
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+#+PRINT_BIBLIOGRAPHY:

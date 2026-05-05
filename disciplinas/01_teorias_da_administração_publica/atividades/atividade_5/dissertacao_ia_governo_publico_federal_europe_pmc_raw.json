@@ -1,0 +1,2132 @@
+{
+  "source": "europe_pmc",
+  "label": "Europe PMC",
+  "query": "(\"administrative centralization\" OR \"institutional arrangements\" OR \"state capacity\") AND (\"policy outcomes\" OR \"policy implementation\") AND (\"systematic literature review\" OR \"literature review\" OR \"systematic review\") AND FIRST_PDATE:[2019-01-01 TO 2026-12-31] AND (LANG:ENG OR LANG:POR)",
+  "retrieved": 10,
+  "warnings": [],
+  "saved_at": "2026-04-24T22:53:02.507925",
+  "pages": [
+    {
+      "version": "6.9",
+      "hitCount": 173,
+      "nextCursorMark": "AoIIQGRM1yg1NDM1ODYzNA==",
+      "nextPageUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=(\"administrative centralization\" OR \"institutional arrangements\" OR \"state capacity\") AND (\"policy outcomes\" OR \"policy implementation\") AND (\"systematic literature review\" OR \"literature review\" OR \"systematic review\") AND FIRST_PDATE:[2019-01-01 TO 2026-12-31] AND (LANG:ENG OR LANG:POR)&cursorMark=AoIIQGRM1yg1NDM1ODYzNA==&resultType=core&pageSize=10&format=json",
+      "request": {
+        "queryString": "(\"administrative centralization\" OR \"institutional arrangements\" OR \"state capacity\") AND (\"policy outcomes\" OR \"policy implementation\") AND (\"systematic literature review\" OR \"literature review\" OR \"systematic review\") AND FIRST_PDATE:[2019-01-01 TO 2026-12-31] AND (LANG:ENG OR LANG:POR)",
+        "resultType": "core",
+        "cursorMark": "*",
+        "pageSize": 10,
+        "sort": "",
+        "synonym": false
+      },
+      "resultList": {
+        "result": [
+          {
+            "id": "41629068",
+            "source": "MED",
+            "pmid": "41629068",
+            "pmcid": "PMC12878203",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12878203"
+              ]
+            },
+            "doi": "10.1136/bmjgh-2025-021623",
+            "title": "Implementation of health and health-related sustainable development goals: progress, challenges and opportunities-a systematic literature review update.",
+            "authorString": "Kshatriya M, Syal R, Als D, Muralidharan O, Akindole B, Padhani ZA, Das J, Bhutta ZA.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Kshatriya M",
+                  "firstName": "Maya",
+                  "lastName": "Kshatriya",
+                  "initials": "M",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0002-0375-1251"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Centre for Global Child Health, The Hospital for Sick Children, Toronto, Ontario, Canada."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Syal R",
+                  "firstName": "Ruby",
+                  "lastName": "Syal",
+                  "initials": "R",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0009-0006-1110-4341"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Centre for Global Child Health, The Hospital for Sick Children, Toronto, Ontario, Canada."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Als D",
+                  "firstName": "Daina",
+                  "lastName": "Als",
+                  "initials": "D",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0003-1569-4511"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Centre for Global Child Health, The Hospital for Sick Children, Toronto, Ontario, Canada."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Muralidharan O",
+                  "firstName": "Oviya",
+                  "lastName": "Muralidharan",
+                  "initials": "O",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0002-5214-6103"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Centre for Global Child Health, The Hospital for Sick Children, Toronto, Ontario, Canada."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Akindole B",
+                  "firstName": "Busayo",
+                  "lastName": "Akindole",
+                  "initials": "B",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Centre for Global Child Health, The Hospital for Sick Children, Toronto, Ontario, Canada."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Padhani ZA",
+                  "firstName": "Zahra A",
+                  "lastName": "Padhani",
+                  "initials": "ZA",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "School of Public Health, The University of Adelaide, Adelaide, South Australia, Australia."
+                      },
+                      {
+                        "affiliation": "Robinson Research Institute, The University of Adelaide, Adelaide, South Australia, Australia."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Das J",
+                  "firstName": "Jai",
+                  "lastName": "Das",
+                  "initials": "J",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0002-2966-7162"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Department of Paediatrics and Child Health, Aga Khan University, Karachi, Pakistan."
+                      },
+                      {
+                        "affiliation": "Institute for Global Health and Development, The Aga Khan University, Karachi, Pakistan."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Bhutta ZA",
+                  "firstName": "Zulfiqar A",
+                  "lastName": "Bhutta",
+                  "initials": "ZA",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0003-0637-599X"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Centre for Global Child Health, The Hospital for Sick Children, Toronto, Ontario, Canada Zulfiqar.bhutta@sickkids.ca."
+                      },
+                      {
+                        "affiliation": "Institute for Global Health and Development, The Aga Khan University, Karachi, Pakistan."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "authorIdList": {
+              "authorId": [
+                {
+                  "type": "ORCID",
+                  "value": "0000-0002-0375-1251"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0002-2966-7162"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0002-5214-6103"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0003-0637-599X"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0003-1569-4511"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0009-0006-1110-4341"
+                }
+              ]
+            },
+            "dataLinksTagsList": {
+              "dataLinkstag": [
+                "altmetrics"
+              ]
+            },
+            "journalInfo": {
+              "issue": "2",
+              "volume": "11",
+              "journalIssueId": 4112704,
+              "dateOfPublication": "2026 Feb",
+              "monthOfPublication": 2,
+              "yearOfPublication": 2026,
+              "printPublicationDate": "2026-02-01",
+              "journal": {
+                "title": "BMJ global health",
+                "medlineAbbreviation": "BMJ Glob Health",
+                "nlmid": "101685275",
+                "isoabbreviation": "BMJ Glob Health",
+                "issn": "2059-7908",
+                "essn": "2059-7908"
+              }
+            },
+            "pubYear": "2026",
+            "pageInfo": "e021623",
+            "abstractText": "<h4>Introduction</h4>A prior systematic review assessed progress in health and health-related sustainable development goals (HHSDGs) from 2015 to 2019, identifying an important need for countries to strengthen implementation of multisectoral work, capacity building, financial stability and data availability. We undertook an updated systematic review to assess additional progress, challenges and opportunities for HHSDG implementation from 2019 to 2025, including the pandemic periods. This update aims to assess where countries are presently in HHSDG implementation and if further recommendations can be made in the final stretch to the 2030 targets.<h4>Methods</h4>We followed a comparable comprehensive search strategy as the first review, focusing on implementation and acceleration strategies for HHSDGs. We undertook a qualitative synthesis from peer-reviewed and grey literature for specific databases, including studies and reports published from June 2019 to January 2025.<h4>Results</h4>A total of 192 publications were included in the review of which 150 provided national-level information and 42 provided multicountry or regional information. Findings suggest a high level of political commitment in most countries and many HHSDG efforts being aligned with existing national development strategies. There was a noteworthy shift towards decentralised, subnational approaches to provide contextually relevant interventions. Multisectoral, multistakeholder, integrated approaches for implementation are increasing and proving to be effective. Diverse monitoring and evaluation strategies were employed, and (cross-country) knowledge sharing was instrumental to SDG policy and programme planning. Service disruptions incurred by the COVID-19 pandemic, lack of quality data and obtaining sustainable funding were frequently cited challenges to implementation.<h4>Conclusions</h4>Ensuring continuous financial investments and strengthening data availability are essential to accelerate HHSDG implementation. Recommendations for progress include strengthening primary healthcare, fostering multisectoral collaboration and addressing deep-rooted societal perceptions around gender inequity. Future research should examine the interplay of multiple SDGs, and the impact of factors such as cost-effective cross-regional approaches for project implementation.",
+            "affiliation": "Centre for Global Child Health, The Hospital for Sick Children, Toronto, Ontario, Canada.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic",
+            "pubTypeList": {
+              "pubType": [
+                "research-article",
+                "Systematic Review",
+                "Journal Article"
+              ]
+            },
+            "grantsList": {
+              "grant": [
+                {
+                  "agency": "International Development Research Centre",
+                  "orderIn": 0
+                }
+              ]
+            },
+            "meshHeadingList": {
+              "meshHeading": [
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Humans"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Goals"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Pandemics"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Global Health"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Sustainable Development"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "COVID-19"
+                }
+              ]
+            },
+            "keywordList": {
+              "keyword": [
+                "Systematic review",
+                "Global Health"
+              ]
+            },
+            "subsetList": {
+              "subset": [
+                {
+                  "code": "IM",
+                  "name": "Index Medicus"
+                }
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1136/bmjgh-2025-021623"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12878203"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12878203?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "citedByCount": 0,
+            "hasData": "Y",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "Y",
+            "license": "cc by",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2026-02-02",
+            "dateOfCreation": "2026-02-02",
+            "firstIndexDate": "2026-02-06",
+            "fullTextReceivedDate": "2026-02-14",
+            "dateOfRevision": "2026-02-08",
+            "electronicPublicationDate": "2026-02-02",
+            "firstPublicationDate": "2026-02-02"
+          },
+          {
+            "id": "41696701",
+            "source": "MED",
+            "pmid": "41696701",
+            "pmcid": "PMC12894231",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12894231"
+              ]
+            },
+            "doi": "10.3389/fpubh.2025.1748984",
+            "title": "What determines the success or failure of policy experiments?-A qualitative field study of China's healthcare reform pilots.",
+            "authorString": "Yang X, Yang G.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Yang X",
+                  "firstName": "Xiao",
+                  "lastName": "Yang",
+                  "initials": "X",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "School of Labor Relations, Shandong Management University, Jinan, China."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Yang G",
+                  "firstName": "Guang",
+                  "lastName": "Yang",
+                  "initials": "G",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "School of Public Administration, Shandong Normal University, Jinan, China."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "dataLinksTagsList": {
+              "dataLinkstag": [
+                "altmetrics"
+              ]
+            },
+            "journalInfo": {
+              "volume": "13",
+              "journalIssueId": 3893151,
+              "dateOfPublication": "2025 ",
+              "monthOfPublication": 0,
+              "yearOfPublication": 2025,
+              "printPublicationDate": "2025-01-01",
+              "journal": {
+                "title": "Frontiers in public health",
+                "medlineAbbreviation": "Front Public Health",
+                "nlmid": "101616579",
+                "isoabbreviation": "Front Public Health",
+                "issn": "2296-2565",
+                "essn": "2296-2565"
+              }
+            },
+            "pubYear": "2025",
+            "pageInfo": "1748984",
+            "abstractText": "<h4>Background</h4>Policy experimentation has become a central strategy for governments seeking to navigate complexity in healthcare reform. In China, extensive rounds of county-level healthcare reform pilots aim to strengthen primary care and improve service equity. However, while some pilots expand successfully, others stagnate or are suspended. The underlying mechanisms that generate these divergent outcomes remain insufficiently examined.<h4>Objectives</h4>This study investigates how healthcare reform pilots evolve in practice by identifying the key actors involved in pilot management, analyzing the driving forces that shape pilot performance, and explaining the different developmental trajectories of pilots within China's county medical service community (CMSC) reform.<h4>Methods</h4>Drawing on large-scale fieldwork across 23 CMSCs, we collected qualitative data through semi-structured interviews and focus group discussions with 127 internal and external stakeholders. Using grounded theory, the data were analyzed through open, axial, and selective coding, and subsequently integrated to construct a typological framework explaining variations in policy pilot outcomes.<h4>Results</h4>Drawing on the coding framework, the analysis identifies two overarching forces shaping CMSC pilot implementation: institutional compatibility and policy potential energy. Institutional compatibility reflects the alignment of CMSC policy design, healthcare insurance payment rules, interdepartmental coordination, incentive structures, and resource-benefit allocation. Policy potential energy derives from the redistribution of administrative power, political momentum from higher-level governments, the capacity of policy entrepreneurs, and the contextual foundations of social capital and trust. Mapping these dynamics reveals four pilot trajectories: upscaling, adjustment, suspension, and autonomy.",
+            "affiliation": "School of Labor Relations, Shandong Management University, Jinan, China.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic-eCollection",
+            "pubTypeList": {
+              "pubType": [
+                "research-article",
+                "Journal Article"
+              ]
+            },
+            "meshHeadingList": {
+              "meshHeading": [
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Humans"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Focus Groups"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Pilot Projects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Qualitative Research"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Health Policy"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Health Care Reform",
+                  "meshQualifierList": {
+                    "meshQualifier": [
+                      {
+                        "abbreviation": "OG",
+                        "qualifierName": "organization & administration",
+                        "majorTopic_YN": "N"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Policy Making"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Primary Health Care",
+                  "meshQualifierList": {
+                    "meshQualifier": [
+                      {
+                        "abbreviation": "OG",
+                        "qualifierName": "organization & administration",
+                        "majorTopic_YN": "N"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "China"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Interviews as Topic"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Pilots"
+                }
+              ]
+            },
+            "keywordList": {
+              "keyword": [
+                "China",
+                "Grounded Theory",
+                "Healthcare Reform",
+                "Policy Experiment",
+                "The County Medical Service Community (Cmsc)"
+              ]
+            },
+            "subsetList": {
+              "subset": [
+                {
+                  "code": "IM",
+                  "name": "Index Medicus"
+                }
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.3389/fpubh.2025.1748984"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12894231"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12894231?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "N",
+            "citedByCount": 0,
+            "hasData": "N",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "Y",
+            "license": "cc by",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2026-02-16",
+            "dateOfCreation": "2026-02-16",
+            "firstIndexDate": "2026-02-16",
+            "fullTextReceivedDate": "2026-02-14",
+            "dateOfRevision": "2026-02-18",
+            "electronicPublicationDate": "2026-01-29",
+            "firstPublicationDate": "2026-01-29"
+          },
+          {
+            "id": "41701729",
+            "source": "MED",
+            "pmid": "41701729",
+            "pmcid": "PMC12912559",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12912559"
+              ]
+            },
+            "doi": "10.1371/journal.pdig.0001238",
+            "title": "Nexus between policy and practice in institutionalization of clinical information systems and knowledge management in developing health systems: Context of tertiary hospitals in Malawi.",
+            "authorString": "Kungwalo EC, Kanjo C, Kunyenje G, Chikumba PA.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Kungwalo EC",
+                  "firstName": "Edmond C",
+                  "lastName": "Kungwalo",
+                  "initials": "EC",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0009-0004-9901-0256"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "University of Malawi, Zomba, Malawi."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Kanjo C",
+                  "firstName": "Chipo",
+                  "lastName": "Kanjo",
+                  "initials": "C",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "University of Malawi, Zomba, Malawi."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Kunyenje G",
+                  "firstName": "Gregory",
+                  "lastName": "Kunyenje",
+                  "initials": "G",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Catholic University, Chiradzulu, Malawi."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Chikumba PA",
+                  "firstName": "Patrick A",
+                  "lastName": "Chikumba",
+                  "initials": "PA",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Malawi University of Business and Applied Sciences, Blantyre, Malawi."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "authorIdList": {
+              "authorId": [
+                {
+                  "type": "ORCID",
+                  "value": "0009-0004-9901-0256"
+                }
+              ]
+            },
+            "dataLinksTagsList": {
+              "dataLinkstag": [
+                "plain_english"
+              ]
+            },
+            "journalInfo": {
+              "issue": "2",
+              "volume": "5",
+              "journalIssueId": 4114364,
+              "dateOfPublication": "2026 Feb",
+              "monthOfPublication": 2,
+              "yearOfPublication": 2026,
+              "printPublicationDate": "2026-02-01",
+              "journal": {
+                "title": "PLOS digital health",
+                "medlineAbbreviation": "PLOS Digit Health",
+                "nlmid": "9918335064206676",
+                "isoabbreviation": "PLOS Digit Health",
+                "issn": "2767-3170",
+                "essn": "2767-3170"
+              }
+            },
+            "pubYear": "2026",
+            "pageInfo": "e0001238",
+            "abstractText": "In emerging economies, the widespread penetration and mainstreaming of Clinical Information Systems (CIS) and Knowledge Management (KM) practices are challenging and often hindered by fragmented regulatory environments, professional resistance, and cultural misalignment. Drawing on Scott's institutional theory and its three pillars-regulative, normative, and cultural-cognitive-as an analytical framework, the study aims to inform both policy and practice, contributing to ongoing efforts to strengthen digital health implementation, governance, and institutional capacity in low and middle-income countries (LMIC). The study employed qualitative methods, including analysis of policy documents, key informant interviews, and institutional case study analysis. The findings revealed policy-practice misalignment in the institutionalization of CIS and KM. There is limited engagement of senior management at the facility level in the institutionalization process. Key actors-including government agencies, healthcare providers, regulatory bodies, development partners, and healthcare workers-were identified, along with their roles and responsibilities in shaping institutional outcomes. Application of digital health policies and strategies in Malawi is hindered by limited resources, unclear guidelines, and weak enforcement mechanisms. Consequently, stakeholder engagement is essential for the successful and effective use of technology. These findings suggest that policy-practice gaps are shaped not only by policy design, but also by institutional arrangements and power dynamics within the digital health ecosystem. Thus, successful integration of CIS and KM requires alignment between policy and practice, ongoing training, active participation in system design, and a willingness to integrate digital tools into clinical workflows.",
+            "affiliation": "University of Malawi, Zomba, Malawi.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic-eCollection",
+            "pubTypeList": {
+              "pubType": [
+                "research-article",
+                "Journal Article"
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1371/journal.pdig.0001238"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12912559"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12912559?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "N",
+            "citedByCount": 0,
+            "hasData": "N",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "N",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "Y",
+            "license": "cc by",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2026-02-17",
+            "dateOfCreation": "2026-02-17",
+            "firstIndexDate": "2026-02-17",
+            "fullTextReceivedDate": "2026-02-18",
+            "dateOfRevision": "2026-02-19",
+            "electronicPublicationDate": "2026-02-17",
+            "firstPublicationDate": "2026-02-17"
+          },
+          {
+            "id": "41696687",
+            "source": "MED",
+            "pmid": "41696687",
+            "pmcid": "PMC12906020",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12906020"
+              ]
+            },
+            "doi": "10.1016/j.mex.2026.103814",
+            "title": "The SPA-cube framework: An integrated approach for analysing power dynamics in environmental governance.",
+            "authorString": "Sahide MAK, Siswandi S, Sirimorok N, Fisher MR, Wong GY, Brockhaus M.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Sahide MAK",
+                  "firstName": "Muhammad Alif K",
+                  "lastName": "Sahide",
+                  "initials": "MAK",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0003-4908-0323"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Forest and Society Research Group (FSRG) of Faculty of Forestry, Universitas Hasanuddin, Makassar, Indonesia."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Siswandi S",
+                  "firstName": "Siswandi",
+                  "lastName": "Siswandi",
+                  "initials": "S",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Forest and Society Research Group (FSRG) of Faculty of Forestry, Universitas Hasanuddin, Makassar, Indonesia."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Sirimorok N",
+                  "firstName": "Nurhady",
+                  "lastName": "Sirimorok",
+                  "initials": "N",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Forest and Society Research Group (FSRG) of Faculty of Forestry, Universitas Hasanuddin, Makassar, Indonesia."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Fisher MR",
+                  "firstName": "Micah R",
+                  "lastName": "Fisher",
+                  "initials": "MR",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Matsunaga Institute for Peace and Conflict Resolution, School of Communication and Information, University of Hawai'i, Honolulu, United States."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Wong GY",
+                  "firstName": "Grace Yee",
+                  "lastName": "Wong",
+                  "initials": "GY",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0003-2924-2188"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Research Institute for Humanity and Nature (RIHN), Japan."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Brockhaus M",
+                  "firstName": "Maria",
+                  "lastName": "Brockhaus",
+                  "initials": "M",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0001-7348-4921"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "International Forest Policy, University of Helsinki, Finland."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "authorIdList": {
+              "authorId": [
+                {
+                  "type": "ORCID",
+                  "value": "0000-0001-7348-4921"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0003-2924-2188"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0003-4908-0323"
+                }
+              ]
+            },
+            "journalInfo": {
+              "volume": "16",
+              "journalIssueId": 4079765,
+              "dateOfPublication": "2026 Jun",
+              "monthOfPublication": 6,
+              "yearOfPublication": 2026,
+              "printPublicationDate": "2026-06-01",
+              "journal": {
+                "title": "MethodsX",
+                "medlineAbbreviation": "MethodsX",
+                "nlmid": "101639829",
+                "isoabbreviation": "MethodsX",
+                "issn": "2215-0161",
+                "essn": "2215-0161"
+              }
+            },
+            "pubYear": "2026",
+            "pageInfo": "103814",
+            "abstractText": "This article presents the SPA-Cube Framework, an integrated methodological protocol that addresses key limitations in power analysis for environmental governance. Traditional approaches often employ singular or static lenses, failing to capture power's multidimensional, dynamic, and governmental nature. Our framework systematically integrates three complementary pillars: Gaventa's Power Cube (typologizing visible, hidden, and invisible power), governmentality theory (revealing rationalities and technologies of rule), and Sequential Power Analysis (providing temporal sequencing and actor-centric focus). This synthesis enables researchers to simultaneously examine <i>when</i> and <i>how</i> power shifts, <i>what</i> forms it takes, and <i>why</i> it operates as it does across policy interventions. The framework helps explain paradoxical outcomes, such as how empowerment strategies can inadvertently reinforce existing structures. Developed and validated through a 36-month ethnographic study in Indonesia, it offers a novel tool for navigating complex power dynamics by providing a structured protocol that integrates temporal, typological, and governmental analyses into one workflow.•Offers a replicable, step-by-step procedure for conducting integrated power analysis across policy cycles.•Enables dynamic tracking of power across three phases: background conditions, intervention delivery, and post-intervention adjustments.•Analyses visible, hidden, and invisible power with a focus on how technologies of rule shape subject formation.",
+            "affiliation": "Forest and Society Research Group (FSRG) of Faculty of Forestry, Universitas Hasanuddin, Makassar, Indonesia.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic-eCollection",
+            "pubTypeList": {
+              "pubType": [
+                "research-article",
+                "Journal Article"
+              ]
+            },
+            "grantsList": {
+              "grant": [
+                {
+                  "grantId": "14200149",
+                  "agency": "Styrelsen för Internationellt Utvecklingssamarbete",
+                  "orderIn": 0
+                },
+                {
+                  "agency": "Research Institute for Humanity and Nature",
+                  "orderIn": 0
+                },
+                {
+                  "grantId": "EXPLORE CN022",
+                  "agency": "Universitas Hasanuddin",
+                  "orderIn": 0
+                },
+                {
+                  "agency": "Economic and Social Research Council",
+                  "orderIn": 0
+                }
+              ]
+            },
+            "keywordList": {
+              "keyword": [
+                "Governmentality",
+                "Power Analysis",
+                "Environmental Governance",
+                "Sequential Power Analysis",
+                "Gaventa's Power Cube"
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1016/j.mex.2026.103814"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12906020"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12906020?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "citedByCount": 0,
+            "hasData": "Y",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "N",
+            "license": "cc by",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2026-02-16",
+            "dateOfCreation": "2026-02-16",
+            "firstIndexDate": "2026-02-16",
+            "fullTextReceivedDate": "2026-02-17",
+            "dateOfRevision": "2026-02-18",
+            "electronicPublicationDate": "2026-02-03",
+            "firstPublicationDate": "2026-02-03"
+          },
+          {
+            "id": "41460787",
+            "source": "MED",
+            "pmid": "41460787",
+            "pmcid": "PMC12747370",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12747370"
+              ]
+            },
+            "doi": "10.1371/journal.pone.0338940",
+            "title": "Study on the policy implementation of the Guangdong-Hong Kong-Macao joint graduate training program and regional talent development.",
+            "authorString": "Li S, Lam JFI.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Li S",
+                  "firstName": "Sirui",
+                  "lastName": "Li",
+                  "initials": "S",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0009-0008-7377-7490"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Faculty of Humanities and Social Sciences, Macao Polytechnic University, Macao, China."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Lam JFI",
+                  "firstName": "Johnny Fat Iam",
+                  "lastName": "Lam",
+                  "initials": "JFI",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Faculty of Humanities and Social Sciences, Macao Polytechnic University, Macao, China."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "authorIdList": {
+              "authorId": [
+                {
+                  "type": "ORCID",
+                  "value": "0009-0008-7377-7490"
+                }
+              ]
+            },
+            "journalInfo": {
+              "issue": "12",
+              "volume": "20",
+              "journalIssueId": 4059784,
+              "dateOfPublication": "2025 ",
+              "monthOfPublication": 0,
+              "yearOfPublication": 2025,
+              "printPublicationDate": "2025-01-01",
+              "journal": {
+                "title": "PloS one",
+                "medlineAbbreviation": "PLoS One",
+                "nlmid": "101285081",
+                "isoabbreviation": "PLoS One",
+                "issn": "1932-6203",
+                "essn": "1932-6203"
+              }
+            },
+            "pubYear": "2025",
+            "pageInfo": "e0338940",
+            "abstractText": "To address the existing literature's neglect of the micro-mechanisms involved in implementing joint postgraduate training policies in the Guangdong-Hong Kong-Macao Greater Bay Area, this study applies resource dependence theory to examine the logic of organisational interactions and their impact on talent development. Based on an analysis of 47 joint cultivation projects through qualitative case studies, the study identifies symbiotic, dominant, and competitive dependency relationships among cooperative entities, shaped by differences in resource endowments, which profoundly influence the stability of cooperation models. Policy effectiveness is primarily achieved through two intermediary mechanisms: \"resource integration,\" which consolidates financial, human, and knowledge resources, and \"collaborative governance,\" which builds an institutionalised and organised collaborative network. Significant differences exist between \"university-university\" and \"university-institute\" models in terms of both resource integration and governance effectiveness. Policy implementation enhances the quality and scale of talent cultivation while simultaneously promoting the development of the regional innovation ecosystem. The findings indicate that the effectiveness of joint cultivation hinges on micro-governance grounded in resource dependence at the implementation level. Future policy optimisation should prioritise balanced resource allocation and the institutionalisation and standardisation of cooperation models, thereby facilitating the transformation of regional talent governance from a \"policy-driven\" to a \"system-driven\" approach.",
+            "affiliation": "Faculty of Humanities and Social Sciences, Macao Polytechnic University, Macao, China.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic-eCollection",
+            "pubTypeList": {
+              "pubType": [
+                "research-article",
+                "Journal Article"
+              ]
+            },
+            "meshHeadingList": {
+              "meshHeading": [
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Humans"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Cooperative Behavior"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Education, Graduate"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "China"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Hong Kong"
+                }
+              ]
+            },
+            "subsetList": {
+              "subset": [
+                {
+                  "code": "IM",
+                  "name": "Index Medicus"
+                }
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1371/journal.pone.0338940"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12747370"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12747370?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "citedByCount": 0,
+            "hasData": "Y",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "N",
+            "license": "cc by",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2025-12-29",
+            "dateOfCreation": "2025-12-29",
+            "firstIndexDate": "2026-01-02",
+            "fullTextReceivedDate": "2026-01-05",
+            "dateOfRevision": "2026-01-01",
+            "electronicPublicationDate": "2025-12-29",
+            "firstPublicationDate": "2025-12-29"
+          },
+          {
+            "id": "39981508",
+            "source": "MED",
+            "pmid": "39981508",
+            "pmcid": "PMC11839806",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC11839806"
+              ]
+            },
+            "doi": "10.3389/fspor.2025.1529906",
+            "title": "Policy analysis in sport: a review of mainstream meso-level frameworks and developing more sustainable policy for grassroots sport.",
+            "authorString": "Mountifield C.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Mountifield C",
+                  "firstName": "Charles",
+                  "lastName": "Mountifield",
+                  "initials": "C",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Faculty of Health, University of Canberra, Canberra, ACT, Australia."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "dataLinksTagsList": {
+              "dataLinkstag": [
+                "altmetrics"
+              ]
+            },
+            "journalInfo": {
+              "volume": "7",
+              "journalIssueId": 3895058,
+              "dateOfPublication": "2025 ",
+              "monthOfPublication": 0,
+              "yearOfPublication": 2025,
+              "printPublicationDate": "2025-01-01",
+              "journal": {
+                "title": "Frontiers in sports and active living",
+                "medlineAbbreviation": "Front Sports Act Living",
+                "nlmid": "101765780",
+                "isoabbreviation": "Front Sports Act Living",
+                "issn": "2624-9367",
+                "essn": "2624-9367"
+              }
+            },
+            "pubYear": "2025",
+            "pageInfo": "1529906",
+            "abstractText": "This paper reviews some mainstream meso-level policy analysis frameworks widely applied in sport. There is, however, an absence of consensus for an established framework for analysing sport policy in general and, instead, techniques emanating from other fields of study have been relied upon. The resultant approach to sport policy analysis is inconsistent, multidimensional, and lacks unanimity, leading to calls for a sport-specific framework. This research outlines how meso-level frameworks have been applied in sport policy and issues linked to sustainability from a grassroots policy perspective. A narrative literature review provides an overview of prevalent approaches, namely Institutional Analysis, the Multiple Streams Framework, Policy Network Theory, and the Advocacy Coalition Framework. Aspects of applying these models to sport policy-including some key advantages and disadvantages-are outlined, especially the issue of conventional top-policy processes, the impact on policy implementers at grassroots level, and the potential for bottom-up policy influence. The article examines the four frameworks in the context of praxes in sport, noting the overall importance of a meso-level approach to sport policy analysis and that arriving at an holistic and inclusive accord has merit.",
+            "affiliation": "Faculty of Health, University of Canberra, Canberra, ACT, Australia.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic-eCollection",
+            "pubTypeList": {
+              "pubType": [
+                "review-article",
+                "Review",
+                "Journal Article"
+              ]
+            },
+            "keywordList": {
+              "keyword": [
+                "Implementation",
+                "Sport",
+                "Top-down",
+                "Bottom-up",
+                "Policy Frameworks"
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.3389/fspor.2025.1529906"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC11839806"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC11839806?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "N",
+            "citedByCount": 2,
+            "hasData": "N",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "Y",
+            "license": "cc by",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCreation": "2025-02-21",
+            "firstIndexDate": "2025-02-21",
+            "fullTextReceivedDate": "2025-02-24",
+            "dateOfRevision": "2025-02-22",
+            "electronicPublicationDate": "2025-02-06",
+            "firstPublicationDate": "2025-02-06"
+          },
+          {
+            "id": "41832541",
+            "source": "MED",
+            "pmid": "41832541",
+            "pmcid": "PMC13101374",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC13101374"
+              ]
+            },
+            "doi": "10.1186/s12961-026-01471-8",
+            "title": "Cross-national variations and demographic disparities in health surveillance system performance: a comparative analysis of OECD member countries.",
+            "authorString": "Çelik AA, Balcioğlu YS, Altindağ E.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Çelik AA",
+                  "firstName": "Ahmet Alkan",
+                  "lastName": "Çelik",
+                  "initials": "AA",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0002-8712-8677"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Faculty of Economics and Administrative Sciences Department of Business Administration, Doğuş University, İstanbul, Turkey."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Balcioğlu YS",
+                  "firstName": "Yavuz Selim",
+                  "lastName": "Balcioğlu",
+                  "initials": "YS",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0001-7138-2972"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Faculty of Economics and Administrative Sciences Department of Business Administration, Doğuş University, İstanbul, Turkey."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Altindağ E",
+                  "firstName": "Erkut",
+                  "lastName": "Altindağ",
+                  "initials": "E",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0003-0173-0454"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Faculty of Economics and Administrative Sciences Department of Business Administration, Doğuş University, İstanbul, Turkey. erkutaltindag@dogus.edu.tr."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "authorIdList": {
+              "authorId": [
+                {
+                  "type": "ORCID",
+                  "value": "0000-0001-7138-2972"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0002-8712-8677"
+                },
+                {
+                  "type": "ORCID",
+                  "value": "0000-0003-0173-0454"
+                }
+              ]
+            },
+            "journalInfo": {
+              "issue": "1",
+              "volume": "24",
+              "journalIssueId": 4143184,
+              "dateOfPublication": "2026 Mar",
+              "monthOfPublication": 3,
+              "yearOfPublication": 2026,
+              "printPublicationDate": "2026-03-01",
+              "journal": {
+                "title": "Health research policy and systems",
+                "medlineAbbreviation": "Health Res Policy Syst",
+                "nlmid": "101170481",
+                "isoabbreviation": "Health Res Policy Syst",
+                "issn": "1478-4505",
+                "essn": "1478-4505"
+              }
+            },
+            "pubYear": "2026",
+            "pageInfo": "37",
+            "abstractText": "This study examines cross-country variation in public health surveillance performance across 30 OECD member states, drawing on Institutional Capacity Theory and governance dynamics. The analysis uses the Organization for Economic Cooperation and Development (OECD) Health Statistics Body Weight Surveillance Dataset (2018-2022). A composite index was developed to evaluate infrastructure capacity, data quality, coverage equity and temporal consistency on the basis of 847 000 surveillance observations across seven age groups and two genders, in order to assess how institutional structures and governance arrangements shape surveillance effectiveness. Substantial heterogeneity in performance was observed, with composite scores ranging from 3.2 to 9.2 on a 10-point scale. Cluster analysis showed that the five Nordic countries consistently grouped in the highest-performing cluster, each scoring above 8.6, while Eastern European countries displayed systematically lower performance, averaging 4.8. Overall, six distinct performance clusters emerged, reflecting shared healthcare system characteristics and institutional development trajectories. Multivariable regression results indicated that infrastructure investment, primary care density and digital health integration explained 68% of the variance in surveillance performance, while governance quality contributed an additional 14% beyond economic factors. Gender-based disparity analysis revealed significant coverage gaps in low-capacity systems, with differences of 9.1 percentage points between males and females, compared with narrower gaps of 5.6 points in high-capacity systems. While coverage rates for working-age populations exceeded 93%, participation among younger and older age groups was notably lower. Intersectional findings further indicated that stronger institutional capacity was associated with higher levels of age- and gender-based coverage equity. Overall, the findings suggest that surveillance effectiveness depends more on institutional coherence, governance coordination and adaptive capacity than on financial investment alone. Countries with robust institutional frameworks and collaborative governance arrangements demonstrate superior performance in both effectiveness and demographic inclusion. These results underscore the need for institutional reform to better integrate technological advancements and strengthen inclusive public health intelligence systems.",
+            "affiliation": "Faculty of Economics and Administrative Sciences Department of Business Administration, Doğuş University, İstanbul, Turkey.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic",
+            "pubTypeList": {
+              "pubType": [
+                "Comparative Study",
+                "research-article",
+                "Journal Article"
+              ]
+            },
+            "meshHeadingList": {
+              "meshHeading": [
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Humans"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Public Health"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Demography"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Adolescent"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Adult"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Aged"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Middle Aged"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Child"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Female"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Male"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Young Adult"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Public Health Surveillance"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Organisation for Economic Co-Operation and Development"
+                }
+              ]
+            },
+            "keywordList": {
+              "keyword": [
+                "Public Health Surveillance",
+                "Adaptive Governance",
+                "Health Equity",
+                "Health System Performance",
+                "Oecd Countries",
+                "Institutional Capacity Theory"
+              ]
+            },
+            "subsetList": {
+              "subset": [
+                {
+                  "code": "IM",
+                  "name": "Index Medicus"
+                }
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1186/s12961-026-01471-8"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC13101374"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC13101374?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "N",
+            "citedByCount": 0,
+            "hasData": "N",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "N",
+            "license": "cc by-nc-nd",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2026-04-22",
+            "dateOfCreation": "2026-03-15",
+            "firstIndexDate": "2026-03-15",
+            "fullTextReceivedDate": "2026-04-23",
+            "dateOfRevision": "2026-04-24",
+            "electronicPublicationDate": "2026-03-14",
+            "firstPublicationDate": "2026-03-14"
+          },
+          {
+            "id": "41017309",
+            "source": "MED",
+            "pmid": "41017309",
+            "pmcid": "PMC12605826",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12605826"
+              ]
+            },
+            "doi": "10.1093/heapol/czaf065",
+            "title": "What affects the performance of hospital financing interventions in low and lower-middle income countries from the program design and implementation perspective? A scoping review.",
+            "authorString": "Zeng W, Boiangiu M, Trachsel N, Jarawan E, Turbat V, Meessen B.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Zeng W",
+                  "firstName": "Wu",
+                  "lastName": "Zeng",
+                  "initials": "W",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0000-0002-3473-3638"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Department of Global Health, Georgetown University, 3700 Reservoir Rd NW, Washington, DC 20007, United States."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Boiangiu M",
+                  "firstName": "Mara",
+                  "lastName": "Boiangiu",
+                  "initials": "M",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Department of Global Health, Georgetown University, 3700 Reservoir Rd NW, Washington, DC 20007, United States."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Trachsel N",
+                  "firstName": "Natalie",
+                  "lastName": "Trachsel",
+                  "initials": "N",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Department of Global Health, Georgetown University, 3700 Reservoir Rd NW, Washington, DC 20007, United States."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Jarawan E",
+                  "firstName": "Eva",
+                  "lastName": "Jarawan",
+                  "initials": "E",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Department of Global Health, Georgetown University, 3700 Reservoir Rd NW, Washington, DC 20007, United States."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Turbat V",
+                  "firstName": "Vincent",
+                  "lastName": "Turbat",
+                  "initials": "V",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Department of Global Health, Georgetown University, 3700 Reservoir Rd NW, Washington, DC 20007, United States."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Meessen B",
+                  "firstName": "Bruno",
+                  "lastName": "Meessen",
+                  "initials": "B",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Department of Health Financing and Economics, World Health Organization, 20 Avenue Appia, Geneva 1211, Switzerland."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "authorIdList": {
+              "authorId": [
+                {
+                  "type": "ORCID",
+                  "value": "0000-0002-3473-3638"
+                }
+              ]
+            },
+            "dataLinksTagsList": {
+              "dataLinkstag": [
+                "altmetrics"
+              ]
+            },
+            "journalInfo": {
+              "issue": "10",
+              "volume": "40",
+              "journalIssueId": 4047459,
+              "dateOfPublication": "2025 Nov",
+              "monthOfPublication": 11,
+              "yearOfPublication": 2025,
+              "printPublicationDate": "2025-11-01",
+              "journal": {
+                "title": "Health policy and planning",
+                "medlineAbbreviation": "Health Policy Plan",
+                "nlmid": "8610614",
+                "isoabbreviation": "Health Policy Plan",
+                "issn": "0268-1080",
+                "essn": "1460-2237"
+              }
+            },
+            "pubYear": "2025",
+            "pageInfo": "1127-1141",
+            "abstractText": "Hospitals, as an important component of the health system, consume a substantial amount of health resources and are instrumental in improving population health. While many health financing interventions have been implemented at hospitals, evidence exploring common factors facilitating their implementation in low and lower-middle income countries (LLMICs) remains limited. We conducted a scoping review of existing hospital financing interventions in LLMICs. A combination of search strategies and key informant consultations were used to search for relevant literature. A total of 35 articles spanning six categories of hospital financing interventions were included in the review. The review centered on design and implementation factors associated with hospital financing interventions. Factors affecting a hospital financing intervention's results were numerous and context specific. From the design and implementation perspective, five interconnected factors-governance and accountability, participatory process, proper intervention design, adequate resources and capacity, and monitoring and evaluation-underline the most influential factors across the six categories of hospital financing interventions. Understanding the connections among these factors and making efforts to align them with the country's context make for a more promising intervention. The evidence on specifics across different types of hospital financing implementations remains limited, requiring more implementation studies guided by comprehensive theoretical frameworks to generate more concrete evidence.",
+            "affiliation": "Department of Global Health, Georgetown University, 3700 Reservoir Rd NW, Washington, DC 20007, United States.",
+            "publicationStatus": "ppublish",
+            "language": "eng",
+            "pubModel": "Print",
+            "pubTypeList": {
+              "pubType": [
+                "Scoping Review",
+                "review-article",
+                "Journal Article"
+              ]
+            },
+            "grantsList": {
+              "grant": [
+                {
+                  "grantId": "001",
+                  "agency": "World Health Organization",
+                  "acronym": "WHO_",
+                  "orderIn": 0
+                }
+              ]
+            },
+            "meshHeadingList": {
+              "meshHeading": [
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Humans"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Developing Countries",
+                  "meshQualifierList": {
+                    "meshQualifier": [
+                      {
+                        "abbreviation": "EC",
+                        "qualifierName": "economics",
+                        "majorTopic_YN": "N"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Financial Management, Hospital",
+                  "meshQualifierList": {
+                    "meshQualifier": [
+                      {
+                        "abbreviation": "OG",
+                        "qualifierName": "organization & administration",
+                        "majorTopic_YN": "N"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Economics, Hospital"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Healthcare Financing"
+                }
+              ]
+            },
+            "keywordList": {
+              "keyword": [
+                "Implementation",
+                "Hospital",
+                "Health Financing"
+              ]
+            },
+            "subsetList": {
+              "subset": [
+                {
+                  "code": "IM",
+                  "name": "Index Medicus"
+                }
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1093/heapol/czaf065"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12605826"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12605826?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "citedByCount": 0,
+            "hasData": "Y",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "Y",
+            "license": "cc by-nc",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2025-11-13",
+            "dateOfCreation": "2025-09-29",
+            "firstIndexDate": "2025-09-30",
+            "fullTextReceivedDate": "2025-11-15",
+            "dateOfRevision": "2026-01-15",
+            "firstPublicationDate": "2025-11-01"
+          },
+          {
+            "id": "41642873",
+            "source": "MED",
+            "pmid": "41642873",
+            "pmcid": "PMC12875439",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12875439"
+              ]
+            },
+            "doi": "10.1371/journal.pone.0341073",
+            "title": "A methodological comparative analysis of monetary policy and trade openness on economic growth in West Africa: Does language play a role?",
+            "authorString": "Boateng SA, Enimil B, Takyi-Danquah E.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Boateng SA",
+                  "firstName": "Seth Acquah",
+                  "lastName": "Boateng",
+                  "initials": "SA",
+                  "authorId": {
+                    "type": "ORCID",
+                    "value": "0009-0003-4778-7824"
+                  },
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "School of Economics, University of Cape Coast, Cape Coast, Ghana."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Enimil B",
+                  "firstName": "Bridgette",
+                  "lastName": "Enimil",
+                  "initials": "B",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "School of Business, University of Cape Coast, Cape Coast, Ghana."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Takyi-Danquah E",
+                  "firstName": "Ebenezer",
+                  "lastName": "Takyi-Danquah",
+                  "initials": "E",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "School of Business, University of Cape Coast, Cape Coast, Ghana."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "authorIdList": {
+              "authorId": [
+                {
+                  "type": "ORCID",
+                  "value": "0009-0003-4778-7824"
+                }
+              ]
+            },
+            "journalInfo": {
+              "issue": "2",
+              "volume": "21",
+              "journalIssueId": 4112576,
+              "dateOfPublication": "2026 ",
+              "monthOfPublication": 0,
+              "yearOfPublication": 2026,
+              "printPublicationDate": "2026-01-01",
+              "journal": {
+                "title": "PloS one",
+                "medlineAbbreviation": "PLoS One",
+                "nlmid": "101285081",
+                "isoabbreviation": "PLoS One",
+                "issn": "1932-6203",
+                "essn": "1932-6203"
+              }
+            },
+            "pubYear": "2026",
+            "pageInfo": "e0341073",
+            "abstractText": "The study examines the effect of monetary policy and trade openness on economic growth in the ECOWAS countries. Using panel regression analysis and the Random Forest algorithm from the machine learning technique, the study reveals the existence of a major difference between the two language communities. The expansion of the broad money supply has a highly positive effect on economic growth in the two language communities; the impact is much greater in the Francophone countries. But trade openness has contradictory associations; it is positive in the Francophone countries and negative in the Anglophone countries. The Random Forest approach outperforms the standard econometric approach in terms of predictive accuracy (R² = 67.56%), thereby confirming the existence of non-linear associations. The evidence of major differences is linked to the existence of different post-colonial institutions; that is, the common CFA currency institutions in the Francophone countries and the independent national monetary policies in the Anglophone countries. The study implies that ECOWAS countries require distinct policies instead of standard policies.",
+            "affiliation": "School of Economics, University of Cape Coast, Cape Coast, Ghana.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic-eCollection",
+            "pubTypeList": {
+              "pubType": [
+                "Comparative Study",
+                "research-article",
+                "Journal Article"
+              ]
+            },
+            "meshHeadingList": {
+              "meshHeading": [
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Humans"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Language"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Commerce",
+                  "meshQualifierList": {
+                    "meshQualifier": [
+                      {
+                        "abbreviation": "EC",
+                        "qualifierName": "economics",
+                        "majorTopic_YN": "N"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "descriptorName": "Africa, Western"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "descriptorName": "Economic Development"
+                }
+              ]
+            },
+            "subsetList": {
+              "subset": [
+                {
+                  "code": "IM",
+                  "name": "Index Medicus"
+                }
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1371/journal.pone.0341073"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12875439"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12875439?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "citedByCount": 0,
+            "hasData": "Y",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "N",
+            "license": "cc by",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2026-02-05",
+            "dateOfCreation": "2026-02-05",
+            "firstIndexDate": "2026-02-10",
+            "fullTextReceivedDate": "2026-02-14",
+            "dateOfRevision": "2026-02-08",
+            "electronicPublicationDate": "2026-02-05",
+            "firstPublicationDate": "2026-02-05"
+          },
+          {
+            "id": "41321634",
+            "source": "MED",
+            "pmid": "41321634",
+            "pmcid": "PMC12664352",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12664352"
+              ]
+            },
+            "doi": "10.1016/j.isci.2025.113944",
+            "title": "Transdisciplinary research on water security in transboundary river basins.",
+            "authorString": "Assubayeva A, Xenarios S, Correa A, Forero J.",
+            "authorList": {
+              "author": [
+                {
+                  "fullName": "Assubayeva A",
+                  "firstName": "Aliya",
+                  "lastName": "Assubayeva",
+                  "initials": "A",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Graduate School of Public Policy, Nazarbayev University, Astana, Kazakhstan."
+                      },
+                      {
+                        "affiliation": "Centre for International Development and Environmental Research, Justus Liebig University Giessen, Giessen, Germany."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Xenarios S",
+                  "firstName": "Stefanos",
+                  "lastName": "Xenarios",
+                  "initials": "S",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Graduate School of Public Policy, Nazarbayev University, Astana, Kazakhstan."
+                      },
+                      {
+                        "affiliation": "Commonwealth Scientific and Industrial Research Organization (CSIRO), Environment, Canberra, Australia."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Correa A",
+                  "firstName": "Alicia",
+                  "lastName": "Correa",
+                  "initials": "A",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Centre for International Development and Environmental Research, Justus Liebig University Giessen, Giessen, Germany."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fullName": "Forero J",
+                  "firstName": "Jorge",
+                  "lastName": "Forero",
+                  "initials": "J",
+                  "authorAffiliationDetailsList": {
+                    "authorAffiliation": [
+                      {
+                        "affiliation": "Sociology and Gender Studies Department, Latin American School of Social Sciences (FLASCO), Quito, Ecuador."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "dataLinksTagsList": {
+              "dataLinkstag": [
+                "altmetrics"
+              ]
+            },
+            "journalInfo": {
+              "issue": "12",
+              "volume": "28",
+              "journalIssueId": 4059349,
+              "dateOfPublication": "2025 Dec",
+              "monthOfPublication": 12,
+              "yearOfPublication": 2025,
+              "printPublicationDate": "2025-12-01",
+              "journal": {
+                "title": "iScience",
+                "medlineAbbreviation": "iScience",
+                "nlmid": "101724038",
+                "isoabbreviation": "iScience",
+                "issn": "2589-0042",
+                "essn": "2589-0042"
+              }
+            },
+            "pubYear": "2025",
+            "pageInfo": "113944",
+            "abstractText": "Wicked problems, such as water security, require a shift to transdisciplinary research by bringing disciplinary perspectives, conducting participatory research, and developing case-specific solutions. Translational research (TR), one of the transdisciplinary approaches, was applied in our study to translate the broad theoretical framework and research implications of water security into practical considerations, priorities, and actionable measures to better define the research-policy-society interactions that emerged in the Aral Sea basin in Central Asia and the Mira-Mataje basin in Latin America. The implementation of TR revealed notable differences in the water security priorities of the two case studies; however, there are similarities regarding increasingly competing water needs, the urgency of rehabilitating and expanding aging and limited water infrastructure, low preparedness for climate-related hazards, and weak water governance mechanisms. The application of TR in transboundary basins reveals the need for knowledge synthesizers and knowledge brokers to bridge the gap between research, policy, and society.",
+            "affiliation": "Graduate School of Public Policy, Nazarbayev University, Astana, Kazakhstan.",
+            "publicationStatus": "epublish",
+            "language": "eng",
+            "pubModel": "Electronic-eCollection",
+            "pubTypeList": {
+              "pubType": [
+                "research-article",
+                "Journal Article"
+              ]
+            },
+            "grantsList": {
+              "grant": [
+                {
+                  "agency": "Bundesministerium für Wirtschaftliche Zusammenarbeit und Entwicklung",
+                  "orderIn": 0
+                },
+                {
+                  "grantId": "57753302",
+                  "agency": "DAAD Regional Office New York",
+                  "orderIn": 0
+                },
+                {
+                  "agency": "Deutscher Akademischer Austauschdienst",
+                  "orderIn": 0
+                },
+                {
+                  "grantId": "60500845",
+                  "agency": "Justus Liebig Universität Gießen",
+                  "orderIn": 0
+                }
+              ]
+            },
+            "keywordList": {
+              "keyword": [
+                "Hydrology",
+                "Environmental Policy",
+                "Earth Sciences"
+              ]
+            },
+            "fullTextUrlList": {
+              "fullTextUrl": [
+                {
+                  "availability": "Subscription required",
+                  "availabilityCode": "S",
+                  "documentStyle": "doi",
+                  "site": "DOI",
+                  "url": "https://doi.org/10.1016/j.isci.2025.113944"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "html",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12664352"
+                },
+                {
+                  "availability": "Open access",
+                  "availabilityCode": "OA",
+                  "documentStyle": "pdf",
+                  "site": "Europe_PMC",
+                  "url": "https://europepmc.org/articles/PMC12664352?pdf=render"
+                }
+              ]
+            },
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "citedByCount": 0,
+            "hasData": "Y",
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasLabsLinks": "Y",
+            "license": "cc by-nc",
+            "hasEvaluations": "N",
+            "authMan": "N",
+            "epmcAuthMan": "N",
+            "nihAuthMan": "N",
+            "hasTMAccessionNumbers": "N",
+            "dateOfCompletion": "2025-12-01",
+            "dateOfCreation": "2025-12-01",
+            "firstIndexDate": "2025-12-01",
+            "fullTextReceivedDate": "2025-12-01",
+            "dateOfRevision": "2025-12-03",
+            "electronicPublicationDate": "2025-11-03",
+            "firstPublicationDate": "2025-11-03"
+          }
+        ]
+      }
+    }
+  ]
+}

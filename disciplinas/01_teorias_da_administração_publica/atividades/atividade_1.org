@@ -1,0 +1,241 @@
+#+OPTIONS: toc:nil num:t H:3 ^:nil
+#+STARTUP: overview
+
+#+LATEX_HEADER: \usepackage{fgv-header}
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado de Políticas Públicas e Governo \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias de Administração Pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Trabalho}                & Aplicação do protocolo PRISMA 2020 \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Título do trabalho}      & Busca, seleção e síntese de artigos acadêmicos sobre teorias da administração pública \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \FGVNewPage
+
+* Introdução
+
+Este trabalho apresenta, em formato alinhado ao *PRISMA 2020*, o fluxo de identificação, triagem, elegibilidade e inclusão de artigos acadêmicos relacionados ao tema da disciplina *Teorias de Administração Pública*. Dada a amplitude do tema, a busca foi estruturada a partir dos eixos mais recorrentes na bibliografia da disciplina e no debate contemporâneo da área: *modelo burocrático*, *neo-institucionalismo*, *Nova Gestão Pública (NPM) e pós-NPM*, *governança pública* e *burocracia de nível de rua*.
+
+A estratégia de identificação dos estudos combinou duas rotas complementares. A primeira consistiu na leitura e classificação da *bibliografia-base da disciplina*, já disponibilizada para a aula. A segunda consistiu em *busca acadêmica complementar* em páginas de periódicos, registros DOI, repositórios institucionais e metadados acadêmicos acessíveis, com o objetivo de localizar revisões, textos de síntese e artigos teóricos capazes de atualizar o debate.
+
+Foram identificados *17 registros* ao todo. Após a remoção de *1 duplicata* e de *1 item não elegível por se tratar de livro, e não de artigo de periódico*, restaram *15 registros* para triagem. Em seguida, *3 registros* foram excluídos por baixa aderência ao recorte ou por excessiva especificidade temática. Os *12 textos remanescentes* foram avaliados em maior profundidade, dos quais *2* foram excluídos após leitura por apresentarem contribuição predominantemente normativa ou escopo demasiadamente estreito. Ao final, *10 artigos* foram incluídos na síntese qualitativa.
+
+Convém registrar que esta aplicação do PRISMA 2020 tem finalidade *didática e metodológica de transparência*, isto é, busca relatar de modo claro como os estudos foram encontrados e selecionados, sem pretensão de exaustividade absoluta típica de uma revisão sistemática em larga escala.
+
+* Estratégia de busca
+
+** Pergunta orientadora
+
+#+begin_quote
+Quais artigos acadêmicos melhor representam e atualizam o debate teórico contemporâneo em administração pública nos eixos institucionalismo, burocracia, Nova Gestão Pública/pós-NPM, governança pública e implementação?
+#+end_quote
+
+** Expressões de busca utilizadas
+
+#+begin_quote
+("public administration" OR "administração pública")
+AND
+("neo-institutionalism" OR "institutional theory" OR bureaucracy OR "street-level bureaucracy" OR "new public management" OR "post-new public management" OR "public governance" OR "governança pública")
+AND
+(article OR review OR "literature review" OR "systematic literature review")
+#+end_quote
+
+Como a busca foi realizada em fontes heterogêneas, e não em uma única base indexada, a expressão acima foi adaptada conforme o ambiente de busca, preservando sempre o mesmo núcleo terminológico.
+
+** Fontes consultadas
+- Bibliografia-base da disciplina
+- Páginas de periódicos científicos
+- Registros DOI
+- Repositórios institucionais
+- Metadados acadêmicos acessíveis durante a busca
+
+** Critérios de inclusão
+- Artigos de periódico
+- Aderência clara a pelo menos um dos eixos centrais da disciplina
+- Relevância teórica, de síntese ou de atualização bibliográfica
+- Disponibilidade de texto completo ou de metadados suficientes para avaliação inicial
+
+** Critérios de exclusão
+- Livros e capítulos
+- Duplicatas
+- Estudos excessivamente setoriais, sem contribuição substantiva ao debate teórico geral
+- Textos de natureza predominantemente normativa, ensaística ou programática, quando pouco úteis à síntese do campo
+
+* PRISMA 2020
+
+** Fluxo textual dos estudos
+
+*** Identificação
+- Registros identificados: *n = 17*
+  - Bibliografia-base da disciplina: *n = 9*
+  - Busca acadêmica complementar: *n = 8*
+
+- Registros removidos antes da triagem: *n = 2*
+  - Duplicatas removidas: *n = 1*
+  - Item removido por não ser artigo de periódico: *n = 1*
+
+*** Triagem
+- Registros triados: *n = 15*
+- Registros excluídos: *n = 3*
+  - Foco empírico excessivamente setorial: *n = 1*
+  - Recorte excessivamente específico dentro do tema de governança: *n = 2*
+
+*** Elegibilidade
+- Relatórios buscados para recuperação: *n = 12*
+- Relatórios não recuperados: *n = 0*
+
+- Relatórios avaliados para elegibilidade: *n = 12*
+- Relatórios excluídos após leitura em texto completo: *n = 2*
+  - Contribuição mais normativa do que teórica: *n = 1*
+  - Escopo estreito para o objetivo da síntese: *n = 1*
+
+*** Inclusão
+- Estudos incluídos na síntese qualitativa: *n = 10*
+
+** Tabela-resumo do fluxo PRISMA 2020
+
+#+NAME: tab:prisma2020
+#+CAPTION: Síntese do fluxo PRISMA 2020 aplicado à busca e seleção de artigos sobre teorias da administração pública.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begin{table}[htbp]
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{4pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Etapa PRISMA 2020 & n \\
+#+LATEX: \midrule
+#+LATEX: Registros identificados & 17 \\
+#+LATEX: Registros removidos antes da triagem & 2 \\
+#+LATEX: Registros triados & 15 \\
+#+LATEX: Registros excluídos & 3 \\
+#+LATEX: Relatórios buscados para recuperação & 12 \\
+#+LATEX: Relatórios não recuperados & 0 \\
+#+LATEX: Relatórios avaliados para elegibilidade & 12 \\
+#+LATEX: Relatórios excluídos após leitura completa & 2 \\
+#+LATEX: Estudos incluídos na síntese qualitativa & 10 \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \end{table}
+
+** Estudos classificados no fluxo
+
+A tabela abaixo considera os *15 registros efetivamente triados*. A duplicata removida e o livro excluído antes da triagem não aparecem nesta classificação.
+
+#+NAME: tab:estudos_fluxo
+#+CAPTION: Classificação dos estudos identificados no fluxo PRISMA 2020.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begin{table}[htbp]
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{3pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}m{0.16\textwidth} >{\raggedright\arraybackslash}m{0.18\textwidth} >{\raggedright\arraybackslash}m{0.26\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Estudo & Origem & Situação no fluxo & Motivo \\
+#+LATEX: \midrule
+#+LATEX: Institutionalized Organizations: Formal Structure as Myth and Ceremony & Bibliografia-base / busca complementar & Incluído & Clássico da teoria institucional organizacional \\
+#+LATEX: The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields & Bibliografia-base & Incluído & Texto central para isomorfismo institucional e campo organizacional \\
+#+LATEX: Political Science and the Three New Institutionalisms & Bibliografia-base & Incluído & Síntese fundamental das três vertentes do neo-institucionalismo \\
+#+LATEX: A Public Management for All Seasons? & Bibliografia-base & Incluído & Marco teórico da Nova Gestão Pública \\
+#+LATEX: Public Governance: Balancing Stakeholder Power in a Network Society & Busca complementar & Incluído & Referência central sobre governança pública \\
+#+LATEX: Modelos organizacionais e reformas da administração pública & Bibliografia-base & Incluído & Articulação entre burocracia, gerencialismo e governança no debate brasileiro \\
+#+LATEX: The manifold meanings of post-New Public Management & Bibliografia-base & Incluído & Revisão de literatura sobre os sentidos do pós-NPM \\
+#+LATEX: Trends in Public Administration after Hegemony of the New Public Management & Busca complementar & Incluído & Atualização do debate sobre pós-NPM e governança \\
+#+LATEX: Street-Level Bureaucracy in Public Administration: A systematic literature review & Busca complementar & Incluído & Revisão contemporânea sobre burocracia de nível de rua \\
+#+LATEX: The relevance of neo-institutionalism for organizational change & Busca complementar & Incluído & Atualiza o institucionalismo para análise de mudança organizacional \\
+#+LATEX: Programa Cultura Viva e o campo organizacional da cultura & Bibliografia-base & Excluído na triagem & Foco empírico setorial, com menor centralidade para o mapa teórico geral da disciplina \\
+#+LATEX: New paths for public governance: a systematic literature review and integrative framework & Busca complementar & Excluído na triagem & Recorte excessivamente específico dentro do eixo de governança \\
+#+LATEX: Strategic public value(s) governance: a systematic literature review and future research agenda & Busca complementar & Excluído na triagem & Foco estreito em subcampo específico de governança pública \\
+#+LATEX: Reforma da Nova Gestão Pública: agora na agenda da América Latina, no entanto... & Bibliografia-base & Excluído na elegibilidade & Texto historicamente relevante, porém mais ensaístico-normativo que sintético para o recorte \\
+#+LATEX: Developing New Public Governance as a public management reform model & Busca complementar & Excluído na elegibilidade & Contribuição predominantemente programática e normativa \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \end{table}
+
+** Representação esquemática em PlantUML
+
+#+NAME: fig:prisma2020_fluxo
+#+CAPTION: Fluxograma PRISMA 2020 da seleção dos estudos sobre teorias da administração pública.
+#+ATTR_ORG: :width 900
+#+ATTR_LATEX: :width 0.9\textwidth :placement [H]
+#+begin_src plantuml :file prisma_teorias_adm_publica_fluxo.svg :exports results
+@startuml
+scale 0.78
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam dpi 600
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam nodesep 25
+skinparam ranksep 30
+skinparam Padding 8
+skinparam RoundCorner 12
+
+skinparam rectangle {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+  FontSize 16
+}
+
+skinparam arrow {
+  Color black
+  Thickness 1.2
+}
+
+rectangle "Registros identificados\n\nBibliografia-base (n = 9)\nBusca complementar (n = 8)\n\nTotal (n = 17)" as id1
+rectangle "Registros removidos antes da triagem\n\nDuplicatas removidas (n = 1)\nItem removido por não ser artigo (n = 1)" as id2
+rectangle "Registros triados\n\n(n = 15)" as tr1
+rectangle "Registros excluídos\n\n(n = 3)\n\n- Foco setorial excessivo (n = 1)\n- Recorte excessivamente específico (n = 2)" as tr2
+rectangle "Relatórios buscados para recuperação\n\n(n = 12)" as el1
+rectangle "Relatórios não recuperados\n\n(n = 0)" as el2
+rectangle "Relatórios avaliados para elegibilidade\n\n(n = 12)" as el3
+rectangle "Relatórios excluídos após leitura completa\n\n(n = 2)\n\n- Contribuição mais normativa do que teórica (n = 1)\n- Escopo estreito para a síntese (n = 1)" as el4
+rectangle "Estudos incluídos na síntese qualitativa\n\n(n = 10)" as inc1
+
+id1 --> id2
+id2 --> tr1
+tr1 --> el1
+tr1 -right-> tr2
+el1 --> el3
+el1 -right-> el2
+el3 --> inc1
+el3 -right-> el4
+
+@enduml
+#+end_src
+
+* Síntese dos artigos selecionados
+
+Os *10 artigos incluídos* permitem organizar o campo em três grandes blocos analíticos. O primeiro bloco é o do *neo-institucionalismo*. Nele, /Institutionalized Organizations: Formal Structure as Myth and Ceremony/ e /The Iron Cage Revisited/ cumprem papel fundacional ao explicar por que organizações adotam estruturas formais, rotinas e símbolos não apenas por eficiência instrumental, mas também por busca de *legitimidade*. /Political Science and the Three New Institutionalisms/ amplia esse quadro ao distinguir institucionalismo histórico, da escolha racional e sociológico, oferecendo base conceitual importante para compreender a pluralidade do institucionalismo. Já /The relevance of neo-institutionalism for organizational change/ atualiza essa tradição ao mostrar como o institucionalismo pode ser mobilizado para analisar transformação organizacional, e não apenas estabilidade.
+
+O segundo bloco reúne os textos sobre *burocracia, Nova Gestão Pública, pós-NPM e governança pública*. /A Public Management for All Seasons?/ permanece como referência para a compreensão da NPM, sobretudo por sistematizar valores como eficiência, competição, mensuração de resultados e descentralização gerencial. /Modelos organizacionais e reformas da administração pública/ é especialmente relevante para o contexto da disciplina por articular, em uma mesma chave analítica, o modelo burocrático, o gerencialismo e a governança pública, mostrando continuidades e tensões entre eles. /The manifold meanings of post-New Public Management/ e /Trends in Public Administration after Hegemony of the New Public Management/ demonstram que o debate pós-NPM não substituiu inteiramente a NPM, mas passou a reordenar o campo com maior ênfase em coordenação, integração, colaboração e arranjos híbridos. /Public Governance: Balancing Stakeholder Power in a Network Society/ reforça essa inflexão ao situar a governança pública como abordagem centrada em redes, pluralismo de atores, coordenação horizontal e redistribuição de poder entre Estado e sociedade.
+
+O terceiro bloco é o da *implementação e burocracia de nível de rua*. Nesse eixo, /Street-Level Bureaucracy in Public Administration: A systematic literature review/ mostra a permanência da agenda inaugurada por Lipsky, agora revisitada à luz da produção recente. O artigo evidencia que a burocracia de nível de rua segue central para entender como políticas públicas são efetivamente concretizadas, pois a implementação depende da discricionariedade, das rotinas e das condições de trabalho dos agentes que interagem diretamente com os cidadãos.
+
+Tomados em conjunto, os artigos selecionados sugerem que a administração pública continua sendo um campo fortemente *interdisciplinar*, no qual teorias oriundas da sociologia, da ciência política, dos estudos organizacionais e da gestão pública são constantemente mobilizadas para interpretar Estado, organizações públicas, reformas, implementação e governança. Ao mesmo tempo, a seleção mostra que o debate contemporâneo não se resume à oposição entre burocracia e gerencialismo. O que emerge com maior força é um campo em que *instituições, legitimidade, coordenação, discricionariedade, redes e governança* se entrelaçam na análise da ação pública.
+
+* Considerações finais
+
+À luz do fluxo PRISMA 2020 aqui aplicado, verifica-se que o tema da disciplina é amplo e exige uma estratégia de busca que combine *clássicos fundacionais* com *artigos contemporâneos de revisão e atualização*. O resultado final confirma que uma seleção equilibrada de estudos não deve privilegiar apenas textos históricos, nem apenas revisões recentes, mas articular ambos para reconstruir o desenvolvimento do campo.
+
+A busca também mostrou que parte significativa da literatura útil à disciplina está distribuída entre tradições analíticas distintas. O neo-institucionalismo oferece instrumentos poderosos para compreender estabilidade, mudança e legitimidade organizacional. A literatura sobre NPM e pós-NPM ajuda a interpretar reformas, desempenho e gestão. A governança pública amplia a lente para arranjos colaborativos, pluralismo e redes. Por sua vez, a burocracia de nível de rua recoloca a implementação no centro da análise, lembrando que políticas públicas não existem apenas no plano formal, mas se realizam concretamente na interação entre burocratas e cidadãos.
+
+Em síntese, o corpus selecionado é adequado para sustentar discussões em sala de aula e para servir de base a trabalhos acadêmicos introdutórios na disciplina *Teorias de Administração Pública*, pois oferece simultaneamente *fundamentos conceituais*, *mapa das principais correntes* e *atualizações recentes do campo*.

@@ -1,0 +1,470 @@
+# ================================================================
+# TOML COMPLETO — Pipeline pesquisa/documento v5.2.0
+# Bundle-alvo: bundle_projeto_pesquisa_documento_rc_20
+#
+# Este TOML foi pensado para funcionar como arquivo central de configuração,
+# permitindo escolher entre três modos principais:
+#
+# 1) modo_entrada = "pesquisa"
+#    Executa pesquisa acadêmica/PRISMA do zero e pode gerar documento depois.
+#
+# 2) modo_entrada = "pesquisa_existente"
+#    Usa uma pesquisa já pronta em [pipeline].pesquisa_dir_existente.
+#
+# 3) modo_entrada = "documentos_locais"
+#    Usa ZIP ou pasta local com textos fornecidos pelo professor/usuário,
+#    criando um corpus local equivalente ao *_fulltext_cache da pesquisa.
+#
+# Observação:
+# - A v5.2.0 prioriza os textos efetivamente disponíveis no fulltext_cache.
+# - Para documentos locais, configure [documentos_locais] e use template leve.
+# ================================================================
+
+[pipeline]
+# Opções: "pesquisa", "pesquisa_existente", "documentos_locais"
+modo_entrada = "pesquisa"
+
+# Pesquisa PRISMA do zero.
+executar_pesquisa = true
+
+# Geração de pacote/bundle intermediário/final.
+executar_bundle = false
+
+# Geração do documento acadêmico final.
+executar_documento = false
+
+# Use somente quando modo_entrada = "pesquisa_existente".
+# Exemplo:
+# pesquisa_dir_existente = "/home/.../bundle_projeto_pesquisa_documento_rc_20/output/pesquisa/dissertacao_ia_governo_publico_federal"
+pesquisa_dir_existente = ""
+
+script_pesquisa = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/scripts/research/gerador_pesquisa_rc_2.py"
+
+# Se vazio, o script decide o local padrão conforme o modo.
+bundle_dir = ""
+
+
+# ================================================================
+# Entrada por documentos locais/ZIP
+# ================================================================
+[documentos_locais]
+# Ative para usar ZIP ou pasta local.
+# Quando true, também equivale a modo_entrada = "documentos_locais".
+ativos = false
+
+# Pode repetir aqui, se quiser controlar o modo pela própria seção.
+# Opções aceitas pela v5.2.0: "documentos_locais", "local", "zip", "pasta_local".
+modo_entrada = "documentos_locais"
+
+# Use ZIP OU pasta. Se input_zip estiver preenchido, ele tem prioridade.
+input_zip = ""
+input_dir = ""
+
+# Busca arquivos em subpastas.
+recursive = true
+
+# Tipos lidos no corpus local.
+tipos = ["pdf", "docx", "txt", "md", "org"]
+
+# Prefixo do corpus local. Se vazio, usa [documento].prefixo ou [saida].prefixo.
+prefixo = ""
+
+# Saída do corpus local convertido em estrutura compatível com pesquisa.
+output_dir = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local"
+criar_subdiretorio = true
+
+# Limpeza de execuções anteriores.
+limpar_extracao_anterior = true
+limpar_cache_anterior = true
+sobrescrever_corpus_local = true
+
+# Cria prefixo_fulltext_cache/ com os documentos originais ou extraídos.
+copiar_para_fulltext_cache = true
+
+# Cria debug.json e .bib sintéticos para o corpus local.
+gerar_debug_sintetico = true
+gerar_bib_sintetico = true
+
+# Usa nome do arquivo como chave bibliográfica se não houver metadados.
+usar_nome_arquivo_como_chave = true
+
+# Metadados bibliográficos padrão para documentos locais sem metadados.
+autor_padrao = "Material fornecido pelo professor"
+ano_padrao = "s.d."
+
+# Controle semântico: no modo documentos locais, os textos do cache devem ser
+# interpretados pela IA e usados substantivamente no documento final.
+gerar_resumo_individual = true
+gerar_contexto_consolidado = true
+exigir_uso_de_todos_os_documentos = true
+responder_exclusivamente_com_base_nos_documentos = true
+permitir_fontes_externas = false
+
+# Segurança operacional.
+ignorar_arquivos_ocultos = true
+min_caracteres_documento_valido = 500
+
+
+# ================================================================
+# Atividade / metadados acadêmicos gerais
+# ================================================================
+[atividade]
+# Opções sugeridas: "revisao_sistematica", "resposta_discursiva", "fichamento",
+# "resumo", "resumo_expandido", "ensaio", "atividade_fgv".
+modo = "revisao_sistematica"
+
+tema = ""
+
+[atividade.metadados]
+disciplina = "Teorias da Administração Pública"
+professor = "Bernardo Buta"
+curso = "Mestrado Profissional em Políticas Públicas e Governo"
+turma = "2026.01"
+polo = "Brasília"
+aluno = "Gustavo M. Mendes de Tarso"
+data = ""
+
+
+# ================================================================
+# Pesquisa acadêmica/PRISMA
+# ================================================================
+[pesquisa]
+tema = "Uso de inteligência artificial no governo público federal como instrumento de governança, ética, compliance e gestão de riscos."
+recorte = "Análise do uso de sistemas e aplicações de inteligência artificial por órgãos e entidades da administração pública federal brasileira, com ênfase nos instrumentos de governança, salvaguardas éticas, mecanismos de compliance e práticas de gestão de riscos associados à automação de processos, apoio à decisão, análise documental, fiscalização e prestação de serviços digitais, no período de 2019 a 2026."
+objetivo = "Investigar como a literatura acadêmica e técnico-institucional trata a adoção de inteligência artificial no governo público federal brasileiro, identificando aplicações, modelos de governança, dilemas éticos, exigências de compliance, práticas de gestão de riscos e diretrizes para uma implementação responsável, auditável e alinhada ao interesse público."
+pergunta_pesquisa = ""
+
+trabalho = "Dissertação"
+tipo_estudo = "Revisão de literatura"
+periodo = "2019-2026"
+idiomas = ["inglês", "português"]
+palavras_chave = []
+
+# Bases disponíveis no script de pesquisa.
+bases = ["semantic_scholar", "scopus", "pubmed", "openalex", "crossref", "europe_pmc", "core"]
+
+
+[bibliografia]
+# Opções comuns: "APA", "ABNT", "Chicago", "MLA", "Vancouver".
+estilo_citacao = "APA"
+
+
+[busca]
+sugerir_palavras_chave_ia = true
+query_bilingue = true
+quantidade_triagem = 10
+quantidade_selecionados = 1
+salvar_busca_bruta_json = true
+incluir_analise_detalhada_ia = true
+incluir_sintese_integradora_ia = true
+
+# Recomendação: se for dissertação robusta, ajuste quantidade_triagem e
+# quantidade_selecionados conforme o objetivo. Para teste rápido, valores baixos.
+
+
+[triagem]
+rigor = "moderado"
+usar_score_hibrido = true
+orientacoes_paths = [
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/triagem_prompt.txt",
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/diretivas_extras.txt"
+]
+orientacao_inline = """
+A triagem deve priorizar estudos substantivamente conectados à adoção de inteligência artificial no governo público federal, especialmente quando o texto tratar de governança algorítmica, accountability, ética pública, compliance regulatório, integridade, auditoria, transparência, avaliação de riscos, discricionariedade automatizada, explicabilidade, supervisão humana, proteção de dados, contratação pública tecnológica e controles institucionais sobre IA.
+"""
+permitir_textos_nao_publicos = false
+
+
+# Queries manuais. Se vazias, o script pode gerar/sugerir consultas.
+[queries]
+query_geral = ""
+query_semantic = ""
+query_scopus = ""
+query_wos = ""
+query_pubmed = ""
+query_openalex = ""
+query_crossref = ""
+query_europepmc = ""
+query_core = ""
+
+
+# Saída da etapa de pesquisa ou corpus equivalente.
+[saida]
+prefixo = "dissertacao_ia_governo_publico_federal"
+output_dir = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/output/pesquisa"
+criar_subdiretorio = true
+org_modelo = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/templates/template_research.org"
+orientacoes_paths = [
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/orientacao_geral_execucao.txt",
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/diretivas_extras.txt"
+]
+orientacao_inline = """
+Na etapa de pesquisa, priorize a construção de um corpus conceitualmente robusto e bem delimitado, evitando inflar a aderência com textos apenas genericamente ligados a transformação digital, governo eletrônico ou inovação pública quando não houver conexão clara com inteligência artificial, governança, ética, compliance ou gestão de riscos.
+"""
+exportar_pdf = true
+gerar_env_example = false
+remover_auxiliares = true
+
+
+# ================================================================
+# Prompts externos
+# ================================================================
+[prompts]
+# Estes arquivos são opcionais. Se existirem, entram como orientação adicional.
+# O objetivo é permitir trocar a tarefa sem mexer no código.
+prompt_sistema_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/documentos_locais/sistema.txt"
+prompt_resumo_individual_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/documentos_locais/resumo_individual.txt"
+prompt_contexto_consolidado_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/documentos_locais/contexto_consolidado.txt"
+prompt_documento_final_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/documentos_locais/documento_final.txt"
+
+# Prompts específicos opcionais por tipo de documento.
+prompt_dissertacao_etapas_path = ""
+prompt_atividade_path = ""
+prompt_fichamento_path = ""
+prompt_resposta_discursiva_path = ""
+prompt_resumo_expandido_path = ""
+
+# Orientação inline geral opcional para complementar os prompts externos.
+prompt_inline = ""
+
+
+# ================================================================
+# Interpretação do corpus/textos
+# ================================================================
+[interpretacao]
+# Fonte substantiva obrigatória do documento final.
+usar_textos_completos = true
+usar_resumos_individuais = true
+usar_contexto_consolidado = true
+
+# No modo pesquisa/documento, exige que os PDFs/textos do fulltext_cache sejam usados.
+exigir_cobertura_total_fulltext_cache = true
+
+# Se algum texto do fulltext_cache ficar sem uso/citação, cria uma seção integradora.
+criar_secao_integracao_documentos_faltantes = true
+
+# Para atividades com textos dados pelo professor, deixe false/true conforme abaixo.
+permitir_fontes_externas = false
+responder_exclusivamente_com_base_nos_documentos = true
+
+# Controla como o modelo deve usar o corpus.
+comparar_textos_entre_si = true
+identificar_convergencias = true
+identificar_divergencias = true
+identificar_lacunas = true
+extrair_conceitos_centrais = true
+extrair_argumentos_centrais = true
+
+
+# ================================================================
+# Geração por IA
+# ================================================================
+[geracao]
+# Opções sugeridas: "etapas", "unica".
+modo = "etapas"
+
+# Recomenda-se true para dissertação longa e múltiplos documentos.
+gerar_por_subsecoes = true
+
+max_tentativas_por_etapa = 2
+salvar_checkpoints = true
+reutilizar_checkpoints = true
+
+# Evita timeout em documentos longos.
+timeout_segundos = 300
+max_caracteres_por_documento = 120000
+max_caracteres_por_chunk = 30000
+
+# Reparos automáticos.
+reparar_secao_curta = true
+reparar_citacoes_faltantes = true
+remover_headings_duplicados = true
+limpar_empty_citation = true
+
+# Auditoria.
+salvar_prompts_auditoria = true
+salvar_uso_referencias = true
+salvar_limites_secoes = true
+
+
+# ================================================================
+# Extração de texto dos documentos locais
+# ================================================================
+[extracao]
+pdf_engine = "pdftotext"
+docx_engine = "python-docx"
+
+# OCR deve ficar falso por padrão. Ative só se houver PDFs escaneados.
+usar_ocr_pdf = false
+idioma_ocr = "por+eng"
+
+normalizar_espacos = true
+remover_cabecalhos_rodapes_repetidos = false
+min_caracteres_documento_valido = 500
+
+# Truncamento defensivo para documentos muito grandes.
+max_caracteres_extraidos_por_arquivo = 250000
+
+
+# ================================================================
+# Documento final
+# ================================================================
+[documento]
+# Opções sugeridas:
+# "dissertacao", "paper", "atividade", "resposta_discursiva",
+# "resumo", "resumo_expandido", "fichamento", "ensaio".
+tipo_documento = "dissertacao"
+
+prefixo = "dissertacao_ia_governo_publico_federal"
+output_dir = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/output/documento"
+criar_subdiretorio = true
+
+# Para dissertação FGV:
+template_org = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/templates/template_dissertacao_fgv_apa_v2.org"
+
+# Para atividade/documentos locais, use alternativamente:
+# template_org = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/templates/template_atividade_fgv_v5_2_0.org"
+
+exportar_pdf = true
+
+# Metadados institucionais/capa.
+institution_name = "Fundação Getúlio Vargas"
+school_name = ""
+program_name = "Mestrado Profissional em Políticas Públicas e Governo"
+area_de_concentracao = "Políticas Públicas e Governo"
+ano = "2026"
+linha_pesquisa = "Governança, Estado e Políticas Públicas"
+coorientador = ""
+data_aprovacao = "A definir"
+
+# Banca dinâmica.
+# Se ainda não souber a banca, mantenha banca = [].
+banca = []
+
+# Para usar banca dinâmica, comente/remova banca = [] acima e descomente blocos como estes:
+# [[documento.banca]]
+# funcao = "Orientador"
+# nome = "Prof. Dr. Nome do Orientador"
+# instituicao = "Fundação Getúlio Vargas"
+#
+# [[documento.banca]]
+# funcao = "Membro interno"
+# nome = "Prof. Dr. Nome do Professor"
+# instituicao = "Fundação Getúlio Vargas"
+#
+# [[documento.banca]]
+# funcao = "Membro externo"
+# nome = "Prof. Dr. Nome do Professor"
+# instituicao = "Universidade de Brasília"
+
+# Campos de atividade/ficha técnica para template leve.
+curso = "Mestrado Profissional em Políticas Públicas e Governo"
+turma = "2026.01"
+polo = "Brasília"
+disciplina = "Teorias da Administração Pública"
+professor = "Bernardo Buta"
+aluno = "Gustavo M. Mendes de Tarso"
+data = ""
+titulo_trabalho = "Inteligência Artificial no Governo Público Federal Brasileiro: Governança, Ética, Compliance e Gestão de Riscos"
+
+# Metas de extensão para dissertação longa.
+min_palavras_total = 22000
+alvo_palavras_total = 28000
+min_palavras_introducao = 1800
+min_palavras_referencial = 7000
+min_palavras_metodologia = 3000
+min_palavras_resultados = 8500
+min_palavras_conclusao = 1800
+
+# Para atividades/resumos/fichamentos, valores menores podem ser usados.
+min_palavras_atividade = 1200
+alvo_palavras_atividade = 2500
+min_palavras_resumo = 600
+alvo_palavras_resumo = 1200
+min_palavras_fichamento = 1200
+alvo_palavras_fichamento = 2500
+
+orientacoes_paths = [
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/prompts/orientacao_geral_execucao.txt",
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/docs/modelos/fgv/formatacao-de-trabalhos-academicos-manual-fgv-impressao-2025.pdf",
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/docs/modelos/fgv/modelo-de-dissertacao-2025.docx"
+]
+
+orientacao_inline = """
+Produza uma DISSERTAÇÃO, não um paper curto.
+Use os estudos selecionados na etapa de pesquisa ou os documentos locais do fulltext_cache como base principal da revisão de literatura e da argumentação.
+Respeite o template_org indicado e as orientações institucionais anexadas.
+
+A dissertação deve:
+- manter estrutura compatível com a instituição indicada;
+- apresentar densidade analítica elevada;
+- tratar governança, ética, compliance e gestão de riscos como eixos analíticos centrais;
+- comparar autores, convergências, divergências, lacunas e implicações específicas;
+- interpretar substantivamente os textos do corpus, não apenas citá-los;
+- gerar um arquivo .org editável e apto à posterior compilação para PDF.
+
+Para documentos locais fornecidos pelo professor:
+- responda exclusivamente com base nos textos fornecidos, salvo autorização em contrário;
+- compare os textos entre si quando houver mais de um documento;
+- indique convergências, divergências, conceitos centrais e implicações para a pergunta da atividade.
+"""
+
+# Reaproveitamento da pesquisa/corpus.
+usar_artigos_selecionados_pesquisa = true
+artigos_extras_paths = []
+modo_escrita = "novo"
+perfil_redacao = "academico_equilibrado"
+usar_contexto_consolidado_da_pesquisa = true
+reformular_tema_recorte_objetivo = false
+permitir_busca_correlata_extra = false
+priorizar_citacoes_dos_selecionados = true
+extras_so_complementam = true
+usar_bib_da_pesquisa = true
+incluir_artigos_extras_no_bib = true
+reescrever_a_partir_do_org_atual = false
+documento_org_existente = ""
+preservar_estrutura_do_org_anterior = false
+
+# Geração em etapas para textos longos.
+geracao_em_etapas = true
+
+
+# ================================================================
+# LaTeX / Org export
+# ================================================================
+[latex]
+org_latex_class_init = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/misc/academic-writing.el"
+latex_extra_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/misc/fgv/fgv-dissertacao.sty"
+comando_exportacao_pdf = ""
+fgv_logo_path = "/home/gustavodetarso/Documentos/.share/mgs_org/fgv.png"
+
+# Para template portátil, prefira logo dentro do bundle, se existir:
+# fgv_logo_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/bundle_projeto_pesquisa_documento_rc_20/misc/logos/fgv.png"
+
+
+# ================================================================
+# OpenAI
+# ================================================================
+[openai]
+model = "gpt-5.4"
+
+# Campos opcionais/reservados. O script pode ignorar se não implementar.
+timeout_segundos = 300
+max_output_tokens = 8192
+temperature = 0.2
+
+
+# ================================================================
+# Controle operacional
+# ================================================================
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false
+
+# Se quiser registrar o TOML usado na saída.
+config_output = ""
+
+# Verbosidade/logs.
+verbose = true
+salvar_logs = true

@@ -1,0 +1,201 @@
+#+OPTIONS: toc:nil num:t H:3 ^:nil
+#+STARTUP: overview
+
+#+LATEX_HEADER: \usepackage{fgv-header}
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado de Políticas Públicas e Governo \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias de Administração Pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Trabalho}                & Aplicação do protocolo PRISMA 2020 \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Título do trabalho}      & Seleção e síntese de artigo sobre governança pública, compliance e auditoria interna \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \FGVNewPage
+
+* Introdução
+
+Este trabalho apresenta, em formato alinhado ao *PRISMA 2020*, o fluxo de identificação, triagem, elegibilidade e inclusão de estudos relacionados aos temas governança pública, compliance e administração pública. A estratégia de busca foi aplicada inicialmente na *Scopus* e, em seguida, na *Web of Science*, utilizando combinação de termos voltados a governança pública, compliance, integridade e revisão sistemática.
+
+Na *Scopus*, a busca retornou 2 registros. Na *Web of Science*, a mesma lógica de busca retornou 100 registros, posteriormente refinados por *ano de publicação a partir de 2023* e por *idioma português*. Após esse refinamento, apenas 2 estudos permaneceram aderentes para compor a triagem final em conjunto com os resultados da Scopus.
+
+* Estratégia de busca
+
+** Query utilizada
+
+#+begin_quote
+TITLE-ABS-KEY("public governance" OR "public sector governance" OR "governança pública")
+AND TITLE-ABS-KEY(compliance OR integrity OR "public integrity")
+AND TITLE-ABS-KEY("systematic review" OR "systematic literature review")
+#+end_quote
+
+** Bases consultadas
+- Scopus
+- Web of Science
+
+** Refinamentos aplicados
+- Web of Science: recorte temporal a partir de 2023
+- Web of Science: idioma português
+
+* PRISMA 2020
+
+** Fluxo textual dos estudos
+
+*** Identificação
+- Registros identificados em bases de dados: *n = 102*
+  - Scopus: *n = 2*
+  - Web of Science: *n = 100*
+
+- Registros removidos antes da triagem: *n = 98*
+  - Registros excluídos por refinamento de ano e idioma na Web of Science: *n = 98*
+  - Duplicatas removidas: *n = 0*
+  - Registros removidos por outros motivos: *n = 0*
+
+*** Triagem
+- Registros triados: *n = 4*
+- Registros excluídos: *n = 2*
+  - Tema não aderente ao objeto da pesquisa: *n = 1*
+  - Estudo não caracterizado como revisão sistemática aderente ao recorte temático: *n = 1*
+
+*** Elegibilidade
+- Relatórios buscados para recuperação: *n = 2*
+- Relatórios não recuperados: *n = 1*
+  - Motivo: indisponibilidade de acesso ao texto completo do estudo sobre blockchain
+
+- Relatórios avaliados para elegibilidade: *n = 1*
+- Relatórios excluídos após leitura em texto completo: *n = 0*
+
+*** Inclusão
+- Estudos incluídos na revisão: *n = 1*
+
+** Tabela-resumo do fluxo PRISMA 2020
+
+#+NAME: tab:prisma2020
+#+CAPTION: Síntese do fluxo PRISMA 2020 aplicado à busca nas bases Scopus e Web of Science.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begin{table}[htbp]
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{4pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Etapa PRISMA 2020 & n \\
+#+LATEX: \midrule
+#+LATEX: Registros identificados em bases de dados & 102 \\
+#+LATEX: Registros removidos antes da triagem & 98 \\
+#+LATEX: Registros triados & 4 \\
+#+LATEX: Registros excluídos & 2 \\
+#+LATEX: Relatórios buscados para recuperação & 2 \\
+#+LATEX: Relatórios não recuperados & 1 \\
+#+LATEX: Relatórios avaliados para elegibilidade & 1 \\
+#+LATEX: Relatórios excluídos após leitura completa & 0 \\
+#+LATEX: Estudos incluídos na revisão & 1 \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \end{table}
+
+** Estudos classificados no fluxo
+
+#+NAME: tab:estudos_fluxo
+#+CAPTION: Classificação dos estudos identificados no fluxo PRISMA 2020.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begin{table}[htbp]
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{3pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}m{0.17\textwidth} >{\raggedright\arraybackslash}m{0.22\textwidth} >{\raggedright\arraybackslash}m{0.25\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Estudo & Base & Situação no fluxo & Motivo \\
+#+LATEX: \midrule
+#+LATEX: Exploring the internal audit of public procurement governance: a systematic literature review & Scopus & Incluído & Aderente ao tema e disponível \\
+#+LATEX: Blockchain Interoperability in Secure E-Governance: A Systematic Literature Review & Scopus & Não recuperado & Texto completo indisponível \\
+#+LATEX: Consensual Administration, Accountability and Transparency in the Brazilian Public Administration & Web of Science & Excluído na triagem & Não configurado como revisão sistemática aderente ao recorte específico \\
+#+LATEX: The Brazilian Paralympic Committee as a Civil Society Organization of Public Interest & Web of Science & Excluído na triagem & Tema não aderente ao objeto \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \end{table}
+
+** Representação esquemática em PlantUML
+
+#+NAME: fig:prisma2020_fluxo
+#+CAPTION: Fluxograma PRISMA 2020 da seleção dos estudos.
+#+ATTR_ORG: :width 900
+#+ATTR_LATEX: :width 0.9\textwidth :placement [H]
+#+begin_src plantuml :file prisma2020_fluxo.svg :exports results
+@startuml
+scale 0.78
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam dpi 600
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam nodesep 25
+skinparam ranksep 30
+skinparam Padding 8
+skinparam RoundCorner 12
+
+skinparam rectangle {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+  FontSize 16
+}
+
+skinparam arrow {
+  Color black
+  Thickness 1.2
+}
+
+rectangle "Registros identificados em bases de dados\n\nScopus (n = 2)\nWeb of Science (n = 100)\n\nTotal (n = 102)" as id1
+rectangle "Registros removidos antes da triagem\n\nRefinamento por ano e idioma na Web of Science (n = 98)\nDuplicatas removidas (n = 0)\nOutros motivos (n = 0)" as id2
+rectangle "Registros triados\n\n(n = 4)" as tr1
+rectangle "Registros excluídos\n\n(n = 2)\n\n- Tema não aderente (n = 1)\n- Não configurado como revisão sistemática aderente ao recorte (n = 1)" as tr2
+rectangle "Relatórios buscados para recuperação\n\n(n = 2)" as el1
+rectangle "Relatórios não recuperados\n\n(n = 1)\n\nMotivo:\nIndisponibilidade de acesso ao texto completo do estudo sobre blockchain" as el2
+rectangle "Relatórios avaliados para elegibilidade\n\n(n = 1)" as el3
+rectangle "Relatórios excluídos após leitura completa\n\n(n = 0)" as el4
+rectangle "Estudos incluídos na revisão\n\n(n = 1)" as inc1
+
+id1 --> id2
+id2 --> tr1
+tr1 --> el1
+tr1 -right-> tr2
+el1 --> el3
+el1 -right-> el2
+el3 --> inc1
+el3 -right-> el4
+
+@enduml
+#+end_src
+
+* Resumo do artigo selecionado
+
+O artigo selecionado, intitulado /Exploring the internal audit of public procurement governance: a systematic literature review/, examina o papel da auditoria interna na governança das compras públicas por meio de uma revisão sistemática da literatura. O estudo parte do entendimento de que as contratações públicas constituem uma área especialmente sensível a falhas de controle, desperdícios, riscos operacionais e práticas de corrupção, razão pela qual mecanismos de auditoria interna assumem papel central na promoção da transparência, da accountability e da eficiência administrativa.
+
+Em termos metodológicos, o artigo adota a abordagem de *systematic literature review* com apoio explícito do referencial PRISMA. A revisão cobre publicações entre 2001 e 2024 e reúne 68 estudos, a partir dos quais os autores procuram mapear a evolução do campo, identificar os principais eixos temáticos, apontar limitações recorrentes e propor uma agenda futura de pesquisa. O trabalho demonstra que a produção científica sobre auditoria interna em compras públicas cresceu significativamente a partir de 2018, indicando maior preocupação internacional com integridade, rastreabilidade e conformidade nas aquisições governamentais.
+
+Os resultados mostram que a auditoria interna é compreendida na literatura como instrumento decisivo para o fortalecimento da governança pública, especialmente por sua capacidade de prevenir fraudes, monitorar conformidade normativa, aperfeiçoar controles internos e reduzir vulnerabilidades nas contratações. O estudo também destaca que sua eficácia prática depende de fatores institucionais concretos, como independência funcional dos auditores, qualificação técnica, apoio organizacional, integração com gestão de riscos e acompanhamento efetivo das recomendações emitidas.
+
+Outro ponto relevante do artigo é a identificação de novos vetores tecnológicos aplicados à auditoria e à governança de compras públicas, como análise de dados em larga escala, automação de processos e ferramentas digitais voltadas à detecção de irregularidades. Ainda assim, os autores assinalam que muitos órgãos públicos enfrentam obstáculos persistentes, tais como escassez de recursos, baixa capacidade institucional, deficiência de treinamento e limitações tecnológicas, o que reduz o potencial transformador da auditoria interna.
+
+No plano teórico, o artigo sustenta que o campo ainda é relativamente dependente de abordagens tradicionais e propõe maior integração entre perspectivas como *institutional theory*, *stakeholder theory* e *stewardship theory*, de modo a compreender com mais profundidade a complexidade da governança pública. Em síntese, a conclusão do estudo é que a auditoria interna deve ser vista não apenas como instância de controle formal, mas como mecanismo estratégico de integridade, aprimoramento institucional e fortalecimento da governança nas compras públicas.
+
+* Considerações finais
+
+À luz do fluxo PRISMA 2020 e do artigo efetivamente incluído, observa-se que o recorte de governança pública e compliance no setor público, quando associado ao critério de revisão sistemática, produz universo bibliográfico relativamente restrito após a aplicação dos filtros de elegibilidade. Ainda assim, o estudo selecionado oferece contribuição relevante para a disciplina *Teorias de Administração Pública*, sobretudo por evidenciar que governança, accountability, integridade e controle interno são dimensões interdependentes na administração pública contemporânea.

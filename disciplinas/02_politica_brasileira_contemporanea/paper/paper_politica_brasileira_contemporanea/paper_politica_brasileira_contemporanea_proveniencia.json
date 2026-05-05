@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-05-04T19:24:27.147721",
+  "pipeline": {
+    "executar_pesquisa": false,
+    "executar_documento": true,
+    "pesquisa_dir_existente": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea"
+  },
+  "documento_controls": {
+    "modo_escrita": "novo",
+    "perfil_redacao": "academico_equilibrado",
+    "usar_bib_da_pesquisa": true,
+    "incluir_artigos_extras_no_bib": true,
+    "permitir_busca_correlata_extra": false,
+    "priorizar_citacoes_dos_selecionados": true,
+    "extras_so_complementam": true,
+    "preservar_estrutura_do_org_anterior": false,
+    "usar_contexto_consolidado_da_pesquisa": true,
+    "reformular_tema_recorte_objetivo": false,
+    "limites_palavras": {
+      "total": 5000,
+      "introducao": 800,
+      "revisao": 1800,
+      "conclusao": 700
+    }
+  },
+  "context_origin": {
+    "missing_fields_inference": {
+      "used": false,
+      "source": "all_fields_already_filled",
+      "missing": {
+        "titulo_sugerido": false,
+        "tema": false,
+        "recorte": false,
+        "objetivo": false
+      }
+    },
+    "rewrite_or_override": {
+      "used": false,
+      "source": "pesquisa_consolidada"
+    }
+  },
+  "documento_context_final": {
+    "tema": "Estrutura institucional e dinâmica da política brasileira contemporânea",
+    "recorte": "Análise da interação entre presidencialismo de coalizão, multipartidarismo e federalismo no Brasil pós-1988, articulando seus efeitos sobre governabilidade, representação política e produção de políticas públicas a partir da bibliografia obrigatória da disciplina.",
+    "objetivo": "Analisar como o presidencialismo de coalizão, o multipartidarismo e o federalismo estruturam a governabilidade democrática no Brasil contemporâneo e condicionam a representação política, a coordenação federativa e a implementação de políticas públicas.",
+    "pergunta_pesquisa": "Como a combinação entre presidencialismo de coalizão, multipartidarismo e federalismo condiciona a governabilidade, a representação e a produção de políticas públicas no Brasil contemporâneo?",
+    "hipotese": null,
+    "palavras_chave": [
+      "presidencialismo de coalizão",
+      "multipartidarismo",
+      "federalismo",
+      "política brasileira contemporânea",
+      "governabilidade",
+      "representação política",
+      "políticas públicas"
+    ],
+    "titulo_sugerido": "Presidencialismo de coalizão, multipartidarismo e federalismo na política brasileira contemporânea: governabilidade, representação e produção de políticas públicas",
+    "tipo_estudo": "paper acadêmico",
+    "idiomas": [
+      "português"
+    ],
+    "modo_origem": "documentos_locais",
+    "titulo_trabalho_base": null
+  },
+  "template_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/templates/template_paper.org",
+  "bundle_manifest": null,
+  "research_artifacts": {
+    "root_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea",
+    "org_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea.org",
+    "bib_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea.bib",
+    "debug_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_debug.json",
+    "pdf_path": null,
+    "fulltext_cache_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache"
+  },
+  "selected_entries_count": 18,
+  "selected_fulltext_paths_used": [
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Abramovay_Lotta_2022.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Alves et al 2024.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Arretche 2018.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Campos 2017.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Falleti 2005.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Gatto 2025 - Gender quotas.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Limongi 2017.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Li├▒an 2017.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Oliveira_Lotta_2019_federalismo.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Palermo-V-2000-Como-se-governa-o-Brasil.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Panizza-etal - intro and conclusion.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Patchwork Leviathan Book.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Peters - Bringing political science back into public administration research.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Rocha 2019.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Sacchet 2018.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Singer-Tres_partidos_brasileiros.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/Vieira et al 2022_supremocracia.pdf",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_fulltext_cache/alonso2016.pdf"
+  ],
+  "extra_article_paths_used": [],
+  "guidance_sources_used": [
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea.org",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea_debug.json",
+    "inline:orientacao_documento_1",
+    "inline:orientacao_documento_2"
+  ],
+  "bib_keys_count": 18,
+  "bib_entries_count": 18
+}

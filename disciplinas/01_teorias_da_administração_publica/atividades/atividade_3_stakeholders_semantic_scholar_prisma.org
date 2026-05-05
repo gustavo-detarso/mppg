@@ -1,0 +1,214 @@
+#+OPTIONS: toc:nil num:t H:3 ^:nil
+#+STARTUP: overview
+
+#+LATEX_HEADER: \usepackage{fgv-header}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{svg}
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado de Políticas Públicas e Governo \\
+\textbf{Turma}                   & T-01 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Teorias de Administração Pública \\
+\textbf{Professor}               & Bernardo Buta \\
+\textbf{Trabalho}                & Busca de literatura em dupla \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Título do trabalho}      & Busca, seleção e síntese de artigo de revisão sobre stakeholders a partir do Semantic Scholar com aplicação do PRISMA 2020 \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \FGVNewPage
+
+* Introdução
+
+Este trabalho apresenta, em formato compatível com o *PRISMA 2020*, o processo de *identificação, triagem, elegibilidade e inclusão* de um *artigo de revisão* sobre *stakeholders*, tomando como base uma *busca focalizada no Semantic Scholar*. O objetivo não foi produzir uma revisão sistemática exaustiva de toda a literatura internacional, mas demonstrar de modo transparente um percurso de busca acadêmica, seleção e justificativa de escolha, tal como solicitado na atividade.
+
+O tema foi definido a partir do termo *stakeholders*, por ser um conceito central em debates contemporâneos sobre governança, gestão, engajamento, participação e formulação estratégica. Como o enunciado da aula enfatiza a *literatura recente* e a necessidade de selecionar *artigos de revisão*, a busca privilegiou estudos publicados nos últimos anos e com expressões como *systematic review*, *literature review* ou equivalentes no título e/ou nos metadados recuperados pelo Semantic Scholar.
+
+O artigo selecionado ao final do processo foi *“Exploring the antecedents and consequences of firm-stakeholder engagement process: A systematic review of literature”*, de *Avinash Pratap Singh* e *Zillur Rahman* (2022). A escolha se justifica porque, entre os resultados recentes encontrados, este foi o texto com *maior aderência geral ao problema dos stakeholders*, sem se restringir a um único setor específico, como saúde, proteína alternativa, ensino superior ou logística reversa. Além disso, o estudo oferece um desenho de revisão mais robusto, articulando *antecedentes, moderadores e consequências* do processo de *stakeholder engagement*.
+
+Também é importante registrar uma distinção metodológica. Neste trabalho, o *PRISMA 2020* foi utilizado para organizar o *fluxo da minha busca e seleção no Semantic Scholar*. Já o artigo selecionado adota, internamente, um desenho próprio de revisão sistemática, baseado em *Tranfield, Denyer e Smart (2003)*.
+
+* Estratégia de busca
+
+** Pergunta orientadora
+
+#+begin_quote
+Qual artigo de revisão recente, localizado via Semantic Scholar, melhor sintetiza a literatura sobre stakeholders de forma ampla, sem restringir o conceito a um único domínio empírico altamente setorial?
+#+end_quote
+
+** Base e lógica de busca
+
+A busca foi realizada com foco no *Semantic Scholar*, usando termos que combinassem o núcleo conceitual do tema com marcadores de revisão de literatura. Como o mecanismo da plataforma opera por relevância semântica, a estratégia foi organizada como uma *busca focalizada e didática*, seguida de triagem manual por título, resumo disponível, metadados e, quando possível, texto completo.
+
+** String de trabalho
+
+#+begin_quote
+("stakeholder" OR "stakeholders" OR "stakeholder engagement") AND ("systematic review" OR "literature review" OR review)
+#+end_quote
+
+** Critérios de inclusão
+
+- artigo de revisão ou revisão sistemática;
+- aderência explícita ao tema *stakeholders*;
+- publicação recente, privilegiando o recorte *2022-2025*;
+- disponibilidade de metadados suficientes para avaliação;
+- preferência por textos com escopo *geral* ou *transversal*, e não estritamente setorial.
+
+** Critérios de exclusão
+
+- estudos excessivamente setoriais, quando o conceito de stakeholders aparecia restrito a um único domínio empírico;
+- textos cujo foco principal não era propriamente a literatura sobre stakeholders, mas um campo aplicado muito delimitado;
+- resultados menos aderentes ao objetivo da atividade, mesmo quando formalmente classificados como revisão.
+
+* PRISMA 2020
+
+** Observação metodológica
+
+O fluxo abaixo corresponde à *minha busca focalizada no Semantic Scholar*, e não ao fluxo interno de seleção do artigo escolhido. Em outras palavras, a matriz PRISMA 2020 aqui apresentada serve para mostrar *quantos registros foram encontrados, quantos foram excluídos e por quê*, até a definição do artigo final da atividade.
+
+** Fluxo textual dos estudos
+
+*** Identificação
+- Registros identificados por busca focalizada no *Semantic Scholar*: *n = 6*
+- Registros removidos antes da triagem: *n = 0*
+  - Duplicatas removidas: *n = 0*
+  - Remoção por outros motivos: *n = 0*
+
+*** Triagem
+- Registros triados por título, resumo e metadados: *n = 6*
+- Registros excluídos na triagem: *n = 2*
+  - Revisão com foco em *saúde materno-infantil* em países de baixa e média renda: *n = 1*
+  - Revisão com foco em *logística reversa no comércio eletrônico*: *n = 1*
+
+*** Elegibilidade
+- Relatórios buscados para recuperação em texto completo: *n = 4*
+- Relatórios não recuperados: *n = 0*
+- Relatórios avaliados para elegibilidade: *n = 4*
+- Relatórios excluídos após leitura do texto completo: *n = 3*
+  - Revisão centrada em *proteínas alternativas*: *n = 1*
+  - Revisão centrada em *governança sustentável de cadeias de suprimento*: *n = 1*
+  - Revisão centrada em *ensino superior e IA generativa*: *n = 1*
+
+*** Inclusão
+- Estudos incluídos na síntese qualitativa final: *n = 1*
+
+** Tabela-resumo do fluxo PRISMA 2020
+
+#+NAME: tab:prisma2020_stakeholders
+#+CAPTION: Síntese do fluxo PRISMA 2020 aplicado à seleção de artigo de revisão sobre stakeholders a partir do Semantic Scholar.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begin{table}[htbp]
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{4pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}m{0.18\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Etapa PRISMA 2020 & n \\
+#+LATEX: \midrule
+#+LATEX: Registros identificados & 6 \\
+#+LATEX: Registros removidos antes da triagem & 0 \\
+#+LATEX: Registros triados & 6 \\
+#+LATEX: Registros excluídos na triagem & 2 \\
+#+LATEX: Relatórios buscados para recuperação & 4 \\
+#+LATEX: Relatórios não recuperados & 0 \\
+#+LATEX: Relatórios avaliados para elegibilidade & 4 \\
+#+LATEX: Relatórios excluídos após leitura completa & 3 \\
+#+LATEX: Estudos incluídos na síntese qualitativa & 1 \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \end{table}
+
+** Estudos classificados no fluxo
+
+#+NAME: tab:estudos_fluxo_stakeholders
+#+CAPTION: Classificação dos estudos identificados no fluxo PRISMA 2020.
+#+ATTR_LATEX: :center nil :float nil
+#+LATEX: \begin{table}[htbp]
+#+LATEX: \centering
+#+LATEX: \scriptsize
+#+LATEX: \setlength{\tabcolsep}{3pt}
+#+LATEX: \renewcommand{\arraystretch}{1.15}
+#+LATEX: \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}m{0.18\textwidth} >{\raggedright\arraybackslash}m{0.14\textwidth} >{\raggedright\arraybackslash}m{0.22\textwidth}}
+#+LATEX: \toprule
+#+LATEX: Estudo & Situação no fluxo & Tipo & Motivo \\
+#+LATEX: \midrule
+#+LATEX: Singh, A. P.; Rahman, Z. (2022), \textit{Exploring the antecedents and consequences of firm-stakeholder engagement process: A systematic review of literature} & Incluído & Revisão sistemática & Texto mais amplo e mais aderente ao tema geral dos stakeholders \\
+#+LATEX: Amato, M. et al. (2023), \textit{Stakeholder Beliefs about Alternative Proteins: A Systematic Review} & Excluído na elegibilidade & Revisão sistemática & Recorte substantivo restrito ao debate sobre proteínas alternativas \\
+#+LATEX: Wadhwa, J. et al. (2024), \textit{Comprehensive literature review on stakeholder prospects, responsibilities, and quality performance measurement in sustainable supply chain governance} & Excluído na elegibilidade & Revisão de literatura & Foco concentrado em governança sustentável da cadeia de suprimentos \\
+#+LATEX: Yang, J.; Qiu, H.; Yu, W. (2025), \textit{Surging currents: a systematic review of the literature on dynamic stakeholder engagements in higher education in the generative artificial intelligence era} & Excluído na elegibilidade & Revisão sistemática & Enfoque muito específico em ensino superior e IA generativa \\
+#+LATEX: Singh, D. R. et al. (2024), \textit{Understanding service users and other stakeholders' engagement in maternal and newborn health services research: A systematic review of evidence from low- and middle-income countries} & Excluído na triagem & Revisão sistemática & Escopo temático muito específico em saúde materno-infantil \\
+#+LATEX: González Romero, I. et al. (2025), \textit{The perspective of key stakeholders on the sustainable design of reverse logistics in e-commerce: an interpretive sensemaking review} & Excluído na triagem & Revisão interpretativa & Recorte empírico delimitado à logística reversa no comércio eletrônico \\
+#+LATEX: \bottomrule
+#+LATEX: \end{tabularx}
+#+LATEX: \normalsize
+#+LATEX: \end{table}
+
+#+LATEX: \clearpage
+
+** Representação esquemática do fluxo PRISMA 2020
+
+Nesta versão, o fluxograma foi mantido como *imagem vetorial externa em SVG*, referenciada no próprio arquivo =.org=. Esse pipeline foi adotado para preservar maior fidelidade visual ao padrão oficial do *PRISMA 2020*, evitando as limitações de renderização típicas de geradores automáticos de diagrama.
+
+#+begin_export latex
+\begin{figure}[H]
+\centering
+\includesvg[width=0.95\textwidth]{prisma_stakeholders_semantic_scholar}
+\caption{Fluxograma PRISMA 2020 da seleção do artigo de revisão sobre stakeholders.}
+\label{fig:prisma2020_stakeholders_fluxo}
+\end{figure}
+#+end_export
+
+* Resumo do artigo selecionado
+
+** Referência do estudo
+
+Singh, Avinash Pratap; Rahman, Zillur. *Exploring the antecedents and consequences of firm-stakeholder engagement process: A systematic review of literature*. /Corporate Governance and Sustainability Review/, v. 6, n. 3, p. 28-39, 2022.
+
+** Problema e objetivo de pesquisa
+
+O artigo parte do diagnóstico de que a literatura sobre *firm-stakeholder engagement* cresceu consideravelmente, mas permanece *fragmentada*. Em muitos casos, os estudos tratam o engajamento apenas como uma atividade empresarial ou enfatizam apenas um lado da relação, seja o contexto da firma, seja o contexto dos stakeholders. Com isso, a compreensão do processo de engajamento tende a ficar dispersa, dificultando uma visão integrada de seus antecedentes e resultados.
+
+Diante desse problema, o objetivo do artigo é *consolidar a literatura* sobre o processo de engajamento firma-stakeholder, identificando seus *antecedentes, moderadores e consequências*. Além disso, o estudo busca examinar se a literatura sustenta a existência de um *continuum* entre dimensões *instrumentais*, *integradas* e *normativas* do relacionamento com stakeholders.
+
+** Argumento central
+
+O argumento central do artigo é que o *stakeholder engagement* deve ser compreendido como um *processo relacional e contínuo*, e não como uma ação pontual de comunicação ou mera gestão tática de interesses. Nessa perspectiva, o engajamento passa a ser entendido como um mecanismo que conecta estratégia, governança, inovação, responsabilidade social corporativa e criação de valor compartilhado.
+
+Os autores sustentam que os resultados mais relevantes do engajamento surgem quando a organização não trata stakeholders apenas como pressões externas a serem acomodadas, mas como participantes efetivos de processos de aprendizagem, cooperação, legitimidade e geração de benefícios mútuos. Assim, a contribuição do artigo é oferecer uma visão integrada do engajamento firma-stakeholder como processo cíclico e multidimensional.
+
+** Desenho de pesquisa
+
+O estudo selecionado é uma *revisão sistemática da literatura*. Os autores afirmam que adotaram como base o framework metodológico de *Tranfield, Denyer e Smart (2003)*, estruturado em três etapas: *planejamento, condução e análise*. Na etapa de condução, a busca inicial em três bases eletrônicas resultou em *1.280 artigos*. Em seguida, *687 duplicatas* foram removidas com apoio do *Zotero*, restando *593 estudos* para triagem por título e resumo. Após essa triagem, *418 artigos* foram excluídos, e *175 trabalhos* permaneceram para análise descritiva e temática.
+
+Com esse corpus final, os autores codificaram os estudos por ano, país e método de pesquisa, além de procederem a uma análise temática dos antecedentes, moderadores e consequências do engajamento. Portanto, trata-se de uma revisão sistemática estruturada, com base quantitativa de seleção e posterior síntese qualitativa.
+
+** Principais achados
+
+Os resultados mostram que o engajamento com stakeholders aparece na literatura como elemento relevante em áreas como *estratégia corporativa, governança, inovação, operações e responsabilidade social corporativa*. A revisão indica que, em muitos estudos, o foco predominante ainda é *instrumental*, isto é, orientado por objetivos estratégicos da firma. Contudo, os autores também identificam espaço importante para dimensões *normativas* e *integradas*, sobretudo quando a literatura discute governança corporativa, criação de valor compartilhado e legitimidade organizacional.
+
+Entre os antecedentes mais recorrentes, destacam-se fatores ligados ao *contexto da firma*, ao *contexto dos stakeholders* e ao *contexto institucional*. Entre as consequências, aparecem resultados para a própria organização, para os stakeholders e para uma esfera compartilhada, como *aprendizagem coletiva, reputação, legitimidade, cooperação, inovação e criação de valor conjunto*. O texto conclui que o engajamento tende a ser mais robusto quando incorporado ao núcleo das atividades organizacionais, e não tratado como mecanismo periférico.
+
+** Justificativa da seleção final
+
+O artigo de Singh e Rahman foi escolhido porque foi o estudo que melhor atendeu, simultaneamente, a quatro requisitos da atividade: *recência*, *caráter de revisão*, *centralidade do tema stakeholders* e *escopo amplo*. Os demais textos recuperados no fluxo PRISMA eram úteis, mas apareciam fortemente condicionados por um domínio empírico específico, como saúde, cadeia de suprimentos, proteínas alternativas, ensino superior ou logística reversa.
+
+Já o artigo selecionado oferece uma síntese mais geral do debate sobre stakeholders, especialmente no eixo do *engajamento firma-stakeholder*, o que o torna mais apropriado para uma atividade de sala voltada à discussão conceitual e metodológica de um tema transversal.
+
+* Texto corrido para entrega
+
+A busca de literatura foi realizada no *Semantic Scholar*, com foco em *artigos de revisão recentes* sobre *stakeholders*. Para isso, foi utilizada uma estratégia de busca focalizada com os termos *stakeholder*, *stakeholders*, *stakeholder engagement*, *systematic review* e *literature review*. Em seguida, os resultados foram organizados segundo a lógica do *PRISMA 2020*, distinguindo as etapas de identificação, triagem, elegibilidade e inclusão. A busca inicial levou à seleção de *seis registros* diretamente aderentes ao tema. Não houve duplicatas. Após a leitura de títulos, resumos e metadados, *dois estudos* foram excluídos ainda na triagem por apresentarem escopo excessivamente setorial, um em saúde materno-infantil e outro em logística reversa no comércio eletrônico. Restaram *quatro relatórios* para recuperação e avaliação em texto completo. Desses, *três* foram excluídos na etapa de elegibilidade por manterem foco muito delimitado em proteínas alternativas, cadeia de suprimentos sustentável e ensino superior na era da IA generativa. Assim, apenas *um estudo* foi incluído na síntese qualitativa final: o artigo de *Singh e Rahman (2022)*, intitulado *Exploring the antecedents and consequences of firm-stakeholder engagement process: A systematic review of literature*. O texto foi selecionado porque apresenta o tratamento mais amplo e teoricamente consistente do tema, sem restringir stakeholders a um único campo aplicado. O artigo parte do problema de que a literatura sobre *firm-stakeholder engagement* está fragmentada e busca consolidar os *antecedentes, moderadores e consequências* desse processo. Metodologicamente, trata-se de uma revisão sistemática baseada em *Tranfield, Denyer e Smart (2003)*, com busca inicial de *1.280 artigos*, remoção de *687 duplicatas*, triagem de *593 estudos* e análise final de *175 publicações*. O argumento central é que o engajamento com stakeholders deve ser compreendido como um *processo relacional, contínuo e multidimensional*, que articula estratégia, governança, inovação e criação de valor compartilhado. Por isso, o artigo se mostrou o mais adequado para a atividade, tanto pela aderência conceitual quanto pela robustez do desenho de revisão.
+
+* Referências
+
+- PAGE, Matthew J. et al. *The PRISMA 2020 statement: an updated guideline for reporting systematic reviews*. BMJ, 2021.
+- SINGH, Avinash Pratap; RAHMAN, Zillur. *Exploring the antecedents and consequences of firm-stakeholder engagement process: A systematic review of literature*. Corporate Governance and Sustainability Review, v. 6, n. 3, p. 28-39, 2022.
