@@ -1,0 +1,118 @@
+#+TITLE: {{TITULO}}
+#+AUTHOR: {{AUTOR}}
+#+DATE: \today
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+
+#+LATEX_HEADER: \usepapercover
+#+LATEX_HEADER: \institution{{INSTITUICAO}}
+#+LATEX_HEADER: \programname{{PROGRAMA}}
+#+LATEX_HEADER: \coursename{{CURSO}}
+#+LATEX_HEADER: \disciplinename{{DISCIPLINA}}
+#+LATEX_HEADER: \professorname{{PROFESSOR}}
+#+LATEX_HEADER: \cityname{{CIDADE}}
+#+LATEX_HEADER: \papertype{{TIPO_DOCUMENTO}}
+#+LATEX_HEADER: \covernote{{NOTA_CAPA}}
+
+#+LATEX: \makemytitle
+
+#+begin_comment
+INSTRUÇÕES PERMANENTES PARA A IA
+
+Objetivo:
+Gerar um paper acadêmico completo, em português, com linguagem formal, analítica e coesa, evitando tom genérico, resumos soltos e enumeração mecânica de autores.
+
+Regras gerais:
+1. Preservar a estrutura técnica do arquivo .org.
+2. Não remover cabeçalho, capa, bibliografia ou configuração de exportação.
+3. Não inserir numeração manual nas seções.
+4. Não inventar referências bibliográficas, DOI, dados, autores ou fatos não sustentados pelos documentos fornecidos ou pelo arquivo .bib.
+5. Não mencionar problemas internos de processamento, extração textual, cache, OCR, metadados bibliográficos, arquivos locais ou funcionamento do software.
+6. Não usar expressões como “metadados incompletos”, “limitação de acesso”, “cache local”, “fulltext_cache”, “OCR”, “pipeline”, “material fornecido pelo professor” ou equivalentes.
+7. O paper deve ter pergunta, tese, desenvolvimento e conclusão.
+8. O tom deve ser compatível com pós-graduação em ciência política, administração pública ou políticas públicas.
+9. Os autores obrigatórios devem aparecer de modo substantivo, com diálogo real entre argumentos.
+10. A análise deve mostrar interpretação própria, conectando teoria e empiria.
+11. A conclusão não deve trazer evidência nova nem abrir discussão paralela.
+
+Lógica de composição:
+A. Resumo: tema, problema, pergunta, objetivo, hipótese ou tese, metodologia, argumento central e relevância.
+B. Introdução: contextualização, delimitação, pergunta, hipótese/tese, justificativa e estrutura.
+C. Referencial teórico: conceitos centrais, autores em diálogo, convergências, divergências, limites e posição analítica do paper.
+D. Análise: aplicação dos conceitos ao recorte empírico ou problema analisado, mostrando como a literatura explica, qualifica ou tensiona o caso.
+E. Conclusão: retomada da pergunta, síntese da resposta, reafirmação ou ajuste da tese e contribuição principal.
+
+Critérios de qualidade:
+- clareza argumentativa;
+- densidade analítica;
+- coesão entre seções;
+- fidelidade à bibliografia;
+- precisão conceitual;
+- redação acadêmica fluida.
+#+end_comment
+
+#+begin_abstract
+Escreva aqui um resumo acadêmico completo, com problema, pergunta de pesquisa, objetivo, hipótese ou tese, metodologia, argumento e relevância.
+#+end_abstract
+
+* Introdução
+#+begin_comment
+Escrever uma introdução com 3 a 6 parágrafos. Apresentar tema, delimitar problema, formular pergunta de pesquisa, anunciar objetivo geral, explicitar hipótese ou tese central, justificar relevância e antecipar estrutura do paper. Evitar abertura vaga ou histórica demais.
+#+end_comment
+
+A introdução do paper parte do problema de...
+
+* Problema de pesquisa e hipótese
+#+begin_comment
+Construir o núcleo lógico do paper. A pergunta deve ser precisa e investigável. A hipótese deve ser clara, argumentativa e coerente com a bibliografia. Se o caso não comportar hipótese formal, formular uma tese central explícita.
+#+end_comment
+
+** Pergunta de pesquisa
+Em que medida...?
+
+** Hipótese ou tese central
+Este paper sustenta que...
+
+** Objetivo geral
+O objetivo deste paper é analisar...
+
+** Metodologia
+O paper adota abordagem bibliográfica e argumentativa, articulando os textos-base ao problema formulado.
+
+* Referencial teórico
+#+begin_comment
+Desenvolver um referencial teórico que defina os conceitos centrais, coloque os autores em diálogo e articule o tema principal com os temas adicionais. Evitar formato de fichamento. Explicitar qual interpretação orienta o paper.
+#+end_comment
+
+** Conceito central 1
+
+** Conceito central 2
+
+** Conceito central 3 ou eixo de articulação
+
+** Debate teórico e posicionamento analítico
+
+* Análise
+#+begin_comment
+Esta seção deve ser a mais autoral do paper. Aplicar o referencial ao recorte empírico ou problema analisado. Conectar teoria e caso de modo explícito. Demonstrar por que o caso confirma, qualifica, tensiona ou desafia a literatura. Evitar repetir os autores sem interpretação própria.
+#+end_comment
+
+** Recorte empírico ou problema analisado
+O recorte empírico considerado neste paper é...
+
+** Aplicação dos conceitos ao caso
+
+** Discussão crítica
+
+* Conclusão
+#+begin_comment
+Retomar a pergunta de pesquisa e mostrar como o paper a respondeu. Reafirmar ou reformular a hipótese à luz da análise. Indicar a principal contribuição analítica sem introduzir argumentos ou evidências novas.
+#+end_comment
+
+Em síntese, o paper argumentou que...
+
+#+PRINT_BIBLIOGRAPHY:

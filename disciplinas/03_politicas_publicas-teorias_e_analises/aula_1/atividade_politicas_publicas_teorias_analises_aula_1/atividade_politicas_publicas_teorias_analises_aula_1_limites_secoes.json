@@ -1,0 +1,16 @@
+{
+  "word_counts": {
+    "Introdução": 334,
+    "Resumo individual dos textos": 2111,
+    "Comparação entre os textos": 531,
+    "Síntese analítica": 467,
+    "Considerações finais": 291,
+    "documento_total": 4056
+  },
+  "configured_limits": {
+    "total": null,
+    "introducao": null,
+    "revisao": null,
+    "conclusao": null
+  }
+}

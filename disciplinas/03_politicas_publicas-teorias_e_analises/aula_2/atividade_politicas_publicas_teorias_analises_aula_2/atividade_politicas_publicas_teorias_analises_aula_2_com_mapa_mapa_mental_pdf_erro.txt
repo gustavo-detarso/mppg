@@ -1,0 +1,20 @@
+A recompilação do PDF após inserir o mapa mental falhou, mas o .org de saída foi preservado.
+
+Documento ORG base: /home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/documento/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2.org
+Documento ORG de saída: /home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/documento/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.org
+
+Erro:
+Falha ao compilar PDF do TEX pós-processado.
+Comando: /home/gustavodetarso/texlive/2025/bin/x86_64-linux/biber atividade_politicas_publicas_teorias_analises_aula_2_com_mapa
+STDOUT:
+INFO - This is Biber 2.21
+INFO - Logfile is 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.blg'
+INFO - Reading 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bcf'
+INFO - Found 3 citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bib' for section 0
+ERROR - Cannot find 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bib'!
+INFO - ERRORS: 1
+
+STDERR:
+

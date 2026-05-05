@@ -1,0 +1,181 @@
+{
+  "local_corpus": true,
+  "generated_at": "2026-04-30T19:24:09.270191",
+  "source_info": {
+    "input_zip": "/home/gustavodetarso/Documentos/mppg/disciplinas/politicas_publicas-teorias_e_analises/aula_2/src/aula_2.zip",
+    "input_dir": null,
+    "extracted_dir": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/extracted",
+    "supported_suffixes": [
+      ".docx",
+      ".md",
+      ".org",
+      ".pdf",
+      ".txt"
+    ]
+  },
+  "proposal": {
+    "tema": null,
+    "recorte": null,
+    "objetivo": null,
+    "pergunta_pesquisa": null
+  },
+  "selected_all": [
+    {
+      "paper_id": "local:download_1",
+      "title": "Sistemas nacionais de políticas públicas e seus efeitos na implementação: o caso do Sistema Único de Assistência Social (Suas)",
+      "year": "2020",
+      "authors": [
+        "Renata Bichir",
+        "Sergio Simoni Junior",
+        "Guilherme Pereira"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.1590/3510207/2020",
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/download (1).pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/download (1).pdf",
+      "bib_key": "bichir2020_sistemas_nacionais",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "download (1).pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:download",
+      "title": "Implementação de políticas públicas: perspectivas analíticas",
+      "year": "2013",
+      "authors": [
+        "Luciano D'Ascenzi",
+        "Luciana Leite Lima"
+      ],
+      "source": "documentos_locais",
+      "doi": null,
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/download.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/download.pdf",
+      "bib_key": "dascenzi2013_implementacao_de",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "download.pdf",
+      "suffix": ".pdf"
+    },
+    {
+      "paper_id": "local:pedrobolle2316_901x_rieb_66_00108",
+      "title": "Evolução do Plano de Ação para Prevenção e Controle do Desmatamento na Amazônia Legal",
+      "year": "2017",
+      "authors": [
+        "Natália Girão Rodrigues de Mello",
+        "Paulo Artaxo"
+      ],
+      "source": "documentos_locais",
+      "doi": "10.11606/issn.2316-901X.v0i66p108-129",
+      "url": null,
+      "downloaded_pdf_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/pedrobolle,+2316-901X-rieb-66-00108.pdf",
+      "local_file_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/pedrobolle,+2316-901X-rieb-66-00108.pdf",
+      "bib_key": "mello2017_evolucao_do",
+      "reason_selected": "Documento fornecido localmente pelo usuário/professor.",
+      "filename": "pedrobolle,+2316-901X-rieb-66-00108.pdf",
+      "suffix": ".pdf"
+    }
+  ],
+  "selected_count": 3,
+  "fulltext_cache_dir": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache",
+  "contexto_local_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_contexto_local.json",
+  "external_bib_path": null,
+  "external_bib_keys": [],
+  "local_revised_bib": {
+    "generated": true,
+    "bib_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2.bib",
+    "sidecar_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_revisado_ia.bib",
+    "keys": [
+      "bichir2020_sistemas_nacionais",
+      "dascenzi2013_implementacao_de",
+      "mello2017_evolucao_do"
+    ],
+    "diagnostics": [
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/download (1).pdf",
+        "label": "download (1).pdf",
+        "bib_key": "bichir2020_sistemas_nacionais",
+        "source": "ia",
+        "metadata": {
+          "entry_type": "article",
+          "title": "Sistemas nacionais de políticas públicas e seus efeitos na implementação: o caso do Sistema Único de Assistência Social (Suas)",
+          "authors": [
+            "Renata Bichir",
+            "Sergio Simoni Junior",
+            "Guilherme Pereira"
+          ],
+          "editors": [],
+          "year": "2020",
+          "booktitle": null,
+          "journaltitle": "Revista Brasileira de Ciências Sociais",
+          "publisher": null,
+          "location": null,
+          "pages": null,
+          "volume": "35",
+          "number": "102",
+          "edition": null,
+          "doi": "10.1590/3510207/2020",
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/download.pdf",
+        "label": "download.pdf",
+        "bib_key": "dascenzi2013_implementacao_de",
+        "source": "ia",
+        "metadata": {
+          "entry_type": "article",
+          "title": "Implementação de políticas públicas: perspectivas analíticas",
+          "authors": [
+            "Luciano D'Ascenzi",
+            "Luciana Leite Lima"
+          ],
+          "editors": [],
+          "year": "2013",
+          "booktitle": null,
+          "journaltitle": "Revista de Sociologia e Política",
+          "publisher": null,
+          "location": "Curitiba",
+          "pages": "101-110",
+          "volume": "21",
+          "number": "48",
+          "edition": null,
+          "doi": null,
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      },
+      {
+        "path": "/home/gustavodetarso/Documentos/mppg/disciplinas/teorias_da_administração_publica/criador_de_atividade/bundle_projeto_pesquisa_documento_rc_20/output/corpus_local/atividade_politicas_publicas_teorias_analises_aula_2/atividade_politicas_publicas_teorias_analises_aula_2_fulltext_cache/pedrobolle,+2316-901X-rieb-66-00108.pdf",
+        "label": "pedrobolle,+2316-901X-rieb-66-00108.pdf",
+        "bib_key": "mello2017_evolucao_do",
+        "source": "ia",
+        "metadata": {
+          "entry_type": "article",
+          "title": "Evolução do Plano de Ação para Prevenção e Controle do Desmatamento na Amazônia Legal",
+          "authors": [
+            "Natália Girão Rodrigues de Mello",
+            "Paulo Artaxo"
+          ],
+          "editors": [],
+          "year": "2017",
+          "booktitle": null,
+          "journaltitle": "Revista do Instituto de Estudos Brasileiros",
+          "publisher": null,
+          "location": "Brasil",
+          "pages": "108-129",
+          "volume": null,
+          "number": "66",
+          "edition": null,
+          "doi": "10.11606/issn.2316-901X.v0i66p108-129",
+          "isbn": null,
+          "url": null,
+          "note": null
+        }
+      }
+    ]
+  }
+}

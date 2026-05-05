@@ -1,0 +1,196 @@
+# =============================================================================
+# academic_pipeline — PAPER com corpus local em ZIP + enriquecimento bibliográfico
+# Perfil: paper / documentos_locais / metadados enriquecidos
+#
+# Versão esperada do pipeline:
+# - academic_pipeline_rc_zip_orientacoes_auto_contexto_v0_2_6.py
+#
+# Objetivo deste TOML:
+# - usar documentos-base.zip como corpus principal;
+# - usar roteiro.zip como orientação, priorizando roteiro_paper_final.docx;
+# - gerar paper, não PRISMA;
+# - enriquecer metadados incompletos em Crossref, OpenAlex, Semantic Scholar
+#   e Scopus, quando houver token no .env;
+# - impedir que notas técnicas de cache/metadados/OCR apareçam no paper.
+# =============================================================================
+
+[atividade]
+curso = "Mestrado Acadêmico em Políticas Públicas e Governo"
+turma = "2026.1"
+polo = "Brasília"
+disciplina = "Política Brasileira Contemporânea"
+professor = "Raphael Amorim"
+aluno = "Gustavo M. Mendes de Tarso"
+data = "2026"
+titulo_trabalho = "Presidencialismo de coalizão, multipartidarismo e federalismo na política brasileira contemporânea: governabilidade, representação e produção de políticas públicas"
+modo = "documentos_locais"
+
+[openai]
+model = "gpt-5.4"
+
+[pipeline]
+modo_entrada = "documentos_locais"
+executar_pesquisa = false
+executar_bundle = false
+executar_documento = true
+pesquisa_dir_existente = ""
+
+[documentos_locais]
+ativos = true
+modo_entrada = "documentos_locais"
+input_zip = "/home/gustavodetarso/Documentos/mppg/disciplinas/02_politica_brasileira_contemporanea/paper/documentos-base.zip"
+input_dir = ""
+tipos = ["pdf", "docx", "txt", "md", "org"]
+recursive = true
+limpar_extracao_anterior = true
+copiar_para_fulltext_cache = true
+limpar_cache_anterior = true
+auto_detect_bib = true
+
+# Bibliografia local: primeiro a IA tenta inferir metadados dos documentos-base;
+# se os metadados ficarem incompletos, o pipeline consulta bases externas.
+gerar_bib_revisado_ia = true
+max_docs_bib_revisado_ia = 30
+max_caracteres_bib_revisado = 35000
+
+# Enriquecimento de metadados, sem transformar o paper em PRISMA.
+enriquecer_metadados_buscadores = true
+fontes_metadados = [
+  "crossref",
+  "openalex",
+  "semantic_scholar",
+  "scopus"
+]
+min_score_match_metadados = 0.82
+preferir_doi = true
+salvar_diagnostico_metadados = true
+incluir_notas_metadados_inferidos = false
+
+# Deduplicação final do .bib para evitar Arretche 2018a/2018b etc.
+deduplicar_bib = true
+deduplicar_referencias = true
+
+# DOI manual/automático. Se houver DOI no CSV, ele prevalece sobre IA/busca por título.
+extrair_doi_dos_pdfs = true
+doi_manifest_path = "./doi_manifest_politica_brasileira.csv"
+preferir_doi_manual = true
+buscar_metadados_por_doi = true
+falhar_se_doi_manual_nao_encontrado = false
+
+# Fallback discreto. Evita referências como "Material fornecido pelo professor".
+autor_padrao = ""
+ano_padrao = "s.d."
+
+[saida]
+output_dir = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/corpus_local"
+prefixo = "paper_politica_brasileira_contemporanea"
+criar_subdiretorio = true
+orientacoes_paths = []
+orientacao_inline = ""
+
+[pesquisa]
+tema = "Estrutura institucional e dinâmica da política brasileira contemporânea"
+recorte = "Análise da interação entre presidencialismo de coalizão, multipartidarismo e federalismo no Brasil pós-1988, articulando seus efeitos sobre governabilidade, representação política e produção de políticas públicas a partir da bibliografia obrigatória da disciplina."
+objetivo = "Analisar como o presidencialismo de coalizão, o multipartidarismo e o federalismo estruturam a governabilidade democrática no Brasil contemporâneo e condicionam a representação política, a coordenação federativa e a implementação de políticas públicas."
+pergunta_pesquisa = "Como a combinação entre presidencialismo de coalizão, multipartidarismo e federalismo condiciona a governabilidade, a representação e a produção de políticas públicas no Brasil contemporâneo?"
+hipotese = "A interação entre presidencialismo de coalizão, multipartidarismo e federalismo não produz apenas custos de coordenação governamental; ela também organiza incentivos, vetos e canais de negociação que moldam a representação política, a distribuição territorial de poder e a capacidade estatal de formular e implementar políticas públicas."
+palavras_chave = [
+  "presidencialismo de coalizão",
+  "multipartidarismo",
+  "federalismo",
+  "política brasileira contemporânea",
+  "governabilidade",
+  "representação política",
+  "políticas públicas"
+]
+idiomas = ["português"]
+tipo_estudo = "paper acadêmico"
+
+[bibliografia]
+estilo_citacao = "apa"
+bib_path = ""
+
+[documento]
+tipo_documento = "paper"
+output_dir = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/output/documento"
+prefixo = "paper_politica_brasileira_contemporanea"
+criar_subdiretorio = true
+
+template_org = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/templates/template_paper.org"
+template_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/templates/template_paper.org"
+
+institution_name = "Fundação Getúlio Vargas"
+program_name = ""
+course_name = "Mestrado Acadêmico em Políticas Públicas e Governo"
+discipline_name = "Política Brasileira Contemporânea"
+professor_name = "Raphael Amorim"
+city_name = "Brasília"
+papertype = "Paper acadêmico"
+covernote = "Trabalho apresentado na disciplina Política Brasileira Contemporânea, no âmbito do Mestrado Acadêmico em Políticas Públicas e Governo da Fundação Getulio Vargas."
+
+titulo_trabalho = "Presidencialismo de coalizão, multipartidarismo e federalismo na política brasileira contemporânea: governabilidade, representação e produção de políticas públicas"
+estilo_citacao = "apa"
+modo_escrita = "novo"
+perfil_redacao = "academico_equilibrado"
+
+inferir_campos_vazios_ia = true
+usar_contexto_consolidado_da_pesquisa = true
+reformular_tema_recorte_objetivo = false
+
+usar_bib_da_pesquisa = true
+usar_artigos_selecionados_pesquisa = true
+citar_todos_fulltext_cache = true
+priorizar_citacoes_dos_selecionados = true
+permitir_busca_correlata_extra = false
+extras_so_complementam = true
+
+max_selected_base_docs = 30
+limite_palavras_total = 5000
+limite_palavras_introducao = 800
+limite_palavras_revisao = 1800
+limite_palavras_conclusao = 700
+
+orientacoes_paths = [
+  "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/roteiro.zip"
+]
+orientacao_inline = """
+Siga obrigatoriamente o roteiro final do paper, priorizando arquivos de orientação com 'final' no nome quando houver múltiplas versões no ZIP.
+
+O paper deve ter extensão máxima de 5.000 palavras, formato APA e deve relacionar a estrutura institucional da política brasileira — com ênfase em presidencialismo de coalizão, multipartidarismo e federalismo — com pelo menos dois outros temas da disciplina.
+
+Use obrigatoriamente a bibliografia dos documentos-base. O texto deve mobilizar pelo menos três blocos/encontros: (1) estrutura institucional, presidencialismo de coalizão, multipartidarismo e federalismo; (2) representação política, partidos, participação ou desigualdades; e (3) produção de políticas públicas, burocracia, implementação, judicialização ou capacidades estatais.
+
+Os textos-base estão disponíveis localmente em documentos-base.zip e devem ser tratados como corpus bibliográfico efetivo. Não mencionar no texto acadêmico expressões como: metadados incompletos, metadados inferidos automaticamente, cache local, fulltext_cache, limitação de acesso, extração textual, OCR, documentos processados, documentos replicados do cache, material fornecido pelo professor ou fornecido pelo professor como autor.
+
+Quando houver metadados bibliográficos incompletos, use a melhor referência recuperada nas bases bibliográficas abertas. Se ainda houver incerteza, formule a referência de modo discreto, sem transformar isso em limitação metodológica do paper.
+
+A metodologia deve descrever apenas a estratégia acadêmica do paper: análise bibliográfica e argumentativa da bibliografia obrigatória da disciplina. Não mencionar limitações técnicas do pipeline, cache, OCR, extração textual, arquivos locais ou metadados incompletos.
+
+Não produza fichamento nem resumo sequencial dos textos. Construa argumento acadêmico integrado, com pergunta de pesquisa clara, objetivo explícito, justificativa, referencial teórico, diálogo entre autores, análise argumentativa e conclusão sintética.
+
+Use citações no padrão Org/APA com chaves BibLaTeX disponíveis, evitando referências que não estejam no corpus local ou no .bib gerado.
+"""
+
+artigos_extras_paths = []
+incluir_artigos_extras_no_bib = true
+geracao_em_etapas = false
+exportar_pdf = true
+
+
+# Usa \parencite{} e \textcite{} no LaTeX final para evitar
+# chaves BibTeX cruas no PDF quando org-cite falhar no Emacs batch.
+usar_citacoes_latex_diretas = true
+[mapa_mental]
+gerar = false
+somente_mapa_mental = false
+
+[latex]
+pdf_engine = "lualatex"
+org_latex_class_init = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/misc/academic-writing.el"
+latex_extra_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline/app_bundle/misc/fgv/"
+fgv_logo_path = "/home/gustavodetarso/Documentos/.share/mgs_org/fgv.png"
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false

@@ -1,0 +1,19 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.blg'
+[68] biber:342> INFO - === qui abr 30, 2026, 23:26:43
+[83] Biber.pm:421> INFO - Reading 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bcf'
+[160] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[176] Biber.pm:4487> INFO - Processing section 0
+[185] Biber.pm:4678> INFO - Looking for bibtex file 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bib' for section 0
+[185] bibtex.pm:1713> INFO - LaTeX decoding ...
+[189] bibtex.pm:1519> INFO - Found BibTeX data source 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bib'
+[235] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[235] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[235] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'pt-BR'
+[235] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[247] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[248] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[248] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'pt-BR'
+[248] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[252] bbl.pm:676> INFO - Writing 'atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bbl' with encoding 'UTF-8'
+[254] bbl.pm:779> INFO - Output to atividade_politicas_publicas_teorias_analises_aula_2_com_mapa.bbl

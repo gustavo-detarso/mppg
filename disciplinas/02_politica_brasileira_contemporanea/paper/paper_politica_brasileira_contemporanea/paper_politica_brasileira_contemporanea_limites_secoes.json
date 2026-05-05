@@ -1,0 +1,16 @@
+{
+  "word_counts": {
+    "Introdução": 520,
+    "Problema de pesquisa e hipótese": 252,
+    "Referencial teórico": 1548,
+    "Análise": 1666,
+    "Conclusão": 473,
+    "documento_total": 5304
+  },
+  "configured_limits": {
+    "total": 5000,
+    "introducao": 800,
+    "revisao": 1800,
+    "conclusao": 700
+  }
+}
