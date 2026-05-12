@@ -1,0 +1,343 @@
+{
+  "id": "sec-lui-micro-dimensions",
+  "level": 2,
+  "title": "Micro-Dimensions of Digital Policy Design Instruments: A Comparative Analysis Across Brazilian States",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "O artigo parte de um diagnóstico preciso sobre o estado da literatura de desenho de políticas: embora o campo tenha avançado na análise de arquiteturas macro e de combinações meso de instrumentos, permanece menos desenvolvida a investigação das microdimensões, isto é, dos modos concretos pelos quais instrumentos são calibrados, articulados e convertidos em estilos de implementação. A questão central do texto, portanto, não é apenas descrever quais instrumentos aparecem nas políticas estaduais de transformação digital no Brasil, mas compreender como sua seleção e combinação orientam maneiras distintas de implementar a política. Essa inflexão desloca o foco do inventário de instrumentos para a lógica relacional entre eles, assumindo que o desenho não é um dado estático, mas um arranjo operativo que condiciona coordenação, legitimidade, capacidade de execução e interação com usuários e organizações.",
+      "content": [
+        {
+          "type": "text",
+          "text": "O artigo parte de um diagnóstico preciso sobre o estado da literatura de desenho de políticas: embora o campo tenha avançado na análise de arquiteturas macro e de combinações meso de instrumentos, permanece menos desenvolvida a investigação das microdimensões, isto é, dos modos concretos pelos quais instrumentos são calibrados, articulados e convertidos em estilos de implementação. A questão central do texto, portanto, não é apenas descrever quais instrumentos aparecem nas políticas estaduais de transformação digital no Brasil, mas compreender como sua seleção e combinação orientam maneiras distintas de implementar a política. Essa inflexão desloca o foco do inventário de instrumentos para a lógica relacional entre eles, assumindo que o desenho não é um dado estático, mas um arranjo operativo que condiciona coordenação, legitimidade, capacidade de execução e interação com usuários e organizações ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p1",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "O objetivo e o escopo do estudo são delimitados de forma clara e ambiciosa. Os autores examinam as políticas estaduais de transformação digital nas 27 unidades subnacionais brasileiras, com base em documentos regulatórios publicados entre 2019 e 2025, buscando responder a três perguntas encadeadas: como essas políticas são desenhadas, qual é a composição das combinações de instrumentos e de que maneira as interações entre esses instrumentos conformam estilos de implementação. O recorte é substantivamente relevante por duas razões. Primeiro, porque a transformação digital se tornou uma agenda estratégica da administração pública brasileira, especialmente após a consolidação de iniciativas federais de integração de serviços. Segundo, porque a variação federativa brasileira oferece um laboratório comparativo especialmente fértil para observar diferenças de capacidade estatal, coordenação intergovernamental e escolhas institucionais em torno de uma mesma agenda de política pública.",
+      "content": [
+        {
+          "type": "text",
+          "text": "O objetivo e o escopo do estudo são delimitados de forma clara e ambiciosa. Os autores examinam as políticas estaduais de transformação digital nas 27 unidades subnacionais brasileiras, com base em documentos regulatórios publicados entre 2019 e 2025, buscando responder a três perguntas encadeadas: como essas políticas são desenhadas, qual é a composição das combinações de instrumentos e de que maneira as interações entre esses instrumentos conformam estilos de implementação. O recorte é substantivamente relevante por duas razões. Primeiro, porque a transformação digital se tornou uma agenda estratégica da administração pública brasileira, especialmente após a consolidação de iniciativas federais de integração de serviços. Segundo, porque a variação federativa brasileira oferece um laboratório comparativo especialmente fértil para observar diferenças de capacidade estatal, coordenação intergovernamental e escolhas institucionais em torno de uma mesma agenda de política pública ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p2",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "A tese principal sustenta que as dimensões incorporadas ao desenho orientam o processo de implementação e que, no caso da transformação digital, combinações equilibradas de instrumentos são decisivas para a efetividade da política. O artigo mostra que não basta possuir instrumentos em abundância nem adotar um repertório formalmente moderno; o que importa é o modo como instrumentos substantivos e procedimentais, distribuídos entre autoridade, organização, nodalidade e, em menor medida, outras formas de intervenção, se combinam para produzir capacidades de coordenação, prestação de serviços, comunicação e adaptação. Daí decorre um argumento mais amplo: estilos de implementação não são simples efeitos contextuais posteriores ao desenho, mas expressões do próprio desenho em operação. Essa formulação aproxima desenho e implementação de maneira produtiva, recusando a ideia de que a implementação seria apenas uma etapa posterior e separada da escolha instrumental.",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tese principal sustenta que as dimensões incorporadas ao desenho orientam o processo de implementação e que, no caso da transformação digital, combinações equilibradas de instrumentos são decisivas para a efetividade da política. O artigo mostra que não basta possuir instrumentos em abundância nem adotar um repertório formalmente moderno; o que importa é o modo como instrumentos substantivos e procedimentais, distribuídos entre autoridade, organização, nodalidade e, em menor medida, outras formas de intervenção, se combinam para produzir capacidades de coordenação, prestação de serviços, comunicação e adaptação. Daí decorre um argumento mais amplo: estilos de implementação não são simples efeitos contextuais posteriores ao desenho, mas expressões do próprio desenho em operação. Essa formulação aproxima desenho e implementação de maneira produtiva, recusando a ideia de que a implementação seria apenas uma etapa posterior e separada da escolha instrumental ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p3",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "No plano conceitual, o texto mobiliza uma arquitetura analítica bastante disciplinada. O núcleo da classificação dos instrumentos vem da tipologia NATO de Hood, que organiza os meios de ação pública em nodalidade, autoridade, tesouro e organização. A essa base, os autores articulam a distinção entre instrumentos substantivos e procedimentais, o que lhes permite observar não apenas o tipo de recurso estatal mobilizado, mas também a natureza da intervenção. A noção de microdimensões emerge justamente dessa dupla operação analítica: observar o instrumento em sua categoria formal e, ao mesmo tempo, na sua função prática dentro do arranjo de política. Com isso, a transformação digital deixa de ser tratada como agenda tecnológica genérica e passa a ser examinada como composição específica de mecanismos de regulação, coordenação, estruturação organizacional, comunicação e provisão de serviços.",
+      "content": [
+        {
+          "type": "text",
+          "text": "No plano conceitual, o texto mobiliza uma arquitetura analítica bastante disciplinada. O núcleo da classificação dos instrumentos vem da tipologia NATO de Hood, que organiza os meios de ação pública em nodalidade, autoridade, tesouro e organização. A essa base, os autores articulam a distinção entre instrumentos substantivos e procedimentais, o que lhes permite observar não apenas o tipo de recurso estatal mobilizado, mas também a natureza da intervenção. A noção de microdimensões emerge justamente dessa dupla operação analítica: observar o instrumento em sua categoria formal e, ao mesmo tempo, na sua função prática dentro do arranjo de política. Com isso, a transformação digital deixa de ser tratada como agenda tecnológica genérica e passa a ser examinada como composição específica de mecanismos de regulação, coordenação, estruturação organizacional, comunicação e provisão de serviços ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p4",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Esse enquadramento permite aos autores desenvolver uma categoria analítica particularmente relevante: a distinção entre arranjos mais substantivos e arranjos mais procedimentais. Os primeiros tendem a se apoiar em instrumentos de autoridade e organização, como planos, plataformas, estruturas formais e mecanismos operacionais de entrega. Os segundos enfatizam regras de coordenação, participação, legitimação e adaptação entre atores. O ponto importante é que o artigo não apresenta essa distinção como oposição rígida entre modelos bons e ruins. Ao contrário, o estudo sugere que ambas as orientações podem ser funcionais, mas produzem capacidades e limitações distintas. Arranjos mais substantivos favorecem direção técnica e operacionalidade; arranjos mais procedimentais fortalecem coordenação, legitimidade e adaptabilidade. O problema surge quando há desequilíbrio excessivo, isto é, quando a política se torna tecnicamente fechada ou processualmente difusa demais para sustentar implementação consistente.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Esse enquadramento permite aos autores desenvolver uma categoria analítica particularmente relevante: a distinção entre arranjos mais substantivos e arranjos mais procedimentais. Os primeiros tendem a se apoiar em instrumentos de autoridade e organização, como planos, plataformas, estruturas formais e mecanismos operacionais de entrega. Os segundos enfatizam regras de coordenação, participação, legitimação e adaptação entre atores. O ponto importante é que o artigo não apresenta essa distinção como oposição rígida entre modelos bons e ruins. Ao contrário, o estudo sugere que ambas as orientações podem ser funcionais, mas produzem capacidades e limitações distintas. Arranjos mais substantivos favorecem direção técnica e operacionalidade; arranjos mais procedimentais fortalecem coordenação, legitimidade e adaptabilidade. O problema surge quando há desequilíbrio excessivo, isto é, quando a política se torna tecnicamente fechada ou processualmente difusa demais para sustentar implementação consistente ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p5",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Do ponto de vista metodológico, o estudo se organiza como análise comparativa qualitativa de documentos regulatórios estaduais. A escolha metodológica é coerente com o objetivo do artigo: se a intenção é reconstruir desenhos de política a partir de seus componentes formais, o exame sistemático de estratégias, decretos, planos e atos regulatórios é um caminho adequado para identificar instrumentos, combinações e ênfases normativas. O corpus entre 2019 e 2025 permite captar o momento de intensificação e formalização da agenda de governo digital nos estados, em especial após a reorganização federal do tema. A estratégia comparativa entre as 27 unidades da federação também é um trunfo, pois possibilita mapear variações intra-nacionais expressivas sob um mesmo ambiente federativo. Ainda que o artigo não esteja centrado em rastrear implementação empírica em profundidade no nível de rua, sua inferência sobre estilos de implementação deriva de forma plausível da configuração documental dos instrumentos.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Do ponto de vista metodológico, o estudo se organiza como análise comparativa qualitativa de documentos regulatórios estaduais. A escolha metodológica é coerente com o objetivo do artigo: se a intenção é reconstruir desenhos de política a partir de seus componentes formais, o exame sistemático de estratégias, decretos, planos e atos regulatórios é um caminho adequado para identificar instrumentos, combinações e ênfases normativas. O corpus entre 2019 e 2025 permite captar o momento de intensificação e formalização da agenda de governo digital nos estados, em especial após a reorganização federal do tema. A estratégia comparativa entre as 27 unidades da federação também é um trunfo, pois possibilita mapear variações intra-nacionais expressivas sob um mesmo ambiente federativo. Ainda que o artigo não esteja centrado em rastrear implementação empírica em profundidade no nível de rua, sua inferência sobre estilos de implementação deriva de forma plausível da configuração documental dos instrumentos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p6",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Os achados centrais apontam para forte heterogeneidade entre estados. Alguns priorizam instrumentos substantivos vinculados à autoridade e à organização, como planos formais e plataformas digitais, produzindo políticas mais tecnicizadas e operacionalmente orientadas. Outros enfatizam instrumentos procedimentais, com maior peso para coordenação, legitimação e adaptabilidade institucional. O artigo interpreta essas diferenças não como mera dispersão administrativa, mas como configurações distintas de capacidade estatal e de concepção sobre como conduzir a transformação digital. Essa leitura é especialmente importante porque evita reduzir a agenda digital a uma questão de maturidade tecnológica. O que está em jogo, segundo o estudo, é um problema de desenho: como os governos estruturam relações entre normas, capacidades organizacionais, comunicação e entrega de serviços para tornar a digitalização governável e implementável.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os achados centrais apontam para forte heterogeneidade entre estados. Alguns priorizam instrumentos substantivos vinculados à autoridade e à organização, como planos formais e plataformas digitais, produzindo políticas mais tecnicizadas e operacionalmente orientadas. Outros enfatizam instrumentos procedimentais, com maior peso para coordenação, legitimação e adaptabilidade institucional. O artigo interpreta essas diferenças não como mera dispersão administrativa, mas como configurações distintas de capacidade estatal e de concepção sobre como conduzir a transformação digital. Essa leitura é especialmente importante porque evita reduzir a agenda digital a uma questão de maturidade tecnológica. O que está em jogo, segundo o estudo, é um problema de desenho: como os governos estruturam relações entre normas, capacidades organizacionais, comunicação e entrega de serviços para tornar a digitalização governável e implementável ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p7",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "A principal contribuição do artigo para a disciplina está em mostrar que a análise de instrumentos ganha poder explicativo quando desce ao nível das microcalibragens do desenho. Em vez de tomar o mix de instrumentos como um bloco homogêneo, o estudo investiga a natureza das combinações e sua tradução em estilos de implementação. Isso reforça uma agenda analítica que vincula desenho, capacidade estatal e governança digital sem diluir a especificidade de cada dimensão. Além disso, o texto amplia o alcance empírico da literatura ao deslocar a atenção para o nível subnacional brasileiro, ainda relativamente pouco explorado em estudos sobre transformação digital. Para a administração pública, a implicação é direta: políticas digitais eficazes dependem menos de aderir genericamente ao ideal de modernização e mais de calibrar, de forma coerente, instrumentos de coordenação, regulação, organização e interface com usuários.",
+      "content": [
+        {
+          "type": "text",
+          "text": "A principal contribuição do artigo para a disciplina está em mostrar que a análise de instrumentos ganha poder explicativo quando desce ao nível das microcalibragens do desenho. Em vez de tomar o mix de instrumentos como um bloco homogêneo, o estudo investiga a natureza das combinações e sua tradução em estilos de implementação. Isso reforça uma agenda analítica que vincula desenho, capacidade estatal e governança digital sem diluir a especificidade de cada dimensão. Além disso, o texto amplia o alcance empírico da literatura ao deslocar a atenção para o nível subnacional brasileiro, ainda relativamente pouco explorado em estudos sobre transformação digital. Para a administração pública, a implicação é direta: políticas digitais eficazes dependem menos de aderir genericamente ao ideal de modernização e mais de calibrar, de forma coerente, instrumentos de coordenação, regulação, organização e interface com usuários ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p8",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Ao mesmo tempo, o artigo apresenta limites e tensões analíticas que são produtivos para a leitura crítica. Como a base empírica repousa principalmente em documentos regulatórios, o estudo identifica com precisão o desenho formal, mas alcança apenas de maneira indireta os efeitos concretos da implementação, as disputas burocráticas cotidianas e a recepção social dos instrumentos. Há também uma tensão entre inferir estilos de implementação a partir do desenho e demonstrar empiricamente que esses estilos se materializam de modo consistente na prática administrativa. Além disso, a ênfase na combinação equilibrada de instrumentos é teoricamente persuasiva, mas pode exigir maior especificação dos critérios pelos quais equilíbrio e efetividade são avaliados em contextos federativos tão desiguais. Esses limites, contudo, não enfraquecem o artigo; antes, indicam uma agenda promissora de aprofundamento, combinando análise documental com investigação processual e estudos de caso de implementação.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao mesmo tempo, o artigo apresenta limites e tensões analíticas que são produtivos para a leitura crítica. Como a base empírica repousa principalmente em documentos regulatórios, o estudo identifica com precisão o desenho formal, mas alcança apenas de maneira indireta os efeitos concretos da implementação, as disputas burocráticas cotidianas e a recepção social dos instrumentos. Há também uma tensão entre inferir estilos de implementação a partir do desenho e demonstrar empiricamente que esses estilos se materializam de modo consistente na prática administrativa. Além disso, a ênfase na combinação equilibrada de instrumentos é teoricamente persuasiva, mas pode exigir maior especificação dos critérios pelos quais equilíbrio e efetividade são avaliados em contextos federativos tão desiguais. Esses limites, contudo, não enfraquecem o artigo; antes, indicam uma agenda promissora de aprofundamento, combinando análise documental com investigação processual e estudos de caso de implementação ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p9",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "No diálogo com o restante do corpus, o texto ocupa posição estratégica porque opera como desdobramento empírico e analítico de preocupações mais amplas da literatura sobre desenho de políticas. Em relação ao mapeamento conceitual do campo realizado por",
+      "content": [
+        {
+          "type": "text",
+          "text": "No diálogo com o restante do corpus, o texto ocupa posição estratégica porque opera como desdobramento empírico e analítico de preocupações mais amplas da literatura sobre desenho de políticas. Em relação ao mapeamento conceitual do campo realizado por ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "narrative",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ", este artigo avança ao transformar uma agenda de sistematização teórica em modelo operacional aplicado a um setor substantivo específico. Já em comparação com o estudo sobre dinâmicas de ajuste entre objetivos e instrumentos em infraestrutura de transportes, há convergência na ideia de que o desenho deve ser entendido como relação entre fins e meios em contextos institucionais concretos, embora aqui o foco recaia menos sobre dinâmica temporal do ajuste e mais sobre variação comparativa das combinações instrumentais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Por fim, o contraste com a discussão sobre design, não design e anti-design evidencia que o artigo atual trabalha com contextos em que há intencionalidade formalizada e visível no desenho, diferentemente de situações marcadas por ambiguidade regulatória ou bloqueio deliberado da ação pública ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Esse diálogo não produz uma unidade artificial no corpus, mas ajuda a localizar o texto como contribuição situada: ele mostra o que se ganha analiticamente quando a investigação sai do plano geral da literatura e entra na observação fina das microescolhas instrumentais em um campo de política em rápida transformação.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p10",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}

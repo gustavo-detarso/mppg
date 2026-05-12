@@ -1,0 +1,99 @@
+{
+  "app_bundle": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle",
+  "applied": true,
+  "remove_outputs": false,
+  "remove_projects": false,
+  "actions": [
+    {
+      "action": "mkdir",
+      "path": "examples/doi",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "mkdir",
+      "path": "examples/toml",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "mkdir",
+      "path": "institutions/fgv/assets",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "mkdir",
+      "path": "institutions/fgv/latex",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "mkdir",
+      "path": "institutions/fgv/templates",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "mkdir",
+      "path": "institutions/fgv/docx",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "mkdir",
+      "path": "institutions/fgv/validators",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "mkdir",
+      "path": "institutions/fgv/prompts",
+      "target": null,
+      "status": "created",
+      "note": "estrutura canônica institucional"
+    },
+    {
+      "action": "move",
+      "path": "examples/doi_manifest_template.csv",
+      "target": "examples/doi/doi_manifest_template.csv",
+      "status": "moved",
+      "note": "mover exemplos DOI para examples/doi"
+    },
+    {
+      "action": "move",
+      "path": "examples/doi_manifest_template_com_exemplos.csv",
+      "target": "examples/doi/doi_manifest_template_com_exemplos.csv",
+      "status": "moved",
+      "note": "mover exemplos DOI para examples/doi"
+    },
+    {
+      "action": "delete",
+      "path": "misc/fgv.png",
+      "target": null,
+      "status": "deleted",
+      "note": "duplicata global; usar institutions/fgv"
+    },
+    {
+      "action": "delete",
+      "path": "scripts/pipeline/__pycache__",
+      "target": null,
+      "status": "deleted",
+      "note": "cache Python"
+    },
+    {
+      "action": "delete",
+      "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/_backup_pre_academic_pipeline_rc10_7_32_20260512_171201",
+      "target": null,
+      "status": "deleted",
+      "note": "backup local de atualização"
+    }
+  ]
+}

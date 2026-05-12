@@ -1,0 +1,1008 @@
+{
+  "id": "sec-comparacao-textos",
+  "level": 1,
+  "title": "Comparação entre os textos",
+  "blocks": [
+    {
+      "type": "table",
+      "text": "",
+      "content": [],
+      "level": 0,
+      "items": [],
+      "table": {
+        "headers": [
+          "Texto",
+          "Objeto e problema",
+          "Escala e método",
+          "Conceitos centrais",
+          "Contribuição",
+          "Limite/tensão"
+        ],
+        "rows": [
+          [
+            "Estudo sobre o Suas",
+            "Efeitos de um sistema nacional sobre a implementação municipal e a redução de desigualdades territoriais",
+            "Escala federativa e municipal; análise comparativa com indicadores nacionais de implementação e capacidade",
+            "sistemas nacionais, coordenação federativa, indução federal, capacidades institucionais, governança multinível",
+            "Mostra que arranjos nacionais podem induzir expansão e convergência da implementação sem eliminar a relevância das capacidades locais",
+            "Capta melhor estrutura e oferta do que interações concretas, qualidade do atendimento e experiência dos usuários"
+          ],
+          [
+            "Coletânea sobre implementação no Brasil",
+            "Consolidação do campo de estudos da implementação e demonstração de sua centralidade analítica",
+            "Escala teórico-programática e multissetorial; síntese conceitual e pluralidade de estudos empíricos",
+            "implementação, burocratas de nível de rua, discricionariedade, capacidades estatais, coordenação, arranjos institucionais",
+            "Oferece vocabulário comum para compreender a política pública em operação, para além do desenho formal",
+            "Amplitude maior que integração teórica; abre agendas mais do que resolve tensões entre abordagens"
+          ],
+          [
+            "Artigo sobre categorização de usuários",
+            "Como práticas cotidianas de agentes produzem diferenças sociais no atendimento",
+            "Escala microinteracional; estudo qualitativo com foco nas narrativas de implementadores",
+            "discricionariedade, categorização, usuários fáceis e difíceis, fronteiras simbólicas, coping, creaming, gatekeeping",
+            "Explicita como a implementação pode reproduzir ou aprofundar desigualdades por classificações morais e funcionais",
+            "Privilegia a perspectiva dos agentes e menos os efeitos observados nas trajetórias dos usuários"
+          ],
+          [
+            "Artigo sobre Estado e organizações religiosas",
+            "Condições de cooperação entre Estado e organizações confessionais na implementação de serviços",
+            "Escala interorganizacional; estudo de caso qualitativo com documentos e entrevistas",
+            "organizações confessionais, hibridização, mediações simbólicas, mediações posicionais, ajuste institucional",
+            "Amplia o campo da implementação para interfaces híbridas entre Estado e sociedade civil e para a dimensão moral dos arranjos",
+            "Generalização limitada e menor desenvolvimento dos efeitos normativos e distributivos para os usuários"
+          ]
+        ],
+        "caption": "Síntese comparativa dos principais eixos transversais do corpus"
+      },
+      "id": "tbl-comparacao-corpus",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tomados em conjunto, os quatro textos convergem em um ponto decisivo: a implementação não é tratada como fase residual, mecânica ou subordinada da política pública, mas como espaço de produção efetiva da ação estatal, no qual normas, organizações, burocracias, valores e interações reconfiguram o que a política é em termos concretos. Essa convergência, contudo, não deve ser confundida com homogeneidade temática ou teórica plena. O corpus é internamente heterogêneo e sua força reside justamente em mostrar que a implementação pode ser observada em escalas muito distintas — sistêmica, programática, interacional e interorganizacional — sem que uma delas esgote o fenômeno. A coletânea organizada por Gabriela Lotta fornece o enquadramento mais geral dessa premissa, ao sustentar que a política formulada não coincide com a política efetivamente produzida ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Os demais trabalhos, por sua vez, demonstram empiricamente essa proposição em registros analíticos diversos: um pela via da coordenação federativa e dos efeitos de sistemas nacionais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": "; outro pela via da categorização cotidiana de usuários e da produção de diferenças sociais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": "; e outro ainda pelas mediações que tornam possível a cooperação entre Estado e organizações confessionais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p1",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A primeira diferença transversal substantiva diz respeito ao objeto de análise. O estudo sobre o Suas examina um arranjo institucional nacionalmente estruturado e pergunta pelos efeitos desse desenho sobre a implementação municipal, isto é, pelo modo como regras federais, transferências, pactuações e parâmetros nacionais induzem expansão e convergência na provisão local ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Já a coletânea sobre implementação não se organiza em torno de um único objeto substantivo, mas de um objeto disciplinar: o próprio campo dos estudos de implementação, sua autonomia relativa e sua capacidade de iluminar o funcionamento concreto das políticas públicas ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O artigo sobre categorização de usuários desloca a lente para o encontro entre agentes e cidadãos, focalizando o trabalho cotidiano de classificação que transforma heterogeneidade social em tratamento burocrático diferencial ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Por fim, o texto sobre organizações religiosas examina as interfaces entre Estado e sociedade civil organizada, analisando como a implementação se estabiliza em arranjos híbridos atravessados por lógicas normativas distintas ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Em termos comparativos, isso significa que o corpus não trata de um único problema empírico, mas de múltiplas entradas para uma mesma questão mais ampla: como a ação pública ganha forma na prática.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p2",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Essa pluralidade de objetos corresponde a diferenças igualmente importantes de escala analítica. O artigo sobre o Suas opera em escala macro e meso, porque relaciona a arquitetura federativa de um sistema nacional a padrões agregados de implementação municipal ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O livro organizado por Lotta transita entre escalas, mas sua função principal é meta-analítica: oferecer categorias que permitam conectar burocracias, arranjos, coordenação, capacidades e efeitos não previstos em diferentes contextos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O estudo sobre usuários fáceis e difíceis se concentra em escala micro, nas práticas situadas e nos esquemas classificatórios que organizam o trabalho dos implementadores ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O artigo sobre organizações confessionais trabalha em escala meso, privilegiando relações interorganizacionais e mecanismos de mediação entre diferentes matrizes institucionais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". A comparação mostra, portanto, que o corpus é menos um conjunto de respostas concorrentes do que uma composição multiescalar. Se lidos em sequência, os textos sugerem que a implementação precisa ser pensada como fenômeno simultaneamente estruturado por instituições amplas, mediado por organizações e produzido em interações concretas.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p3",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os métodos empregados reforçam essa heterogeneidade. O estudo do Suas é o que mais se aproxima de uma estratégia comparativa nacional baseada em indicadores agregados, buscando medir variação e convergência territorial ao longo do tempo ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". A coletânea, por definição, não adota um método único; ela combina síntese teórica com demonstrações empíricas plurais, o que a torna mais útil como mapa de abordagens do que como intervenção causal unificada ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Os artigos sobre categorização de usuários e sobre organizações religiosas recorrem a estratégias qualitativas, mas com focos distintos: no primeiro, as narrativas de agentes permitem reconstruir esquemas cognitivos e morais de classificação ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": "; no segundo, entrevistas e documentos sustentam uma análise processual de mediações e ajustes institucionais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Não há aqui superioridade intrínseca de um método sobre outro. O ponto comparativo relevante é que cada estratégia responde a um tipo diferente de pergunta. O desenho agregativo permite captar padrões de expansão e convergência; os desenhos qualitativos permitem captar mecanismos, classificações, conflitos e traduções invisíveis em indicadores nacionais. A articulação possível entre os textos depende de reconhecer essa divisão de trabalho analítica, e não de exigir de cada um aquilo que apenas outro poderia oferecer.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p4",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "No plano conceitual, há convergências claras, mas também arquiteturas distintas. A coletânea oferece o repertório mais abrangente, com categorias como implementação, discricionariedade, burocracias de nível de rua, burocracias de médio escalão, capacidades estatais, coordenação e arranjos institucionais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O texto sobre o Suas apropria-se de parte desse vocabulário, mas o reorganiza em torno de sistemas nacionais de políticas públicas, coordenação federativa, indução federal e governança multinível ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O artigo sobre categorização de usuários radicaliza o foco na discricionariedade, articulando-o a categorias mais finas, como coping, creaming, gatekeeping e fronteiras simbólicas, para mostrar como o tratamento burocrático diferencia sujeitos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Já o estudo sobre organizações religiosas desloca o vocabulário para hibridização, mediações simbólicas, mediações posicionais e ajuste institucional, expandindo o campo da implementação para relações entre organizações portadoras de racionalidades distintas ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Comparativamente, isso significa que o corpus não compartilha uma gramática única, mas um núcleo comum: todos os textos rejeitam a ideia de que regras bastam para explicar a política em ação. Divergem, porém, quanto ao local privilegiado onde essa insuficiência se manifesta: no federalismo, nas burocracias, nas interações com usuários ou nas interfaces entre organizações.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p5",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os pressupostos teóricos também se aproximam sem se confundirem. Em todo o corpus há uma crítica, explícita ou implícita, às leituras lineares do ciclo de políticas quando ele é tomado como descrição empírica simples. A coletânea formula isso de modo mais programático ao insistir que implementação não é mera execução ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O artigo sobre o Suas, embora menos centrado em discussão epistemológica, compartilha um institucionalismo orientado por efeitos de arranjos e capacidades, no qual a política é resultado de interação entre regras, incentivos e condições locais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O texto sobre categorização de usuários opera com pressupostos mais próximos de uma sociologia interacional e moral da ação pública, mostrando que categorias e julgamentos cotidianos são constitutivos da distribuição concreta de direitos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O artigo sobre organizações religiosas, por sua vez, enfatiza a coprodução relacional e os processos de tradução entre lógicas institucionais heterogêneas, recusando tanto a separação rígida entre Estado e sociedade civil quanto a ideia de cooperação como simples alinhamento funcional ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". A principal divergência teórica, assim, não está em um desacordo frontal, mas na ênfase causal privilegiada por cada texto: estruturas e incentivos, vocabulário de campo, classificação prática ou mediação institucional.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p6",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quanto às convergências empíricas reais, duas merecem destaque. A primeira é que todos os textos mostram que a implementação é atravessada por mediações. No estudo do Suas, a mediação aparece na relação entre coordenação federal e capacidade municipal ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". No livro, ela aparece na multiplicidade de atores, escalas e arranjos que tornam a política diferente de seu desenho ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". No artigo sobre usuários, a mediação assume a forma de julgamentos e classificações produzidos por agentes de linha de frente ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". No texto sobre organizações confessionais, surge como tradução entre repertórios estatais e religiosos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". A segunda convergência é a recusa de imaginar o Estado como ator unitário. Em todos os casos, o Estado aparece distribuído em níveis federativos, burocracias, organizações, contratos e interações. Isso constitui contribuição importante para a disciplina, porque desloca a análise de modelos jurídicos ou formalistas para configurações efetivas de ação pública.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p7",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "As divergências reais, por sua vez, dizem respeito sobretudo ao que cada texto considera decisivo para explicar variação na implementação. No artigo sobre o Suas, o ponto crucial está na capacidade dos sistemas nacionais de induzir comportamentos e reduzir desigualdades territoriais, ainda que sem anular diferenças de capacidade local ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". No artigo sobre categorização de usuários, o núcleo explicativo desloca-se para o nível microssocial, mostrando que políticas formalmente orientadas por direitos podem ser moduladas por classificações morais e funcionais do público ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Já o estudo sobre organizações religiosas sugere que a eficácia ou estabilidade da implementação depende, em certos contextos, menos da aderência a regras uniformes e mais da existência de encaixes relacionais entre lógicas institucionais distintas ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". A coletânea não arbitra essa divergência; ao contrário, legitima sua coexistência ao apresentar a implementação como campo plural ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Comparativamente, isso impede qualquer conclusão simplista do tipo “a implementação se explica por X”. O corpus sugere, antes, que o peso relativo de instituições, capacidades, discricionariedade e mediações varia conforme o objeto e a escala.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p8",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em termos de contribuição para a disciplina, cada texto ocupa um lugar específico e complementar. A coletânea tem função de consolidação e ensino do campo, ao sistematizar categorias e demonstrar que implementação é dimensão constitutiva da análise de políticas públicas no Brasil ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O artigo sobre o Suas contribui ao conectar estudos de implementação com federalismo e coordenação de políticas sociais, oferecendo evidência de que sistemas nacionais importam para padrões territoriais de provisão ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O estudo sobre usuários aprofunda o debate sobre burocracias de nível de rua ao mostrar que a discricionariedade não afeta apenas eficiência ou adaptação, mas também a produção institucional de diferenças sociais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". O texto sobre organizações religiosas amplia o perímetro do campo ao incorporar arranjos híbridos, coprodução interorganizacional e disputas morais na provisão de serviços ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Vistos em conjunto, os textos ajudam a deslocar a disciplina de uma visão centrada exclusivamente no desenho formal para uma concepção da implementação como arena de coordenação, interpretação, classificação e tradução.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p9",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os limites comparativos do corpus também precisam ser explicitados para evitar unidade artificial. Em primeiro lugar, trata-se de textos com naturezas diferentes: uma coletânea programática, um estudo quantitativo-comparativo de política nacional e dois artigos qualitativos focalizados em mecanismos distintos. Isso torna inadequado exigir a mesma forma de prova, o mesmo tipo de generalização ou o mesmo nível de abstração de todos eles. Em segundo lugar, os setores e contextos empíricos não são idênticos: assistência social, saúde e comunidades terapêuticas envolvem públicos, regimes de provisão e conflitos normativos diferentes. Em terceiro lugar, nem todos os textos têm como foco principal os efeitos distributivos para os usuários, ainda que todos permitam inferências sobre eles em alguma medida. O estudo do Suas fala mais diretamente de convergência institucional e territorial do que de experiência concreta do usuário ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": "; o artigo sobre categorização faz o movimento inverso ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": "; e o texto sobre organizações religiosas privilegia as condições de cooperação e hibridização mais do que a avaliação dos resultados substantivos do cuidado ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Esses limites não enfraquecem a comparação; apenas definem seu alcance legítimo.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p10",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "As articulações mais promissoras entre os textos surgem quando se aceita essa heterogeneidade como vantagem analítica. O estudo do Suas pode ser lido como demonstração de que arranjos nacionais moldam oportunidades e constrangimentos da implementação local, mas ele ganha profundidade quando colocado ao lado do artigo sobre categorização, que mostra como a política assim estruturada ainda depende de encontros concretos e julgamentos práticos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais",
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". A coletânea, por sua vez, funciona como ponte entre esses níveis ao oferecer linguagem para tratar, num mesmo horizonte, capacidades, coordenação e discricionariedade ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Já o texto sobre organizações religiosas acrescenta uma camada que os outros apenas tangenciam: a implementação pode ocorrer em ecossistemas híbridos, nos quais nem o Estado nem a burocracia pública possuem monopólio da ação implementadora ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Isso sugere uma leitura transversal forte, porém não artificial: a implementação é multiescalar e relacional, sendo produzida por sistemas, organizações, burocratas e interfaces institucionais. O que varia de texto para texto é o ponto de entrada analítico escolhido para tornar essa complexidade visível.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p11",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em síntese comparativa, o corpus não autoriza uma narrativa unificada simples, mas sustenta uma conclusão robusta para a disciplina: compreender políticas públicas exige estudar a distância produtiva entre desenho e operação. Essa distância não é mero ruído. Ela é o lugar onde se decidem expansão territorial, coordenação federativa, seletividade cotidiana, cooperação interorganizacional e, em última instância, o conteúdo efetivo dos direitos e serviços públicos. O mérito do conjunto está justamente em mostrar que essa produção da política em ato pode ser observada sob diferentes lentes sem perder densidade analítica. Em vez de forçar convergência temática total, a comparação mais fiel reconhece que os textos se complementam por justaposição crítica: um ilumina os efeitos estruturais dos sistemas nacionais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ", outro organiza o vocabulário e a agenda do campo ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ", outro revela a microprodução de diferenças sociais ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ", e outro expande o debate para arranjos híbridos e moralmente densos de implementação ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2023_jesus_speaks"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". A articulação possível entre eles, portanto, não é a de uma unidade temática artificial, mas a de uma cartografia sofisticada dos lugares onde a política pública efetivamente acontece.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p12",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}

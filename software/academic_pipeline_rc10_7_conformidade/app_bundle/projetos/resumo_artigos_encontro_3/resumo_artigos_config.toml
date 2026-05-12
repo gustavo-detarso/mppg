@@ -1,0 +1,256 @@
+# Gerado por academic_pipeline_toml_generator_interativo.py
+# Preset: resumo_artigos_local_fgv — Resumo analítico de artigos locais FGV
+# Descrição: Gera documento FGV com Ficha Técnica, introdução, resumos individuais, comparação, síntese analítica, considerações finais, referências e mapa mental opcional a partir de corpus local. Não faz busca externa nem relatório PRISMA.
+
+[projeto]
+nome = "resumo_artigos_encontro_3"
+descricao = "Gera documento FGV com Ficha Técnica, introdução, resumos individuais, comparação, síntese analítica, considerações finais, referências e mapa mental opcional a partir de corpus local. Não faz busca externa nem relatório PRISMA."
+preset = "resumo_artigos_local_fgv"
+
+[instituicao]
+perfil = "fgv"
+
+[openai]
+model = "gpt-5.4"
+
+[pipeline]
+modo_entrada = "documentos_locais"
+executar_pesquisa = false
+executar_documento = true
+executar_bundle = false
+pesquisa_dir_existente = ""
+
+[paths]
+# A partir da rc10.7.20, todos os diretórios de saída/cache/trabalho ficam aqui.
+document_output_dir = "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/"
+research_output_dir = "../../output/pesquisa"
+work_dir = "../../output/work"
+cache_dir = "../../output/cache"
+document_prefix = "resumo_artigos_encontro_3"
+research_prefix = "relatorio_prisma"
+create_document_subdir = true
+create_research_subdir = true
+create_work_subdir = true
+create_cache_subdir = true
+
+[orientacoes]
+paths = []
+inline = "O documento deve ser produzido exclusivamente a partir do corpus local.\nTodos os textos/artigos/capítulos fornecidos devem ser mencionados e resumidos individualmente.\nNão use revisão bibliográfica externa como base principal e não acrescente autores, títulos ou conceitos não presentes no corpus, salvo se a orientação do usuário exigir explicitamente.\nEstrutura preferencial: 1 INTRODUÇÃO; 2 RESUMO INDIVIDUAL DOS TEXTOS; 3 COMPARAÇÃO ENTRE OS TEXTOS; 4 SÍNTESE ANALÍTICA; 5 CONSIDERAÇÕES FINAIS. Não crie seção textual de REFERÊNCIAS/BIBLIOGRAFIA; o renderizador insere a bibliografia automaticamente a partir do .bib. Se o mapa mental estiver ativado, ele será inserido após a bibliografia renderizada.\nCada resumo individual deve explicitar objetivo do texto, problema central, argumento principal, conceitos relevantes, contribuição para o tema/foco da leitura e limites ou tensões quando pertinentes.\nA comparação deve destacar convergências, divergências, complementaridades e diferenças de objeto, método ou escala entre os textos.\nA síntese analítica deve articular o conjunto do corpus em uma interpretação própria, evitando mera justaposição de resumos.\nQuando pertinente, identifique limites, tensões analíticas ou lacunas dos textos, sem extrapolar além do corpus.\nOrientação específica do professor/usuário: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/orientacoes_livro.txt"
+
+[documentos_locais]
+ativos = true
+modo_entrada = "documentos_locais"
+input_zip = "../../../../../disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/documentos-base.zip"
+input_dir = ""
+tipos = ["pdf", "docx", "txt", "md", "org"]
+recursive = true
+limpar_extracao_anterior = true
+copiar_para_fulltext_cache = true
+limpar_cache_anterior = true
+auto_detect_bib = true
+gerar_bib_revisado_ia = true
+enriquecer_metadados_buscadores = true
+fontes_metadados = [
+  "crossref",
+  "openalex",
+  "semantic_scholar",
+  "scopus"
+]
+min_score_match_metadados = 0.82
+extrair_doi_dos_pdfs = true
+doi_manifest_path = "../../../../../disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/doi_manifest.csv"
+preferir_doi_manual = true
+buscar_metadados_por_doi = true
+incluir_notas_metadados_inferidos = false
+deduplicar_bib = true
+deduplicar_referencias = true
+autor_padrao = ""
+ano_padrao = "s.d."
+
+[pesquisa]
+tema = "Corpus local de textos acadêmicos. Produzir leitura analítica aprofundada de cada texto, reconstruindo problema, objetivo, argumento central, estrutura conceitual, método/evidências, contribuições, limites e diálogo com o restante do corpus, sem forçar unidade temática artificial."
+recorte = "Comparar os textos apenas em aspectos transversais realmente presentes no corpus: problema abordado, argumento central, conceitos utilizados, tipo de abordagem, método/evidências, contribuição para a disciplina e limites analíticos. Não forçar convergências ou unidade temática artificial."
+objetivo = "Elaborar análise acadêmica aprofundada de cada texto do corpus local, comparando conexões reais entre eles e produzindo uma síntese interpretativa útil para a disciplina, com fidelidade ao material fornecido e sem transformar o resultado em resumo meramente sinóptico."
+pergunta_pesquisa = ""
+hipotese = ""
+palavras_chave = []
+idiomas = [
+  "português"
+]
+tipo_estudo = "resumo analítico de artigos"
+periodo = ""
+bases = ["Crossref", "OpenAlex", "Semantic Scholar", "Scopus"]
+
+[resumo_artigos]
+ativo = true
+geracao_em_etapas = true
+# Quando true, o pipeline gera o document.json em chamadas separadas:
+# análise do artigo 1/N, análise do artigo 2/N, comparação e síntese.
+# Isso exibe progresso no terminal e salva checkpoints .checkpoint_*.json no output.
+modo = "analitico_comparativo"
+usar_apenas_corpus_local = true
+incluir_introducao = true
+incluir_resumos_individuais = true
+incluir_comparacao = true
+incluir_sintese_analitica = true
+incluir_consideracoes_finais = true
+incluir_referencias = true
+incluir_mapa_mental = true
+uma_secao_por_artigo = true
+comparar_convergencias = true
+comparar_divergencias = true
+apontar_limites = true
+nivel_detalhamento = "profundo"
+profundidade_analitica = "profundo"
+min_palavras_por_artigo = 1200
+min_paragrafos_por_artigo = 9
+min_palavras_comparacao = 1100
+min_palavras_sintese = 900
+max_chars_por_documento = 14000
+max_chars_total_corpus = 95000
+exigir_matriz_analitica_por_texto = true
+incluir_tabela_comparativa = true
+exigir_dialogo_entre_textos = true
+evitar_resumo_sinoptico = true
+eixos_analise = ["problema/questão central", "objetivo e escopo", "argumento/tese principal", "conceitos/categorias", "método/evidências", "achados/contribuições", "limites/tensões", "diálogo com o corpus"]
+
+[atividade]
+curso = "Mestrado Acadêmico em Políticas Públicas e Governo"
+turma = "2026.1"
+polo = "Brasília"
+disciplina = "Políticas Públicas - Teoria e Análise"
+professor = "Lizandro Lui"
+aluno = "Gustavo M. Mendes de Tarso"
+data = "2026"
+titulo_trabalho = "Resumo analítico dos textos"
+
+[documento]
+tipo_documento = "atividade"
+tipo_conteudo = "resumo_artigos"
+genero_academico = "atividade"
+layout = "atividade_fgv"
+classe_latex = "fgv-paper"
+titulo_trabalho = "Resumo analítico dos textos"
+autor = "Gustavo M. Mendes de Tarso"
+inferir_campos_vazios_ia = true
+institution_name = "fgv"
+program_name = ""
+course_name = "Mestrado Acadêmico em Políticas Públicas e Governo"
+discipline_name = "Políticas Públicas - Teoria e Análise"
+professor_name = "Lizandro Lui"
+city_name = "Brasília"
+ano = "2026"
+data = "2026"
+papertype = "Resumo analítico de artigos"
+perfil_redacao = "academico_analitico_comparativo"
+covernote = "Trabalho acadêmico elaborado para a disciplina."
+estilo_citacao = "abnt"
+exportar_org = true
+exportar_pdf = true
+exportar_docx = false
+gerar_documento_json = true
+modo_renderizacao = "document_model"
+usar_citacoes_latex_diretas = true
+validar_org_final = true
+falhar_se_org_tiver_chave_crua = true
+falhar_se_org_tiver_empty_citation = true
+falhar_se_org_tiver_mencao_tecnica = true
+
+[bibliografia]
+# O .bib é neutro. O estilo visual é aplicado na renderização.
+estilo_citacao = "abnt"
+latex_style = "abnt"
+latex_options = "backend=biber,style=abnt,sorting=nty,giveninits=true"
+docx_csl = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+buscar_metadados_por_doi = true
+enriquecer_metadados_buscadores = true
+
+[relatorio_pesquisa]
+ativo = false
+tipo = "prisma"
+titulo = ""
+exportar_json = true
+exportar_org = true
+exportar_pdf = false
+exportar_docx = false
+exportar_xlsx = false
+exportar_fluxograma = false
+validar = true
+falhar_se_invalido = false
+prisma_json_path = ""
+pesquisa_dir_existente = ""
+criterios_inclusao = [
+  "Aderência substantiva ao tema, recorte e objetivo.",
+  "Relação direta com os textos-base ou com o problema de pesquisa.",
+  "Disponibilidade de metadados mínimos ou DOI para identificação bibliográfica."
+]
+criterios_exclusao = [
+  "Fora do tema ou do recorte.",
+  "Duplicado.",
+  "Ausência de relação substantiva com a pergunta de pesquisa."
+]
+
+[docx]
+ativo = false
+reference_docx = "../../institutions/fgv/docx/reference_fgv.docx"
+usar_pandoc = false
+csl_path = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+falhar_se_pandoc_falhar = false
+incluir_capa = true
+incluir_referencias = true
+incluir_mapa_mental = true
+
+[latex]
+pdf_engine = "lualatex"
+org_latex_class_init = "../../misc/academic-writing.el"
+latex_extra_path = "../../institutions/fgv/latex"
+fgv_logo_path = "../../institutions/fgv/assets/fgv.png"
+
+[prompts]
+ativos = true
+global_paths = ["../../prompts/global/orientacao_geral_execucao.txt"]
+institution_paths = ["profile://prompts/fgv_geral.txt"]
+research_paths = [
+  "../../prompts/research/triagem_prompt.txt",
+  "../../prompts/research/diretivas_extras.txt"
+]
+paper_paths = []
+atividade_paths = [
+  "../../prompts/document/atividade.txt",
+  "../../prompts/document/resumo_artigos.txt"
+]
+resumo_artigos_paths = [
+  "../../prompts/document/resumo_artigos.txt"
+]
+dissertacao_paths = []
+prisma_paths = []
+document_paths = []
+
+[mapa_mental]
+gerar = true
+ativo = true
+posicao = "apos_referencias"
+titulo = "Mapa mental dos textos analisados"
+arquivo = "mapa_mental"
+formato = "png"
+renderizar = true
+inserir_no_org = true
+plantuml_jar_path = ""
+plantuml_limit_size = 8192
+colorido = true
+sobrescrever_cores_existentes = true
+cores_niveis = ["#D9EAF7", "#DFF2E1", "#FFF2CC", "#F8D7DA", "#F8D7DA", "#F8D7DA", "#F8D7DA"]
+falhar_se_nao_renderizar = false
+
+[conformidade]
+ativo = true
+gerar_relatorio = true
+
+[qualidade]
+ativo = true
+gerar_relatorio = true
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false

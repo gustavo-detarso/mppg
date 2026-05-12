@@ -1,0 +1,337 @@
+{
+  "id": "sec-geet-policy-design-dynamics",
+  "level": 2,
+  "title": "Policy design dynamics: fitting goals and instruments in transport infrastructure planning in the Netherlands",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O artigo examina um problema central da literatura recente de desenho de políticas: como preservar o ajuste interno de uma política quando seus objetivos e instrumentos não surgem como um arranjo integrado de uma só vez, mas se transformam incrementalmente ao longo do tempo. Em vez de tratar o desenho como um artefato estático, o texto parte da premissa de que políticas públicas são composições históricas e mutáveis, formadas por camadas sucessivas de metas, instrumentos e racionalidades de intervenção. A questão substantiva é especialmente relevante em infraestrutura de transportes, área marcada por horizontes temporais longos, investimentos intensivos, dependência de trajetória e forte acoplamento entre planejamento setorial e ordenamento territorial. Nessa chave, o artigo pergunta como a dinâmica temporal do desenho afeta a coerência entre objetivos, a consistência entre instrumentos e a congruência entre fins e meios, isto é, os componentes do que os autores denominam ajuste do desenho de política",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p1",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O objetivo do estudo é duplo. Em primeiro lugar, busca avançar empiricamente uma agenda ainda dominada por formulações conceituais, investigando de modo processual a interação entre dinâmicas de mudança do desenho e manutenção — ou deterioração — do ajuste entre seus elementos. Em segundo, procura derivar implicações práticas para formuladores de políticas, deslocando a discussão do nível abstrato para problemas concretos de governança do desenho. O escopo empírico é delimitado pela evolução do planejamento nacional de transportes nos Países Baixos entre 1997 e 2018, período em que houve uma transição importante de uma orientação mais setorial, centrada em mobilidade e infraestrutura, para uma perspectiva mais integrada entre uso do solo e transporte. Essa escolha de caso permite observar, num horizonte longitudinal suficientemente amplo, tanto mudanças nos objetivos estratégicos quanto revisões e recombinações instrumentais",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p2",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tese principal do artigo é que o ajuste entre objetivos e instrumentos nunca é um estado alcançado de forma definitiva, mas um processo contínuo e intrincado de recomposição. Os autores mostram que qualquer momento de coerência, consistência e congruência é necessariamente temporário, porque metas e instrumentos evoluem em trajetórias parcialmente distintas e muitas vezes desacopladas. O argumento mais forte do texto está em demonstrar que a mudança incremental não deve ser lida apenas como desvio em relação a um ideal de desenho racional e integrado; ela é a própria condição normal de evolução das políticas. Com isso, a questão decisiva deixa de ser a busca de um desenho ótimo originário e passa a ser a capacidade de recalibrar continuamente o arranjo existente diante de novas prioridades, novos problemas e legados institucionais sedimentados. O artigo, portanto, inscreve-se com clareza na vertente do chamado “novo” pensamento sobre desenho de políticas, que enfatiza mixes de instrumentos e objetivos, em lugar de uma relação linear e unidirecional entre um problema, um instrumento e um resultado",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p3",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Do ponto de vista conceitual, o artigo mobiliza uma arquitetura analítica bastante nítida. Os dois elementos centrais do desenho são os objetivos de política e os instrumentos de política; o foco, porém, não recai sobre cada elemento isoladamente, mas sobre suas relações de suporte recíproco. Os autores definem coerência de objetivos como a possibilidade de diferentes metas se articularem em torno de um mesmo propósito sem produzirem trade-offs insolúveis; consistência instrumental como a condição em que instrumentos se reforçam mutuamente ao criar incentivos e desincentivos alinhados; e congruência entre objetivos e meios como a correspondência entre o que se busca e os mecanismos mobilizados para alcançar esse fim. Ao reunir essas três dimensões sob o rótulo de ajuste do desenho, o artigo oferece uma categoria operacional que permite acompanhar não apenas se houve mudança, mas que tipo de mudança incidiu sobre a qualidade interna do arranjo de política",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p4",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A segunda camada conceitual decisiva é a tipologia dos modos de mudança: layering, drift, conversion, replacement e exhaustion. O artigo não os apresenta como meras categorias descritivas, mas como mecanismos historicamente observáveis por meio dos quais objetivos e instrumentos se transformam. A contribuição analítica está em conectar essa tipologia à questão do ajuste. O acréscimo de novos elementos sem remover os antigos pode melhorar a congruência com novas metas, mas também gerar inconsistências dentro do repertório instrumental; a alteração de objetivos sem revisão correspondente dos meios produz desajustes típicos de drift; a reutilização de instrumentos para novos fins pode reduzir atritos herdados; a substituição integral aparece como ideal teórico de maior liberdade de desenho, porém rara na prática; e a exaustão revela como certos elementos perdem funcionalidade sem necessariamente serem formalmente substituídos. Assim, o texto desloca a discussão de “qual instrumento escolher” para “como recompor arranjos legados sem destruir sua capacidade operacional”",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p5",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Metodologicamente, trata-se de um estudo de caso longitudinal e histórico, centrado na trajetória do planejamento nacional de infraestrutura de transportes neerlandês entre 1997 e 2018. A estratégia argumentativa reconstrói a evolução dos objetivos e dos instrumentos ao longo desse período para identificar em que momentos e por quais mecanismos o ajuste foi reforçado ou corroído. Embora o texto esteja menos interessado em testar hipóteses causais no sentido estrito do que em produzir inferência processual, sua força reside precisamente na temporalização fina do objeto. Em vez de uma fotografia sincrônica do desenho, os autores oferecem uma análise diacrônica que torna visível a defasagem entre a mudança das metas e a adaptação dos instrumentos. Isso é importante porque boa parte das avaliações de desenho tende a inferir “má qualidade” a partir de inconsistências observadas num dado momento, sem reconstruir o processo por meio do qual tais inconsistências emergiram. O artigo sugere que só uma leitura longitudinal permite distinguir desajustes transitórios, ajustes parciais e recomposições mais robustas",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p6",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os achados empíricos mais relevantes mostram que objetivos e instrumentos seguiram trajetórias diferentes e em larga medida separadas. A mudança dos objetivos, impulsionada pela passagem para uma orientação mais integrada entre transporte e uso do solo, não encontrou automaticamente um repertório instrumental ajustado a essa nova racionalidade. Nesse contexto, o layering desempenhou papel ambivalente. Por um lado, a introdução de novos instrumentos permitiu melhorar a congruência entre metas renovadas e meios de implementação, funcionando como estratégia de adaptação sem ruptura completa. Por outro, esse mesmo acréscimo sobre uma base preexistente produziu fricções entre instrumentos antigos e novos, comprometendo a consistência do mix. Para lidar com tais tensões, a conversão apareceu como mecanismo relevante: instrumentos existentes foram reinterpretados ou usados de modo distinto para acomodar finalidades redefinidas. O resultado geral não é um sistema estabilizado, mas um processo de ajuste permanente em que ganhos numa dimensão do fit podem gerar perdas em outra",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p7",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A contribuição do artigo para a disciplina é expressiva em pelo menos três planos. No plano teórico, ele operacionaliza de modo claro a noção de ajuste do desenho, tornando observável a relação entre coerência, consistência e congruência. No plano analítico, mostra que a literatura sobre mixes e dinâmica de políticas ganha densidade quando incorpora seriamente a dimensão temporal, não apenas como pano de fundo, mas como variável constitutiva do próprio objeto. No plano prático, o texto produz recomendações que decorrem diretamente do caso analisado: integrar mais estreitamente o desenho de objetivos e instrumentos desde o início; instituir monitoramento e avaliação contínuos do desempenho do desenho; e reconhecer que a combinação entre adição incremental de instrumentos e conversão de instrumentos herdados pode ser uma estratégia eficaz para ajustar políticas a metas em mutação. Essas implicações são relevantes para campos de políticas marcados por forte institucionalização, nos quais a substituição integral do arranjo é politicamente custosa ou administrativamente inviável",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p8",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao mesmo tempo, o artigo deixa algumas tensões e lacunas importantes. Sua ênfase recai sobre o ajuste interno do desenho, o que fortalece a análise da relação entre metas e instrumentos, mas tende a deixar em segundo plano conflitos políticos, disputas entre atores e assimetrias de poder que também moldam por que certos ajustes são perseguidos e outros não. O estudo mostra que há trajetórias separadas de objetivos e instrumentos, mas explora menos os mecanismos político-institucionais que produzem esse desacoplamento. Além disso, a valorização de estratégias de ajuste incremental pode sugerir uma racionalidade adaptativa relativamente ordenada, quando, em contextos menos estáveis, a sobreposição de instrumentos pode expressar ambiguidade, compromisso político ou até incapacidade decisória. Outra limitação é a dificuldade de generalização imediata: o caso neerlandês oferece grande riqueza para pensar planejamento de infraestrutura, mas não elimina a necessidade de testar a utilidade do modelo em setores nos quais os instrumentos são menos formalizados ou os objetivos mais contestados",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p9",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "No diálogo com o restante do corpus, este artigo ocupa uma posição particularmente importante porque fornece uma gramática dinâmica para pensar desenho de políticas. Seu foco longitudinal e relacional conversa diretamente com o esforço de sistematização do campo realizado por ",
+      "content": [
+        {
+          "type": "citation",
+          "mode": "narrative",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ", que também insiste na necessidade de conectar problemas, soluções e expectativas sem reduzir desenho a uma lista de instrumentos. A diferença é que o artigo aqui analisado aprofunda menos o mapeamento do campo e mais a mecânica temporal do ajuste entre elementos do desenho. Ele também antecipa uma sensibilidade útil para ler estudos comparativos sobre instrumentos específicos, como o trabalho sobre microdimensões de instrumentos digitais em estados brasileiros, ao sugerir que a qualidade do desenho depende não apenas da presença de instrumentos, mas de como eles se encaixam em objetivos em transformação ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Em contraste, o texto sobre desenho, não-desenho e anti-desenho enfatiza situações em que a própria produção de coerência pode ser interrompida ou minada por processos políticos mais desordenados, o que ajuda a qualificar a relativa normatividade presente no caso neerlandês ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ". Assim, a principal força deste artigo no conjunto do corpus está em oferecer um modelo robusto para compreender a evolução de mixes de política, mas seu diálogo comparativo também revela que ajuste, por si só, não esgota a análise quando o processo decisório é atravessado por controvérsia, omissão estratégica ou disputas sobre o próprio estatuto do problema público.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p10",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}

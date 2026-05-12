@@ -1,0 +1,213 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{bichir2020_sistemas_nacionais}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ecec9ddbee5bb7a51bd396386f3baab4}{%
+           family={Bichir},
+           familyi={B\bibinitperiod},
+           given={Renata},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d348b48e5f76e5ca92b244681c913b66}{%
+           family={Junior},
+           familyi={J\bibinitperiod},
+           given={Sergio\bibnamedelima Simoni},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=638b6d64c76e9622696df6639d34ca32}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Guilherme},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {FapUNIFESP (SciELO)}%
+      }
+      \strng{namehash}{384e73f58d2ac952e368724ec10f6458}
+      \strng{fullhash}{384e73f58d2ac952e368724ec10f6458}
+      \strng{fullhashraw}{384e73f58d2ac952e368724ec10f6458}
+      \strng{bibnamehash}{384e73f58d2ac952e368724ec10f6458}
+      \strng{authorbibnamehash}{384e73f58d2ac952e368724ec10f6458}
+      \strng{authornamehash}{384e73f58d2ac952e368724ec10f6458}
+      \strng{authorfullhash}{384e73f58d2ac952e368724ec10f6458}
+      \strng{authorfullhashraw}{384e73f58d2ac952e368724ec10f6458}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Brasileira de Ciências Sociais}
+      \field{number}{102}
+      \field{title}{SISTEMAS NACIONAIS DE POLÍTICAS PÚBLICAS E SEUS EFEITOS NA IMPLEMENTAÇÃO O caso do Sistema Único de Assistência Social (Suas)}
+      \field{volume}{35}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1590/3510207/2020
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1590/3510207/2020
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1590/3510207/2020
+      \endverb
+    \endentry
+    \entry{lotta2019_teorias_analises}{book}{}{}
+      \name{editor}{1}{}{%
+        {{hash=ab395774f1b9ba3c1d73abd0ae8ff998}{%
+           family={Lotta},
+           familyi={L\bibinitperiod},
+           given={Gabriela},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Brasília}%
+      }
+      \list{publisher}{1}{%
+        {Enap}%
+      }
+      \strng{namehash}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \strng{fullhash}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \strng{fullhashraw}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \strng{bibnamehash}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \strng{editorbibnamehash}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \strng{editornamehash}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \strng{editorfullhash}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \strng{editorfullhashraw}{ab395774f1b9ba3c1d73abd0ae8ff998}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-85-256-0123-0}
+      \field{title}{Teorias e Análises sobre Implementação de Políticas Públicas no Brasil}
+      \field{year}{2019}
+      \field{pages}{324 p.}
+      \range{pages}{-1}
+    \endentry
+    \entry{lotta2023_jesus_speaks}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=ab395774f1b9ba3c1d73abd0ae8ff998}{%
+           family={Lotta},
+           familyi={L\bibinitperiod},
+           given={Gabriela},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0c094434771732ee262c4d1e9da21eaa}{%
+           family={Cortez},
+           familyi={C\bibinitperiod},
+           given={Ana\bibnamedelima Claudia},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=948dd2c44edf165513976fe19d2d320e}{%
+           family={Magri},
+           familyi={M\bibinitperiod},
+           given={Giordano},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0630a8bdcc45ad716052f2e2ede00d8d}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelimb Izabel\bibnamedelima Sanches},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3c42807f0652bd8e3415bb6eb1a5a9b0}{%
+           family={Rosa},
+           familyi={R\bibinitperiod},
+           given={Taciana\bibnamedelima Barcellos},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=d36ab0526bc595f3732de9d585d04d76}{%
+           family={Almeida},
+           familyi={A\bibinitperiod},
+           given={Dominique\bibnamedelima Nunes},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{4deebbef6cc7fa183141ea9ee66d82cd}
+      \strng{fullhash}{575f8f8fc0a7d972ad3d2ea4322ccb7d}
+      \strng{fullhashraw}{575f8f8fc0a7d972ad3d2ea4322ccb7d}
+      \strng{bibnamehash}{4deebbef6cc7fa183141ea9ee66d82cd}
+      \strng{authorbibnamehash}{4deebbef6cc7fa183141ea9ee66d82cd}
+      \strng{authornamehash}{4deebbef6cc7fa183141ea9ee66d82cd}
+      \strng{authorfullhash}{575f8f8fc0a7d972ad3d2ea4322ccb7d}
+      \strng{authorfullhashraw}{575f8f8fc0a7d972ad3d2ea4322ccb7d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nonprofit and Voluntary Sector Quarterly}
+      \field{number}{2}
+      \field{title}{“Jesus Speaks Better”: Interactions Between State and Faith-Based Organizations in Service Implementation}
+      \field{volume}{53}
+      \field{year}{2023}
+      \field{pages}{402\bibrangedash 427}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1177/08997640231165525
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/08997640231165525
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/08997640231165525
+      \endverb
+    \endentry
+    \entry{lotta2020_categorizando_usuarios}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=cfe92c541fdcd3ebe0deb745bf87dbf0}{%
+           family={Lotta},
+           familyi={L\bibinitperiod},
+           given={Gabriela\bibnamedelima Spanghero},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=bd43bccd53362ddc4ad781b7a1780f6d}{%
+           family={Pires},
+           familyi={P\bibinitperiod},
+           given={Roberto\bibnamedelimb Rocha\bibnamedelima Coelho},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {FapUNIFESP (SciELO)}%
+      }
+      \strng{namehash}{bc5ab822ba95640628fba4f77a6378df}
+      \strng{fullhash}{bc5ab822ba95640628fba4f77a6378df}
+      \strng{fullhashraw}{bc5ab822ba95640628fba4f77a6378df}
+      \strng{bibnamehash}{bc5ab822ba95640628fba4f77a6378df}
+      \strng{authorbibnamehash}{bc5ab822ba95640628fba4f77a6378df}
+      \strng{authornamehash}{bc5ab822ba95640628fba4f77a6378df}
+      \strng{authorfullhash}{bc5ab822ba95640628fba4f77a6378df}
+      \strng{authorfullhashraw}{bc5ab822ba95640628fba4f77a6378df}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Dados}
+      \field{number}{4}
+      \field{title}{Categorizando Usuários “Fáceis” e “Difíceis”: Práticas Cotidianas de Implementação de Políticas Públicas e a Produção de Diferenças Sociais}
+      \field{volume}{63}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1590/dados.2020.63.4.219
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1590/dados.2020.63.4.219
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1590/dados.2020.63.4.219
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

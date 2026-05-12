@@ -1,0 +1,922 @@
+{
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "level": 1,
+      "title": "Introdução",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O corpus reúne quatro textos que, embora não formem um conjunto tematicamente homogêneo em sentido estrito, convergem em torno de um problema disciplinar comum: compreender a implementação de políticas públicas como processo efetivo de produção da ação estatal. Em vez de tratar a implementação como etapa residual entre formulação e resultados, os trabalhos a examinam em planos distintos e complementares: a coordenação federativa e os efeitos de sistemas nacionais sobre a provisão local ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; a consolidação teórica e analítica do próprio campo dos estudos de implementação no Brasil ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; as práticas cotidianas de categorização de usuários por agentes implementadores ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; e as interfaces entre Estado e organizações confessionais na prestação de serviços públicos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-int-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O foco de leitura adotado neste documento é, portanto, menos substantivo-setorial do que analítico. O interesse principal não está em extrair uma unidade temática artificial entre assistência social, saúde, coordenação federativa e cooperação com organizações religiosas, mas em identificar como cada texto ilumina dimensões específicas da implementação: suas mediações institucionais, suas escalas de operação, seus mecanismos de coordenação, seus julgamentos práticos e seus efeitos sobre a distribuição concreta de bens e serviços públicos. Essa opção é coerente com a própria heterogeneidade do corpus, que combina obra de enquadramento teórico, estudo de alcance nacional, investigação microinteracional e análise interorganizacional.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-int-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "A unidade possível entre os textos não reside, assim, em um mesmo objeto empírico, mas em um diagnóstico comum: políticas públicas não se realizam automaticamente por força do desenho formal. Entre norma e prática, há burocracias, capacidades, arranjos federativos, valores, classificações e interfaces organizacionais que transformam o conteúdo concreto da ação estatal. A coletânea organizada por Gabriela Lotta explicita esse deslocamento ao afirmar a implementação como campo autônomo de investigação ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; os demais textos mostram, em registros diferentes, como essa autonomia analítica se confirma empiricamente, seja no efeito estruturante de sistemas nacionais ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ", na produção cotidiana de diferenças sociais ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": " ou na construção de ajustes entre lógicas institucionais heterogêneas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-int-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo deste documento é oferecer uma leitura de fechamento capaz de articular o corpus em chave interpretativa, consolidando seus eixos transversais sem reduzir suas diferenças. Isso implica, de um lado, reconstruir a lógica comum que atravessa os textos; de outro, preservar a especificidade de cada contribuição quanto ao problema abordado, à escala de análise, ao método mobilizado e ao tipo de mecanismo explicativo privilegiado. A aposta analítica é que o conjunto permite compreender a implementação como fenômeno multiescalar: ela é simultaneamente estruturada por instituições, operada por organizações, mediada por burocracias e experimentada nas relações concretas entre Estado e públicos.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-int-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O caminho analítico adotado acompanha esse diagnóstico. Primeiro, parte-se do reconhecimento da heterogeneidade do corpus para evitar comparações forçadas. Em seguida, privilegiam-se apenas os eixos de comparação efetivamente sustentados pelos textos: problema de pesquisa, arquitetura conceitual, escala analítica, tipo de evidência, mecanismos explicativos, contribuição para a disciplina e limites. Por fim, a síntese analítica desloca a leitura da comparação descritiva para uma interpretação própria: a de que o principal ganho do conjunto está em demonstrar que a implementação é o lugar em que a política pública deixa de ser apenas desenho e se torna relação social institucionalizada, com efeitos distributivos, organizacionais e normativos que variam conforme os arranjos pelos quais o Estado opera.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-int-5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-sintese-analitica",
+      "level": 1,
+      "title": "Síntese analítica",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma leitura articulada do corpus sugere que sua contribuição mais forte não está em responder a uma única pergunta substantiva, mas em desmontar uma imagem empobrecida do Estado. Nos quatro textos, o Estado não aparece como centro coerente que define e depois simplesmente executa políticas; ele surge como composição de níveis federativos, burocracias, organizações, interações e traduções. Essa mudança de perspectiva é decisiva porque desloca a implementação do lugar de “etapa posterior” para o lugar de problema constitutivo. A coletânea sobre implementação fornece a formulação mais explícita dessa inflexão ao mostrar que a política em operação não coincide com a política formulada ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Os demais textos podem ser lidos como demonstrações empíricas dessa tese geral, cada um incidindo sobre uma camada distinta da ação pública.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Nessa chave, o estudo sobre o Suas é particularmente importante porque mostra que a implementação não é apenas fenômeno local e disperso; ela também é estruturada por arquiteturas institucionais nacionais capazes de induzir padrões de provisão e reduzir desigualdades territoriais ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Seu argumento impede duas simplificações recorrentes. A primeira seria imaginar que descentralização equivale a autonomia plena dos municípios e, portanto, à impossibilidade de coordenação substantiva. A segunda seria supor que a regulação nacional basta por si só para homogeneizar a implementação. O texto recusa ambas ao mostrar que sistemas nacionais importam justamente porque combinam indução federal e dependência de capacidades locais. A implementação aparece, então, como efeito de uma tensão produtiva entre centralização regulatória e recepção territorial, e não como mera execução administrativa comandada de cima.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O artigo sobre categorização de usuários desloca o problema para outro plano e, ao fazê-lo, corrige um possível excesso de institucionalismo presente em leituras centradas apenas em sistemas e arranjos. Mesmo quando a política é regulada, financiada e organizada, o conteúdo concreto do atendimento continua sendo produzido em encontros situados, nos quais agentes interpretam regras, priorizam casos e classificam públicos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A grande força desse texto é mostrar que a implementação não apenas varia; ela diferencia. E diferencia não de modo aleatório, mas por gramáticas práticas que combinam conveniência funcional e julgamento moral. Com isso, o problema da implementação deixa de ser apenas o da eficiência organizacional ou da coordenação entre níveis de governo: ele passa a incluir a produção cotidiana de fronteiras entre usuários mais facilmente incorporáveis e usuários mais difíceis de acomodar nas rotinas estatais.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Esse deslocamento é relevante porque permite interpretar o corpus a partir de uma ideia comum: a implementação é sempre um processo de seleção, mas os critérios dessa seleção variam conforme a escala observada. No estudo do Suas, selecionam-se prioridades e padrões por meio de instrumentos institucionais e financeiros ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; no texto sobre usuários, selecionam-se intensidades de atenção e formas de vínculo por meio de classificações práticas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; no artigo sobre organizações confessionais, selecionam-se formas legítimas de cooperação por meio de mediações que tornam compatíveis repertórios institucionais distintos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; e a coletânea oferece o vocabulário geral para reconhecer que essas seleções são constitutivas da política pública, não distorções marginais ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "A partir daí, torna-se possível sustentar uma interpretação mais própria do conjunto: o corpus mostra que a implementação é o nível em que o Estado administra diferenças. Essas diferenças podem ser territoriais, como no caso dos municípios com capacidades desiguais diante de um sistema nacional ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; sociais, como nas classificações entre usuários percebidos como fáceis e difíceis ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; ou institucionais, como nas fricções entre racionalidades estatais e religiosas na coprodução de serviços ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Em todos os casos, a política pública só se estabiliza porque algum mecanismo de tratamento dessas diferenças entra em funcionamento. Isso significa que a implementação não é apenas mediação entre decisão e resultado; ela é o próprio trabalho de tornar governável a heterogeneidade que o desenho normativo não consegue absorver integralmente.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa leitura também evidencia uma tensão importante no corpus. Se, por um lado, os textos convergem ao mostrar que a implementação depende de adaptações, mediações e julgamentos, por outro eles não atribuem o mesmo valor normativo a essas mediações. No estudo do Suas, a adaptação local aparece sobretudo como condição para que a coordenação nacional se converta em expansão concreta da política ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". No artigo sobre usuários, a adaptação pode ser precisamente o veículo pelo qual desigualdades são reproduzidas no atendimento ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". No texto sobre organizações confessionais, a mediação é ambígua: viabiliza cooperação e capilaridade, mas também reabre o debate sobre quais valores passam a compor o serviço público ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A coletânea, por sua vez, legitima essa ambivalência ao apresentar a implementação como terreno de criatividade institucional e, ao mesmo tempo, de consequências não previstas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Daí decorre um segundo argumento interpretativo: o corpus não autoriza uma defesa abstrata da discricionariedade, da coordenação ou da cooperação híbrida; ele exige perguntar sob quais condições esses mecanismos ampliam capacidades públicas e sob quais condições introduzem seletividades problemáticas. A coordenação federativa pode reduzir desigualdades territoriais, mas não suprime a importância da base organizacional local ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A discricionariedade pode ser inevitável para lidar com casos complexos, mas também pode converter vulnerabilidade social em baixa prioridade burocrática ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A cooperação com organizações confessionais pode ampliar adesão e inteligibilidade junto a determinados públicos, mas isso ocorre ao preço de processos de hibridização que redefinem as fronteiras do que se entende por ação pública ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O mérito do corpus é mostrar que esses dilemas não são exceções; são parte da normalidade da implementação.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-7",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Outra implicação importante é metodológica. Lidos conjuntamente, os textos sugerem que nenhuma escala, isoladamente, esgota a análise da implementação. Estudos agregados permitem captar padrões de expansão, convergência e efeito institucional em âmbito nacional ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; análises teóricas e de balanço de campo organizam os conceitos necessários para tornar comparáveis fenômenos diversos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; pesquisas qualitativas de nível micro revelam julgamentos e fronteiras invisíveis em indicadores padronizados ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; e estudos de interfaces organizacionais mostram como valores e categorias circulam entre instituições ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Em vez de concorrerem, essas abordagens se completam. A síntese mais robusta do corpus depende justamente dessa composição multiescalar.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-8",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em suma, a interpretação mais produtiva do conjunto é a de que a implementação constitui o plano em que se tornam observáveis tanto a materialidade institucional do Estado quanto sua dimensão relacional. Ela é material porque depende de sistemas, regras, financiamento, equipamentos, capacidades e arranjos organizacionais; e é relacional porque opera por classificações, traduções, vínculos, conflitos e acomodações. O corpus ganha densidade exatamente por não reduzir um desses lados ao outro. Seu ensinamento mais forte para a disciplina é que compreender políticas públicas exige acompanhar como elas são estruturadas, negociadas e redefinidas no curso de sua realização. Não há, aqui, política pública plenamente inteligível antes da implementação; há políticas que só se revelam analiticamente quando observadas no modo concreto como produzem ordem, diferença e coordenação.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-sin-9",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-consideracoes-finais",
+      "level": 1,
+      "title": "Considerações finais",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "As principais contribuições analíticas deste corpus decorrem de sua capacidade de requalificar a implementação como objeto central da análise de políticas públicas. Em conjunto, os textos mostram que resultados estatais não podem ser explicados apenas por desenho formal, vontade governamental ou arquitetura normativa. A implementação aparece como dimensão constitutiva da política, isto é, como espaço em que se definem alcance territorial, modos de atendimento, critérios de priorização e formas de cooperação entre atores públicos e não estatais ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises",
+                "bichir2020_sistemas_nacionais",
+                "lotta2020_categorizando_usuarios",
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-fin-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um primeiro ganho para a disciplina está na afirmação de uma perspectiva multiescalar. O estudo sobre o Suas demonstra que sistemas nacionais podem induzir expansão e convergência da implementação em contexto federativo desigual ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "bichir2020_sistemas_nacionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; o artigo sobre categorização de usuários evidencia que, mesmo sob regras comuns, o atendimento é redefinido no nível das interações cotidianas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2020_categorizando_usuarios"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": "; e a análise sobre organizações confessionais mostra que a implementação também depende de encaixes entre instituições portadoras de valores distintos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2023_jesus_speaks"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A coletânea organizada por Lotta oferece a moldura conceitual que torna inteligível essa variedade de escalas sem dissolver a unidade analítica do campo ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lotta2019_teorias_analises"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-fin-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um segundo ganho consiste em evidenciar que a implementação é inseparável do tratamento institucional da heterogeneidade. Os textos analisados mostram, cada um a seu modo, que a política pública se realiza ao lidar com diferenças territoriais, sociais e organizacionais. Esse resultado é especialmente relevante para a disciplina porque impede modelos excessivamente abstratos do Estado e das políticas. Em lugar de um aparato homogêneo que aplica regras a destinatários indiferenciados, o corpus apresenta um Estado que coordena, classifica, traduz e negocia. Isso aprofunda a compreensão sobre capacidades estatais, uma vez que capacidade, aqui, não significa apenas possuir recursos e normas, mas conseguir operar em contextos de diversidade e conflito.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-fin-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Por fim, a principal contribuição do conjunto para a disciplina talvez seja metodológica e teórica ao mesmo tempo: ele ensina que a análise de políticas públicas ganha densidade quando acompanha a política em operação. Isso exige combinar atenção a arranjos institucionais, capacidades organizacionais, discricionariedade burocrática, relações com usuários e interfaces entre setores. A leitura do corpus, portanto, não conduz a uma teoria única da implementação, mas a um princípio analítico mais robusto: políticas públicas devem ser estudadas no ponto em que são efetivamente produzidas. É nesse plano que se tornam visíveis seus alcances, suas tensões e seus efeitos concretos sobre a organização do Estado e sobre a distribuição de direitos e serviços.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p-fin-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    }
+  ],
+  "entries_used": [
+    "bichir2020_sistemas_nacionais",
+    "lotta2019_teorias_analises",
+    "lotta2020_categorizando_usuarios",
+    "lotta2023_jesus_speaks"
+  ]
+}
