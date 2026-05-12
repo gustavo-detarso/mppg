@@ -1,0 +1,372 @@
+{
+  "id": "sec-lima2021-conectando-problemas",
+  "level": 2,
+  "title": "Conectando problemas, soluções e expectativas: mapeando a literatura sobre análise do desenho de políticas públicas",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O artigo parte de um diagnóstico duplo: de um lado, a literatura internacional sobre desenho de políticas públicas consolidou, ao longo de décadas, um vocabulário analítico relativamente próprio para examinar o conteúdo das políticas; de outro, esse repertório ainda aparece de forma rarefeita e pouco sistematizada no debate brasileiro. A questão central, portanto, não é apenas descrever um subcampo, mas esclarecer em que consiste a perspectiva do desenho, quais são seus componentes analíticos e por que sua incorporação pode ampliar a capacidade explicativa e normativa da análise de políticas no Brasil. Nesse sentido, o texto assume que entender políticas como arranjos compostos por elementos relativamente identificáveis — problemas, objetivos, instrumentos, públicos-alvo, regras, estruturas de governança, racionalidades e construções sociais — permite deslocar o foco da mera sequência processual para a arquitetura substantiva das intervenções estatais",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O objetivo do artigo é explicitamente de sistematização e mapeamento. Trata-se de reconstruir a estrutura intelectual do campo de estudos sobre policy design, identificar seus temas dominantes, seus conceitos centrais e os pontos menos desenvolvidos, com vistas a subsidiar uma agenda de pesquisa nacional. O escopo é deliberadamente amplo: em vez de testar uma hipótese substantiva sobre uma política específica, os autores reconstroem um domínio de produção acadêmica, localizando-o nas policy sciences e examinando seus principais desdobramentos conceituais. Essa escolha dá ao texto um caráter fundacional para leitores brasileiros: ele funciona ao mesmo tempo como porta de entrada para o debate internacional e como intervenção programática, ao sustentar que a análise do desenho pode contribuir para qualificar o policy-making, o exame das políticas e a discussão sobre seus resultados",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tese principal do artigo é que a perspectiva do desenho de políticas públicas oferece uma via analítica particularmente promissora porque reconecta problemas, soluções e expectativas por meio do exame da estrutura interna das políticas. Em vez de tratar as políticas apenas como produtos contingentes de disputas, os autores enfatizam que elas também podem ser lidas como composições dotadas de lógica própria, cujos elementos interagem entre si e com os contextos institucionais, políticos e organizacionais. A contribuição decisiva do texto está em mostrar que o campo do desenho não se reduz à escolha de instrumentos, embora essa seja uma de suas vertentes mais visíveis; ele envolve uma compreensão mais abrangente da coerência entre objetivos e meios, da consistência interna das combinações adotadas e da congruência entre desenho e contexto. Nessa chave, a qualidade do desenho torna-se variável relevante para explicar desempenho, implementação e efeitos das políticas",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas",
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Conceitualmente, o artigo opera com uma distinção que organiza todo o argumento: a separação analítica entre o processo de elaboração dos desenhos e o desenho como conteúdo das políticas. Essa distinção é crucial porque evita confundir formulação com arquitetura substantiva. O processo remete às dinâmicas decisórias, aos conflitos, às ideias e aos interesses mobilizados na produção da política; o desenho, por sua vez, refere-se aos elementos que estruturam a intervenção pública e às relações entre eles. Ao insistir nessa separação, os autores não negam a importância da política e do conflito, mas argumentam que o conteúdo resultante merece tratamento analítico próprio. É justamente essa inflexão que permite ao campo do desenho examinar como problemas são definidos, como objetivos são formulados, quais instrumentos são selecionados, quem é incluído ou excluído, que racionalidades orientam a intervenção e como determinadas imagens dos grupos sociais são institucionalizadas nas políticas",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A reconstrução da trajetória do campo cumpre função analítica importante. Ao situar o desenho de políticas no interior das policy sciences, o texto mostra que esse subcampo herda tanto a preocupação lasswelliana com a dimensão aplicada do conhecimento quanto a atenção aos instrumentos e aos constrangimentos dos sistemas políticos. A narrativa histórica apresentada indica um deslocamento: das abordagens iniciais mais vinculadas a tipologias e à escolha pública para formulações posteriores em que a separação entre processo e desenho ganha centralidade e em que marcos como a teoria da construção social e a abordagem institucional passam a oferecer gramáticas mais sofisticadas para a análise do conteúdo das políticas. Essa genealogia tem efeito disciplinar relevante: ela insere o debate brasileiro em uma tradição intelectual internacional e mostra que policy design não é moda terminológica, mas um acúmulo teórico com problemas, categorias e agendas relativamente estabilizados",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "No plano metodológico, o artigo é uma pesquisa exploratória e descritiva baseada em revisão semissistemática da literatura. A opção é coerente com o propósito de mapear um campo mais do que medir sua produção por critérios estritamente bibliométricos. Os autores combinam revisão narrativa crítica com estratégia de snowball sampling, partindo de um estudo considerado seminal e rastreando referências e citações até atingir saturação. O corpus final, composto por 74 documentos entre artigos, livros, capítulos e papers, é submetido a análise de conteúdo indutiva com apoio de software de análise qualitativa. O método, assim, não pretende exaustividade mecânica, mas inteligibilidade estruturada: selecionar trabalhos relevantes, extrair categorias recorrentes e organizar uma visão de conjunto do domínio estudado. Essa estratégia é adequada ao objetivo de identificar temas salientes e lacunas, ainda que dependa fortemente do julgamento analítico dos autores na composição da amostra e na abstração das categorias",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um dos méritos do texto é desdobrar o conceito de desenho em uma série de componentes analíticos que permitem examinar políticas como arranjos complexos, e não como decisões isoladas. A literatura mapeada é apresentada como organizada em torno dos elementos formadores das políticas e das relações entre eles. Isso inclui a definição de problemas e objetivos, a seleção e combinação de instrumentos, a configuração de beneficiários e regras de inclusão e exclusão, os sistemas de governança e as racionalidades subjacentes. Ao fazer isso, o artigo oferece uma matriz de leitura que pode ser mobilizada em pesquisas empíricas diversas. A política deixa de ser observada apenas por sua origem processual ou por seus efeitos finais e passa a ser examinada em sua montagem interna. Para a disciplina, isso implica ampliar o repertório analítico entre formulação, implementação e avaliação, permitindo investigar como certas escolhas de desenho condicionam trajetórias e resultados sem reduzir a explicação a uma única fase do processo",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O artigo também é importante porque apresenta a abordagem do desenho em contraste implícito com o uso mais difundido do ciclo de políticas públicas. Em vez de uma representação em etapas relativamente discretas, os autores enfatizam uma abordagem mais fluida, capaz de incidir sobre formulação, implementação e estrutura lógica das políticas sem se prender a uma sequência linear. Essa inflexão é particularmente produtiva para contextos em que as fronteiras entre formulação e implementação são porosas e em que políticas são continuamente recalibradas. Ao recuperar inclusive a noção de “não desenho”, o texto sugere que nem toda alternativa de política construída politicamente corresponde a um design orientado por intencionalidade substantiva e coerência interna. Essa abertura conceitual é relevante porque impede leituras excessivamente normativas ou idealizadas do desenho, ainda que o artigo mantenha, de modo geral, uma orientação favorável à ideia de que melhores desenhos podem qualificar a ação pública",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas",
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os achados e contribuições do artigo são menos empíricos no sentido tradicional e mais cartográficos e programáticos. O texto demonstra que existe uma literatura internacional robusta, diversificada e multidisciplinar sobre desenho de políticas, ao mesmo tempo em que identifica sua recepção ainda limitada no Brasil. A partir desse mapeamento, os autores delineiam uma agenda de pesquisa capaz de aproximar o campo brasileiro de debates sobre estrutura lógica das políticas, coerência entre meios e fins, instrumentos, públicos-alvo e racionalidades. A principal implicação disciplinar é clara: fortalecer a análise de políticas públicas no Brasil por meio de um enfoque que trate o conteúdo das políticas como objeto analítico de primeira ordem. Isso recoloca em bases mais precisas discussões frequentemente dispersas sobre qualidade da intervenção estatal, capacidade de implementação e conexão entre formulação e resultados. O artigo, assim, opera como peça de infraestrutura intelectual para investigações posteriores mais aplicadas",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao mesmo tempo, o texto apresenta limites e tensões que merecem ser explicitados. Como revisão semissistemática orientada por rastreamento em cadeia, ele privilegia a reconstrução conceitual e o mapeamento de debates, mas não oferece critérios de comparação tão padronizados quanto os de uma revisão sistemática mais estrita. Além disso, sua aposta na utilidade do desenho para qualificar políticas públicas, embora plausível e bem sustentada no plano programático, aparece mais como horizonte normativo do campo do que como demonstração causal própria do artigo. Há também uma tensão entre a abrangência da revisão e a profundidade com que alguns componentes do desenho podem ser examinados: ao cobrir uma literatura extensa e heterogênea, o texto necessariamente sacrifica maior detalhamento de controvérsias internas, disputas conceituais e variações metodológicas mais finas. Ainda assim, essas limitações são em parte constitutivas do gênero adotado e não anulam sua relevância como texto de síntese e orientação",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "No diálogo com o restante do corpus, este artigo ocupa posição de charneira conceitual. Em relação ao estudo sobre dinâmicas de desenho em infraestrutura de transportes, fornece a linguagem para compreender por que coerência, consistência e congruência entre objetivos, instrumentos e contexto são problemas analíticos centrais, enquanto o outro texto mostra como esses atributos aparecem em um caso empírico específico",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas",
+            "geet2019_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Já no diálogo com o estudo sobre desenho, não desenho e antidesenho, a contribuição é distinta: o artigo de mapeamento apresenta a arquitetura geral do campo e reconhece a importância da intencionalidade e das racionalidades na formulação, mas o caso regulatório indonésio tensiona essa visão ao mostrar situações em que incoerência, omissão ou orientação contraditória não são resíduos marginais, e sim componentes centrais do próprio arranjo político. Por fim, a comparação com a análise das microdimensões do desenho digital em estados brasileiros sugere um desdobramento natural da agenda proposta aqui: sair do mapa geral da literatura para operacionalizações empíricas mais finas e comparativas do conteúdo dos instrumentos. Assim, este texto não unifica artificialmente o corpus, mas oferece a gramática comum a partir da qual seus contrastes se tornam inteligíveis",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas",
+            "newman2020_policy_design",
+            "lui2026_micro_dimensions"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}

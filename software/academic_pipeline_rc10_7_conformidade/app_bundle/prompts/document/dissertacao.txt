@@ -1,0 +1,4 @@
+Diretrizes gerais para dissertação:
+- Preservar encadeamento entre problema, objetivos, justificativa, referencial, metodologia, resultados e conclusão.
+- Usar linguagem acadêmica formal, com densidade argumentativa e citações consistentes.
+- Não gerar elementos pré-textuais fictícios quando dependerem de aprovação, ficha catalográfica ou banca real.

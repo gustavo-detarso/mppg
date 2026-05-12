@@ -1,0 +1,226 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{geet2019_policy_design}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=33ddc95f708228f997c57c7ca077c2e7}{%
+           family={Geet},
+           familyi={G\bibinitperiod},
+           given={Marijn\bibnamedelima Thomas},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=70440a08b5242c5460e5abd8c6e16295}{%
+           family={Lenferink},
+           familyi={L\bibinitperiod},
+           given={Sander},
+           giveni={S\bibinitperiod}}}%
+        {{hash=77828a64ae6a84addc3f06cea9aae156}{%
+           family={Leendertse},
+           familyi={L\bibinitperiod},
+           given={Wim},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{7e7dece62f21d335dfab3daaef62d559}
+      \strng{fullhash}{7e7dece62f21d335dfab3daaef62d559}
+      \strng{fullhashraw}{7e7dece62f21d335dfab3daaef62d559}
+      \strng{bibnamehash}{7e7dece62f21d335dfab3daaef62d559}
+      \strng{authorbibnamehash}{7e7dece62f21d335dfab3daaef62d559}
+      \strng{authornamehash}{7e7dece62f21d335dfab3daaef62d559}
+      \strng{authorfullhash}{7e7dece62f21d335dfab3daaef62d559}
+      \strng{authorfullhashraw}{7e7dece62f21d335dfab3daaef62d559}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Policy Design and Practice}
+      \field{number}{4}
+      \field{title}{Policy design dynamics: fitting goals and instruments in transport infrastructure planning in the Netherlands}
+      \field{volume}{2}
+      \field{year}{2019}
+      \field{pages}{324\bibrangedash 358}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1080/25741292.2019.1678232
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/25741292.2019.1678232
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/25741292.2019.1678232
+      \endverb
+    \endentry
+    \entry{lima2021_conectando_problemas}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1818e669517fec277c884a72373137ec}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={Luciana\bibnamedelima Leite},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=4304b1ab0e635f51563336cbc0f604a5}{%
+           family={Aguiar},
+           familyi={A\bibinitperiod},
+           given={Rafael\bibnamedelima Barbosa},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=059fd5a8f13eac095e1f2686a42f9b84}{%
+           family={Lui},
+           familyi={L\bibinitperiod},
+           given={Lizandro},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {FapUNIFESP (SciELO)}%
+      }
+      \strng{namehash}{4523a6af61990e4e8abb06bd287a0a81}
+      \strng{fullhash}{4523a6af61990e4e8abb06bd287a0a81}
+      \strng{fullhashraw}{4523a6af61990e4e8abb06bd287a0a81}
+      \strng{bibnamehash}{4523a6af61990e4e8abb06bd287a0a81}
+      \strng{authorbibnamehash}{4523a6af61990e4e8abb06bd287a0a81}
+      \strng{authornamehash}{4523a6af61990e4e8abb06bd287a0a81}
+      \strng{authorfullhash}{4523a6af61990e4e8abb06bd287a0a81}
+      \strng{authorfullhashraw}{4523a6af61990e4e8abb06bd287a0a81}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Brasileira de Ciência Política}
+      \field{number}{36}
+      \field{title}{Conectando problemas, soluções e expectativas: mapeando a literatura sobre análise do desenho de políticas públicas}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1590/0103-3352.2021.36.246779
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1590/0103-3352.2021.36.246779
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1590/0103-3352.2021.36.246779
+      \endverb
+    \endentry
+    \entry{lui2026_micro_dimensions}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=059fd5a8f13eac095e1f2686a42f9b84}{%
+           family={Lui},
+           familyi={L\bibinitperiod},
+           given={Lizandro},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2cd2a09ee30de3caaa30b2443fab89cf}{%
+           family={Rosa},
+           familyi={R\bibinitperiod},
+           given={Thayná\bibnamedelima Gomes},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=4304b1ab0e635f51563336cbc0f604a5}{%
+           family={Aguiar},
+           familyi={A\bibinitperiod},
+           given={Rafael\bibnamedelima Barbosa},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=1818e669517fec277c884a72373137ec}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={Luciana\bibnamedelima Leite},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{50d58ddeddae563d7b1db3426005f893}
+      \strng{fullhash}{09f8acfec94c933377bfc4d184519c81}
+      \strng{fullhashraw}{09f8acfec94c933377bfc4d184519c81}
+      \strng{bibnamehash}{50d58ddeddae563d7b1db3426005f893}
+      \strng{authorbibnamehash}{50d58ddeddae563d7b1db3426005f893}
+      \strng{authornamehash}{50d58ddeddae563d7b1db3426005f893}
+      \strng{authorfullhash}{09f8acfec94c933377bfc4d184519c81}
+      \strng{authorfullhashraw}{09f8acfec94c933377bfc4d184519c81}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Comparative Policy Analysis: Research and Practice}
+      \field{title}{Micro-Dimensions of Digital Policy Design Instruments: A Comparative Analysis Across Brazilian States}
+      \field{year}{2026}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1080/13876988.2026.2646679
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/13876988.2026.2646679
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/13876988.2026.2646679
+      \endverb
+    \endentry
+    \entry{newman2020_policy_design}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=e81bd3a8b6a5163e7717502e71e4871a}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a85b375eb85d79d56f5147cf33bcb562}{%
+           family={Nurfaiza},
+           familyi={N\bibinitperiod},
+           given={Martha\bibnamedelima Widdi},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{bba9881fc1d857d1041aab18cff9c4a3}
+      \strng{fullhash}{bba9881fc1d857d1041aab18cff9c4a3}
+      \strng{fullhashraw}{bba9881fc1d857d1041aab18cff9c4a3}
+      \strng{bibnamehash}{bba9881fc1d857d1041aab18cff9c4a3}
+      \strng{authorbibnamehash}{bba9881fc1d857d1041aab18cff9c4a3}
+      \strng{authornamehash}{bba9881fc1d857d1041aab18cff9c4a3}
+      \strng{authorfullhash}{bba9881fc1d857d1041aab18cff9c4a3}
+      \strng{authorfullhashraw}{bba9881fc1d857d1041aab18cff9c4a3}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Policy Studies}
+      \field{number}{2}
+      \field{title}{Policy design, non-design, and anti-design: the regulation of e-cigarettes in Indonesia}
+      \field{volume}{43}
+      \field{year}{2020}
+      \field{pages}{226\bibrangedash 243}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1080/01442872.2019.1708887
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/01442872.2019.1708887
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/01442872.2019.1708887
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

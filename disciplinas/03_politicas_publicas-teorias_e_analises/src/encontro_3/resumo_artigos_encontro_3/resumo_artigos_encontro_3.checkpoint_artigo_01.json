@@ -1,0 +1,370 @@
+{
+  "id": "sec-bichir-sistemas-nacionais",
+  "level": 2,
+  "title": "Sistemas nacionais de políticas públicas e seus efeitos na implementação: o caso do Sistema Único de Assistência Social (Suas)",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O artigo toma como problema central uma questão clássica do federalismo brasileiro, mas a desloca para um terreno empírico mais preciso: não basta afirmar genericamente que a União coordena e os entes subnacionais implementam; é necessário investigar como arranjos institucionais específicos alteram, de fato, a provisão local de políticas sociais em um país marcado por heterogeneidade territorial, desigualdade de capacidades administrativas e autonomia municipal. A pergunta que organiza o texto é, portanto, se um sistema nacional de política pública, no caso o Suas, produz efeitos observáveis sobre a implementação municipal dos serviços socioassistenciais e sobre a redução de desigualdades entre municípios. Em vez de permanecer no plano normativo da engenharia federativa, o artigo procura mostrar como regras, incentivos e instrumentos de coordenação se traduzem — ou não — em convergência efetiva na ponta da política pública",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O objetivo e o escopo do estudo são delimitados com clareza. Os autores não pretendem reconstituir toda a trajetória de institucionalização da assistência social nem oferecer uma história geral do Suas. O foco recai sobre os efeitos das normas e instrumentos federais na implementação dos serviços socioassistenciais básicos entre 2011 e 2016, com atenção especial a duas dimensões: o incremento da oferta e a convergência territorial de padrões mínimos de provisão. Em complemento, o artigo busca aferir se maiores níveis de implementação estão associados a capacidades institucionais locais, operacionalizadas por meio de aspectos de recursos humanos e infraestrutura dos Centros de Referência de Assistência Social. Esse recorte é decisivo porque permite examinar simultaneamente a força da indução federal e a persistência de variações subnacionais, evitando tanto a leitura de que a descentralização dissolveria qualquer coordenação quanto a visão oposta de que a centralização regulatória explicaria sozinha os resultados observados",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tese principal do artigo pode ser sintetizada em dois movimentos articulados. O primeiro é que sistemas nacionais de políticas públicas, quando combinam regulação central, transferências condicionadas, financiamento fundo a fundo, instâncias de pactuação federativa e definição de parâmetros nacionais, possuem capacidade de induzir a expansão da implementação local e reduzir desigualdades territoriais. O segundo é que esse efeito não elimina a relevância das capacidades locais: ao contrário do que sugere parte da literatura que enfatiza predominantemente a indução federal, os autores mostram que a implementação dos serviços básicos do Suas se associa positivamente, ainda que de forma fraca, à estruturação administrativa dos equipamentos locais. A implicação analítica dessa formulação é importante: a coordenação nacional não apaga a política local, mas a reorganiza dentro de parâmetros mais densos de regulação e incentivo. O resultado é um arranjo de governança multinível em que a União é forte para definir direção, mas os municípios continuam relevantes para converter normas em provisão concreta",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "No plano conceitual, o texto mobiliza categorias centrais para a literatura de políticas públicas no Brasil. A mais importante é a de sistemas nacionais de políticas públicas, entendidos como arranjos institucionais que estruturam a descentralização sob coordenação federal, definindo agendas, padrões e incentivos para implementação subnacional. O artigo também trabalha com as noções de coordenação federativa, indução federal, descentralização nacionalmente regulada, capacidades institucionais e governança multinível. Essas categorias não aparecem como mera moldura terminológica: elas organizam a interpretação dos dados e servem para qualificar a assistência social como um caso particularmente exigente. Diferentemente de políticas mais facilmente padronizáveis, os serviços socioassistenciais dependem intensamente de trabalho relacional, presença territorial, infraestrutura física e equipes profissionais, o que torna a implementação mais sensível às condições locais. Daí a relevância de testar empiricamente até que ponto a arquitetura nacional do Suas consegue produzir convergência em um domínio que, por natureza, resiste à uniformização simples",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A reconstrução do objeto feita pelos autores é uma das forças do artigo. O Suas é apresentado não apenas como desenho institucional formal, mas como resposta a um legado histórico de fragmentação, filantropia, benemerência e baixa rotinização estatal da assistência social. Esse ponto é substantivo porque esclarece por que a simples existência de normas federais não poderia produzir efeitos imediatos nem homogêneos. O texto insiste, corretamente, em uma temporalidade institucional: regras produzem efeitos ao longo do tempo, acumulam capacidades, sedimentam expectativas e redefinem incentivos. Assim, o caso do Suas é analiticamente fecundo porque permite observar um processo de construção relativamente recente de estatalidade em uma área antes marcada por provisão dispersa e pouco regulada. A ênfase no tempo institucional impede leituras instantaneístas da implementação e reforça a ideia de que a avaliação dos efeitos do sistema nacional deve considerar trajetórias de institucionalização, não apenas fotografias normativas",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Do ponto de vista metodológico, o artigo se diferencia por enfrentar uma lacuna relevante em um campo frequentemente dominado por estudos de caso. Em lugar de uma análise local ou exclusivamente qualitativa, os autores constroem indicadores comparáveis para examinar padrões nacionais de implementação e de capacidades estatais no período de 2011 a 2016. A principal estratégia consiste em adaptar informações do Censo Suas e do Indicador de Desenvolvimento do Centro de Referência de Assistência Social para compor medidas capazes de capturar, ao longo do tempo, a oferta de serviços socioassistenciais básicos e o grau de estruturação das unidades responsáveis por essa oferta. O procedimento não é apenas técnico; ele expressa uma escolha teórica: medir implementação por processos e pela presença de estruturas de provisão, e não apenas por resultados finais, o que é particularmente adequado em uma política cuja mensuração de resultados é mais recente e menos consolidada. O artigo, assim, avança ao transformar um debate frequentemente abstrato sobre coordenação federativa em uma investigação comparativa baseada em evidências sistemáticas",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os achados apresentados sustentam a hipótese de que houve incremento da implementação dos serviços básicos do Suas e, ao mesmo tempo, maior convergência entre municípios, regiões e portes populacionais. Isso significa que o sistema nacional não apenas expandiu a presença da política, mas também contribuiu para reduzir a distância relativa entre contextos municipais distintos. O argumento é particularmente relevante para a disciplina porque oferece evidência a favor da ideia de que a centralização regulatória pode ser compatível com redução de desigualdades territoriais em contextos federativos. Ao mesmo tempo, os autores não transformam essa conclusão em celebração simplista da União. A associação positiva entre implementação e capacidades locais, ainda que modesta, mostra que o efeito do sistema depende de condições de recepção, organização administrativa e materialização institucional nos equipamentos municipais. Em termos substantivos, o artigo sugere que a indução federal cria as condições de possibilidade da expansão, mas não substitui o trabalho organizacional necessário para sustentar a política na ponta",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A principal contribuição do texto para os estudos de implementação está em reposicionar o debate para além da oposição entre formulação central e execução local. O artigo demonstra que a implementação deve ser pensada como efeito de arranjos institucionais multiníveis, nos quais normas federais, incentivos financeiros, padrões administrativos e capacidades municipais interagem. Nesse sentido, ele ajuda a sofisticar a compreensão de implementação ao aproximá-la de questões de coordenação federativa e de construção incremental de capacidades estatais. Para a administração pública e para a análise de políticas sociais, isso tem duas implicações importantes. Primeiro, mostra que desenhos institucionais importam e podem alterar padrões territoriais de provisão. Segundo, indica que a qualidade da implementação não é redutível à adesão formal ao sistema: depende de recursos humanos, infraestrutura e arranjos organizacionais concretos. A contribuição do artigo, portanto, é ao mesmo tempo teórica e aplicada, pois oferece uma moldura explicativa para pensar como políticas descentralizadas podem ser nacionalmente estruturadas sem eliminar variação local",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os limites e tensões do estudo decorrem, em parte, de sua própria virtude analítica. Ao privilegiar indicadores de processo e estrutura para captar implementação, o artigo ilumina a expansão e a convergência da oferta, mas deixa em segundo plano a qualidade substantiva das interações entre burocracias e usuários, bem como os efeitos distributivos e simbólicos da provisão. Em outras palavras, saber que serviços se expandiram e que capacidades mínimas se disseminaram não resolve, por si, a questão de como os cidadãos experienciam essa política, nem se a padronização institucional reduz discricionariedades cotidianas ou, ao contrário, convive com novas formas de diferenciação no atendimento. Além disso, a correlação fraca entre implementação e capacidades locais é interpretada com cautela pelos próprios autores, o que abre espaço para indagar fatores não incorporados ao modelo, como trajetórias políticas locais, estilos de gestão, relações com organizações da sociedade civil e dinâmicas territoriais específicas. O artigo reconhece, assim, que “nem tudo começa e termina” no centro federal, mas também não esgota a explicação dos mecanismos subnacionais que mediam os efeitos do sistema nacional",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Há ainda uma tensão produtiva entre o argumento da convergência institucional e a natureza da própria assistência social. Como os autores sugerem, trata-se de uma política composta por serviços de baixa padronização e alta dependência de trabalho humano situado. Isso significa que a convergência medida por indicadores administrativos pode coexistir com forte variação nas práticas concretas de implementação. Essa observação não invalida os resultados; ao contrário, indica a fronteira de sua generalização. O artigo é muito convincente ao demonstrar efeitos sistêmicos sobre expansão e redução de desigualdades em termos de provisão e estrutura. Mas ele deixa aberta a agenda para investigar se essa convergência institucional se traduz em experiências similares de acesso, acolhimento, classificação e tratamento dos usuários nos territórios. A passagem dos macroefeitos do sistema para a micropolítica da implementação permanece, portanto, como agenda posterior, especialmente relevante em políticas baseadas em interação cotidiana",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Nesse ponto, o diálogo com o restante do corpus é especialmente fértil, desde que não se force uma unidade inexistente. Enquanto este artigo opera em escala sistêmica e federativa, examinando como arranjos nacionais moldam padrões de implementação municipal, outros textos do conjunto deslocam o olhar para níveis analíticos distintos. A abordagem sobre implementação reunida em coletânea organizada por Gabriela Lotta amplia precisamente esse repertório ao tratar a implementação como campo teórico plural, atento a burocracias, interações, discricionariedade, capacidades e contextos institucionais, o que ajuda a situar o artigo em uma agenda mais ampla de análise",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2019_teorias_analises",
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "O contraste mais nítido, porém, aparece quando se compara esta análise dos efeitos de um sistema nacional com estudos que enfatizam a produção cotidiana de diferenças na ponta. Ao mostrar que a implementação pode convergir institucionalmente sem eliminar mediações locais, o artigo cria uma ponte importante com trabalhos que investigam como burocratas categorizam usuários e produzem tratamentos diferenciados nas interações concretas do atendimento. A relação entre esses textos não é de contradição, mas de escalas analíticas complementares: aqui se demonstra a capacidade do arranjo nacional de estruturar a oferta; ali se revelam os mecanismos pelos quais essa oferta é filtrada, interpretada e distribuída no cotidiano. De modo semelhante, análises sobre interações entre Estado e organizações de base religiosa em contextos de implementação lembram que a provisão pública pode envolver hibridizações institucionais e ajustes situados que escapam a uma leitura puramente estatal do sistema. Assim, o artigo de Renata Bichir, Sergio Simoni Junior e Guilherme Pereira oferece uma peça crucial do quebra-cabeça do corpus: ele explica como a arquitetura federativa produz condições de implementação em escala nacional, mas o próprio corpus sugere que compreender integralmente a política exige descer também ao nível das interações, classificações e acomodações organizacionais que dão conteúdo efetivo a essa arquitetura",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lotta2020_categorizando_usuarios",
+            "lotta2023_jesus_speaks",
+            "bichir2020_sistemas_nacionais"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}

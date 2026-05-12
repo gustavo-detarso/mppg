@@ -1,0 +1,94 @@
+{
+  "title": "Resumo analítico dos textos",
+  "type": "atividade",
+  "total_words": 10047,
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "title": "Introdução",
+      "level": 1,
+      "words": 475,
+      "blocks": 4
+    },
+    {
+      "id": "resumo_individual_dos_textos",
+      "title": "Resumo individual dos textos",
+      "level": 1,
+      "words": 0,
+      "blocks": 0
+    },
+    {
+      "id": "sec-geet-policy-design-dynamics",
+      "title": "Policy design dynamics: fitting goals and instruments in transport infrastructure planning in the Netherlands",
+      "level": 2,
+      "words": 1333,
+      "blocks": 10
+    },
+    {
+      "id": "sec_lima2021_conectando_problemas",
+      "title": "Conectando problemas, soluções e expectativas: mapeando a literatura sobre análise do desenho de políticas públicas",
+      "level": 2,
+      "words": 1546,
+      "blocks": 12
+    },
+    {
+      "id": "sec-lui-micro-dimensions",
+      "title": "Micro-Dimensions of Digital Policy Design Instruments: A Comparative Analysis Across Brazilian States",
+      "level": 2,
+      "words": 1550,
+      "blocks": 11
+    },
+    {
+      "id": "sec-newman-policy-design-non-design-and-anti-design-the-regulation-of-e-cigarettes-in-indonesia",
+      "title": "Policy design, non-design, and anti-design: the regulation of e-cigarettes in Indonesia",
+      "level": 2,
+      "words": 1701,
+      "blocks": 11
+    },
+    {
+      "id": "sec-comparacao-textos",
+      "title": "Comparação entre os textos",
+      "level": 1,
+      "words": 2345,
+      "blocks": 13
+    },
+    {
+      "id": "sec-sintese-analitica",
+      "title": "Síntese analítica",
+      "level": 1,
+      "words": 800,
+      "blocks": 7
+    },
+    {
+      "id": "sec-consideracoes-finais",
+      "title": "Considerações finais",
+      "level": 1,
+      "words": 297,
+      "blocks": 3
+    }
+  ],
+  "citations_total": 4,
+  "cited_keys": [
+    "geet2019_policy_design",
+    "lima2021_conectando_problemas",
+    "lui2026_micro_dimensions",
+    "newman2020_policy_design"
+  ],
+  "bibliography_entries_used_total": 4,
+  "bibliography_entries_not_cited": [],
+  "missing_in_bib": [],
+  "org_diagnostics": {
+    "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.org",
+    "contains_empty_citation": false,
+    "contains_org_cite": false,
+    "technical_terms_found": [],
+    "raw_biblike_tokens": [
+      "geet2019_policy_design",
+      "lima2021_conectando_problemas",
+      "lui2026_micro_dimensions",
+      "newman2020_policy_design"
+    ]
+  },
+  "warnings": [],
+  "ok": true
+}

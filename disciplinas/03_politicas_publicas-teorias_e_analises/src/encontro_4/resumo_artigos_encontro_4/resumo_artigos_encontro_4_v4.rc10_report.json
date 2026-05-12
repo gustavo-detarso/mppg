@@ -1,0 +1,12 @@
+{
+  "output_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4",
+  "document_json": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_4/resumo_artigos_encontro_4/resumo_artigos_encontro_4_v4.document.json",
+  "org": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.org",
+  "bib": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.bib",
+  "pdf": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.pdf",
+  "docx": null,
+  "relatorio_pesquisa": null,
+  "prompt_lock": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.prompt_lock.json",
+  "compliance_report": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.compliance_report.md",
+  "quality_report": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.quality_report.md"
+}

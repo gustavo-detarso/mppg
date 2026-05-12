@@ -1,0 +1,10 @@
+output_dir: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3
+document_json: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.document.json
+org: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.org
+bib: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.bib
+pdf: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.pdf
+docx: None
+relatorio_pesquisa: None
+prompt_lock: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.prompt_lock.json
+compliance_report: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.compliance_report.md
+quality_report: /home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.quality_report.md

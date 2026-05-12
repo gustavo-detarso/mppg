@@ -1,0 +1,2830 @@
+{
+  "metadata": {
+    "tipo_documento": "atividade",
+    "titulo": "Resumo analítico dos textos",
+    "subtitulo": "",
+    "autor": "Gustavo M. Mendes de Tarso",
+    "instituicao": "Fundação Getulio Vargas",
+    "programa": "",
+    "curso": "Mestrado Acadêmico em Políticas Públicas e Governo",
+    "turma": "2026.1",
+    "polo": "Brasília",
+    "disciplina": "Políticas Públicas: Teoria e Análise",
+    "professor": "Lizandro Lui",
+    "cidade": "Brasília",
+    "ano": "2026",
+    "data": "2026",
+    "tipo_trabalho": "Resumo analítico de artigos",
+    "nota_capa": "Trabalho acadêmico elaborado para a disciplina.",
+    "idioma": "pt_BR"
+  },
+  "abstract": null,
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "level": 1,
+      "title": "Introdução",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O corpus analisado reúne quatro textos que, embora inscritos no campo do desenho de políticas públicas, o abordam por entradas distintas e em escalas analíticas desiguais. Há, de um lado, trabalhos voltados à sistematização conceitual e à reconstrução do campo; de outro, estudos empíricos que observam problemas substantivos em setores específicos e contextos nacionais diversos. Essa composição torna o conjunto intelectualmente fértil porque impede uma leitura linear do tema: o desenho de políticas aparece ora como gramática analítica do conteúdo das políticas, ora como problema de ajuste temporal entre objetivos e instrumentos, ora como calibragem fina de instrumentos, ora ainda como fronteira negativa que exige distinguir desenho, não desenho e antidesenho.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O corpus analisado reúne quatro textos que, embora inscritos no campo do desenho de políticas públicas, o abordam por entradas distintas e em escalas analíticas desiguais. Há, de um lado, trabalhos voltados à sistematização conceitual e à reconstrução do campo; de outro, estudos empíricos que observam problemas substantivos em setores específicos e contextos nacionais diversos. Essa composição torna o conjunto intelectualmente fértil porque impede uma leitura linear do tema: o desenho de políticas aparece ora como gramática analítica do conteúdo das políticas, ora como problema de ajuste temporal entre objetivos e instrumentos, ora como calibragem fina de instrumentos, ora ainda como fronteira negativa que exige distinguir desenho, não desenho e antidesenho. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-intro-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa heterogeneidade não elimina a existência de um eixo comum, mas desloca a comparação para um terreno mais rigoroso. Os textos convergem na recusa a tratar políticas públicas apenas como produtos indiferenciados do processo político ou como simples escolhas isoladas de instrumentos. Em todos, o foco recai sobre relações internas entre problemas, objetivos, instrumentos, capacidades, racionalidades e resultados. Contudo, a unidade temática do corpus é parcial, não total: o que existe é uma comunidade de problemas analíticos, e não uma identidade de objetos empíricos ou de métodos. Por isso, a leitura aqui adotada evita forçar convergências artificiais entre planejamento de transportes, transformação digital, mapeamento da literatura e regulação de cigarros eletrônicos.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa heterogeneidade não elimina a existência de um eixo comum, mas desloca a comparação para um terreno mais rigoroso. Os textos convergem na recusa a tratar políticas públicas apenas como produtos indiferenciados do processo político ou como simples escolhas isoladas de instrumentos. Em todos, o foco recai sobre relações internas entre problemas, objetivos, instrumentos, capacidades, racionalidades e resultados. Contudo, a unidade temática do corpus é parcial, não total: o que existe é uma comunidade de problemas analíticos, e não uma identidade de objetos empíricos ou de métodos. Por isso, a leitura aqui adotada evita forçar convergências artificiais entre planejamento de transportes, transformação digital, mapeamento da literatura e regulação de cigarros eletrônicos. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-intro-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O objetivo deste documento é oferecer uma leitura analítica aprofundada do corpus local, articulando fidelidade aos argumentos dos textos e interpretação própria sobre sua contribuição para a disciplina. Isso implica reconstruir cada trabalho não como sinopse autônoma, mas como intervenção situada em um debate mais amplo sobre o que conta como desenho de política, como esse desenho pode ser observado e sob que condições ele se mantém, se transforma ou se desfaz. Em vez de resumir apenas conteúdos declarados, a análise busca explicitar a arquitetura conceitual dos textos, seus modos de evidência, suas promessas explicativas e as tensões que introduzem quando lidos em conjunto.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo deste documento é oferecer uma leitura analítica aprofundada do corpus local, articulando fidelidade aos argumentos dos textos e interpretação própria sobre sua contribuição para a disciplina. Isso implica reconstruir cada trabalho não como sinopse autônoma, mas como intervenção situada em um debate mais amplo sobre o que conta como desenho de política, como esse desenho pode ser observado e sob que condições ele se mantém, se transforma ou se desfaz. Em vez de resumir apenas conteúdos declarados, a análise busca explicitar a arquitetura conceitual dos textos, seus modos de evidência, suas promessas explicativas e as tensões que introduzem quando lidos em conjunto.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-intro-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O caminho analítico adotado parte de um princípio simples: comparar apenas o que o corpus efetivamente autoriza comparar. Assim, a leitura transversal privilegia seis eixos: problema abordado, argumento central, conceitos utilizados, tipo de abordagem, método ou evidência mobilizada, contribuição para a disciplina e limites analíticos. Esse procedimento permite transformar a diversidade do material em vantagem interpretativa. A revisão do campo fornece a moldura mais ampla do debate; o estudo longitudinal em infraestrutura mostra a dimensão temporal do ajuste entre fins e meios; a análise das microdimensões da política digital evidencia a importância da composição instrumental; e a discussão sobre não desenho e antidesenho tensiona os próprios limites do conceito de desenho. A partir desse percurso, a síntese analítica procura demonstrar que o principal ganho do corpus está menos em afirmar uma teoria única do desenho e mais em revelar que o campo se estrutura por diferentes formas de observar conexões, desajustes e recomposições na ação pública.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O caminho analítico adotado parte de um princípio simples: comparar apenas o que o corpus efetivamente autoriza comparar. Assim, a leitura transversal privilegia seis eixos: problema abordado, argumento central, conceitos utilizados, tipo de abordagem, método ou evidência mobilizada, contribuição para a disciplina e limites analíticos. Esse procedimento permite transformar a diversidade do material em vantagem interpretativa. A revisão do campo fornece a moldura mais ampla do debate; o estudo longitudinal em infraestrutura mostra a dimensão temporal do ajuste entre fins e meios; a análise das microdimensões da política digital evidencia a importância da composição instrumental; e a discussão sobre não desenho e antidesenho tensiona os próprios limites do conceito de desenho. A partir desse percurso, a síntese analítica procura demonstrar que o principal ganho do corpus está menos em afirmar uma teoria única do desenho e mais em revelar que o campo se estrutura por diferentes formas de observar conexões, desajustes e recomposições na ação pública. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-intro-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "resumo_individual_dos_textos",
+      "level": 1,
+      "title": "Resumo individual dos textos",
+      "blocks": []
+    },
+    {
+      "id": "sec-geet-policy-design-dynamics",
+      "level": 2,
+      "title": "Policy design dynamics: fitting goals and instruments in transport infrastructure planning in the Netherlands",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O artigo examina um problema central da literatura recente de desenho de políticas: como preservar o ajuste interno de uma política quando seus objetivos e instrumentos não surgem como um arranjo integrado de uma só vez, mas se transformam incrementalmente ao longo do tempo. Em vez de tratar o desenho como um artefato estático, o texto parte da premissa de que políticas públicas são composições históricas e mutáveis, formadas por camadas sucessivas de metas, instrumentos e racionalidades de intervenção. A questão substantiva é especialmente relevante em infraestrutura de transportes, área marcada por horizontes temporais longos, investimentos intensivos, dependência de trajetória e forte acoplamento entre planejamento setorial e ordenamento territorial. Nessa chave, o artigo pergunta como a dinâmica temporal do desenho afeta a coerência entre objetivos, a consistência entre instrumentos e a congruência entre fins e meios, isto é, os componentes do que os autores denominam ajuste do desenho de política",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo do estudo é duplo. Em primeiro lugar, busca avançar empiricamente uma agenda ainda dominada por formulações conceituais, investigando de modo processual a interação entre dinâmicas de mudança do desenho e manutenção — ou deterioração — do ajuste entre seus elementos. Em segundo, procura derivar implicações práticas para formuladores de políticas, deslocando a discussão do nível abstrato para problemas concretos de governança do desenho. O escopo empírico é delimitado pela evolução do planejamento nacional de transportes nos Países Baixos entre 1997 e 2018, período em que houve uma transição importante de uma orientação mais setorial, centrada em mobilidade e infraestrutura, para uma perspectiva mais integrada entre uso do solo e transporte. Essa escolha de caso permite observar, num horizonte longitudinal suficientemente amplo, tanto mudanças nos objetivos estratégicos quanto revisões e recombinações instrumentais",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "A tese principal do artigo é que o ajuste entre objetivos e instrumentos nunca é um estado alcançado de forma definitiva, mas um processo contínuo e intrincado de recomposição. Os autores mostram que qualquer momento de coerência, consistência e congruência é necessariamente temporário, porque metas e instrumentos evoluem em trajetórias parcialmente distintas e muitas vezes desacopladas. O argumento mais forte do texto está em demonstrar que a mudança incremental não deve ser lida apenas como desvio em relação a um ideal de desenho racional e integrado; ela é a própria condição normal de evolução das políticas. Com isso, a questão decisiva deixa de ser a busca de um desenho ótimo originário e passa a ser a capacidade de recalibrar continuamente o arranjo existente diante de novas prioridades, novos problemas e legados institucionais sedimentados. O artigo, portanto, inscreve-se com clareza na vertente do chamado “novo” pensamento sobre desenho de políticas, que enfatiza mixes de instrumentos e objetivos, em lugar de uma relação linear e unidirecional entre um problema, um instrumento e um resultado",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Do ponto de vista conceitual, o artigo mobiliza uma arquitetura analítica bastante nítida. Os dois elementos centrais do desenho são os objetivos de política e os instrumentos de política; o foco, porém, não recai sobre cada elemento isoladamente, mas sobre suas relações de suporte recíproco. Os autores definem coerência de objetivos como a possibilidade de diferentes metas se articularem em torno de um mesmo propósito sem produzirem trade-offs insolúveis; consistência instrumental como a condição em que instrumentos se reforçam mutuamente ao criar incentivos e desincentivos alinhados; e congruência entre objetivos e meios como a correspondência entre o que se busca e os mecanismos mobilizados para alcançar esse fim. Ao reunir essas três dimensões sob o rótulo de ajuste do desenho, o artigo oferece uma categoria operacional que permite acompanhar não apenas se houve mudança, mas que tipo de mudança incidiu sobre a qualidade interna do arranjo de política",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "A segunda camada conceitual decisiva é a tipologia dos modos de mudança: layering, drift, conversion, replacement e exhaustion. O artigo não os apresenta como meras categorias descritivas, mas como mecanismos historicamente observáveis por meio dos quais objetivos e instrumentos se transformam. A contribuição analítica está em conectar essa tipologia à questão do ajuste. O acréscimo de novos elementos sem remover os antigos pode melhorar a congruência com novas metas, mas também gerar inconsistências dentro do repertório instrumental; a alteração de objetivos sem revisão correspondente dos meios produz desajustes típicos de drift; a reutilização de instrumentos para novos fins pode reduzir atritos herdados; a substituição integral aparece como ideal teórico de maior liberdade de desenho, porém rara na prática; e a exaustão revela como certos elementos perdem funcionalidade sem necessariamente serem formalmente substituídos. Assim, o texto desloca a discussão de “qual instrumento escolher” para “como recompor arranjos legados sem destruir sua capacidade operacional”",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Metodologicamente, trata-se de um estudo de caso longitudinal e histórico, centrado na trajetória do planejamento nacional de infraestrutura de transportes neerlandês entre 1997 e 2018. A estratégia argumentativa reconstrói a evolução dos objetivos e dos instrumentos ao longo desse período para identificar em que momentos e por quais mecanismos o ajuste foi reforçado ou corroído. Embora o texto esteja menos interessado em testar hipóteses causais no sentido estrito do que em produzir inferência processual, sua força reside precisamente na temporalização fina do objeto. Em vez de uma fotografia sincrônica do desenho, os autores oferecem uma análise diacrônica que torna visível a defasagem entre a mudança das metas e a adaptação dos instrumentos. Isso é importante porque boa parte das avaliações de desenho tende a inferir “má qualidade” a partir de inconsistências observadas num dado momento, sem reconstruir o processo por meio do qual tais inconsistências emergiram. O artigo sugere que só uma leitura longitudinal permite distinguir desajustes transitórios, ajustes parciais e recomposições mais robustas",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os achados empíricos mais relevantes mostram que objetivos e instrumentos seguiram trajetórias diferentes e em larga medida separadas. A mudança dos objetivos, impulsionada pela passagem para uma orientação mais integrada entre transporte e uso do solo, não encontrou automaticamente um repertório instrumental ajustado a essa nova racionalidade. Nesse contexto, o layering desempenhou papel ambivalente. Por um lado, a introdução de novos instrumentos permitiu melhorar a congruência entre metas renovadas e meios de implementação, funcionando como estratégia de adaptação sem ruptura completa. Por outro, esse mesmo acréscimo sobre uma base preexistente produziu fricções entre instrumentos antigos e novos, comprometendo a consistência do mix. Para lidar com tais tensões, a conversão apareceu como mecanismo relevante: instrumentos existentes foram reinterpretados ou usados de modo distinto para acomodar finalidades redefinidas. O resultado geral não é um sistema estabilizado, mas um processo de ajuste permanente em que ganhos numa dimensão do fit podem gerar perdas em outra",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p7",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "A contribuição do artigo para a disciplina é expressiva em pelo menos três planos. No plano teórico, ele operacionaliza de modo claro a noção de ajuste do desenho, tornando observável a relação entre coerência, consistência e congruência. No plano analítico, mostra que a literatura sobre mixes e dinâmica de políticas ganha densidade quando incorpora seriamente a dimensão temporal, não apenas como pano de fundo, mas como variável constitutiva do próprio objeto. No plano prático, o texto produz recomendações que decorrem diretamente do caso analisado: integrar mais estreitamente o desenho de objetivos e instrumentos desde o início; instituir monitoramento e avaliação contínuos do desempenho do desenho; e reconhecer que a combinação entre adição incremental de instrumentos e conversão de instrumentos herdados pode ser uma estratégia eficaz para ajustar políticas a metas em mutação. Essas implicações são relevantes para campos de políticas marcados por forte institucionalização, nos quais a substituição integral do arranjo é politicamente custosa ou administrativamente inviável",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p8",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao mesmo tempo, o artigo deixa algumas tensões e lacunas importantes. Sua ênfase recai sobre o ajuste interno do desenho, o que fortalece a análise da relação entre metas e instrumentos, mas tende a deixar em segundo plano conflitos políticos, disputas entre atores e assimetrias de poder que também moldam por que certos ajustes são perseguidos e outros não. O estudo mostra que há trajetórias separadas de objetivos e instrumentos, mas explora menos os mecanismos político-institucionais que produzem esse desacoplamento. Além disso, a valorização de estratégias de ajuste incremental pode sugerir uma racionalidade adaptativa relativamente ordenada, quando, em contextos menos estáveis, a sobreposição de instrumentos pode expressar ambiguidade, compromisso político ou até incapacidade decisória. Outra limitação é a dificuldade de generalização imediata: o caso neerlandês oferece grande riqueza para pensar planejamento de infraestrutura, mas não elimina a necessidade de testar a utilidade do modelo em setores nos quais os instrumentos são menos formalizados ou os objetivos mais contestados",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p9",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "No diálogo com o restante do corpus, este artigo ocupa uma posição particularmente importante porque fornece uma gramática dinâmica para pensar desenho de políticas. Seu foco longitudinal e relacional conversa diretamente com o esforço de sistematização do campo realizado por ",
+          "content": [
+            {
+              "type": "citation",
+              "mode": "narrative",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ", que também insiste na necessidade de conectar problemas, soluções e expectativas sem reduzir desenho a uma lista de instrumentos. A diferença é que o artigo aqui analisado aprofunda menos o mapeamento do campo e mais a mecânica temporal do ajuste entre elementos do desenho. Ele também antecipa uma sensibilidade útil para ler estudos comparativos sobre instrumentos específicos, como o trabalho sobre microdimensões de instrumentos digitais em estados brasileiros, ao sugerir que a qualidade do desenho depende não apenas da presença de instrumentos, mas de como eles se encaixam em objetivos em transformação ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Em contraste, o texto sobre desenho, não-desenho e anti-desenho enfatiza situações em que a própria produção de coerência pode ser interrompida ou minada por processos políticos mais desordenados, o que ajuda a qualificar a relativa normatividade presente no caso neerlandês ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Assim, a principal força deste artigo no conjunto do corpus está em oferecer um modelo robusto para compreender a evolução de mixes de política, mas seu diálogo comparativo também revela que ajuste, por si só, não esgota a análise quando o processo decisório é atravessado por controvérsia, omissão estratégica ou disputas sobre o próprio estatuto do problema público.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p10",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-lima2021-conectando-problemas",
+      "level": 2,
+      "title": "Conectando problemas, soluções e expectativas: mapeando a literatura sobre análise do desenho de políticas públicas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O artigo parte de um diagnóstico duplo: de um lado, a literatura internacional sobre desenho de políticas públicas consolidou, ao longo de décadas, um vocabulário analítico relativamente próprio para examinar o conteúdo das políticas; de outro, esse repertório ainda aparece de forma rarefeita e pouco sistematizada no debate brasileiro. A questão central, portanto, não é apenas descrever um subcampo, mas esclarecer em que consiste a perspectiva do desenho, quais são seus componentes analíticos e por que sua incorporação pode ampliar a capacidade explicativa e normativa da análise de políticas no Brasil. Nesse sentido, o texto assume que entender políticas como arranjos compostos por elementos relativamente identificáveis — problemas, objetivos, instrumentos, públicos-alvo, regras, estruturas de governança, racionalidades e construções sociais — permite deslocar o foco da mera sequência processual para a arquitetura substantiva das intervenções estatais",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo do artigo é explicitamente de sistematização e mapeamento. Trata-se de reconstruir a estrutura intelectual do campo de estudos sobre policy design, identificar seus temas dominantes, seus conceitos centrais e os pontos menos desenvolvidos, com vistas a subsidiar uma agenda de pesquisa nacional. O escopo é deliberadamente amplo: em vez de testar uma hipótese substantiva sobre uma política específica, os autores reconstroem um domínio de produção acadêmica, localizando-o nas policy sciences e examinando seus principais desdobramentos conceituais. Essa escolha dá ao texto um caráter fundacional para leitores brasileiros: ele funciona ao mesmo tempo como porta de entrada para o debate internacional e como intervenção programática, ao sustentar que a análise do desenho pode contribuir para qualificar o policy-making, o exame das políticas e a discussão sobre seus resultados",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "A tese principal do artigo é que a perspectiva do desenho de políticas públicas oferece uma via analítica particularmente promissora porque reconecta problemas, soluções e expectativas por meio do exame da estrutura interna das políticas. Em vez de tratar as políticas apenas como produtos contingentes de disputas, os autores enfatizam que elas também podem ser lidas como composições dotadas de lógica própria, cujos elementos interagem entre si e com os contextos institucionais, políticos e organizacionais. A contribuição decisiva do texto está em mostrar que o campo do desenho não se reduz à escolha de instrumentos, embora essa seja uma de suas vertentes mais visíveis; ele envolve uma compreensão mais abrangente da coerência entre objetivos e meios, da consistência interna das combinações adotadas e da congruência entre desenho e contexto. Nessa chave, a qualidade do desenho torna-se variável relevante para explicar desempenho, implementação e efeitos das políticas",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Conceitualmente, o artigo opera com uma distinção que organiza todo o argumento: a separação analítica entre o processo de elaboração dos desenhos e o desenho como conteúdo das políticas. Essa distinção é crucial porque evita confundir formulação com arquitetura substantiva. O processo remete às dinâmicas decisórias, aos conflitos, às ideias e aos interesses mobilizados na produção da política; o desenho, por sua vez, refere-se aos elementos que estruturam a intervenção pública e às relações entre eles. Ao insistir nessa separação, os autores não negam a importância da política e do conflito, mas argumentam que o conteúdo resultante merece tratamento analítico próprio. É justamente essa inflexão que permite ao campo do desenho examinar como problemas são definidos, como objetivos são formulados, quais instrumentos são selecionados, quem é incluído ou excluído, que racionalidades orientam a intervenção e como determinadas imagens dos grupos sociais são institucionalizadas nas políticas",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "A reconstrução da trajetória do campo cumpre função analítica importante. Ao situar o desenho de políticas no interior das policy sciences, o texto mostra que esse subcampo herda tanto a preocupação lasswelliana com a dimensão aplicada do conhecimento quanto a atenção aos instrumentos e aos constrangimentos dos sistemas políticos. A narrativa histórica apresentada indica um deslocamento: das abordagens iniciais mais vinculadas a tipologias e à escolha pública para formulações posteriores em que a separação entre processo e desenho ganha centralidade e em que marcos como a teoria da construção social e a abordagem institucional passam a oferecer gramáticas mais sofisticadas para a análise do conteúdo das políticas. Essa genealogia tem efeito disciplinar relevante: ela insere o debate brasileiro em uma tradição intelectual internacional e mostra que policy design não é moda terminológica, mas um acúmulo teórico com problemas, categorias e agendas relativamente estabilizados",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "No plano metodológico, o artigo é uma pesquisa exploratória e descritiva baseada em revisão semissistemática da literatura. A opção é coerente com o propósito de mapear um campo mais do que medir sua produção por critérios estritamente bibliométricos. Os autores combinam revisão narrativa crítica com estratégia de snowball sampling, partindo de um estudo considerado seminal e rastreando referências e citações até atingir saturação. O corpus final, composto por 74 documentos entre artigos, livros, capítulos e papers, é submetido a análise de conteúdo indutiva com apoio de software de análise qualitativa. O método, assim, não pretende exaustividade mecânica, mas inteligibilidade estruturada: selecionar trabalhos relevantes, extrair categorias recorrentes e organizar uma visão de conjunto do domínio estudado. Essa estratégia é adequada ao objetivo de identificar temas salientes e lacunas, ainda que dependa fortemente do julgamento analítico dos autores na composição da amostra e na abstração das categorias",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um dos méritos do texto é desdobrar o conceito de desenho em uma série de componentes analíticos que permitem examinar políticas como arranjos complexos, e não como decisões isoladas. A literatura mapeada é apresentada como organizada em torno dos elementos formadores das políticas e das relações entre eles. Isso inclui a definição de problemas e objetivos, a seleção e combinação de instrumentos, a configuração de beneficiários e regras de inclusão e exclusão, os sistemas de governança e as racionalidades subjacentes. Ao fazer isso, o artigo oferece uma matriz de leitura que pode ser mobilizada em pesquisas empíricas diversas. A política deixa de ser observada apenas por sua origem processual ou por seus efeitos finais e passa a ser examinada em sua montagem interna. Para a disciplina, isso implica ampliar o repertório analítico entre formulação, implementação e avaliação, permitindo investigar como certas escolhas de desenho condicionam trajetórias e resultados sem reduzir a explicação a uma única fase do processo",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "O artigo também é importante porque apresenta a abordagem do desenho em contraste implícito com o uso mais difundido do ciclo de políticas públicas. Em vez de uma representação em etapas relativamente discretas, os autores enfatizam uma abordagem mais fluida, capaz de incidir sobre formulação, implementação e estrutura lógica das políticas sem se prender a uma sequência linear. Essa inflexão é particularmente produtiva para contextos em que as fronteiras entre formulação e implementação são porosas e em que políticas são continuamente recalibradas. Ao recuperar inclusive a noção de “não desenho”, o texto sugere que nem toda alternativa de política construída politicamente corresponde a um design orientado por intencionalidade substantiva e coerência interna. Essa abertura conceitual é relevante porque impede leituras excessivamente normativas ou idealizadas do desenho, ainda que o artigo mantenha, de modo geral, uma orientação favorável à ideia de que melhores desenhos podem qualificar a ação pública",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os achados e contribuições do artigo são menos empíricos no sentido tradicional e mais cartográficos e programáticos. O texto demonstra que existe uma literatura internacional robusta, diversificada e multidisciplinar sobre desenho de políticas, ao mesmo tempo em que identifica sua recepção ainda limitada no Brasil. A partir desse mapeamento, os autores delineiam uma agenda de pesquisa capaz de aproximar o campo brasileiro de debates sobre estrutura lógica das políticas, coerência entre meios e fins, instrumentos, públicos-alvo e racionalidades. A principal implicação disciplinar é clara: fortalecer a análise de políticas públicas no Brasil por meio de um enfoque que trate o conteúdo das políticas como objeto analítico de primeira ordem. Isso recoloca em bases mais precisas discussões frequentemente dispersas sobre qualidade da intervenção estatal, capacidade de implementação e conexão entre formulação e resultados. O artigo, assim, opera como peça de infraestrutura intelectual para investigações posteriores mais aplicadas",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao mesmo tempo, o texto apresenta limites e tensões que merecem ser explicitados. Como revisão semissistemática orientada por rastreamento em cadeia, ele privilegia a reconstrução conceitual e o mapeamento de debates, mas não oferece critérios de comparação tão padronizados quanto os de uma revisão sistemática mais estrita. Além disso, sua aposta na utilidade do desenho para qualificar políticas públicas, embora plausível e bem sustentada no plano programático, aparece mais como horizonte normativo do campo do que como demonstração causal própria do artigo. Há também uma tensão entre a abrangência da revisão e a profundidade com que alguns componentes do desenho podem ser examinados: ao cobrir uma literatura extensa e heterogênea, o texto necessariamente sacrifica maior detalhamento de controvérsias internas, disputas conceituais e variações metodológicas mais finas. Ainda assim, essas limitações são em parte constitutivas do gênero adotado e não anulam sua relevância como texto de síntese e orientação",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "No diálogo com o restante do corpus, este artigo ocupa posição de charneira conceitual. Em relação ao estudo sobre dinâmicas de desenho em infraestrutura de transportes, fornece a linguagem para compreender por que coerência, consistência e congruência entre objetivos, instrumentos e contexto são problemas analíticos centrais, enquanto o outro texto mostra como esses atributos aparecem em um caso empírico específico",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Já no diálogo com o estudo sobre desenho, não desenho e antidesenho, a contribuição é distinta: o artigo de mapeamento apresenta a arquitetura geral do campo e reconhece a importância da intencionalidade e das racionalidades na formulação, mas o caso regulatório indonésio tensiona essa visão ao mostrar situações em que incoerência, omissão ou orientação contraditória não são resíduos marginais, e sim componentes centrais do próprio arranjo político. Por fim, a comparação com a análise das microdimensões do desenho digital em estados brasileiros sugere um desdobramento natural da agenda proposta aqui: sair do mapa geral da literatura para operacionalizações empíricas mais finas e comparativas do conteúdo dos instrumentos. Assim, este texto não unifica artificialmente o corpus, mas oferece a gramática comum a partir da qual seus contrastes se tornam inteligíveis",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "newman2020_policy_design",
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-lui-micro-dimensions",
+      "level": 2,
+      "title": "Micro-Dimensions of Digital Policy Design Instruments: A Comparative Analysis Across Brazilian States",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O artigo parte de um diagnóstico preciso sobre o estado da literatura de desenho de políticas: embora o campo tenha avançado na análise de arquiteturas macro e de combinações meso de instrumentos, permanece menos desenvolvida a investigação das microdimensões, isto é, dos modos concretos pelos quais instrumentos são calibrados, articulados e convertidos em estilos de implementação. A questão central do texto, portanto, não é apenas descrever quais instrumentos aparecem nas políticas estaduais de transformação digital no Brasil, mas compreender como sua seleção e combinação orientam maneiras distintas de implementar a política. Essa inflexão desloca o foco do inventário de instrumentos para a lógica relacional entre eles, assumindo que o desenho não é um dado estático, mas um arranjo operativo que condiciona coordenação, legitimidade, capacidade de execução e interação com usuários e organizações.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O artigo parte de um diagnóstico preciso sobre o estado da literatura de desenho de políticas: embora o campo tenha avançado na análise de arquiteturas macro e de combinações meso de instrumentos, permanece menos desenvolvida a investigação das microdimensões, isto é, dos modos concretos pelos quais instrumentos são calibrados, articulados e convertidos em estilos de implementação. A questão central do texto, portanto, não é apenas descrever quais instrumentos aparecem nas políticas estaduais de transformação digital no Brasil, mas compreender como sua seleção e combinação orientam maneiras distintas de implementar a política. Essa inflexão desloca o foco do inventário de instrumentos para a lógica relacional entre eles, assumindo que o desenho não é um dado estático, mas um arranjo operativo que condiciona coordenação, legitimidade, capacidade de execução e interação com usuários e organizações ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O objetivo e o escopo do estudo são delimitados de forma clara e ambiciosa. Os autores examinam as políticas estaduais de transformação digital nas 27 unidades subnacionais brasileiras, com base em documentos regulatórios publicados entre 2019 e 2025, buscando responder a três perguntas encadeadas: como essas políticas são desenhadas, qual é a composição das combinações de instrumentos e de que maneira as interações entre esses instrumentos conformam estilos de implementação. O recorte é substantivamente relevante por duas razões. Primeiro, porque a transformação digital se tornou uma agenda estratégica da administração pública brasileira, especialmente após a consolidação de iniciativas federais de integração de serviços. Segundo, porque a variação federativa brasileira oferece um laboratório comparativo especialmente fértil para observar diferenças de capacidade estatal, coordenação intergovernamental e escolhas institucionais em torno de uma mesma agenda de política pública.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo e o escopo do estudo são delimitados de forma clara e ambiciosa. Os autores examinam as políticas estaduais de transformação digital nas 27 unidades subnacionais brasileiras, com base em documentos regulatórios publicados entre 2019 e 2025, buscando responder a três perguntas encadeadas: como essas políticas são desenhadas, qual é a composição das combinações de instrumentos e de que maneira as interações entre esses instrumentos conformam estilos de implementação. O recorte é substantivamente relevante por duas razões. Primeiro, porque a transformação digital se tornou uma agenda estratégica da administração pública brasileira, especialmente após a consolidação de iniciativas federais de integração de serviços. Segundo, porque a variação federativa brasileira oferece um laboratório comparativo especialmente fértil para observar diferenças de capacidade estatal, coordenação intergovernamental e escolhas institucionais em torno de uma mesma agenda de política pública ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A tese principal sustenta que as dimensões incorporadas ao desenho orientam o processo de implementação e que, no caso da transformação digital, combinações equilibradas de instrumentos são decisivas para a efetividade da política. O artigo mostra que não basta possuir instrumentos em abundância nem adotar um repertório formalmente moderno; o que importa é o modo como instrumentos substantivos e procedimentais, distribuídos entre autoridade, organização, nodalidade e, em menor medida, outras formas de intervenção, se combinam para produzir capacidades de coordenação, prestação de serviços, comunicação e adaptação. Daí decorre um argumento mais amplo: estilos de implementação não são simples efeitos contextuais posteriores ao desenho, mas expressões do próprio desenho em operação. Essa formulação aproxima desenho e implementação de maneira produtiva, recusando a ideia de que a implementação seria apenas uma etapa posterior e separada da escolha instrumental.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A tese principal sustenta que as dimensões incorporadas ao desenho orientam o processo de implementação e que, no caso da transformação digital, combinações equilibradas de instrumentos são decisivas para a efetividade da política. O artigo mostra que não basta possuir instrumentos em abundância nem adotar um repertório formalmente moderno; o que importa é o modo como instrumentos substantivos e procedimentais, distribuídos entre autoridade, organização, nodalidade e, em menor medida, outras formas de intervenção, se combinam para produzir capacidades de coordenação, prestação de serviços, comunicação e adaptação. Daí decorre um argumento mais amplo: estilos de implementação não são simples efeitos contextuais posteriores ao desenho, mas expressões do próprio desenho em operação. Essa formulação aproxima desenho e implementação de maneira produtiva, recusando a ideia de que a implementação seria apenas uma etapa posterior e separada da escolha instrumental ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "No plano conceitual, o texto mobiliza uma arquitetura analítica bastante disciplinada. O núcleo da classificação dos instrumentos vem da tipologia NATO de Hood, que organiza os meios de ação pública em nodalidade, autoridade, tesouro e organização. A essa base, os autores articulam a distinção entre instrumentos substantivos e procedimentais, o que lhes permite observar não apenas o tipo de recurso estatal mobilizado, mas também a natureza da intervenção. A noção de microdimensões emerge justamente dessa dupla operação analítica: observar o instrumento em sua categoria formal e, ao mesmo tempo, na sua função prática dentro do arranjo de política. Com isso, a transformação digital deixa de ser tratada como agenda tecnológica genérica e passa a ser examinada como composição específica de mecanismos de regulação, coordenação, estruturação organizacional, comunicação e provisão de serviços.",
+          "content": [
+            {
+              "type": "text",
+              "text": "No plano conceitual, o texto mobiliza uma arquitetura analítica bastante disciplinada. O núcleo da classificação dos instrumentos vem da tipologia NATO de Hood, que organiza os meios de ação pública em nodalidade, autoridade, tesouro e organização. A essa base, os autores articulam a distinção entre instrumentos substantivos e procedimentais, o que lhes permite observar não apenas o tipo de recurso estatal mobilizado, mas também a natureza da intervenção. A noção de microdimensões emerge justamente dessa dupla operação analítica: observar o instrumento em sua categoria formal e, ao mesmo tempo, na sua função prática dentro do arranjo de política. Com isso, a transformação digital deixa de ser tratada como agenda tecnológica genérica e passa a ser examinada como composição específica de mecanismos de regulação, coordenação, estruturação organizacional, comunicação e provisão de serviços ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Esse enquadramento permite aos autores desenvolver uma categoria analítica particularmente relevante: a distinção entre arranjos mais substantivos e arranjos mais procedimentais. Os primeiros tendem a se apoiar em instrumentos de autoridade e organização, como planos, plataformas, estruturas formais e mecanismos operacionais de entrega. Os segundos enfatizam regras de coordenação, participação, legitimação e adaptação entre atores. O ponto importante é que o artigo não apresenta essa distinção como oposição rígida entre modelos bons e ruins. Ao contrário, o estudo sugere que ambas as orientações podem ser funcionais, mas produzem capacidades e limitações distintas. Arranjos mais substantivos favorecem direção técnica e operacionalidade; arranjos mais procedimentais fortalecem coordenação, legitimidade e adaptabilidade. O problema surge quando há desequilíbrio excessivo, isto é, quando a política se torna tecnicamente fechada ou processualmente difusa demais para sustentar implementação consistente.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Esse enquadramento permite aos autores desenvolver uma categoria analítica particularmente relevante: a distinção entre arranjos mais substantivos e arranjos mais procedimentais. Os primeiros tendem a se apoiar em instrumentos de autoridade e organização, como planos, plataformas, estruturas formais e mecanismos operacionais de entrega. Os segundos enfatizam regras de coordenação, participação, legitimação e adaptação entre atores. O ponto importante é que o artigo não apresenta essa distinção como oposição rígida entre modelos bons e ruins. Ao contrário, o estudo sugere que ambas as orientações podem ser funcionais, mas produzem capacidades e limitações distintas. Arranjos mais substantivos favorecem direção técnica e operacionalidade; arranjos mais procedimentais fortalecem coordenação, legitimidade e adaptabilidade. O problema surge quando há desequilíbrio excessivo, isto é, quando a política se torna tecnicamente fechada ou processualmente difusa demais para sustentar implementação consistente ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Do ponto de vista metodológico, o estudo se organiza como análise comparativa qualitativa de documentos regulatórios estaduais. A escolha metodológica é coerente com o objetivo do artigo: se a intenção é reconstruir desenhos de política a partir de seus componentes formais, o exame sistemático de estratégias, decretos, planos e atos regulatórios é um caminho adequado para identificar instrumentos, combinações e ênfases normativas. O corpus entre 2019 e 2025 permite captar o momento de intensificação e formalização da agenda de governo digital nos estados, em especial após a reorganização federal do tema. A estratégia comparativa entre as 27 unidades da federação também é um trunfo, pois possibilita mapear variações intra-nacionais expressivas sob um mesmo ambiente federativo. Ainda que o artigo não esteja centrado em rastrear implementação empírica em profundidade no nível de rua, sua inferência sobre estilos de implementação deriva de forma plausível da configuração documental dos instrumentos.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Do ponto de vista metodológico, o estudo se organiza como análise comparativa qualitativa de documentos regulatórios estaduais. A escolha metodológica é coerente com o objetivo do artigo: se a intenção é reconstruir desenhos de política a partir de seus componentes formais, o exame sistemático de estratégias, decretos, planos e atos regulatórios é um caminho adequado para identificar instrumentos, combinações e ênfases normativas. O corpus entre 2019 e 2025 permite captar o momento de intensificação e formalização da agenda de governo digital nos estados, em especial após a reorganização federal do tema. A estratégia comparativa entre as 27 unidades da federação também é um trunfo, pois possibilita mapear variações intra-nacionais expressivas sob um mesmo ambiente federativo. Ainda que o artigo não esteja centrado em rastrear implementação empírica em profundidade no nível de rua, sua inferência sobre estilos de implementação deriva de forma plausível da configuração documental dos instrumentos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Os achados centrais apontam para forte heterogeneidade entre estados. Alguns priorizam instrumentos substantivos vinculados à autoridade e à organização, como planos formais e plataformas digitais, produzindo políticas mais tecnicizadas e operacionalmente orientadas. Outros enfatizam instrumentos procedimentais, com maior peso para coordenação, legitimação e adaptabilidade institucional. O artigo interpreta essas diferenças não como mera dispersão administrativa, mas como configurações distintas de capacidade estatal e de concepção sobre como conduzir a transformação digital. Essa leitura é especialmente importante porque evita reduzir a agenda digital a uma questão de maturidade tecnológica. O que está em jogo, segundo o estudo, é um problema de desenho: como os governos estruturam relações entre normas, capacidades organizacionais, comunicação e entrega de serviços para tornar a digitalização governável e implementável.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os achados centrais apontam para forte heterogeneidade entre estados. Alguns priorizam instrumentos substantivos vinculados à autoridade e à organização, como planos formais e plataformas digitais, produzindo políticas mais tecnicizadas e operacionalmente orientadas. Outros enfatizam instrumentos procedimentais, com maior peso para coordenação, legitimação e adaptabilidade institucional. O artigo interpreta essas diferenças não como mera dispersão administrativa, mas como configurações distintas de capacidade estatal e de concepção sobre como conduzir a transformação digital. Essa leitura é especialmente importante porque evita reduzir a agenda digital a uma questão de maturidade tecnológica. O que está em jogo, segundo o estudo, é um problema de desenho: como os governos estruturam relações entre normas, capacidades organizacionais, comunicação e entrega de serviços para tornar a digitalização governável e implementável ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p7",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A principal contribuição do artigo para a disciplina está em mostrar que a análise de instrumentos ganha poder explicativo quando desce ao nível das microcalibragens do desenho. Em vez de tomar o mix de instrumentos como um bloco homogêneo, o estudo investiga a natureza das combinações e sua tradução em estilos de implementação. Isso reforça uma agenda analítica que vincula desenho, capacidade estatal e governança digital sem diluir a especificidade de cada dimensão. Além disso, o texto amplia o alcance empírico da literatura ao deslocar a atenção para o nível subnacional brasileiro, ainda relativamente pouco explorado em estudos sobre transformação digital. Para a administração pública, a implicação é direta: políticas digitais eficazes dependem menos de aderir genericamente ao ideal de modernização e mais de calibrar, de forma coerente, instrumentos de coordenação, regulação, organização e interface com usuários.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A principal contribuição do artigo para a disciplina está em mostrar que a análise de instrumentos ganha poder explicativo quando desce ao nível das microcalibragens do desenho. Em vez de tomar o mix de instrumentos como um bloco homogêneo, o estudo investiga a natureza das combinações e sua tradução em estilos de implementação. Isso reforça uma agenda analítica que vincula desenho, capacidade estatal e governança digital sem diluir a especificidade de cada dimensão. Além disso, o texto amplia o alcance empírico da literatura ao deslocar a atenção para o nível subnacional brasileiro, ainda relativamente pouco explorado em estudos sobre transformação digital. Para a administração pública, a implicação é direta: políticas digitais eficazes dependem menos de aderir genericamente ao ideal de modernização e mais de calibrar, de forma coerente, instrumentos de coordenação, regulação, organização e interface com usuários ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p8",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Ao mesmo tempo, o artigo apresenta limites e tensões analíticas que são produtivos para a leitura crítica. Como a base empírica repousa principalmente em documentos regulatórios, o estudo identifica com precisão o desenho formal, mas alcança apenas de maneira indireta os efeitos concretos da implementação, as disputas burocráticas cotidianas e a recepção social dos instrumentos. Há também uma tensão entre inferir estilos de implementação a partir do desenho e demonstrar empiricamente que esses estilos se materializam de modo consistente na prática administrativa. Além disso, a ênfase na combinação equilibrada de instrumentos é teoricamente persuasiva, mas pode exigir maior especificação dos critérios pelos quais equilíbrio e efetividade são avaliados em contextos federativos tão desiguais. Esses limites, contudo, não enfraquecem o artigo; antes, indicam uma agenda promissora de aprofundamento, combinando análise documental com investigação processual e estudos de caso de implementação.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao mesmo tempo, o artigo apresenta limites e tensões analíticas que são produtivos para a leitura crítica. Como a base empírica repousa principalmente em documentos regulatórios, o estudo identifica com precisão o desenho formal, mas alcança apenas de maneira indireta os efeitos concretos da implementação, as disputas burocráticas cotidianas e a recepção social dos instrumentos. Há também uma tensão entre inferir estilos de implementação a partir do desenho e demonstrar empiricamente que esses estilos se materializam de modo consistente na prática administrativa. Além disso, a ênfase na combinação equilibrada de instrumentos é teoricamente persuasiva, mas pode exigir maior especificação dos critérios pelos quais equilíbrio e efetividade são avaliados em contextos federativos tão desiguais. Esses limites, contudo, não enfraquecem o artigo; antes, indicam uma agenda promissora de aprofundamento, combinando análise documental com investigação processual e estudos de caso de implementação ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p9",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "No diálogo com o restante do corpus, o texto ocupa posição estratégica porque opera como desdobramento empírico e analítico de preocupações mais amplas da literatura sobre desenho de políticas. Em relação ao mapeamento conceitual do campo realizado por",
+          "content": [
+            {
+              "type": "text",
+              "text": "No diálogo com o restante do corpus, o texto ocupa posição estratégica porque opera como desdobramento empírico e analítico de preocupações mais amplas da literatura sobre desenho de políticas. Em relação ao mapeamento conceitual do campo realizado por ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "narrative",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ", este artigo avança ao transformar uma agenda de sistematização teórica em modelo operacional aplicado a um setor substantivo específico. Já em comparação com o estudo sobre dinâmicas de ajuste entre objetivos e instrumentos em infraestrutura de transportes, há convergência na ideia de que o desenho deve ser entendido como relação entre fins e meios em contextos institucionais concretos, embora aqui o foco recaia menos sobre dinâmica temporal do ajuste e mais sobre variação comparativa das combinações instrumentais ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Por fim, o contraste com a discussão sobre design, não design e anti-design evidencia que o artigo atual trabalha com contextos em que há intencionalidade formalizada e visível no desenho, diferentemente de situações marcadas por ambiguidade regulatória ou bloqueio deliberado da ação pública ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Esse diálogo não produz uma unidade artificial no corpus, mas ajuda a localizar o texto como contribuição situada: ele mostra o que se ganha analiticamente quando a investigação sai do plano geral da literatura e entra na observação fina das microescolhas instrumentais em um campo de política em rápida transformação.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p10",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-newman-policy-design-non-design-and-anti-design",
+      "level": 2,
+      "title": "Policy design, non-design, and anti-design: the regulation of e-cigarettes in Indonesia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O artigo toma como problema central uma lacuna conceitual importante no campo do desenho de políticas: a literatura desenvolveu definições relativamente estáveis para “design”, mas permaneceu muito menos precisa quando trata daquilo que não é desenho. Em vez de aceitar a oposição habitual entre desenho racional e política, o texto sustenta que essa dicotomia empobrece a análise, porque reduz toda falha de conexão entre problemas, instrumentos e resultados a motivações políticas. A questão decisiva, portanto, não é simplesmente saber se a política pública é mais ou menos politizada, mas como se estruturam — ou deixam de se estruturar — as conexões entre problema, objetivo, intervenção e resultado em situações reais de formulação estatal.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O artigo toma como problema central uma lacuna conceitual importante no campo do desenho de políticas: a literatura desenvolveu definições relativamente estáveis para “design”, mas permaneceu muito menos precisa quando trata daquilo que não é desenho. Em vez de aceitar a oposição habitual entre desenho racional e política, o texto sustenta que essa dicotomia empobrece a análise, porque reduz toda falha de conexão entre problemas, instrumentos e resultados a motivações políticas. A questão decisiva, portanto, não é simplesmente saber se a política pública é mais ou menos politizada, mas como se estruturam — ou deixam de se estruturar — as conexões entre problema, objetivo, intervenção e resultado em situações reais de formulação estatal ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O objetivo e o escopo do estudo são duplos. Em primeiro lugar, os autores propõem uma tipologia capaz de distinguir design, non-design e uma categoria específica denominada anti-design. Em segundo, utilizam a tentativa de regulação dos cigarros eletrônicos na Indonésia como caso empírico para mostrar uma situação em que atividades de desenho estão virtualmente ausentes. O artigo, assim, não pretende oferecer uma teoria geral exaustiva do processo decisório, mas avançar uma clarificação analítica de alto impacto para o campo: identificar formas distintas de desconexão entre problemas, intervenções e resultados e demonstrar que a ausência de desenho não deve ser tratada como categoria homogênea.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo e o escopo do estudo são duplos. Em primeiro lugar, os autores propõem uma tipologia capaz de distinguir design, non-design e uma categoria específica denominada anti-design. Em segundo, utilizam a tentativa de regulação dos cigarros eletrônicos na Indonésia como caso empírico para mostrar uma situação em que atividades de desenho estão virtualmente ausentes. O artigo, assim, não pretende oferecer uma teoria geral exaustiva do processo decisório, mas avançar uma clarificação analítica de alto impacto para o campo: identificar formas distintas de desconexão entre problemas, intervenções e resultados e demonstrar que a ausência de desenho não deve ser tratada como categoria homogênea ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A tese principal é formulada de modo explícito e revisionista: o oposto de policy design não é a política, mas a desconexão entre problemas, intervenções e outcomes. Essa redefinição é decisiva porque desloca o debate de um contraste normativo excessivamente simples — racionalidade versus conflito político — para uma análise mais fina das condições sob as quais uma política deixa de apresentar encadeamento instrumental inteligível. Ao fazê-lo, o artigo reconhece que forças políticas podem produzir não desenho, mas insiste que elas não são sua única causa; incompetência administrativa, corrupção, ambiguidades institucionais e tendências econômicas mais amplas também podem dissolver ou impedir a articulação entre objetivos e instrumentos. O ganho analítico está em abrir espaço para distinguir falhas por captura, falhas por incapacidade e falhas por reversão da própria lógica de desenho.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A tese principal é formulada de modo explícito e revisionista: o oposto de policy design não é a política, mas a desconexão entre problemas, intervenções e outcomes. Essa redefinição é decisiva porque desloca o debate de um contraste normativo excessivamente simples — racionalidade versus conflito político — para uma análise mais fina das condições sob as quais uma política deixa de apresentar encadeamento instrumental inteligível. Ao fazê-lo, o artigo reconhece que forças políticas podem produzir não desenho, mas insiste que elas não são sua única causa; incompetência administrativa, corrupção, ambiguidades institucionais e tendências econômicas mais amplas também podem dissolver ou impedir a articulação entre objetivos e instrumentos. O ganho analítico está em abrir espaço para distinguir falhas por captura, falhas por incapacidade e falhas por reversão da própria lógica de desenho ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A reconstrução conceitual do artigo parte de uma síntese da literatura que, apesar de divergências normativas e ontológicas, converge em um núcleo relativamente comum de entendimento do desenho de políticas. Os autores mostram que, para diferentes correntes, design envolve uma atividade consciente, orientada por propósito, aproximadamente linear ou cíclica, na qual se articulam problema público, objetivo de política, instrumentos e resultados. Um mérito importante do texto está em separar analiticamente problema e objetivo, já que o problema social não determina automaticamente a meta de política; esta é sempre uma tradução seletiva, graduada e contestável daquele problema em termos de intervenção estatal. Essa diferenciação permite aos autores explicitar a cadeia ideal do desenho: problema de política, objetivo, intervenção e outcome. A partir dela, torna-se possível avaliar graus de ajuste, desajuste ou ruptura.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A reconstrução conceitual do artigo parte de uma síntese da literatura que, apesar de divergências normativas e ontológicas, converge em um núcleo relativamente comum de entendimento do desenho de políticas. Os autores mostram que, para diferentes correntes, design envolve uma atividade consciente, orientada por propósito, aproximadamente linear ou cíclica, na qual se articulam problema público, objetivo de política, instrumentos e resultados. Um mérito importante do texto está em separar analiticamente problema e objetivo, já que o problema social não determina automaticamente a meta de política; esta é sempre uma tradução seletiva, graduada e contestável daquele problema em termos de intervenção estatal. Essa diferenciação permite aos autores explicitar a cadeia ideal do desenho: problema de política, objetivo, intervenção e outcome. A partir dela, torna-se possível avaliar graus de ajuste, desajuste ou ruptura ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Os conceitos centrais mobilizados são, portanto, menos numerosos do que densos: design, non-design, anti-design, problema, objetivo, intervenção e resultado. O conceito de anti-design é o principal aporte do artigo. Ele não equivale a mera ausência passiva de planejamento, nem a um caso em que o desenho falha parcialmente. Trata-se antes de uma configuração em que a própria relação entre problema e resposta pública se encontra invertida, esvaziada ou desconectada a tal ponto que a ação estatal não pode sequer ser descrita como tentativa coerente de ajustar instrumentos a fins. O artigo sugere, assim, uma gradação qualitativa: há contextos em que o desenho é incompleto, outros em que ele não se realiza, e outros ainda em que a política caminha em direção oposta aos princípios mínimos de uma construção instrumental orientada para problemas. Essa tipificação fornece um vocabulário analítico mais robusto para examinar políticas ambíguas, erráticas ou capturadas.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os conceitos centrais mobilizados são, portanto, menos numerosos do que densos: design, non-design, anti-design, problema, objetivo, intervenção e resultado. O conceito de anti-design é o principal aporte do artigo. Ele não equivale a mera ausência passiva de planejamento, nem a um caso em que o desenho falha parcialmente. Trata-se antes de uma configuração em que a própria relação entre problema e resposta pública se encontra invertida, esvaziada ou desconectada a tal ponto que a ação estatal não pode sequer ser descrita como tentativa coerente de ajustar instrumentos a fins. O artigo sugere, assim, uma gradação qualitativa: há contextos em que o desenho é incompleto, outros em que ele não se realiza, e outros ainda em que a política caminha em direção oposta aos princípios mínimos de uma construção instrumental orientada para problemas. Essa tipificação fornece um vocabulário analítico mais robusto para examinar políticas ambíguas, erráticas ou capturadas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Do ponto de vista metodológico, o artigo combina estratégia conceitual e ilustração empírica. Não se trata de um desenho comparativo amplo nem de teste sistemático de hipóteses, mas de um estudo orientado por construção tipológica e demonstração analítica. A discussão sobre a Indonésia funciona como caso revelador: ao examinar a tentativa governamental de regular cigarros eletrônicos, os autores buscam evidenciar um cenário no qual a formulação pública não decorre de encadeamento racional entre definição do problema, escolha de metas, seleção de instrumentos e produção esperada de resultados. A evidência é mobilizada menos para medir causalmente efeitos do que para tornar visível uma forma de desconexão institucional e decisória que a literatura tradicional tenderia a classificar de maneira imprecisa como mera politização.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Do ponto de vista metodológico, o artigo combina estratégia conceitual e ilustração empírica. Não se trata de um desenho comparativo amplo nem de teste sistemático de hipóteses, mas de um estudo orientado por construção tipológica e demonstração analítica. A discussão sobre a Indonésia funciona como caso revelador: ao examinar a tentativa governamental de regular cigarros eletrônicos, os autores buscam evidenciar um cenário no qual a formulação pública não decorre de encadeamento racional entre definição do problema, escolha de metas, seleção de instrumentos e produção esperada de resultados. A evidência é mobilizada menos para medir causalmente efeitos do que para tornar visível uma forma de desconexão institucional e decisória que a literatura tradicional tenderia a classificar de maneira imprecisa como mera politização ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Os achados do caso indonésio, tal como apresentados pelos autores, reforçam a ideia de que a regulação dos cigarros eletrônicos emergiu em condições de baixa coerência interna. Em vez de uma arquitetura regulatória fundada em definição clara do problema público — por exemplo, saúde pública, tributação, controle de mercado ou proteção do consumidor — o processo aparece marcado por acoplamentos frágeis entre justificativas, instrumentos e efeitos pretendidos. O caso mostra que a política pode existir sem que haja desenho propriamente dito; mais ainda, pode haver ação estatal relevante sem que estejam presentes os elementos mínimos que permitiriam descrevê-la como resposta instrumental a um problema definido. A contribuição empírica do texto reside justamente em demonstrar essa possibilidade, desafiando o pressuposto, por vezes implícito, de que toda política em vigor encerra algum tipo de racionalidade de desenho, ainda que imperfeita.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os achados do caso indonésio, tal como apresentados pelos autores, reforçam a ideia de que a regulação dos cigarros eletrônicos emergiu em condições de baixa coerência interna. Em vez de uma arquitetura regulatória fundada em definição clara do problema público — por exemplo, saúde pública, tributação, controle de mercado ou proteção do consumidor — o processo aparece marcado por acoplamentos frágeis entre justificativas, instrumentos e efeitos pretendidos. O caso mostra que a política pode existir sem que haja desenho propriamente dito; mais ainda, pode haver ação estatal relevante sem que estejam presentes os elementos mínimos que permitiriam descrevê-la como resposta instrumental a um problema definido. A contribuição empírica do texto reside justamente em demonstrar essa possibilidade, desafiando o pressuposto, por vezes implícito, de que toda política em vigor encerra algum tipo de racionalidade de desenho, ainda que imperfeita ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Para a disciplina, a principal contribuição do artigo é deslocar o foco da avaliação do desenho do plano normativo para o plano analítico. Em vez de perguntar apenas se mais desenho é desejável, os autores mostram a necessidade de identificar como diferentes formas de não desenho operam concretamente. Isso amplia o repertório da análise de políticas ao permitir investigações mais precisas sobre desajustes entre fins e meios, fragmentação institucional, incapacidade estatal e processos de decisão nos quais a própria inteligibilidade do problema público se enfraquece. O texto é especialmente relevante porque insiste que racionalidade e política não são termos mutuamente excludentes: uma política pode ser politicamente motivada e ainda assim apresentar desenho; inversamente, pode carecer de desenho por razões não redutíveis à disputa política. Essa inflexão é teoricamente fecunda para estudos sobre capacidade estatal, implementação e governança regulatória.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para a disciplina, a principal contribuição do artigo é deslocar o foco da avaliação do desenho do plano normativo para o plano analítico. Em vez de perguntar apenas se mais desenho é desejável, os autores mostram a necessidade de identificar como diferentes formas de não desenho operam concretamente. Isso amplia o repertório da análise de políticas ao permitir investigações mais precisas sobre desajustes entre fins e meios, fragmentação institucional, incapacidade estatal e processos de decisão nos quais a própria inteligibilidade do problema público se enfraquece. O texto é especialmente relevante porque insiste que racionalidade e política não são termos mutuamente excludentes: uma política pode ser politicamente motivada e ainda assim apresentar desenho; inversamente, pode carecer de desenho por razões não redutíveis à disputa política. Essa inflexão é teoricamente fecunda para estudos sobre capacidade estatal, implementação e governança regulatória ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Os limites e tensões do artigo decorrem em parte de sua própria ambição conceitual. A tipologia é persuasiva como intervenção crítica, mas sua operacionalização ainda aparece em nível relativamente inicial. Permanecem abertas perguntas sobre como distinguir empiricamente, com critérios mais estáveis, situações de desenho fracassado, non-design e anti-design; em que medida essas categorias descrevem estados distintos ou posições em um contínuo; e como lidar com casos em que múltiplos objetivos, atores e temporalidades tornam inevitavelmente difusa a relação entre problema, instrumento e resultado. Além disso, ao enfatizar a desconexão como oposto do desenho, o texto ilumina a falha instrumental, mas pode deixar menos desenvolvido o exame de contextos em que a ambiguidade não é defeito, e sim recurso estratégico da própria política. Ainda assim, essas tensões não anulam o argumento; antes, indicam agenda promissora de refinamento conceitual e aplicação comparada.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os limites e tensões do artigo decorrem em parte de sua própria ambição conceitual. A tipologia é persuasiva como intervenção crítica, mas sua operacionalização ainda aparece em nível relativamente inicial. Permanecem abertas perguntas sobre como distinguir empiricamente, com critérios mais estáveis, situações de desenho fracassado, non-design e anti-design; em que medida essas categorias descrevem estados distintos ou posições em um contínuo; e como lidar com casos em que múltiplos objetivos, atores e temporalidades tornam inevitavelmente difusa a relação entre problema, instrumento e resultado. Além disso, ao enfatizar a desconexão como oposto do desenho, o texto ilumina a falha instrumental, mas pode deixar menos desenvolvido o exame de contextos em que a ambiguidade não é defeito, e sim recurso estratégico da própria política. Ainda assim, essas tensões não anulam o argumento; antes, indicam agenda promissora de refinamento conceitual e aplicação comparada ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Em diálogo com o corpus, este artigo ocupa posição singular. Enquanto o texto de mapeamento da literatura reconstrói o campo do desenho de políticas a partir de suas tradições, conexões e agendas analíticas, o estudo sobre a Indonésia intervém no núcleo definicional do debate ao problematizar aquilo que a literatura tende a tratar de forma residual ou indiferenciada. Há convergência entre ambos no reconhecimento de que desenho de políticas não se reduz à simples escolha de instrumentos, mas envolve articulações entre problemas, soluções e expectativas; contudo, o artigo aqui analisado radicaliza essa preocupação ao sustentar que a desconexão entre esses elementos merece tipificação própria, e não apenas classificação genérica como política ou conflito.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em diálogo com o corpus, este artigo ocupa posição singular. Enquanto o texto de mapeamento da literatura reconstrói o campo do desenho de políticas a partir de suas tradições, conexões e agendas analíticas, o estudo sobre a Indonésia intervém no núcleo definicional do debate ao problematizar aquilo que a literatura tende a tratar de forma residual ou indiferenciada. Há convergência entre ambos no reconhecimento de que desenho de políticas não se reduz à simples escolha de instrumentos, mas envolve articulações entre problemas, soluções e expectativas; contudo, o artigo aqui analisado radicaliza essa preocupação ao sustentar que a desconexão entre esses elementos merece tipificação própria, e não apenas classificação genérica como política ou conflito ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A comparação com os estudos mais empiricamente orientados do corpus também é elucidativa. O trabalho sobre dinâmicas de desenho em infraestrutura de transportes enfatiza o ajuste entre objetivos e instrumentos ao longo do tempo, isto é, parte do pressuposto de que existe uma arquitetura de desenho sujeita a recombinações, tensões e adaptações. Já a análise das microdimensões de instrumentos digitais examina com maior granularidade atributos internos do desenho e sua variação comparada entre unidades subnacionais. Frente a esses dois textos, o artigo sobre anti-design contribui menos pela sofisticação da mensuração e mais por delimitar a fronteira analítica do que conta como desenho em primeiro lugar. Seu valor no corpus está precisamente em funcionar como contraponto conceitual: ele lembra que nem toda política observável deve ser automaticamente tratada como desenho imperfeito; algumas podem expressar ausência ou reversão da própria lógica de conexão entre problema, objetivo e instrumento.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A comparação com os estudos mais empiricamente orientados do corpus também é elucidativa. O trabalho sobre dinâmicas de desenho em infraestrutura de transportes enfatiza o ajuste entre objetivos e instrumentos ao longo do tempo, isto é, parte do pressuposto de que existe uma arquitetura de desenho sujeita a recombinações, tensões e adaptações. Já a análise das microdimensões de instrumentos digitais examina com maior granularidade atributos internos do desenho e sua variação comparada entre unidades subnacionais. Frente a esses dois textos, o artigo sobre anti-design contribui menos pela sofisticação da mensuração e mais por delimitar a fronteira analítica do que conta como desenho em primeiro lugar. Seu valor no corpus está precisamente em funcionar como contraponto conceitual: ele lembra que nem toda política observável deve ser automaticamente tratada como desenho imperfeito; algumas podem expressar ausência ou reversão da própria lógica de conexão entre problema, objetivo e instrumento ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-comparacao-textos",
+      "level": 1,
+      "title": "Comparação entre os textos",
+      "blocks": [
+        {
+          "type": "table",
+          "text": "",
+          "content": [],
+          "level": 1,
+          "items": [],
+          "table": {
+            "headers": [
+              "Texto",
+              "Objeto/problema",
+              "Escala e método",
+              "Conceitos centrais",
+              "Contribuição",
+              "Limite/tensão"
+            ],
+            "rows": [
+              [
+                "Dinâmicas do desenho em infraestrutura de transportes",
+                "Ajuste entre objetivos e instrumentos ao longo do tempo em planejamento de infraestrutura",
+                "Estudo de caso longitudinal nacional; reconstrução processual e histórica",
+                "Coerência, consistência, congruência, fit, layering, drift, conversion, replacement, exhaustion",
+                "Temporaliza o desenho e mostra que o ajuste é processual, sempre provisório",
+                "Menor atenção às disputas de poder e à política do desacoplamento"
+              ],
+              [
+                "Mapeamento da literatura sobre desenho de políticas",
+                "Estrutura intelectual do campo e conexão entre problemas, soluções e expectativas",
+                "Revisão semissistemática e análise de conteúdo de literatura",
+                "Desenho como conteúdo, distinção entre processo e desenho, instrumentos, públicos-alvo, racionalidades",
+                "Oferece gramática conceitual ampla para ler o campo e orientar agenda de pesquisa",
+                "Caráter programático; menor demonstração empírica direta"
+              ],
+              [
+                "Microdimensões de instrumentos de desenho digital",
+                "Como combinações de instrumentos moldam estilos de implementação em políticas digitais estaduais",
+                "Comparação documental entre 27 estados; análise qualitativa de instrumentos",
+                "Microdimensões, instrumentos substantivos e procedimentais, nodalidade, autoridade, organização",
+                "Operacionaliza o desenho em nível fino e liga composição instrumental a estilos de implementação",
+                "Base documental capta melhor desenho formal do que implementação efetiva"
+              ],
+              [
+                "Desenho, não desenho e antidesenho na regulação de cigarros eletrônicos",
+                "Condições em que a política não apresenta conexão inteligível entre problema, objetivo, intervenção e resultado",
+                "Intervenção conceitual com estudo de caso ilustrativo",
+                "Design, non-design, anti-design, desconexão entre problema, objetivo, intervenção e resultado",
+                "Amplia a fronteira analítica do campo ao mostrar que nem toda política observável é desenho imperfeito",
+                "Tipologia ainda exige maior operacionalização comparativa"
+              ]
+            ],
+            "caption": "Síntese comparativa dos quatro textos do corpus."
+          },
+          "id": "tbl-comparacao-textos",
+          "title": "Tabela comparativa sintética",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os quatro textos convergem em um ponto decisivo: o desenho de políticas públicas não pode ser reduzido a uma escolha isolada de instrumentos, nem ser tratado como mero reflexo automático do processo político. Em todos eles, o núcleo analítico do campo aparece como um problema de articulação entre elementos heterogêneos — problemas, objetivos, instrumentos, regras, capacidades e resultados — ainda que cada estudo selecione uma entrada distinta para examinar essa articulação. O texto de mapeamento da literatura fornece a formulação mais abrangente desse consenso ao reconstruir o desenho como análise do conteúdo das políticas e de suas conexões internas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O estudo sobre infraestrutura de transportes traduz esse princípio em chave temporal, mostrando que a relação entre fins e meios é instável e precisa ser observada ao longo do tempo ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O artigo sobre microdimensões dos instrumentos digitais desloca a atenção para a composição fina dos instrumentos e para sua incidência sobre estilos de implementação ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Já o trabalho sobre não desenho e antidesenho intervém no limite externo do campo, argumentando que sequer se deve presumir a existência de desenho sempre que há ação estatal visível ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa convergência geral, contudo, encobre divergências substantivas de objeto. O estudo neerlandês trabalha com planejamento nacional de infraestrutura de transportes, um setor de alta institucionalização, forte dependência de trajetória e temporalidade longa, no qual o problema central é como recompor o ajuste entre objetivos e instrumentos em um arranjo acumulado historicamente ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O artigo brasileiro de revisão não analisa uma política específica, mas o próprio campo de estudos, de modo que seu objeto é meta-analítico: ele reconstrói os debates, categorias e agendas da literatura de policy design ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O estudo sobre transformação digital desloca o foco para políticas estaduais contemporâneas, fortemente associadas à reorganização administrativa e à prestação de serviços, em contexto federativo e comparativo ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Por sua vez, o texto sobre cigarros eletrônicos examina uma controvérsia regulatória marcada por indefinição do problema público e por baixa inteligibilidade da relação entre intervenção e finalidade ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Em outras palavras, os textos não investigam a mesma coisa em contextos diferentes; eles recortam dimensões distintas do fenômeno do desenho, o que recomenda cautela contra comparações excessivamente homogeneizadoras.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "As diferenças de escala analítica são igualmente importantes. O artigo de revisão opera em escala macro e disciplinar: seu interesse é cartografar o campo, delimitar seus componentes e explicitar suas promessas analíticas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O estudo neerlandês trabalha em escala meso, acompanhando a evolução de um mix de objetivos e instrumentos em um subsistema de política pública ao longo de duas décadas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O texto sobre microdimensões desce a um nível mais fino, quase micro-analítico dentro do próprio desenho, ao distinguir calibragens instrumentais e seus efeitos prováveis sobre estilos de implementação em diferentes estados ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Já o artigo sobre design, non-design e anti-design move-se entre o plano conceitual e um caso ilustrativo específico, usando a evidência empírica sobretudo para sustentar uma redefinição tipológica ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Essa variação de escala é decisiva porque explica por que os textos iluminam facetas diferentes do mesmo domínio: um oferece a gramática do campo, outro a dinâmica temporal do ajuste, outro a granularidade instrumental e outro os limites do próprio conceito de desenho.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Do ponto de vista metodológico, o corpus também é heterogêneo de forma produtiva. A revisão semissistemática combinada com análise de conteúdo permite ao texto de mapeamento identificar recorrências conceituais, agendas e lacunas, mas não lhe confere o mesmo tipo de poder demonstrativo de um estudo empírico setorial ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O estudo sobre infraestrutura depende de reconstrução longitudinal de um caso nacional, método particularmente adequado para mostrar defasagens temporais entre mudança de objetivos e adaptação dos instrumentos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A análise comparativa dos estados brasileiros utiliza documentos regulatórios para classificar combinações instrumentais e inferir estilos de implementação, o que lhe dá amplitude comparativa, mas a mantém mais próxima do desenho formal do que da prática implementadora observada in loco ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Já o artigo sobre a Indonésia combina construção conceitual e ilustração empírica, oferecendo poder crítico sobre categorias do campo, embora com menor densidade de operacionalização padronizada ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Em termos comparativos, isso significa que os textos não disputam o mesmo critério de validade: alguns valem pela precisão tipológica, outros pela capacidade de reconstrução processual, outros pela amplitude de comparação e outros pela sistematização teórica.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Há, ademais, uma arquitetura conceitual comum, mas não idêntica. A revisão da literatura organiza o campo em torno da distinção entre processo e conteúdo, permitindo tratar o desenho como composição de problemas, objetivos, instrumentos, públicos-alvo e racionalidades ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O artigo neerlandês adensa essa gramática por meio da noção de fit, decomposta em coerência, consistência e congruência, e pela incorporação de mecanismos de mudança como layering, drift e conversion ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O estudo sobre política digital introduz uma diferenciação própria ao combinar a tipologia de instrumentos com a oposição entre dimensões substantivas e procedimentais, transformando o desenho em um problema de microcalibragem ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O texto sobre anti-design, por sua vez, recentra o debate na cadeia problema-objetivo-intervenção-resultado e propõe distinguir situações em que essa cadeia existe de forma precária, não existe ou é revertida ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Assim, embora todos tratem de conexões internas das políticas, cada um privilegia uma unidade analítica diferente: composição geral, ajuste dinâmico, microinstrumentação ou ruptura da própria inteligibilidade do desenho.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os pressupostos teóricos também não são equivalentes. O texto de revisão assume, em chave programática, que o conteúdo das políticas pode e deve ser analisado com relativa autonomia frente ao processo decisório, sem que isso implique negar conflitos, ideias e interesses ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O estudo sobre infraestrutura compartilha esse pressuposto, mas o historiciza: admite que o desenho é sempre herdado, incremental e condicionado por arranjos anteriores, o que o aproxima de uma sensibilidade institucionalista e evolucionária ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O artigo sobre microdimensões parte de pressuposto mais operacional: a forma como instrumentos são combinados afeta estilos de implementação e, portanto, a capacidade estatal de entregar e coordenar a política ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Já o texto sobre anti-design é o mais cético em relação a qualquer normatividade implícita do campo, porque insiste que a ausência de conexão inteligível entre elementos da política não é desvio marginal, mas possibilidade constitutiva da ação pública ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Em suma, enquanto três textos procuram refinar como reconhecer e avaliar desenho, o quarto adverte que parte da realidade estatal exige categorias para nomear justamente sua erosão ou ausência.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Isso produz convergências reais, mas também divergências analíticas relevantes. Há convergência na ideia de que a relação entre objetivos e instrumentos não é linear nem autoevidente. Tanto o estudo de infraestrutura quanto o de política digital mostram que a qualidade do desenho depende da articulação entre elementos múltiplos e do equilíbrio entre eles ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O texto de revisão reforça essa percepção ao apresentar o desenho como campo interessado precisamente em examinar a estrutura lógica das políticas ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Mas o artigo sobre anti-design diverge ao recusar a suposição de que toda política possa ser tratada como desenho mais ou menos bem ajustado. Seu argumento funciona como crítica a leituras que transformam incoerência em simples imperfeição incremental, quando em alguns casos a própria conexão entre problema e intervenção está comprometida ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Essa divergência é substantiva porque impede uma leitura excessivamente integradora do corpus: nem todo desajuste observado em políticas herdadas, complexas ou fragmentadas deve ser automaticamente interpretado pela gramática do fit.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p7",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em termos de contribuição para a disciplina, os textos se complementam sem se sobrepor. O artigo de revisão cumpre função de infraestrutura conceitual: torna o campo inteligível, organiza seu léxico e legitima uma agenda de pesquisa mais robusta em língua portuguesa ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O estudo neerlandês contribui ao mostrar que a análise de desenho ganha densidade quando incorpora o tempo como dimensão constitutiva, e não apenas contextual, do ajuste entre objetivos e instrumentos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". O trabalho sobre estados brasileiros amplia a capacidade empírica do campo ao demonstrar como microdimensões instrumentais podem ser observadas comparativamente em políticas concretas, especialmente em administração pública digital ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". E o artigo sobre a Indonésia exerce função de crítica conceitual, importante para evitar que policy design se torne categoria inflacionada, aplicável indiscriminadamente a qualquer arranjo estatal ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Considerados em conjunto, eles não formam uma teoria unificada, mas um repertório disciplinar mais complexo: gramática do campo, dinâmica temporal, granularidade instrumental e fronteiras negativas do conceito.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p8",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os limites comparativos do corpus devem ser explicitados para que a articulação entre os textos não se converta em unidade artificial. Em primeiro lugar, há assimetria entre textos orientados à sistematização conceitual e textos baseados em casos substantivos. A revisão da literatura e a tipologia de anti-design operam em um plano de abstração distinto daquele dos estudos sobre infraestrutura e transformação digital. Em segundo lugar, os setores analisados são muito diferentes quanto a temporalidade, institucionalização e conflito: planejamento de transportes, governo digital e regulação de cigarros eletrônicos não respondem aos mesmos constrangimentos materiais ou políticos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Em terceiro lugar, os métodos produzem evidências de natureza diversa, o que impede comparações lineares de achados. Por isso, a comparação mais defensável não é a que procura um argumento substantivo único para todos os textos, mas a que observa como cada um redefine o que conta como problema de desenho e quais ferramentas analíticas oferece para investigá-lo.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p9",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ainda assim, algumas articulações são especialmente fecundas. A primeira articulação possível liga a gramática ampla do campo reconstruída pela revisão às operacionalizações empíricas dos outros textos: o mapeamento fornece categorias gerais que o estudo neerlandês especifica em termos de fit dinâmico e o artigo sobre política digital traduz em microdimensões instrumentais ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A segunda articulação conecta o problema do ajuste incremental, presente no caso de infraestrutura, à advertência do anti-design: há contextos em que o descompasso entre objetivos e instrumentos ainda é tratável como recalibração imperfeita, mas há outros em que a desconexão é tão profunda que a própria noção de desenho fica em suspenso ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A terceira articulação, relevante para a administração pública, aproxima o estudo das microdimensões digitais do restante do corpus ao mostrar que a efetividade do desenho depende não apenas da presença formal de instrumentos, mas de sua combinação, coordenação e aderência a objetivos inteligíveis ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions",
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Nenhuma dessas articulações exige supor unidade temática forte; elas apenas reconhecem problemas transversais compartilhados.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p10",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em síntese, o corpus sugere uma leitura comparativa em quatro movimentos complementares. Primeiro, o desenho de políticas aparece como problema relacional e não como simples catálogo de instrumentos ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Segundo, esse problema relacional é temporalmente instável e historicamente herdado, o que exige atenção às dinâmicas de recomposição entre metas e meios ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Terceiro, a observação empírica do desenho ganha força quando se examinam microcalibragens instrumentais e seus efeitos sobre estilos de implementação ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". Quarto, a disciplina precisa preservar categorias para reconhecer situações em que não há desenho inteligível, e não apenas desenho deficiente ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": ". A contribuição comparativa mais robusta, portanto, não é afirmar uma unidade substantiva inexistente entre transporte, política digital e regulação sanitário-mercantil, mas mostrar que o corpus, tomado em conjunto, alarga o alcance da análise de policy design: define seu vocabulário, qualifica sua observação empírica, historiciza seu funcionamento e problematiza seus limites conceituais.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "p11",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-sintese-analitica",
+      "level": 1,
+      "title": "Síntese analítica",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A leitura conjunta do corpus sugere que o desenho de políticas públicas não deve ser compreendido como objeto unitário, mas como problema relacional. O ponto comum mais robusto entre os textos não é a defesa de uma mesma definição substantiva de desenho, e sim a insistência de que políticas podem ser analisadas pela qualidade das conexões que estabelecem entre seus componentes. Esse deslocamento é decisivo porque afasta o campo tanto de uma visão puramente processual, centrada apenas em conflitos e decisões, quanto de uma visão excessivamente estática, que suporia políticas como arranjos fechados e internamente estáveis. O corpus mostra que desenhar políticas significa organizar relações: entre problemas e expectativas, entre objetivos e instrumentos, entre instrumentos e estilos de implementação, e até entre ação estatal e ausência de conexão inteligível.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A leitura conjunta do corpus sugere que o desenho de políticas públicas não deve ser compreendido como objeto unitário, mas como problema relacional. O ponto comum mais robusto entre os textos não é a defesa de uma mesma definição substantiva de desenho, e sim a insistência de que políticas podem ser analisadas pela qualidade das conexões que estabelecem entre seus componentes. Esse deslocamento é decisivo porque afasta o campo tanto de uma visão puramente processual, centrada apenas em conflitos e decisões, quanto de uma visão excessivamente estática, que suporia políticas como arranjos fechados e internamente estáveis. O corpus mostra que desenhar políticas significa organizar relações: entre problemas e expectativas, entre objetivos e instrumentos, entre instrumentos e estilos de implementação, e até entre ação estatal e ausência de conexão inteligível. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-sint-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Nessa chave, o texto de mapeamento da literatura ocupa função estruturante: ele transforma o desenho em uma linguagem para observar o conteúdo das políticas de forma analiticamente autônoma. Sua importância, porém, torna-se mais clara quando lida à luz dos demais trabalhos. Isoladamente, ele poderia ser tomado apenas como inventário conceitual; em articulação com o corpus, revela-se como matriz que permite reconhecer diferentes níveis de observação do desenho. A contribuição maior desse artigo, portanto, não está apenas em sistematizar autores e temas, mas em tornar visível que o desenho constitui uma agenda de pesquisa capaz de conectar conteúdo, governança, instrumentos e efeitos sem reduzir políticas à lógica sequencial do ciclo. Ele fornece a gramática geral a partir da qual os outros textos podem ser lidos como especializações, inflexões ou críticas internas do campo.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Nessa chave, o texto de mapeamento da literatura ocupa função estruturante: ele transforma o desenho em uma linguagem para observar o conteúdo das políticas de forma analiticamente autônoma. Sua importância, porém, torna-se mais clara quando lida à luz dos demais trabalhos. Isoladamente, ele poderia ser tomado apenas como inventário conceitual; em articulação com o corpus, revela-se como matriz que permite reconhecer diferentes níveis de observação do desenho. A contribuição maior desse artigo, portanto, não está apenas em sistematizar autores e temas, mas em tornar visível que o desenho constitui uma agenda de pesquisa capaz de conectar conteúdo, governança, instrumentos e efeitos sem reduzir políticas à lógica sequencial do ciclo. Ele fornece a gramática geral a partir da qual os outros textos podem ser lidos como especializações, inflexões ou críticas internas do campo. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-sint-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O estudo sobre infraestrutura, por sua vez, introduz uma correção decisiva a qualquer entendimento excessivamente formal do desenho: políticas não são apenas composições, mas composições históricas. Seu argumento mostra que coerência, consistência e congruência não designam atributos permanentes de um arranjo, e sim equilíbrios provisórios em contextos de mudança incremental. A consequência interpretativa disso é importante. Se o desenho é temporalmente instável, avaliá-lo exige reconstruir trajetórias, e não apenas examinar fotografias sincrônicas. O artigo sugere que muitos diagnósticos de “mau desenho” são, na verdade, diagnósticos apressados de políticas observadas em momentos de transição, conversão ou sobreposição de camadas. Com isso, o corpus ganha uma dimensão analítica forte: a qualidade do desenho depende menos de pureza originária e mais de capacidade de recomposição diante de legados institucionais.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O estudo sobre infraestrutura, por sua vez, introduz uma correção decisiva a qualquer entendimento excessivamente formal do desenho: políticas não são apenas composições, mas composições históricas. Seu argumento mostra que coerência, consistência e congruência não designam atributos permanentes de um arranjo, e sim equilíbrios provisórios em contextos de mudança incremental. A consequência interpretativa disso é importante. Se o desenho é temporalmente instável, avaliá-lo exige reconstruir trajetórias, e não apenas examinar fotografias sincrônicas. O artigo sugere que muitos diagnósticos de “mau desenho” são, na verdade, diagnósticos apressados de políticas observadas em momentos de transição, conversão ou sobreposição de camadas. Com isso, o corpus ganha uma dimensão analítica forte: a qualidade do desenho depende menos de pureza originária e mais de capacidade de recomposição diante de legados institucionais. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-sint-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Já o artigo sobre microdimensões de instrumentos desloca esse raciocínio para um plano mais granular. Se o estudo longitudinal mostra que o ajuste se altera no tempo, a análise das políticas digitais demonstra que ele também varia internamente conforme a calibragem dos instrumentos. O desenho aparece aqui menos como arquitetura abstrata e mais como combinação operativa de recursos de autoridade, organização e nodalidade, distribuídos entre funções substantivas e procedimentais. A principal implicação interpretativa é que implementação não deve ser tratada como etapa posterior ao desenho, mas como uma de suas expressões. Isso modifica o centro da análise: em vez de perguntar apenas se há instrumentos adequados aos objetivos, torna-se necessário perguntar que estilo de ação estatal uma combinação instrumental torna possível. O desenho, assim, deixa de ser mera seleção e passa a ser arranjo produtor de capacidades.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Já o artigo sobre microdimensões de instrumentos desloca esse raciocínio para um plano mais granular. Se o estudo longitudinal mostra que o ajuste se altera no tempo, a análise das políticas digitais demonstra que ele também varia internamente conforme a calibragem dos instrumentos. O desenho aparece aqui menos como arquitetura abstrata e mais como combinação operativa de recursos de autoridade, organização e nodalidade, distribuídos entre funções substantivas e procedimentais. A principal implicação interpretativa é que implementação não deve ser tratada como etapa posterior ao desenho, mas como uma de suas expressões. Isso modifica o centro da análise: em vez de perguntar apenas se há instrumentos adequados aos objetivos, torna-se necessário perguntar que estilo de ação estatal uma combinação instrumental torna possível. O desenho, assim, deixa de ser mera seleção e passa a ser arranjo produtor de capacidades. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lui2026_micro_dimensions"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-sint-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O texto sobre não desenho e antidesenho opera, nesse conjunto, como limite crítico indispensável. Ele impede que a expansão do campo conduza a uma inflação conceitual em que toda política observável passe a ser descrita como desenho imperfeito. Sua intervenção é metodologicamente relevante porque recoloca a pergunta mais básica: há, de fato, uma conexão inteligível entre problema, objetivo, intervenção e resultado? Quando essa conexão se rompe, não basta falar em baixa qualidade do desenho; pode ser necessário reconhecer que estamos diante de outra coisa. A presença desse argumento no corpus tem efeito disciplinar importante: ela protege o campo contra o risco de normatividade implícita excessiva e obriga a distinguir entre políticas mal ajustadas, políticas parcialmente desenhadas e situações em que a própria inteligibilidade instrumental da ação pública se dissolve.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O texto sobre não desenho e antidesenho opera, nesse conjunto, como limite crítico indispensável. Ele impede que a expansão do campo conduza a uma inflação conceitual em que toda política observável passe a ser descrita como desenho imperfeito. Sua intervenção é metodologicamente relevante porque recoloca a pergunta mais básica: há, de fato, uma conexão inteligível entre problema, objetivo, intervenção e resultado? Quando essa conexão se rompe, não basta falar em baixa qualidade do desenho; pode ser necessário reconhecer que estamos diante de outra coisa. A presença desse argumento no corpus tem efeito disciplinar importante: ela protege o campo contra o risco de normatividade implícita excessiva e obriga a distinguir entre políticas mal ajustadas, políticas parcialmente desenhadas e situações em que a própria inteligibilidade instrumental da ação pública se dissolve. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-sint-5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A articulação mais produtiva entre os quatro textos, portanto, não está em buscar uma unidade temática forte, mas em reconhecer uma sequência de aprofundamentos analíticos. O mapeamento reconstrói o campo e legitima o desenho como problema de pesquisa; o estudo sobre infraestrutura historiciza o ajuste entre meios e fins; a análise da política digital desce ao nível das microcombinações instrumentais; e a reflexão sobre antidesenho interroga o ponto em que a própria categoria de desenho deixa de ser adequada. Vista em conjunto, essa sequência sugere que o campo amadurece quando combina quatro movimentos: definição conceitual, observação temporal, especificação instrumental e crítica das fronteiras do conceito. Essa é, em última instância, a interpretação própria que emerge do corpus: policy design não é uma teoria única do bom arranjo estatal, mas um programa analítico para examinar graus, formas e limites de conexão na ação pública.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A articulação mais produtiva entre os quatro textos, portanto, não está em buscar uma unidade temática forte, mas em reconhecer uma sequência de aprofundamentos analíticos. O mapeamento reconstrói o campo e legitima o desenho como problema de pesquisa; o estudo sobre infraestrutura historiciza o ajuste entre meios e fins; a análise da política digital desce ao nível das microcombinações instrumentais; e a reflexão sobre antidesenho interroga o ponto em que a própria categoria de desenho deixa de ser adequada. Vista em conjunto, essa sequência sugere que o campo amadurece quando combina quatro movimentos: definição conceitual, observação temporal, especificação instrumental e crítica das fronteiras do conceito. Essa é, em última instância, a interpretação própria que emerge do corpus: policy design não é uma teoria única do bom arranjo estatal, mas um programa analítico para examinar graus, formas e limites de conexão na ação pública. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-sint-6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa interpretação também permite situar uma contribuição mais específica para a disciplina. O corpus sugere que a análise de políticas públicas ganha em precisão quando deixa de opor, de forma simplista, conteúdo e processo, formulação e implementação, racionalidade e política. Os textos mostram, cada um a seu modo, que essas separações são úteis apenas como distinções analíticas parciais. O desenho é afetado por legados históricos, por combinações instrumentais, por contextos institucionais e por situações de desconexão profunda. Em vez de oferecer uma imagem ordeira da ação estatal, o conjunto revela que políticas públicas são arranjos contingentes cuja inteligibilidade depende do tipo de lente mobilizada. O mérito do corpus é justamente ensinar que diferentes lentes não são concorrentes por definição; elas podem ser complementares, desde que se reconheça o nível de análise em que cada uma opera.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa interpretação também permite situar uma contribuição mais específica para a disciplina. O corpus sugere que a análise de políticas públicas ganha em precisão quando deixa de opor, de forma simplista, conteúdo e processo, formulação e implementação, racionalidade e política. Os textos mostram, cada um a seu modo, que essas separações são úteis apenas como distinções analíticas parciais. O desenho é afetado por legados históricos, por combinações instrumentais, por contextos institucionais e por situações de desconexão profunda. Em vez de oferecer uma imagem ordeira da ação estatal, o conjunto revela que políticas públicas são arranjos contingentes cuja inteligibilidade depende do tipo de lente mobilizada. O mérito do corpus é justamente ensinar que diferentes lentes não são concorrentes por definição; elas podem ser complementares, desde que se reconheça o nível de análise em que cada uma opera. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-sint-7",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-consideracoes-finais",
+      "level": 1,
+      "title": "Considerações finais",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As análises desenvolvidas ao longo do documento permitem concluir que o principal ganho do corpus está em ampliar e sofisticar o entendimento do desenho de políticas públicas como campo analítico. Em vez de oferecer respostas idênticas para objetos semelhantes, os textos examinam dimensões distintas de um mesmo problema: como reconhecer, descrever e avaliar as conexões internas que estruturam a ação pública. O resultado é um quadro mais exigente para a disciplina, no qual desenho deixa de ser sinônimo de escolha racional de instrumentos e passa a designar um conjunto de relações observáveis entre problemas, objetivos, instrumentos, capacidades, contextos e resultados.",
+          "content": [
+            {
+              "type": "text",
+              "text": "As análises desenvolvidas ao longo do documento permitem concluir que o principal ganho do corpus está em ampliar e sofisticar o entendimento do desenho de políticas públicas como campo analítico. Em vez de oferecer respostas idênticas para objetos semelhantes, os textos examinam dimensões distintas de um mesmo problema: como reconhecer, descrever e avaliar as conexões internas que estruturam a ação pública. O resultado é um quadro mais exigente para a disciplina, no qual desenho deixa de ser sinônimo de escolha racional de instrumentos e passa a designar um conjunto de relações observáveis entre problemas, objetivos, instrumentos, capacidades, contextos e resultados. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-fin-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Entre os ganhos analíticos mais relevantes, destaca-se primeiro a consolidação de uma leitura não reducionista do conteúdo das políticas. O mapeamento da literatura demonstra que há um léxico próprio do campo e uma agenda de investigação que permite tratar desenho como problema substantivo; o estudo longitudinal mostra que esse conteúdo só se torna plenamente inteligível quando observado em sua dinâmica temporal; a análise das microdimensões evidencia que a composição instrumental afeta estilos de implementação; e a discussão sobre antidesenho impede a naturalização da ideia de que toda política é automaticamente um caso de desenho. Em conjunto, esses aportes qualificam a leitura da ação estatal ao combinar ampliação conceitual e maior rigor na discriminação dos fenômenos.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Entre os ganhos analíticos mais relevantes, destaca-se primeiro a consolidação de uma leitura não reducionista do conteúdo das políticas. O mapeamento da literatura demonstra que há um léxico próprio do campo e uma agenda de investigação que permite tratar desenho como problema substantivo; o estudo longitudinal mostra que esse conteúdo só se torna plenamente inteligível quando observado em sua dinâmica temporal; a análise das microdimensões evidencia que a composição instrumental afeta estilos de implementação; e a discussão sobre antidesenho impede a naturalização da ideia de que toda política é automaticamente um caso de desenho. Em conjunto, esses aportes qualificam a leitura da ação estatal ao combinar ampliação conceitual e maior rigor na discriminação dos fenômenos. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-fin-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Para a disciplina, a contribuição central do corpus é dupla. No plano teórico, ele reforça que a análise de políticas públicas se beneficia de abordagens capazes de articular conteúdo, tempo, instrumentos e limites conceituais sem colapsar essas dimensões em um único modelo explicativo. No plano metodológico, mostra que o campo avança quando mobiliza estratégias variadas — revisão de literatura, reconstrução longitudinal, comparação documental e intervenção tipológica — de modo coerente com o nível de análise pretendido. Assim, mais do que fornecer uma síntese homogênea, o corpus oferece um repertório de perguntas e ferramentas que pode orientar leituras futuras sobre diferentes setores e contextos de política pública.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para a disciplina, a contribuição central do corpus é dupla. No plano teórico, ele reforça que a análise de políticas públicas se beneficia de abordagens capazes de articular conteúdo, tempo, instrumentos e limites conceituais sem colapsar essas dimensões em um único modelo explicativo. No plano metodológico, mostra que o campo avança quando mobiliza estratégias variadas — revisão de literatura, reconstrução longitudinal, comparação documental e intervenção tipológica — de modo coerente com o nível de análise pretendido. Assim, mais do que fornecer uma síntese homogênea, o corpus oferece um repertório de perguntas e ferramentas que pode orientar leituras futuras sobre diferentes setores e contextos de política pública. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "lima2021_conectando_problemas",
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-fin-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Em termos conclusivos, o corpus ensina menos uma fórmula de bom desenho e mais uma disciplina de observação. Ele mostra que políticas públicas devem ser lidas em sua complexidade relacional: às vezes como arranjos em busca de ajuste, às vezes como combinações instrumentais que moldam capacidades, às vezes como objetos que exigem historicização, e às vezes como casos em que a própria ideia de desenho precisa ser suspensa. Essa é a contribuição mais duradoura do conjunto para a disciplina: não simplificar a ação pública, mas torná-la analiticamente mais inteligível.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em termos conclusivos, o corpus ensina menos uma fórmula de bom desenho e mais uma disciplina de observação. Ele mostra que políticas públicas devem ser lidas em sua complexidade relacional: às vezes como arranjos em busca de ajuste, às vezes como combinações instrumentais que moldam capacidades, às vezes como objetos que exigem historicização, e às vezes como casos em que a própria ideia de desenho precisa ser suspensa. Essa é a contribuição mais duradoura do conjunto para a disciplina: não simplificar a ação pública, mas torná-la analiticamente mais inteligível. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "geet2019_policy_design",
+                "lui2026_micro_dimensions",
+                "newman2020_policy_design",
+                "lima2021_conectando_problemas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "b-fin-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "mapa_mental",
+      "title": "Mapa mental dos textos analisados",
+      "path": "images/mapa_mental.png",
+      "placement": "after_references",
+      "page_break_before": true,
+      "page_break_after": false
+    }
+  ],
+  "bibliography": {
+    "bib_path": "resumo_artigos_encontro_4_v4.bib",
+    "style": "abnt",
+    "entries_used": [
+      "geet2019_policy_design",
+      "lima2021_conectando_problemas",
+      "lui2026_micro_dimensions",
+      "newman2020_policy_design"
+    ]
+  },
+  "diagnostics": {
+    "prompts_json": "{\"document\": {\"task\": \"document\", \"total_chars\": 6521, \"sources\": [{\"category\": \"global\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt\", \"label\": \"../../prompts/global/orientacao_geral_execucao.txt\", \"chars\": 2096, \"sha256\": \"f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2\", \"sanitized\": false}, {\"category\": \"institution\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt\", \"label\": \"profile://prompts/fgv_geral.txt\", \"chars\": 392, \"sha256\": \"c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b\", \"sanitized\": false}, {\"category\": \"document_type\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/atividade.txt\", \"label\": \"../../prompts/document/atividade.txt\", \"chars\": 325, \"sha256\": \"70748caae36c743e545c4a15e68c38e305823f67681e57a8366a4ddf1a974670\", \"sanitized\": false}, {\"category\": \"document_type\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/resumo_artigos.txt\", \"label\": \"../../prompts/document/resumo_artigos.txt\", \"chars\": 3518, \"sha256\": \"2453f8a6e2eba7fddf5765d88c8496904a7706081acdec9f148933df70c50e49\", \"sanitized\": false}]}, \"generation_mode\": \"staged_article_analysis\", \"stages\": [\"article_sections\", \"comparison\", \"synthesis\"], \"checkpoints\": true}",
+    "mindmap_json": "{\"puml_path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/images/mapa_mental.puml\", \"image_path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/images/mapa_mental.png\", \"error\": null, \"prompts\": {\"task\": \"mindmap\", \"total_chars\": 2583, \"sources\": [{\"category\": \"global\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt\", \"label\": \"../../prompts/global/orientacao_geral_execucao.txt\", \"chars\": 2096, \"sha256\": \"f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2\", \"sanitized\": false}, {\"category\": \"institution\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt\", \"label\": \"profile://prompts/fgv_geral.txt\", \"chars\": 392, \"sha256\": \"c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b\", \"sanitized\": false}]}}",
+    "source_info_json": "{\"suffixes\": [\".docx\", \".md\", \".org\", \".pdf\", \".txt\"], \"warnings\": [{\"file\": \"Geet_Lenferink_Leendertse_2019_Policy design dynamics_doi_10.1080_25741292.2019.1678232.pdf\", \"warnings\": [\"Ignoring wrong pointing object 2 65536 (offset 0)\", \"Ignoring wrong pointing object 12 65536 (offset 0)\", \"Ignoring wrong pointing object 73 65536 (offset 0)\", \"Ignoring wrong pointing object 141 65536 (offset 0)\", \"Ignoring wrong pointing object 535 65536 (offset 0)\", \"Ignoring wrong pointing object 536 65536 (offset 0)\", \"Ignoring wrong pointing object 537 65536 (offset 0)\", \"Ignoring wrong pointing object 538 65536 (offset 0)\", \"Ignoring wrong pointing object 539 65536 (offset 0)\", \"Ignoring wrong pointing object 540 65536 (offset 0)\", \"Ignoring wrong pointing object 552 65536 (offset 0)\", \"Ignoring wrong pointing object 565 65536 (offset 0)\", \"Ignoring wrong pointing object 575 65536 (offset 0)\", \"Ignoring wrong pointing object 585 65536 (offset 0)\", \"Ignoring wrong pointing object 586 65536 (offset 0)\", \"Ignoring wrong pointing object 608 65536 (offset 0)\", \"Ignoring wrong pointing object 609 65536 (offset 0)\", \"Ignoring wrong pointing object 610 65536 (offset 0)\", \"Ignoring wrong pointing object 611 65536 (offset 0)\", \"Ignoring wrong pointing object 612 65536 (offset 0)\", \"Ignoring wrong pointing object 613 65536 (offset 0)\", \"Ignoring wrong pointing object 614 65536 (offset 0)\", \"Ignoring wrong pointing object 615 65536 (offset 0)\", \"Ignoring wrong pointing object 616 65536 (offset 0)\", \"Ignoring wrong pointing object 624 65536 (offset 0)\", \"Ignoring wrong pointing object 632 65536 (offset 0)\", \"Ignoring wrong pointing object 640 65536 (offset 0)\", \"Ignoring wrong pointing object 648 65536 (offset 0)\", \"Ignoring wrong pointing object 656 65536 (offset 0)\", \"Ignoring wrong pointing object 667 65536 (offset 0)\", \"Ignoring wrong pointing object 678 65536 (offset 0)\", \"Ignoring wrong pointing object 689 65536 (offset 0)\", \"Ignoring wrong pointing object 697 65536 (offset 0)\", \"Ignoring wrong pointing object 705 65536 (offset 0)\", \"Ignoring wrong pointing object 713 65536 (offset 0)\", \"Ignoring wrong pointing object 721 65536 (offset 0)\", \"Ignoring wrong pointing object 729 65536 (offset 0)\"]}], \"input_zip\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/resumo_artigos_encontro_4/documentos-base.zip\", \"extracted_dir\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/work/resumo_artigos_encontro_4_v4/extracted/documentos_base\"}",
+    "relatorio_pesquisa_json": "",
+    "warnings": []
+  }
+}

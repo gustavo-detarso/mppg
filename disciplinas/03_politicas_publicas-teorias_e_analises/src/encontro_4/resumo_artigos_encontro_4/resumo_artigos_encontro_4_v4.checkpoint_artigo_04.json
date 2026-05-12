@@ -1,0 +1,340 @@
+{
+  "id": "sec-newman-policy-design-non-design-and-anti-design",
+  "level": 2,
+  "title": "Policy design, non-design, and anti-design: the regulation of e-cigarettes in Indonesia",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "O artigo toma como problema central uma lacuna conceitual importante no campo do desenho de políticas: a literatura desenvolveu definições relativamente estáveis para “design”, mas permaneceu muito menos precisa quando trata daquilo que não é desenho. Em vez de aceitar a oposição habitual entre desenho racional e política, o texto sustenta que essa dicotomia empobrece a análise, porque reduz toda falha de conexão entre problemas, instrumentos e resultados a motivações políticas. A questão decisiva, portanto, não é simplesmente saber se a política pública é mais ou menos politizada, mas como se estruturam — ou deixam de se estruturar — as conexões entre problema, objetivo, intervenção e resultado em situações reais de formulação estatal.",
+      "content": [
+        {
+          "type": "text",
+          "text": "O artigo toma como problema central uma lacuna conceitual importante no campo do desenho de políticas: a literatura desenvolveu definições relativamente estáveis para “design”, mas permaneceu muito menos precisa quando trata daquilo que não é desenho. Em vez de aceitar a oposição habitual entre desenho racional e política, o texto sustenta que essa dicotomia empobrece a análise, porque reduz toda falha de conexão entre problemas, instrumentos e resultados a motivações políticas. A questão decisiva, portanto, não é simplesmente saber se a política pública é mais ou menos politizada, mas como se estruturam — ou deixam de se estruturar — as conexões entre problema, objetivo, intervenção e resultado em situações reais de formulação estatal ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "O objetivo e o escopo do estudo são duplos. Em primeiro lugar, os autores propõem uma tipologia capaz de distinguir design, non-design e uma categoria específica denominada anti-design. Em segundo, utilizam a tentativa de regulação dos cigarros eletrônicos na Indonésia como caso empírico para mostrar uma situação em que atividades de desenho estão virtualmente ausentes. O artigo, assim, não pretende oferecer uma teoria geral exaustiva do processo decisório, mas avançar uma clarificação analítica de alto impacto para o campo: identificar formas distintas de desconexão entre problemas, intervenções e resultados e demonstrar que a ausência de desenho não deve ser tratada como categoria homogênea.",
+      "content": [
+        {
+          "type": "text",
+          "text": "O objetivo e o escopo do estudo são duplos. Em primeiro lugar, os autores propõem uma tipologia capaz de distinguir design, non-design e uma categoria específica denominada anti-design. Em segundo, utilizam a tentativa de regulação dos cigarros eletrônicos na Indonésia como caso empírico para mostrar uma situação em que atividades de desenho estão virtualmente ausentes. O artigo, assim, não pretende oferecer uma teoria geral exaustiva do processo decisório, mas avançar uma clarificação analítica de alto impacto para o campo: identificar formas distintas de desconexão entre problemas, intervenções e resultados e demonstrar que a ausência de desenho não deve ser tratada como categoria homogênea ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "A tese principal é formulada de modo explícito e revisionista: o oposto de policy design não é a política, mas a desconexão entre problemas, intervenções e outcomes. Essa redefinição é decisiva porque desloca o debate de um contraste normativo excessivamente simples — racionalidade versus conflito político — para uma análise mais fina das condições sob as quais uma política deixa de apresentar encadeamento instrumental inteligível. Ao fazê-lo, o artigo reconhece que forças políticas podem produzir não desenho, mas insiste que elas não são sua única causa; incompetência administrativa, corrupção, ambiguidades institucionais e tendências econômicas mais amplas também podem dissolver ou impedir a articulação entre objetivos e instrumentos. O ganho analítico está em abrir espaço para distinguir falhas por captura, falhas por incapacidade e falhas por reversão da própria lógica de desenho.",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tese principal é formulada de modo explícito e revisionista: o oposto de policy design não é a política, mas a desconexão entre problemas, intervenções e outcomes. Essa redefinição é decisiva porque desloca o debate de um contraste normativo excessivamente simples — racionalidade versus conflito político — para uma análise mais fina das condições sob as quais uma política deixa de apresentar encadeamento instrumental inteligível. Ao fazê-lo, o artigo reconhece que forças políticas podem produzir não desenho, mas insiste que elas não são sua única causa; incompetência administrativa, corrupção, ambiguidades institucionais e tendências econômicas mais amplas também podem dissolver ou impedir a articulação entre objetivos e instrumentos. O ganho analítico está em abrir espaço para distinguir falhas por captura, falhas por incapacidade e falhas por reversão da própria lógica de desenho ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "A reconstrução conceitual do artigo parte de uma síntese da literatura que, apesar de divergências normativas e ontológicas, converge em um núcleo relativamente comum de entendimento do desenho de políticas. Os autores mostram que, para diferentes correntes, design envolve uma atividade consciente, orientada por propósito, aproximadamente linear ou cíclica, na qual se articulam problema público, objetivo de política, instrumentos e resultados. Um mérito importante do texto está em separar analiticamente problema e objetivo, já que o problema social não determina automaticamente a meta de política; esta é sempre uma tradução seletiva, graduada e contestável daquele problema em termos de intervenção estatal. Essa diferenciação permite aos autores explicitar a cadeia ideal do desenho: problema de política, objetivo, intervenção e outcome. A partir dela, torna-se possível avaliar graus de ajuste, desajuste ou ruptura.",
+      "content": [
+        {
+          "type": "text",
+          "text": "A reconstrução conceitual do artigo parte de uma síntese da literatura que, apesar de divergências normativas e ontológicas, converge em um núcleo relativamente comum de entendimento do desenho de políticas. Os autores mostram que, para diferentes correntes, design envolve uma atividade consciente, orientada por propósito, aproximadamente linear ou cíclica, na qual se articulam problema público, objetivo de política, instrumentos e resultados. Um mérito importante do texto está em separar analiticamente problema e objetivo, já que o problema social não determina automaticamente a meta de política; esta é sempre uma tradução seletiva, graduada e contestável daquele problema em termos de intervenção estatal. Essa diferenciação permite aos autores explicitar a cadeia ideal do desenho: problema de política, objetivo, intervenção e outcome. A partir dela, torna-se possível avaliar graus de ajuste, desajuste ou ruptura ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Os conceitos centrais mobilizados são, portanto, menos numerosos do que densos: design, non-design, anti-design, problema, objetivo, intervenção e resultado. O conceito de anti-design é o principal aporte do artigo. Ele não equivale a mera ausência passiva de planejamento, nem a um caso em que o desenho falha parcialmente. Trata-se antes de uma configuração em que a própria relação entre problema e resposta pública se encontra invertida, esvaziada ou desconectada a tal ponto que a ação estatal não pode sequer ser descrita como tentativa coerente de ajustar instrumentos a fins. O artigo sugere, assim, uma gradação qualitativa: há contextos em que o desenho é incompleto, outros em que ele não se realiza, e outros ainda em que a política caminha em direção oposta aos princípios mínimos de uma construção instrumental orientada para problemas. Essa tipificação fornece um vocabulário analítico mais robusto para examinar políticas ambíguas, erráticas ou capturadas.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os conceitos centrais mobilizados são, portanto, menos numerosos do que densos: design, non-design, anti-design, problema, objetivo, intervenção e resultado. O conceito de anti-design é o principal aporte do artigo. Ele não equivale a mera ausência passiva de planejamento, nem a um caso em que o desenho falha parcialmente. Trata-se antes de uma configuração em que a própria relação entre problema e resposta pública se encontra invertida, esvaziada ou desconectada a tal ponto que a ação estatal não pode sequer ser descrita como tentativa coerente de ajustar instrumentos a fins. O artigo sugere, assim, uma gradação qualitativa: há contextos em que o desenho é incompleto, outros em que ele não se realiza, e outros ainda em que a política caminha em direção oposta aos princípios mínimos de uma construção instrumental orientada para problemas. Essa tipificação fornece um vocabulário analítico mais robusto para examinar políticas ambíguas, erráticas ou capturadas ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Do ponto de vista metodológico, o artigo combina estratégia conceitual e ilustração empírica. Não se trata de um desenho comparativo amplo nem de teste sistemático de hipóteses, mas de um estudo orientado por construção tipológica e demonstração analítica. A discussão sobre a Indonésia funciona como caso revelador: ao examinar a tentativa governamental de regular cigarros eletrônicos, os autores buscam evidenciar um cenário no qual a formulação pública não decorre de encadeamento racional entre definição do problema, escolha de metas, seleção de instrumentos e produção esperada de resultados. A evidência é mobilizada menos para medir causalmente efeitos do que para tornar visível uma forma de desconexão institucional e decisória que a literatura tradicional tenderia a classificar de maneira imprecisa como mera politização.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Do ponto de vista metodológico, o artigo combina estratégia conceitual e ilustração empírica. Não se trata de um desenho comparativo amplo nem de teste sistemático de hipóteses, mas de um estudo orientado por construção tipológica e demonstração analítica. A discussão sobre a Indonésia funciona como caso revelador: ao examinar a tentativa governamental de regular cigarros eletrônicos, os autores buscam evidenciar um cenário no qual a formulação pública não decorre de encadeamento racional entre definição do problema, escolha de metas, seleção de instrumentos e produção esperada de resultados. A evidência é mobilizada menos para medir causalmente efeitos do que para tornar visível uma forma de desconexão institucional e decisória que a literatura tradicional tenderia a classificar de maneira imprecisa como mera politização ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Os achados do caso indonésio, tal como apresentados pelos autores, reforçam a ideia de que a regulação dos cigarros eletrônicos emergiu em condições de baixa coerência interna. Em vez de uma arquitetura regulatória fundada em definição clara do problema público — por exemplo, saúde pública, tributação, controle de mercado ou proteção do consumidor — o processo aparece marcado por acoplamentos frágeis entre justificativas, instrumentos e efeitos pretendidos. O caso mostra que a política pode existir sem que haja desenho propriamente dito; mais ainda, pode haver ação estatal relevante sem que estejam presentes os elementos mínimos que permitiriam descrevê-la como resposta instrumental a um problema definido. A contribuição empírica do texto reside justamente em demonstrar essa possibilidade, desafiando o pressuposto, por vezes implícito, de que toda política em vigor encerra algum tipo de racionalidade de desenho, ainda que imperfeita.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os achados do caso indonésio, tal como apresentados pelos autores, reforçam a ideia de que a regulação dos cigarros eletrônicos emergiu em condições de baixa coerência interna. Em vez de uma arquitetura regulatória fundada em definição clara do problema público — por exemplo, saúde pública, tributação, controle de mercado ou proteção do consumidor — o processo aparece marcado por acoplamentos frágeis entre justificativas, instrumentos e efeitos pretendidos. O caso mostra que a política pode existir sem que haja desenho propriamente dito; mais ainda, pode haver ação estatal relevante sem que estejam presentes os elementos mínimos que permitiriam descrevê-la como resposta instrumental a um problema definido. A contribuição empírica do texto reside justamente em demonstrar essa possibilidade, desafiando o pressuposto, por vezes implícito, de que toda política em vigor encerra algum tipo de racionalidade de desenho, ainda que imperfeita ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Para a disciplina, a principal contribuição do artigo é deslocar o foco da avaliação do desenho do plano normativo para o plano analítico. Em vez de perguntar apenas se mais desenho é desejável, os autores mostram a necessidade de identificar como diferentes formas de não desenho operam concretamente. Isso amplia o repertório da análise de políticas ao permitir investigações mais precisas sobre desajustes entre fins e meios, fragmentação institucional, incapacidade estatal e processos de decisão nos quais a própria inteligibilidade do problema público se enfraquece. O texto é especialmente relevante porque insiste que racionalidade e política não são termos mutuamente excludentes: uma política pode ser politicamente motivada e ainda assim apresentar desenho; inversamente, pode carecer de desenho por razões não redutíveis à disputa política. Essa inflexão é teoricamente fecunda para estudos sobre capacidade estatal, implementação e governança regulatória.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para a disciplina, a principal contribuição do artigo é deslocar o foco da avaliação do desenho do plano normativo para o plano analítico. Em vez de perguntar apenas se mais desenho é desejável, os autores mostram a necessidade de identificar como diferentes formas de não desenho operam concretamente. Isso amplia o repertório da análise de políticas ao permitir investigações mais precisas sobre desajustes entre fins e meios, fragmentação institucional, incapacidade estatal e processos de decisão nos quais a própria inteligibilidade do problema público se enfraquece. O texto é especialmente relevante porque insiste que racionalidade e política não são termos mutuamente excludentes: uma política pode ser politicamente motivada e ainda assim apresentar desenho; inversamente, pode carecer de desenho por razões não redutíveis à disputa política. Essa inflexão é teoricamente fecunda para estudos sobre capacidade estatal, implementação e governança regulatória ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Os limites e tensões do artigo decorrem em parte de sua própria ambição conceitual. A tipologia é persuasiva como intervenção crítica, mas sua operacionalização ainda aparece em nível relativamente inicial. Permanecem abertas perguntas sobre como distinguir empiricamente, com critérios mais estáveis, situações de desenho fracassado, non-design e anti-design; em que medida essas categorias descrevem estados distintos ou posições em um contínuo; e como lidar com casos em que múltiplos objetivos, atores e temporalidades tornam inevitavelmente difusa a relação entre problema, instrumento e resultado. Além disso, ao enfatizar a desconexão como oposto do desenho, o texto ilumina a falha instrumental, mas pode deixar menos desenvolvido o exame de contextos em que a ambiguidade não é defeito, e sim recurso estratégico da própria política. Ainda assim, essas tensões não anulam o argumento; antes, indicam agenda promissora de refinamento conceitual e aplicação comparada.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os limites e tensões do artigo decorrem em parte de sua própria ambição conceitual. A tipologia é persuasiva como intervenção crítica, mas sua operacionalização ainda aparece em nível relativamente inicial. Permanecem abertas perguntas sobre como distinguir empiricamente, com critérios mais estáveis, situações de desenho fracassado, non-design e anti-design; em que medida essas categorias descrevem estados distintos ou posições em um contínuo; e como lidar com casos em que múltiplos objetivos, atores e temporalidades tornam inevitavelmente difusa a relação entre problema, instrumento e resultado. Além disso, ao enfatizar a desconexão como oposto do desenho, o texto ilumina a falha instrumental, mas pode deixar menos desenvolvido o exame de contextos em que a ambiguidade não é defeito, e sim recurso estratégico da própria política. Ainda assim, essas tensões não anulam o argumento; antes, indicam agenda promissora de refinamento conceitual e aplicação comparada ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "Em diálogo com o corpus, este artigo ocupa posição singular. Enquanto o texto de mapeamento da literatura reconstrói o campo do desenho de políticas a partir de suas tradições, conexões e agendas analíticas, o estudo sobre a Indonésia intervém no núcleo definicional do debate ao problematizar aquilo que a literatura tende a tratar de forma residual ou indiferenciada. Há convergência entre ambos no reconhecimento de que desenho de políticas não se reduz à simples escolha de instrumentos, mas envolve articulações entre problemas, soluções e expectativas; contudo, o artigo aqui analisado radicaliza essa preocupação ao sustentar que a desconexão entre esses elementos merece tipificação própria, e não apenas classificação genérica como política ou conflito.",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em diálogo com o corpus, este artigo ocupa posição singular. Enquanto o texto de mapeamento da literatura reconstrói o campo do desenho de políticas a partir de suas tradições, conexões e agendas analíticas, o estudo sobre a Indonésia intervém no núcleo definicional do debate ao problematizar aquilo que a literatura tende a tratar de forma residual ou indiferenciada. Há convergência entre ambos no reconhecimento de que desenho de políticas não se reduz à simples escolha de instrumentos, mas envolve articulações entre problemas, soluções e expectativas; contudo, o artigo aqui analisado radicaliza essa preocupação ao sustentar que a desconexão entre esses elementos merece tipificação própria, e não apenas classificação genérica como política ou conflito ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "lima2021_conectando_problemas",
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "A comparação com os estudos mais empiricamente orientados do corpus também é elucidativa. O trabalho sobre dinâmicas de desenho em infraestrutura de transportes enfatiza o ajuste entre objetivos e instrumentos ao longo do tempo, isto é, parte do pressuposto de que existe uma arquitetura de desenho sujeita a recombinações, tensões e adaptações. Já a análise das microdimensões de instrumentos digitais examina com maior granularidade atributos internos do desenho e sua variação comparada entre unidades subnacionais. Frente a esses dois textos, o artigo sobre anti-design contribui menos pela sofisticação da mensuração e mais por delimitar a fronteira analítica do que conta como desenho em primeiro lugar. Seu valor no corpus está precisamente em funcionar como contraponto conceitual: ele lembra que nem toda política observável deve ser automaticamente tratada como desenho imperfeito; algumas podem expressar ausência ou reversão da própria lógica de conexão entre problema, objetivo e instrumento.",
+      "content": [
+        {
+          "type": "text",
+          "text": "A comparação com os estudos mais empiricamente orientados do corpus também é elucidativa. O trabalho sobre dinâmicas de desenho em infraestrutura de transportes enfatiza o ajuste entre objetivos e instrumentos ao longo do tempo, isto é, parte do pressuposto de que existe uma arquitetura de desenho sujeita a recombinações, tensões e adaptações. Já a análise das microdimensões de instrumentos digitais examina com maior granularidade atributos internos do desenho e sua variação comparada entre unidades subnacionais. Frente a esses dois textos, o artigo sobre anti-design contribui menos pela sofisticação da mensuração e mais por delimitar a fronteira analítica do que conta como desenho em primeiro lugar. Seu valor no corpus está precisamente em funcionar como contraponto conceitual: ele lembra que nem toda política observável deve ser automaticamente tratada como desenho imperfeito; algumas podem expressar ausência ou reversão da própria lógica de conexão entre problema, objetivo e instrumento ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "geet2019_policy_design",
+            "lui2026_micro_dimensions",
+            "newman2020_policy_design"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}
