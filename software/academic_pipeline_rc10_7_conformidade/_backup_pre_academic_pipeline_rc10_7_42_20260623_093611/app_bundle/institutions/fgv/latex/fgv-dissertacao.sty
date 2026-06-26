@@ -1,0 +1,457 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fgv-dissertacao}[2026/05/09 v1.2 Estilo de dissertacao FGV; bibliografia pelo pipeline/TOML]
+
+% ============================================================
+%  COMPILACAO
+% ============================================================
+\RequirePackage{ifluatex}
+\ifluatex\else
+  \PackageError{fgv-dissertacao}{Este pacote exige compilacao com LuaLaTeX}{Use lualatex como compilador}
+\fi
+
+% ============================================================
+%  IDIOMA / FONTE / MICROTIPOGRAFIA
+% ============================================================
+\RequirePackage[brazil]{babel}
+\RequirePackage{fontspec}
+\RequirePackage{microtype}
+\defaultfontfeatures{Ligatures=TeX}
+
+% Tenta Times New Roman; se nao existir, usa TeX Gyre Termes.
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}
+  {\setmainfont{TeX Gyre Termes}}
+
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+
+% ============================================================
+%  GEOMETRIA / PAGINA
+%  Modelo Word analisado:
+%  - superior: 3,0 cm
+%  - esquerda: 3,0 cm
+%  - inferior: 2,0 cm
+%  - direita: 2,0 cm
+% ============================================================
+\RequirePackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=14pt]{geometry}
+\RequirePackage{fancyhdr}
+\pagestyle{plain}
+
+% ============================================================
+%  ESPACAMENTO / PARAGRAFO
+%  Modelo Word analisado:
+%  - fonte 12 pt
+%  - entrelinhas 1,5
+%  - recuo da primeira linha ~ 1,25 cm
+%  - sem espaco extra entre paragrafos
+% ============================================================
+\RequirePackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\emergencystretch=2em
+
+% ============================================================
+%  JUSTIFICACAO E HIFENIZACAO
+% ============================================================
+\RequirePackage{ragged2e}
+\justifying
+\hyphenpenalty=500
+\exhyphenpenalty=50
+
+% ============================================================
+%  TITULOS
+%  Aproximacao do modelo observado:
+%  - nivel 1: negrito, caixa alta
+%  - nivel 2: negrito
+%  - nivel 3: negrito italico
+% ============================================================
+\RequirePackage{titlesec}
+
+% Capitulo: centralizado, negrito, caixa alta
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\centering}
+  {\chaptertitlename\ \thechapter}
+  {1ex}
+  {\MakeUppercase}
+
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
+
+% Secao
+\titleformat{\section}
+  {\normalfont\bfseries}
+  {\thesection}
+  {0.75em}
+  {}
+\titlespacing*{\section}{0pt}{12pt}{12pt}
+
+% Subsecao
+\titleformat{\subsection}
+  {\normalfont\bfseries}
+  {\thesubsection}
+  {0.75em}
+  {}
+\titlespacing*{\subsection}{0pt}{12pt}{12pt}
+
+% Subsubsecao
+\titleformat{\subsubsection}
+  {\normalfont\bfseries\itshape}
+  {\thesubsubsection}
+  {0.75em}
+  {}
+\titlespacing*{\subsubsection}{0pt}{12pt}{12pt}
+
+% Paragrafo
+\titleformat{\paragraph}[runin]
+  {\normalfont\bfseries}
+  {\theparagraph}
+  {0.5em}
+  {}
+\titlespacing*{\paragraph}{0pt}{12pt}{0.75em}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% ============================================================
+%  LISTAS NUMERADAS HIERARQUICAS
+% ============================================================
+\RequirePackage{enumitem}
+\setlist[itemize]{topsep=0.4\baselineskip,itemsep=0.15\baselineskip,parsep=0pt}
+\setlist[enumerate]{topsep=0.4\baselineskip,itemsep=0.15\baselineskip,parsep=0pt}
+\setlist[enumerate,1]{label=\arabic*.,leftmargin=1.5cm}
+\setlist[enumerate,2]{label=\arabic{enumi}.\arabic*.,leftmargin=1.7cm}
+\setlist[enumerate,3]{label=\arabic{enumi}.\arabic{enumii}.\arabic*.,leftmargin=2cm}
+
+% ============================================================
+%  SUMARIO / LISTAS
+% ============================================================
+\RequirePackage{tocloft}
+\renewcommand{\contentsname}{SUMÁRIO}
+\renewcommand{\listfigurename}{LISTA DE ILUSTRAÇÕES}
+\renewcommand{\listtablename}{LISTA DE TABELAS}
+\renewcommand{\cfttoctitlefont}{\hfill\normalfont\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\normalfont\bfseries\MakeUppercase}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\normalfont\bfseries\MakeUppercase}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+\setlength{\cftbeforechapskip}{0.2em}
+\setlength{\cftbeforesecskip}{0em}
+\setlength{\cftchapnumwidth}{2.8em}
+\setlength{\cftsecnumwidth}{3.6em}
+\setlength{\cftsubsecnumwidth}{4.5em}
+\setlength{\cftsubsubsecnumwidth}{5.5em}
+
+% ============================================================
+%  LEGENDAS / TABELAS / FIGURAS
+%  Aproximacao do modelo:
+%  - titulo centralizado
+%  - fonte/nota em tamanho menor e espaco simples
+% ============================================================
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{caption}
+
+\captionsetup{
+  font={small,stretch=1},
+  labelfont=bf,
+  textfont=normalfont,
+  labelsep=endash,
+  justification=centering,
+  singlelinecheck=false,
+  skip=6pt
+}
+
+\newcommand{\fonte}[1]{%
+  \par\vspace{3pt}%
+  {\singlespacing\footnotesize\noindent\textbf{Fonte:} #1\par}%
+}
+
+\newcommand{\notaexplicativa}[1]{%
+  {\singlespacing\footnotesize\noindent\textbf{Nota:} #1\par}%
+}
+
+% ============================================================
+%  CITACOES E REFERENCIAS
+% ============================================================
+\RequirePackage{csquotes}
+
+% O biblatex deve ser carregado pelo Org/pipeline, via #+CITE_EXPORT,
+% para permitir APA, ABNT ou outro estilo conforme o TOML.
+% Não carregue \RequirePackage{biblatex} aqui, pois isso conflita com
+% opções geradas dinamicamente pelo exportador Org/LaTeX.
+
+% ============================================================
+%  NOTAS DE RODAPE
+% ============================================================
+\RequirePackage[bottom]{footmisc}
+\renewcommand{\footnoterule}{%
+  \kern -3pt
+  \hrule width 0.3\textwidth
+  \kern 2.6pt
+}
+\setlength{\footnotesep}{0.4cm}
+
+% ============================================================
+%  ESPACAMENTO ESPECIFICO DE ELEMENTOS ACADEMICOS
+% ============================================================
+\newenvironment{citacaolonga}
+  {\begin{quote}\singlespacing\footnotesize}
+  {\end{quote}}
+
+\newenvironment{resumoacademico}
+  {\begin{spacing}{1}\noindent}
+  {\par\end{spacing}}
+
+\newenvironment{referenciasacademicas}
+  {\begin{spacing}{1}\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}}
+  {\end{spacing}}
+
+% ============================================================
+%  METADADOS DO TRABALHO
+% ============================================================
+\RequirePackage{etoolbox}
+\newcommand{\autor}[1]{\gdef\FGVautor{#1}}
+\newcommand{\titulo}[1]{\gdef\FGVtitulo{#1}}
+\newcommand{\subtitulo}[1]{\gdef\FGVsubtitulo{#1}}
+\newcommand{\cidade}[1]{\gdef\FGVcidade{#1}}
+\newcommand{\ano}[1]{\gdef\FGVano{#1}}
+\newcommand{\instituicao}[1]{\gdef\FGVinstituicao{#1}}
+\newcommand{\escola}[1]{\gdef\FGVescola{#1}}
+\newcommand{\programa}[1]{\gdef\FGVprograma{#1}}
+\newcommand{\curso}[1]{\gdef\FGVcurso{#1}}
+\newcommand{\areadeconcentracao}[1]{\gdef\FGVareadeconcentracao{#1}}
+\newcommand{\linhapesquisa}[1]{\gdef\FGVlinhapesquisa{#1}}
+\newcommand{\orientador}[1]{\gdef\FGVorientador{#1}}
+\newcommand{\coorientador}[1]{\gdef\FGVcoorientador{#1}}
+\newcommand{\naturezatrabalho}[1]{\gdef\FGVnaturezatrabalho{#1}}
+\newcommand{\membrobancaum}[1]{\gdef\FGVmembrobancaum{#1}}
+\newcommand{\membrobancadois}[1]{\gdef\FGVmembrobancadois{#1}}
+\newcommand{\membrobancatres}[1]{\gdef\FGVmembrobancatres{#1}}
+\newcommand{\dataaprovacao}[1]{\gdef\FGVdataaprovacao{#1}}
+\newcommand{\palavraschave}[1]{\gdef\FGVpalavraschave{#1}}
+\newcommand{\keywords}[1]{\gdef\FGVkeywords{#1}}
+
+\autor{}
+\titulo{}
+\subtitulo{}
+\cidade{}
+\ano{}
+\instituicao{FUNDAÇÃO GETULIO VARGAS}
+\escola{}
+\programa{}
+\curso{}
+\areadeconcentracao{}
+\linhapesquisa{}
+\orientador{}
+\coorientador{}
+\naturezatrabalho{Dissertação apresentada como requisito para obtenção do título correspondente.}
+\membrobancaum{}
+\membrobancadois{}
+\membrobancatres{}
+\dataaprovacao{}
+\palavraschave{}
+\keywords{}
+
+\newcommand{\FGVtituloCompleto}{%
+  \FGVtitulo\ifstrempty{\FGVsubtitulo}{}{\,: \FGVsubtitulo}%
+}
+
+% ============================================================
+%  CAPA
+% ============================================================
+\newcommand{\capa}{%
+  \begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+      {\large \MakeUppercase{\FGVinstituicao}\par}
+      \ifstrempty{\FGVescola}{}{\vspace{0.5\baselineskip}{\large \MakeUppercase{\FGVescola}\par}}
+      \ifstrempty{\FGVprograma}{}{\vspace{0.5\baselineskip}{\large \MakeUppercase{\FGVprograma}\par}}
+
+      \vfill
+      {\large \MakeUppercase{\FGVautor}\par}
+      \vfill
+      {\large\bfseries \FGVtituloCompleto\par}
+      \vfill
+      {\large \FGVcidade\par}
+      {\large \FGVano\par}
+    \end{center}
+  \end{titlepage}
+}
+
+% ============================================================
+%  FOLHA DE ROSTO
+% ============================================================
+\newcommand{\folhaderosto}{%
+  \begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+      {\large \MakeUppercase{\FGVautor}\par}
+      \vfill
+      {\large\bfseries \FGVtituloCompleto\par}
+    \end{center}
+
+    \vspace{2cm}
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+      \begin{spacing}{1}
+      \justifying
+      \FGVnaturezatrabalho
+
+      \ifstrempty{\FGVcurso}{}{\\[0.8\baselineskip]\textbf{Curso:} \FGVcurso}
+      \ifstrempty{\FGVareadeconcentracao}{}{\\[0.8\baselineskip]\textbf{Área de concentração:} \FGVareadeconcentracao}
+      \ifstrempty{\FGVlinhapesquisa}{}{\\[0.8\baselineskip]\textbf{Linha de pesquisa:} \FGVlinhapesquisa}
+      \ifstrempty{\FGVorientador}{}{\\[0.8\baselineskip]\textbf{Orientador:} \FGVorientador}
+      \ifstrempty{\FGVcoorientador}{}{\\[0.8\baselineskip]\textbf{Coorientador:} \FGVcoorientador}
+      \end{spacing}
+    \end{minipage}
+
+    \vfill
+    \begin{center}
+      {\large \FGVcidade\par}
+      {\large \FGVano\par}
+    \end{center}
+  \end{titlepage}
+}
+
+% ============================================================
+%  FOLHA DE APROVACAO
+% ============================================================
+\newcommand{\folhadeaprovacao}{%
+  \begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+      {\large\bfseries FOLHA DE APROVAÇÃO\par}
+      \vspace{2\baselineskip}
+      {\large \MakeUppercase{\FGVautor}\par}
+      \vspace{2\baselineskip}
+      {\large\bfseries \FGVtituloCompleto\par}
+    \end{center}
+
+    \vspace{2\baselineskip}
+    \begin{spacing}{1}
+    \justifying
+    \FGVnaturezatrabalho
+    \end{spacing}
+
+    \vspace{1.5\baselineskip}
+    \noindent\textbf{Data de aprovação:} \FGVdataaprovacao
+
+    \vspace{2\baselineskip}
+    \noindent\textbf{Banca examinadora:}
+
+    \vspace{2\baselineskip}
+    \noindent\rule{\textwidth}{0.4pt}
+    \ifstrempty{\FGVorientador}{\noindent Orientador(a)}{\noindent \FGVorientador}
+
+    \vspace{2\baselineskip}
+    \noindent\rule{\textwidth}{0.4pt}
+    \ifstrempty{\FGVmembrobancaum}{\noindent Membro da banca}{\noindent \FGVmembrobancaum}
+
+    \vspace{2\baselineskip}
+    \noindent\rule{\textwidth}{0.4pt}
+    \ifstrempty{\FGVmembrobancadois}{\noindent Membro da banca}{\noindent \FGVmembrobancadois}
+
+    \ifstrempty{\FGVmembrobancatres}{}{%
+      \vspace{2\baselineskip}
+      \noindent\rule{\textwidth}{0.4pt}
+      \noindent \FGVmembrobancatres
+    }
+  \end{titlepage}
+}
+
+% ============================================================
+%  ELEMENTOS PRE-TEXTUAIS AUXILIARES
+% ============================================================
+\newenvironment{dedicatoria}{%
+  \clearpage
+  \thispagestyle{empty}
+  \vspace*{0.35\textheight}
+  \begin{flushright}
+  \begin{minipage}{0.5\textwidth}
+  \begin{spacing}{1.5}
+  \itshape
+}{%
+  \end{spacing}
+  \end{minipage}
+  \end{flushright}
+}
+
+\newenvironment{epigrafe}{%
+  \clearpage
+  \thispagestyle{empty}
+  \vspace*{0.35\textheight}
+  \begin{flushright}
+  \begin{minipage}{0.5\textwidth}
+  \begin{spacing}{1.5}
+  \itshape
+}{%
+  \end{spacing}
+  \end{minipage}
+  \end{flushright}
+}
+
+\newenvironment{agradecimentos}{%
+  \chapter*{AGRADECIMENTOS}
+  \addcontentsline{toc}{chapter}{AGRADECIMENTOS}
+}{%
+}
+
+\newenvironment{resumo}{%
+  \chapter*{RESUMO}
+  \addcontentsline{toc}{chapter}{RESUMO}
+  \begin{resumoacademico}
+}{%
+  \par
+  \ifstrempty{\FGVpalavraschave}{}{\vspace{\baselineskip}\noindent\textbf{Palavras-chave:} \FGVpalavraschave.}
+  \end{resumoacademico}
+}
+
+\newenvironment{abstractacademico}{%
+  \chapter*{ABSTRACT}
+  \addcontentsline{toc}{chapter}{ABSTRACT}
+  \begin{resumoacademico}
+}{%
+  \par
+  \ifstrempty{\FGVkeywords}{}{\vspace{\baselineskip}\noindent\textbf{Keywords:} \FGVkeywords.}
+  \end{resumoacademico}
+}
+
+% ============================================================
+%  COMANDOS DE TRANSICAO
+% ============================================================
+\newcommand{\elementospretextuais}{%
+  \pagenumbering{roman}
+  \setcounter{page}{1}
+}
+
+\newcommand{\elementostextuais}{%
+  \clearpage
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+}
+
+\newcommand{\apendices}{%
+  \appendix
+  \chapter*{APÊNDICES}
+  \addcontentsline{toc}{chapter}{APÊNDICES}
+}
+
+\newcommand{\anexos}{%
+  \clearpage
+  \chapter*{ANEXOS}
+  \addcontentsline{toc}{chapter}{ANEXOS}
+}
+
+% ============================================================
+%  AJUSTES DE ORFÃS / VIÚVAS / QUEBRAS
+% ============================================================
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+

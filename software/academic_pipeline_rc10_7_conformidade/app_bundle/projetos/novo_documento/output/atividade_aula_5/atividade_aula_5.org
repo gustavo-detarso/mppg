@@ -1,0 +1,97 @@
+#+TITLE: Atividade acadêmica
+#+AUTHOR: Gustavo M. Mendes de Tarso
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LATEX_HEADER: % Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+#+LATEX_HEADER: \usepackage[backend=biber,style=abnt,sorting=nty,giveninits=true]{biblatex}
+#+LATEX_HEADER: \addbibresource{atividade_aula_5.bib}
+#+LATEX_HEADER: \geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+#+LATEX_HEADER: \setlength{\headheight}{58pt}
+#+LATEX_HEADER: \setlength{\headsep}{18pt}
+#+LATEX_HEADER: \newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}}{}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+#+LATEX_HEADER: \fancypagestyle{fgvreportstyle}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{plain}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+#+LATEX_HEADER: \institution{fgv}
+#+LATEX_HEADER: \programname{}
+#+LATEX_HEADER: \coursename{Mestrado Acadêmico em Políticas Públicas e Governo}
+#+LATEX_HEADER: \disciplinename{Políticas Públicas - Teoria e Análise}
+#+LATEX_HEADER: \professorname{Lizandro Lui}
+#+LATEX_HEADER: \cityname{Brasília}
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado Acadêmico em Políticas Públicas e Governo \\
+\textbf{Turma}                   & 2026.1 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Políticas Públicas - Teoria e Análise \\
+\textbf{Professor}               & Lizandro Lui \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & Jun/2026 \\
+\textbf{Título do trabalho}      & Atividade acadêmica \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \clearpage
+
+* Introdução
+
+Esta atividade seleciona dois textos do corpus local, um vinculado à Aula 7 e outro à Aula 8, para discutir modos distintos de analisar políticas públicas. O texto da Aula 7 investiga os efeitos da judicialização sobre a política de educação infantil em quatro municípios paulistas, enquanto o da Aula 8 examina os efeitos do PMAQ-AB sobre acesso e qualidade da atenção básica. Em ambos os casos, o problema central é compreender como intervenções institucionais ou programáticas produzem efeitos sobre a ação estatal, mas cada estudo adota enquadramentos analíticos e critérios de evidência diferentes. A comparação é útil porque mostra, de um lado, uma abordagem sensível ao contexto, às relações interinstitucionais e aos efeitos sobre o ciclo da política e, de outro, uma abordagem avaliativa orientada à mensuração de resultados e à identificação de efeito programático \parencite{rodrigues2022_efeitos_judicializacao,soares2020_uma_avaliacao}.
+
+
+
+* Resenha analítica do texto da Aula 7
+
+No texto sobre judicialização da educação infantil, o fenômeno a ser explicado é a incidência de demandas judiciais e extrajudiciais coletivas sobre o ciclo da política pública em contextos municipais. O esquema teórico mobilizado parte da judicialização como acionamento do sistema de justiça diante de falhas ou omissões estatais e busca mapear seus efeitos diretos e indiretos. A contribuição analítica do artigo está em não reduzir a judicialização a mera imposição externa do Judiciário, mas tratá-la como processo capaz de alterar prioridades governamentais, estruturas administrativas, desenho da oferta e mecanismos de responsabilização. Entre os conceitos centrais aparecem efeitos diretos e indiretos, ciclo da política, accountability e relações interinstitucionais, compondo um framework que permite comparar contextos locais distintos \parencite{rodrigues2022_efeitos_judicializacao}.
+
+Os argumentos centrais indicam que a judicialização produz efeitos heterogêneos conforme o contexto local, mas essa variação não impede a identificação de padrões analíticos. Entre os efeitos diretos, o texto destaca a expansão da oferta de vagas em creches, mudanças em programas de governo e repercussões orçamentárias; entre os indiretos, a reorganização da prestação de serviços e da estrutura administrativa, a criação de novos mecanismos de accountability, mudanças nas relações entre instituições e produção de nova normatividade municipal. A principal contribuição da abordagem, portanto, é mostrar que a judicialização pode ser interpretada como variável institucional que reconfigura capacidades estatais e incentivos decisórios. Um limite implícito da própria abordagem é que a ênfase nos efeitos observáveis da intervenção judicial pode deixar em segundo plano disputas sociais mais amplas sobre prioridade distributiva e desigualdade territorial, ainda que o texto reconheça a importância decisiva do contexto local \parencite{rodrigues2022_efeitos_judicializacao}.
+
+
+
+* Resenha analítica do texto da Aula 8
+
+No texto da Aula 8, o problema consiste em avaliar se o PMAQ-AB produziu efeito sobre acesso e qualidade da atenção básica. O desenho analítico é explicitamente quantitativo, com série temporal descritiva e regressão com dados de contagem tendo os municípios brasileiros como unidade de análise. O estudo opera com conceitos como acesso, qualidade, desempenho e efeito programático, usando as internações por condições sensíveis à atenção básica como indicador indireto dos resultados do programa. Seu argumento central é que a avaliação pode identificar impacto significativo do PMAQ-AB, especialmente em certas regiões, oferecendo subsídios para gestores e para o debate sobre políticas de saúde \parencite{soares2020_uma_avaliacao}.
+
+Os pressupostos que estruturam essa avaliação merecem destaque porque revelam que ela não é inteiramente neutra. Primeiro, o estudo pressupõe que redução de internações sensíveis à atenção básica pode ser tratada como evidência válida de melhora de acesso e qualidade, isto é, adota uma concepção de resultado mediada por proxy e por relação causal entre desempenho da atenção básica e hospitalizações evitáveis. Segundo, a avaliação privilegia efetividade e desempenho do programa, com forte centralidade na mensuração empírica e na comparação regional. Terceiro, embora o texto se apresente em chave técnica, a escolha do que conta como qualidade, do indicador utilizado e do próprio sentido de melhoria envolve juízos normativos sobre o que a política deve produzir. A contribuição do artigo está em explicitar um padrão de avaliação orientado por evidências e inferência estatística; seu limite analítico está no risco de reduzir a complexidade institucional da política a um conjunto restrito de indicadores, o que pode subdimensionar aspectos de equidade, processos de implementação e mediações territoriais \parencite{soares2020_uma_avaliacao}.
+
+
+
+* Conclusão comparativa
+
+Comparativamente, os dois textos mostram que a análise de políticas públicas pode ser conduzida a partir de perguntas e evidências muito distintas. O estudo sobre judicialização destaca processos, interações institucionais e efeitos contextuais que reordenam o ciclo da política; o estudo sobre o PMAQ-AB enfatiza avaliação de resultados, causalidade e mensuração de desempenho. Enquanto o primeiro amplia a compreensão sobre como atores do sistema de justiça interferem na produção de políticas, o segundo exemplifica como critérios de efetividade e evidências quantitativas estruturam julgamentos avaliativos. Juntos, os textos sugerem que uma análise robusta de políticas públicas exige articular instituições, implementação, valores e resultados, evitando tanto a redução da política a conflitos jurídicos isolados quanto sua redução a indicadores descontextualizados \parencite{rodrigues2022_efeitos_judicializacao,soares2020_uma_avaliacao}.
+
+#+LATEX: \printbibliography
+

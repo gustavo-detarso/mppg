@@ -1,0 +1,133 @@
+{
+  "version": "rc10.7.34-output-dir-and-staged-activity",
+  "generated_at": "2026-05-12T18:31:46-03:00",
+  "ok": true,
+  "institution_profile": "fgv",
+  "institution_profile_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/institution_profile.toml",
+  "document_type": "atividade",
+  "rules_loaded": true,
+  "artifacts": {
+    "org": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2.org",
+    "bib": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2.bib",
+    "docx": null,
+    "pdf": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2.pdf"
+  },
+  "errors": [],
+  "warnings": [],
+  "items": [
+    {
+      "id": "institution.profile",
+      "status": "pass",
+      "message": "Perfil institucional carregado: fgv",
+      "detail": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/institution_profile.toml"
+    },
+    {
+      "id": "layout.rules",
+      "status": "info",
+      "message": "Regras de layout institucionais carregadas.",
+      "detail": "{'papel': 'A4', 'margens_cm': {'superior': 3, 'esquerda': 3, 'direita': 2, 'inferior': 2}, 'fonte_texto_pt': 12, 'fonte_auxiliar_pt': 10, 'espacamento_texto': 1.5, 'recuo_primeira_linha_cm': 1.25, 'recuo_citacao_longa_cm': 4}"
+    },
+    {
+      "id": "bibliography.author_date",
+      "status": "pass",
+      "message": "Estilo bibliográfico compatível com autor-data: abnt",
+      "detail": ""
+    },
+    {
+      "id": "bibliography.default_style",
+      "status": "pass",
+      "message": "Estilo bibliográfico padrão da instituição aplicado: abnt",
+      "detail": ""
+    },
+    {
+      "id": "bibliography.reference_notes",
+      "status": "pass",
+      "message": "Perfil institucional não adota notas de referência como padrão.",
+      "detail": ""
+    },
+    {
+      "id": "cover.duplicate_program_course",
+      "status": "pass",
+      "message": "Não foi detectada duplicidade program_name/course_name.",
+      "detail": ""
+    },
+    {
+      "id": "latex.academic_writing",
+      "status": "pass",
+      "message": "academic-writing.el encontrado.",
+      "detail": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/academic-writing.el"
+    },
+    {
+      "id": "org.exists",
+      "status": "pass",
+      "message": "ORG encontrado.",
+      "detail": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2.org"
+    },
+    {
+      "id": "org.citations_clean",
+      "status": "pass",
+      "message": "Não há <empty citation> nem Org Cite cru no ORG.",
+      "detail": ""
+    },
+    {
+      "id": "org.references",
+      "status": "pass",
+      "message": "Referências/bibliografia identificadas no ORG.",
+      "detail": ""
+    },
+    {
+      "id": "org.biblatex_style",
+      "status": "pass",
+      "message": "Estilo BibLaTeX/Org Cite `abnt` identificado no ORG.",
+      "detail": ""
+    },
+    {
+      "id": "org.technical_leaks",
+      "status": "pass",
+      "message": "Não foram detectadas menções técnicas proibidas no texto visível.",
+      "detail": ""
+    },
+    {
+      "id": "activity.ficha_tecnica",
+      "status": "pass",
+      "message": "Ficha Técnica identificada como elemento não numerado/visual.",
+      "detail": ""
+    },
+    {
+      "id": "mindmap.after_references",
+      "status": "pass",
+      "message": "Mapa mental aparece depois das referências.",
+      "detail": ""
+    },
+    {
+      "id": "bib.entries",
+      "status": "pass",
+      "message": "BIB contém 2 entrada(s).",
+      "detail": ""
+    },
+    {
+      "id": "bib.noise",
+      "status": "pass",
+      "message": "Não detectei ruídos bibliográficos conhecidos.",
+      "detail": ""
+    },
+    {
+      "id": "bib.duplicate_keys",
+      "status": "pass",
+      "message": "Não há chaves BibTeX duplicadas.",
+      "detail": ""
+    },
+    {
+      "id": "docx.exists",
+      "status": "info",
+      "message": "DOCX não informado ou não gerado.",
+      "detail": ""
+    },
+    {
+      "id": "pdf.exists",
+      "status": "pass",
+      "message": "PDF encontrado e não vazio.",
+      "detail": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2.pdf"
+    }
+  ]
+}

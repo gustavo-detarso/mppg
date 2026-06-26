@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Gerador interativo completo de TOML para academic_pipeline rc10.7.34.
+"""Gerador interativo completo de TOML para academic_pipeline rc10.7.42.
 
 O objetivo é reduzir erro operacional: o usuário escolhe um preset explicável,
 responde apenas os campos necessários e o script gera um TOML completo com as
@@ -180,8 +180,101 @@ def install_path_completion() -> None:
 # Entrada interativa
 # -----------------------------------------------------------------------------
 
+TUI_THEME = os.getenv("ACADEMIC_PIPELINE_TUI_THEME", "").strip().lower()
+TUI_STAGE_TITLE = "Configuração"
+# Quando informado pela Central Operacional, este diretório recebe o TOML.
+# Sem override, o wizard pergunta explicitamente onde o projeto será salvo.
+WIZARD_PROJECT_DIR_OVERRIDE: Path | None = None
+
+
+def set_wizard_project_dir(value: str | Path | None) -> None:
+    global WIZARD_PROJECT_DIR_OVERRIDE
+    raw = str(value or "").strip()
+    WIZARD_PROJECT_DIR_OVERRIDE = Path(raw).expanduser().resolve() if raw else None
+
+
+def bundle_rel(data: dict[str, Any], relative_to_bundle: str) -> str:
+    """Gera caminho relativo ao TOML, inclusive quando salvo fora de app_bundle."""
+    return rel_for_toml(APP / relative_to_bundle, data["config_dir"])
+
+
+def set_tui_theme(value: str | None) -> None:
+    """Ativa o front-end prompt_toolkit para o wizard quando solicitado."""
+    global TUI_THEME
+    TUI_THEME = str(value or "").strip().lower()
+
+
+def tui_theme_enabled() -> bool:
+    return TUI_THEME == "fgv"
+
+
+def _fgv_ui() -> Any:
+    try:
+        import academic_pipeline_tui_widgets as widgets
+    except ImportError as exc:  # pragma: no cover - depende da instalação local
+        raise RuntimeError(
+            "O tema visual FGV requer prompt-toolkit. Execute: pipenv install prompt-toolkit"
+        ) from exc
+    return widgets
+
+
+def _dialog_title() -> str:
+    return f"Academic Pipeline — {TUI_STAGE_TITLE}"
+
+
+def _looks_like_path(prompt: str) -> bool:
+    value = str(prompt or "").lower()
+    tokens = ("arquivo", "pasta", "caminho", "diretório", "diretorio", "zip", "logo", "plantuml", "document.json", ".pdf", ".org")
+    return any(token in value for token in tokens)
+
+
+def _path_picker_suffixes(prompt: str) -> tuple[str, ...]:
+    """Restringe o navegador visual quando o rótulo indica um tipo de arquivo.
+
+    A filtragem atua apenas no navegador acionado por F2; o campo continua
+    aceitando digitação e colagem manual de qualquer caminho válido.
+    """
+    value = str(prompt or "").lower()
+    if "documentos-base.zip" in value or "orientacoes.zip" in value:
+        return (".zip",)
+    if "document.json" in value:
+        return (".json",)
+    if "doi" in value and "manifest" in value:
+        return (".csv",)
+    if "logo" in value:
+        return (".png", ".jpg", ".jpeg", ".svg")
+    if "plantuml" in value:
+        return (".jar",)
+    if ".pdf" in value:
+        return (".pdf",)
+    if ".org" in value:
+        return (".org",)
+    return ()
+
+
+def _path_picker_directories_only(prompt: str) -> bool:
+    value = str(prompt or "").lower()
+    return (
+        ("pasta" in value or "diretório" in value or "diretorio" in value)
+        and not any(token in value for token in ("arquivo", "zip", "document.json", ".pdf", ".org"))
+    )
+
 
 def ask(prompt: str, default: str = "") -> str:
+    if tui_theme_enabled():
+        path_like = _looks_like_path(prompt)
+        value = _fgv_ui().input_text(
+            _dialog_title(),
+            prompt,
+            default=default,
+            path_completion=path_like,
+            only_directories=_path_picker_directories_only(prompt),
+            allowed_suffixes=_path_picker_suffixes(prompt),
+        )
+        if value is None:
+            raise SystemExit("Geração de TOML cancelada pelo usuário.")
+        value = value.strip()
+        return value if value else default
     suffix = f" [{default}]" if default else ""
     value = input(f"{prompt}{suffix}: ").strip()
     return value if value else default
@@ -192,10 +285,15 @@ def ask_required(prompt: str, default: str = "") -> str:
         value = ask(prompt, default)
         if value.strip():
             return value.strip()
-        print("Campo obrigatório.")
+        if tui_theme_enabled():
+            _fgv_ui().message(_dialog_title(), "Este campo é obrigatório.")
+        else:
+            print("Campo obrigatório.")
 
 
 def ask_bool(prompt: str, default: bool = True) -> bool:
+    if tui_theme_enabled():
+        return bool(_fgv_ui().confirm(_dialog_title(), prompt, default=default))
     d = "s" if default else "n"
     while True:
         value = input(f"{prompt} (s/n) [{d}]: ").strip().lower()
@@ -209,6 +307,17 @@ def ask_bool(prompt: str, default: bool = True) -> bool:
 
 
 def ask_choice(prompt: str, choices: list[str], default: str) -> str:
+    if tui_theme_enabled():
+        values = [(choice, choice) for choice in choices]
+        selected = _fgv_ui().select_one(
+            _dialog_title(),
+            prompt,
+            values,
+            default=default if default in choices else choices[0],
+        )
+        if selected is None:
+            raise SystemExit("Geração de TOML cancelada pelo usuário.")
+        return str(selected)
     choices_norm = {c.lower(): c for c in choices}
     while True:
         value = ask(prompt + " (" + "/".join(choices) + ")", default).lower()
@@ -223,6 +332,206 @@ def ask_list(prompt: str, default: list[str] | None = None) -> list[str]:
     raw = ask(prompt + " (separe por ;)", raw_default)
     return [x.strip() for x in raw.split(";") if x.strip()]
 
+
+# -----------------------------------------------------------------------------
+# Wizard UI
+# -----------------------------------------------------------------------------
+
+WIZARD_NO_CLEAR = os.getenv("ACADEMIC_PIPELINE_TOML_NO_CLEAR", "").strip().lower() in {"1", "true", "s", "sim", "yes", "y"}
+
+
+def set_wizard_no_clear(value: bool) -> None:
+    global WIZARD_NO_CLEAR
+    WIZARD_NO_CLEAR = bool(value)
+
+
+def clear_screen() -> None:
+    if tui_theme_enabled():
+        return
+    if WIZARD_NO_CLEAR:
+        print("\n" + "=" * 92 + "\n")
+        return
+    cmd = "cls" if os.name == "nt" else "clear"
+    os.system(cmd)
+
+
+def wizard_header(title: str, index: int | None = None, total: int | None = None, preset: "Preset | None" = None) -> None:
+    global TUI_STAGE_TITLE
+    stage = f"Etapa {index}/{total} — {title}" if index is not None and total is not None else title
+    if preset is not None:
+        stage = f"{stage} | {preset.label}"
+    TUI_STAGE_TITLE = stage
+    if tui_theme_enabled():
+        return
+    clear_screen()
+    print("academic_pipeline TOML Wizard")
+    if preset is not None:
+        print(f"Perfil: {preset.key} — {preset.label}")
+    if index is not None and total is not None:
+        print(f"Etapa {index}/{total} — {title}")
+    else:
+        print(title)
+    print("-" * 92)
+    print("Comandos de navegação ao final da etapa: próxima | voltar | refazer | resumo | cancelar")
+    print("Use Ctrl+C para cancelar imediatamente.\n")
+
+
+def short_value(value: Any, max_len: int = 110) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, list):
+        s = "; ".join(str(x) for x in value)
+    else:
+        s = str(value)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s if len(s) <= max_len else s[: max_len - 1] + "…"
+
+
+def wizard_summary(data: dict[str, Any]) -> str:
+    preset = data.get("preset")
+    preset_key = getattr(preset, "key", "") if preset else ""
+    rows: list[tuple[str, list[tuple[str, Any]]]] = [
+        ("Projeto e perfil", [
+            ("nome", data.get("project_name")),
+            ("slug", data.get("project_slug")),
+            ("perfil", preset_key),
+            ("instituição", data.get("institution")),
+            ("layout", data.get("layout")),
+            ("TOML", data.get("config_path")),
+        ]),
+        ("Metadados", [
+            ("título", data.get("titulo")),
+            ("autor", data.get("autor")),
+            ("curso", data.get("curso")),
+            ("turma", data.get("turma")),
+            ("disciplina", data.get("disciplina")),
+            ("professor", data.get("professor")),
+            ("data", data.get("data")),
+        ]),
+        ("Dados acadêmicos da atividade/pesquisa", [
+            ("fonte dos dados", data.get("atividade_dados_modo")),
+            ("dados da atividade por IA", data.get("atividade_gerar_dados_ia")),
+            ("arquivo com dados da atividade", data.get("atividade_dados_paths")),
+            ("tema", data.get("tema")),
+            ("recorte", data.get("recorte")),
+            ("objetivo", data.get("objetivo")),
+            ("pergunta orientadora", data.get("pergunta_pesquisa")),
+            ("enunciado/orientação", data.get("orientacao_professor")),
+            ("palavras-chave", "automáticas pela IA" if data.get("gerar_palavras_chave_ia") else data.get("palavras_chave")),
+            ("idiomas", data.get("idiomas")),
+        ]),
+        ("Corpus, orientações e prompts", [
+            ("input_zip", data.get("documentos_input_zip")),
+            ("input_dir", data.get("documentos_input_dir")),
+            ("orientações", data.get("orientacoes_paths")),
+            ("modo das orientações gerais", data.get("orientacao_geral_modo")),
+            ("orientação geral digitada", data.get("orientacao_geral_inline")),
+            ("prompt específico", data.get("prompt_extra_paths")),
+            ("orientação inline", data.get("orientacao_professor")),
+            ("doi_manifest", data.get("doi_manifest_path")),
+        ]),
+        ("Saídas", [
+            ("document_output_dir", data.get("document_output_dir") or "../../output/documento"),
+            ("subdiretório", data.get("create_document_subdir")),
+            ("ORG", data.get("exportar_org")),
+            ("PDF", data.get("exportar_pdf")),
+            ("DOCX", data.get("exportar_docx")),
+            ("mapa mental", data.get("gerar_mapa_mental")),
+            ("estilo", data.get("estilo")),
+        ]),
+    ]
+    out: list[str] = []
+    for section, items in rows:
+        out.append(section + ":")
+        for k, v in items:
+            if v not in (None, "", [], {}):
+                out.append(f"  - {k}: {short_value(v)}")
+        out.append("")
+    return "\n".join(out).rstrip()
+
+
+def show_summary(data: dict[str, Any]) -> None:
+    if tui_theme_enabled():
+        _fgv_ui().message(_dialog_title(), wizard_summary(data) or "Ainda não há dados suficientes.")
+        return
+    print("\nResumo atual da configuração")
+    print("=" * 92)
+    print(wizard_summary(data) or "Ainda não há dados suficientes.")
+    print("=" * 92 + "\n")
+
+
+def ask_stage_action(allow_back: bool = True) -> str:
+    if tui_theme_enabled():
+        values = [("proxima", "[P] Próxima etapa"), ("refazer", "[R] Refazer esta etapa"), ("resumo", "[S] Ver resumo atual")]
+        if allow_back:
+            values.insert(1, ("voltar", "[V] Voltar à etapa anterior"))
+        values.append(("cancelar", "[C] Cancelar sem salvar"))
+        selected = _fgv_ui().select_one(
+            _dialog_title(),
+            "Revise o que foi informado e escolha o próximo movimento.",
+            values,
+            default="proxima",
+        )
+        return str(selected or "cancelar")
+    choices = {"p", "proxima", "próxima", "voltar", "v", "refazer", "r", "resumo", "cancelar", "c"}
+    while True:
+        raw = input("Ação [próxima/voltar/refazer/resumo/cancelar] (Enter=próxima): ").strip().lower()
+        if not raw:
+            return "proxima"
+        if raw in choices:
+            if raw in {"p", "proxima", "próxima"}:
+                return "proxima"
+            if raw in {"v", "voltar"}:
+                return "voltar" if allow_back else "refazer"
+            if raw in {"r", "refazer"}:
+                return "refazer"
+            if raw == "resumo":
+                return "resumo"
+            if raw in {"c", "cancelar"}:
+                return "cancelar"
+        print("Escolha uma ação válida: próxima, voltar, refazer, resumo ou cancelar.")
+
+
+def ask_final_action() -> str:
+    if tui_theme_enabled():
+        selected = _fgv_ui().select_one(
+            _dialog_title(),
+            "Revise a configuração antes de gravar o TOML.",
+            [
+                ("salvar", "[S] Salvar TOML"),
+                ("editar", "[E] Editar uma etapa"),
+                ("cancelar", "[C] Cancelar sem salvar"),
+            ],
+            default="salvar",
+        )
+        return str(selected or "cancelar")
+    while True:
+        raw = input("Salvar TOML? [s=salvar / e=editar etapa / n=cancelar] [s]: ").strip().lower()
+        if not raw or raw in {"s", "sim", "salvar"}:
+            return "salvar"
+        if raw in {"e", "editar"}:
+            return "editar"
+        if raw in {"n", "nao", "não", "cancelar"}:
+            return "cancelar"
+        print("Responda s, e ou n.")
+
+
+def ask_stage_number(total: int) -> int:
+    if tui_theme_enabled():
+        selected = _fgv_ui().select_one(
+            _dialog_title(),
+            "Selecione a etapa que deseja editar.",
+            [(index, f"Etapa {index + 1}") for index in range(total)],
+            default=0,
+        )
+        if selected is None:
+            raise SystemExit("Geração de TOML cancelada pelo usuário.")
+        return int(selected)
+    while True:
+        raw = input(f"Qual etapa deseja editar? [1-{total}]: ").strip()
+        if raw.isdigit() and 1 <= int(raw) <= total:
+            return int(raw) - 1
+        print("Número inválido.")
 
 def list_institutions() -> list[str]:
     base = APP / "institutions"
@@ -393,7 +702,7 @@ PRESETS: list[Preset] = [
 
 
 def choose_preset() -> Preset:
-    print("\nGerador interativo de TOML — academic_pipeline rc10.7.34")
+    print("\nGerador interativo de TOML — academic_pipeline rc10.7.42")
     print("\nPerfis disponíveis:\n")
     for i, p in enumerate(PRESETS, start=1):
         print(f"{i}. {p.label}")
@@ -447,15 +756,24 @@ def collect_common(preset: Preset) -> dict[str, Any]:
     print(textwrap.fill(preset.description, width=92))
 
     if preset.key == "resumo_artigos_local_fgv":
-        suggested_project_name = "resumo_artigos_encontro_X"
+        default_project_name = "resumo_artigos_encontro_X"
     elif preset.document_type == "atividade":
-        suggested_project_name = "atividade_encontro_X"
+        default_project_name = "atividade_aula_2"
     else:
-        suggested_project_name = f"{preset.document_type}_meu_tema"
-    print(f"\nSugestão de nome do projeto: {suggested_project_name}")
-    project_name = ask_required("Nome do projeto", "")
+        default_project_name = f"{preset.document_type}_meu_tema"
+    project_name = ask_required("Nome do projeto", default_project_name)
     project_slug = slugify(project_name)
-    project_dir = ensure_project_dir(project_slug)
+    default_project_dir = APP / "projetos" / project_slug
+    if WIZARD_PROJECT_DIR_OVERRIDE is not None:
+        project_dir = WIZARD_PROJECT_DIR_OVERRIDE
+    else:
+        raw_project_dir = ask(
+            "Diretório do projeto para salvar o TOML e os arquivos auxiliares",
+            str(default_project_dir),
+        )
+        project_dir = Path(raw_project_dir).expanduser() if raw_project_dir.strip() else default_project_dir
+        project_dir = project_dir.resolve()
+    project_dir.mkdir(parents=True, exist_ok=True)
     institution = ask_choice("Perfil institucional", institutions, default_institution)
 
     layouts = available_layouts_for_institution(institution)
@@ -538,33 +856,6 @@ def collect_metadata(data: dict[str, Any]) -> None:
         data["natureza_trabalho"] = ""
 
 
-DEFAULT_ATIVIDADE_LOCAL_TEMA = (
-    "Leitura analítica dos textos do corpus local da atividade, com foco no enunciado/orientação "
-    "da disciplina e nas contribuições centrais dos materiais fornecidos."
-)
-
-DEFAULT_ATIVIDADE_LOCAL_RECORTE = (
-    "Responder à atividade com base exclusivamente no corpus local e nas orientações fornecidas, "
-    "articulando argumentos centrais, conceitos principais, evidências relevantes e contribuições "
-    "dos textos para a disciplina, sem acrescentar bibliografia externa como base principal."
-)
-
-DEFAULT_ATIVIDADE_LOCAL_OBJETIVO = (
-    "Produzir uma resposta acadêmica analítica, clara e substantiva, capaz de sintetizar, comparar "
-    "e interpretar criticamente os textos do corpus local conforme o comando da atividade."
-)
-
-DEFAULT_ATIVIDADE_LOCAL_PERGUNTA = (
-    "Quais são as principais contribuições dos textos do corpus local para responder ao enunciado "
-    "da atividade?"
-)
-
-DEFAULT_ATIVIDADE_LOCAL_TESE = (
-    "Os textos do corpus local permitem construir uma resposta analítica ao enunciado ao evidenciar "
-    "conceitos, argumentos e contribuições complementares para a compreensão do tema proposto."
-)
-
-
 DEFAULT_RESUMO_ARTIGOS_TEMA = (
     "Corpus local de textos acadêmicos. Produzir leitura analítica aprofundada de cada texto, "
     "reconstruindo problema, objetivo, argumento central, estrutura conceitual, método/evidências, "
@@ -606,18 +897,36 @@ def collect_research(data: dict[str, Any]) -> None:
         _print_default_block("Recorte/foco comparativo", DEFAULT_RESUMO_ARTIGOS_RECORTE)
         _print_default_block("Objetivo do resumo analítico", DEFAULT_RESUMO_ARTIGOS_OBJETIVO)
         usar_padrao = ask_bool("Usar essas orientações padrão de tema, recorte e objetivo?", True)
+        data["tema_recorte_objetivo_paths"] = []
         if usar_padrao:
             data["tema"] = DEFAULT_RESUMO_ARTIGOS_TEMA
             data["recorte"] = DEFAULT_RESUMO_ARTIGOS_RECORTE
             data["objetivo"] = DEFAULT_RESUMO_ARTIGOS_OBJETIVO
         else:
-            print("\nEdite apenas o que desejar. Pressione Enter para manter o padrão mostrado.")
-            data["tema"] = ask("Tema/foco de leitura", DEFAULT_RESUMO_ARTIGOS_TEMA)
-            data["recorte"] = ask("Recorte/foco comparativo", DEFAULT_RESUMO_ARTIGOS_RECORTE)
-            data["objetivo"] = ask("Objetivo do resumo analítico", DEFAULT_RESUMO_ARTIGOS_OBJETIVO)
+            usar_arquivo_tro = ask_bool("Deseja apontar um arquivo/pasta/ZIP com diretrizes de tema, recorte e objetivo?", True)
+            if usar_arquivo_tro:
+                tro_path = ask_required("Arquivo/pasta/ZIP com diretrizes de tema, recorte e objetivo", "")
+                data["tema_recorte_objetivo_paths"] = [rel_for_toml(tro_path, data["config_dir"])]
+                # Mantém valores mínimos no TOML para estabilidade do pipeline; o arquivo informado entra em [orientacoes].paths.
+                data["tema"] = DEFAULT_RESUMO_ARTIGOS_TEMA
+                data["recorte"] = DEFAULT_RESUMO_ARTIGOS_RECORTE
+                data["objetivo"] = DEFAULT_RESUMO_ARTIGOS_OBJETIVO
+            else:
+                print("\nEdite manualmente tema, recorte e objetivo.")
+                data["tema"] = ask("Tema/foco de leitura", DEFAULT_RESUMO_ARTIGOS_TEMA)
+                data["recorte"] = ask("Recorte/foco comparativo", DEFAULT_RESUMO_ARTIGOS_RECORTE)
+                data["objetivo"] = ask("Objetivo do resumo analítico", DEFAULT_RESUMO_ARTIGOS_OBJETIVO)
         data["pergunta_pesquisa"] = ""
         data["hipotese"] = ""
-        data["orientacao_professor"] = ask("Orientação adicional do professor/usuário, se houver", "")
+        data["orientacao_professor"] = ""
+        data["orientacao_complementar_paths"] = []
+        if ask_bool("Deseja informar orientação textual complementar?", False):
+            modo_orientacao = ask_choice("Como deseja informar a orientação textual complementar", ["digitar", "arquivo"], "digitar")
+            if modo_orientacao == "digitar":
+                data["orientacao_professor"] = ask("Digite a orientação textual complementar", "")
+            else:
+                orient_comp = ask_required("Arquivo/pasta/ZIP com orientação textual complementar", "")
+                data["orientacao_complementar_paths"] = [rel_for_toml(orient_comp, data["config_dir"])]
         if ask_bool("Informar palavras-chave manualmente?", False):
             data["palavras_chave"] = ask_list("Palavras-chave", DEFAULT_RESUMO_ARTIGOS_PALAVRAS)
         else:
@@ -657,59 +966,49 @@ def collect_research(data: dict[str, Any]) -> None:
 
     if preset.document_type == "atividade":
         print("\nDados da atividade")
-        _print_default_block("Tema da atividade", DEFAULT_ATIVIDADE_LOCAL_TEMA)
-        _print_default_block("Recorte/foco da resposta", DEFAULT_ATIVIDADE_LOCAL_RECORTE)
-        _print_default_block("Objetivo da atividade", DEFAULT_ATIVIDADE_LOCAL_OBJETIVO)
-        usar_padrao = ask_bool("Usar essas orientações padrão da atividade local?", True)
-        if usar_padrao:
-            data["tema"] = DEFAULT_ATIVIDADE_LOCAL_TEMA
-            data["recorte"] = DEFAULT_ATIVIDADE_LOCAL_RECORTE
-            data["objetivo"] = DEFAULT_ATIVIDADE_LOCAL_OBJETIVO
-            data["pergunta_pesquisa"] = DEFAULT_ATIVIDADE_LOCAL_PERGUNTA
-            data["hipotese"] = DEFAULT_ATIVIDADE_LOCAL_TESE
+        print("Você pode fornecer os dados centrais em um único arquivo ou preenchê-los manualmente.")
+        data["atividade_dados_paths"] = []
+        modo_dados = ask_choice(
+            "Como deseja fornecer tema, pergunta orientadora e enunciado da atividade",
+            ["ia", "arquivo", "manual"],
+            "ia",
+        )
+        data["atividade_dados_modo"] = modo_dados
+        data["atividade_gerar_dados_ia"] = (modo_dados == "ia")
+        if modo_dados == "ia":
+            print("\nDados da atividade: serão inferidos automaticamente pela IA a partir do corpus, das orientações, do prompt específico e dos metadados informados.")
+            print("A IA deverá inferir: tema da atividade, pergunta orientadora, objetivo/recorte, enunciado operacional e palavras-chave.")
+            data["tema"] = ""
+            data["recorte"] = ""
+            data["objetivo"] = ""
+            data["pergunta_pesquisa"] = ""
+            data["hipotese"] = ""
+            data["orientacao_professor"] = ""
+        elif modo_dados == "arquivo":
+            dados_path = ask_required(
+                "Arquivo/pasta/ZIP com tema, pergunta orientadora e enunciado/orientação da atividade",
+                "",
+            )
+            data["atividade_dados_paths"] = [rel_for_toml(dados_path, data["config_dir"])]
+            data["tema"] = ""
+            data["recorte"] = ""
+            data["objetivo"] = ""
+            data["pergunta_pesquisa"] = ""
+            data["hipotese"] = ""
+            data["orientacao_professor"] = ""
         else:
-            print("\nEdite apenas o que desejar. Pressione Enter para manter o padrão mostrado.")
-            data["tema"] = ask("Tema da atividade", DEFAULT_ATIVIDADE_LOCAL_TEMA)
-            data["recorte"] = ask("Recorte/foco da resposta", DEFAULT_ATIVIDADE_LOCAL_RECORTE)
-            data["objetivo"] = ask("Objetivo da atividade", DEFAULT_ATIVIDADE_LOCAL_OBJETIVO)
-            data["pergunta_pesquisa"] = ask("Pergunta orientadora da atividade", DEFAULT_ATIVIDADE_LOCAL_PERGUNTA)
-            data["hipotese"] = ask("Tese central da resposta, opcional", DEFAULT_ATIVIDADE_LOCAL_TESE)
-        data["orientacao_professor"] = ask("Enunciado/orientação do professor, se houver", "")
-        if ask_bool("Informar palavras-chave manualmente?", False):
-            data["palavras_chave"] = ask_list("Palavras-chave", [])
-        else:
-            data["palavras_chave"] = []
+            data["tema"] = ask("Tema da atividade", "")
+            data["pergunta_pesquisa"] = ask("Pergunta orientadora da atividade", "")
+            data["orientacao_professor"] = ask("Enunciado/orientação do professor", "")
+            data["recorte"] = ""
+            data["objetivo"] = ""
+            data["hipotese"] = ""
+
+        data["palavras_chave"] = []
+        data["gerar_palavras_chave_ia"] = True
+        print("Palavras-chave: serão inferidas automaticamente pela IA a partir dos dados da atividade, das orientações e do corpus.")
         data["idiomas"] = ask_list("Idiomas", ["português"])
         data["tipo_estudo"] = ask("Tipo de entrega", "atividade acadêmica")
-        data["atividade_geracao_em_etapas"] = ask_bool(
-            "Gerar document.json em etapas por texto do corpus (artigo 1/N, comparação e síntese)?",
-            True,
-        )
-        if data["atividade_geracao_em_etapas"]:
-            data["resumo_nivel_detalhamento"] = ask_choice(
-                "Profundidade analítica da geração em etapas",
-                ["medio", "médio", "alto", "profundo", "exaustivo"],
-                "alto",
-            )
-            prof = str(data["resumo_nivel_detalhamento"]).strip().lower()
-            if prof == "exaustivo":
-                defaults = {"palavras": "1500", "paragrafos": "11", "comparacao": "1300", "sintese": "1100", "chars_doc": "18000", "chars_total": "120000"}
-            elif prof in {"profundo", "alto"}:
-                defaults = {"palavras": "1200", "paragrafos": "9", "comparacao": "1100", "sintese": "900", "chars_doc": "14000", "chars_total": "95000"}
-            else:
-                defaults = {"palavras": "850", "paragrafos": "6", "comparacao": "800", "sintese": "700", "chars_doc": "10000", "chars_total": "70000"}
-            data["resumo_min_palavras_por_artigo"] = defaults["palavras"]
-            data["resumo_min_paragrafos_por_artigo"] = defaults["paragrafos"]
-            data["resumo_min_palavras_comparacao"] = defaults["comparacao"]
-            data["resumo_min_palavras_sintese"] = defaults["sintese"]
-            data["resumo_max_chars_por_documento"] = defaults["chars_doc"]
-            data["resumo_max_chars_total_corpus"] = defaults["chars_total"]
-            data["resumo_comparar_textos"] = True
-            data["resumo_sintese_analitica"] = True
-            data["resumo_apontar_limites"] = True
-            data["resumo_matriz_analitica"] = True
-            data["resumo_tabela_comparativa"] = True
-            data["resumo_dialogo_entre_textos"] = True
         return
 
     print("\nTema, recorte e objetivo da pesquisa")
@@ -744,22 +1043,26 @@ def collect_sources(data: dict[str, Any]) -> None:
 
     print("\nEntradas do corpus e orientações")
     if preset.local_corpus:
-        raw_mode = ask("Entrada do corpus: digite zip, dir ou cole diretamente o caminho", "zip").strip()
-        # UX rc10.7.13: se o usuário colar um caminho .zip aqui, interpretar automaticamente como ZIP.
-        candidate = Path(raw_mode).expanduser() if raw_mode else Path("")
-        if raw_mode.lower() in {"zip", "dir"}:
-            input_mode = raw_mode.lower()
-            initial_path = ""
-        elif raw_mode.lower().endswith(".zip"):
-            input_mode = "zip"
-            initial_path = raw_mode
-        elif raw_mode and candidate.exists() and candidate.is_dir():
-            input_mode = "dir"
-            initial_path = raw_mode
+        # A TUI usa uma lista visual; o modo textual preserva `zip`/`dir`
+        # para compatibilidade com scripts e preenchimentos automatizados.
+        if tui_theme_enabled():
+            mode_label = ask_choice(
+                "Formato do corpus local",
+                ["arquivo ZIP (documentos-base.zip)", "pasta com documentos"],
+                "arquivo ZIP (documentos-base.zip)",
+            )
+            input_mode = "zip" if mode_label.startswith("arquivo ZIP") else "dir"
         else:
-            print("Entrada não reconhecida como caminho; assumindo modo ZIP.")
-            input_mode = "zip"
-            initial_path = ""
+            while True:
+                raw_mode = ask("Formato do corpus local (zip/dir)", "zip").strip().lower()
+                if raw_mode in {"zip", "arquivo", "arquivo zip", "arquivo_zip"}:
+                    input_mode = "zip"
+                    break
+                if raw_mode in {"dir", "pasta", "diretório", "diretorio"}:
+                    input_mode = "dir"
+                    break
+                print("Escolha zip ou dir.")
+        initial_path = ""
 
         if input_mode == "zip":
             default_zip = project_dir / "documentos-base.zip"
@@ -778,13 +1081,36 @@ def collect_sources(data: dict[str, Any]) -> None:
 
     # Orientações como ZIP/path são lidas por collect_orientation_docs.
     default_orient = project_dir / "orientacoes.zip"
-    orient = ask("Caminho de orientacoes.zip/pasta/arquivo (vazio se não houver)", "")
     orient_paths: list[str] = []
-    if orient.strip():
-        if ask_bool("Copiar orientações para a pasta do projeto como orientacoes.zip, se for arquivo existente?", False):
-            orient = maybe_copy_to_project(orient, default_orient)
-        orient_paths.append(rel_for_toml(orient, config_dir))
-    data["orientacoes_paths"] = orient_paths
+    orient_paths.extend(data.get("tema_recorte_objetivo_paths", []))
+    orient_paths.extend(data.get("orientacao_complementar_paths", []))
+    orient_paths.extend(data.get("atividade_dados_paths", []))
+    data["orientacao_geral_inline"] = ""
+
+    if preset.document_type == "atividade":
+        modo_orientacao_geral = ask_choice(
+            "Como deseja fornecer orientações gerais da aula/roteiro/rubrica",
+            ["nenhuma", "arquivo", "manual"],
+            "nenhuma",
+        )
+        data["orientacao_geral_modo"] = modo_orientacao_geral
+        if modo_orientacao_geral == "arquivo":
+            orient = ask_required("Arquivo/pasta/ZIP com orientações gerais da aula/roteiro/rubrica", "")
+            if ask_bool("Copiar orientações gerais para a pasta do projeto como orientacoes.zip, se for arquivo existente?", False):
+                orient = maybe_copy_to_project(orient, default_orient)
+            orient_paths.append(rel_for_toml(orient, config_dir))
+        elif modo_orientacao_geral == "manual":
+            data["orientacao_geral_inline"] = ask("Digite as orientações gerais da aula/roteiro/rubrica", "")
+    else:
+        orient = ask("Arquivo/pasta/ZIP com orientações gerais da aula/roteiro/rubrica, se houver (vazio se não houver)", "")
+        if orient.strip():
+            if ask_bool("Copiar orientações gerais para a pasta do projeto como orientacoes.zip, se for arquivo existente?", False):
+                orient = maybe_copy_to_project(orient, default_orient)
+            orient_paths.append(rel_for_toml(orient, config_dir))
+
+    # Remove duplicatas preservando ordem.
+    seen_orient: set[str] = set()
+    data["orientacoes_paths"] = [p for p in orient_paths if p and not (p in seen_orient or seen_orient.add(p))]
 
     # DOI manifest: opcional. A partir da rc10.7.22, nenhum caminho de arquivo é sugerido por padrão.
     default_doi = project_dir / "doi_manifest.csv"
@@ -817,11 +1143,21 @@ def collect_sources(data: dict[str, Any]) -> None:
 
 def collect_outputs_and_options(data: dict[str, Any]) -> None:
     preset: Preset = data["preset"]
+    project_dir: Path = data["project_dir"]
+    config_dir: Path = data["config_dir"]
     print("\nSaídas e opções")
-    print("\nDiretório de saída do documento final")
-    print("Se deixar vazio, será usado o padrão interno do bundle: ../../output/documento")
-    data["document_output_dir"] = ask("Diretório de saída do documento (vazio para padrão do bundle)", "")
-    data["create_document_subdir"] = ask_bool("Criar subdiretório com o nome do projeto dentro da saída?", True)
+    default_document_output = project_dir / "output"
+    raw_document_output = ask(
+        "Diretório de saída dos documentos (PDF, ORG, DOCX e relatórios)",
+        str(default_document_output),
+    )
+    document_output = Path(raw_document_output).expanduser() if raw_document_output.strip() else default_document_output
+    document_output = document_output.resolve()
+    data["document_output_dir"] = rel_for_toml(document_output, config_dir)
+    data["research_output_dir"] = rel_for_toml(project_dir / "output_pesquisa", config_dir)
+    data["work_dir"] = rel_for_toml(project_dir / ".academic_pipeline" / "work", config_dir)
+    data["cache_dir"] = rel_for_toml(project_dir / ".academic_pipeline" / "cache", config_dir)
+    data["create_document_subdir"] = True
     data["exportar_org"] = ask_bool("Gerar ORG?", True)
     data["exportar_pdf"] = ask_bool("Gerar PDF?", True)
     data["exportar_docx"] = ask_bool("Gerar DOCX?", True)
@@ -837,11 +1173,11 @@ def collect_outputs_and_options(data: dict[str, Any]) -> None:
     if style == "abnt":
         data["latex_style"] = "abnt"
         data["latex_options"] = "backend=biber,style=abnt,sorting=nty,giveninits=true"
-        data["docx_csl"] = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+        data["docx_csl"] = bundle_rel(data, "templates/csl/associacao-brasileira-de-normas-tecnicas.csl")
     elif style == "apa":
         data["latex_style"] = "apa"
         data["latex_options"] = "backend=biber,style=apa,sorting=nyt"
-        data["docx_csl"] = "../../templates/csl/apa.csl"
+        data["docx_csl"] = bundle_rel(data, "templates/csl/apa.csl")
     else:
         data["latex_style"] = style
         data["latex_options"] = f"backend=biber,style={style}"
@@ -900,6 +1236,11 @@ def document_type_name(tipo: str) -> str:
 
 
 def prompt_paths_for_type(data: dict[str, Any]) -> dict[str, list[str]]:
+    """Resolve os prompts do bundle relativamente ao TOML ativo.
+
+    Isso permite salvar o TOML na pasta externa da disciplina sem quebrar os
+    caminhos internos de prompts, templates e perfis institucionais.
+    """
     preset: Preset = data["preset"]
     tipo = preset.document_type
     extras = data.get("prompt_extra_paths", [])
@@ -908,22 +1249,25 @@ def prompt_paths_for_type(data: dict[str, Any]) -> dict[str, list[str]]:
     dissertacao: list[str] = []
     prisma: list[str] = []
     resumo_artigos: list[str] = []
+    p_atividade = bundle_rel(data, "prompts/document/atividade.txt")
+    p_resumo = bundle_rel(data, "prompts/document/resumo_artigos.txt")
+    p_paper = bundle_rel(data, "prompts/document/paper.txt")
+    p_dissertacao = bundle_rel(data, "prompts/document/dissertacao.txt")
+    p_prisma = bundle_rel(data, "prompts/prisma/relatorio_prisma.txt")
 
     if preset.key == "resumo_artigos_local_fgv":
-        # O tipo canônico continua sendo atividade para preservar a Ficha Técnica.
-        # Por isso o prompt especializado entra em atividade_paths.
-        atividade = ["../../prompts/document/atividade.txt", "../../prompts/document/resumo_artigos.txt", *extras]
-        resumo_artigos = ["../../prompts/document/resumo_artigos.txt", *extras]
+        atividade = [p_atividade, p_resumo, *extras]
+        resumo_artigos = [p_resumo, *extras]
     elif tipo == "paper":
-        paper = ["../../prompts/document/paper.txt", *extras]
+        paper = [p_paper, *extras]
     elif tipo == "atividade":
-        atividade = ["../../prompts/document/atividade.txt", *extras]
+        atividade = [p_atividade, *extras]
     elif tipo == "dissertacao":
-        dissertacao = ["../../prompts/document/dissertacao.txt", *extras]
+        dissertacao = [p_dissertacao, *extras]
     else:
-        prisma = ["../../prompts/prisma/relatorio_prisma.txt", *extras]
-    if preset.prisma_report and "../../prompts/prisma/relatorio_prisma.txt" not in prisma:
-        prisma.append("../../prompts/prisma/relatorio_prisma.txt")
+        prisma = [p_prisma, *extras]
+    if preset.prisma_report and p_prisma not in prisma:
+        prisma.append(p_prisma)
     return {
         "paper_paths": paper,
         "atividade_paths": atividade,
@@ -931,7 +1275,6 @@ def prompt_paths_for_type(data: dict[str, Any]) -> dict[str, list[str]]:
         "dissertacao_paths": dissertacao,
         "prisma_paths": prisma,
     }
-
 
 def build_orientacao_inline(data: dict[str, Any]) -> str:
     preset: Preset = data["preset"]
@@ -953,8 +1296,25 @@ def build_orientacao_inline(data: dict[str, Any]) -> str:
         if professor:
             parts.append("Orientação específica do professor/usuário: " + professor)
         return "\n".join(parts)
-    if preset.document_type == "atividade" and professor:
-        return professor
+    if preset.document_type == "atividade":
+        parts: list[str] = []
+        if bool(data.get("atividade_gerar_dados_ia", False)):
+            parts.append(
+                "Dados da atividade devem ser inferidos pela IA a partir do corpus local, das orientações gerais, "
+                "do prompt específico e dos metadados acadêmicos disponíveis. Inferir tema, recorte, objetivo, "
+                "pergunta orientadora, enunciado operacional e palavras-chave sem inventar conteúdo fora do material fornecido."
+            )
+        if professor:
+            parts.append(professor)
+        geral = str(data.get("orientacao_geral_inline") or "").strip()
+        if geral:
+            parts.append(geral)
+        if bool(data.get("gerar_palavras_chave_ia", False)):
+            parts.append(
+                "Inferir automaticamente palavras-chave acadêmicas a partir do tema, da pergunta orientadora, "
+                "do enunciado, das orientações e do corpus local; não solicitar palavras-chave ao usuário."
+            )
+        return "\n".join(parts)
     return ""
 
 def render_toml(data: dict[str, Any]) -> str:
@@ -966,11 +1326,12 @@ def render_toml(data: dict[str, Any]) -> str:
     rel_prefix = f"relatorio_prisma_{project_slug}" if preset.prisma_report else ""
     prompt_groups = prompt_paths_for_type(data)
 
-    # Como o TOML fica em app_bundle/projetos/<slug>, estes caminhos são relativos ao arquivo.
-    output_documento = str(data.get("document_output_dir") or "../../output/documento").strip() or "../../output/documento"
-    output_pesquisa = "../../output/pesquisa"
-    output_work = "../../output/work"
-    output_cache = "../../output/cache"
+    # Os caminhos podem estar no próprio diretório da disciplina ou em
+    # app_bundle/projetos. Sempre são relativos ao TOML final.
+    output_documento = str(data.get("document_output_dir") or bundle_rel(data, "output/documento"))
+    output_pesquisa = str(data.get("research_output_dir") or bundle_rel(data, "output/pesquisa"))
+    output_work = str(data.get("work_dir") or bundle_rel(data, "output/work"))
+    output_cache = str(data.get("cache_dir") or bundle_rel(data, "output/cache"))
 
     if preset.render_only:
         # Render-only ainda precisa de seções suficientes para PDF/DOCX/conformidade.
@@ -1065,6 +1426,7 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append(f"pergunta_pesquisa = {tstr(data.get('pergunta_pesquisa', ''))}")
     lines.append(f"hipotese = {tstr(data.get('hipotese', ''))}")
     lines.append(f"palavras_chave = {tlist(data.get('palavras_chave', []))}")
+    lines.append(f"gerar_palavras_chave_ia = {tbool(bool(data.get('gerar_palavras_chave_ia', False)))}")
     lines.append(f"idiomas = {tlist(data.get('idiomas', ['português']))}")
     lines.append(f"tipo_estudo = {tstr(data.get('tipo_estudo', document_type_name(logical_tipo)))}")
     lines.append("periodo = \"\"")
@@ -1072,7 +1434,7 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append("")
 
     lines.append("[resumo_artigos]")
-    resumo_ativo = preset.key == "resumo_artigos_local_fgv" or bool(data.get("atividade_geracao_em_etapas", False))
+    resumo_ativo = preset.key == "resumo_artigos_local_fgv"
     lines.append(f"ativo = {tbool(resumo_ativo)}")
     lines.append(f"geracao_em_etapas = {tbool(resumo_ativo)}")
     lines.append("# Quando true, o pipeline gera o document.json em chamadas separadas:")
@@ -1116,6 +1478,8 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append(f"aluno = {tstr(data.get('autor', ''))}")
     lines.append(f"data = {tstr(data.get('data', ''))}")
     lines.append(f"titulo_trabalho = {tstr(data.get('titulo', ''))}")
+    lines.append(f"gerar_dados_atividade_ia = {tbool(bool(data.get('atividade_gerar_dados_ia', False)))}")
+    lines.append(f"fonte_dados_atividade = {tstr(data.get('atividade_dados_modo', ''))}")
     lines.append("")
 
     lines.append("[documento]")
@@ -1201,7 +1565,7 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append("[docx]")
     lines.append(f"ativo = {tbool(data.get('exportar_docx', True))}")
     # Preferência por referência institucional quando existir.
-    lines.append(f"reference_docx = {tstr('../../institutions/' + data['institution'] + '/docx/reference_fgv.docx')}")
+    lines.append(f"reference_docx = {tstr(bundle_rel(data, 'institutions/' + data['institution'] + '/docx/reference_fgv.docx'))}")
     lines.append(f"usar_pandoc = {tbool(data.get('usar_pandoc_docx', False))}")
     lines.append(f"csl_path = {tstr(data.get('docx_csl', ''))}")
     lines.append("falhar_se_pandoc_falhar = false")
@@ -1212,19 +1576,16 @@ def render_toml(data: dict[str, Any]) -> str:
 
     lines.append("[latex]")
     lines.append(f"pdf_engine = {tstr(data.get('pdf_engine', 'lualatex'))}")
-    lines.append("org_latex_class_init = \"../../misc/academic-writing.el\"")
-    lines.append(f"latex_extra_path = {tstr('../../institutions/' + data['institution'] + '/latex')}")
-    lines.append(f"fgv_logo_path = {tstr('../../institutions/' + data['institution'] + '/assets/fgv.png')}")
+    lines.append(f"org_latex_class_init = {tstr(bundle_rel(data, 'misc/academic-writing.el'))}")
+    lines.append(f"latex_extra_path = {tstr(bundle_rel(data, 'misc/fgv'))}")
+    lines.append(f"fgv_logo_path = {tstr(bundle_rel(data, 'misc/fgv.png'))}")
     lines.append("")
 
     lines.append("[prompts]")
     lines.append("ativos = true")
-    lines.append("global_paths = [\"../../prompts/global/orientacao_geral_execucao.txt\"]")
+    lines.append(f"global_paths = {tlist([bundle_rel(data, 'prompts/global/orientacao_geral_execucao.txt')])}")
     lines.append("institution_paths = [\"profile://prompts/fgv_geral.txt\"]")
-    lines.append("research_paths = [")
-    lines.append("  \"../../prompts/research/triagem_prompt.txt\",")
-    lines.append("  \"../../prompts/research/diretivas_extras.txt\"")
-    lines.append("]")
+    lines.append(f"research_paths = {tlist([bundle_rel(data, 'prompts/research/triagem_prompt.txt'), bundle_rel(data, 'prompts/research/diretivas_extras.txt')])}")
     for key in ("paper_paths", "atividade_paths", "resumo_artigos_paths", "dissertacao_paths", "prisma_paths"):
         lines.append(f"{key} = {tlist(prompt_groups[key])}")
     lines.append("document_paths = []")
@@ -1269,7 +1630,16 @@ def render_toml(data: dict[str, Any]) -> str:
 # -----------------------------------------------------------------------------
 
 
-def generate_interactive(non_interactive_profile: str | None = None, project_name: str | None = None) -> Path:
+def generate_interactive(non_interactive_profile: str | None = None, project_name: str | None = None, no_clear: bool = False, project_dir: str | Path | None = None) -> Path:
+    """Executa o gerador em modo assistente por etapas.
+
+    A navegação é por etapa, não por pergunta individual, para preservar a
+    compatibilidade com os coletores existentes. Ao final de cada etapa, o
+    usuário pode avançar, voltar, refazer, ver resumo ou cancelar. Antes de
+    gravar o TOML, há uma revisão final com opção de editar qualquer etapa.
+    """
+    set_wizard_no_clear(no_clear or WIZARD_NO_CLEAR)
+    set_wizard_project_dir(project_dir)
     install_path_completion()
     if non_interactive_profile:
         preset_map = {p.key: p for p in PRESETS}
@@ -1277,16 +1647,70 @@ def generate_interactive(non_interactive_profile: str | None = None, project_nam
             raise RuntimeError(f"Preset não encontrado: {non_interactive_profile}. Opções: {', '.join(preset_map)}")
         preset = preset_map[non_interactive_profile]
     else:
+        wizard_header("Seleção do perfil", None, None, None)
         preset = choose_preset()
 
-    data = collect_common(preset)
-    if project_name:
-        # Permite chamada sem perguntar nome; mantém config_path já calculado se não usou interactivo.
-        pass
-    collect_metadata(data)
-    collect_research(data)
-    collect_sources(data)
-    collect_outputs_and_options(data)
+    data: dict[str, Any] = {}
+
+    def stage_common() -> None:
+        nonlocal data
+        new_data = collect_common(preset)
+        data.clear()
+        data.update(new_data)
+
+    research_stage_title = "Dados da atividade" if preset.key == "atividade_local_fgv" else "Tema, recorte e objetivo"
+    stages: list[tuple[str, Any]] = [
+        ("Projeto e perfil", stage_common),
+        ("Metadados acadêmicos", lambda: collect_metadata(data)),
+        (research_stage_title, lambda: collect_research(data)),
+        ("Corpus local, orientações e prompts", lambda: collect_sources(data)),
+        ("Saídas, bibliografia e mapa mental", lambda: collect_outputs_and_options(data)),
+    ]
+
+    idx = 0
+    while idx < len(stages):
+        title, fn = stages[idx]
+        wizard_header(title, idx + 1, len(stages), preset)
+        if idx > 0 and not data:
+            idx = 0
+            continue
+        fn()
+        while True:
+            action = ask_stage_action(allow_back=idx > 0)
+            if action == "resumo":
+                show_summary(data)
+                continue
+            if action == "cancelar":
+                raise SystemExit("Geração de TOML cancelada pelo usuário.")
+            if action == "refazer":
+                break
+            if action == "voltar":
+                idx = max(0, idx - 1)
+                break
+            idx += 1
+            break
+
+    # Revisão final: permite editar qualquer etapa antes de salvar.
+    while True:
+        wizard_header("Revisão final", None, None, preset)
+        if tui_theme_enabled():
+            show_summary(data)
+        else:
+            print(wizard_summary(data))
+            print("\nNada foi salvo ainda. Revise os caminhos e metadados antes de confirmar.\n")
+        action = ask_final_action()
+        if action == "salvar":
+            break
+        if action == "cancelar":
+            raise SystemExit("Geração de TOML cancelada pelo usuário.")
+        if action == "editar":
+            if not tui_theme_enabled():
+                for i, (title, _) in enumerate(stages, start=1):
+                    print(f"{i}. {title}")
+            edit_idx = ask_stage_number(len(stages))
+            title, fn = stages[edit_idx]
+            wizard_header(title, edit_idx + 1, len(stages), preset)
+            fn()
 
     toml = render_toml(data)
     config_path: Path = data["config_path"]
@@ -1296,19 +1720,29 @@ def generate_interactive(non_interactive_profile: str | None = None, project_nam
             config_path = data["project_dir"] / alt
     write_text(config_path, toml)
 
-    print("\nTOML gerado com sucesso:")
-    print(f"- {config_path}")
-    print("\nPróximos comandos sugeridos:")
-    print(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_path.relative_to(ROOT)} --show-prompts")
-    print(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_path.relative_to(ROOT)} --check-config")
+    try:
+        config_for_cli = str(config_path.relative_to(ROOT))
+    except ValueError:
+        config_for_cli = str(config_path)
+    command_lines = [
+        "TOML gerado com sucesso:",
+        f"- {config_path}",
+        "",
+        "Próximos comandos sugeridos:",
+        f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --show-prompts",
+        f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --check-config",
+    ]
     if preset.render_only:
         doc_json = data.get("document_json") or "CAMINHO/document.document.json"
-        print(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_path.relative_to(ROOT)} --somente-renderizar --document-json {doc_json}")
+        command_lines.append(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_path.relative_to(ROOT)} --somente-renderizar --document-json {doc_json}")
     else:
-        print(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_path.relative_to(ROOT)}")
-        print("# A saída principal ficou em [paths].document_output_dir. Você ainda pode sobrescrever por CLI com --output-dir /caminho/de/saida")
+        command_lines.append(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_path.relative_to(ROOT)}")
+        command_lines.append("# A saída principal ficou em [paths].document_output_dir. Você ainda pode sobrescrever por CLI com --output-dir /caminho/de/saida")
+    if tui_theme_enabled():
+        _fgv_ui().message("Academic Pipeline — TOML salvo", "\n".join(command_lines))
+    else:
+        print("\n".join(command_lines))
     return config_path
-
 
 def print_profiles() -> None:
     for p in PRESETS:
@@ -1318,15 +1752,24 @@ def print_profiles() -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Gerador interativo completo de TOML para academic_pipeline rc10.7.34")
+    parser = argparse.ArgumentParser(description="Gerador interativo completo de TOML para academic_pipeline rc10.7.42")
     parser.add_argument("--list-profiles", action="store_true", help="Lista presets disponíveis e encerra")
     parser.add_argument("--profile", default="", help="Inicia diretamente em um preset, ex.: atividade_local_fgv")
     parser.add_argument("--project-name", default="", help="Reservado para automações futuras")
+    parser.add_argument("--project-dir", default="", help="Diretório que receberá o TOML do projeto; se omitido, o wizard pergunta")
+    parser.add_argument("--no-clear", action="store_true", help="Não limpa a tela entre as etapas do wizard")
+    parser.add_argument("--tui-theme", choices=["", "fgv"], default="", help="Usa diálogos visuais prompt_toolkit com paleta FGV")
     args = parser.parse_args(argv)
+    set_tui_theme(args.tui_theme)
     if args.list_profiles:
         print_profiles()
         return 0
-    generate_interactive(non_interactive_profile=args.profile or None, project_name=args.project_name or None)
+    generate_interactive(
+        non_interactive_profile=args.profile or None,
+        project_name=args.project_name or None,
+        no_clear=bool(args.no_clear),
+        project_dir=args.project_dir or None,
+    )
     return 0
 
 

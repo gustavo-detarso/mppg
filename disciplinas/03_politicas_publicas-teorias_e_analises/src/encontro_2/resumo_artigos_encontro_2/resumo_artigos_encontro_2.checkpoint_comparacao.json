@@ -1,0 +1,390 @@
+{
+  "id": "comparacao-entre-os-textos",
+  "level": 1,
+  "title": "Comparação entre os textos",
+  "blocks": [
+    {
+      "type": "table",
+      "text": "",
+      "content": [],
+      "level": 1,
+      "items": [],
+      "table": {
+        "headers": [
+          "Texto",
+          "Objeto/problema",
+          "Escala e método",
+          "Conceito central",
+          "Contribuição",
+          "Limite/tensão"
+        ],
+        "rows": [
+          [
+            "Perspectivas analíticas da implementação",
+            "Modelos de análise da implementação de políticas públicas",
+            "Escala teórica; revisão analítica com apoio empírico ilustrativo",
+            "Integração entre variáveis organizacionais, contextuais e dimensões ideacionais",
+            "Reformula o estudo da implementação para além do desenho formal e das condições materiais",
+            "Modelo proposto permanece mais programático do que plenamente operacionalizado"
+          ],
+          [
+            "Evolução do plano de prevenção e controle do desmatamento",
+            "Trajetória de implementação de um plano ambiental federal",
+            "Escala meso e macro; análise documental longitudinal de fases, avaliações e resultados",
+            "Coordenação estatal, monitoramento, comando e controle, ordenamento territorial",
+            "Mostra como capacidades estatais e coordenação intersetorial produziram redução substantiva do desmatamento",
+            "Explora menos as mediações locais, cognitivas e territoriais da implementação concreta"
+          ]
+        ],
+        "caption": "Quadro comparativo sintético dos textos do corpus"
+      },
+      "id": "tbl-comparacao-corpus",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os dois textos convergem no ponto mais importante do corpus: ambos recusam a visão da implementação como etapa mecânica, linear e inteiramente subordinada à formulação. Ainda que o façam em registros distintos, os trabalhos sustentam que a execução de políticas públicas depende de mediações organizacionais, institucionais e contextuais que alteram, redefinem ou ao menos modulam o que a política se torna na prática. No texto de perspectiva teórica, essa crítica aparece por meio da reconstrução dos modelos analíticos da literatura e da proposição de uma abordagem integradora; no estudo sobre o plano voltado ao desmatamento, ela emerge empiricamente pela demonstração de que os resultados da política dependeram de arranjos de coordenação, adaptação entre fases, aprendizado institucional e combinação de instrumentos. Assim, há uma convergência real quanto à rejeição de qualquer leitura simplificada da implementação, embora os caminhos argumentativos sejam bastante diferentes ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p1",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A divergência mais evidente diz respeito ao objeto de análise. Um dos artigos toma a própria literatura de implementação como problema e se dedica a examinar seus modelos explicativos, suas variáveis privilegiadas e suas insuficiências. Seu objeto não é uma política específica, mas a arquitetura conceitual pela qual o campo procura explicar o sucesso, o fracasso e a variação dos processos implementadores. Já o outro texto investiga uma política pública determinada, com recorte substantivo muito claro: a evolução de um plano federal de enfrentamento do desmatamento na Amazônia Legal ao longo de diferentes fases. Em outras palavras, um trabalho se move no plano metateórico da disciplina; o outro, no plano empírico de uma trajetória concreta de ação estatal. Essa diferença de objeto impede comparações apressadas e exige reconhecer que os textos não competem entre si, mas operam em níveis analíticos distintos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p2",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Essa diferença de objeto se articula a uma diferença igualmente decisiva de escala analítica. O texto de reconstrução teórica trabalha em escala elevada de abstração. Seu interesse está em identificar famílias de explicação, isolar variáveis centrais e demonstrar que tanto abordagens mais centradas na hierarquia e no desenho quanto abordagens voltadas ao contexto local e à burocracia implementadora compartilham um viés material e organizacional. A partir daí, propõe incorporar ideias, valores e concepções de mundo como dimensão constitutiva da implementação. Já o estudo sobre o plano ambiental opera em escala meso e macro, acompanhando uma política nacional complexa, intersetorial e territorialmente extensa, com atenção às suas fases, aos seus instrumentos e aos seus resultados agregados. O primeiro texto pergunta como pensar a implementação; o segundo pergunta como uma política específica evoluiu e produziu efeitos. Compará-los produtivamente significa manter essa assimetria visível, e não dissolvê-la ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p3",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Também o método diferencia fortemente os textos. No artigo teórico, o procedimento é de revisão analítica e sistematização crítica da literatura, complementado por referências a pesquisas empíricas anteriores que funcionam como sustentação ilustrativa para a proposta de integração conceitual. O ganho desse método está na capacidade de reorganizar o debate do campo e explicitar seus pressupostos. Seu limite é que a proposta alternativa aparece mais como agenda de pesquisa do que como modelo plenamente testado. No estudo sobre o plano de prevenção e controle do desmatamento, o método é documental e longitudinal: os autores comparam publicações científicas sobre o problema, documentos das diferentes fases do plano e avaliações realizadas ao longo de sua implementação. O ganho aqui está na reconstrução histórica e institucional da política, capaz de mostrar mudança, continuidade e aprendizado. O limite correspondente é menor acesso às interações microscópicas da implementação e às interpretações dos agentes de linha de frente ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p4",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "No plano conceitual, a comparação revela uma diferença de arquitetura analítica. O artigo sobre perspectivas da implementação organiza o debate em torno de dois grandes modelos: um mais próximo da valorização da hierarquia organizacional, do desenho e da formulação; outro mais atento aos espaços locais de implementação e à atuação das burocracias executoras. Sua intervenção consiste em afirmar que ambos são insuficientes se não incorporarem a dimensão ideacional, isto é, as formas pelas quais os atores interpretam problemas, objetivos e meios de ação. O estudo sobre o plano amazônico, por sua vez, estrutura-se por categorias ligadas à formação de agenda, à coordenação interministerial, ao monitoramento, ao ordenamento territorial, ao comando e controle e à evolução das fases de implementação. Nesse caso, o vocabulário conceitual está mais voltado à dinâmica de uma política pública ambiental concreta e à identificação dos instrumentos mais eficazes. Portanto, um texto produz conceitos para analisar políticas; o outro mobiliza categorias de políticas públicas para interpretar um caso de implementação ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p5",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os pressupostos teóricos de cada texto também não são idênticos. O artigo de sistematização se aproxima de uma sociologia da ação pública e de uma visão interpretativa da implementação, ao insistir que a ação administrativa não pode ser compreendida apenas por variáveis estruturais, recursos ou desenho institucional. Ele pressupõe que a política é mediada por sentidos, classificações e valores, e que os agentes implementadores não apenas executam, mas interpretam e, nesse movimento, transformam a própria política. O estudo sobre o plano de controle do desmatamento, embora reconheça a complexidade causal do problema e a necessidade de coordenação, opera com pressupostos mais próximos da análise de políticas públicas orientada para capacidades estatais, arranjos institucionais e eficácia de instrumentos. Seu foco recai menos sobre produção de sentido pelos agentes e mais sobre a evolução institucional do plano e sobre a efetividade diferenciada de seus eixos. A tensão entre essas duas posições é fecunda: uma sublinha mediações cognitivas; a outra, capacidades estatais e desenho operacional ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p6",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Há, contudo, uma complementaridade real entre os trabalhos quando se observa o que cada um permite enxergar no outro. O artigo teórico fornece uma lente crítica para reler o estudo do plano amazônico, especialmente ao sugerir que resultados de implementação não dependem apenas de coordenação, monitoramento e coerência institucional, mas também de como os atores interpretam os objetivos da política, os destinatários da intervenção e as formas legítimas de ação estatal. Sob essa chave, o caso do plano poderia ser aprofundado por meio de investigações sobre burocracias implementadoras, conflitos interpretativos entre órgãos, diferenças territoriais de aplicação e formas locais de recepção das medidas. Em sentido inverso, o estudo empírico oferece ao artigo teórico um terreno substantivo onde se pode observar por que variáveis materiais e institucionais continuam centrais: em políticas de grande escala territorial e elevada complexidade federativa, capacidades de monitoramento, fiscalização e coordenação não são meros detalhes administrativos, mas condições decisivas de efetividade ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p7",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A contribuição de cada texto para a disciplina, portanto, se distribui em planos diferentes. O artigo sobre perspectivas analíticas contribui sobretudo para o refinamento conceitual do campo da implementação. Sua principal força é desnaturalizar a oposição entre modelos e demonstrar que a análise da implementação ganha poder explicativo quando articula estrutura organizacional, contexto local e dimensão ideacional. Isso o torna particularmente relevante para pesquisas interessadas em compreender por que políticas formalmente semelhantes produzem trajetórias distintas. Já o estudo do plano de prevenção e controle do desmatamento contribui por mostrar, em uma política ambiental de alta complexidade, como arranjos intersetoriais e instrumentos combinados podem produzir resultados concretos de grande magnitude. Para a disciplina, ele oferece um caso importante de capacidade estatal coordenada, sem ocultar que o êxito foi parcial e mais robusto no controle do que na promoção de alternativas sustentáveis ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p8",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "As divergências mais substantivas aparecem quando se observa o que cada texto tende a deixar em segundo plano. No trabalho teórico, a incorporação de ideias, valores e concepções de mundo amplia o horizonte analítico, mas a proposta permanece relativamente aberta quanto aos mecanismos precisos que conectam essa dimensão a recursos, incentivos, normas e estruturas organizacionais. O texto convence sobre a insuficiência das abordagens tradicionais, mas menos sobre como operacionalizar comparativamente sua alternativa. No estudo do plano amazônico, ocorre o movimento inverso: há maior concretude institucional e maior capacidade de demonstrar evolução e resultados, mas menor elaboração sobre os processos interpretativos e sobre as disputas simbólicas que atravessam a implementação em territórios heterogêneos. Em suma, um texto é forte onde o outro é relativamente mais silencioso, e essa assimetria constitui um dos principais achados da comparação ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p9",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Do ponto de vista dos limites comparativos, é importante não forçar uma unidade temática artificial. Os textos pertencem ao mesmo universo disciplinar, mas não foram escritos para responder à mesma pergunta. Um busca reorganizar teoricamente o debate sobre implementação; o outro reconstrói a trajetória de uma política ambiental específica. A comparação, portanto, só é legítima nos eixos transversais realmente sustentados pelo corpus: concepção de implementação, peso de instituições e contextos, tipo de evidência mobilizada, nível de abstração, contribuição analítica e limites. Seria indevido exigir do estudo do plano o mesmo grau de elaboração conceitual sobre ideias e valores que se encontra no artigo teórico, assim como seria inadequado cobrar do texto de revisão a demonstração empírica detalhada de uma política concreta. O ganho comparativo não está em uniformizá-los, mas em mostrar como se situam em pontos diferentes do continuum entre teoria e análise aplicada ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p10",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sem forçar convergência excessiva, a articulação mais produtiva entre os dois textos consiste em tratá-los como mutuamente esclarecedores. O artigo teórico indica que estudos de implementação ganham densidade quando incorporam as interpretações dos atores; o estudo do plano mostra que a análise de políticas complexas exige atenção rigorosa a capacidades estatais, instrumentos e evolução institucional. Juntos, os textos sugerem que uma análise robusta da implementação precisa combinar, de um lado, sensibilidade às estruturas de coordenação, ao desenho operacional e aos recursos de ação estatal e, de outro, atenção às mediações locais, à discricionariedade e aos sentidos atribuídos pelos agentes à política em execução. Essa articulação não elimina as diferenças entre os trabalhos; ao contrário, preserva-as como fonte de enriquecimento analítico. O corpus, assim, não oferece uma tese única e homogênea, mas um diálogo disciplinar consistente sobre como compreender políticas públicas para além da oposição simplista entre formulação e execução ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "ascenzi2013_implementacao_politicas",
+            "mello2017_evolucao_plano"
+          ],
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "level": 1,
+      "items": [],
+      "table": null,
+      "id": "p11",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}

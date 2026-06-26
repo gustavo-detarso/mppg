@@ -1,0 +1,78 @@
+Produza um resumo analítico-comparativo com base exclusivamente nos documentos fornecidos no corpus local.
+
+O documento deve obrigatoriamente resumir individualmente cada texto, artigo ou capítulo fornecido. Não agrupe textos diferentes em um único resumo. Se um mesmo PDF contiver mais de um capítulo claramente identificável, trate cada capítulo como uma unidade própria de análise. Se a separação não for segura, trate o arquivo como uma única unidade textual, sem mencionar limitações técnicas do pipeline.
+
+Não utilize fontes externas. Não invente autores, títulos, conceitos, dados ou referências. Use apenas os textos fornecidos e a bibliografia disponível.
+
+Não gere manualmente a seção REFERÊNCIAS. A bibliografia final será inserida automaticamente pelo pipeline a partir do arquivo .bib.
+
+Não use citações numéricas como [1], [2], [3] ou similares. Sempre que mobilizar uma ideia específica de um texto, use citação autor-data compatível com o estilo bibliográfico configurado.
+
+Estruture o documento da seguinte forma:
+
+1. Introdução
+
+Apresente brevemente o tema geral, explique o conjunto de textos analisados e indique o objetivo do resumo analítico. A introdução deve preparar o leitor para a análise, sem antecipar conclusões de forma excessiva.
+
+2. Resumo individual dos textos/capítulos
+
+Para cada texto ou capítulo, crie uma subseção própria com o título da obra, capítulo ou artigo.
+
+Em cada resumo individual, desenvolva:
+
+- identificação do texto/capítulo;
+- objetivo central do autor;
+- problema ou questão principal discutida;
+- conceitos fundamentais;
+- argumento principal;
+- estrutura da argumentação;
+- método, evidências ou estratégia analítica, quando houver;
+- contribuição do texto para o tema da aula ou para o campo analisado;
+- relação com políticas públicas, administração pública ou teoria analisada;
+- limites, tensões ou pontos críticos do texto, quando houver;
+- diálogo possível com os demais textos do corpus.
+
+Cada resumo deve ser analítico, não apenas descritivo. Explique o que o autor está defendendo, como o argumento é construído e por que isso importa para a compreensão do tema.
+
+Cada texto/capítulo deve receber desenvolvimento substantivo, preferencialmente entre 8 e 12 parágrafos, salvo quando o texto-fonte for muito curto.
+
+3. Comparação entre os textos
+
+Depois dos resumos individuais, elabore uma seção comparativa.
+
+Nessa seção, identifique:
+
+- convergências entre os textos;
+- divergências teóricas ou metodológicas;
+- conceitos que aparecem em mais de um texto;
+- diferenças de foco entre textos teóricos e empíricos;
+- diferenças de escala, objeto, método e evidência;
+- como um texto ajuda a compreender, tensionar ou complementar o outro;
+- eventuais tensões entre os modelos explicativos apresentados.
+
+Se os textos tiverem temas diversos, não force unidade temática artificial. Compare apenas convergências, divergências e tensões efetivamente sustentadas pelo corpus.
+
+Se houver tabela comparativa, ela deve ser sintética. Use no máximo 5 ou 6 colunas, cabeçalhos curtos e células objetivas. O aprofundamento deve ficar na prosa analítica, não dentro da tabela.
+
+4. Síntese analítica
+
+Construa uma síntese argumentativa do conjunto dos textos.
+
+A síntese deve ir além da repetição dos resumos. Ela deve mostrar qual compreensão geral emerge do corpus. Explique como os textos, lidos em conjunto, ajudam a compreender o tema da atividade ou o problema analítico comum.
+
+Quando houver modelos teóricos diferentes, explique para que tipo de problema cada modelo parece mais adequado.
+
+5. Considerações finais
+
+Retome o argumento central do documento, indique as principais aprendizagens extraídas dos textos e apresente uma conclusão acadêmica clara.
+
+Regras obrigatórias:
+
+- Todos os textos/capítulos fornecidos devem ser mencionados e resumidos.
+- Nenhum texto do corpus pode ser ignorado.
+- Não transforme o documento em dissertação.
+- Não faça revisão bibliográfica externa.
+- Não use linguagem genérica.
+- Não escreva como lista de tópicos, salvo quando necessário para clareza.
+- Use linguagem acadêmica, clara, argumentativa e adequada ao mestrado.
+- Preserve coerência entre introdução, resumos, comparação, síntese e conclusão.

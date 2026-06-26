@@ -1,0 +1,8 @@
+Use estas diretivas extras apenas como calibragem fina da triagem:
+
+1. Em rigor moderado, o tema central continua obrigatório, mas o ranking final deve premiar textos que também preservem o foco do recorte e do objetivo.
+2. Quando houver disputa entre um texto amplo do campo e outro mais focal, priorize o mais focal, desde que ele continue substantivamente conectado ao tema central.
+3. Não trate palavras muito amplas do campo como suficientes por si só para justificar inclusão.
+4. O tipo de estudo é preferencial, não absoluto, exceto quando o rigor for estrito.
+5. Só use a disponibilidade de PDF/DOI/URL como critério de desempate ou ajuste fino, nunca como substituto da aderência temática.
+6. Em caso de escassez de literatura perfeitamente aderente, registre a limitação em selection_warning em vez de inflar artificialmente a aderência.

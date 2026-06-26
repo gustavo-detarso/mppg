@@ -1,0 +1,80 @@
+#+TITLE: Resumo analítico dos textos
+#+AUTHOR: Gustavo M. Mendes de Tarso
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LATEX_HEADER: % Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+#+LATEX_HEADER: \usepackage[backend=biber,style=abnt,sorting=nty,giveninits=true]{biblatex}
+#+LATEX_HEADER: \addbibresource{resumo_artigos_encontro_1.bib}
+#+LATEX_HEADER: \geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+#+LATEX_HEADER: \setlength{\headheight}{58pt}
+#+LATEX_HEADER: \setlength{\headsep}{18pt}
+#+LATEX_HEADER: \newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+#+LATEX_HEADER: \fancypagestyle{fgvreportstyle}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{plain}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+#+LATEX_HEADER: \institution{fgv}
+#+LATEX_HEADER: \programname{}
+#+LATEX_HEADER: \coursename{Mestrado Acadêmico em Políticas Públicas e Governo}
+#+LATEX_HEADER: \disciplinename{Políticas Públicas: Teoria e Análise}
+#+LATEX_HEADER: \professorname{Lizandro Lui}
+#+LATEX_HEADER: \cityname{Brasília}
+
+#+begin_export latex
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado Acadêmico em Políticas Públicas e Governo \\
+\textbf{Turma}                   & 2026.1 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Políticas Públicas: Teoria e Análise \\
+\textbf{Professor}               & Lizandro Lui \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 2026 \\
+\textbf{Título do trabalho}      & Resumo analítico dos textos \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+#+LATEX: \clearpage
+
+Ao ler os textos de Ana Capella e Suely Araújo, fiquei com a impressão de que os dois modelos ajudam a questionar uma visão muito simples das políticas públicas: a ideia de que o governo identifica um problema, escolhe racionalmente uma solução e depois apenas executa essa decisão. Os textos mostram que o processo é mais instável, disputado e dependente de atores, ideias, oportunidades e conflitos.
+
+No modelo de múltiplos fluxos de Kingdon, apresentado por Capella, o ponto que mais me chamou atenção foi perceber que um problema não entra na agenda pública apenas porque é grave. Muitas situações graves podem existir durante anos sem se tornarem prioridade governamental. Para que isso aconteça, é preciso que três fluxos se aproximem: o fluxo dos problemas, o fluxo das soluções e o fluxo da política. O primeiro diz respeito à forma como uma situação passa a ser reconhecida como problema público. O segundo envolve propostas e alternativas que, muitas vezes, já circulam entre especialistas, técnicos e grupos interessados. O terceiro depende do ambiente político, das mudanças de governo, da pressão de grupos e do clima favorável ou desfavorável a determinada pauta.
+
+O que entendi é que a mudança ocorre quando esses fluxos se encontram em uma janela de oportunidade. Nesse momento, o empreendedor de políticas tem um papel importante, porque tenta ligar um problema a uma solução em um contexto político favorável. Isso me fez pensar que a agenda pública não é apenas resultado da necessidade social, mas também da capacidade de certos atores de construir interpretações, defender soluções e aproveitar o momento certo.
+
+Já a Teoria das Coalizões de Defesa, associada a Sabatier e discutida por Suely Araújo, parece olhar para um tempo mais longo. Ela ajuda a entender como diferentes grupos disputam uma política pública dentro de um subsistema. Esses grupos, chamados de coalizões, não se organizam apenas por interesses imediatos, mas também por crenças compartilhadas sobre o problema, sobre o papel do Estado e sobre quais soluções seriam mais adequadas. Assim, a disputa em políticas públicas não é só por orçamento ou poder, mas também por ideias, valores e formas de interpretar a realidade.
+
+A partir dos textos apresentados pelas colegas Hellen e Sara, entendo que esses modelos podem ser usados para produzir conhecimento sobre o processo de agenda e elaboração de políticas públicas porque ajudam a formular perguntas mais concretas. Com Kingdon, posso perguntar: por que esse tema entrou na agenda agora? Que problema foi construído? Que solução estava disponível? Quem atuou como empreendedor? Com Sabatier, posso perguntar: quais coalizões estavam em disputa? Que crenças defendiam? Que recursos tinham? Houve aprendizado ou apenas conflito entre posições?
+
+No fim, vejo os dois modelos como complementares. Kingdon ajuda a entender o momento em que uma pauta ganha atenção. Sabatier ajuda a compreender disputas mais duradouras entre grupos que tentam influenciar o rumo de uma política. A principal aprendizagem, para mim, é que políticas públicas não são respostas neutras a problemas objetivos. Elas são resultado de interpretação, disputa, oportunidade e ação estratégica.

@@ -1,0 +1,12 @@
+{
+  "output_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3",
+  "document_json": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3/atividade_3.document.json",
+  "org": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3/atividade_3.org",
+  "bib": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3/atividade_3.bib",
+  "pdf": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3/atividade_3.pdf",
+  "docx": null,
+  "relatorio_pesquisa": null,
+  "prompt_lock": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3/atividade_3.prompt_lock.json",
+  "compliance_report": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3/atividade_3.compliance_report.md",
+  "quality_report": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/atividade_3/atividade_3.quality_report.md"
+}

@@ -1,0 +1,494 @@
+{
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "level": 1,
+      "title": "Introdução",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O corpus examinado é composto por dois textos que se situam no campo das políticas públicas, mas operam em níveis analíticos distintos e, por isso mesmo, oferecem uma combinação intelectualmente produtiva. Um deles reconstrói e problematiza os principais modelos de análise da implementação, propondo ampliar o repertório explicativo do campo; o outro acompanha a evolução de uma política pública específica, voltada ao enfrentamento do desmatamento na Amazônia Legal, com atenção às fases de sua implementação, aos instrumentos mobilizados e aos resultados alcançados.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O corpus examinado é composto por dois textos que se situam no campo das políticas públicas, mas operam em níveis analíticos distintos e, por isso mesmo, oferecem uma combinação intelectualmente produtiva. Um deles reconstrói e problematiza os principais modelos de análise da implementação, propondo ampliar o repertório explicativo do campo; o outro acompanha a evolução de uma política pública específica, voltada ao enfrentamento do desmatamento na Amazônia Legal, com atenção às fases de sua implementação, aos instrumentos mobilizados e aos resultados alcançados. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-intro-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O foco de leitura adotado neste documento recai sobre a implementação como problema analítico, e não apenas como etapa administrativa posterior à formulação. Isso significa observar como cada texto, a seu modo, ajuda a compreender de que depende a efetivação de uma política: se da clareza do desenho institucional, da coordenação entre órgãos, das capacidades estatais mobilizadas, das condições locais de execução ou também das interpretações e valores dos atores envolvidos. Em vez de tratar os textos como peças isoladas, a análise procura extrair deles um diálogo sobre os modos de explicar a ação pública em contextos complexos.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O foco de leitura adotado neste documento recai sobre a implementação como problema analítico, e não apenas como etapa administrativa posterior à formulação. Isso significa observar como cada texto, a seu modo, ajuda a compreender de que depende a efetivação de uma política: se da clareza do desenho institucional, da coordenação entre órgãos, das capacidades estatais mobilizadas, das condições locais de execução ou também das interpretações e valores dos atores envolvidos. Em vez de tratar os textos como peças isoladas, a análise procura extrair deles um diálogo sobre os modos de explicar a ação pública em contextos complexos. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-intro-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Há, portanto, heterogeneidade real no corpus. Essa heterogeneidade não deve ser confundida com dispersão improdutiva. Os textos não compartilham o mesmo objeto empírico nem a mesma escala de observação: um trabalha em chave teórica e reconstrutiva; o outro, em chave empírica e longitudinal. Ainda assim, ambos convergem em um eixo disciplinar comum: recusam a imagem de implementação como execução mecânica e insistem que políticas públicas se transformam quando entram em contato com organizações, territórios, instrumentos, burocracias e dinâmicas concretas de ação. A unidade do corpus, assim, não é temática no sentido estreito, mas analítica no sentido do problema que mobiliza a leitura.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Há, portanto, heterogeneidade real no corpus. Essa heterogeneidade não deve ser confundida com dispersão improdutiva. Os textos não compartilham o mesmo objeto empírico nem a mesma escala de observação: um trabalha em chave teórica e reconstrutiva; o outro, em chave empírica e longitudinal. Ainda assim, ambos convergem em um eixo disciplinar comum: recusam a imagem de implementação como execução mecânica e insistem que políticas públicas se transformam quando entram em contato com organizações, territórios, instrumentos, burocracias e dinâmicas concretas de ação. A unidade do corpus, assim, não é temática no sentido estreito, mas analítica no sentido do problema que mobiliza a leitura. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-intro-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O objetivo deste documento é produzir uma leitura analítica aprofundada do conjunto, fiel aos textos e ao mesmo tempo interpretativa. Não se trata apenas de resumir argumentos, mas de reconstruir o que cada trabalho efetivamente demonstra, identificar sua contribuição específica para a disciplina e, sobretudo, explicitar como eles podem ser articulados sem apagamento de suas diferenças. Com isso, busca-se oferecer uma síntese útil para o estudo de políticas públicas, especialmente no que diz respeito à relação entre formulação, implementação, capacidades estatais, contexto e mediações interpretativas.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo deste documento é produzir uma leitura analítica aprofundada do conjunto, fiel aos textos e ao mesmo tempo interpretativa. Não se trata apenas de resumir argumentos, mas de reconstruir o que cada trabalho efetivamente demonstra, identificar sua contribuição específica para a disciplina e, sobretudo, explicitar como eles podem ser articulados sem apagamento de suas diferenças. Com isso, busca-se oferecer uma síntese útil para o estudo de políticas públicas, especialmente no que diz respeito à relação entre formulação, implementação, capacidades estatais, contexto e mediações interpretativas. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-intro-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O caminho analítico adotado parte, primeiro, do reconhecimento da especificidade de cada texto: um como intervenção conceitual sobre o estudo da implementação, outro como reconstrução de uma trajetória concreta de política ambiental. Em seguida, toma-se a comparação apenas nos eixos efetivamente sustentados pelo corpus — problema abordado, argumento central, conceitos mobilizados, tipo de abordagem, método, contribuição e limites. Por fim, a síntese interpreta o conjunto a partir de uma hipótese de leitura: a de que a implementação só pode ser compreendida de forma robusta quando capacidades institucionais e mediações interpretativas são pensadas em articulação, ainda que cada texto enfatize dimensões distintas dessa relação.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O caminho analítico adotado parte, primeiro, do reconhecimento da especificidade de cada texto: um como intervenção conceitual sobre o estudo da implementação, outro como reconstrução de uma trajetória concreta de política ambiental. Em seguida, toma-se a comparação apenas nos eixos efetivamente sustentados pelo corpus — problema abordado, argumento central, conceitos mobilizados, tipo de abordagem, método, contribuição e limites. Por fim, a síntese interpreta o conjunto a partir de uma hipótese de leitura: a de que a implementação só pode ser compreendida de forma robusta quando capacidades institucionais e mediações interpretativas são pensadas em articulação, ainda que cada texto enfatize dimensões distintas dessa relação. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-intro-5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-sintese-analitica",
+      "level": 1,
+      "title": "Síntese analítica",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A leitura conjunta do corpus permite sustentar que sua contribuição principal não está em oferecer uma teoria única da implementação, mas em tornar visível que o problema explicativo das políticas públicas se desloca quando se abandona a separação rígida entre desenho e execução. O texto de natureza teórica mostra que a literatura tradicional oscilou entre privilegiar hierarquia, formulação e desenho institucional, de um lado, e valorizar contexto local e discricionariedade burocrática, de outro. Já o estudo sobre o plano amazônico demonstra empiricamente que políticas complexas se estabilizam e produzem efeitos por meio de arranjos institucionais, aprendizado entre fases, coordenação entre órgãos e combinação de instrumentos. Quando lidos em conjunto, os textos sugerem que a implementação é menos uma fase e mais um campo de produção prática da própria política.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A leitura conjunta do corpus permite sustentar que sua contribuição principal não está em oferecer uma teoria única da implementação, mas em tornar visível que o problema explicativo das políticas públicas se desloca quando se abandona a separação rígida entre desenho e execução. O texto de natureza teórica mostra que a literatura tradicional oscilou entre privilegiar hierarquia, formulação e desenho institucional, de um lado, e valorizar contexto local e discricionariedade burocrática, de outro. Já o estudo sobre o plano amazônico demonstra empiricamente que políticas complexas se estabilizam e produzem efeitos por meio de arranjos institucionais, aprendizado entre fases, coordenação entre órgãos e combinação de instrumentos. Quando lidos em conjunto, os textos sugerem que a implementação é menos uma fase e mais um campo de produção prática da própria política. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-sint-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A interpretação mais produtiva do corpus é a de que ele ilumina uma tensão constitutiva dos estudos de implementação. De um lado, nenhuma política de grande escala pode ser entendida sem capacidades estatais, instrumentos operacionais, coordenação administrativa e mecanismos de monitoramento. O caso do enfrentamento ao desmatamento mostra precisamente isso: a redução do problema dependeu de aparato institucional, integração federativa e intersetorial, além de instrumentos de comando e controle suficientemente robustos para alterar comportamentos e induzir resultados agregados. De outro lado, essas capacidades não esgotam a explicação. O texto teórico insiste que a ação dos implementadores é sempre mediada por esquemas de interpretação, valores e concepções de mundo, de modo que a política não é apenas executada, mas lida, filtrada e redefinida por seus agentes.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A interpretação mais produtiva do corpus é a de que ele ilumina uma tensão constitutiva dos estudos de implementação. De um lado, nenhuma política de grande escala pode ser entendida sem capacidades estatais, instrumentos operacionais, coordenação administrativa e mecanismos de monitoramento. O caso do enfrentamento ao desmatamento mostra precisamente isso: a redução do problema dependeu de aparato institucional, integração federativa e intersetorial, além de instrumentos de comando e controle suficientemente robustos para alterar comportamentos e induzir resultados agregados. De outro lado, essas capacidades não esgotam a explicação. O texto teórico insiste que a ação dos implementadores é sempre mediada por esquemas de interpretação, valores e concepções de mundo, de modo que a política não é apenas executada, mas lida, filtrada e redefinida por seus agentes. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "mello2017_evolucao_plano",
+                "ascenzi2013_implementacao_politicas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-sint-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O ponto decisivo, portanto, não é escolher entre uma explicação institucional e uma explicação interpretativa, mas reconhecer que o corpus evidencia a insuficiência de qualquer modelo unilateral. Se lido isoladamente, o estudo sobre o plano amazônico pode levar a uma ênfase predominante nas capacidades formais do Estado e nos instrumentos mais diretamente observáveis. Se lido isoladamente, o texto sobre perspectivas analíticas pode induzir uma valorização mais abstrata das mediações cognitivas, ainda em registro programático. A leitura articulada corrige os excessos de cada polo: ela mostra que a efetividade estatal exige infraestrutura organizacional e desenho operacional, mas também que esses elementos só ganham realidade concreta quando atravessados por práticas, interpretações e disputas situadas.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O ponto decisivo, portanto, não é escolher entre uma explicação institucional e uma explicação interpretativa, mas reconhecer que o corpus evidencia a insuficiência de qualquer modelo unilateral. Se lido isoladamente, o estudo sobre o plano amazônico pode levar a uma ênfase predominante nas capacidades formais do Estado e nos instrumentos mais diretamente observáveis. Se lido isoladamente, o texto sobre perspectivas analíticas pode induzir uma valorização mais abstrata das mediações cognitivas, ainda em registro programático. A leitura articulada corrige os excessos de cada polo: ela mostra que a efetividade estatal exige infraestrutura organizacional e desenho operacional, mas também que esses elementos só ganham realidade concreta quando atravessados por práticas, interpretações e disputas situadas. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "mello2017_evolucao_plano",
+                "ascenzi2013_implementacao_politicas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-sint-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa articulação permite formular uma interpretação própria do corpus: a implementação aparece como uma zona de conversão entre capacidade estatal e construção de sentido. A política pública não se realiza apenas porque foi formalmente desenhada, nem apenas porque agentes locais a reinterpretam; ela se realiza na interação entre arquitetura institucional e mediações práticas. No caso do plano de combate ao desmatamento, isso se expressa na combinação de coordenação central, monitoramento territorial, fiscalização e reconfiguração progressiva das fases do programa. No caso do artigo teórico, essa mesma dinâmica é elevada a problema conceitual, quando os autores mostram que regras, recursos e hierarquia precisam ser pensados junto com ideias, valores e percepções dos implementadores. Em ambos, a política é processo de tradução institucionalmente condicionada.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa articulação permite formular uma interpretação própria do corpus: a implementação aparece como uma zona de conversão entre capacidade estatal e construção de sentido. A política pública não se realiza apenas porque foi formalmente desenhada, nem apenas porque agentes locais a reinterpretam; ela se realiza na interação entre arquitetura institucional e mediações práticas. No caso do plano de combate ao desmatamento, isso se expressa na combinação de coordenação central, monitoramento territorial, fiscalização e reconfiguração progressiva das fases do programa. No caso do artigo teórico, essa mesma dinâmica é elevada a problema conceitual, quando os autores mostram que regras, recursos e hierarquia precisam ser pensados junto com ideias, valores e percepções dos implementadores. Em ambos, a política é processo de tradução institucionalmente condicionada. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "mello2017_evolucao_plano",
+                "ascenzi2013_implementacao_politicas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-sint-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O corpus também permite distinguir entre êxito operacional e transformação substantiva. O estudo sobre o PPCDAm mostra que uma política pode ser bem-sucedida na contenção de um problema por meio de instrumentos de controle e ordenamento, sem que isso signifique ter resolvido as bases estruturais que reproduzem esse problema. Esse achado ganha profundidade quando relido à luz do texto teórico: se a implementação depende de condições materiais e de interpretações dos atores, então políticas baseadas majoritariamente em enforcement tendem a produzir efeitos relevantes, porém potencialmente limitados, quando não conseguem reordenar sentidos, incentivos e práticas de forma mais duradoura. A contribuição do corpus, nesse ponto, é sugerir que controlar um processo não equivale necessariamente a reorganizar o campo social em que ele se produz.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O corpus também permite distinguir entre êxito operacional e transformação substantiva. O estudo sobre o PPCDAm mostra que uma política pode ser bem-sucedida na contenção de um problema por meio de instrumentos de controle e ordenamento, sem que isso signifique ter resolvido as bases estruturais que reproduzem esse problema. Esse achado ganha profundidade quando relido à luz do texto teórico: se a implementação depende de condições materiais e de interpretações dos atores, então políticas baseadas majoritariamente em enforcement tendem a produzir efeitos relevantes, porém potencialmente limitados, quando não conseguem reordenar sentidos, incentivos e práticas de forma mais duradoura. A contribuição do corpus, nesse ponto, é sugerir que controlar um processo não equivale necessariamente a reorganizar o campo social em que ele se produz. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "mello2017_evolucao_plano",
+                "ascenzi2013_implementacao_politicas"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-sint-5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Em termos disciplinares, os textos se complementam justamente porque ocupam posições diferentes no continuum entre abstração e concretude. O artigo sobre implementação amplia a sensibilidade teórica do campo e funciona como corretivo contra explicações excessivamente formalistas. O estudo do plano amazônico, por sua vez, impede que a análise da implementação se dissolva em um vocabulário genérico sobre interpretação e contexto, lembrando que políticas públicas dependem de aparatos decisórios, capacidade de coordenação e instrumentos efetivos. A síntese do corpus, assim, não é a fusão indistinta entre duas abordagens, mas a defesa de uma análise em dois níveis: um nível das capacidades e arranjos que tornam a ação possível, e um nível das mediações práticas que definem como essa ação adquire forma concreta.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em termos disciplinares, os textos se complementam justamente porque ocupam posições diferentes no continuum entre abstração e concretude. O artigo sobre implementação amplia a sensibilidade teórica do campo e funciona como corretivo contra explicações excessivamente formalistas. O estudo do plano amazônico, por sua vez, impede que a análise da implementação se dissolva em um vocabulário genérico sobre interpretação e contexto, lembrando que políticas públicas dependem de aparatos decisórios, capacidade de coordenação e instrumentos efetivos. A síntese do corpus, assim, não é a fusão indistinta entre duas abordagens, mas a defesa de uma análise em dois níveis: um nível das capacidades e arranjos que tornam a ação possível, e um nível das mediações práticas que definem como essa ação adquire forma concreta. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-sint-6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-consideracoes-finais",
+      "level": 1,
+      "title": "Considerações finais",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As análises desenvolvidas ao longo do documento permitem concluir que o principal ganho do corpus está em qualificar o modo de pensar a implementação de políticas públicas. Em vez de tratá-la como desdobramento automático da formulação, os textos mostram que ela envolve coordenação, adaptação, conflito, aprendizado, uso de instrumentos e mediações interpretativas. Essa conclusão é relevante porque recoloca a implementação no centro da análise da ação estatal, não como momento residual, mas como espaço decisivo em que a política adquire densidade institucional e efeitos concretos.",
+          "content": [
+            {
+              "type": "text",
+              "text": "As análises desenvolvidas ao longo do documento permitem concluir que o principal ganho do corpus está em qualificar o modo de pensar a implementação de políticas públicas. Em vez de tratá-la como desdobramento automático da formulação, os textos mostram que ela envolve coordenação, adaptação, conflito, aprendizado, uso de instrumentos e mediações interpretativas. Essa conclusão é relevante porque recoloca a implementação no centro da análise da ação estatal, não como momento residual, mas como espaço decisivo em que a política adquire densidade institucional e efeitos concretos. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-final-1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A principal contribuição analítica do primeiro texto está em mostrar que o campo de implementação ganha poder explicativo quando incorpora, além das variáveis organizacionais e contextuais, as ideias, os valores e as concepções de mundo dos atores envolvidos. Já o segundo texto contribui ao evidenciar, em um caso substantivo de alta complexidade, que capacidades estatais, coordenação intersetorial e instrumentos adequados podem produzir resultados expressivos, ainda que parciais. Tomados em conjunto, os dois trabalhos reforçam que a disciplina avança mais quando articula reflexão conceitual e exame empírico rigoroso do que quando privilegia unilateralmente um desses polos.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A principal contribuição analítica do primeiro texto está em mostrar que o campo de implementação ganha poder explicativo quando incorpora, além das variáveis organizacionais e contextuais, as ideias, os valores e as concepções de mundo dos atores envolvidos. Já o segundo texto contribui ao evidenciar, em um caso substantivo de alta complexidade, que capacidades estatais, coordenação intersetorial e instrumentos adequados podem produzir resultados expressivos, ainda que parciais. Tomados em conjunto, os dois trabalhos reforçam que a disciplina avança mais quando articula reflexão conceitual e exame empírico rigoroso do que quando privilegia unilateralmente um desses polos. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-final-2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Para a disciplina, o corpus oferece ao menos três contribuições duradouras. Primeiro, reafirma a necessidade de superar dicotomias simplificadoras entre formulação e execução. Segundo, demonstra que políticas públicas complexas exigem análise simultânea de desenho institucional, capacidades operacionais e contextos de implementação. Terceiro, sugere que resultados observáveis não podem ser plenamente compreendidos sem atenção às interpretações e práticas dos agentes que materializam a ação estatal. Essas contribuições são particularmente relevantes para a administração pública e para a análise de políticas, pois indicam um programa de pesquisa mais integrado e menos dependente de explicações monocausais.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para a disciplina, o corpus oferece ao menos três contribuições duradouras. Primeiro, reafirma a necessidade de superar dicotomias simplificadoras entre formulação e execução. Segundo, demonstra que políticas públicas complexas exigem análise simultânea de desenho institucional, capacidades operacionais e contextos de implementação. Terceiro, sugere que resultados observáveis não podem ser plenamente compreendidos sem atenção às interpretações e práticas dos agentes que materializam a ação estatal. Essas contribuições são particularmente relevantes para a administração pública e para a análise de políticas, pois indicam um programa de pesquisa mais integrado e menos dependente de explicações monocausais. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-final-3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Em síntese, o documento mostra que a heterogeneidade do corpus não é um obstáculo à análise, mas sua própria condição de fecundidade. A diferença entre um texto voltado à reconstrução conceitual e outro dedicado a uma política empírica específica permite enxergar, com mais nitidez, que a implementação é o lugar em que normas, instituições, capacidades, territórios e sentidos se encontram. Esse é o ganho central da leitura realizada: transformar dois textos distintos em um diálogo analítico consistente sobre como compreender, com maior precisão, o funcionamento real das políticas públicas.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em síntese, o documento mostra que a heterogeneidade do corpus não é um obstáculo à análise, mas sua própria condição de fecundidade. A diferença entre um texto voltado à reconstrução conceitual e outro dedicado a uma política empírica específica permite enxergar, com mais nitidez, que a implementação é o lugar em que normas, instituições, capacidades, territórios e sentidos se encontram. Esse é o ganho central da leitura realizada: transformar dois textos distintos em um diálogo analítico consistente sobre como compreender, com maior precisão, o funcionamento real das políticas públicas. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "ascenzi2013_implementacao_politicas",
+                "mello2017_evolucao_plano"
+              ],
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p-final-4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    }
+  ],
+  "entries_used": [
+    "ascenzi2013_implementacao_politicas",
+    "mello2017_evolucao_plano"
+  ]
+}

@@ -23,7 +23,7 @@ from typing import Any
 from utils import resolve_path, write_json, write_text, normalize_title_loose
 from prompt_manager import validate_prompt_paths, prompt_report_for_cfg
 
-PIPELINE_VERSION = "rc10.7.34-output-dir-and-staged-activity"
+PIPELINE_VERSION = "rc10.7.44-tui-direct-click-and-path-browser"
 
 
 # ---------------------------------------------------------------------------

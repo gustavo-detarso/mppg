@@ -1,0 +1,118 @@
+[
+  {
+    "doc": "Bichir_Junior_Pereira_2020_O casoDoSistemaUnicoDeAssistenciaSocial_doi_10.1590_3510207_2020.pdf",
+    "bib_key": "bichir2020_sistemas_nacionais",
+    "source": "ai",
+    "doi": "10.1590/3510207/2020",
+    "doi_source": "extracted",
+    "metadata": {
+      "entry_type": "article",
+      "title": "Sistemas nacionais de políticas públicas e seus efeitos na implementação: o caso do Sistema Único de Assistência Social (Suas)",
+      "authors": [
+        "Renata Bichir",
+        "Sergio Simoni Junior",
+        "Guilherme Pereira"
+      ],
+      "editors": [],
+      "year": "2020",
+      "booktitle": null,
+      "journaltitle": "Revista Brasileira de Ciências Sociais",
+      "publisher": null,
+      "location": null,
+      "pages": null,
+      "volume": "35",
+      "number": "102",
+      "doi": "10.1590/3510207/2020",
+      "isbn": null,
+      "url": null,
+      "note": null
+    }
+  },
+  {
+    "doc": "Livro_Teorias e An├ílises sobre Implementa├º├úo de Pol├¡ticas P├║blicas no Brasil.pdf",
+    "bib_key": "lotta2019_teorias_analises",
+    "source": "ai",
+    "doi": null,
+    "doi_source": null,
+    "metadata": {
+      "entry_type": "book",
+      "title": "Teorias e Análises sobre Implementação de Políticas Públicas no Brasil",
+      "authors": [],
+      "editors": [
+        "Gabriela Lotta"
+      ],
+      "year": "2019",
+      "booktitle": null,
+      "journaltitle": null,
+      "publisher": "Enap",
+      "location": "Brasília",
+      "pages": "324 p.",
+      "volume": null,
+      "number": null,
+      "doi": null,
+      "isbn": "978-85-256-0123-0",
+      "url": null,
+      "note": null
+    }
+  },
+  {
+    "doc": "Lota_Pires_2020_CategorizandoUsu├írios_doi_10.1590_dados.2020.63.4.219.pdf",
+    "bib_key": "lotta2020_categorizando_usuarios",
+    "source": "ai",
+    "doi": "10.1590/dados.2020.63.4.219",
+    "doi_source": "extracted",
+    "metadata": {
+      "entry_type": "article",
+      "title": "Categorizando Usuários “Fáceis” e “Difíceis”: Práticas Cotidianas de Implementação de Políticas Públicas e a Produção de Diferenças Sociais",
+      "authors": [
+        "Gabriela Spanghero Lotta",
+        "Roberto Rocha Coelho Pires"
+      ],
+      "editors": [],
+      "year": "2020",
+      "booktitle": null,
+      "journaltitle": "Dados",
+      "publisher": null,
+      "location": "Rio de Janeiro",
+      "pages": "1-40",
+      "volume": "63",
+      "number": "4",
+      "doi": "10.1590/dados.2020.63.4.219",
+      "isbn": null,
+      "url": "https://doi.org/10.1590/dados.2020.63.4.219",
+      "note": null
+    }
+  },
+  {
+    "doc": "Lotta_et_al_2023_JesusSpeaksBetterInteractionsBetweenStateandFaithBasedOrganizationsinServiceImplementation_doi_10.1177_08997640231165525.pdf",
+    "bib_key": "lotta2024_jesus_speaks",
+    "source": "ai",
+    "doi": "10.1177/08997640231165525",
+    "doi_source": "extracted",
+    "metadata": {
+      "entry_type": "article",
+      "title": "“Jesus Speaks Better”: Interactions Between State and Faith-Based Organizations in Service Implementation",
+      "authors": [
+        "Gabriela Lotta",
+        "Ana Claudia Cortez",
+        "Giordano Magri",
+        "Maria Izabel Sanches Costa",
+        "Taciana Barcellos Rosa",
+        "Dominique Nunes Almeida"
+      ],
+      "editors": [],
+      "year": "2024",
+      "booktitle": null,
+      "journaltitle": "Nonprofit and Voluntary Sector Quarterly",
+      "publisher": null,
+      "location": null,
+      "pages": "402–427",
+      "volume": "53",
+      "number": "2",
+      "doi": "10.1177/08997640231165525",
+      "isbn": null,
+      "url": "https://doi.org/10.1177/08997640231165525",
+      "note": null
+    }
+  }
+]

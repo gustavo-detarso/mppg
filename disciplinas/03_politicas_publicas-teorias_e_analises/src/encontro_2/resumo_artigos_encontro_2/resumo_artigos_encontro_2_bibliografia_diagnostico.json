@@ -1,0 +1,58 @@
+[
+  {
+    "doc": "Lima_D'Ascenzi_2013_IMPLEMENTA├ç├âODEPOLITICASPUBLICAS_PERSPECTIVAS ANALITICAS_doi_10.1590_S0104-44782013000400006.pdf",
+    "bib_key": "ascenzi2013_implementacao_politicas",
+    "source": "ai",
+    "doi": null,
+    "doi_source": null,
+    "metadata": {
+      "entry_type": "article",
+      "title": "Implementação de políticas públicas: perspectivas analíticas",
+      "authors": [
+        "Luciano D'Ascenzi",
+        "Luciana Leite Lima"
+      ],
+      "editors": [],
+      "year": "2013",
+      "booktitle": null,
+      "journaltitle": "Revista de Sociologia e Política",
+      "publisher": null,
+      "location": "Curitiba",
+      "pages": "101-110",
+      "volume": "21",
+      "number": "48",
+      "doi": "10.1590/S0104-44782013000400006",
+      "isbn": null,
+      "url": null,
+      "note": null
+    }
+  },
+  {
+    "doc": "Mello_Artaxo_2016_Evolu├º├úoDoPlanoDeA├º├úoParaPreven├º├úoEControleDoDesmatamentoNaAmaz├┤niaLegal_doi_10.11606_issn.2316-901X.v0i66p108-129.pdf",
+    "bib_key": "mello2017_evolucao_plano",
+    "source": "crossref",
+    "doi": "10.11606/issn.2316-901x.v0i66p108-129",
+    "doi_source": "extracted",
+    "metadata": {
+      "entry_type": "article",
+      "title": "Evolução do Plano de Ação para Prevenção e Controle do Desmatamento na Amazônia Legal",
+      "authors": [
+        "Natália Girão Rodrigues de Mello",
+        "Paulo Artaxo"
+      ],
+      "editors": [],
+      "year": "2017",
+      "booktitle": null,
+      "journaltitle": "Revista do Instituto de Estudos Brasileiros",
+      "publisher": "Universidade de Sao Paulo, Agencia USP de Gestao da Informacao Academica (AGUIA)",
+      "location": null,
+      "pages": "108",
+      "volume": null,
+      "number": "66",
+      "doi": "10.11606/issn.2316-901x.v0i66p108-129",
+      "isbn": null,
+      "url": "https://doi.org/10.11606/issn.2316-901x.v0i66p108-129",
+      "note": null
+    }
+  }
+]

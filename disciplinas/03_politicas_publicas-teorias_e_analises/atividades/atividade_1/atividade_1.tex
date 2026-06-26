@@ -1,0 +1,86 @@
+% Created 2026-05-21 qui 16:19
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt,a4paper]{article}
+\usepackage{fgv-paper}
+% Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+\usepackage[backend=biber,style=abnt,sorting=nty,giveninits=true]{biblatex}
+\addbibresource{resumo_artigos_encontro_1.bib}
+\geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{tabularray}
+\usepackage{ltablex}
+\keepXColumns
+\setlength{\emergencystretch}{3em}
+\sloppy
+\definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+\definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+\definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+\setlength{\headheight}{58pt}
+\setlength{\headsep}{18pt}
+\newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}
+\newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+\newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+\fancypagestyle{fgvreportstyle}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\fancypagestyle{plain}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+\institution{fgv}
+\programname{}
+\coursename{Mestrado Acadêmico em Políticas Públicas e Governo}
+\disciplinename{Políticas Públicas: Teoria e Análise}
+\professorname{Lizandro Lui}
+\cityname{Brasília}
+\author{Gustavo M. Mendes de Tarso}
+\date{\today}
+\title{Resumo analítico dos textos}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={Resumo analítico dos textos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Pt_Br}}
+\begin{document}
+
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado Acadêmico em Políticas Públicas e Governo \\
+\textbf{Turma}                   & 2026.1 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Políticas Públicas: Teoria e Análise \\
+\textbf{Professor}               & Lizandro Lui \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 2026 \\
+\textbf{Título do trabalho}      & Resumo analítico dos textos \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+
+\clearpage
+
+Ao ler os textos de Ana Capella e Suely Araújo, fiquei com a impressão de que os dois modelos ajudam a questionar uma visão muito simples das políticas públicas: a ideia de que o governo identifica um problema, escolhe racionalmente uma solução e depois apenas executa essa decisão. Os textos mostram que o processo é mais instável, disputado e dependente de atores, ideias, oportunidades e conflitos.
+
+No modelo de múltiplos fluxos de Kingdon, apresentado por Capella, o ponto que mais me chamou atenção foi perceber que um problema não entra na agenda pública apenas porque é grave. Muitas situações graves podem existir durante anos sem se tornarem prioridade governamental. Para que isso aconteça, é preciso que três fluxos se aproximem: o fluxo dos problemas, o fluxo das soluções e o fluxo da política. O primeiro diz respeito à forma como uma situação passa a ser reconhecida como problema público. O segundo envolve propostas e alternativas que, muitas vezes, já circulam entre especialistas, técnicos e grupos interessados. O terceiro depende do ambiente político, das mudanças de governo, da pressão de grupos e do clima favorável ou desfavorável a determinada pauta.
+
+O que entendi é que a mudança ocorre quando esses fluxos se encontram em uma janela de oportunidade. Nesse momento, o empreendedor de políticas tem um papel importante, porque tenta ligar um problema a uma solução em um contexto político favorável. Isso me fez pensar que a agenda pública não é apenas resultado da necessidade social, mas também da capacidade de certos atores de construir interpretações, defender soluções e aproveitar o momento certo.
+
+Já a Teoria das Coalizões de Defesa, associada a Sabatier e discutida por Suely Araújo, parece olhar para um tempo mais longo. Ela ajuda a entender como diferentes grupos disputam uma política pública dentro de um subsistema. Esses grupos, chamados de coalizões, não se organizam apenas por interesses imediatos, mas também por crenças compartilhadas sobre o problema, sobre o papel do Estado e sobre quais soluções seriam mais adequadas. Assim, a disputa em políticas públicas não é só por orçamento ou poder, mas também por ideias, valores e formas de interpretar a realidade.
+
+A partir dos textos apresentados pelas colegas Hellen e Sara, entendo que esses modelos podem ser usados para produzir conhecimento sobre o processo de agenda e elaboração de políticas públicas porque ajudam a formular perguntas mais concretas. Com Kingdon, posso perguntar: por que esse tema entrou na agenda agora? Que problema foi construído? Que solução estava disponível? Quem atuou como empreendedor? Com Sabatier, posso perguntar: quais coalizões estavam em disputa? Que crenças defendiam? Que recursos tinham? Houve aprendizado ou apenas conflito entre posições?
+
+No fim, vejo os dois modelos como complementares. Kingdon ajuda a entender o momento em que uma pauta ganha atenção. Sabatier ajuda a compreender disputas mais duradouras entre grupos que tentam influenciar o rumo de uma política. A principal aprendizagem, para mim, é que políticas públicas não são respostas neutras a problemas objetivos. Elas são resultado de interpretação, disputa, oportunidade e ação estratégica.
+\end{document}

@@ -1,0 +1,511 @@
+{
+  "id": "comparacao-entre-os-textos",
+  "level": 1,
+  "title": "Comparação entre os textos",
+  "blocks": [
+    {
+      "type": "table",
+      "text": "",
+      "content": [],
+      "level": 0,
+      "items": [],
+      "table": {
+        "headers": [
+          "Texto",
+          "Objeto/problema",
+          "Escala e foco",
+          "Abordagem/método",
+          "Conceito central",
+          "Contribuição e limite"
+        ],
+        "rows": [
+          [
+            "Capítulo sobre múltiplos fluxos",
+            "Formação da agenda e emergência de mudanças",
+            "Modelo geral do processo decisório; ênfase na entrada de temas e alternativas",
+            "Reconstrução teórica e balanço crítico da literatura",
+            "Fluxos, janelas de oportunidade, empreendedores",
+            "Oferece gramática para explicar atenção governamental e mudança contingente; tem menor alcance para estabilidade de longo prazo"
+          ],
+          [
+            "Estudo sobre a IFI brasileira",
+            "Criação de uma instituição fiscal independente em conjuntura específica",
+            "Caso único federal; foco em episódio de mudança institucional",
+            "Estudo de caso qualitativo orientado pelo modelo dos múltiplos fluxos",
+            "Acoplamento entre problema fiscal, solução disponível e contexto político",
+            "Mostra aplicação empírica do modelo a reforma institucional; compara pouco com outros casos e não acompanha a institucionalização posterior"
+          ],
+          [
+            "Artigo sobre política habitacional",
+            "Disputa entre SNHIS e PMCMV na trajetória da política habitacional",
+            "Subsistema setorial de longa duração; foco em mudança institucional e conflito programático",
+            "Análise documental e entrevistas com lente das coalizões de defesa",
+            "Coalizões, crenças, subsistema, mudança de longo prazo",
+            "Explica deslocamentos institucionais por conflito entre projetos de política; é menos forte na mensuração dos efeitos territoriais e materiais"
+          ]
+        ],
+        "caption": "Quadro sintético de comparação transversal do corpus"
+      },
+      "id": "tbl-comparacao-sintetica",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tomados em conjunto, os textos convergem em um ponto decisivo: a entrada de temas na agenda governamental e a produção de mudanças institucionais não decorrem de simples resposta técnica a problemas objetivos, mas de processos políticos seletivos, atravessados por ideias, disputas interpretativas, atores estratégicos e estruturas de oportunidade. Essa convergência aparece tanto na reconstrução teórica do Modelo dos Múltiplos Fluxos quanto em sua aplicação ao caso da Instituição Fiscal Independente e, por outra via, no estudo sobre política habitacional baseado no Modelo das Coalizões de Defesa. Em todos eles, a política pública é tratada como resultado de mediações entre percepção do problema, repertórios de solução, configuração de atores e condições de viabilidade política, e não como produto linear de diagnóstico racional. Nesse sentido, o corpus compartilha um afastamento claro de leituras decisionistas simplificadas ou funcionalistas, ainda que cada texto operacionalize esse afastamento por arquitetura conceitual distinta ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p1",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A primeira diferença substantiva entre os textos está no objeto. O capítulo teórico sobre múltiplos fluxos opera em nível mais abstrato e metateórico: seu problema é explicar como agendas se formam em ambientes de ambiguidade, atenção escassa e racionalidade limitada. Já o estudo sobre a IFI transforma essa gramática geral em ferramenta para compreender um episódio específico de criação institucional no plano federal. O artigo sobre política habitacional, por sua vez, não se concentra em um momento pontual de entrada de tema na agenda, mas em uma trajetória setorial prolongada, marcada por conflito entre dois arranjos institucionais e por disputa entre projetos de política pública. Assim, embora os três textos pertençam ao campo da análise de políticas públicas, eles não observam o mesmo fenômeno: um formula uma teoria da agenda, outro testa sua capacidade explicativa em um caso delimitado, e o terceiro reconstrói mudança institucional em subsistema denso e historicamente acumulativo ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p2",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Daí decorre uma segunda divergência real: a escala analítica e temporal. O Modelo dos Múltiplos Fluxos, tal como exposto no capítulo, é especialmente sensível a momentos de inflexão, abertura de janelas e acoplamentos contingentes entre fluxos relativamente independentes. O estudo da IFI confirma esse uso ao focalizar uma conjuntura específica em que crise fiscal, disponibilidade de solução institucional e rearranjo político se encontram. Já o artigo sobre habitação trabalha em outra temporalidade: sua explicação depende de sedimentações, crenças duradouras, aprendizado e competição entre coalizões no interior de um subsistema. Em vez de privilegiar o instante de oportunidade, ele privilegia a persistência do conflito e a forma como diferentes atores sustentam projetos concorrentes ao longo do tempo. Comparativamente, portanto, os textos não divergem apenas no tema, mas no tipo de temporalidade causal que consideram mais relevante ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p3",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Também variam os métodos e os tipos de evidência. O capítulo sobre múltiplos fluxos é um texto de sistematização teórica: sua força não reside em teste empírico direto, mas na organização conceitual, no balanço crítico e na delimitação de alcance do modelo. O artigo sobre a IFI adota estudo de caso qualitativo, com reconstrução processual orientada por hipótese, buscando mostrar como cada fluxo se manifestou no episódio examinado. O artigo sobre política habitacional mobiliza análise documental e entrevistas, com estratégia comparativa entre dois arranjos institucionais e forte ênfase em processo político de longa duração. Essas diferenças importam porque condicionam o tipo de inferência produzido: no primeiro caso, a contribuição é heurística e teórica; no segundo, é explicativa em torno de um evento decisório; no terceiro, é histórico-institucional e relacional, voltada a identificar alinhamentos, crenças e recursos em disputa. Não há, portanto, um mesmo padrão de prova ou de demonstração a ser aplicado indistintamente ao corpus ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p4",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "No plano dos conceitos e categorias, a diferença é ainda mais nítida. O capítulo e o artigo sobre a IFI organizam sua explicação por meio de problema, políticas, política, janelas de oportunidade e empreendedores. Nessas formulações, a seletividade da atenção governamental e o acoplamento entre correntes independentes são centrais. Já o artigo sobre habitação estrutura sua análise com subsistema de política, coalizões, sistemas de crenças e mudança institucional. A ênfase desloca-se da contingência decisória para a organização do conflito programático. Em um modelo, soluções podem estar disponíveis antes mesmo da plena definição do problema e aguardam oportunidade para acoplamento; no outro, ideias estão embutidas em coalizões relativamente estáveis, com crenças que orientam estratégias, alianças e disputas em arenas institucionais. Há convergência no reconhecimento de que ideias importam, mas divergência no modo como elas são concebidas: como alternativas em circulação sujeitas a janela e empreendedorismo, ou como componentes estruturantes de coalizões que disputam o sentido e os instrumentos da política ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p5",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os pressupostos teóricos de cada texto ajudam a esclarecer essa diferença. O Modelo dos Múltiplos Fluxos, no capítulo e na aplicação à IFI, parte de ambiente decisório marcado por ambiguidade, racionalidade limitada, participação fluida e competição por atenção. Seu pressuposto é que o governo não processa problemas por ordem de importância objetiva, mas por acoplamentos seletivos e temporalmente instáveis. Já o estudo orientado pelo Modelo das Coalizões de Defesa assume que políticas se desenvolvem em subsistemas onde atores coordenam ação a partir de crenças compartilhadas e disputam mudanças ao longo do tempo. Aqui, o pressuposto não é apenas escassez de atenção, mas persistência de alinhamentos programáticos e institucionalização do conflito. Em termos comparativos, isso significa que os textos se aproximam no anti-racionalismo simples, mas se afastam na imagem do processo político: um vê maior independência entre fluxos e centralidade do timing; o outro vê maior estruturação relacional do conflito e densidade de crenças ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p6",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Há, entretanto, complementaridades reais que podem ser articuladas sem forçar unidade temática artificial. O capítulo sobre múltiplos fluxos e o estudo da IFI mostram com grande clareza como certos temas ou soluções conseguem ganhar centralidade quando convergem reconhecimento do problema, alternativa tecnicamente amadurecida e contexto político favorável. O artigo sobre habitação, por outro lado, ajuda a compreender o que acontece quando o foco se desloca da abertura da agenda para a disputa persistente sobre o desenho da política. Em termos mais precisos, o primeiro conjunto ilumina melhor a entrada e o acoplamento; o segundo, a consolidação, o deslocamento e a competição entre projetos. Essa articulação é produtiva porque sugere que diferentes momentos do processo de políticas requerem lentes diferentes. Não se trata de declarar um modelo superior ao outro, mas de reconhecer que sua potência explicativa varia conforme o problema investigado ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p7",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "A comparação entre o capítulo teórico e o caso da IFI evidencia ainda uma relação importante entre teoria e aplicação. O estudo empírico confirma a utilidade do vocabulário de múltiplos fluxos para explicar reformas institucionais revestidas de tecnicidade. Sua principal virtude é mostrar que uma instituição fiscal independente não emerge apenas porque seria funcionalmente desejável, mas porque houve trabalho político de acoplamento entre um problema fiscal percebido, uma solução já legitimada e uma conjuntura institucional receptiva. Ao mesmo tempo, essa aplicação também expõe limites do modelo, já sugeridos no capítulo: a reconstrução retrospectiva do acoplamento pode tender a identificar convergências a partir do resultado conhecido, e o estudo de caso único restringe comparações sobre condições em que janelas se abrem ou se fecham. Assim, a aplicação empírica não apenas ilustra o modelo; ela também torna visíveis seus desafios de operacionalização causal ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "anonsd_sem_titulo",
+            "brasil2022_abordagens_contemporaneas"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p8",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Já a comparação entre o texto sobre a IFI e o artigo sobre política habitacional é especialmente reveladora para a disciplina porque opõe duas maneiras de explicar mudança institucional. No caso da IFI, a ênfase recai sobre oportunidade, empreendedorismo e acoplamento contingente em contexto de crise e reordenação política. No caso habitacional, a ênfase está em conflito estruturado entre coalizões portadoras de crenças distintas sobre participação, mercado, planejamento e papel do Estado. O contraste sugere que a criação de uma instituição singular, em ambiente de forte visibilidade fiscal, pode ser adequadamente explicada por mecanismo de janela e acoplamento, enquanto a transformação de uma política setorial complexa, com longa história legislativa e federativa, exige atenção a crenças duradouras e alianças organizadas. Essa divergência não é secundária: ela define o tipo de causalidade que cada estudo considera plausível e o tipo de ator que ganha centralidade explicativa ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p9",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Também merece destaque a diferença de contribuição substantiva para a disciplina. O capítulo sobre múltiplos fluxos fornece uma ferramenta teórica central para estudos de agenda, sobretudo ao destacar que problemas são construídos, soluções circulam antes da decisão e mudanças dependem de janelas de oportunidade. O artigo sobre a IFI amplia essa contribuição ao demonstrar que agendas de governança fiscal, frequentemente tratadas como domínio técnico, podem ser analisadas politicamente como processos de agenda e mudança institucional. Já o artigo sobre habitação contribui ao inserir a análise de políticas públicas em diálogo com política urbana, participação social, relações Estado-mercado e institucionalidade federativa, mostrando que programas sociais e urbanísticos não podem ser lidos apenas por seus objetivos formais. Em suma, o corpus oferece, de um lado, refinamento teórico sobre formação da agenda e, de outro, aplicações empíricas que expandem o alcance da disciplina para objetos institucionais e setoriais distintos ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p10",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os limites comparativos do corpus, contudo, precisam ser explicitados para evitar sínteses indevidas. Primeiro, os textos não compartilham o mesmo tipo de material empírico: um é capítulo teórico, dois são estudos aplicados; entre estes, um trata de caso único e outro de política setorial comparada ao longo do tempo. Segundo, o corpus não oferece, ao menos nesse conjunto, um capítulo específico dedicado à exposição sistemática do Modelo das Coalizões de Defesa com a mesma função introdutória que o capítulo cumpre para múltiplos fluxos; por isso, a comparação entre modelos depende em parte da reconstrução aplicada feita no artigo habitacional. Terceiro, os objetos são heterogêneos em termos substantivos: governança fiscal e política habitacional envolvem arenas, atores e formas de conflito bastante distintas. Compará-los é útil para pensar mecanismos analíticos, mas não para deduzir equivalências materiais entre setores. A leitura transversal, portanto, deve manter o foco em categorias explicativas, temporalidades e formas de causalidade, e não em uma unidade temática artificial que o próprio corpus não sustenta ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p11",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em síntese, a comparação mais fecunda entre os textos não está em aproximar artificialmente política fiscal e política habitacional, mas em mostrar que ambos os estudos empíricos, cada qual com seu modelo, recusam explicações lineares e recolocam a política no centro da análise de políticas públicas. O capítulo sobre múltiplos fluxos fornece a melhor chave para compreender emergência, atenção e oportunidade; o estudo da IFI mostra a operacionalidade dessa chave num episódio concreto; e o artigo sobre habitação evidencia que, quando a análise se volta a subsistemas densos, trajetórias longas e confronto programático, a explicação precisa incorporar crenças, coalizões e disputa institucional de maior duração. Lidos em conjunto, os textos reforçam uma lição metodológica central para a disciplina: a escolha do modelo analítico deve ser guiada pelo tipo de problema investigado, pela escala temporal relevante e pelo mecanismo causal que o caso efetivamente apresenta, e não por adesão prévia a uma teoria única ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "type": "citation",
+          "mode": "parenthetical",
+          "keys": [
+            "brasil2022_abordagens_contemporaneas",
+            "anonsd_sem_titulo",
+            "ferreira2019_politica_habitacional"
+          ],
+          "prefix": "",
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "level": 0,
+      "items": [],
+      "table": null,
+      "id": "p12",
+      "title": "",
+      "path": "",
+      "placement": "inline",
+      "page_break_before": false,
+      "page_break_after": false
+    }
+  ]
+}

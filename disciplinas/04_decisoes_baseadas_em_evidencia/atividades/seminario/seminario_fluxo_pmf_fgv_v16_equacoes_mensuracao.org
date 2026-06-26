@@ -1,0 +1,644 @@
+# Apresentação expositiva - foco no redesenho do fluxo da Perícia Médica Federal.
+# Tema visual: fgvbeamer.sty no texmf local.
+
+#+TITLE: Redesenho baseado em evidências do fluxo pericial
+#+SUBTITLE: Priorização territorial, triagem de requerimentos e alocação de capacidade
+#+AUTHOR: Gustavo de Tarso
+#+DATE: \today
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:nil ^:nil
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation,aspectratio=169]
+#+BEAMER_THEME: default
+
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{ragged2e}
+#+LATEX_HEADER: \usepackage{fgvbeamer}
+#+LATEX_HEADER: \renewcommand{\FGVPresentationProgram}{Mestrado de Políticas Públicas e Governo}
+#+LATEX_HEADER: \renewcommand{\FGVPresentationCourse}{Seminário de Análise de Políticas Públicas}
+#+LATEX_HEADER: \renewcommand{\FGVPresentationUnit}{FGV | MPPG}
+#+LATEX_HEADER: \renewcommand{\FGVLogoFile}{/home/gustavodetarso/Documentos/.share/fgv_logo_horizontal_dark.png}
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \defbeamertemplate*{footline}{FGVcompact}{%
+#+LATEX_HEADER:   \leavevmode%
+#+LATEX_HEADER:   \hbox{%
+#+LATEX_HEADER:     \begin{beamercolorbox}[wd=0.72\paperwidth,ht=2.35ex,dp=0.85ex,leftskip=0.62cm]{author in head/foot}\scriptsize\FGVPresentationProgram\end{beamercolorbox}%
+#+LATEX_HEADER:     \begin{beamercolorbox}[wd=0.18\paperwidth,ht=2.35ex,dp=0.85ex,center]{title in head/foot}\scriptsize\FGVPresentationUnit\end{beamercolorbox}%
+#+LATEX_HEADER:     \begin{beamercolorbox}[wd=0.10\paperwidth,ht=2.35ex,dp=0.85ex,center]{date in head/foot}\scriptsize\insertframenumber/\inserttotalframenumber\end{beamercolorbox}%
+#+LATEX_HEADER:   }%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \setbeamertemplate{footline}[FGVcompact]
+#+LATEX_HEADER: \makeatother
+#+LATEX_HEADER: \newcommand{\FGVStatement}[1]{\vspace{0.06cm}\begin{beamercolorbox}[wd=\linewidth,sep=0.11cm,rounded=true]{block body}\scriptsize\raggedright #1\end{beamercolorbox}\vspace{0.02cm}}
+
+# Dependências globais:
+# - fgvbeamer.sty em /home/gustavodetarso/texmf/tex/latex/fgv/
+# - fgv_logo_horizontal_dark.png em /home/gustavodetarso/Documentos/.share/
+# - exportação no Emacs: C-c C-e l P
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Objeto da análise}
+\vspace{0.06cm}
+{\large\textbf{O foco é o fluxo pericial como sistema de alocação de capacidade}}\par\vspace{0.18cm}
+\begin{itemize}\setlength\itemsep{0.30em}
+\item A política envolve entrada, priorização territorial, triagem, análise documental, teleperícia, perícia presencial e mutirões.
+\item O objeto da análise é a regra que distribui capacidade e requerimentos entre essas modalidades.
+\item A decisão pública relevante é onde atuar, qual instrumento mobilizar e qual intensidade de revisão humana aplicar.
+\item O redesenho busca substituir uma lógica predominantemente reativa por critérios explícitos, auditáveis e baseados em evidências.
+\end{itemize}
+\vspace{0.08cm}
+\FGVStatement{A proposta examina o fluxo da Perícia Médica Federal como um problema de alocação territorial e decisória, e não como avaliação isolada de uma ferramenta específica.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Critério vigente de priorização territorial}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Critério operacional dominante}\small
+A escolha de locais para mutirões é orientada principalmente pelo TMEA-PM, o Tempo Médio de Espera para Atendimento em Perícia Médica.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Fatores político-institucionais}\small
+Pressões, articulações territoriais e coalizões políticas também podem influenciar a agenda de mutirões e a visibilidade de determinadas filas.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Limite do TMEA-PM}\small
+O indicador mede espera média, mas não revela sozinho complexidade da fila, elegibilidade documental, risco de divergência, custo-efetividade ou capacidade local de resposta.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Redesenho necessário}\small
+A priorização territorial deve combinar fila, perfil dos casos, capacidade disponível, potencial de resolução documental, telepericial e presencial.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{O problema não é apenas encaminhar melhor cada requerimento; é também decidir onde concentrar a capacidade pericial e quais instrumentos utilizar em cada território.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Custo variável e qualidade do gasto público}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Atividade extraordinária remunerada}\small
+Mutirões envolvem pagamento por perícia realizada. A análise documental também pode ser liberada em finais de semana ou períodos extraordinários, com remuneração específica.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Risco gerencial}\small
+Quando a alocação extraordinária segue apenas TMEA-PM ou pressão político-institucional, o gasto adicional pode não recair sobre os locais e rotas de maior valor resolutivo.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Qualidade do gasto}\small
+O uso de recursos extraordinários deve considerar custo por caso resolvido, potencial de redução da fila, perfil da demanda e probabilidade de decisão adequada em cada rota.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Implicação para o fluxo}\small
+A organização do fluxo permite decidir quando pagar por mutirão, quando ampliar análise documental, quando usar teleperícia e quando reservar perícia presencial.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{A existência de remuneração extraordinária reforça a necessidade de critérios de alocação orientados por evidência e custo-efetividade, e não apenas por estoque de fila ou pressão política.}
+\end{frame}
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Prioridade territorial para capacidade extraordinária}
+\small
+\begin{block}{Proposta do indicador}
+\[
+P^{\text{mutirão}}_j=\operatorname{Norm}(\alpha_1TMEA_j+\alpha_2Fila_j+\alpha_3AltoRisco_j+\alpha_4Deficit_j+\alpha_5Iniquidade_j-\alpha_6CustoMarginal_j)
+\]
+\end{block}
+\vspace{0.04cm}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{O que acrescenta ao TMEA-PM}\scriptsize
+Fila acumulada, volume esperado de casos que demandam revisão, déficit de capacidade ordinária e desigualdade territorial.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{O que controla no gasto}\scriptsize
+Custo marginal da intervenção extraordinária, como mutirão remunerado ou análise documental em fim de semana.
+\end{block}
+\end{columns}
+\vspace{0.06cm}
+\FGVStatement{A equação busca transformar a escolha de mutirões em decisão de custo-efetividade e equidade, reduzindo dependência exclusiva do TMEA-PM ou de pressões político-institucionais.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Arranjo vigente: rotas e respostas operacionais}
+\small
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Perícia presencial}\small
+Rota de maior intensidade clínica e decisória, especialmente relevante quando há complexidade, incerteza ou necessidade de exame direto.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Teleperícia}\small
+Avaliação humana remota, que reduz deslocamentos, mas ainda consome capacidade médico-pericial.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Análise documental}\small
+Rota documental operacionalizada pelo ATESTMED, com requisitos formais e régua estatística elementar centrada no CID-10.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Mutirões}\small
+Resposta operacional à fila, hoje acionada principalmente por TMEA-PM e por prioridades político-institucionais.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{O sistema já combina modalidades. A inovação proposta está na regra de alocação territorial e no roteamento dos casos dentro do fluxo.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Problema público e redesenho incremental}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Macroalocação}\small
+Definir onde concentrar capacidade: mutirão, teleperícia ampliada, reforço presencial ou redistribuição. O TMEA-PM é relevante, mas insuficiente como critério único.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Microalocação}\small
+Definir a rota de cada requerimento: análise documental, auditoria, teleperícia ou perícia presencial, conforme risco, incerteza e contexto clínico-laboral.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Efeitos da regra limitada}\small
+Filas podem ser tratadas apenas pela espera média, sem distinguir composição dos casos, capacidade resolutiva esperada e custo-efetividade da intervenção.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Redesenho proposto}\small
+Preservar as modalidades atuais, mas combiná-las por critérios explícitos de fila, risco, perfil laboral, potencial documental, capacidade disponível e governança.
+\end{block}
+\end{columns}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Abordagem racionalista aplicada ao fluxo pericial}
+\begin{columns}[T,onlytextwidth]
+\column{0.45\textwidth}
+{\large\textbf{Etapas de análise}}\par\vspace{0.16cm}
+\begin{enumerate}\setlength\itemsep{0.22em}
+\item Diagnóstico do problema.
+\item Definição de objetivos.
+\item Geração de alternativas.
+\item Critérios e indicadores.
+\item Projeção de resultados.
+\item Comparação e recomendação.
+\end{enumerate}
+\column{0.51\textwidth}
+\begin{block}{Nível da política}\small
+A análise compara desenhos institucionais para o fluxo: capacidade, triagem, auditoria, transparência e governança.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Nível operacional}\small
+O modelo estatístico estima risco, duração esperada e incerteza para orientar a rota documental, telepericial ou presencial.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{Modelo racionalista $\rightarrow$ matriz multicritério $\rightarrow$ validação dos modelos $\rightarrow$ regra de encaminhamento.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Alternativas de redesenho do fluxo}
+\small
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{A0 - Arranjo vigente}\small
+Fluxo híbrido com análise documental, teleperícia, perícia presencial e mutirões priorizados predominantemente por TMEA-PM.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{A1 - Governança da capacidade}\small
+TMEA-PM combinado com perfil da fila, capacidade local, custo por rota, potencial de teleperícia, custo-efetividade e critérios transparentes de priorização territorial.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{A2 - Triagem contextualizada}\small
+Roteamento dos casos por variáveis clínicas, territoriais e laborais, com auditoria por risco e revisão humana proporcional.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{A3 - Híbrido com IA auditada}\small
+A1 + A2 acrescidas de modelos de IA ou rede neural, apenas se houver ganho mensurável, auditável e custo-efetivo.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{A comparação deixa de ser entre modalidades isoladas e passa a ser sobre qual regra aloca melhor capacidade, territórios e casos no fluxo pericial.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Matriz de Síntese de Avaliação}
+\begin{columns}[T,onlytextwidth]
+\column{0.455\textwidth}
+\begin{block}{Resultados esperados}\small
+\textbf{Eficiência}: horas periciais liberadas.\par\vspace{0.18em}
+\textbf{Efetividade}: redução de TMEA-PM e tempo individual.\par\vspace{0.18em}
+\textbf{Custo-efetividade}: custo por caso corretamente direcionado ou resolvido.
+\end{block}
+\column{0.455\textwidth}
+\begin{block}{Garantias decisórias}\small
+\textbf{Segurança}: divergências em auditoria.\par\vspace{0.18em}
+\textbf{Equidade}: espera e erro por território, perfil e ocupação.\par\vspace{0.18em}
+\textbf{Legalidade}: reversões, recursos e nulidades.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\begin{columns}[T,onlytextwidth]
+\column{0.455\textwidth}
+\begin{block}{Viabilidade}\small
+Sistemas, governança, dados autorizados, critérios territoriais e capacitação.
+\end{block}
+\column{0.455\textwidth}
+\begin{block}{Simplicidade}\small
+Manutenção, transparência e explicabilidade operacional.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{A matriz compara alternativas completas de política pública. O algoritmo é avaliado como componente técnico de cada alternativa.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Seleção da política pública}
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\begin{block}{Objetivo público}\small
+Reduzir o TMEA-PM, o tempo individual de decisão e o uso inadequado da capacidade pericial sem elevar erro, desigualdade, opacidade ou insegurança jurídica.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Comparação institucional}\small
+As alternativas diferem em custos, critérios territoriais, capacidade necessária, resultados esperados, riscos, governança e aceitabilidade administrativa.
+\end{block}
+\column{0.48\textwidth}
+\begin{block}{Restrições mínimas}\small
+Sem indeferimento automático; limite de falso negativo; desempenho aceitável por subgrupos e territórios; uso legal, necessário e auditável de dados laborais.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Robustez}\small
+A matriz pondera indicadores e testa cenários de pesos. Uma alternativa robusta mantém desempenho favorável quando mudam prioridades entre eficiência, segurança e equidade.
+\end{block}
+\end{columns}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Rota documental no fluxo pericial}
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\begin{block}{Função atual}\small
+A análise documental é uma das portas do fluxo pericial. No arranjo vigente, ela é operacionalizada pelo ATESTMED, com requisitos formais e régua estatística elementar baseada no CID-10.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Limite analítico}\small
+A análise por CID-10 introduz evidência empírica, mas não captura plenamente ocupação, exigência funcional, território, histórico laboral e incerteza.
+\end{block}
+\column{0.48\textwidth}
+\begin{block}{Função no redesenho}\small
+A rota documental permanece integrada ao fluxo, mas passa a ser acionada por critérios contextualizados, com auditoria aleatória e possibilidade de escalonamento.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Papel institucional}\small
+O redesenho define quando a análise documental é suficiente e quando o caso deve seguir para teleperícia, auditoria humana ou perícia presencial.
+\end{block}
+\end{columns}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Do CID-10 isolado ao contexto clínico-laboral}
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\begin{block}{Régua estatística elementar}\small
+A média ou o padrão histórico por CID-10 introduz evidência empírica, mas não diferencia adequadamente ocupação, território, idade, exigências funcionais ou histórico laboral.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Representação simplificada}\small
+\[
+\text{Régua atual} \approx f(\text{CID-10})
+\]
+\end{block}
+\column{0.48\textwidth}
+\begin{block}{Triagem contextualizada}\small
+O caso passa a ser comparado com grupos de referência clínica, territorial, documental e laboralmente semelhantes.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Representação proposta}\small
+\[
+ f(\text{CID},\text{perfil},\text{território},\text{ocupação},\text{histórico})
+\]
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{A atividade laboral contextualiza a limitação funcional. Ela não constitui, isoladamente, critério automático de deferimento ou indeferimento.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Automação graduada do fluxo de avaliação}
+\begin{columns}[T,onlytextwidth]
+\column{0.315\textwidth}
+\begin{block}{Validação documental}\small
+Autenticidade, assinatura digital, emissor, campos obrigatórios, duplicidades e consistência de datas.
+\end{block}
+\column{0.315\textwidth}
+\begin{block}{Classificação estatística}\small
+Percentis condicionais, outliers, probabilidade de divergência, impacto do erro, incerteza e necessidade de revisão.
+\end{block}
+\column{0.315\textwidth}
+\begin{block}{Roteamento}\small
+\textbf{Baixo risco}: ATESTMED.\par\vspace{0.18em}
+\textbf{Risco médio}: teleperícia ou auditoria.\par\vspace{0.18em}
+\textbf{Alto risco}: perícia presencial.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{A automação abrange validação, classificação e encaminhamento. O indeferimento permanece condicionado à análise humana e às regras vigentes.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Modelo estatístico: duração, risco e trabalho}
+\small
+\begin{block}{Estágio 1 - duração esperada do afastamento}\small
+\[
+Q_{\tau}(D \mid \text{CID, idade, sexo, território, CBO, exigência funcional, histórico laboral})
+\]
+Produz percentis condicionais: P50, P75, P90 e P95.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Estágio 2 - risco de divergência ou necessidade de revisão}\small
+\[
+P(\text{divergência}=1 \mid X)
+\]
+$X$ inclui duração solicitada, qualidade documental, atividade/CBO, esforço físico, tempo na ocupação, histórico de afastamentos e histórico decisório.
+\end{block}
+\vspace{0.08cm}
+\FGVStatement{O primeiro estágio descreve o padrão esperado; o segundo estima a necessidade de controle adicional. Ambos informam a rota de avaliação.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Camada de IA e rede neural}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Modelos interpretáveis}\small
+Regressão quantílica para duração esperada; regressão logística para risco de divergência; árvores ou gradient boosting como modelos comparativos.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Rede neural}\small
+Modelo candidato para capturar interações não lineares entre CID, ocupação, território, duração, histórico laboral e características documentais.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Resultado operacional}\small
+Escore de necessidade de revisão, prioridade de auditoria e recomendação de rota entre ATESTMED, teleperícia e perícia presencial.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Condição de adoção}\small
+A rede neural só é incorporada se demonstrar ganho relevante em calibração, estabilidade, equidade, explicabilidade operacional e custo-efetividade.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{IA é mecanismo de predição e priorização. A decisão institucional permanece estruturada por critérios públicos e revisão humana.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Seleção do modelo preditivo}
+\small
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\begin{block}{Modelos candidatos}\small
+\textbf{Baseline}: régua atual por CID-10.\par\vspace{0.16em}
+\textbf{Interpretáveis}: regressão logística e quantílica.\par\vspace{0.16em}
+\textbf{Não lineares}: árvores, random forest ou gradient boosting.\par\vspace{0.16em}
+\textbf{Avançado}: rede neural.
+\end{block}
+\column{0.48\textwidth}
+\begin{block}{Desempenho técnico}\small
+Calibração, sensibilidade para casos que exigem revisão, falsos negativos, estabilidade temporal e desempenho por CID, território, idade e ocupação.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Regra de seleção}\small
+Diante de desempenho semelhante, adota-se o modelo mais simples, explicável, auditável e viável para uso institucional.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{O melhor modelo não é necessariamente o mais complexo: combina desempenho preditivo, segurança decisória, equidade e governança.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Fluxo redesenhado de encaminhamento}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{1. Entrada}\small
+Requerimento, atestado digital, CID, dias solicitados, atividade/CBO, histórico laboral e dados administrativos autorizados.
+\end{block}
+\vspace{0.06cm}
+\begin{block}{2. Validação}\small
+Autenticidade, completude, padronização, cruzamentos autorizados e inconsistências documentais.
+\end{block}
+\vspace{0.06cm}
+\begin{block}{3. Contextualização}\small
+Grupo de referência, duração esperada, risco de divergência, impacto do erro e incerteza.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{4. Roteamento}\small
+\textbf{Baixo risco}: ATESTMED documental + auditoria aleatória.\par\vspace{0.18em}
+\textbf{Risco médio}: teleperícia ou auditoria humana.\par\vspace{0.18em}
+\textbf{Alto risco/incerteza}: perícia presencial prioritária.
+\end{block}
+\vspace{0.06cm}
+\begin{block}{5. Aprendizado}\small
+Auditoria independente, registro de divergências, monitoramento de vieses, recalibração e revisão periódica das regras.
+\end{block}
+\end{columns}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Exemplo ilustrativo: Rafael e o CID-10 M54.5}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Perfil do requerimento}\small
+Rafael (nome fictício), 45 anos, residente em Teresina-PI, trabalha na construção civil há 22 anos. Apresenta CID-10 M54.5 e solicita afastamento de 45 dias.
+\par\vspace{0.25em}
+O requerimento informa atividade/CBO, tempo na ocupação e histórico laboral. O atestado possui assinatura digital válida.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Grupo de referência}\small
+CID M54.5 + idade + sexo + Teresina/PI + construção civil + exigências funcionais + tempo na atividade + histórico de afastamentos.
+\par\vspace{0.25em}
+Premissa ilustrativa: média histórica de 45 dias; a cada 100 pedidos, 96 deferidos, 3 indeferidos em perícia e 1 indeferido por motivo administrativo.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{Os 45 dias não constituem corte automático. A análise estima posição na distribuição, integridade documental e necessidade de revisão adicional.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Classificação do caso Rafael}
+\small
+\begin{block}{Integridade documental}\small
+Assinatura digital válida, emissor identificável, campos completos e consistência entre CID, dias solicitados, atividade declarada e requisitos administrativos.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Avaliação contextualizada}\small
+O sistema estima o percentil dos 45 dias no grupo de referência e calcula risco de divergência, incorporando documentação, ocupação, histórico laboral e incerteza.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Rota proporcional ao risco}\small
+\textbf{Baixo risco}: deferimento documental via ATESTMED, quando permitido, com auditoria aleatória.\par\vspace{0.16em}
+\textbf{Risco médio}: teleperícia ou auditoria documental humana.\par\vspace{0.16em}
+\textbf{Risco alto, inconsistência ou incerteza}: perícia presencial prioritária.
+\end{block}
+\end{frame}
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Mensuração do impacto e da incerteza}
+\small
+\begin{block}{Impacto do erro: consequência de escolher a rota inadequada}
+\[
+I_i=\operatorname{Norm}(\beta_1H_i+\beta_2R_i+\beta_3J_i+\beta_4O_i)
+\]
+{\scriptsize $H_i$: gravidade funcional/protetiva; $R_i$: retrabalho; $J_i$: risco jurídico-administrativo; $O_i$: custo operacional da correção.}
+\end{block}
+\vspace{0.06cm}
+\begin{block}{Incerteza: confiança limitada na previsão do modelo}
+\[
+U_i=\operatorname{Norm}(\gamma_1M_i+\gamma_2D_i+\gamma_3V_i+\gamma_4L_i+\gamma_5C_i)
+\]
+{\scriptsize $M_i$: dados ausentes/inconsistentes; $D_i$: distância da base histórica; $V_i$: desacordo entre modelos; $L_i$: proximidade do limiar; $C_i$: baixa calibração do subgrupo.}
+\end{block}
+\vspace{0.06cm}
+\FGVStatement{Esses índices traduzem informações administrativas, documentais e estatísticas para escala comum de 0 a 1, permitindo comparar casos e acionar revisão humana quando houver alto risco ou alta incerteza.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Escore de priorização e limites da automação}
+\[
+\text{Prioridade}_i =
+\big[P(\text{divergência}_i)\big]^{w_1}
+\times
+\big[I_i\big]^{w_2}
+\times
+\big[U_i\big]^{w_3}
+\]
+{\scriptsize $I_i$ é impacto do erro, $U_i$ é incerteza da previsão, e $w_1,w_2,w_3$ são pesos institucionais.}
+\vspace{0.06cm}
+\begin{columns}[T,onlytextwidth]
+\column{0.315\textwidth}
+\begin{block}{Baixo risco}\small
+ATESTMED documental, quando permitido pela norma, com auditoria aleatória posterior.
+\end{block}
+\column{0.315\textwidth}
+\begin{block}{Risco intermediário}\small
+Teleperícia ou auditoria documental humana antes da decisão final.
+\end{block}
+\column{0.315\textwidth}
+\begin{block}{Alto risco ou incerteza}\small
+Perícia presencial prioritária ou revisão humana especializada.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{O escore pondera risco, impacto e incerteza conforme prioridades institucionais. Ele regula a rota de atendimento e não produz indeferimento automático.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Validação e implementação controlada}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Validação retrospectiva}\small
+Bases de treino e teste, calibração do risco, comparação com modelos simples, estabilidade temporal e avaliação por subgrupos clínicos, territoriais e ocupacionais.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Modo sombra}\small
+O modelo produz recomendações sem alterar decisões reais. As rotas sugeridas são comparadas às decisões humanas e aos resultados de auditoria.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Piloto prospectivo}\small
+Comparação entre unidades ou períodos, auditoria aleatória e acompanhamento de fila, custo, erro, equidade e reversões.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Custo-efetividade}\small
+\[
+CE=
+\frac{C_{\text{novo fluxo}}-C_{\text{fluxo atual}}}
+{E_{\text{novo fluxo}}-E_{\text{fluxo atual}}}
+\]
+{\scriptsize $E$ representa casos corretamente direcionados. O denominador mede o ganho adicional do novo fluxo.}
+\end{block}
+\end{columns}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Salvaguardas institucionais}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Decisão e controle}\small
+Sem indeferimento automático; revisão humana em casos críticos; auditoria aleatória e independente; registro das divergências.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Equidade e vieses}\small
+Monitoramento por CID, território, sexo, idade, ocupação/CBO, histórico laboral e rota de avaliação utilizada.
+\end{block}
+\column{0.49\textwidth}
+\begin{block}{Dados e governança}\small
+Uso de dados laborais apenas quando necessário, autorizado e auditável; minimização de dados; proteção de informações e rastreabilidade.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{IA responsável}\small
+Explicabilidade operacional, calibração, comparação com modelos interpretáveis e revisão periódica de parâmetros.
+\end{block}
+\end{columns}
+\vspace{0.08cm}
+\FGVStatement{A proteção do direito decorre tanto da qualidade do modelo quanto das regras institucionais que limitam e auditam seu uso.}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Conclusão}
+\begin{block}{Redesenho proposto}\small
+O fluxo de análise dos benefícios por incapacidade pode evoluir para uma alocação contextualizada de capacidade e de casos, combinando priorização territorial, análise documental, teleperícia, perícia presencial e mutirões.
+\end{block}
+\vspace{0.10cm}
+\begin{block}{Lógica de decisão}\small
+A política é selecionada por comparação multicritério, incluindo qualidade do gasto; o modelo preditivo é selecionado por validação técnica, equidade, explicabilidade e governança.
+\end{block}
+\vspace{0.14cm}
+\begin{beamercolorbox}[wd=\linewidth,sep=0.20cm,rounded=true]{block title}
+\centering\large\textbf{Modelo racionalista + matriz de síntese + estatística/IA}\par\vspace{0.10cm}\normalsize
+Capacidade pericial aplicada onde a revisão humana produz maior valor decisório.
+\end{beamercolorbox}
+\end{frame}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{frame}[t]{Referências e notas metodológicas}
+\begin{block}{Referência central}\footnotesize
+SECCHI, Leonardo. \textit{Análise de políticas públicas: diagnóstico de problemas, recomendação de soluções}. São Paulo: Cengage Learning, 2020.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Apoio conceitual}\small
+\textbf{Abordagem racionalista:} Capítulo 4.\par\vspace{0.14em}
+\textbf{Critérios e indicadores:} Seção 4.2.\par\vspace{0.14em}
+\textbf{Análise custo-efetividade:} Seção 4.3.2.\par\vspace{0.14em}
+\textbf{Comparação e hierarquização:} Seção 4.3.5, incluindo a matriz de síntese de avaliação.
+\end{block}
+\vspace{0.08cm}
+\begin{block}{Nota metodológica}\footnotesize
+O caso Rafael, os parâmetros M54.5, os critérios territoriais e as premissas de remuneração extraordinária são ilustrativos e dependem de validação empírica e documental. A implementação requer dados oficiais autorizados, avaliação jurídica, monitoramento de vieses e governança de dados.
+\end{block}
+\end{frame}
+#+END_EXPORT
