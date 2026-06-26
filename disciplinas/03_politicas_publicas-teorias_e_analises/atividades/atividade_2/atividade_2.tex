@@ -1,0 +1,88 @@
+% Created 2026-05-21 qui 16:30
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt,a4paper]{article}
+\usepackage{fgv-paper}
+% Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+\usepackage[backend=biber,style=abnt,sorting=nty,giveninits=true]{biblatex}
+\addbibresource{resumo_artigos_encontro_1.bib}
+\geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{tabularray}
+\usepackage{ltablex}
+\keepXColumns
+\setlength{\emergencystretch}{3em}
+\sloppy
+\definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+\definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+\definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+\setlength{\headheight}{58pt}
+\setlength{\headsep}{18pt}
+\newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}
+\newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+\newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+\fancypagestyle{fgvreportstyle}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\fancypagestyle{plain}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+\institution{fgv}
+\programname{}
+\coursename{Mestrado Acadêmico em Políticas Públicas e Governo}
+\disciplinename{Políticas Públicas: Teoria e Análise}
+\professorname{Lizandro Lui}
+\cityname{Brasília}
+\author{Gustavo M. Mendes de Tarso}
+\date{\today}
+\title{Resumo analítico dos textos}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={Resumo analítico dos textos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Pt_Br}}
+\begin{document}
+
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado Acadêmico em Políticas Públicas e Governo \\
+\textbf{Turma}                   & 2026.1 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Políticas Públicas: Teoria e Análise \\
+\textbf{Professor}               & Lizandro Lui \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 2026 \\
+\textbf{Título do trabalho}      & Resumo analítico dos textos \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+
+\clearpage
+
+Ao ler os textos sobre implementação, fiquei com a impressão de que eles questionam uma ideia que eu mesmo tinha de forma meio automática: a de que implementar uma política pública seria apenas executar uma decisão já tomada. Depois da leitura, me parece que a implementação é menos uma etapa “administrativa” e mais um momento em que a política pública realmente começa a encontrar a vida concreta.
+
+No texto de Luciana Leite Lima e Luciano D’Ascenzi, entendi que há duas formas principais de olhar para esse processo. A primeira olha de cima para baixo, valorizando o desenho da política, a clareza dos objetivos, as normas, os recursos e a coordenação. Essa visão faz sentido, porque uma política mal formulada provavelmente cria problemas para quem vai executá-la. Mas ela não explica tudo.
+
+A outra perspectiva olha de baixo para cima, para os contextos locais e para os atores que implementam a política. Aqui, os servidores e profissionais da ponta não aparecem como simples cumpridores de ordens. Eles interpretam regras, adaptam procedimentos e tomam decisões diante de situações que o plano original não conseguiu prever. O ponto que mais me marcou foi perceber que a política real nasce desse encontro entre norma, recurso, território e interpretação dos atores.
+
+Os textos de Gabriela Lotta ajudam a enxergar melhor esse cotidiano. Quando um agente público atende, classifica ou prioriza usuários, ele também está dando forma à política. A ideia de usuários “fáceis” e “difíceis” me chamou atenção porque mostra algo incômodo: mesmo uma política criada para proteger direitos pode, na prática, produzir diferenças de tratamento. Às vezes, quem parece “difícil” é justamente quem está em situação mais vulnerável.
+
+Os demais textos ampliam essa compreensão. No caso do SUAS, fica claro que implementar em um país federativo como o Brasil depende de normas nacionais, financiamento, indicadores e capacidades locais. Não é só Brasília decidindo, nem o município agindo sozinho. Já o texto sobre o PPCDAm mostra que a implementação muda com o tempo, por fases, avaliações, correções e aprendizados.
+
+O texto sobre organizações religiosas também mostra que muitas políticas são executadas em arranjos híbridos. Estado e organizações da sociedade civil cooperam, mas também levam valores e lógicas diferentes para dentro da política. Isso torna a implementação um espaço de mediação e tensão.
+
+A partir dos textos apresentados pelos colegas, acho que esse conjunto teórico ajuda a produzir conhecimento porque ensina a olhar para onde a política realmente acontece: no município, no serviço, no atendimento, na visita, no guichê, na parceria institucional. No fim, minha compreensão é que a implementação não é o fim da política pública. Ela é parte decisiva da sua própria construção.
+\end{document}

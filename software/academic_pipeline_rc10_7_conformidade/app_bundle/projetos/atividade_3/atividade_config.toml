@@ -1,0 +1,250 @@
+# Gerado por academic_pipeline_toml_generator_interativo.py
+# Preset: atividade_local_fgv — Atividade local FGV
+# Descrição: Gera atividade acadêmica com Ficha Técnica FGV a partir de corpus local. Não faz busca externa nem relatório PRISMA.
+
+[projeto]
+nome = "atividade_3"
+descricao = "Gera atividade acadêmica com Ficha Técnica FGV a partir de corpus local. Não faz busca externa nem relatório PRISMA."
+preset = "atividade_local_fgv"
+
+[instituicao]
+perfil = "fgv"
+
+[openai]
+model = "gpt-5.4"
+
+[pipeline]
+modo_entrada = "documentos_locais"
+executar_pesquisa = false
+executar_documento = true
+executar_bundle = false
+pesquisa_dir_existente = ""
+
+[paths]
+# A partir da rc10.7.20, todos os diretórios de saída/cache/trabalho ficam aqui.
+document_output_dir = "../../output/documento"
+research_output_dir = "../../output/pesquisa"
+work_dir = "../../output/work"
+cache_dir = "../../output/cache"
+document_prefix = "atividade_3"
+research_prefix = "relatorio_prisma"
+create_document_subdir = true
+create_research_subdir = true
+create_work_subdir = true
+create_cache_subdir = true
+
+[orientacoes]
+paths = [
+  "../../../../../disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_3/orientacoes_aula_4.txt"
+]
+inline = "Escrever uma página, com aproximadamente 30 linhas, explicando o que foi compreendido sobre a abordagem do desenho de políticas públicas e o que essa abordagem se propõe a investigar. Em seguida, apresentar um breve exercício de aplicação da teoria a uma política pública escolhida, indicando como uma pesquisa poderia analisar sua configuração atual, sua evolução ao longo do tempo ou compará-la entre diferentes estados, municípios ou países. A resposta deve demonstrar tanto a compreensão da teoria quanto sua utilização prática."
+
+[documentos_locais]
+ativos = true
+modo_entrada = "documentos_locais"
+input_zip = "../../../../../disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_3/documentos-base.zip"
+input_dir = ""
+tipos = ["pdf", "docx", "txt", "md", "org"]
+recursive = true
+limpar_extracao_anterior = true
+copiar_para_fulltext_cache = true
+limpar_cache_anterior = true
+auto_detect_bib = true
+gerar_bib_revisado_ia = true
+enriquecer_metadados_buscadores = false
+fontes_metadados = [
+  "crossref",
+  "openalex"
+]
+min_score_match_metadados = 0.82
+extrair_doi_dos_pdfs = true
+doi_manifest_path = ""
+preferir_doi_manual = true
+buscar_metadados_por_doi = false
+incluir_notas_metadados_inferidos = false
+deduplicar_bib = true
+deduplicar_referencias = true
+autor_padrao = ""
+ano_padrao = "s.d."
+
+[pesquisa]
+tema = "A abordagem do desenho de políticas públicas e sua aplicação à análise do funcionamento de uma política pública."
+recorte = "Explicar o que a abordagem do desenho de políticas públicas se propõe a investigar e apresentar um exercício breve de aplicação dessa lente a uma política pública escolhida, considerando sua configuração atual, evolução temporal ou comparação territorial."
+objetivo = "Produzir uma atividade acadêmica de aproximadamente uma página, ou cerca de 30 linhas, que demonstre compreensão da abordagem do desenho de políticas públicas e capacidade de utilizá-la em um esboço de pesquisa aplicado."
+pergunta_pesquisa = "Como a abordagem do desenho de políticas públicas permite compreender a configuração e o funcionamento de uma política pública concreta?"
+hipotese = "A abordagem do desenho de políticas públicas permite analisar como problemas, objetivos, instrumentos, públicos-alvo, regras e arranjos de implementação se articulam na configuração de uma política pública e ajudam a explicar seu funcionamento, seus resultados e suas mudanças ao longo do tempo."
+palavras_chave = [
+  "desenho de políticas públicas",
+  "instrumentos de políticas públicas",
+  "implementação",
+  "análise de políticas públicas",
+  "configuração institucional",
+  "política pública aplicada"
+]
+idiomas = [
+  "português"
+]
+tipo_estudo = "atividade acadêmica"
+periodo = ""
+bases = ["Crossref", "OpenAlex", "Semantic Scholar", "Scopus"]
+
+[resumo_artigos]
+ativo = false
+geracao_em_etapas = false
+# Quando true, o pipeline gera o document.json em chamadas separadas:
+# análise do artigo 1/N, análise do artigo 2/N, comparação e síntese.
+# Isso exibe progresso no terminal e salva checkpoints .checkpoint_*.json no output.
+modo = "analitico_comparativo"
+usar_apenas_corpus_local = false
+incluir_introducao = false
+incluir_resumos_individuais = false
+incluir_comparacao = false
+incluir_sintese_analitica = false
+incluir_consideracoes_finais = false
+incluir_referencias = true
+incluir_mapa_mental = false
+uma_secao_por_artigo = false
+comparar_convergencias = false
+comparar_divergencias = false
+apontar_limites = false
+nivel_detalhamento = "medio"
+profundidade_analitica = "medio"
+
+[atividade]
+curso = "Mestrado Acadêmico em Políticas Públicas e Governo"
+turma = "2026.1"
+polo = "Brasília"
+disciplina = "Políticas Públicas - Teoria e Análise"
+professor = "Lizandro Lui"
+aluno = "Gustavo M. Mendes de Tarso"
+data = "2026"
+titulo_trabalho = "Desenho de políticas públicas: compreensão e exercício de aplicação"
+
+[documento]
+tipo_documento = "atividade"
+tipo_conteudo = "atividade"
+genero_academico = "atividade"
+layout = "atividade_fgv"
+classe_latex = "fgv-paper"
+titulo_trabalho = "Desenho de políticas públicas: compreensão e exercício de aplicação"
+autor = "Gustavo M. Mendes de Tarso"
+inferir_campos_vazios_ia = true
+institution_name = "fgv"
+program_name = ""
+course_name = "Mestrado Acadêmico em Políticas Públicas e Governo"
+discipline_name = "Políticas Públicas - Teoria e Análise"
+professor_name = "Lizandro Lui"
+city_name = "Brasília"
+ano = "2026"
+data = "2026"
+papertype = "Atividade acadêmica"
+perfil_redacao = "academico_analitico"
+covernote = "Trabalho acadêmico elaborado para a disciplina."
+estilo_citacao = "abnt"
+exportar_org = true
+exportar_pdf = true
+exportar_docx = false
+gerar_documento_json = true
+modo_renderizacao = "document_model"
+usar_citacoes_latex_diretas = true
+validar_org_final = true
+falhar_se_org_tiver_chave_crua = true
+falhar_se_org_tiver_empty_citation = true
+falhar_se_org_tiver_mencao_tecnica = true
+
+[bibliografia]
+# O .bib é neutro. O estilo visual é aplicado na renderização.
+estilo_citacao = "abnt"
+latex_style = "abnt"
+latex_options = "backend=biber,style=abnt,sorting=nty,giveninits=true"
+docx_csl = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+buscar_metadados_por_doi = false
+enriquecer_metadados_buscadores = false
+
+[relatorio_pesquisa]
+ativo = false
+tipo = "prisma"
+titulo = ""
+exportar_json = true
+exportar_org = true
+exportar_pdf = false
+exportar_docx = false
+exportar_xlsx = false
+exportar_fluxograma = false
+validar = true
+falhar_se_invalido = false
+prisma_json_path = ""
+pesquisa_dir_existente = ""
+criterios_inclusao = [
+  "Aderência substantiva ao tema, recorte e objetivo.",
+  "Relação direta com os textos-base ou com o problema de pesquisa.",
+  "Disponibilidade de metadados mínimos ou DOI para identificação bibliográfica."
+]
+criterios_exclusao = [
+  "Fora do tema ou do recorte.",
+  "Duplicado.",
+  "Ausência de relação substantiva com a pergunta de pesquisa."
+]
+
+[docx]
+ativo = false
+reference_docx = "../../institutions/fgv/docx/reference_fgv.docx"
+usar_pandoc = false
+csl_path = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+falhar_se_pandoc_falhar = false
+incluir_capa = true
+incluir_referencias = true
+incluir_mapa_mental = false
+
+[latex]
+pdf_engine = "lualatex"
+org_latex_class_init = "../../misc/academic-writing.el"
+latex_extra_path = "../../misc/fgv"
+fgv_logo_path = "../../misc/fgv.png"
+
+[prompts]
+ativos = true
+global_paths = ["../../prompts/global/orientacao_geral_execucao.txt"]
+institution_paths = ["profile://prompts/fgv_geral.txt"]
+research_paths = [
+  "../../prompts/research/triagem_prompt.txt",
+  "../../prompts/research/diretivas_extras.txt"
+]
+paper_paths = []
+atividade_paths = [
+  "../../prompts/document/atividade.txt",
+  "../../../../../disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_3/prompt_base_atividade_aula_4.txt"
+]
+resumo_artigos_paths = []
+dissertacao_paths = []
+prisma_paths = []
+document_paths = []
+
+[mapa_mental]
+gerar = false
+ativo = false
+posicao = "apos_referencias"
+titulo = "Mapa mental dos textos analisados"
+arquivo = "mapa_mental"
+formato = "png"
+renderizar = false
+inserir_no_org = false
+plantuml_jar_path = ""
+plantuml_limit_size = 8192
+colorido = true
+sobrescrever_cores_existentes = true
+cores_niveis = ["#D9EAF7", "#DFF2E1", "#FFF2CC", "#F8D7DA", "#F8D7DA", "#F8D7DA", "#F8D7DA"]
+falhar_se_nao_renderizar = false
+
+[conformidade]
+ativo = true
+gerar_relatorio = true
+
+[qualidade]
+ativo = true
+gerar_relatorio = true
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false

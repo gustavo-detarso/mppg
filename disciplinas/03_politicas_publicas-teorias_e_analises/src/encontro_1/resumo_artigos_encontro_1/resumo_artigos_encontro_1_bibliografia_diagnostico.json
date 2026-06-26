@@ -1,0 +1,85 @@
+[
+  {
+    "doc": "Bijos_2024_ONascimentoDaInstitui├º├úoFiscalIndependenteBrasileira_doi_10.1590_0103-3352.2024.43.276419pt.pdf",
+    "bib_key": "anonsd_sem_titulo",
+    "source": "scopus",
+    "doi": "10.1590/0103-3352.2024.43.276419pt",
+    "doi_source": "extracted",
+    "metadata": {
+      "entry_type": "article",
+      "title": "Sem título",
+      "authors": [],
+      "editors": [],
+      "year": null,
+      "booktitle": null,
+      "journaltitle": null,
+      "publisher": null,
+      "location": null,
+      "pages": null,
+      "volume": null,
+      "number": null,
+      "doi": "10.1590/0103-3352.2024.43.276419pt",
+      "isbn": null,
+      "url": null,
+      "note": null
+    }
+  },
+  {
+    "doc": "Capella_2022_abordagens_contemporaneas_para_a_analise_de_politicas_publicas.pdf",
+    "bib_key": "brasil2022_abordagens_contemporaneas",
+    "source": "ai",
+    "doi": null,
+    "doi_source": null,
+    "metadata": {
+      "entry_type": "book",
+      "title": "Abordagens contemporâneas para a análise de políticas públicas",
+      "authors": [],
+      "editors": [
+        "Felipe Gonçalves Brasil",
+        "Ana Cláudia Niedhardt Capella"
+      ],
+      "year": "2022",
+      "booktitle": null,
+      "journaltitle": null,
+      "publisher": "EdUERJ",
+      "location": "Rio de Janeiro",
+      "pages": null,
+      "volume": null,
+      "number": null,
+      "doi": null,
+      "isbn": null,
+      "url": null,
+      "note": null
+    }
+  },
+  {
+    "doc": "Ferreira_et_all_2019_Pol├¡ticaHabitacionalNoBrasil_doi_10.1590_2175-3369.011.001.AO04.pdf",
+    "bib_key": "ferreira2019_politica_habitacional",
+    "source": "crossref",
+    "doi": "10.1590/2175-3369.011.001.ao04",
+    "doi_source": "extracted",
+    "metadata": {
+      "entry_type": "article",
+      "title": "Política habitacional no Brasil: uma análise das coalizões de defesa do Sistema Nacional de Habitação de Interesse Social versus o Programa Minha Casa, Minha Vida",
+      "authors": [
+        "Geniana Gazotto Ferreira",
+        "Paulo Calmon",
+        "Antônio Sérgio Araújo Fernandes",
+        "Suely Mara Vaz Guimarães de Araújo"
+      ],
+      "editors": [],
+      "year": "2019",
+      "booktitle": null,
+      "journaltitle": "urbe. Revista Brasileira de Gestão Urbana",
+      "publisher": "FapUNIFESP (SciELO)",
+      "location": null,
+      "pages": null,
+      "volume": "11",
+      "number": null,
+      "doi": "10.1590/2175-3369.011.001.ao04",
+      "isbn": null,
+      "url": "https://doi.org/10.1590/2175-3369.011.001.ao04",
+      "note": null
+    }
+  }
+]

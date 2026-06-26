@@ -167,6 +167,8 @@ def build_prompt(
     9. Não invente referência fora do .bib.
     9.1. Não crie seção final chamada REFERÊNCIAS, BIBLIOGRAFIA ou similar; o renderizador insere a bibliografia automaticamente com base no .bib.
     10. Inclua metadata conforme os dados fornecidos.
+    10.1. Se tema, recorte, objetivo ou pergunta orientadora estiverem vazios no TOML, mas estiverem presentes nas orientações carregadas, infira-os fielmente dessas orientações; não invente um novo enunciado.
+    10.2. Se pesquisa.gerar_palavras_chave_ia=true e pesquisa.palavras_chave estiver vazio, infira de 4 a 6 palavras-chave acadêmicas a partir do tema, da pergunta orientadora, do enunciado, das orientações e do corpus local. Use-as no campo de palavras-chave do documento quando esse campo for aplicável, sem criar uma seção artificial apenas para listá-las.
 
     Diretivas complementares carregadas pelo prompt bank:
     {prompt_extras}

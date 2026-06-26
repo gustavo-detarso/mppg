@@ -29,7 +29,7 @@ docx_csl = "app://templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
 pdf_engine = "lualatex"
 org_latex_class_init = "app://misc/academic-writing.el"
 latex_extra_path = "profile://latex"
-fgv_logo_path = "profile://assets/fgv.png"
+fgv_logo_path = "app://misc/fgv.png"
 
 [defaults.docx]
 ativo = true

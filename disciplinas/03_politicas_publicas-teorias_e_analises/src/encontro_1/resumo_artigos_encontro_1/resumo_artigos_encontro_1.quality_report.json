@@ -1,0 +1,84 @@
+{
+  "title": "Resumo analítico dos textos",
+  "type": "atividade",
+  "total_words": 8645,
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "title": "Introdução",
+      "level": 1,
+      "words": 455,
+      "blocks": 5
+    },
+    {
+      "id": "resumo_individual_dos_textos",
+      "title": "Resumo individual dos textos",
+      "level": 1,
+      "words": 0,
+      "blocks": 0
+    },
+    {
+      "id": "sec-anonsd-sem-titulo",
+      "title": "O nascimento da Instituição Fiscal Independente brasileira: explicação à luz do modelo de Kingdon",
+      "level": 2,
+      "words": 1539,
+      "blocks": 11
+    },
+    {
+      "id": "sec-brasil2022-abordagens-contemporaneas",
+      "title": "O modelo de múltiplos fluxos",
+      "level": 2,
+      "words": 1703,
+      "blocks": 13
+    },
+    {
+      "id": "sec-ferreira-politica-habitacional",
+      "title": "Política habitacional no Brasil: uma análise das coalizões de defesa do Sistema Nacional de Habitação de Interesse Social versus o Programa Minha Casa, Minha Vida",
+      "level": 2,
+      "words": 1628,
+      "blocks": 12
+    },
+    {
+      "id": "comparacao-entre-os-textos",
+      "title": "Comparação entre os textos",
+      "level": 1,
+      "words": 2017,
+      "blocks": 13
+    },
+    {
+      "id": "sec-sintese-analitica",
+      "title": "Síntese analítica",
+      "level": 1,
+      "words": 982,
+      "blocks": 8
+    },
+    {
+      "id": "sec-consideracoes-finais",
+      "title": "Considerações finais",
+      "level": 1,
+      "words": 321,
+      "blocks": 3
+    }
+  ],
+  "citations_total": 3,
+  "cited_keys": [
+    "brasil2022_abordagens_contemporaneas",
+    "anonsd_sem_titulo",
+    "ferreira2019_politica_habitacional"
+  ],
+  "bibliography_entries_used_total": 3,
+  "bibliography_entries_not_cited": [],
+  "missing_in_bib": [],
+  "org_diagnostics": {
+    "path": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.org",
+    "contains_empty_citation": false,
+    "contains_org_cite": false,
+    "technical_terms_found": [],
+    "raw_biblike_tokens": [
+      "brasil2022_abordagens_contemporaneas",
+      "ferreira2019_politica_habitacional"
+    ]
+  },
+  "warnings": [],
+  "ok": true
+}

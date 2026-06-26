@@ -10,6 +10,7 @@ python-dotenv = ">=1.0"
 pypdf = ">=4.0"
 python-docx = ">=1.1"
 openpyxl = ">=3.1"
+prompt-toolkit = "*"
 
 [dev-packages]
 pytest = "*"

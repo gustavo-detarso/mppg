@@ -1,0 +1,43 @@
+Produza uma atividade acadêmica com base exclusivamente nos textos do corpus local e nas orientações da aula.
+
+A entrega deve ter aproximadamente uma página, ou cerca de 30 linhas de texto principal. Não produza um resumo separado e extenso de cada artigo. Use os textos de forma integrada para explicar a abordagem do desenho de políticas públicas.
+
+A atividade deve responder claramente a duas questões:
+
+1. O que é a abordagem do desenho de políticas públicas e o que ela se propõe a investigar?
+
+2. Como essa abordagem poderia ser utilizada em uma pesquisa sobre uma política pública concreta?
+
+Na primeira parte, explique de forma sintética e analítica que a abordagem do desenho de políticas examina a configuração substantiva das políticas públicas, incluindo problemas definidos, objetivos, instrumentos, públicos-alvo, regras, estruturas de implementação e relações entre meios e fins.
+
+Na segunda parte, escolha uma política pública e formule um exercício de aplicação. A aplicação pode:
+
+* analisar a configuração atual da política;
+* investigar sua evolução ao longo do tempo; ou
+* comparar o desenho da política entre dois ou três estados, municípios ou países.
+
+O exercício não precisa realizar a pesquisa completa. Deve apresentar um esboço coerente de como a pesquisa seria construída, indicando:
+
+* política escolhida;
+* problema ou questão de pesquisa;
+* componentes do desenho que seriam observados;
+* possíveis documentos ou evidências;
+* contribuição esperada da análise.
+
+Organize o texto como ensaio curto e contínuo, preferencialmente com quatro a seis parágrafos:
+
+* apresentação da abordagem;
+* objeto e perguntas investigadas pela teoria;
+* exercício de aplicação;
+* breve conclusão.
+
+Não criar tabela comparativa, mapa mental, revisão bibliográfica extensa ou resumos individuais por artigo.
+
+Não transformar a atividade em dissertação ou projeto completo de pesquisa.
+
+Utilize citações autor-data conforme o estilo bibliográfico configurado. Não use citações numéricas como [1], [2] ou similares.
+
+Não gere manualmente a seção de referências. A bibliografia será inserida pelo pipeline.
+
+Priorize clareza, capacidade de síntese e demonstração de que o estudante compreendeu tanto a teoria quanto sua utilização prática.
+

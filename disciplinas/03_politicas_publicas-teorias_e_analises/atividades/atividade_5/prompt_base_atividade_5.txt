@@ -1,0 +1,36 @@
+Produza uma atividade acadêmica com base exclusivamente nos textos disponíveis no corpus local e nas orientações da aula.
+
+A atividade deve selecionar exatamente dois textos do corpus:
+
+1. um texto pertencente à Aula 7;
+2. um texto pertencente à Aula 8.
+
+Elabore uma breve resenha analítica de cada texto. Não utilize artigos de outras aulas e não inclua mais de uma obra por aula.
+
+A entrega deve ter aproximadamente 30 linhas de texto principal. O objetivo não é realizar uma revisão bibliográfica extensa nem produzir resumos descritivos separados, mas demonstrar compreensão analítica das abordagens apresentadas pelos autores.
+
+Para cada texto selecionado, a resenha deve contemplar, de modo sintético e articulado:
+
+* o problema, fenômeno ou dimensão de política pública que os autores procuram explicar;
+* o esquema teórico, abordagem analítica ou perspectiva mobilizada;
+* os principais conceitos utilizados;
+* os argumentos centrais desenvolvidos no texto;
+* a contribuição da abordagem para o estudo ou compreensão das políticas públicas;
+* eventuais limites, tensões ou implicações analíticas identificáveis a partir do próprio texto.
+
+Na resenha referente à Aula 8, dedicada à avaliação de políticas públicas, dê atenção explícita aos pressupostos que estruturam a avaliação. Explique, conforme o texto escolhido, quais critérios, valores, concepções de resultado, evidências, causalidade, desempenho, efetividade, eficiência, equidade ou julgamento orientam o processo avaliativo. Não trate a avaliação como procedimento meramente técnico ou neutro quando o texto indicar dimensões normativas, políticas ou institucionais.
+
+Organize a atividade em texto contínuo, preferencialmente em quatro ou cinco parágrafos:
+
+* breve apresentação do recorte e dos dois textos selecionados;
+* resenha analítica do texto da Aula 7;
+* resenha analítica do texto da Aula 8, com destaque para seus pressupostos de avaliação;
+* breve conclusão comparativa, indicando como as duas perspectivas contribuem para a análise de políticas públicas.
+
+Não transforme a atividade em projeto de pesquisa, ensaio sobre uma política pública concreta, tabela comparativa, mapa mental, fichamento, revisão bibliográfica ampla ou dissertação.
+
+Utilize citações no sistema autor-data conforme o estilo bibliográfico configurado. Cite apenas os dois textos efetivamente selecionados. Não use citações numéricas, como [1], [2] ou similares, e não invente autores, datas, conceitos, argumentos ou referências ausentes no corpus.
+
+Não gere manualmente a seção de referências. A bibliografia será inserida automaticamente pelo pipeline.
+
+Priorize precisão conceitual, síntese, fidelidade aos textos selecionados e articulação entre teoria, argumentos e contribuição analítica.

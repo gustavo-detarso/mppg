@@ -1,0 +1,212 @@
+{
+  "version": "rc10.7.35-scielo-metadata-source",
+  "generated_at": "2026-05-13T19:04:29-03:00",
+  "config_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/resumo_artigos_encontro_1/resumo_artigos_config.toml",
+  "output_dir": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1",
+  "prefixo": "resumo_artigos_encontro_1",
+  "tipo_documento": "atividade",
+  "instituicao_perfil": "fgv",
+  "instituicao_profile_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/institution_profile.toml",
+  "modelo_openai": "gpt-5.4",
+  "estilo_bibliografico": "abnt",
+  "pdf_engine": "lualatex",
+  "input_zip": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/documentos-base.zip",
+  "input_zip_sha256": "5034f65bfc170cf086c5d7e36f9f1a191f5b1af166e24a1beec410aa9808a477",
+  "input_dir": null,
+  "doi_manifest": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/doi_manifest.csv",
+  "doi_manifest_sha256": "8233c53e4cc1dcc42dd231bd8683700b551496e4873b0ccc3522068062bae739",
+  "outputs": {
+    "output_dir": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1",
+    "document_json": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.document.json",
+    "org": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.org",
+    "bib": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.bib",
+    "pdf": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.pdf",
+    "docx": null,
+    "relatorio_pesquisa": null,
+    "prompt_lock": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.prompt_lock.json",
+    "compliance_report": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.compliance_report.md",
+    "quality_report": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.quality_report.md"
+  },
+  "warnings": [],
+  "prompts": {
+    "research": {
+      "task": "research",
+      "total_chars": 5011,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/triagem_prompt.txt",
+          "label": "../../prompts/research/triagem_prompt.txt",
+          "chars": 847,
+          "sha256": "19a74e68fb572264e07f055e6ca482722e06afaba01155961e9b32ce1c070726",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/diretivas_extras.txt",
+          "label": "../../prompts/research/diretivas_extras.txt",
+          "chars": 1489,
+          "sha256": "3a63f6ed28b1dbdb9a484748ef556549bd144429325cf49f71d6b343a32e258b",
+          "sanitized": false
+        }
+      ]
+    },
+    "bibliography": {
+      "task": "bibliography",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    },
+    "document": {
+      "task": "document",
+      "total_chars": 9934,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        },
+        {
+          "category": "document_type",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/atividade.txt",
+          "label": "../../prompts/document/atividade.txt",
+          "chars": 325,
+          "sha256": "70748caae36c743e545c4a15e68c38e305823f67681e57a8366a4ddf1a974670",
+          "sanitized": false
+        },
+        {
+          "category": "document_type",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/resumo_artigos.txt",
+          "label": "../../prompts/document/resumo_artigos.txt",
+          "chars": 3518,
+          "sha256": "2453f8a6e2eba7fddf5765d88c8496904a7706081acdec9f148933df70c50e49",
+          "sanitized": false
+        },
+        {
+          "category": "document_type",
+          "path": "/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/prompt_base_atividade.txt",
+          "label": "../../../../../disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/prompt_base_atividade.txt",
+          "chars": 3356,
+          "sha256": "c782239c384b76bec7efcfcea8d51dc665733bad5805f8ce4dff3b8776c679c1",
+          "sanitized": false
+        }
+      ]
+    },
+    "mindmap": {
+      "task": "mindmap",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    },
+    "prisma": {
+      "task": "prisma",
+      "total_chars": 5011,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/triagem_prompt.txt",
+          "label": "../../prompts/research/triagem_prompt.txt",
+          "chars": 847,
+          "sha256": "19a74e68fb572264e07f055e6ca482722e06afaba01155961e9b32ce1c070726",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/diretivas_extras.txt",
+          "label": "../../prompts/research/diretivas_extras.txt",
+          "chars": 1489,
+          "sha256": "3a63f6ed28b1dbdb9a484748ef556549bd144429325cf49f71d6b343a32e258b",
+          "sanitized": false
+        }
+      ]
+    }
+  },
+  "extra": {
+    "mode": "full",
+    "work_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/work/resumo_artigos_encontro_1",
+    "cache_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/cache/resumo_artigos_encontro_1",
+    "precheck": {
+      "version": "rc10.7.35-scielo-metadata-source",
+      "generated_at": "2026-05-13T18:58:23-03:00",
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "docx_validation": null
+  }
+}

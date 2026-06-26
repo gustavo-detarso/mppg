@@ -1,0 +1,405 @@
+{
+  "metadata": {
+    "tipo_documento": "atividade",
+    "titulo": "Atividade acadêmica",
+    "subtitulo": "Breves resenhas analíticas de dois textos das aulas 5 e 6",
+    "autor": "Gustavo M. Mendes de Tarso",
+    "instituicao": "fgv",
+    "programa": "",
+    "curso": "Mestrado Acadêmico em Políticas Públicas e Governo",
+    "turma": "2026.1",
+    "polo": "Brasília",
+    "disciplina": "Políticas Públicas - Teoria e Análise",
+    "professor": "Lizandro Lui",
+    "cidade": "Brasília",
+    "ano": "2026",
+    "data": "2026",
+    "tipo_trabalho": "Atividade acadêmica",
+    "nota_capa": "Trabalho acadêmico elaborado para a disciplina.",
+    "idioma": "português"
+  },
+  "abstract": {
+    "titulo": "Resumo",
+    "texto": "Esta atividade apresenta breves resenhas analíticas de dois textos, um associado à aula 5 e outro à aula 6, com foco em seus esquemas teóricos, nos problemas explicativos que enfrentam, em seus conceitos centrais e em suas principais contribuições para a análise de políticas públicas. O primeiro texto discute a relação entre profissionalização burocrática e capacidades estatais na implementação de políticas em governos municipais. O segundo examina a circulação de políticas públicas a partir de uma perspectiva de ativismo multinível, destacando a articulação entre movimentos sociais, redes e arenas intergovernamentais. Em conjunto, os trabalhos evidenciam que a produção e a difusão de políticas dependem tanto de capacidades organizacionais do Estado quanto de dinâmicas relacionais entre atores estatais e societais.",
+    "palavras_chave": [
+      "capacidades estatais",
+      "burocracia profissional",
+      "implementação de políticas",
+      "ativismo multinível",
+      "circulação de políticas",
+      "governança multinível"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "level": 1,
+      "title": "Introdução",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atendendo ao enunciado da atividade, selecionam-se dois textos do conjunto das aulas 5 e 6 para elaboração de breves resenhas analíticas. O critério de escolha foi a complementaridade temática: de um lado, uma abordagem centrada nas capacidades estatais e na burocracia; de outro, uma perspectiva voltada à circulação de políticas e à articulação entre movimentos sociais e múltiplos níveis de governo.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Atendendo ao enunciado da atividade, selecionam-se dois textos do conjunto das aulas 5 e 6 para elaboração de breves resenhas analíticas. O critério de escolha foi a complementaridade temática: de um lado, uma abordagem centrada nas capacidades estatais e na burocracia; de outro, uma perspectiva voltada à circulação de políticas e à articulação entre movimentos sociais e múltiplos níveis de governo.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A pergunta orientadora inferida das orientações é a seguinte: como distintos esquemas teóricos explicam a formulação, a implementação e a difusão de políticas públicas? O objetivo é sintetizar, comparar e avaliar as contribuições analíticas de cada texto, destacando seus conceitos e argumentos centrais.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A pergunta orientadora inferida das orientações é a seguinte: como distintos esquemas teóricos explicam a formulação, a implementação e a difusão de políticas públicas? O objetivo é sintetizar, comparar e avaliar as contribuições analíticas de cada texto, destacando seus conceitos e argumentos centrais.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-resenha-1",
+      "level": 1,
+      "title": "Resenha 1 — Burocracias profissionais e capacidade estatal",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O texto de ",
+          "content": [
+            {
+              "type": "text",
+              "text": "O texto de ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "narrative",
+              "keys": [
+                "marenco2017_burocracias_profissionais"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": " parte de uma questão clássica da teoria do Estado: em que medida atributos da burocracia pública ampliam a capacidade governamental para implementar políticas. O esquema teórico mobilizado combina a literatura sobre capacidades estatais com a tradição weberiana da burocracia profissional, buscando escapar da circularidade frequente no conceito de capacidade estatal, isto é, da confusão entre meios administrativos e resultados produzidos pelo Estado.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A abordagem busca explicar por que alguns governos locais conseguem implementar agendas de políticas com maior densidade institucional do que outros. Para isso, o autor opera com uma definição mais restrita de capacidade estatal, entendida como disponibilidade de recursos administrativos que ampliam o poder de agência do governo. Nesse marco, a burocracia profissional — recrutada por mérito, dotada de estabilidade e maior escolaridade — aparece como variável explicativa central.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A abordagem busca explicar por que alguns governos locais conseguem implementar agendas de políticas com maior densidade institucional do que outros. Para isso, o autor opera com uma definição mais restrita de capacidade estatal, entendida como disponibilidade de recursos administrativos que ampliam o poder de agência do governo. Nesse marco, a burocracia profissional — recrutada por mérito, dotada de estabilidade e maior escolaridade — aparece como variável explicativa central.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O principal conceito do artigo é o de burocracia profissional, operacionalizado empiricamente por indicadores de recrutamento estatutário e formação superior nos municípios. A escolha desse indicador é teoricamente relevante porque conecta capacidades administrativas a padrões institucionais duráveis, e não apenas a decisões conjunturais. O argumento central sustenta que administrações com maior presença desse tipo de burocracia tendem a apresentar melhores condições para formular e implementar políticas, especialmente em áreas que exigem coordenação, conhecimento técnico e continuidade administrativa.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O principal conceito do artigo é o de burocracia profissional, operacionalizado empiricamente por indicadores de recrutamento estatutário e formação superior nos municípios. A escolha desse indicador é teoricamente relevante porque conecta capacidades administrativas a padrões institucionais duráveis, e não apenas a decisões conjunturais. O argumento central sustenta que administrações com maior presença desse tipo de burocracia tendem a apresentar melhores condições para formular e implementar políticas, especialmente em áreas que exigem coordenação, conhecimento técnico e continuidade administrativa.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A contribuição do texto está em oferecer um tratamento analítico mais preciso para capacidades estatais no nível municipal e em demonstrar que a qualidade da burocracia importa concretamente para a ação governamental. Em vez de tratar o Estado como ator unitário, o artigo mostra que sua efetividade depende de arranjos organizacionais e de recursos humanos. Para a análise de políticas públicas, isso é particularmente importante porque desloca o foco de preferências políticas abstratas para as condições institucionais que tornam a implementação possível.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A contribuição do texto está em oferecer um tratamento analítico mais preciso para capacidades estatais no nível municipal e em demonstrar que a qualidade da burocracia importa concretamente para a ação governamental. Em vez de tratar o Estado como ator unitário, o artigo mostra que sua efetividade depende de arranjos organizacionais e de recursos humanos. Para a análise de políticas públicas, isso é particularmente importante porque desloca o foco de preferências políticas abstratas para as condições institucionais que tornam a implementação possível.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-resenha-2",
+      "level": 1,
+      "title": "Resenha 2 — Ativismo multinível e circulação de políticas públicas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O artigo de ",
+          "content": [
+            {
+              "type": "text",
+              "text": "O artigo de ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "narrative",
+              "keys": [
+                "pereira2025_ativismo_multinivel"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": " adota um esquema teórico distinto, centrado nas relações entre movimentos sociais, governança multinível e circulação de políticas públicas. O problema explicativo é claro: se determinadas políticas para a população LGBTI+ contaram com fraca capacidade de indução federal, como explicar sua disseminação entre diferentes níveis e unidades da federação? A resposta proposta é a noção de ativismo multinível.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p7",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A abordagem busca explicar a circulação de políticas não apenas por mecanismos formais de coordenação estatal, mas pela atuação articulada de atores que transitam entre escalas institucionais. O conceito de ativismo multinível designa justamente essa capacidade de construir redes informais, organizações com inserção em mais de um nível, arenas de interação intergovernamental e trajetórias de deslocamento de atores entre sociedade civil e Estado.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A abordagem busca explicar a circulação de políticas não apenas por mecanismos formais de coordenação estatal, mas pela atuação articulada de atores que transitam entre escalas institucionais. O conceito de ativismo multinível designa justamente essa capacidade de construir redes informais, organizações com inserção em mais de um nível, arenas de interação intergovernamental e trajetórias de deslocamento de atores entre sociedade civil e Estado.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p8",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Os conceitos centrais do texto são governança multinível, circulação de políticas e ativismo multinível. A originalidade está em não reduzir a difusão de políticas a imposições hierárquicas ou a simples imitação entre governos. O argumento central é que a circulação depende de conexões sociais e institucionais que viabilizam aprendizagem, adaptação e transmissão de repertórios de ação. Assim, políticas se disseminam porque atores constroem pontes entre níveis de governo e entre Estado e movimentos sociais.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os conceitos centrais do texto são governança multinível, circulação de políticas e ativismo multinível. A originalidade está em não reduzir a difusão de políticas a imposições hierárquicas ou a simples imitação entre governos. O argumento central é que a circulação depende de conexões sociais e institucionais que viabilizam aprendizagem, adaptação e transmissão de repertórios de ação. Assim, políticas se disseminam porque atores constroem pontes entre níveis de governo e entre Estado e movimentos sociais.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p9",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A principal contribuição da perspectiva é ampliar o olhar da análise de políticas públicas para além do aparato estatal formal. O texto demonstra que movimentos sociais não atuam apenas como grupos de pressão externos, mas como agentes que participam da própria arquitetura de circulação e institucionalização de políticas. Com isso, oferece uma chave analítica valiosa para compreender processos de difusão em contextos federativos marcados por coordenação incompleta e forte heterogeneidade territorial.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A principal contribuição da perspectiva é ampliar o olhar da análise de políticas públicas para além do aparato estatal formal. O texto demonstra que movimentos sociais não atuam apenas como grupos de pressão externos, mas como agentes que participam da própria arquitetura de circulação e institucionalização de políticas. Com isso, oferece uma chave analítica valiosa para compreender processos de difusão em contextos federativos marcados por coordenação incompleta e forte heterogeneidade territorial.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p10",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-sintese",
+      "level": 1,
+      "title": "Síntese comparativa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os dois textos convergem ao rejeitar explicações simplistas sobre o desempenho das políticas públicas. ",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os dois textos convergem ao rejeitar explicações simplistas sobre o desempenho das políticas públicas. ",
+              "italic": false,
+              "bold": false
+            },
+            {
+              "type": "citation",
+              "mode": "parenthetical",
+              "keys": [
+                "marenco2017_burocracias_profissionais",
+                "pereira2025_ativismo_multinivel"
+              ],
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "type": "text",
+              "text": " Em comum, ambos mostram que políticas não decorrem apenas de decisões formais de governo, mas de condições institucionais e relacionais que sustentam sua formulação, implementação e difusão. A diferença principal é o foco analítico: o primeiro privilegia capacidades internas do Estado, especialmente a profissionalização burocrática; o segundo enfatiza conexões entre níveis governamentais e atores societais.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p11",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Tomados em conjunto, os artigos sugerem que uma análise robusta de políticas públicas precisa combinar o estudo das capacidades estatais com a observação das redes, arenas e mecanismos de circulação que conectam atores e escalas. Essa articulação é especialmente fecunda para contextos federativos, nos quais resultados de políticas dependem simultaneamente de burocracias competentes e de processos de coordenação, mediação e ativação política.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Tomados em conjunto, os artigos sugerem que uma análise robusta de políticas públicas precisa combinar o estudo das capacidades estatais com a observação das redes, arenas e mecanismos de circulação que conectam atores e escalas. Essa articulação é especialmente fecunda para contextos federativos, nos quais resultados de políticas dependem simultaneamente de burocracias competentes e de processos de coordenação, mediação e ativação política.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p12",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-conclusao",
+      "level": 1,
+      "title": "Conclusão",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em conclusão, as duas resenhas evidenciam a utilidade de esquemas teóricos distintos, porém complementares, para a teoria e análise de políticas públicas. O texto sobre burocracias profissionais contribui ao demonstrar que capacidades estatais dependem de recursos administrativos qualificados e institucionalizados. Já o texto sobre ativismo multinível mostra que a circulação de políticas envolve redes, pertencimentos múltiplos e interação entre Estado e sociedade. Assim, a principal lição analítica é que políticas públicas são produzidas tanto por estruturas estatais quanto por dinâmicas relacionais que atravessam níveis de governo e arenas sociais.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em conclusão, as duas resenhas evidenciam a utilidade de esquemas teóricos distintos, porém complementares, para a teoria e análise de políticas públicas. O texto sobre burocracias profissionais contribui ao demonstrar que capacidades estatais dependem de recursos administrativos qualificados e institucionalizados. Já o texto sobre ativismo multinível mostra que a circulação de políticas envolve redes, pertencimentos múltiplos e interação entre Estado e sociedade. Assim, a principal lição analítica é que políticas públicas são produzidas tanto por estruturas estatais quanto por dinâmicas relacionais que atravessam níveis de governo e arenas sociais.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "p13",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "bibliography": {
+    "bib_path": "atividade_4.bib",
+    "style": "abnt",
+    "entries_used": [
+      "marenco2017_burocracias_profissionais",
+      "pereira2025_ativismo_multinivel"
+    ]
+  },
+  "diagnostics": {
+    "prompts_json": "{\"document\": {\"task\": \"document\", \"total_chars\": 2953, \"sources\": [{\"category\": \"global\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt\", \"label\": \"../../prompts/global/orientacao_geral_execucao.txt\", \"chars\": 2096, \"sha256\": \"f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2\", \"sanitized\": false}, {\"category\": \"institution\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt\", \"label\": \"profile://prompts/fgv_geral.txt\", \"chars\": 392, \"sha256\": \"c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b\", \"sanitized\": false}, {\"category\": \"document_type\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/atividade.txt\", \"label\": \"../../prompts/document/atividade.txt\", \"chars\": 325, \"sha256\": \"70748caae36c743e545c4a15e68c38e305823f67681e57a8366a4ddf1a974670\", \"sanitized\": false}]}}",
+    "mindmap_json": "null",
+    "source_info_json": "{\"suffixes\": [\".docx\", \".md\", \".org\", \".pdf\", \".txt\"], \"warnings\": [], \"input_zip\": \"/home/gustavodetarso/Documentos/mppg/disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_4/documentos-base.zip\", \"extracted_dir\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/work/atividade_4/extracted/documentos_base\"}",
+    "relatorio_pesquisa_json": "",
+    "warnings": []
+  }
+}

@@ -24,6 +24,8 @@ ORG/PDF/DOCX e relatório PRISMA. Esta versão acrescenta:
 - perfil resumo_artigos_local_fgv e perguntas condicionais por tipo documental.
 - perfil de resumo de artigos com profundidade analítica configurável, matriz por texto e comparação transversal robusta.
 - seção [paths] como fonte única para saídas/work/cache e overrides por linha de comando.
+- --tui para central operacional visual de atividades acadêmicas em terminal.
+- --gui para interface gráfica opcional de atividades acadêmicas.
 """
 from __future__ import annotations
 
@@ -257,8 +259,11 @@ def run_recompile(args: argparse.Namespace, cfg: dict[str, Any] | None) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=f"academic_pipeline {PIPELINE_VERSION} — document_model canônico")
     parser.add_argument("--config", default="", help="Arquivo TOML")
+    parser.add_argument("--tui", action="store_true", help="Abre a Central Operacional FGV em terminal (prompt_toolkit)")
+    parser.add_argument("--gui", action="store_true", help="Abre a interface gráfica FGV de atividades acadêmicas")
     parser.add_argument("--init-toml", action="store_true", help="Abre o gerador interativo completo de TOML")
     parser.add_argument("--toml-profile", default="", help="Preset inicial para --init-toml, ex.: atividade_local_fgv")
+    parser.add_argument("--no-clear", action="store_true", help="Não limpa a tela entre etapas do --init-toml")
     parser.add_argument("--list-toml-profiles", action="store_true", help="Lista presets do gerador de TOML")
     parser.add_argument("--list-institutions", action="store_true", help="Lista perfis institucionais disponíveis")
     parser.add_argument("--list-layouts", action="store_true", help="Lista layouts disponíveis do perfil institucional informado no TOML")
@@ -282,13 +287,8 @@ def main() -> int:
     parser.add_argument("--init-project", default="", help="Cria app_bundle/projetos/<nome> com TOML, ZIPs placeholder e doi_manifest.csv")
     parser.add_argument("--project-type", default="paper", choices=["paper", "atividade", "prisma", "atividade_prisma", "paper_prisma"], help="Tipo de projeto para --init-project")
     parser.add_argument("--institution", default="fgv", help="Perfil institucional usado por --init-project, ex.: fgv")
-    parser.add_argument("--base-dir", default="", help="Raiz do academic_pipeline ou app_bundle para --init-project/limpeza")
+    parser.add_argument("--base-dir", default="", help="Raiz do academic_pipeline ou app_bundle para --init-project")
     parser.add_argument("--overwrite-project", action="store_true", help="Permite sobrescrever arquivos seguros criados por --init-project")
-    parser.add_argument("--clean-institutional-tree", action="store_true", help="Planeja/aplica limpeza de duplicatas globais e normaliza a árvore institucional")
-    parser.add_argument("--clean-apply", action="store_true", help="Aplica a limpeza; sem isso, --clean-institutional-tree roda em dry-run")
-    parser.add_argument("--clean-remove-output", action="store_true", help="Remove app_bundle/output durante --clean-institutional-tree")
-    parser.add_argument("--clean-remove-projects", action="store_true", help="Remove app_bundle/projetos durante --clean-institutional-tree")
-    parser.add_argument("--clean-keep-backups", action="store_true", help="Não remove _backup_pre_* durante --clean-institutional-tree")
     parser.add_argument("--make-doi-manifest", action="store_true", help="Gera doi_manifest.csv a partir de --input-zip ou --input-dir")
     parser.add_argument("--input-zip", default="", help="ZIP de documentos para --make-doi-manifest")
     parser.add_argument("--input-dir", default="", help="Pasta de documentos para --make-doi-manifest")
@@ -309,6 +309,14 @@ def main() -> int:
     parser.add_argument("--pdf", default="", help="Arquivo .pdf opcional para --check-institution-compliance")
     args = parser.parse_args()
 
+    if args.gui:
+        from academic_pipeline_gui import run_gui
+        return run_gui()
+
+    if args.tui:
+        from academic_pipeline_tui import run_tui
+        return run_tui(no_clear=bool(args.no_clear))
+
     if args.list_toml_profiles:
         from academic_pipeline_toml_generator_interativo import print_profiles
         print_profiles()
@@ -316,7 +324,7 @@ def main() -> int:
 
     if args.init_toml:
         from academic_pipeline_toml_generator_interativo import generate_interactive
-        generate_interactive(non_interactive_profile=args.toml_profile or None)
+        generate_interactive(non_interactive_profile=args.toml_profile or None, no_clear=bool(args.no_clear))
         return 0
 
     if args.list_institutions:
@@ -361,22 +369,6 @@ def main() -> int:
         print(f"- Documentos ZIP: {result.documentos_zip_path}")
         print(f"- Orientações ZIP: {result.orientacoes_zip_path}")
         print(f"- README: {result.readme_path}")
-        return 0
-
-    if args.clean_institutional_tree:
-        from clean_bundle import clean_institutional_tree, render_clean_report, CleanAction
-        base_dir = Path(args.base_dir).expanduser().resolve() if args.base_dir else None
-        result = clean_institutional_tree(
-            base_dir=base_dir,
-            apply=bool(args.clean_apply),
-            remove_outputs=bool(args.clean_remove_output),
-            remove_projects=bool(args.clean_remove_projects),
-            remove_backups=not bool(args.clean_keep_backups),
-        )
-        actions = [CleanAction(**a) for a in result.get("actions", [])]
-        print(render_clean_report(actions, dry_run=not bool(args.clean_apply)))
-        if result.get("report_path"):
-            print(f"Relatório: {result['report_path']}")
         return 0
 
     if args.make_doi_manifest:

@@ -1,0 +1,20 @@
+# Regras específicas para dissertação FGV, com base no manual/modelo 2025.
+[required]
+pre_textual = ["capa", "folha_rosto", "folha_aprovacao", "resumo", "abstract", "sumario"]
+post_textual = ["referencias"]
+
+[optional]
+items = ["ficha_catalografica", "dedicatoria", "agradecimentos", "epigrafe", "lista_ilustracoes", "lista_tabelas", "glossario", "apendice", "anexo", "indice"]
+
+[dissertacao]
+ficha_catalografica = "obrigatoria_na_versao_final"
+folha_aprovacao = "obrigatoria"
+resumo_min_palavras = 50
+resumo_max_palavras = 500
+abstract = "obrigatorio"
+sumario = "obrigatorio"
+
+[bibliography]
+sistema_citacao = "autor-data"
+referencias_ordenacao = "alfabetica"
+notas_referencia = false

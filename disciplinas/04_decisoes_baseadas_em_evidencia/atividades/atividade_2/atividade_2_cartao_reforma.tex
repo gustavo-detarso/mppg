@@ -1,0 +1,107 @@
+% Created 2026-06-23 ter 11:06
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt,a4paper]{article}
+\usepackage{fgv-paper}
+% Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+\usepackage[backend=biber,style=abnt,sorting=nty,giveninits=true]{biblatex}
+\addbibresource{atividade_2_cartao_reforma.bib}
+\geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{tabularray}
+\usepackage{ltablex}
+\keepXColumns
+\setlength{\emergencystretch}{3em}
+\sloppy
+\definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+\definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+\definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+\setlength{\headheight}{58pt}
+\setlength{\headsep}{18pt}
+\newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}
+\newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+\newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+\fancypagestyle{fgvreportstyle}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\fancypagestyle{plain}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+\institution{fgv}
+\programname{}
+\coursename{Mestrado Acadêmico em Políticas Públicas e Governo}
+\disciplinename{Decisões Baseadas em Evidências}
+\professorname{Marcos Aurélio Pereira Valadão}
+\cityname{Brasília}
+\author{Gustavo M. Mendes de Tarso}
+\date{\today}
+\title{Respostas às perguntas do texto: Cartão Reforma}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={Respostas às perguntas do texto: Cartão Reforma},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Pt_Br}}
+\begin{document}
+
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & Mestrado Acadêmico em Políticas Públicas e Governo \\
+\textbf{Turma}                   & 2026.1 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Decisões Baseadas em Evidências \\
+\textbf{Professor}               & Marcos Aurélio Pereira Valadão \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 2026 \\
+\textbf{Título do trabalho}      & Respostas às perguntas do texto: Cartão Reforma \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+
+\clearpage
+
+\section*{Respostas:}
+\label{sec:org38d035c}
+
+\subsection*{Questão 1 — No processo de implementação do Cartão Reforma, o mapa de mudança foi corretamente delineado?}
+\label{sec:org44a07ed}
+
+Não plenamente. O programa formulou uma cadeia causal inteligível para parte do problema: o subsídio federal para a compra de materiais, associado à seleção municipal dos beneficiários e à autoconstrução, deveria produzir melhorias físicas nas moradias e, em consequência, reduzir componentes do déficit habitacional qualitativo. Essa relação era mais nítida nas categorias que correspondiam diretamente à tipologia da Fundação João Pinheiro (FJP): adensamento excessivo, cobertura inadequada, ausência de banheiro e inexistência de solução de esgotamento sanitário \parencite[pp. 93--95]{santos2020cartao}.
+
+Contudo, o mapa de mudança foi incompleto porque a modalidade de \textbf{conclusão habitacional} concentrou parcela expressiva da política sem demonstrar adequadamente o elo entre a intervenção, o problema mensurado e o resultado esperado. Para essa categoria, não havia diagnóstico de demanda, meta específica nem indicador capaz de demonstrar que o gasto produziria redução do déficit. Também ficaram subestimadas premissas operacionais decisivas: a capacidade dos municípios para selecionar e acompanhar beneficiários, a viabilidade da autoconstrução e, sobretudo, a dependência de um sistema digital ainda não consolidado, o SisReforma. Assim, existia um desenho geral de mudança, mas ele não apresentava coerência integral entre insumos, ações, produtos, resultados e condições de implementação \parencite[p. 96]{santos2020cartao}.
+
+\subsection*{Questão 2 — Há problemas com os indicadores?}
+\label{sec:orgaa76662}
+
+Sim. O principal problema é de validade e de alinhamento entre o indicador escolhido e aquilo que o programa pretendia financiar. Os componentes do déficit habitacional qualitativo mensurados pela FJP permitiam estabelecer linha de base e acompanhar, ao menos em tese, os efeitos das intervenções em adensamento, cobertura, banheiro e esgotamento sanitário. No entanto, a conclusão habitacional não constava como categoria mensurada pela FJP. Apesar disso, ela recebeu a meta de 127,5 mil atendimentos e a previsão de metade dos recursos do programa \parencite[p. 95]{santos2020cartao}.
+
+O Índice de Melhoria Habitacional (IMH), elaborado pela Secretaria Nacional de Habitação, tampouco resolvia o problema. Ele servia para priorizar municípios com piores condições habitacionais, mas não demonstrava como mensurar a redução do déficit decorrente da categoria de conclusão habitacional. Em outras palavras, o programa misturou um instrumento de focalização territorial com um indicador de resultado que não conseguia captar o efeito da intervenção específica. Faltavam, portanto, um diagnóstico mensurável da demanda, metas vinculadas a esse diagnóstico e um indicador sensível ao resultado que se desejava alcançar \parencite[p. 96]{santos2020cartao}.
+
+\subsection*{Questão 3 — O uso de melhores práticas foi feito da maneira adequada?}
+\label{sec:orgca7ec8b}
+
+De modo parcial e desigual. Houve uso adequado de boas práticas pela equipe da CGU quando ela aplicou a lógica de análise \textbf{ex ante}: verificou a aderência entre diagnóstico, objetivos, público-alvo, focalização, estratégia de implementação, monitoramento, avaliação, custo-benefício e impacto fiscal. A revisão dos custos com apoio da Caixa e do Sinapi corrigiu inconsistências nas planilhas do Ministério das Cidades, reduziu em cerca de R\$ 109,7 milhões o valor necessário para cumprir as mesmas metas e poderia ampliar o atendimento em aproximadamente 26,8 mil beneficiários. Nesse ponto, a evidência foi usada para qualificar a eficiência do desenho \parencite[p. 97]{santos2020cartao}.
+
+O problema ocorreu na apropriação da experiência do Cheque Reforma de Goiás como referência para a modalidade de conclusão habitacional. A experiência anterior foi apresentada principalmente como relato do formulador do programa, sem estudos que descrevessem seus resultados, custos, público atendido, escala de operação ou efetividade. Portanto, ela funcionou mais como uma inspiração administrativa do que como um \textbf{benchmark} devidamente documentado e adaptado ao contexto federal. Uma boa prática somente pode sustentar a formulação de uma nova política quando seus mecanismos, resultados e limites são explicitados e comparados com o problema a ser enfrentado \parencite[pp. 95--96]{santos2020cartao}.
+
+\subsection*{Questão 4 — Quais foram as razões da não implementação do Cartão Reforma decorrentes do uso de evidências? E quais foram as outras razões?}
+\label{sec:orgbcd8f3d}
+
+As razões relacionadas ao uso de evidências não devem ser tratadas como causa única da não implementação, mas como fatores que fragilizaram o desenho e impuseram sucessivas readequações. A CGU identificou que a conclusão habitacional não possuía diagnóstico, meta e indicador compatíveis com o déficit habitacional qualitativo oficialmente mensurado; recomendou, por isso, sua retirada até que essas lacunas fossem supridas. Além disso, detectou custos superestimados e sem justificativa técnica suficiente. A não incorporação integral dessas recomendações manteve incertezas sobre a eficácia e a economicidade da política, elevando o custo de revisão do desenho antes de sua execução \parencite[pp. 96--97]{santos2020cartao}.
+
+As demais razões foram fiscais, operacionais, institucionais e políticas. A auditoria nos contratos de tecnologia da informação identificou prejuízos e ineficiência na execução do SisReforma. A limitação dos pagamentos levou à interrupção dos serviços da empresa contratada; a solução alternativa proposta pela Caixa excedia o limite disponível para custeio do programa. Somaram-se a isso a saída do principal formulador, as restrições orçamentárias e a ausência de previsão orçamentária para execução em 2019 e 2020. O caso também revela um ambiente de preferências conflitantes: Fazenda e Planejamento enfatizavam a restrição fiscal; o Ministério das Cidades operava sob pressão de capilaridade municipal e de apoio parlamentar; e movimentos sociais defendiam que os recursos fossem direcionados a melhorias habitacionais mais amplas no Minha Casa Minha Vida. Portanto, a não implementação foi multicausal: as fragilidades no uso das evidências contribuíram para o redesenho e para a incerteza decisória, mas os obstáculos fiscais e a inviabilidade operacional do sistema foram determinantes para que o programa não saísse do papel \parencite[p. 98]{santos2020cartao}.
+
+\printbibliography[title={Referências}]
+\end{document}
