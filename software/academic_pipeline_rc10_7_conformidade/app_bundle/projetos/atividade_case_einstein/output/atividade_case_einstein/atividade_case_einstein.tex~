@@ -1,0 +1,155 @@
+% Created 2026-07-06 seg 21:22
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt,a4paper]{article}
+\usepackage{fgv-paper}
+% Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+\usepackage[backend=biber,sorting=nty,giveninits=true]{biblatex}
+
+\addbibresource{atividade_case_einstein.bib}
+\geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{tabularray}
+\usepackage{ltablex}
+\keepXColumns
+\setlength{\emergencystretch}{3em}
+\sloppy
+\definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+\definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+\definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+\setlength{\headheight}{58pt}
+\setlength{\headsep}{18pt}
+\newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}}{}}
+\newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+\newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+\fancypagestyle{fgvreportstyle}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\fancypagestyle{plain}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+\institution{fgv}
+\programname{}
+\coursename{MBA Executivo em Administração: Gestão de Saúde}
+\disciplinename{Transformação digital e inovação em saúde}
+\professorname{Fernando Pedro de Moraes}
+\cityname{Brasília}
+\author{Gustavo M. Mendes de Tarso}
+\date{\today}
+\title{Hospital Israelita Albert Einstein e a Quarta Revolução Industrial}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={Hospital Israelita Albert Einstein e a Quarta Revolução Industrial},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Pt_Br}}
+\begin{document}
+
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & MBA Executivo em Administração: Gestão de Saúde \\
+\textbf{Turma}                   & MBS02488-MGS-T01 - 614307/2024 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Transformação digital e inovação em saúde \\
+\textbf{Professor}               & Fernando Pedro de Moraes \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 2026 \\
+\textbf{Título do trabalho}      & Hospital Israelita Albert Einstein e a Quarta Revolução Industrial \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+
+\clearpage
+
+\section{Introdução}
+\label{sec:orgf6e2829}
+
+O caso do Hospital Israelita Albert Einstein permite compreender a Quarta Revolução Industrial como um processo de transformação organizacional e assistencial no setor de saúde. Mais do que incorporar ferramentas tecnológicas, a instituição é apresentada como um exemplo de articulação entre inovação digital, reorganização de fluxos e centralidade do paciente. \parencite{anonsd_case_einstein}
+
+A pergunta orientadora desta atividade pode ser formulada da seguinte maneira: como o Hospital Israelita Albert Einstein expressa, na prática, a Quarta Revolução Industrial na saúde e de que forma essa transformação contribui para ampliar acesso, aprimorar decisões clínicas e tornar a jornada do paciente mais eficiente e segura?
+
+O objetivo é analisar os principais problemas enfrentados pela instituição e examinar como a integração entre telemedicina, dados, inteligência artificial, internet das coisas, sensores, conectividade e automação é mobilizada como resposta estratégica. A tese desenvolvida é que a inovação relevante, no contexto da Quarta Revolução Industrial, decorre da combinação entre tecnologia, gestão da informação e redesenho de processos, e não da adoção fragmentada de soluções digitais.
+
+
+
+\section{Problemas enfrentados e sentido estratégico da transformação digital}
+\label{sec:org5e44590}
+
+O material destaca que a transformação digital no Einstein está associada ao enfrentamento de desafios concretos do sistema de saúde. Entre eles, sobressaem as dificuldades de acesso a serviços especializados, a necessidade de ampliar a capacidade de atendimento sem depender exclusivamente da presença física do paciente, a morosidade de processos administrativos e assistenciais e a necessidade de qualificar decisões clínicas em contextos marcados por grande volume de informações. \parencite{anonsd_case_einstein}
+
+Também são mencionados riscos de infecções relacionadas à assistência, a necessidade de monitoramento contínuo de pacientes internados, dificuldades de comunicação e agendamento e a busca por uma jornada hospitalar mais integrada, humanizada e segura. Assim, a digitalização não aparece como fim em si mesma, mas como meio para melhorar simultaneamente gestão, assistência e experiência do usuário.
+
+\begin{itemize}
+\item ampliar o acesso a serviços especializados
+\item reduzir dependência exclusiva do atendimento presencial
+\item diminuir atrasos, ineficiências e repetições de tarefas
+\item apoiar decisões clínicas com base em informação qualificada
+\item reforçar segurança assistencial e monitoramento contínuo
+\item melhorar comunicação, agendamento e experiência do paciente
+\end{itemize}
+
+
+
+\section{Telemedicina e ampliação do acesso}
+\label{sec:org388c8de}
+
+A telemedicina é apresentada como uma das expressões mais evidentes da Quarta Revolução Industrial no caso analisado. Sua importância reside na capacidade de integrar serviços físicos e digitais, conectando pacientes, médicos e equipes especializadas sem a exigência de copresença no mesmo espaço. Com isso, o cuidado deixa de estar restrito ao encontro presencial e passa a incorporar acompanhamento remoto, plataformas digitais e circulação mais ágil de informações clínicas. \parencite{anonsd_case_einstein}
+
+Essa frente de inovação responde diretamente às barreiras geográficas e à necessidade de ampliar a capacidade assistencial. Ao permitir atendimentos remotos, a telemedicina favorece maior capilaridade do cuidado e pode reduzir tempos de espera, além de aproximar populações distantes de centros de excelência. Trata-se, portanto, de uma solução que combina eficiência operacional e ampliação de acesso.
+
+Entretanto, o próprio caso indica que o potencial da telemedicina depende de condições institucionais e sociais. Qualidade de conexão, proteção das informações dos pacientes e inclusão de pessoas com menor acesso a recursos digitais são elementos indispensáveis para que a inovação produza resultados consistentes e equitativos.
+
+
+
+\section{Dados, big data e inteligência artificial na decisão clínica e gerencial}
+\label{sec:org1bba21c}
+
+No caso estudado, os dados assumem papel estratégico. Informações geradas por prontuários, exames, sensores, internações, atendimentos e rotinas administrativas deixam de ser registros dispersos e passam a constituir insumo para decisões clínicas e gerenciais. Essa transformação é típica da Quarta Revolução Industrial, na medida em que converte grandes volumes de dados em capacidade analítica para diagnóstico, prevenção, planejamento e melhoria contínua dos serviços. \parencite{anonsd_case_einstein}
+
+A inteligência artificial e o aprendizado de máquina aparecem, nesse contexto, como mecanismos de apoio à identificação de padrões, geração de alertas e qualificação da tomada de decisão. O exemplo do uso de dados de pacientes em unidades de terapia intensiva para mapear e reduzir infecções multirresistentes mostra como a análise digital pode acelerar respostas a riscos relevantes e reforçar a segurança assistencial.
+
+É importante observar que o caso não sustenta a substituição do profissional de saúde pela tecnologia. Ao contrário, a inteligência artificial é tratada como ferramenta de suporte, enquanto a decisão clínica permanece vinculada ao julgamento profissional, à responsabilidade ética e à avaliação individual de cada paciente. Desse modo, a inovação digital fortalece a prática assistencial quando amplia a capacidade humana de interpretação e decisão, e não quando pretende anulá-la.
+
+
+
+\section{Integração tecnológica, conectividade e reorganização do cuidado}
+\label{sec:org0fe9735}
+
+O caso evidencia que a Quarta Revolução Industrial na saúde não se resume a uma tecnologia específica. Seu traço distintivo é a convergência entre telemedicina, inteligência artificial, big data, internet das coisas, sensores, conectividade 5G, plataformas digitais e automação de processos. O valor dessa combinação está na atuação articulada desses recursos para monitorar pacientes, apoiar diagnósticos, agilizar fluxos e qualificar a experiência do cuidado. \parencite{anonsd_case_einstein}
+
+Essa perspectiva permite compreender que a transformação digital é também uma transformação organizacional. A simples instalação de equipamentos modernos seria insuficiente se não viesse acompanhada de revisão de processos, integração de informações e coordenação entre áreas clínicas, assistenciais e administrativas. No Einstein, a inovação aparece justamente como capacidade de reorganizar o hospital em torno de fluxos mais inteligentes, contínuos e orientados por dados.
+
+Por isso, o caso pode ser lido como exemplo de maturidade digital institucional. A inovação não está apenas na presença de ferramentas, mas no modo como elas são incorporadas à lógica do cuidado, ao gerenciamento de riscos, à comunicação com o paciente e à busca de maior eficiência operacional.
+
+
+
+\section{Limites, exigências e desafios da transformação digital}
+\label{sec:orgedd2123}
+
+Embora o caso seja apresentado de forma positiva, ele também explicita que a transformação digital impõe exigências relevantes. O uso intensivo de dados amplia a responsabilidade institucional com privacidade, segurança da informação e uso ético de dados sensíveis. De modo semelhante, a telemedicina e a conectividade ampliada só cumprem sua promessa de inclusão se houver condições reais de acesso e uso por parte dos pacientes. \parencite{anonsd_case_einstein}
+
+Outro ponto central é que a inovação tecnológica precisa preservar a dimensão humana do cuidado. Reduzir tempos de espera, integrar serviços e qualificar a comunicação são avanços importantes, mas seu valor depende de contribuírem para uma experiência mais segura, compreensível e centrada no paciente. Em saúde, eficiência sem humanização tende a ser insuficiente.
+
+
+
+\section{Conclusão}
+\label{sec:org0dd7278}
+
+A análise do Hospital Israelita Albert Einstein confirma que a Quarta Revolução Industrial, no setor de saúde, deve ser entendida como integração entre tecnologias digitais, dados e novos modelos de organização do cuidado. O caso demonstra que telemedicina, inteligência artificial, big data, sensores, conectividade e automação geram impacto mais relevante quando operam de modo coordenado para enfrentar problemas concretos de acesso, segurança, eficiência e qualidade assistencial. \parencite{anonsd_case_einstein}
+
+Conclui-se, portanto, que o Einstein representa um exemplo de transformação digital sistêmica. Sua experiência sugere que a inovação em saúde depende da convergência entre capacidade tecnológica, governança da informação, revisão de processos e foco no paciente. Ao mesmo tempo, o caso reforça que esse movimento exige atenção contínua à ética, à privacidade, à segurança e à inclusão, para que os ganhos de eficiência sejam compatíveis com a qualidade e a humanização do cuidado.
+
+\printbibliography
+\end{document}

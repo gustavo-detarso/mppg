@@ -1,0 +1,53 @@
+# Modelo institucional de dados estruturados para o perfil
+# relatorio_prisma_busca_orientada_fgv.
+#
+# O assistente localiza este arquivo por meio do perfil institucional escolhido
+# no início do fluxo: app_bundle/misc/<instituicao>/. O original do bundle
+# nunca é alterado. A opção "copiar e editar o modelo institucional" cria uma
+# cópia na pasta do projeto e registra essa cópia no TOML final.
+#
+# Preencha [pesquisa] e [busca_prisma] antes de voltar ao assistente. A IA pode
+# priorizar a leitura, mas nunca toma decisão final de inclusão ou exclusão.
+
+[pesquisa]
+tema = ""
+recorte = ""
+objetivo = ""
+pergunta_pesquisa = ""
+hipotese = ""
+palavras_chave = []
+idiomas = ["português", "inglês", "espanhol"]
+tipo_estudo = "revisão estruturada da literatura"
+
+[busca_prisma]
+# Use "blocos_tematicos" para executar cada bloco separadamente em cada base,
+# ou "consulta_unica" quando houver uma única expressão de busca.
+estrategia = "blocos_tematicos"
+consulta_geral = ""
+# Estes limites podem ser ajustados no modelo; o assistente os valida.
+limite_por_base = 20
+limite_scopus_por_consulta = 10
+
+criterios_inclusao = [
+  "",
+]
+criterios_exclusao = [
+  "",
+]
+
+# Acrescente quantos blocos forem necessários. Cada bloco precisa ter id,
+# rótulo e ao menos uma consulta curta. Apague este bloco vazio após criar os
+# seus blocos reais.
+[[busca_prisma.estrategias]]
+id = ""
+rotulo = ""
+consultas = []
+
+# Exemplo de estrutura, apenas como referência (mantenha comentado ou adapte):
+# [[busca_prisma.estrategias]]
+# id = "beneficios_incapacidade"
+# rotulo = "Benefícios por incapacidade e avaliação médico-pericial"
+# consultas = [
+#   "disability benefits",
+#   "medical disability assessment",
+# ]

@@ -1,0 +1,278 @@
+# Gerado por academic_pipeline_toml_generator_interativo.py
+# Preset: atividade_local_fgv — Atividade local FGV
+# Descrição: Gera atividade acadêmica com Ficha Técnica FGV a partir de corpus local. Não faz busca externa nem relatório PRISMA.
+
+[projeto]
+nome = "atividade_wellhub"
+descricao = "Gera atividade acadêmica com Ficha Técnica FGV a partir de corpus local. Não faz busca externa nem relatório PRISMA."
+preset = "atividade_local_fgv"
+
+[instituicao]
+perfil = "fgv"
+
+[openai]
+model = "gpt-5.4"
+
+[pipeline]
+modo_entrada = "documentos_locais"
+executar_pesquisa = false
+executar_documento = true
+executar_bundle = false
+pesquisa_dir_existente = ""
+
+[paths]
+# A partir da rc10.7.20, todos os diretórios de saída/cache/trabalho ficam aqui.
+document_output_dir = "output"
+research_output_dir = "output_pesquisa"
+work_dir = ".academic_pipeline/work"
+cache_dir = ".academic_pipeline/cache"
+document_prefix = "atividade_wellhub"
+research_prefix = "relatorio_prisma"
+create_document_subdir = true
+create_research_subdir = true
+create_work_subdir = true
+create_cache_subdir = true
+
+[orientacoes]
+paths = []
+inline = """Dados da atividade devem ser inferidos pela IA a partir do corpus local, das orientações gerais, do prompt específico e dos metadados acadêmicos disponíveis. Inferir tema, recorte, objetivo, pergunta orientadora, enunciado operacional e palavras-chave sem inventar conteúdo fora do material fornecido.
+Inferir automaticamente palavras-chave acadêmicas a partir do tema, da pergunta orientadora, do enunciado, das orientações e do corpus local; não solicitar palavras-chave ao usuário.
+
+Não inclua citações no corpo do texto, notas bibliográficas, seção Referências, lista bibliográfica ou arquivo .bib. Use exclusivamente as informações fornecidas no corpus local e não invente fontes, autores, obras, links ou dados.
+
+O corpus local foi fornecido como texto pronto. Preserve a estrutura, os argumentos, as distinções e as ressalvas do texto-base. Limite-se à revisão, organização e adequação ao formato institucional; não acrescente dados, exemplos, fontes ou interpretações externas.
+
+Não inclua citações no corpo do texto, notas bibliográficas, seção Referências, lista bibliográfica ou arquivo .bib. Use exclusivamente as informações do corpus local e não invente fontes, autores, obras, links ou dados."""
+
+[documentos_locais]
+ativos = true
+modo_entrada = "documentos_locais"
+input_zip = ""
+input_dir = "fontes"
+tipos = ["pdf", "docx", "txt", "md", "org"]
+recursive = true
+limpar_extracao_anterior = true
+copiar_para_fulltext_cache = true
+limpar_cache_anterior = true
+auto_detect_bib = false
+gerar_bib_revisado_ia = false
+enriquecer_metadados_buscadores = false
+fontes_metadados = [
+  "crossref",
+  "openalex"
+]
+min_score_match_metadados = 0.82
+extrair_doi_dos_pdfs = false
+doi_manifest_path = ""
+preferir_doi_manual = true
+buscar_metadados_por_doi = false
+incluir_notas_metadados_inferidos = false
+deduplicar_bib = true
+deduplicar_referencias = true
+autor_padrao = ""
+ano_padrao = "s.d."
+
+[pesquisa]
+tema = ""
+recorte = ""
+objetivo = ""
+pergunta_pesquisa = ""
+hipotese = ""
+palavras_chave = []
+gerar_palavras_chave_ia = true
+idiomas = [
+  "português"
+]
+tipo_estudo = "atividade acadêmica"
+periodo = ""
+bases = [
+  "Crossref",
+  "OpenAlex",
+  "Semantic Scholar",
+  "Scopus"
+]
+
+[resumo_artigos]
+ativo = false
+geracao_em_etapas = false
+# Quando true, o pipeline gera o document.json em chamadas separadas:
+# análise do artigo 1/N, análise do artigo 2/N, comparação e síntese.
+# Isso exibe progresso no terminal e salva checkpoints .checkpoint_*.json no output.
+modo = "analitico_comparativo"
+usar_apenas_corpus_local = false
+incluir_introducao = false
+incluir_resumos_individuais = false
+incluir_comparacao = false
+incluir_sintese_analitica = false
+incluir_consideracoes_finais = false
+incluir_referencias = false
+incluir_mapa_mental = false
+uma_secao_por_artigo = false
+comparar_convergencias = false
+comparar_divergencias = false
+apontar_limites = false
+nivel_detalhamento = "medio"
+profundidade_analitica = "medio"
+
+[atividade]
+curso = "MBA Executivo em Administração: Gestão de Saúde"
+turma = "MBS02488-MGS-T01 - 614307/2024"
+polo = "Brasília"
+disciplina = "Transformação digital e inovação em saúde"
+professor = "Fernando Pedro de Moraes"
+aluno = "Gustavo M. Mendes de Tarso"
+data = "2026"
+titulo_trabalho = "Wellhub e a Quarta Revolução Industrial"
+gerar_dados_atividade_ia = false
+fonte_dados_atividade = "arquivo"
+
+[documento]
+tipo_documento = "atividade"
+tipo_conteudo = "atividade"
+genero_academico = "atividade"
+layout = "atividade_fgv"
+classe_latex = "fgv-paper"
+titulo_trabalho = "Wellhub e a Quarta Revolução Industrial"
+autor = "Gustavo M. Mendes de Tarso"
+inferir_campos_vazios_ia = false
+institution_name = "fgv"
+program_name = ""
+course_name = "MBA Executivo em Administração: Gestão de Saúde"
+discipline_name = "Transformação digital e inovação em saúde"
+professor_name = "Fernando Pedro de Moraes"
+city_name = "Brasília"
+ano = "2026"
+data = "2026"
+papertype = "Atividade acadêmica"
+perfil_redacao = "academico_analitico"
+covernote = "Trabalho acadêmico elaborado para a disciplina."
+estilo_citacao = "abnt"
+exportar_org = true
+exportar_pdf = true
+exportar_docx = false
+gerar_documento_json = true
+modo_renderizacao = "document_model"
+usar_citacoes_latex_diretas = false
+validar_org_final = true
+falhar_se_org_tiver_chave_crua = true
+falhar_se_org_tiver_empty_citation = true
+falhar_se_org_tiver_mencao_tecnica = true
+
+referencias_formais = false
+[idiomas_saida]
+principal = "pt-BR"
+gerar_traducao_ia = false
+idiomas_adicionais = []
+preservar_referencias_originais = false
+max_chars_por_lote = 12000
+# A tradução atua no document.json canônico; não recria análise, corpus ou bibliografia.
+
+[resumos_paper]
+ativo = false
+principal = "pt-BR"
+gerar_resumo_principal = false
+gerar_resumo_adicional = false
+idiomas_adicionais = []
+gerar_palavras_chave_adicionais = true
+max_palavras = 250
+# O resumo é sintetizado do document.json validado e inserido no ORG, PDF e DOCX.
+
+[bibliografia]
+# O .bib é neutro. O estilo visual é aplicado na renderização.
+estilo_citacao = "abnt"
+latex_style = "abnt"
+latex_options = "backend=biber,style=abnt,sorting=nty,giveninits=true"
+docx_csl = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+buscar_metadados_por_doi = false
+enriquecer_metadados_buscadores = false
+
+ativo = false
+[relatorio_pesquisa]
+ativo = false
+tipo = "prisma"
+titulo = ""
+exportar_json = true
+exportar_org = true
+exportar_pdf = false
+exportar_docx = false
+exportar_xlsx = false
+exportar_fluxograma = false
+validar = true
+falhar_se_invalido = false
+prisma_json_path = ""
+pesquisa_dir_existente = ""
+criterios_inclusao = [
+  "Aderência substantiva ao tema, recorte e objetivo.",
+  "Relação direta com os textos-base ou com o problema de pesquisa.",
+  "Disponibilidade de metadados mínimos ou DOI para identificação bibliográfica."
+]
+criterios_exclusao = [
+  "Fora do tema ou do recorte.",
+  "Duplicado.",
+  "Ausência de relação substantiva com a pergunta de pesquisa."
+]
+
+[docx]
+ativo = false
+reference_docx = "../../institutions/fgv/docx/reference_fgv.docx"
+usar_pandoc = false
+csl_path = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+falhar_se_pandoc_falhar = false
+incluir_capa = true
+incluir_referencias = false
+incluir_mapa_mental = false
+
+[latex]
+pdf_engine = "lualatex"
+org_latex_class_init = "../../misc/academic-writing.el"
+latex_extra_path = "../../misc/fgv"
+fgv_logo_path = "../../misc/fgv.png"
+
+[prompts]
+ativos = true
+global_paths = [
+  "../../prompts/global/orientacao_geral_execucao.txt"
+]
+institution_paths = ["profile://prompts/fgv_geral.txt"]
+research_paths = [
+  "../../prompts/research/triagem_prompt.txt",
+  "../../prompts/research/diretivas_extras.txt"
+]
+paper_paths = []
+atividade_paths = [
+  "../../prompts/document/atividade.txt"
+]
+resumo_artigos_paths = []
+dissertacao_paths = []
+prisma_paths = []
+document_paths = []
+
+[mapa_mental]
+gerar = false
+ativo = false
+posicao = "apos_referencias"
+titulo = "Mapa mental dos textos analisados"
+arquivo = "mapa_mental"
+formato = "png"
+renderizar = false
+inserir_no_org = false
+plantuml_jar_path = ""
+plantuml_limit_size = 8192
+colorido = true
+sobrescrever_cores_existentes = true
+cores_niveis = ["#D9EAF7", "#DFF2E1", "#FFF2CC", "#F8D7DA", "#F8D7DA", "#F8D7DA", "#F8D7DA"]
+falhar_se_nao_renderizar = false
+
+[conformidade]
+ativo = false
+gerar_relatorio = true
+
+[qualidade]
+ativo = false
+gerar_relatorio = true
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false
+politica_referencias = "sem_referencias"

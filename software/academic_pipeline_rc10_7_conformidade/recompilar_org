@@ -1,0 +1,7 @@
+pipenv run python gerar_artigo_final_unificado.py \
+  --art-dir "$ART" \
+  --cfg-art "$CFG_ART" \
+  --skip-prepare \
+  --skip-generate \
+  --quiet
+

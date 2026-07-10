@@ -1,0 +1,12 @@
+{
+  "registros_pool_lidos": 248,
+  "alvo_estudos_com_fulltext": 20,
+  "estudos_incluidos_com_fulltext_original": 20,
+  "excluidos_por_texto_completo_nao_recuperado": 12,
+  "prioritarios_sem_texto_completo": 0,
+  "nao_avaliados_apos_atingir_alvo": 216,
+  "atingiu_alvo": true,
+  "elsevier_scopus_habilitado": true,
+  "core_habilitado": true,
+  "regra": "somente estudos do universo PRISMA preliminar/curadoria com PDF original recuperado entram na síntese final; títulos prioritários são tentados com busca profunda"
+}

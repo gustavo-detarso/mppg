@@ -134,3 +134,10 @@ perfil_redacao = "academico_analitico_comparativo"
 default_layout = "atividade_fgv"
 prompt = "app://prompts/document/resumo_artigos.txt"
 description = "Resumo analítico-comparativo de artigos do corpus local."
+
+[bibliografia]
+estilo_citacao = "abnt"
+latex_style = "abnt"
+sistema_citacao = "autor-data"
+backend = "biber"
+ativo = true

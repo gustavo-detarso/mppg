@@ -1,0 +1,44 @@
+{
+  "title": "Wellhub e a Quarta Revolução Industrial",
+  "type": "atividade",
+  "total_words": 932,
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "title": "Introdução",
+      "level": 1,
+      "words": 124,
+      "blocks": 3
+    },
+    {
+      "id": "sec-desenvolvimento",
+      "title": "Desenvolvimento",
+      "level": 1,
+      "words": 672,
+      "blocks": 18
+    },
+    {
+      "id": "sec-conclusao",
+      "title": "Conclusão",
+      "level": 1,
+      "words": 136,
+      "blocks": 3
+    }
+  ],
+  "citations_total": 0,
+  "cited_keys": [],
+  "bibliography_entries_used_total": 1,
+  "bibliography_entries_not_cited": [
+    "anonsd_wellhub"
+  ],
+  "missing_in_bib": [],
+  "org_diagnostics": {
+    "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.org",
+    "contains_empty_citation": false,
+    "contains_org_cite": false,
+    "technical_terms_found": [],
+    "raw_biblike_tokens": []
+  },
+  "warnings": [],
+  "ok": true
+}

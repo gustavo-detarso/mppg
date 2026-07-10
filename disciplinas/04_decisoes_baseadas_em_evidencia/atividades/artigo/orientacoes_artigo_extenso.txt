@@ -1,0 +1,24 @@
+ORIENTAÇÃO DE EXTENSÃO E DENSIDADE DO PAPER
+
+Produza um paper acadêmico substancial, não um resumo curto.
+
+Extensão-alvo:
+- Texto principal entre 3.500 e 4.500 palavras, excluídas referências.
+- Nenhuma seção substantiva deve ter menos de 250 palavras.
+- A seção "Resultados da revisão estruturada" deve ter pelo menos 700 palavras.
+- A seção "Discussão" deve ter pelo menos 900 palavras.
+- A seção "Proposta de redesenho do fluxo decisório" deve ter pelo menos 700 palavras.
+- A seção "Limitações" deve ter pelo menos 300 palavras.
+- A conclusão deve ter pelo menos 350 palavras.
+
+Regras de desenvolvimento:
+- Cada seção substantiva deve ter múltiplos parágrafos analíticos.
+- Evite parágrafos genéricos ou meramente declaratórios.
+- Use os 14 estudos incluídos como base argumentativa, distribuindo as citações ao longo do texto.
+- Não concentre todas as citações em uma única seção.
+- A seção de resultados deve sintetizar padrões encontrados nos estudos incluídos, e não apenas informar que houve revisão.
+- A discussão deve articular evidências, tensões, riscos, vantagens e condições institucionais de implementação.
+- A proposta de redesenho deve apresentar critérios operacionais de alocação entre análise documental, teleperícia e perícia presencial.
+- A seção de limitações deve tratar dos limites metodológicos da revisão, da heterogeneidade das evidências, da extrapolação para a Perícia Médica Federal e da necessidade de validação empírica futura.
+- Não mencione limitações técnicas do pipeline, OCR, cache, metadados ou processo computacional.
+- Não crie seção manual de referências.

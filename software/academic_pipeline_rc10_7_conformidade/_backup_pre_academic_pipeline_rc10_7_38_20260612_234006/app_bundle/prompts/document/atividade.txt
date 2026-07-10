@@ -1,5 +1,0 @@
-Diretrizes gerais para atividade acadêmica:
-- Responder diretamente ao roteiro/enunciado.
-- Quando houver corpus de textos, resumir analiticamente, comparar e sintetizar.
-- Manter a estrutura solicitada pelo professor e evitar expandir além do escopo.
-- Não mencionar limitações técnicas do pipeline, metadados, OCR ou cache.

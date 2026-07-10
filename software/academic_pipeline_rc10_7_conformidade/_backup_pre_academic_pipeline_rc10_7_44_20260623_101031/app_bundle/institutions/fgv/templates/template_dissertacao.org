@@ -1,8 +1,0 @@
-#+TITLE: {{TITULO}}
-#+AUTHOR: {{AUTOR}}
-#+LANGUAGE: pt_BR
-#+OPTIONS: toc:nil num:t ^:nil
-
-# Template institucional FGV para dissertação.
-# Na rc10.6, o conteúdo final é renderizado por document_model/render_org_latex.py.
-# Este template serve como referência institucional e para futuras renderizações por template.

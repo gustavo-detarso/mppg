@@ -1,0 +1,42 @@
+{
+  "title": "Hospital Israelita Albert Einstein e a Quarta Revolução Industrial",
+  "type": "atividade",
+  "total_words": 1150,
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "title": "Introdução",
+      "level": 1,
+      "words": 148,
+      "blocks": 2
+    },
+    {
+      "id": "sec-desenvolvimento",
+      "title": "Desenvolvimento",
+      "level": 1,
+      "words": 853,
+      "blocks": 16
+    },
+    {
+      "id": "sec-conclusao",
+      "title": "Conclusão",
+      "level": 1,
+      "words": 149,
+      "blocks": 2
+    }
+  ],
+  "citations_total": 0,
+  "cited_keys": [],
+  "bibliography_entries_used_total": 0,
+  "bibliography_entries_not_cited": [],
+  "missing_in_bib": [],
+  "org_diagnostics": {
+    "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.org",
+    "contains_empty_citation": false,
+    "contains_org_cite": false,
+    "technical_terms_found": [],
+    "raw_biblike_tokens": []
+  },
+  "warnings": [],
+  "ok": true
+}

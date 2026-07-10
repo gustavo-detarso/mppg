@@ -1,0 +1,321 @@
+[projeto]
+nome = "artigo_final_atestmed_abnt"
+descricao = "Artigo final gerado automaticamente a partir dos estudos selecionados no PRISMA final."
+preset = "paper_local_fgv"
+
+[instituicao]
+perfil = "fgv"
+
+[openai]
+model = "gpt-4.1-mini"
+
+[pipeline]
+modo_entrada = "documentos_locais"
+executar_pesquisa = false
+executar_documento = true
+executar_bundle = false
+
+[paths]
+document_output_dir = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output"
+research_output_dir = "output_pesquisa"
+work_dir = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/.academic_pipeline/work"
+cache_dir = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/.academic_pipeline/cache"
+document_prefix = "artigo_final_atestmed_abnt"
+research_prefix = "relatorio_prisma_artigo_final_atestmed"
+create_document_subdir = false
+create_research_subdir = true
+create_work_subdir = true
+create_cache_subdir = true
+
+[orientacoes]
+inline = """ARTIGO CIENTÍFICO LONGO COM 20 ESTUDOS — INSTRUÇÃO OBRIGATÓRIA
+
+O artigo deve usar o corpus final de 20 estudos com texto completo recuperado, não 14 estudos.
+
+Arquivos de leitura obrigatória:
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/prompt_artigo_cientifico_longo.md
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/referencias_incluidas_20.md
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/estatisticas_prisma_fulltext.md
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/corpus_fulltext_compilado.md
+
+Requisitos:
+- mínimo de 8500 palavras no corpo textual;
+- padrão de artigo científico completo, aproximadamente 18 a 25 páginas;
+- seção REFERÊNCIAS obrigatória;
+- citação de todos os 20 estudos incluídos;
+- matriz de evidências por estudo;
+- matriz de aderência dos textos ao tema, objetivo, recorte e pergunta;
+- discussão substantiva, conectando os textos completos ao redesenho do ATESTMED;
+- destaque ao estudo diretamente relacionado ao ATESTMED.
+"""
+paths = [
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/orientacoes_artigo_extenso.txt",
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/orientacoes_artigo_extenso_r.txt",
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/orientacoes_artigo_fulltext.txt",
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/orientacoes_fulltext_artigos.md",
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/orientacoes_artigo_fulltext_proxy.txt",
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/orientacoes_fulltext_garantido_artigo.md",
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/prompt_artigo_cientifico_longo.md"
+]
+
+[documentos_locais]
+max_caracteres_por_doc = 650000
+tipos = ["pdf", "csv", "json", "txt", "md", "org", "png", "bib"]
+recursive = true
+paths = [
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma",
+  "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext"
+]
+ativos = true
+modo_entrada = "documentos_locais"
+input_zip = ""
+input_dir = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma"
+limpar_extracao_anterior = true
+copiar_para_fulltext_cache = true
+limpar_cache_anterior = true
+auto_detect_bib = true
+gerar_bib_revisado_ia = false
+enriquecer_metadados_buscadores = false
+fontes_metadados = []
+min_score_match_metadados = 0.82
+extrair_doi_dos_pdfs = false
+doi_manifest_path = ""
+preferir_doi_manual = true
+buscar_metadados_por_doi = false
+incluir_notas_metadados_inferidos = false
+deduplicar_bib = true
+deduplicar_referencias = true
+autor_padrao = ""
+ano_padrao = "s.d."
+
+[pesquisa]
+tema = "ATESTMED, saúde digital e decisão baseada em evidências"
+recorte = "Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal, articulando análise documental, teleperícia, perícia presencial, capacidade operacional, auditabilidade e equidade territorial."
+objetivo = "Analisar evidências selecionadas por revisão estruturada para propor um fluxo decisório mais eficiente, seguro e auditável para o ATESTMED e para a alocação de requerimentos de benefícios por incapacidade."
+pergunta_pesquisa = "Como estruturar um fluxo de alocação de requerimentos entre análise documental, teleperícia e perícia presencial que reduza o tempo de espera sem comprometer a qualidade decisória, a equidade territorial e o controle?"
+hipotese = ""
+palavras_chave = ["ATESTMED", "saúde digital", "perícia médica", "benefícios por incapacidade", "decisão baseada em evidências", "teleperícia"]
+gerar_palavras_chave_ia = false
+idiomas = ["português", "inglês", "espanhol"]
+tipo_estudo = "paper acadêmico baseado em revisão estruturada de evidências"
+
+[paper]
+ativo = true
+tese_central = "O ATESTMED deve ser compreendido como componente de um fluxo decisório estratificado por risco, suficiência documental e necessidade de avaliação presencial, e não apenas como substituição digital da perícia presencial."
+estrutura_desejada = ["Introdução", "Método", "Resultados", "Discussão", "Proposta de redesenho do fluxo decisório", "Limitações", "Conclusão"]
+argumentos_obrigatorios = [
+  "Distinguir análise documental, teleperícia e perícia presencial como camadas decisórias complementares.",
+  "Relacionar redução de fila com qualidade decisória, auditabilidade e equidade territorial.",
+  "Apresentar critérios de elegibilidade documental e de escalonamento para avaliação remota ou presencial.",
+  "Discutir o papel de dados e inteligência artificial como apoio, não como substituição da decisão pericial."
+]
+orientacoes_metodologicas = "Explicitar revisão estruturada com fluxo PRISMA, curadoria assistida por IA e decisão humana final sobre estudos incluídos."
+limites_do_escopo = "Não avaliar causalmente o impacto do ATESTMED; não extrapolar além das evidências selecionadas."
+tom_de_redacao = "acadêmico analítico"
+instrucoes_adicionais = "Usar citações frequentes, em autor-data, exclusivamente com as chaves BibTeX permitidas."
+
+[resumo_artigos]
+ativo = false
+geracao_em_etapas = false
+modo = "analitico_comparativo"
+usar_apenas_corpus_local = false
+incluir_referencias = true
+incluir_mapa_mental = false
+
+[atividade]
+curso = "Mestrado Acadêmico em Políticas Públicas e Governo"
+turma = "2026.1"
+polo = "Brasília"
+disciplina = "Decisões Baseadas em Evidência"
+professor = "Marcos Aurélio Pereira Valadão"
+aluno = "Gustavo M. Mendes de Tarso"
+data = "2026"
+titulo_trabalho = "ATESTMED, saúde digital e decisão baseada em evidências: revisão estruturada e proposta de redesenho do fluxo pericial"
+
+[documento]
+tipo_documento = "paper"
+tipo_conteudo = "paper"
+genero_academico = "paper"
+layout = "paper_fgv"
+classe_latex = "fgv-paper"
+titulo_trabalho = "ATESTMED, saúde digital e decisão baseada em evidências: revisão estruturada e proposta de redesenho do fluxo pericial"
+autor = "Gustavo M. Mendes de Tarso"
+inferir_campos_vazios_ia = true
+institution_name = "Fundação Getúlio Vargas"
+program_name = ""
+course_name = "Mestrado Acadêmico em Políticas Públicas e Governo"
+discipline_name = "Decisões Baseadas em Evidência"
+professor_name = "Marcos Aurélio Pereira Valadão"
+city_name = "Brasília"
+ano = "2026"
+data = "2026"
+papertype = "Paper acadêmico"
+perfil_redacao = "academico_analitico"
+exigir_fulltext_garantido = true
+exigir_busca_exaustiva_fulltext = true
+exigir_matriz_aderencia_por_texto = true
+exigir_exclusao_documentada_sem_fulltext = true
+usar_apenas_estudos_incluidos_fulltext = true
+priorizar_estudos_atestmed = true
+# DUPLICADO_REMOVIDO_EM_REPARO: [documento] :: exigir_fulltext_garantido
+# exigir_fulltext_garantido = true
+# DUPLICADO_REMOVIDO_EM_REPARO: [documento] :: exigir_matriz_aderencia_por_texto
+# exigir_matriz_aderencia_por_texto = true
+# DUPLICADO_REMOVIDO_EM_REPARO: [documento] :: exigir_exclusao_documentada_sem_fulltext
+# exigir_exclusao_documentada_sem_fulltext = true
+# DUPLICADO_REMOVIDO_EM_REPARO: [documento] :: usar_apenas_estudos_incluidos_fulltext
+# usar_apenas_estudos_incluidos_fulltext = true
+exigir_fulltext_artigos = true
+permitir_proxy_oa_tematico = true
+manifesto_fulltext_artigos = "dados_prisma/manifesto_fulltext_artigos.csv"
+distinguir_original_proxy_metadados = true
+exigir_matriz_evidencias_por_referencia = true
+# DUPLICADO_REMOVIDO_EM_REPARO: [documento] :: exigir_fulltext_artigos
+# exigir_fulltext_artigos = true
+# DUPLICADO_REMOVIDO_EM_REPARO: [documento] :: manifesto_fulltext_artigos
+# manifesto_fulltext_artigos = "dados_prisma/manifesto_fulltext_artigos.csv"
+distinguir_fulltext_resumo_metadados = true
+# DUPLICADO_REMOVIDO_EM_REPARO: [documento] :: exigir_matriz_evidencias_por_referencia
+# exigir_matriz_evidencias_por_referencia = true
+min_palavras_total = 8500
+max_palavras_total = 12000
+min_palavras_secao_substantiva = 700
+min_palavras_resultados = 1600
+min_palavras_discussao = 2200
+min_palavras_proposta = 1400
+min_palavras_limitacoes = 500
+min_palavras_conclusao = 600
+covernote = "Trabalho acadêmico elaborado para a disciplina Decisões Baseadas em Evidência."
+estilo_citacao = "abnt"
+sistema_citacao = "autor-data"
+referencias_formais = true
+exportar_org = true
+exportar_pdf = true
+exportar_docx = true
+gerar_documento_json = true
+modo_renderizacao = "document_model"
+usar_citacoes_latex_diretas = true
+validar_org_final = true
+falhar_se_org_tiver_chave_crua = true
+falhar_se_org_tiver_empty_citation = true
+falhar_se_org_tiver_mencao_tecnica = true
+target_n_estudos = 20
+min_referencias = 20
+min_paginas = 18
+max_paginas = 25
+exigir_citacao_todos_estudos = true
+bloquear_artigo_curto = true
+[idiomas_saida]
+principal = "pt-BR"
+gerar_traducao_ia = false
+idiomas_adicionais = []
+preservar_referencias_originais = true
+max_chars_por_lote = 30000
+[resumos_paper]
+ativo = true
+principal = "pt-BR"
+gerar_resumo_principal = true
+gerar_resumo_adicional = false
+idiomas_adicionais = []
+gerar_palavras_chave_adicionais = true
+max_palavras = 250
+
+[bibliografia]
+ativo = true
+bib_path = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.bib"
+referencias_bib = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.bib"
+estilo_citacao = "abnt"
+latex_style = "abnt"
+latex_options = "backend=biber,style=abnt,sorting=nty,giveninits=true"
+docx_csl = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+sistema_citacao = "autor-data"
+backend = "biber"
+gerar_arquivo_bib = true
+buscar_metadados_por_doi = false
+enriquecer_metadados_buscadores = false
+
+[relatorio_pesquisa]
+ativo = false
+tipo = "prisma"
+titulo = ""
+exportar_json = false
+exportar_org = false
+exportar_pdf = false
+exportar_docx = false
+exportar_xlsx = false
+exportar_fluxograma = false
+validar = false
+falhar_se_invalido = false
+prisma_json_path = ""
+pesquisa_dir_existente = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma"
+
+[docx]
+ativo = true
+reference_docx = ""
+usar_pandoc = true
+csl_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+falhar_se_pandoc_falhar = true
+incluir_capa = true
+incluir_referencias = true
+incluir_mapa_mental = false
+
+[latex]
+pdf_engine = "lualatex"
+org_latex_class_init = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/academic-writing.el"
+latex_extra_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv"
+fgv_logo_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png"
+
+[prompts]
+ativos = true
+global_paths = ["/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt"]
+institution_paths = ["profile://prompts/fgv_geral.txt"]
+research_paths = []
+paper_paths = ["/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/paper.txt"]
+atividade_paths = []
+resumo_artigos_paths = []
+dissertacao_paths = []
+prisma_paths = []
+document_paths = []
+
+[mapa_mental]
+gerar = false
+ativo = false
+posicao = "apos_referencias"
+titulo = "Mapa mental dos textos analisados"
+arquivo = "mapa_mental"
+formato = "png"
+renderizar = false
+inserir_no_org = false
+plantuml_jar_path = ""
+plantuml_limit_size = 8192
+colorido = true
+falhar_se_nao_renderizar = false
+
+[conformidade]
+ativo = true
+gerar_relatorio = true
+
+[qualidade]
+falhar_se_curto = true
+min_paginas_estimadas = 18
+min_referencias = 20
+min_palavras = 8500
+ativo = true
+gerar_relatorio = true
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false
+
+[artigo_longo_fulltext]
+target_n = 20
+min_palavras = 8500
+max_palavras = 12000
+min_referencias = 20
+min_paginas = 18
+chars_por_pdf = 18000
+corpus_fulltext_compilado = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/corpus_fulltext_compilado.md"
+referencias_incluidas_20 = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/referencias_incluidas_20.md"
+estatisticas_prisma_fulltext = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/estatisticas_prisma_fulltext.md"
+prompt_artigo_longo = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/prompt_artigo_cientifico_longo.md"

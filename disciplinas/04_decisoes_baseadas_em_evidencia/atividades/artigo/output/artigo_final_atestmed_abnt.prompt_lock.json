@@ -1,0 +1,127 @@
+{
+  "version": "rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit",
+  "generated_at": "2026-07-09T16:57:36-03:00",
+  "config_path": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+  "institution_profile": "fgv",
+  "institution_profile_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/institution_profile.toml",
+  "prompts": {
+    "research": {
+      "task": "research",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    },
+    "bibliography": {
+      "task": "bibliography",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    },
+    "document": {
+      "task": "document",
+      "total_chars": 2970,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        },
+        {
+          "category": "document_type",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/paper.txt",
+          "label": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/paper.txt",
+          "chars": 346,
+          "sha256": "f0583ca9de37ea04c4b24e73a68a0ead33c9bfe3ed15491449b3f360e12e7d5b",
+          "sanitized": false
+        }
+      ]
+    },
+    "mindmap": {
+      "task": "mindmap",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    },
+    "prisma": {
+      "task": "prisma",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    }
+  }
+}

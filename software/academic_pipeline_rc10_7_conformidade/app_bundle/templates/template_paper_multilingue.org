@@ -1,0 +1,41 @@
+#+TITLE: {{TITULO}}
+#+AUTHOR: {{AUTOR}}
+#+LANGUAGE: {{IDIOMA_ORG}}
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+LATEX_CLASS: fgv-paper
+#+LATEX_HEADER: \usepapercover
+#+LATEX_HEADER: \institution{{INSTITUICAO}}
+#+LATEX_HEADER: \programname{{PROGRAMA}}
+#+LATEX_HEADER: \coursename{{CURSO}}
+#+LATEX_HEADER: \disciplinename{{DISCIPLINA}}
+#+LATEX_HEADER: \professorname{{PROFESSOR}}
+#+LATEX_HEADER: \cityname{{CIDADE}}
+#+LATEX_HEADER: \papertype{{TIPO_DOCUMENTO}}
+#+LATEX_HEADER: \covernote{{NOTA_CAPA}}
+
+#+LATEX: \makemytitle
+
+# Este template é uma referência para edição manual. O pipeline atual monta o
+# ORG programaticamente em render_org_latex.py.
+
+#+BEGIN_COMMENT
+academic_pipeline:paper_abstracts:native
+#+END_COMMENT
+
+#+begin_export latex
+\begingroup
+\small
+\begin{center}
+\textbf{{RESUMO_TITULO}}
+\end{center}
+{{RESUMO_PRINCIPAL}}
+
+\noindent\textbf{{PALAVRAS_CHAVE_TITULO}:} {{PALAVRAS_CHAVE_PRINCIPAIS}}.
+\endgroup
+#+end_export
+
+{{BLOCOS_RESUMOS_ADICIONAIS}}
+
+{{CORPO}}
+
+#+LATEX: \printbibliography

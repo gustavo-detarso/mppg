@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 from typing import Any
@@ -225,22 +226,66 @@ def _as_latex_graphics_path(path_value: Any, fallback: str = "fgv.png", cfg: dic
 
 
 def normalize_biblatex_style(style: str | None) -> str:
-    value = str(style or "apa").strip().lower().replace("-", "_")
+    raw = (style or "").strip().lower()
+    raw = raw.replace("_", "-").replace(" ", "-")
     aliases = {
+        "": "apa",
+        "abnt": "abnt",
+        "abnt-autor-data": "abnt",
+        "abnt-author-date": "abnt",
+        "abntauthoryear": "abnt",
+        "abnt-author-year": "abnt",
+        "autor-data": "abnt",
+        "author-date": "abnt",
+        "authordate": "abnt",
+        "authoryear": "authoryear",
+        "apa": "apa",
         "apa7": "apa",
-        "apa_7": "apa",
-        "abnt2": "abnt",
-        "abnt_6023": "abnt",
-        "nbr6023": "abnt",
-        "nbr_6023": "abnt",
-        "chicago_author_date": "authoryear-chicago",
-        "chicago": "authoryear-chicago",
+        "ieee": "ieee",
+        "numeric": "numeric",
+        "num": "numeric",
+        "numerico": "numeric",
+        "numérico": "numeric",
+        "vancouver": "numeric",
     }
-    value = aliases.get(value, value)
-    if not re.fullmatch(r"[A-Za-z0-9_\-]+", value):
-        return "apa"
-    return value
+    return aliases.get(raw, raw or "apa")
 
+
+def enforce_abnt_biblatex_options(options: str | list[str] | tuple[str, ...], style: str | None) -> str:
+    style_norm = normalize_biblatex_style(style)
+    if isinstance(options, (list, tuple)):
+        parts = [str(p).strip() for p in options if str(p).strip()]
+    else:
+        parts = [p.strip() for p in str(options or "").split(",") if p.strip()]
+
+    parts = [p for p in parts if not p.startswith("style=") and not p.startswith("citestyle=")]
+
+    if not any(p.startswith("backend=") for p in parts):
+        parts.insert(0, "backend=biber")
+
+    if style_norm == "abnt":
+        parts.insert(0, "style=abnt")
+    elif style_norm == "authoryear":
+        parts.insert(0, "citestyle=authoryear")
+        parts.insert(0, "style=authoryear")
+    elif style_norm and style_norm != "numeric":
+        parts.insert(0, f"style={style_norm}")
+    elif style_norm == "numeric":
+        parts.insert(0, "style=numeric")
+
+    if style_norm == "abnt":
+        if not any(p.startswith("sorting=") for p in parts):
+            parts.append("sorting=nty")
+        if "giveninits=true" not in parts:
+            parts.append("giveninits=true")
+
+    seen = set()
+    out = []
+    for p in parts:
+        if p not in seen:
+            out.append(p)
+            seen.add(p)
+    return ",".join(out)
 
 def bibliography_style_from_cfg(cfg: dict[str, Any] | None, doc: AcademicDocument | None = None) -> str:
     bib_cfg = _cfg_section(cfg, "bibliografia")
@@ -285,7 +330,9 @@ def render_bibliography_preamble(bib_filename: str, style: str, cfg: dict[str, A
     options = biblatex_options_for_style(style, cfg)
     return [
         "#+LATEX_HEADER: % Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.",
-        f"#+LATEX_HEADER: \\usepackage[{options}]{{biblatex}}",
+
+
+        f"#+LATEX_HEADER: \\usepackage[{enforce_abnt_biblatex_options(options, style)}]{{biblatex}}",
         f"#+LATEX_HEADER: \\addbibresource{{{bib_name}}}",
     ]
 
@@ -319,12 +366,143 @@ def render_block_org(block: Block, base_level: int = 1) -> str:
     return block.text.strip()
 
 
+PAPER_ABSTRACT_NATIVE_MARKER = "academic_pipeline:paper_abstracts:native"
+
+
+def _normalise_language_code(value: Any) -> str:
+    raw = str(value or "").strip().casefold().replace("_", "-")
+    aliases = {
+        "portugues": "pt-br", "português": "pt-br", "pt": "pt-br", "pt-br": "pt-br",
+        "ingles": "en", "inglês": "en", "english": "en",
+        "espanhol": "es", "español": "es", "spanish": "es",
+    }
+    return aliases.get(raw, raw or "pt-br")
+
+
+def _org_language_name(code: str) -> str:
+    normalized = _normalise_language_code(code)
+    if normalized == "pt-br":
+        return "pt_BR"
+    return normalized.split("-", 1)[0] or "pt_BR"
+
+
+def _render_output_language(cfg: dict[str, Any] | None, output_path: Path) -> str:
+    parts = list(output_path.parts)
+    for index, item in enumerate(parts[:-1]):
+        if item == "idiomas" and index + 1 < len(parts):
+            return _normalise_language_code(parts[index + 1])
+    section = _cfg_section(cfg, "idiomas_saida")
+    return _normalise_language_code(section.get("principal") or "pt-BR")
+
+
+def _paper_abstract_sidecar_path(output_path: Path, cfg: dict[str, Any] | None) -> Path | None:
+    """Localiza o JSON de resumos no diretório principal, inclusive em cópias traduzidas."""
+    paths = _cfg_section(cfg, "paths")
+    prefix = str(paths.get("document_prefix") or "").strip() or output_path.stem
+    seen: set[Path] = set()
+    candidates = [output_path.parent, *output_path.parents]
+    for directory in candidates[:5]:
+        candidate = directory / f"{prefix}.resumos_paper.json"
+        if candidate in seen:
+            continue
+        seen.add(candidate)
+        if candidate.exists() and candidate.is_file():
+            return candidate
+    return None
+
+
+def _paper_abstract_rows(
+    cfg: dict[str, Any] | None,
+    output_path: Path,
+    output_language: str,
+) -> list[dict[str, Any]]:
+    section = _cfg_section(cfg, "resumos_paper")
+    if not bool(section.get("ativo", False)) or not bool(section.get("gerar_resumo_principal", True)):
+        return []
+    sidecar = _paper_abstract_sidecar_path(output_path, cfg)
+    if sidecar is None:
+        return []
+    try:
+        payload = json.loads(sidecar.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    items = payload.get("items", {}) if isinstance(payload, dict) else {}
+    if not isinstance(items, dict):
+        return []
+
+    is_translation = "idiomas" in output_path.parts
+    requested: list[str]
+    if is_translation:
+        requested = [output_language]
+    else:
+        requested = [
+            _normalise_language_code(
+                section.get("principal")
+                or _cfg_section(cfg, "idiomas_saida").get("principal")
+                or "pt-BR"
+            )
+        ]
+        if bool(section.get("gerar_resumo_adicional", False)):
+            raw_items = section.get("idiomas_adicionais", [])
+            if isinstance(raw_items, str):
+                raw_items = [raw_items]
+            if isinstance(raw_items, list):
+                requested.extend(_normalise_language_code(item) for item in raw_items)
+
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for code in requested:
+        if code in seen:
+            continue
+        seen.add(code)
+        row = items.get(code)
+        if isinstance(row, dict) and str(row.get("abstract") or "").strip():
+            rows.append(row)
+    return rows
+
+
+def _render_paper_abstract_rows(rows: list[dict[str, Any]]) -> str:
+    """Renderiza resumos no front matter sem criar headings numerados no corpo."""
+    if not rows:
+        return ""
+    parts = [
+        "#+BEGIN_COMMENT",
+        PAPER_ABSTRACT_NATIVE_MARKER,
+        "#+END_COMMENT",
+        "",
+        "#+begin_export latex",
+        r"\begingroup",
+        r"\small",
+    ]
+    for index, row in enumerate(rows):
+        if index:
+            parts.append(r"\vspace{1.1em}")
+        heading = latex_escape(str(row.get("heading") or "Resumo").strip())
+        abstract = latex_escape(re.sub(r"\s+", " ", str(row.get("abstract") or "").strip()))
+        parts.extend([
+            r"\begin{center}",
+            rf"\textbf{{{heading}}}",
+            r"\end{center}",
+            abstract,
+        ])
+        if bool(row.get("include_keywords", True)):
+            raw_keywords = row.get("keywords", [])
+            keywords = [str(item).strip() for item in raw_keywords if str(item).strip()] if isinstance(raw_keywords, list) else []
+            if keywords:
+                label = latex_escape(str(row.get("keywords_heading") or "Palavras-chave").strip())
+                rendered_keywords = "; ".join(latex_escape(item) for item in keywords)
+                parts.extend(["", rf"\noindent\textbf{{{label}:}} {rendered_keywords}."])
+    parts.extend([r"\endgroup", "#+end_export"])
+    return "\n".join(parts)
+
+
 def _common_headers(meta: Any, bib_filename: str, cfg: dict[str, Any] | None) -> list[str]:
     style = bibliography_style_from_cfg(cfg, None)
+    output_language = str((cfg or {}).get("__render_output_language__") or "pt-br")
     return [
         f"#+TITLE: {meta.titulo}",
         f"#+AUTHOR: {meta.autor}",
-        "#+LANGUAGE: pt_BR",
+        f"#+LANGUAGE: {_org_language_name(output_language)}",
         "#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}",
         *render_bibliography_preamble(bib_filename, style, cfg),
     ]
@@ -351,7 +529,12 @@ def render_paper_front_matter(doc: AcademicDocument, bib_filename: str, cfg: dic
         "",
         "#+LATEX: \\makemytitle",
     ]
-    if doc.abstract and doc.abstract.texto:
+    native_rows = (cfg or {}).get("__paper_abstract_rows__", [])
+    if isinstance(native_rows, list) and native_rows:
+        lines += ["", _render_paper_abstract_rows(native_rows)]
+    elif doc.abstract and doc.abstract.texto:
+        # Compatibilidade: usa o resumo do document_model somente quando não
+        # existe o sidecar auditável de resumos do paper.
         lines += ["", "#+begin_abstract", doc.abstract.texto.strip()]
         if doc.abstract.palavras_chave:
             lines += ["", "Palavras-chave: " + "; ".join(doc.abstract.palavras_chave) + "."]
@@ -792,7 +975,12 @@ def render_after_references_figures(doc: AcademicDocument) -> str:
 
 
 def render_org_latex(doc: AcademicDocument, output_path: Path, bib_filename: str, cfg: dict[str, Any] | None = None, bib_keys: list[str] | None = None) -> str:
-    org = render_front_matter(doc, bib_filename, cfg=cfg)
+    # Contexto de renderização não modifica o TOML carregado nem o document_model.
+    render_cfg = dict(cfg or {})
+    output_language = _render_output_language(cfg, output_path)
+    render_cfg["__render_output_language__"] = output_language
+    render_cfg["__paper_abstract_rows__"] = _paper_abstract_rows(cfg, output_path, output_language)
+    org = render_front_matter(doc, bib_filename, cfg=render_cfg)
     org += render_document_body(doc)
     org = org.rstrip() + "\n\n#+LATEX: \\printbibliography\n\n"
     org += render_after_references_figures(doc)

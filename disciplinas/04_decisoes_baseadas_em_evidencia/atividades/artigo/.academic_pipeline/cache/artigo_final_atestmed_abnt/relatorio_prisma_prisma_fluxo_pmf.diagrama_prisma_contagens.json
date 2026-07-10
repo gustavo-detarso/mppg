@@ -1,0 +1,13 @@
+{
+  "incluidos": 14,
+  "identificados": 1659,
+  "duplicatas_removidas": 222,
+  "apos_deduplicacao": 1437,
+  "pre_triagem_ia": 800,
+  "enviados_triagem": 250,
+  "triagem_concluida": 250,
+  "textos_completos_avaliados": 17,
+  "registros_planilha": 250,
+  "excluidos_titulo_resumo": 233,
+  "textos_completos_excluidos": 3
+}

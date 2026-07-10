@@ -1,0 +1,23 @@
+Resumo da curadoria IA v2 PRISMA
+================================================
+Entrada: app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_referencias.xlsx :: aba Triagem completa
+IA utilizada: não
+Tema: Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal, com foco em inteligência artificial, automação documental, teleperícia, avaliação remota, decisões baseadas em evidências, priorização de casos, auditabilidade, qualidade decisória e controle de risco.
+Total de registros: 250
+Incluídos finais: 14
+Excluídos finais: 236
+
+Incluídos por classe:
+- NUCLEO_DECISORIO: 6
+- EXCLUIR: 3
+- APOIO_PERICIAL: 2
+- NUCLEO_TECNOLOGICO: 2
+- APOIO_CONTEXTO: 1
+
+Pesos:
+- ia_automacao: 35
+- telepericia_avaliacao_remota: 25
+- decisao_baseada_em_evidencias: 20
+- auditoria_qualidade_integridade: 10
+- fila_capacidade_equidade: 5
+- avaliacao_medico_pericial: 5

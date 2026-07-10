@@ -1,0 +1,914 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{albasheer2026telemedicineutilizationanddigitalinclusionamongpe}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=94381c711faf1493dee80545fc6e8d6b}{%
+           family={Albasheer},
+           familyi={A\bibinitperiod},
+           given={Osama},
+           giveni={O\bibinitperiod}}}%
+        {{hash=05a5d211e48eda7bd6fe6a864c3f812e}{%
+           family={Abdelwahab},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1730cdbb64883452e6b2c343940d423e}{%
+           family={Gosadi},
+           familyi={G\bibinitperiod},
+           given={Ibrahim},
+           giveni={I\bibinitperiod}}}%
+        {{hash=f2dac86200fb42fb4d3022705e21bbe2}{%
+           family={Alessa},
+           familyi={A\bibinitperiod},
+           given={Hatim},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d4b28d2af966c290f7bf6a1d89f8499}
+      \strng{fullhash}{fb8fc43a6f3cbe09e546fe06b8779b95}
+      \strng{fullhashraw}{fb8fc43a6f3cbe09e546fe06b8779b95}
+      \strng{bibnamehash}{5d4b28d2af966c290f7bf6a1d89f8499}
+      \strng{authorbibnamehash}{5d4b28d2af966c290f7bf6a1d89f8499}
+      \strng{authornamehash}{5d4b28d2af966c290f7bf6a1d89f8499}
+      \strng{authorfullhash}{fb8fc43a6f3cbe09e546fe06b8779b95}
+      \strng{authorfullhashraw}{fb8fc43a6f3cbe09e546fe06b8779b95}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Public Health}
+      \field{title}{Telemedicine utilization and digital inclusion among people with disabilities in Saudi Arabia}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.3389/fpubh.2026.1756958
+      \endverb
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/ac96bb35713a60e485c8a8337db6c2ceff0a046d
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/ac96bb35713a60e485c8a8337db6c2ceff0a046d
+      \endverb
+    \endentry
+    \entry{corden2001incapacitybenefitsandworkincentives}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=8686e4bd49fc3d296c3bae6af953c761}{%
+           family={Corden},
+           familyi={C\bibinitperiod},
+           given={Anne},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b606f442884d12ea93aca661a69ac3aa}{%
+           family={Sainsbury},
+           familyi={S\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3970fe18c6160985b181eb5de9c9b06c}
+      \strng{fullhash}{3970fe18c6160985b181eb5de9c9b06c}
+      \strng{fullhashraw}{3970fe18c6160985b181eb5de9c9b06c}
+      \strng{bibnamehash}{3970fe18c6160985b181eb5de9c9b06c}
+      \strng{authorbibnamehash}{3970fe18c6160985b181eb5de9c9b06c}
+      \strng{authornamehash}{3970fe18c6160985b181eb5de9c9b06c}
+      \strng{authorfullhash}{3970fe18c6160985b181eb5de9c9b06c}
+      \strng{authorfullhashraw}{3970fe18c6160985b181eb5de9c9b06c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{White Rose Research Online (University of Leeds, The University of Sheffield, University of York)}
+      \field{title}{Incapacity Benefits and Work Incentives}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://openalex.org/W589229266
+      \endverb
+      \verb{url}
+      \verb https://openalex.org/W589229266
+      \endverb
+    \endentry
+    \entry{przysada2019anassessmentofworkabilityafterthecompletionofre}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=aff5501bcc728f71dcdfd94ddbca24a8}{%
+           family={Ćwirlej-Sozańska},
+           familyi={Ć\bibinithyphendelim S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a3dd8a545a0d878cbb4147db0f725e12}{%
+           family={Przysada},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1e66ff65c5850bf2d7e38a1a82f1a30c}{%
+           family={Kilian},
+           familyi={K\bibinitperiod},
+           given={Justyna},
+           giveni={J\bibinitperiod}}}%
+        {{hash=38e3cd1657b94e8fd2574b6a96452e4a}{%
+           family={Wiśniowska-Szurlej},
+           familyi={W\bibinithyphendelim S\bibinitperiod},
+           given={Agnieszka},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b7fe90cf5581b43827a58caa2f0ecb1}
+      \strng{fullhash}{ff651b43b0dd881d08f3b49c0e599fea}
+      \strng{fullhashraw}{ff651b43b0dd881d08f3b49c0e599fea}
+      \strng{bibnamehash}{3b7fe90cf5581b43827a58caa2f0ecb1}
+      \strng{authorbibnamehash}{3b7fe90cf5581b43827a58caa2f0ecb1}
+      \strng{authornamehash}{3b7fe90cf5581b43827a58caa2f0ecb1}
+      \strng{authorfullhash}{ff651b43b0dd881d08f3b49c0e599fea}
+      \strng{authorfullhashraw}{ff651b43b0dd881d08f3b49c0e599fea}
+      \field{sortinit}{Ć}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medycyna Pracy}
+      \field{title}{An assessment of work ability after the completion of rehabilitation}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.13075/mp.5893.00826
+      \endverb
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/876b104002033d77ff560c3d09500024c01bdde0
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/876b104002033d77ff560c3d09500024c01bdde0
+      \endverb
+    \endentry
+    \entry{deveau2011workplaceaccommodationandauditbasedevaluationprocess}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=13b4109a2261a2f0c64cf999581e378d}{%
+           family={Deveau},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{13b4109a2261a2f0c64cf999581e378d}
+      \strng{fullhash}{13b4109a2261a2f0c64cf999581e378d}
+      \strng{fullhashraw}{13b4109a2261a2f0c64cf999581e378d}
+      \strng{bibnamehash}{13b4109a2261a2f0c64cf999581e378d}
+      \strng{authorbibnamehash}{13b4109a2261a2f0c64cf999581e378d}
+      \strng{authornamehash}{13b4109a2261a2f0c64cf999581e378d}
+      \strng{authorfullhash}{13b4109a2261a2f0c64cf999581e378d}
+      \strng{authorfullhashraw}{13b4109a2261a2f0c64cf999581e378d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Workplace accommodation and audit-based evaluation process for compliance with the Employment Equity Act}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.29173/cjs10479
+      \endverb
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/b5089a633ee75eb08bfe9603cf8afc7d69360fdc
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/b5089a633ee75eb08bfe9603cf8afc7d69360fdc
+      \endverb
+    \endentry
+    \entry{dijkstrasdatamakingupincapacityforwork}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=052d7289884a0d0dae24aa88a7e62e83}{%
+           family={Dijkstra},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{052d7289884a0d0dae24aa88a7e62e83}
+      \strng{fullhash}{052d7289884a0d0dae24aa88a7e62e83}
+      \strng{fullhashraw}{052d7289884a0d0dae24aa88a7e62e83}
+      \strng{bibnamehash}{052d7289884a0d0dae24aa88a7e62e83}
+      \strng{authorbibnamehash}{052d7289884a0d0dae24aa88a7e62e83}
+      \strng{authornamehash}{052d7289884a0d0dae24aa88a7e62e83}
+      \strng{authorfullhash}{052d7289884a0d0dae24aa88a7e62e83}
+      \strng{authorfullhashraw}{052d7289884a0d0dae24aa88a7e62e83}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Making up incapacity for work?}
+      \verb{doi}
+      \verb 10.33540/2047
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.33540/2047
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.33540/2047
+      \endverb
+    \endentry
+    \entry{feudtner2014pediatriccomplexchronicconditionsclassificationsyst}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=c5c66c4bc4877208317bca075ca70617}{%
+           family={Feudtner},
+           familyi={F\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=95aafe438d7212048c1bb34608ff1958}{%
+           family={Feinstein},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f7aa89da88de0b08621ef5aac764ee21}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Wenjun},
+           giveni={W\bibinitperiod}}}%
+        {{hash=109d9033be6f27c447205b6613356abe}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d6c74ba327bace28b9c7f17762b0a4b1}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Dingwei},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{eaf6cd620632a4a89e49248373513097}
+      \strng{fullhash}{a669bdc6f41af83104c692db042d8e94}
+      \strng{fullhashraw}{a669bdc6f41af83104c692db042d8e94}
+      \strng{bibnamehash}{eaf6cd620632a4a89e49248373513097}
+      \strng{authorbibnamehash}{eaf6cd620632a4a89e49248373513097}
+      \strng{authornamehash}{eaf6cd620632a4a89e49248373513097}
+      \strng{authorfullhash}{a669bdc6f41af83104c692db042d8e94}
+      \strng{authorfullhashraw}{a669bdc6f41af83104c692db042d8e94}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC Pediatrics}
+      \field{title}{Pediatric complex chronic conditions classification system version 2}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.1186/1471-2431-14-199
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/1471-2431-14-199
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/1471-2431-14-199
+      \endverb
+    \endentry
+    \entry{ftouni2022challengesoftelemedicineduringthecovid19pandemica}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e760d587302c423fef05d34046a0cf76}{%
+           family={Ftouni},
+           familyi={F\bibinitperiod},
+           given={Racha},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8ee1b51f8724e8c06b4ed881ad8b0656}{%
+           family={AlJardali},
+           familyi={A\bibinitperiod},
+           given={Baraa},
+           giveni={B\bibinitperiod}}}%
+        {{hash=06eda6ec3e49ed066fbacf7a979f6dd6}{%
+           family={Hamdanieh},
+           familyi={H\bibinitperiod},
+           given={Maya},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ea99d1194d4830afdda45021aaa15ed6}{%
+           family={Ftouni},
+           familyi={F\bibinitperiod},
+           given={Louna},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2333b7e431dc5d8c05334295dd1833b1}{%
+           family={Salem},
+           familyi={S\bibinitperiod},
+           given={Nariman},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{37ff1435ec9876cd55bed76e75eb3e84}
+      \strng{fullhash}{f697298f795bfb7bc7b28977e15e3181}
+      \strng{fullhashraw}{f697298f795bfb7bc7b28977e15e3181}
+      \strng{bibnamehash}{37ff1435ec9876cd55bed76e75eb3e84}
+      \strng{authorbibnamehash}{37ff1435ec9876cd55bed76e75eb3e84}
+      \strng{authornamehash}{37ff1435ec9876cd55bed76e75eb3e84}
+      \strng{authorfullhash}{f697298f795bfb7bc7b28977e15e3181}
+      \strng{authorfullhashraw}{f697298f795bfb7bc7b28977e15e3181}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC Medical Informatics and Decision Making}
+      \field{title}{Challenges of Telemedicine during the COVID-19 pandemic: a systematic review}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1186/s12911-022-01952-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s12911-022-01952-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s12911-022-01952-0
+      \endverb
+    \endentry
+    \entry{gabbay2011niceguidanceonlongtermsicknessandincapacity}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=7ceef535b06e71fecb16ea37be7095fb}{%
+           family={Gabbay},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b17171f790f8ce12025cf9b8bdf16c58}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Lorraine\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=4a7544bba15194cca4f0af2d6091ac40}{%
+           family={Sheppard},
+           familyi={S\bibinitperiod},
+           given={Linda},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3af370837650c2e1fc03c79d0a4392ea}{%
+           family={Hillage},
+           familyi={H\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c7fd1756181efa384c904a0402c3b579}{%
+           family={Bambra},
+           familyi={B\bibinitperiod},
+           given={Clare},
+           giveni={C\bibinitperiod}}}%
+        {{hash=27d5965a7c1bdea3f05995fc9b8e845d}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Fiona},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0b9196f0a03a25557585d7488cbce71c}{%
+           family={Preece},
+           familyi={P\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2ee0ac7efef7be44d3192920273a4feb}{%
+           family={Taske},
+           familyi={T\bibinitperiod},
+           given={Nichole},
+           giveni={N\bibinitperiod}}}%
+        {{hash=764e07c821c4445b24015602f5e1cd22}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Michael\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{84c12d2f38a261b7008d1e0a8d86fb9d}
+      \strng{fullhash}{49762204e0af3f67a5f9ce0d0943c1c3}
+      \strng{fullhashraw}{49762204e0af3f67a5f9ce0d0943c1c3}
+      \strng{bibnamehash}{84c12d2f38a261b7008d1e0a8d86fb9d}
+      \strng{authorbibnamehash}{84c12d2f38a261b7008d1e0a8d86fb9d}
+      \strng{authornamehash}{84c12d2f38a261b7008d1e0a8d86fb9d}
+      \strng{authorfullhash}{49762204e0af3f67a5f9ce0d0943c1c3}
+      \strng{authorfullhashraw}{49762204e0af3f67a5f9ce0d0943c1c3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{British Journal of General Practice}
+      \field{title}{NICE guidance on long-term sickness and incapacity}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.3399/bjgp11x561221
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3399/bjgp11x561221
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3399/bjgp11x561221
+      \endverb
+    \endentry
+    \entry{gao2019disabilityconcentrationandaccesstorehabilitationservice}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ffb5e09af5fe51d3ce2a10206f5d7a98}{%
+           family={Gao},
+           familyi={G\bibinitperiod}}}%
+        {{hash=07d8568fd7de797aa19f0f0120ebe1a4}{%
+           family={Liu},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{cac4244dddde2d8423c4f35d6644ea9a}
+      \strng{fullhash}{cac4244dddde2d8423c4f35d6644ea9a}
+      \strng{fullhashraw}{cac4244dddde2d8423c4f35d6644ea9a}
+      \strng{bibnamehash}{cac4244dddde2d8423c4f35d6644ea9a}
+      \strng{authorbibnamehash}{cac4244dddde2d8423c4f35d6644ea9a}
+      \strng{authornamehash}{cac4244dddde2d8423c4f35d6644ea9a}
+      \strng{authorfullhash}{cac4244dddde2d8423c4f35d6644ea9a}
+      \strng{authorfullhashraw}{cac4244dddde2d8423c4f35d6644ea9a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Disability and Rehabilitation}
+      \field{title}{Disability concentration and access to rehabilitation services: a pilot spatial assessment applying geographic information system analysis}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1080/09638288.2018.1468931
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/09638288.2018.1468931
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/09638288.2018.1468931
+      \endverb
+    \endentry
+    \entry{guo2017assessmentofaphasiaacrosstheinternationalclassification}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=afdaad028f3b7ad542ba5ed3d4d92fc5}{%
+           family={Guo},
+           familyi={G\bibinitperiod}}}%
+        {{hash=fb4fd08375466636ed08f93347ce4531}{%
+           family={Togher},
+           familyi={T\bibinitperiod}}}%
+        {{hash=dd4fe0cc913f704600b97d1f5dd285de}{%
+           family={Power},
+           familyi={P\bibinitperiod}}}%
+        {{hash=0c8f1806a753ea00468a60e0238aa248}{%
+           family={Hutomo},
+           familyi={H\bibinitperiod}}}%
+        {{hash=2422f0f0806e2d3daff5fcd971be38f1}{%
+           family={Yang},
+           familyi={Y\bibinitperiod}}}%
+        {{hash=b04655f0821a30125d72a34426478752}{%
+           family={Tay},
+           familyi={T\bibinitperiod}}}%
+        {{hash=0d76e7273cb910e56d351db3cc01ccd4}{%
+           family={Koh},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{37c5d3e4543fea70f5fbfcffd529e03a}
+      \strng{fullhash}{2cc2d6c4e7a78d86785b93627709d46a}
+      \strng{fullhashraw}{2cc2d6c4e7a78d86785b93627709d46a}
+      \strng{bibnamehash}{37c5d3e4543fea70f5fbfcffd529e03a}
+      \strng{authorbibnamehash}{37c5d3e4543fea70f5fbfcffd529e03a}
+      \strng{authornamehash}{37c5d3e4543fea70f5fbfcffd529e03a}
+      \strng{authorfullhash}{2cc2d6c4e7a78d86785b93627709d46a}
+      \strng{authorfullhashraw}{2cc2d6c4e7a78d86785b93627709d46a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Telemedicine and e-Health}
+      \field{title}{Assessment of Aphasia Across the International Classification of Functioning, Disability and Health Using an iPad-Based Application}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1089/tmj.2016.0072
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1089/tmj.2016.0072
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1089/tmj.2016.0072
+      \endverb
+    \endentry
+    \entry{kelman2009performanceimprovementandperformancedysfunctionanemp}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=4c36cf248a7eb282972f5c131e6827cf}{%
+           family={Kelman},
+           familyi={K\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fb2eb6a3bea93fb3238fb8e1de2cf006}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={John\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \strng{fullhash}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \strng{fullhashraw}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \strng{bibnamehash}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \strng{authorbibnamehash}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \strng{authornamehash}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \strng{authorfullhash}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \strng{authorfullhashraw}{c9b8d67126db0fe62f3ea7fcfa4deb24}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Public Administration Research and Theory}
+      \field{title}{Performance Improvement and Performance Dysfunction}
+      \field{year}{2009}
+      \verb{doi}
+      \verb 10.1093/jopart/mun028
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/jopart/mun028
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/jopart/mun028
+      \endverb
+    \endentry
+    \entry{mackett2025ametareviewofliteraturereviewsofdisabilitytravel}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3e8581043339317a7fb723a3ccef985b}{%
+           family={Mackett},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e8581043339317a7fb723a3ccef985b}
+      \strng{fullhash}{3e8581043339317a7fb723a3ccef985b}
+      \strng{fullhashraw}{3e8581043339317a7fb723a3ccef985b}
+      \strng{bibnamehash}{3e8581043339317a7fb723a3ccef985b}
+      \strng{authorbibnamehash}{3e8581043339317a7fb723a3ccef985b}
+      \strng{authornamehash}{3e8581043339317a7fb723a3ccef985b}
+      \strng{authorfullhash}{3e8581043339317a7fb723a3ccef985b}
+      \strng{authorfullhashraw}{3e8581043339317a7fb723a3ccef985b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A meta-review of literature reviews of disability, travel and inequalities}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://core.ac.uk/download/631287557.pdf
+      \endverb
+      \verb{url}
+      \verb https://core.ac.uk/download/631287557.pdf
+      \endverb
+    \endentry
+    \entry{nogueira20200731t0100000100aavaliacaodadeficiencianatraje}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9a1f8cf3ce9c150dc6876cfaf3a7ceee}{%
+           family={Nogueira},
+           familyi={N\bibinitperiod},
+           given={Camila\bibnamedelima Lima},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \strng{fullhash}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \strng{fullhashraw}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \strng{bibnamehash}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \strng{authorbibnamehash}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \strng{authornamehash}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \strng{authorfullhash}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \strng{authorfullhashraw}{9a1f8cf3ce9c150dc6876cfaf3a7ceee}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A avaliação da deficiência na trajetória do benefício de prestação continuada}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://core.ac.uk/download/372984850.pdf
+      \endverb
+      \verb{url}
+      \verb https://core.ac.uk/download/372984850.pdf
+      \endverb
+    \endentry
+    \entry{rajasulochana2026doeshavingadisabilitycertificateensurebenefit}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=174a77084bd542625eab447eac02759d}{%
+           family={Rajasulochana},
+           familyi={R\bibinitperiod}}}%
+        {{hash=e8dc9f4434b34812913e6d1a8dc06b2c}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Mohd\bibnamedelima Imran},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \strng{fullhash}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \strng{fullhashraw}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \strng{bibnamehash}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \strng{authorbibnamehash}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \strng{authornamehash}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \strng{authorfullhash}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \strng{authorfullhashraw}{e9c6abc48c007a58234302fcdc4fc3ec}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economic and Political Weekly}
+      \field{title}{Does Having a Disability Certificate Ensure Benefits?}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.71279/epw.v61i06.42922
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.71279/epw.v61i06.42922
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.71279/epw.v61i06.42922
+      \endverb
+    \endentry
+    \entry{sa2020medicalcertificateofdisabilityadescriptiveanalysisofav}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=7dcdfdef723607dfb215fea260211d7a}{%
+           family={Sá},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bb2985763576ade9ca2e1f3788d5d8e1}{%
+           family={Matos},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e11c5df34bd99599b835022c42ddb167}
+      \strng{fullhash}{e11c5df34bd99599b835022c42ddb167}
+      \strng{fullhashraw}{e11c5df34bd99599b835022c42ddb167}
+      \strng{bibnamehash}{e11c5df34bd99599b835022c42ddb167}
+      \strng{authorbibnamehash}{e11c5df34bd99599b835022c42ddb167}
+      \strng{authornamehash}{e11c5df34bd99599b835022c42ddb167}
+      \strng{authorfullhash}{e11c5df34bd99599b835022c42ddb167}
+      \strng{authorfullhashraw}{e11c5df34bd99599b835022c42ddb167}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Journal of Public Health}
+      \field{title}{Medical certificate of disability: a descriptive analysis of Aveiro region, from 2010 to 2016}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1093/eurpub/ckaa166.633
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/eurpub/ckaa166.633
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/eurpub/ckaa166.633
+      \endverb
+    \endentry
+    \entry{sainsbury2006routesontoincapacitybenefitsfindingsfromqualitati}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b606f442884d12ea93aca661a69ac3aa}{%
+           family={Sainsbury},
+           familyi={S\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3ac506148babd865cc5b0edc3268ec2e}{%
+           family={Davidson},
+           familyi={D\bibinitperiod},
+           given={Jo},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e066936abb0d33b57589050f2e97f91}
+      \strng{fullhash}{3e066936abb0d33b57589050f2e97f91}
+      \strng{fullhashraw}{3e066936abb0d33b57589050f2e97f91}
+      \strng{bibnamehash}{3e066936abb0d33b57589050f2e97f91}
+      \strng{authorbibnamehash}{3e066936abb0d33b57589050f2e97f91}
+      \strng{authornamehash}{3e066936abb0d33b57589050f2e97f91}
+      \strng{authorfullhash}{3e066936abb0d33b57589050f2e97f91}
+      \strng{authorfullhashraw}{3e066936abb0d33b57589050f2e97f91}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{White Rose Research Online (University of Leeds, The University of Sheffield, University of York)}
+      \field{title}{Routes Onto Incapacity Benefits: Findings from Qualitative Research}
+      \field{year}{2006}
+      \verb{urlraw}
+      \verb https://openalex.org/W104243845
+      \endverb
+      \verb{url}
+      \verb https://openalex.org/W104243845
+      \endverb
+    \endentry
+    \entry{secchi2020analisedepoliticaspublicas}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=f13c3bb81212ecbe66423557166838dc}{%
+           family={Secchi},
+           familyi={S\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {São Paulo}%
+      }
+      \list{publisher}{1}{%
+        {Cengage Learning}%
+      }
+      \strng{namehash}{f13c3bb81212ecbe66423557166838dc}
+      \strng{fullhash}{f13c3bb81212ecbe66423557166838dc}
+      \strng{fullhashraw}{f13c3bb81212ecbe66423557166838dc}
+      \strng{bibnamehash}{f13c3bb81212ecbe66423557166838dc}
+      \strng{authorbibnamehash}{f13c3bb81212ecbe66423557166838dc}
+      \strng{authornamehash}{f13c3bb81212ecbe66423557166838dc}
+      \strng{authorfullhash}{f13c3bb81212ecbe66423557166838dc}
+      \strng{authorfullhashraw}{f13c3bb81212ecbe66423557166838dc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Análise de políticas públicas: diagnóstico de problemas, recomendação de soluções}
+      \field{year}{2020}
+    \endentry
+    \entry{m2024astudyofdisabilityseveritybarriersandfacilitatingfactor}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=34c5b7ee933eb43f725714ccd081b588}{%
+           family={Shah},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ae060a591695183aa9a2eba9c0086a7}
+      \strng{fullhash}{1ae060a591695183aa9a2eba9c0086a7}
+      \strng{fullhashraw}{1ae060a591695183aa9a2eba9c0086a7}
+      \strng{bibnamehash}{1ae060a591695183aa9a2eba9c0086a7}
+      \strng{authorbibnamehash}{1ae060a591695183aa9a2eba9c0086a7}
+      \strng{authornamehash}{1ae060a591695183aa9a2eba9c0086a7}
+      \strng{authorfullhash}{1ae060a591695183aa9a2eba9c0086a7}
+      \strng{authorfullhashraw}{1ae060a591695183aa9a2eba9c0086a7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cureus}
+      \field{title}{A Study of Disability Severity, Barriers, and Facilitating Factors in Accessing Healthcare Among Differently Abled Adults}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.7759/cureus.75018
+      \endverb
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/0b30f5a1793c37aae5cad91e3f999e67725a6325
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/0b30f5a1793c37aae5cad91e3f999e67725a6325
+      \endverb
+    \endentry
+    \entry{soares20241031t0000000000asistematicadoatestmednaconcessa}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5a2d9a92818712eab6c3a77217d121d9}{%
+           family={Soares},
+           familyi={S\bibinitperiod}}}%
+        {{hash=356f82157356e2f34fcc0c7d36258e9b}{%
+           family={Ninin},
+           familyi={N\bibinitperiod}}}%
+        {{hash=0cb9cde516c38ed84dc1f3f2b5556ed3}{%
+           family={Lima},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \strng{fullhash}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \strng{fullhashraw}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \strng{bibnamehash}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \strng{authorbibnamehash}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \strng{authornamehash}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \strng{authorfullhash}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \strng{authorfullhashraw}{0dd6c5d88fd4faca31cacfffc1d25ab2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A sistemática do ATESTMED na concessão do atestado por incapacidade e seu impacto nos grandes números da Previdência Social}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.21902/rbp.v15i1.7272
+      \endverb
+      \verb{urlraw}
+      \verb https://core.ac.uk/download/622348010.pdf
+      \endverb
+      \verb{url}
+      \verb https://core.ac.uk/download/622348010.pdf
+      \endverb
+    \endentry
+    \entry{steenbeek2011thedevelopmentofinstrumentstomeasuretheworkdisa}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=fbca02f8adc37592ef34fd57551adcc9}{%
+           family={Steenbeek},
+           familyi={S\bibinitperiod},
+           given={Romy},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0921b468295956027d63992e88a3345d}{%
+           family={Schellart},
+           familyi={S\bibinitperiod},
+           given={Antonius\bibnamedelimb J.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=91833d130219e356a4138271e2f2a46f}{%
+           family={Mulders},
+           familyi={M\bibinitperiod},
+           given={Henny},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b544fc46bf56157b09d59bc9e31110bd}{%
+           family={Anema},
+           familyi={A\bibinitperiod},
+           given={Johannes\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=1fb68419cdfa5dca41591c0c22313207}{%
+           family={Kroneman},
+           familyi={K\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod}}}%
+        {{hash=323f669e3f5dd5afca0852e95eccc8a9}{%
+           family={Besseling},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d71b1fcfd6647d2728a60ff73147e557}
+      \strng{fullhash}{a31d5a330ff9722c34ec7ee620143ffd}
+      \strng{fullhashraw}{a31d5a330ff9722c34ec7ee620143ffd}
+      \strng{bibnamehash}{d71b1fcfd6647d2728a60ff73147e557}
+      \strng{authorbibnamehash}{d71b1fcfd6647d2728a60ff73147e557}
+      \strng{authornamehash}{d71b1fcfd6647d2728a60ff73147e557}
+      \strng{authorfullhash}{a31d5a330ff9722c34ec7ee620143ffd}
+      \strng{authorfullhashraw}{a31d5a330ff9722c34ec7ee620143ffd}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC Public Health}
+      \field{title}{The development of instruments to measure the work disability assessment behaviour of insurance physicians}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1186/1471-2458-11-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/1471-2458-11-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/1471-2458-11-1
+      \endverb
+    \endentry
+    \entry{hospital2016mentaldisabilityaretrospectivestudyofsocioclinica}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=75c696bfeaa5664836aa2d7e10adbdac}{%
+           family={{VMMC Safdarjung Hospital}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{75c696bfeaa5664836aa2d7e10adbdac}
+      \strng{fullhash}{75c696bfeaa5664836aa2d7e10adbdac}
+      \strng{fullhashraw}{75c696bfeaa5664836aa2d7e10adbdac}
+      \strng{bibnamehash}{75c696bfeaa5664836aa2d7e10adbdac}
+      \strng{authorbibnamehash}{75c696bfeaa5664836aa2d7e10adbdac}
+      \strng{authornamehash}{75c696bfeaa5664836aa2d7e10adbdac}
+      \strng{authorfullhash}{75c696bfeaa5664836aa2d7e10adbdac}
+      \strng{authorfullhashraw}{75c696bfeaa5664836aa2d7e10adbdac}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Epidemiology International}
+      \field{title}{Mental Disability: A Retrospective Study of Socio-Clinical Profile of Patients Seeking Disability Certificate at a Tertiary Care Centre in Delhi}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.24321/2455.7048.201703
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.24321/2455.7048.201703
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.24321/2455.7048.201703
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

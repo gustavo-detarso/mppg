@@ -1,5 +1,0 @@
-Diretrizes gerais para paper acadêmico:
-- Construir argumento central explícito, sustentado por bibliografia efetivamente citada.
-- Evitar seção meramente descritiva quando o roteiro exigir análise.
-- Garantir coerência entre tema, recorte, objetivo, pergunta e conclusão.
-- Não mencionar limitações técnicas do pipeline, metadados, OCR ou cache.
