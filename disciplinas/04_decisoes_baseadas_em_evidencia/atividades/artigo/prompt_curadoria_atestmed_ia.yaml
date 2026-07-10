@@ -1,0 +1,76 @@
+# prompt_curadoria_atestmed_ia.yaml
+# Curadoria calibrável de referências PRISMA para seminário ATESTMED/PMF
+# Este arquivo é lido pela etapa prisma_curadoria_ia_referencias.py --prompt-curadoria.
+# Você pode ajustar pesos, mínimos e critérios antes de rodar a IA.
+
+schema_version: 2
+
+tema: >
+  Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal,
+  com foco em inteligência artificial, automação documental, teleperícia, avaliação remota,
+  decisões baseadas em evidências, priorização de casos, auditabilidade, qualidade decisória
+  e controle de risco.
+
+objetivo_da_curadoria: >
+  Selecionar referências que ajudem a discutir como ferramentas digitais, IA, automação da análise
+  documental, telemedicina/teleperícia, avaliação remota, protocolos baseados em evidências,
+  critérios auditáveis, suporte decisório e alocação de capacidade podem redesenhar o fluxo
+  PMF/ATESTMED sem comprometer qualidade, equidade e integridade.
+
+max_referencias: 30
+top_n_candidatos: 140
+limiar_minimo_inclusao: 45
+
+pesos:
+  ia_automacao: 35
+  telepericia_avaliacao_remota: 25
+  decisao_baseada_em_evidencias: 20
+  auditoria_qualidade_integridade: 10
+  fila_capacidade_equidade: 5
+  avaliacao_medico_pericial: 5
+
+minimos_por_categoria:
+  ia_automacao: 6
+  telepericia_avaliacao_remota: 4
+  decisao_baseada_em_evidencias: 5
+  auditoria_qualidade_integridade: 3
+  fila_capacidade_equidade: 2
+
+incluir_preferencialmente:
+  - estudos sobre inteligência artificial, machine learning, NLP, classificação, triagem algorítmica ou suporte decisório aplicado a incapacidade, deficiência, funcionalidade, documentos médicos ou benefícios;
+  - estudos sobre automação ou digitalização da certificação, análise documental, atestados, registros médicos ou elegibilidade;
+  - estudos sobre telemedicina, teleperícia, teleavaliação, remote assessment ou avaliação híbrida vinculada a deficiência/incapacidade, certificação ou benefício;
+  - estudos sobre decisões baseadas em evidências, guidelines, protocolos, instrumentos estruturados, escalas funcionais, ICF/CIF, confiabilidade interavaliadores ou critérios padronizados;
+  - estudos sobre auditoria, qualidade, integridade, explicabilidade, governança, controle de fraude, transparência ou consistência decisória;
+  - estudos sobre filas, priorização de casos, alocação de capacidade, acesso territorial e equidade.
+
+incluir_com_menor_prioridade:
+  - estudos gerais sobre benefícios por incapacidade sem componente digital, automatizado, documental ou decisório forte;
+  - estudos de certificação médica tradicional úteis como contexto, mas sem tecnologia, protocolo estruturado ou evidência de governança;
+  - estudos de BPC/deficiência úteis para comparação institucional brasileira, mas sem foco direto em automação/perícia/ATESTMED.
+
+excluir_ou_rebaixar:
+  - telemedicina exclusivamente assistencial, sem relação com perícia, certificação, incapacidade, deficiência, elegibilidade ou fluxo administrativo;
+  - reabilitação clínica sem interface com decisão pericial, documentação, retorno ao trabalho, benefício ou elegibilidade;
+  - estudos puramente clínicos, epidemiológicos ou terapêuticos sem contribuição para automação, evidência, teleperícia, qualidade decisória ou gestão de fluxo;
+  - estudos sobre deficiência em geral sem certificação, benefício, avaliação administrativa, decisão de direito ou processo pericial;
+  - textos opinativos sem método, dados, revisão ou contribuição institucional verificável.
+
+classes_curadoria:
+  - NUCLEO_TECNOLOGICO: IA, automação, digitalização, teleperícia ou avaliação remota diretamente aplicável.
+  - NUCLEO_DECISORIO: protocolos, evidência estruturada, instrumentos, guidelines, confiabilidade ou critérios auditáveis.
+  - APOIO_PERICIAL: benefício por incapacidade, certificação e avaliação médico-pericial tradicional.
+  - APOIO_CONTEXTO: fila, equidade, acesso, política pública ou contexto institucional.
+  - EXCLUIR: fora do recorte ou baixa contribuição.
+
+orientacao_para_ia: >
+  Não selecione apenas os estudos mais próximos de benefícios por incapacidade em sentido amplo.
+  Priorize o recorte tecnológico e decisório. Um artigo sobre benefício por incapacidade só deve ser
+  NUCLEO se trouxer IA, automação, análise documental estruturada, teleavaliação, protocolo,
+  instrumento, confiabilidade, auditoria, qualidade ou suporte decisório. Quando o artigo for útil
+  apenas como contexto previdenciário, classifique como APOIO, não como NÚCLEO.
+
+saida_esperada:
+  incluir_final: usar SIM somente para estudos realmente úteis ao seminário.
+  prioridade_seminario: usar NÚCLEO para textos centrais e APOIO para contexto.
+  preencher_matriz: preencher objetivo, método, amostra, achados, limitações e contribuição para a pergunta.

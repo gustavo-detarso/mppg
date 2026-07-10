@@ -1,0 +1,454 @@
+{
+  "metadata": {
+    "tipo_documento": "atividade",
+    "titulo": "Hospital Israelita Albert Einstein e a Quarta Revolução Industrial",
+    "subtitulo": "",
+    "autor": "Gustavo M. Mendes de Tarso",
+    "instituicao": "fgv",
+    "programa": "",
+    "curso": "MBA Executivo em Administração: Gestão de Saúde",
+    "turma": "MBS02488-MGS-T01 - 614307/2024",
+    "polo": "Brasília",
+    "disciplina": "Transformação digital e inovação em saúde",
+    "professor": "Fernando Pedro de Moraes",
+    "cidade": "Brasília",
+    "ano": "2026",
+    "data": "2026",
+    "tipo_trabalho": "Atividade acadêmica",
+    "nota_capa": "Trabalho acadêmico elaborado para a disciplina.",
+    "idioma": "português"
+  },
+  "abstract": {
+    "titulo": "Resumo",
+    "texto": "Esta atividade analisa o caso do Hospital Israelita Albert Einstein como expressão da Quarta Revolução Industrial no setor de saúde. O foco recai sobre a forma pela qual a instituição articula telemedicina, inteligência artificial, big data, internet das coisas, sensores, conectividade e automação para enfrentar desafios clínicos, assistenciais e gerenciais. O estudo evidencia que a transformação digital, nesse contexto, não se limita à incorporação de equipamentos ou sistemas isolados, mas envolve a reorganização de processos, a integração entre ambientes físicos e digitais e o uso estratégico da informação para qualificar decisões e ampliar o acesso. Também são discutidos limites e exigências dessa transformação, especialmente no que se refere à segurança da informação, à privacidade dos pacientes, à inclusão digital e à preservação do julgamento profissional nas decisões clínicas. Conclui-se que o caso demonstra uma aplicação concreta da Quarta Revolução Industrial em saúde, combinando eficiência operacional, suporte analítico e centralidade no paciente.",
+    "palavras_chave": [
+      "Quarta Revolução Industrial",
+      "transformação digital em saúde",
+      "telemedicina",
+      "inteligência artificial",
+      "big data",
+      "experiência do paciente"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "level": 1,
+      "title": "Introdução",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O caso do Hospital Israelita Albert Einstein permite compreender como a Quarta Revolução Industrial vem redefinindo o setor de saúde por meio da convergência entre tecnologias digitais, análise de dados, conectividade e novos modelos de organização do cuidado. Mais do que adotar ferramentas tecnológicas de forma pontual, a instituição é apresentada como exemplo de integração entre inovação, gestão e assistência, com impactos sobre a qualidade clínica, a eficiência operacional e a experiência do paciente.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O caso do Hospital Israelita Albert Einstein permite compreender como a Quarta Revolução Industrial vem redefinindo o setor de saúde por meio da convergência entre tecnologias digitais, análise de dados, conectividade e novos modelos de organização do cuidado. Mais do que adotar ferramentas tecnológicas de forma pontual, a instituição é apresentada como exemplo de integração entre inovação, gestão e assistência, com impactos sobre a qualidade clínica, a eficiência operacional e a experiência do paciente.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b1",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A questão orientadora inferida a partir do enunciado pode ser sintetizada da seguinte forma: de que modo o Hospital Israelita Albert Einstein materializa a Quarta Revolução Industrial no campo da saúde e quais problemas organizacionais e assistenciais essa transformação busca enfrentar? Em resposta, sustenta-se que o Einstein exemplifica essa nova etapa ao combinar telemedicina, inteligência artificial, big data, internet das coisas, sensores, conectividade e automação em uma lógica integrada de cuidado e gestão.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A questão orientadora inferida a partir do enunciado pode ser sintetizada da seguinte forma: de que modo o Hospital Israelita Albert Einstein materializa a Quarta Revolução Industrial no campo da saúde e quais problemas organizacionais e assistenciais essa transformação busca enfrentar? Em resposta, sustenta-se que o Einstein exemplifica essa nova etapa ao combinar telemedicina, inteligência artificial, big data, internet das coisas, sensores, conectividade e automação em uma lógica integrada de cuidado e gestão.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b2",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-desenvolvimento",
+      "level": 1,
+      "title": "Desenvolvimento",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Problemas enfrentados e sentido da transformação digital",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "b3",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O material destaca que a transformação digital no Einstein responde a desafios concretos do sistema de saúde. Entre eles estão as dificuldades de acesso a serviços especializados, sobretudo para pessoas distantes dos grandes centros, a necessidade de ampliar a capacidade de atendimento sem depender apenas da presença física do paciente, a lentidão e a repetição de tarefas em processos administrativos e assistenciais, a necessidade de melhorar a qualidade das decisões clínicas diante do elevado volume de informações, os riscos de infecção relacionados à assistência, a demanda por monitoramento contínuo de pacientes internados e os obstáculos de comunicação e agendamento ao longo da jornada do paciente.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O material destaca que a transformação digital no Einstein responde a desafios concretos do sistema de saúde. Entre eles estão as dificuldades de acesso a serviços especializados, sobretudo para pessoas distantes dos grandes centros, a necessidade de ampliar a capacidade de atendimento sem depender apenas da presença física do paciente, a lentidão e a repetição de tarefas em processos administrativos e assistenciais, a necessidade de melhorar a qualidade das decisões clínicas diante do elevado volume de informações, os riscos de infecção relacionados à assistência, a demanda por monitoramento contínuo de pacientes internados e os obstáculos de comunicação e agendamento ao longo da jornada do paciente.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b4",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Nesse sentido, a inovação é apresentada menos como modernização instrumental e mais como estratégia organizacional. O ganho central não decorre apenas da presença de tecnologia avançada, mas da capacidade de reorganizar processos, conectar fluxos de informação e tornar o cuidado mais integrado, seguro e humanizado. A Quarta Revolução Industrial, aplicada à saúde, aparece portanto como mudança estrutural na forma de produzir valor clínico e gerencial.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Nesse sentido, a inovação é apresentada menos como modernização instrumental e mais como estratégia organizacional. O ganho central não decorre apenas da presença de tecnologia avançada, mas da capacidade de reorganizar processos, conectar fluxos de informação e tornar o cuidado mais integrado, seguro e humanizado. A Quarta Revolução Industrial, aplicada à saúde, aparece portanto como mudança estrutural na forma de produzir valor clínico e gerencial.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b5",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Telemedicina e ampliação do acesso",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "b6",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A telemedicina constitui uma das frentes mais visíveis dessa transformação. Ela permite aproximar profissionais, pacientes e serviços de saúde mesmo quando não compartilham o mesmo espaço físico. Seu uso evidencia uma característica decisiva da Quarta Revolução Industrial: a integração entre o ambiente presencial e o ambiente digital. O cuidado deixa de se organizar exclusivamente em torno da consulta física e passa a incorporar comunicação remota, compartilhamento de informações e acompanhamento clínico mediado por plataformas tecnológicas.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A telemedicina constitui uma das frentes mais visíveis dessa transformação. Ela permite aproximar profissionais, pacientes e serviços de saúde mesmo quando não compartilham o mesmo espaço físico. Seu uso evidencia uma característica decisiva da Quarta Revolução Industrial: a integração entre o ambiente presencial e o ambiente digital. O cuidado deixa de se organizar exclusivamente em torno da consulta física e passa a incorporar comunicação remota, compartilhamento de informações e acompanhamento clínico mediado por plataformas tecnológicas.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b7",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "No caso analisado, essa solução contribui para ampliar o acesso, reduzir barreiras geográficas e tornar diagnósticos e encaminhamentos mais ágeis. Ao mesmo tempo, o texto-base ressalta que sua efetividade depende de condições que não podem ser ignoradas, como qualidade de conexão, proteção das informações dos pacientes e inclusão de pessoas com menor acesso a recursos digitais. Isso demonstra que a transformação digital em saúde não elimina desigualdades automaticamente; ela exige gestão cuidadosa para que a inovação produza acesso ampliado sem gerar novas exclusões.",
+          "content": [
+            {
+              "type": "text",
+              "text": "No caso analisado, essa solução contribui para ampliar o acesso, reduzir barreiras geográficas e tornar diagnósticos e encaminhamentos mais ágeis. Ao mesmo tempo, o texto-base ressalta que sua efetividade depende de condições que não podem ser ignoradas, como qualidade de conexão, proteção das informações dos pacientes e inclusão de pessoas com menor acesso a recursos digitais. Isso demonstra que a transformação digital em saúde não elimina desigualdades automaticamente; ela exige gestão cuidadosa para que a inovação produza acesso ampliado sem gerar novas exclusões.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b8",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Dados, big data e inteligência artificial",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "b9",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Outra dimensão central do caso é o uso intensivo de dados provenientes de prontuários, exames, internações, sensores, atendimentos e rotinas administrativas. Quando organizadas e analisadas, essas informações deixam de ser registros dispersos e passam a compor uma base estratégica para decisões clínicas e gerenciais. A inteligência artificial e o aprendizado de máquina aparecem, nesse contexto, como instrumentos capazes de identificar padrões, gerar alertas e apoiar avaliações mais rápidas e consistentes.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Outra dimensão central do caso é o uso intensivo de dados provenientes de prontuários, exames, internações, sensores, atendimentos e rotinas administrativas. Quando organizadas e analisadas, essas informações deixam de ser registros dispersos e passam a compor uma base estratégica para decisões clínicas e gerenciais. A inteligência artificial e o aprendizado de máquina aparecem, nesse contexto, como instrumentos capazes de identificar padrões, gerar alertas e apoiar avaliações mais rápidas e consistentes.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b10",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O exemplo mencionado no material, relativo ao mapeamento e à redução de infecções multirresistentes em unidades de terapia intensiva, ilustra de modo claro esse potencial. Ao cruzar dados e reconhecer padrões relevantes, a tecnologia contribui para intervenções mais céleres diante de riscos importantes. Ainda assim, o texto ressalta que a inteligência artificial não substitui o profissional de saúde. Sua função é oferecer suporte analítico para a tomada de decisão, enquanto o julgamento clínico, a responsabilidade ética e a avaliação individual do paciente permanecem como elementos insubstituíveis.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O exemplo mencionado no material, relativo ao mapeamento e à redução de infecções multirresistentes em unidades de terapia intensiva, ilustra de modo claro esse potencial. Ao cruzar dados e reconhecer padrões relevantes, a tecnologia contribui para intervenções mais céleres diante de riscos importantes. Ainda assim, o texto ressalta que a inteligência artificial não substitui o profissional de saúde. Sua função é oferecer suporte analítico para a tomada de decisão, enquanto o julgamento clínico, a responsabilidade ética e a avaliação individual do paciente permanecem como elementos insubstituíveis.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b11",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa perspectiva revela um ponto essencial: na Quarta Revolução Industrial, os dados se tornam ativo estratégico da organização. Eles servem à prevenção, ao diagnóstico, ao planejamento e à melhoria contínua dos serviços. Em contrapartida, ampliam a responsabilidade institucional quanto à privacidade, à segurança da informação e ao uso ético de dados sensíveis, especialmente em um setor no qual a informação possui alto valor e elevada sensibilidade.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa perspectiva revela um ponto essencial: na Quarta Revolução Industrial, os dados se tornam ativo estratégico da organização. Eles servem à prevenção, ao diagnóstico, ao planejamento e à melhoria contínua dos serviços. Em contrapartida, ampliam a responsabilidade institucional quanto à privacidade, à segurança da informação e ao uso ético de dados sensíveis, especialmente em um setor no qual a informação possui alto valor e elevada sensibilidade.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b12",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Internet das coisas, sensores, conectividade e automação",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "b13",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O caso também associa a transformação digital ao uso de internet das coisas, sensores e conectividade avançada para qualificar o monitoramento e a gestão hospitalar. Esses recursos permitem captar sinais, acompanhar condições clínicas de forma mais contínua e integrar informações em tempo mais próximo do real. Em um ambiente hospitalar, isso pode significar maior capacidade de vigilância, detecção precoce de alterações e respostas assistenciais mais rápidas.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O caso também associa a transformação digital ao uso de internet das coisas, sensores e conectividade avançada para qualificar o monitoramento e a gestão hospitalar. Esses recursos permitem captar sinais, acompanhar condições clínicas de forma mais contínua e integrar informações em tempo mais próximo do real. Em um ambiente hospitalar, isso pode significar maior capacidade de vigilância, detecção precoce de alterações e respostas assistenciais mais rápidas.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b14",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando articulados a plataformas digitais e processos automatizados, esses recursos também reduzem tarefas repetitivas e aumentam a eficiência operacional. A automação, nessa perspectiva, não deve ser entendida apenas como substituição de trabalho humano, mas como mecanismo de racionalização de rotinas, liberação de tempo para atividades de maior valor assistencial e diminuição de falhas em fluxos administrativos e clínicos. A conectividade, inclusive em contextos associados ao 5G, amplia a capacidade de circulação de dados e reforça a integração entre dispositivos, equipes e sistemas.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando articulados a plataformas digitais e processos automatizados, esses recursos também reduzem tarefas repetitivas e aumentam a eficiência operacional. A automação, nessa perspectiva, não deve ser entendida apenas como substituição de trabalho humano, mas como mecanismo de racionalização de rotinas, liberação de tempo para atividades de maior valor assistencial e diminuição de falhas em fluxos administrativos e clínicos. A conectividade, inclusive em contextos associados ao 5G, amplia a capacidade de circulação de dados e reforça a integração entre dispositivos, equipes e sistemas.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b15",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Experiência do paciente e reorganização do cuidado",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "b16",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Um aspecto relevante do caso é que a inovação tecnológica não aparece dissociada da centralidade no paciente. A transformação proposta busca reduzir tempos de espera, facilitar comunicação e agendamento, ampliar acesso a informações clínicas e tornar a jornada hospitalar mais segura e integrada. Assim, a digitalização não se limita à eficiência interna da organização; ela também reconfigura a experiência do usuário e o modo como o cuidado é percebido e vivenciado.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um aspecto relevante do caso é que a inovação tecnológica não aparece dissociada da centralidade no paciente. A transformação proposta busca reduzir tempos de espera, facilitar comunicação e agendamento, ampliar acesso a informações clínicas e tornar a jornada hospitalar mais segura e integrada. Assim, a digitalização não se limita à eficiência interna da organização; ela também reconfigura a experiência do usuário e o modo como o cuidado é percebido e vivenciado.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b17",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa característica é importante porque evita uma leitura tecnicista da Quarta Revolução Industrial. No caso do Einstein, a tecnologia faz sentido quando contribui para um cuidado mais responsivo, coordenado e humanizado. A inovação, portanto, não é fim em si mesma, mas meio para qualificar a relação entre instituição, profissionais e pacientes.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa característica é importante porque evita uma leitura tecnicista da Quarta Revolução Industrial. No caso do Einstein, a tecnologia faz sentido quando contribui para um cuidado mais responsivo, coordenado e humanizado. A inovação, portanto, não é fim em si mesma, mas meio para qualificar a relação entre instituição, profissionais e pacientes.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b18",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-conclusao",
+      "level": 1,
+      "title": "Conclusão",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A análise do caso do Hospital Israelita Albert Einstein mostra que a Quarta Revolução Industrial, no setor de saúde, resulta da integração entre tecnologias digitais, dados e reorganização de processos. O diferencial da instituição não está na adoção isolada de ferramentas como telemedicina, inteligência artificial, sensores ou automação, mas na articulação desses recursos para responder simultaneamente a desafios de acesso, qualidade, eficiência, segurança e experiência do paciente.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A análise do caso do Hospital Israelita Albert Einstein mostra que a Quarta Revolução Industrial, no setor de saúde, resulta da integração entre tecnologias digitais, dados e reorganização de processos. O diferencial da instituição não está na adoção isolada de ferramentas como telemedicina, inteligência artificial, sensores ou automação, mas na articulação desses recursos para responder simultaneamente a desafios de acesso, qualidade, eficiência, segurança e experiência do paciente.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b19",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Conclui-se, assim, que o Einstein representa um exemplo consistente de transformação digital aplicada à saúde, pois combina inovação tecnológica com gestão da informação e foco assistencial. Ao mesmo tempo, o caso evidencia que essa transformação exige atenção permanente a aspectos éticos, à privacidade, à segurança dos dados e à inclusão digital. Em síntese, a Quarta Revolução Industrial em saúde não se define apenas por tecnologia avançada, mas pela capacidade de usar essa tecnologia de maneira integrada, responsável e orientada ao cuidado.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Conclui-se, assim, que o Einstein representa um exemplo consistente de transformação digital aplicada à saúde, pois combina inovação tecnológica com gestão da informação e foco assistencial. Ao mesmo tempo, o caso evidencia que essa transformação exige atenção permanente a aspectos éticos, à privacidade, à segurança dos dados e à inclusão digital. Em síntese, a Quarta Revolução Industrial em saúde não se define apenas por tecnologia avançada, mas pela capacidade de usar essa tecnologia de maneira integrada, responsável e orientada ao cuidado.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 1,
+          "items": [],
+          "table": null,
+          "id": "b20",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "bibliography": {
+    "bib_path": "atividade_case_einstein.bib",
+    "style": "abnt",
+    "entries_used": []
+  },
+  "diagnostics": {
+    "prompts_json": "{\"document\": {\"task\": \"document\", \"total_chars\": 2953, \"sources\": [{\"category\": \"global\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt\", \"label\": \"../../prompts/global/orientacao_geral_execucao.txt\", \"chars\": 2096, \"sha256\": \"f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2\", \"sanitized\": false}, {\"category\": \"institution\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt\", \"label\": \"profile://prompts/fgv_geral.txt\", \"chars\": 392, \"sha256\": \"c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b\", \"sanitized\": false}, {\"category\": \"document_type\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/atividade.txt\", \"label\": \"../../prompts/document/atividade.txt\", \"chars\": 325, \"sha256\": \"70748caae36c743e545c4a15e68c38e305823f67681e57a8366a4ddf1a974670\", \"sanitized\": false}]}}",
+    "mindmap_json": "null",
+    "source_info_json": "{\"suffixes\": [\".docx\", \".md\", \".org\", \".pdf\", \".txt\"], \"warnings\": [], \"input_dir\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_case_einstein/fontes\"}",
+    "relatorio_pesquisa_json": "",
+    "warnings": []
+  }
+}

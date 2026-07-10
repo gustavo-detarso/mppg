@@ -6,6 +6,7 @@ import csv
 import json
 import os
 import re
+import time
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass, field
@@ -17,6 +18,87 @@ from pydantic import BaseModel, Field
 from corpus_manager import SourceDoc
 from prompt_manager import load_prompt_bundle
 from utils import normalize_title_loose, shorten_text, write_text, write_json, resolve_path
+
+
+# Fontes efetivamente implementadas para enriquecimento de metadados de
+# documentos locais por DOI. A lista é distinta dos provedores de descoberta
+# do fluxo PRISMA: uma base só aparece aqui quando possui adaptador de
+# metadados neste módulo.
+METADATA_SOURCE_ORDER = ("crossref", "openalex", "semantic_scholar", "scopus")
+
+# A chave aprovada do Semantic Scholar possui cota cumulativa de uma requisição
+# por segundo. O limitador também cobre o enriquecimento de DOI em papers locais.
+SEMANTIC_SCHOLAR_MIN_INTERVAL = 1.05
+_SEMANTIC_SCHOLAR_LAST_REQUEST_AT = 0.0
+
+
+def _metadata_env(*names: str) -> str:
+    """Lê a primeira variável de ambiente não vazia, sem expor seu valor."""
+    for name in names:
+        value = os.getenv(name, "").strip()
+        if value:
+            return value
+    return ""
+
+
+def metadata_provider_statuses() -> dict[str, dict[str, Any]]:
+    """Informa capacidade de consulta por fonte, sem revelar credenciais.
+
+    O wizard usa somente os rótulos e o estado; chaves e e-mails permanecem
+    exclusivamente no ambiente/.env. Crossref e OpenAlex aceitam consulta
+    pública, mas o e-mail melhora a identificação do cliente. Semantic Scholar
+    também mantém rota pública; Scopus exige chave.
+    """
+    crossref_email = _metadata_env("CROSSREF_EMAIL", "CROSSREF_MAILTO", "OPENALEX_EMAIL", "OPENALEX_MAILTO")
+    openalex_email = _metadata_env("OPENALEX_EMAIL", "OPENALEX_MAILTO", "CROSSREF_EMAIL", "CROSSREF_MAILTO")
+    semantic_key = _metadata_env("SEMANTIC_SCHOLAR_API_KEY", "S2_API_KEY")
+    scopus_key = _metadata_env("SCOPUS_API_KEY", "ELSEVIER_API_KEY")
+    return {
+        "crossref": {
+            "label": "Crossref",
+            "available": True,
+            "status": "disponível — e-mail de contato detectado" if crossref_email else "disponível — sem e-mail de contato no .env",
+        },
+        "openalex": {
+            "label": "OpenAlex",
+            "available": True,
+            "status": "disponível — e-mail de contato detectado" if openalex_email else "disponível — sem e-mail de contato no .env",
+        },
+        "semantic_scholar": {
+            "label": "Semantic Scholar",
+            "available": True,
+            "status": "chave detectada" if semantic_key else "disponível sem chave — sujeito a limite público",
+        },
+        "scopus": {
+            "label": "Scopus",
+            "available": bool(scopus_key),
+            "status": "chave detectada" if scopus_key else "chave não detectada — consulta será ignorada",
+        },
+    }
+
+
+def metadata_provider_selection_choices() -> list[tuple[str, str]]:
+    """Retorna opções visuais para a tela de fontes de metadados."""
+    statuses = metadata_provider_statuses()
+    choices = [("todas", "[Todas] — selecionar todas as fontes de metadados compatíveis")]
+    for source in METADATA_SOURCE_ORDER:
+        item = statuses[source]
+        choices.append((source, f"{item['label']} — {item['status']}"))
+    return choices
+
+
+def expand_metadata_provider_selection(values: list[str] | tuple[str, ...] | set[str]) -> list[str]:
+    """Expande a opção mestre ``todas`` para as fontes suportadas."""
+    raw = [str(value).strip().lower().replace("-", "_") for value in values if str(value).strip()]
+    if "todas" in raw:
+        return list(METADATA_SOURCE_ORDER)
+    out: list[str] = []
+    for source in raw:
+        if source == "semanticscholar":
+            source = "semantic_scholar"
+        if source in METADATA_SOURCE_ORDER and source not in out:
+            out.append(source)
+    return out
 
 
 class BibMetadata(BaseModel):
@@ -141,7 +223,7 @@ def crossref_item_to_meta(item: dict[str, Any]) -> BibMetadata:
 
 
 def crossref_by_doi(doi: str) -> BibMetadata | None:
-    mailto = os.getenv("CROSSREF_MAILTO") or os.getenv("OPENALEX_MAILTO") or ""
+    mailto = _metadata_env("CROSSREF_EMAIL", "CROSSREF_MAILTO", "OPENALEX_EMAIL", "OPENALEX_MAILTO")
     headers = {"User-Agent": f"academic-pipeline-rc10 ({mailto or 'local'})"}
     url = "https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="")
     data = http_get_json(url, headers=headers)
@@ -150,7 +232,7 @@ def crossref_by_doi(doi: str) -> BibMetadata | None:
 
 
 def openalex_by_doi(doi: str) -> BibMetadata | None:
-    mailto = os.getenv("OPENALEX_MAILTO") or os.getenv("CROSSREF_MAILTO") or ""
+    mailto = _metadata_env("OPENALEX_EMAIL", "OPENALEX_MAILTO", "CROSSREF_EMAIL", "CROSSREF_MAILTO")
     url = "https://api.openalex.org/works/doi:" + urllib.parse.quote(doi, safe="")
     if mailto:
         url += "?" + urllib.parse.urlencode({"mailto": mailto})
@@ -183,11 +265,21 @@ def openalex_by_doi(doi: str) -> BibMetadata | None:
     )
 
 
+def _wait_for_semantic_scholar() -> None:
+    """Respeita a cota cumulativa da API Semantic Scholar sem expor a chave."""
+    global _SEMANTIC_SCHOLAR_LAST_REQUEST_AT
+    elapsed = time.monotonic() - _SEMANTIC_SCHOLAR_LAST_REQUEST_AT
+    if _SEMANTIC_SCHOLAR_LAST_REQUEST_AT and elapsed < SEMANTIC_SCHOLAR_MIN_INTERVAL:
+        time.sleep(SEMANTIC_SCHOLAR_MIN_INTERVAL - elapsed)
+    _SEMANTIC_SCHOLAR_LAST_REQUEST_AT = time.monotonic()
+
+
 def semantic_scholar_by_doi(doi: str) -> BibMetadata | None:
     key = os.getenv("SEMANTIC_SCHOLAR_API_KEY") or os.getenv("S2_API_KEY") or ""
     headers = {"User-Agent": "academic-pipeline-rc10"}
     if key:
         headers["x-api-key"] = key
+    _wait_for_semantic_scholar()
     fields = "title,authors,year,venue,externalIds,url,publicationVenue"
     url = "https://api.semanticscholar.org/graph/v1/paper/DOI:" + urllib.parse.quote(doi, safe="") + "?" + urllib.parse.urlencode({"fields": fields})
     data = http_get_json(url, headers=headers)
@@ -234,16 +326,10 @@ def scopus_by_doi(doi: str) -> BibMetadata | None:
 
 def _metadata_sources(cfg: dict[str, Any]) -> list[str]:
     local = cfg.get("documentos_locais", {}) if isinstance(cfg.get("documentos_locais"), dict) else {}
-    raw = local.get("fontes_metadados") or ["crossref", "openalex", "semantic_scholar", "scopus"]
+    raw = local.get("fontes_metadados") or list(METADATA_SOURCE_ORDER)
     if isinstance(raw, str):
         raw = [raw]
-    out = []
-    for item in raw or []:
-        s = str(item).strip().lower().replace("-", "_")
-        if s == "semanticscholar":
-            s = "semantic_scholar"
-        if s in {"crossref", "openalex", "semantic_scholar", "scopus"} and s not in out:
-            out.append(s)
+    out = expand_metadata_provider_selection(list(raw or []))
     return out or ["crossref", "openalex"]
 
 

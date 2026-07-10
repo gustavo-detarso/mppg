@@ -1,0 +1,24 @@
+ARTIGO LONGO — TRAVA METODOLÓGICA v1.13
+
+Esta orientação prevalece sobre instruções anteriores conflitantes.
+
+O documento final deve ser um artigo científico longo em padrão ABNT/FGV, com:
+- mínimo de 8.500 palavras no corpo textual;
+- aproximadamente 18 a 25 páginas;
+- uso explícito dos 20 estudos incluídos com full text;
+- menção correta ao corpus final de 20 estudos, nunca 14 estudos;
+- seção metodológica com PRISMA, estratégia de busca, critérios de inclusão/exclusão e garantia de full text;
+- matriz de evidências por estudo;
+- discussão substantiva sobre ATESTMED, saúde digital, perícia médica federal, avaliação documental, teleperícia, IA e decisão baseada em evidências;
+- proposta de redesenho do fluxo decisório da Perícia Médica Federal;
+- limitações;
+- conclusão;
+- referências renderizadas a partir do arquivo BibTeX de referências incluídas.
+
+Arquivos obrigatórios a considerar:
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/referencias_incluidas_20.md
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/estatisticas_prisma_fulltext.md
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/artigo_longo_fulltext/corpus_fulltext_compilado.md
+- /home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.bib
+
+Rejeitar qualquer saída curta, ensaística ou genérica.

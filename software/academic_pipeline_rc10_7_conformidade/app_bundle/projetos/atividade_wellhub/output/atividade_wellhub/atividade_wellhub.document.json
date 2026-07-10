@@ -1,0 +1,542 @@
+{
+  "metadata": {
+    "tipo_documento": "atividade",
+    "titulo": "Wellhub e a Quarta Revolução Industrial",
+    "subtitulo": "",
+    "autor": "Gustavo M. Mendes de Tarso",
+    "instituicao": "fgv",
+    "programa": "",
+    "curso": "MBA Executivo em Administração: Gestão de Saúde",
+    "turma": "MBS02488-MGS-T01 - 614307/2024",
+    "polo": "Brasília",
+    "disciplina": "Transformação digital e inovação em saúde",
+    "professor": "Fernando Pedro de Moraes",
+    "cidade": "Brasília",
+    "ano": "2026",
+    "data": "2026",
+    "tipo_trabalho": "Atividade acadêmica",
+    "nota_capa": "Trabalho acadêmico elaborado para a disciplina.",
+    "idioma": "português"
+  },
+  "abstract": {
+    "titulo": "Resumo",
+    "texto": "Esta atividade analisa o Wellhub como exemplo da Quarta Revolução Industrial aplicada ao campo do bem-estar corporativo e da saúde preventiva. O estudo mostra que a plataforma articula serviços presenciais e digitais em uma mesma arquitetura de acesso, conectando empresas, colaboradores e parceiros de bem-estar. O problema central enfrentado é a baixa adesão a práticas de autocuidado, associada a barreiras de acesso, fragmentação de serviços e baixa efetividade de benefícios tradicionais. Como diferencial, o Wellhub reúne, em um único ambiente digital, academias, estúdios, aplicativos e recursos voltados a atividade física, saúde mental, nutrição, sono e mindfulness. A análise evidencia a convergência entre dimensões física, digital, humana e organizacional, além do uso de dados e inteligência artificial para personalização da experiência e estímulo ao engajamento. Ao mesmo tempo, o caso revela limites e riscos, como desigualdades de acesso, dependência de parceiros, tratamento inadequado de dados e substituição indevida de políticas mais amplas de saúde ocupacional por soluções de plataforma. Conclui-se que o Wellhub representa de forma clara a lógica da Quarta Revolução Industrial ao reorganizar serviços tradicionais por meio de conectividade, dados e inteligência artificial, mas sua contribuição depende de implementação crítica, complementar e socialmente responsável no contexto organizacional.",
+    "palavras_chave": [
+      "Quarta Revolução Industrial",
+      "bem-estar corporativo",
+      "saúde preventiva",
+      "plataformas digitais",
+      "inteligência artificial",
+      "transformação digital em saúde"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "level": 1,
+      "title": "Introdução",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O Wellhub pode ser compreendido como um exemplo representativo da Quarta Revolução Industrial porque integra serviços físicos de bem-estar, infraestrutura digital, uso de dados e recursos de inteligência artificial em uma única plataforma voltada ao ambiente corporativo.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O Wellhub pode ser compreendido como um exemplo representativo da Quarta Revolução Industrial porque integra serviços físicos de bem-estar, infraestrutura digital, uso de dados e recursos de inteligência artificial em uma única plataforma voltada ao ambiente corporativo.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A questão orientadora desta atividade pode ser formulada da seguinte maneira: de que modo o Wellhub expressa a convergência tecnológica característica da Quarta Revolução Industrial e quais problemas busca resolver, ao mesmo tempo em que produz novos desafios?",
+          "content": [
+            {
+              "type": "text",
+              "text": "A questão orientadora desta atividade pode ser formulada da seguinte maneira: de que modo o Wellhub expressa a convergência tecnológica característica da Quarta Revolução Industrial e quais problemas busca resolver, ao mesmo tempo em que produz novos desafios?",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O objetivo do trabalho é analisar o caso a partir do corpus fornecido, destacando o problema que a plataforma enfrenta, sua solução digital, o uso de dados e inteligência artificial, seu modelo de negócio e seus principais limites no campo da saúde e do bem-estar no trabalho.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O objetivo do trabalho é analisar o caso a partir do corpus fornecido, destacando o problema que a plataforma enfrenta, sua solução digital, o uso de dados e inteligência artificial, seu modelo de negócio e seus principais limites no campo da saúde e do bem-estar no trabalho.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-desenvolvimento",
+      "level": 1,
+      "title": "Desenvolvimento",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Problema enfrentado pela plataforma",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O exemplo evidencia que a plataforma se dirige a problemas recorrentes no mundo do trabalho contemporâneo, como sedentarismo, estresse, burnout e baixa adesão a práticas de autocuidado. Soma-se a isso a dificuldade de acesso a serviços de atividade física, saúde mental, nutrição, sono e meditação, especialmente quando esses serviços são contratados de modo fragmentado e isolado.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O exemplo evidencia que a plataforma se dirige a problemas recorrentes no mundo do trabalho contemporâneo, como sedentarismo, estresse, burnout e baixa adesão a práticas de autocuidado. Soma-se a isso a dificuldade de acesso a serviços de atividade física, saúde mental, nutrição, sono e meditação, especialmente quando esses serviços são contratados de modo fragmentado e isolado.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Do ponto de vista organizacional, o Wellhub também responde à dificuldade das empresas em oferecer benefícios de saúde preventiva que sejam compatíveis com perfis, rotinas e necessidades distintas. Benefícios tradicionais tendem a apresentar baixa utilização quando não oferecem alternativas práticas, acessíveis e ajustadas à vida cotidiana do trabalhador.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Do ponto de vista organizacional, o Wellhub também responde à dificuldade das empresas em oferecer benefícios de saúde preventiva que sejam compatíveis com perfis, rotinas e necessidades distintas. Benefícios tradicionais tendem a apresentar baixa utilização quando não oferecem alternativas práticas, acessíveis e ajustadas à vida cotidiana do trabalhador.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Solução digital e convergência tecnológica",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A solução proposta pelo Wellhub consiste em reunir, em uma única assinatura e em um único ambiente digital, serviços que antes eram acessados separadamente. Pelo aplicativo, o usuário pode verificar elegibilidade, selecionar plano, localizar academias e estúdios, reservar aulas e acessar aplicativos voltados a exercícios, terapia, mindfulness, nutrição e sono.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A solução proposta pelo Wellhub consiste em reunir, em uma única assinatura e em um único ambiente digital, serviços que antes eram acessados separadamente. Pelo aplicativo, o usuário pode verificar elegibilidade, selecionar plano, localizar academias e estúdios, reservar aulas e acessar aplicativos voltados a exercícios, terapia, mindfulness, nutrição e sono.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Esse arranjo demonstra a convergência própria da Quarta Revolução Industrial. A dimensão física aparece nos espaços, profissionais e serviços presenciais. A dimensão digital está no aplicativo, nas buscas, reservas, check-ins, pagamentos e gestão do benefício. A dimensão humana e biológica se manifesta no cuidado com atividade física, saúde mental, alimentação, descanso e formação de hábitos. Já a dimensão organizacional envolve a articulação entre empresa, colaboradores e rede de parceiros.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Esse arranjo demonstra a convergência própria da Quarta Revolução Industrial. A dimensão física aparece nos espaços, profissionais e serviços presenciais. A dimensão digital está no aplicativo, nas buscas, reservas, check-ins, pagamentos e gestão do benefício. A dimensão humana e biológica se manifesta no cuidado com atividade física, saúde mental, alimentação, descanso e formação de hábitos. Já a dimensão organizacional envolve a articulação entre empresa, colaboradores e rede de parceiros.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Assim, o Wellhub não se limita a ser um benefício de academia. Ele reorganiza o acesso ao bem-estar e à saúde preventiva no trabalho por meio de uma lógica de plataforma, em que diferentes serviços são integrados, coordenados e disponibilizados de modo centralizado.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Assim, o Wellhub não se limita a ser um benefício de academia. Ele reorganiza o acesso ao bem-estar e à saúde preventiva no trabalho por meio de uma lógica de plataforma, em que diferentes serviços são integrados, coordenados e disponibilizados de modo centralizado.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Dados e inteligência artificial",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O uso de dados está presente em diversas etapas da experiência: cadastro dos usuários, escolha dos planos, check-ins, preferências de atividades, utilização dos parceiros e engajamento com os recursos disponíveis. Para as empresas, esses dados permitem acompanhar adesão, engajamento e retorno do investimento do benefício.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O uso de dados está presente em diversas etapas da experiência: cadastro dos usuários, escolha dos planos, check-ins, preferências de atividades, utilização dos parceiros e engajamento com os recursos disponíveis. Para as empresas, esses dados permitem acompanhar adesão, engajamento e retorno do investimento do benefício.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "A inteligência artificial aparece na ferramenta Wellhub AI, descrita como mecanismo de personalização baseado em preferências do usuário, contexto, histórico de check-ins e princípios de ciência comportamental. Seu papel é sugerir atividades, apoiar a criação de rotinas, estabelecer metas e indicar opções mais adequadas aos objetivos de bem-estar de cada pessoa.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A inteligência artificial aparece na ferramenta Wellhub AI, descrita como mecanismo de personalização baseado em preferências do usuário, contexto, histórico de check-ins e princípios de ciência comportamental. Seu papel é sugerir atividades, apoiar a criação de rotinas, estabelecer metas e indicar opções mais adequadas aos objetivos de bem-estar de cada pessoa.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa personalização é coerente com a Quarta Revolução Industrial porque substitui soluções homogêneas por recomendações orientadas por dados, com potencial de tornar o serviço mais aderente ao perfil, à rotina e ao momento de cada usuário.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essa personalização é coerente com a Quarta Revolução Industrial porque substitui soluções homogêneas por recomendações orientadas por dados, com potencial de tornar o serviço mais aderente ao perfil, à rotina e ao momento de cada usuário.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Modelo de negócio e implicações",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "O modelo de negócio do Wellhub é B2B2C, articulando empresas, consumidores e parceiros. As empresas contratam a plataforma como benefício corporativo; os colaboradores elegíveis escolhem e pagam mensalmente um plano compatível com suas preferências; e os parceiros integram a rede de oferta de serviços.",
+          "content": [
+            {
+              "type": "text",
+              "text": "O modelo de negócio do Wellhub é B2B2C, articulando empresas, consumidores e parceiros. As empresas contratam a plataforma como benefício corporativo; os colaboradores elegíveis escolhem e pagam mensalmente um plano compatível com suas preferências; e os parceiros integram a rede de oferta de serviços.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Esse modelo amplia a capilaridade do benefício e cria valor ao reduzir a fragmentação do acesso. Ao mesmo tempo, desloca para a plataforma uma função de intermediação estratégica, com efeitos sobre a relação entre usuários, empresas e prestadores de serviços.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Esse modelo amplia a capilaridade do benefício e cria valor ao reduzir a fragmentação do acesso. Ao mesmo tempo, desloca para a plataforma uma função de intermediação estratégica, com efeitos sobre a relação entre usuários, empresas e prestadores de serviços.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "heading",
+          "text": "Limites e riscos do exemplo",
+          "content": [],
+          "level": 2,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Embora o caso seja inovador, ele também apresenta limites relevantes. Um primeiro problema é a exclusão de pessoas que não trabalham em empresas conveniadas ou que não conseguem pagar pelos planos disponíveis. Além disso, existem diferenças territoriais de acesso, já que regiões com maior concentração urbana tendem a oferecer rede mais ampla de parceiros.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Embora o caso seja inovador, ele também apresenta limites relevantes. Um primeiro problema é a exclusão de pessoas que não trabalham em empresas conveniadas ou que não conseguem pagar pelos planos disponíveis. Além disso, existem diferenças territoriais de acesso, já que regiões com maior concentração urbana tendem a oferecer rede mais ampla de parceiros.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Também há risco de dependência de academias, estúdios e profissionais em relação à plataforma para captação de clientes. Em paralelo, o uso intensivo de dados exige atenção a possíveis usos inadequados ou vazamentos de informações pessoais relativas a hábitos, preferências e utilização dos serviços.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Também há risco de dependência de academias, estúdios e profissionais em relação à plataforma para captação de clientes. Em paralelo, o uso intensivo de dados exige atenção a possíveis usos inadequados ou vazamentos de informações pessoais relativas a hábitos, preferências e utilização dos serviços.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Outro limite importante é a possibilidade de as empresas tratarem o bem-estar oferecido pela plataforma como substituto de políticas mais amplas de saúde ocupacional, prevenção de adoecimentos e melhoria das condições de trabalho. Há, ainda, o risco de confundir recursos de bem-estar com acompanhamento clínico, médico ou psicológico individualizado, o que exige distinção clara entre promoção de saúde e cuidado especializado.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Outro limite importante é a possibilidade de as empresas tratarem o bem-estar oferecido pela plataforma como substituto de políticas mais amplas de saúde ocupacional, prevenção de adoecimentos e melhoria das condições de trabalho. Há, ainda, o risco de confundir recursos de bem-estar com acompanhamento clínico, médico ou psicológico individualizado, o que exige distinção clara entre promoção de saúde e cuidado especializado.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    },
+    {
+      "id": "sec-conclusao",
+      "level": 1,
+      "title": "Conclusão",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A análise do Wellhub permite concluir que a plataforma materializa a lógica da Quarta Revolução Industrial ao combinar serviços presenciais, ambiente digital, uso de dados e inteligência artificial para reorganizar o acesso ao bem-estar corporativo e à saúde preventiva.",
+          "content": [
+            {
+              "type": "text",
+              "text": "A análise do Wellhub permite concluir que a plataforma materializa a lógica da Quarta Revolução Industrial ao combinar serviços presenciais, ambiente digital, uso de dados e inteligência artificial para reorganizar o acesso ao bem-estar corporativo e à saúde preventiva.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu principal mérito está em enfrentar a fragmentação dos serviços e aumentar a possibilidade de adesão por meio de personalização, integração e conveniência. Contudo, essa inovação não elimina problemas estruturais e pode, inclusive, reproduzir desigualdades, dependências econômicas e riscos relacionados à governança de dados e à compreensão inadequada do papel do bem-estar nas organizações.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Seu principal mérito está em enfrentar a fragmentação dos serviços e aumentar a possibilidade de adesão por meio de personalização, integração e conveniência. Contudo, essa inovação não elimina problemas estruturais e pode, inclusive, reproduzir desigualdades, dependências econômicas e riscos relacionados à governança de dados e à compreensão inadequada do papel do bem-estar nas organizações.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        },
+        {
+          "type": "paragraph",
+          "text": "Portanto, o Wellhub é um exemplo pertinente de transformação digital em saúde e bem-estar no trabalho, desde que sua adoção seja entendida como instrumento complementar, e não como substituto de políticas integrais de cuidado, prevenção e melhoria das condições laborais.",
+          "content": [
+            {
+              "type": "text",
+              "text": "Portanto, o Wellhub é um exemplo pertinente de transformação digital em saúde e bem-estar no trabalho, desde que sua adoção seja entendida como instrumento complementar, e não como substituto de políticas integrais de cuidado, prevenção e melhoria das condições laborais.",
+              "italic": false,
+              "bold": false
+            }
+          ],
+          "level": 0,
+          "items": [],
+          "table": null,
+          "id": "",
+          "title": "",
+          "path": "",
+          "placement": "inline",
+          "page_break_before": false,
+          "page_break_after": false
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "bibliography": {
+    "bib_path": "atividade_wellhub.bib",
+    "style": "abnt",
+    "entries_used": [
+      "anonsd_wellhub"
+    ]
+  },
+  "diagnostics": {
+    "prompts_json": "{\"document\": {\"task\": \"document\", \"total_chars\": 2953, \"sources\": [{\"category\": \"global\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt\", \"label\": \"../../prompts/global/orientacao_geral_execucao.txt\", \"chars\": 2096, \"sha256\": \"f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2\", \"sanitized\": false}, {\"category\": \"institution\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt\", \"label\": \"profile://prompts/fgv_geral.txt\", \"chars\": 392, \"sha256\": \"c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b\", \"sanitized\": false}, {\"category\": \"document_type\", \"path\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/atividade.txt\", \"label\": \"../../prompts/document/atividade.txt\", \"chars\": 325, \"sha256\": \"70748caae36c743e545c4a15e68c38e305823f67681e57a8366a4ddf1a974670\", \"sanitized\": false}]}}",
+    "mindmap_json": "null",
+    "source_info_json": "{\"suffixes\": [\".docx\", \".md\", \".org\", \".pdf\", \".txt\"], \"warnings\": [], \"input_dir\": \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/fontes\"}",
+    "relatorio_pesquisa_json": "",
+    "warnings": [
+      "O corpus e as orientações determinaram produção sem citações no corpo do texto; por isso não foram utilizados objetos citation nem entradas bibliográficas no conteúdo."
+    ]
+  }
+}

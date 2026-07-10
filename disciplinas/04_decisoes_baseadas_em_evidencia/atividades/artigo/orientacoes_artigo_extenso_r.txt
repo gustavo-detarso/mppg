@@ -1,0 +1,60 @@
+ORIENTAÇÃO REFORÇADA PARA ARTIGO ANALÍTICO EXTENSO COM USO INTEGRAL DAS REFERÊNCIAS, TABELAS, GRÁFICOS E ESTATÍSTICAS EM R
+
+Problema encontrado na versão anterior:
+- O texto final ficou curto demais.
+- Nem todas as 14 referências selecionadas foram efetivamente mobilizadas no corpo argumentativo.
+- A seção de resultados e a seção de limitações ficaram insuficientes.
+- O artigo não explorou tabelas, gráficos nem estatísticas descritivas do corpus.
+
+Diretriz obrigatória:
+Produza um artigo acadêmico substancial, analítico e argumentativo. Não produza resumo expandido. Não produza texto genérico. O texto principal deve ter entre 3.500 e 5.000 palavras, excluídas referências.
+
+Uso obrigatório das referências:
+- Use todas as 14 referências incluídas no PRISMA final ao menos uma vez no corpo do artigo.
+- Não basta listar a referência na bibliografia; cada estudo deve ser discutido no texto.
+- Distribua as citações entre introdução, método, resultados, discussão, proposta e limitações.
+- Antes de redigir, construa implicitamente uma matriz de evidências com: autores/ano, objeto do estudo, método ou tipo de evidência, achado relevante e implicação para o redesenho do fluxo decisório.
+- O artigo deve conter uma tabela de matriz de evidências com as 14 referências.
+
+Tabelas obrigatórias no artigo:
+1. Tabela de caracterização dos 14 estudos incluídos: autores/ano, tema, tipo de evidência, contribuição para o artigo e implicação para ATESTMED/teleperícia/perícia presencial.
+2. Tabela de síntese temática: eixos identificados, estudos relacionados e implicações decisórias.
+3. Tabela de proposta operacional: critérios de alocação para análise documental, teleperícia e perícia presencial.
+4. Tabela de indicadores para monitoramento: indicador, fórmula, fonte de dados, periodicidade e interpretação.
+
+Gráficos e estatísticas em R:
+- Use os arquivos gerados por R em dados_prisma, especialmente:
+  - insumos_r_artigo_resumo_estatistico.md
+  - insumos_r_artigo_referencias_enriquecidas.csv
+  - insumos_r_artigo_referencias_por_ano.csv
+  - insumos_r_artigo_eixos_tematicos.csv
+  - insumos_r_artigo_periodicos.csv
+  - insumos_r_artigo_grafico_referencias_por_ano.png
+  - insumos_r_artigo_grafico_eixos_tematicos.png
+- Insira no artigo estatísticas descritivas do corpus: número de referências, distribuição temporal, cobertura de DOI, periódicos e eixos temáticos.
+- Interprete essas estatísticas com cautela: elas descrevem o corpus incluído, não estimam efeito causal, acurácia diagnóstica ou impacto operacional.
+- Quando possível no ORG/LaTeX, inclua as figuras PNG geradas por R. Se a renderização de imagem não for suportada pelo pipeline, descreva os gráficos no texto e mantenha as tabelas como evidência estruturada.
+
+Extensão mínima por seção:
+- Introdução: pelo menos 600 palavras.
+- Método: pelo menos 600 palavras.
+- Resultados da revisão estruturada: pelo menos 900 palavras.
+- Discussão: pelo menos 1.100 palavras.
+- Proposta de redesenho do fluxo decisório: pelo menos 900 palavras.
+- Limitações: pelo menos 350 palavras.
+- Conclusão: pelo menos 400 palavras.
+
+Conteúdo esperado por seção:
+- Introdução: contextualize o problema decisório da Perícia Médica Federal, a tensão entre fila, qualidade, equidade territorial, controle e capacidade operacional.
+- Método: descreva o PRISMA, as bases, a seleção de 14 estudos, a curadoria assistida por IA, a revisão humana e a síntese narrativa apoiada por estatísticas descritivas em R.
+- Resultados: organize os 14 estudos por eixo temático e apresente tabelas de evidências; não apenas diga que a revisão foi feita.
+- Discussão: compare as contribuições das referências, explicite convergências e tensões, discuta riscos de automatização, limites da teleperícia, governança, auditoria e segurança decisória.
+- Proposta: apresente um modelo operacional claro de triagem documental, teleperícia e perícia presencial, com critérios de entrada, saída, escalonamento e auditoria.
+- Limitações: discuta heterogeneidade das evidências, validade externa para o Brasil, limites da síntese narrativa, ausência de avaliação causal local e necessidade de projeto-piloto.
+- Conclusão: retome a pergunta de pesquisa e indique agenda aplicada de implementação e avaliação.
+
+Proibições:
+- Não invente números que não estejam nos insumos.
+- Não atribua aos estudos achados que não estejam nos metadados, resumos ou textos disponíveis.
+- Não mencione limitações técnicas do pipeline, OCR, cache, prompt ou processamento computacional.
+- Não crie uma seção manual de referências; a bibliografia deve ser gerada automaticamente.

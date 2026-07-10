@@ -1,0 +1,13 @@
+ORIENTAÇÃO COMPLEMENTAR — FULL TEXT DOS ARTIGOS SELECIONADOS
+
+Problema metodológico a corrigir:
+A redação anterior tratou os 14 estudos de forma excessivamente genérica porque o texto completo dos artigos selecionados não estava necessariamente disponível no corpus de geração. Para que o artigo final seja analítico, a IA deve usar o texto completo dos PDFs baixados quando disponível e diferenciar claramente full text, resumo/metadados e inferência cautelosa.
+
+Regras obrigatórias:
+1. Antes de redigir a síntese, consulte os arquivos em dados_prisma/fulltext_artigos quando existirem.
+2. Use o arquivo dados_prisma/manifesto_fulltext_artigos.csv para saber quais referências tiveram PDF baixado.
+3. Use o arquivo dados_prisma/orientacoes_fulltext_artigos.md como guia de leitura.
+4. Para cada uma das 14 referências, registre na matriz de evidências se a análise se baseou em texto completo, resumo/metadados ou apenas metadados bibliográficos.
+5. Não atribua achados específicos a estudos sem full text, salvo quando o resumo/metadados trouxerem explicitamente a informação.
+6. O artigo deve correlacionar cada estudo ao problema do ATESTMED: suficiência documental, necessidade de exame físico, teleperícia, capacidade operacional, qualidade decisória, auditabilidade e equidade territorial.
+7. O texto deve deixar clara a cadeia de inferência entre evidência e proposta operacional.

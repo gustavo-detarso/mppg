@@ -1,0 +1,102 @@
+{
+  "title": "ATESTMED, saúde digital e decisão baseada em evidências: revisão estruturada e proposta de redesenho do fluxo pericial",
+  "type": "paper",
+  "total_words": 670,
+  "sections": [
+    {
+      "id": "sec-introducao",
+      "title": "Introdução",
+      "level": 1,
+      "words": 89,
+      "blocks": 1
+    },
+    {
+      "id": "sec-metodo",
+      "title": "Método",
+      "level": 1,
+      "words": 84,
+      "blocks": 1
+    },
+    {
+      "id": "sec-resultados",
+      "title": "Resultados da revisão estruturada",
+      "level": 1,
+      "words": 89,
+      "blocks": 1
+    },
+    {
+      "id": "sec-discussao",
+      "title": "Discussão",
+      "level": 1,
+      "words": 95,
+      "blocks": 1
+    },
+    {
+      "id": "sec-proposta",
+      "title": "Proposta de redesenho do fluxo decisório do ATESTMED",
+      "level": 1,
+      "words": 85,
+      "blocks": 1
+    },
+    {
+      "id": "sec-indicadores",
+      "title": "Indicadores e monitoramento",
+      "level": 1,
+      "words": 72,
+      "blocks": 1
+    },
+    {
+      "id": "sec-limitacoes",
+      "title": "Limitações",
+      "level": 1,
+      "words": 71,
+      "blocks": 1
+    },
+    {
+      "id": "sec-conclusao",
+      "title": "Conclusão",
+      "level": 1,
+      "words": 85,
+      "blocks": 1
+    }
+  ],
+  "citations_total": 0,
+  "cited_keys": [],
+  "bibliography_entries_used_total": 20,
+  "bibliography_entries_not_cited": [
+    "albasheer2026telemedicineutilizationanddigitalinclusionamongpe",
+    "corden2001incapacitybenefitsandworkincentives",
+    "deveau2011workplaceaccommodationandauditbasedevaluationprocess",
+    "dijkstrasdatamakingupincapacityforwork",
+    "feudtner2014pediatriccomplexchronicconditionsclassificationsyst",
+    "ftouni2022challengesoftelemedicineduringthecovid19pandemica",
+    "gabbay2011niceguidanceonlongtermsicknessandincapacity",
+    "gao2019disabilityconcentrationandaccesstorehabilitationservice",
+    "guo2017assessmentofaphasiaacrosstheinternationalclassification",
+    "hospital2016mentaldisabilityaretrospectivestudyofsocioclinica",
+    "kelman2009performanceimprovementandperformancedysfunctionanemp",
+    "m2024astudyofdisabilityseveritybarriersandfacilitatingfactor",
+    "mackett2025ametareviewofliteraturereviewsofdisabilitytravel",
+    "nogueira20200731t0100000100aavaliacaodadeficiencianatraje",
+    "przysada2019anassessmentofworkabilityafterthecompletionofre",
+    "rajasulochana2026doeshavingadisabilitycertificateensurebenefit",
+    "sa2020medicalcertificateofdisabilityadescriptiveanalysisofav",
+    "sainsbury2006routesontoincapacitybenefitsfindingsfromqualitati",
+    "soares20241031t0000000000asistematicadoatestmednaconcessa",
+    "steenbeek2011thedevelopmentofinstrumentstomeasuretheworkdisa"
+  ],
+  "missing_in_bib": [],
+  "org_diagnostics": {
+    "path": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.org",
+    "contains_empty_citation": false,
+    "contains_org_cite": false,
+    "technical_terms_found": [],
+    "raw_biblike_tokens": []
+  },
+  "warnings": [
+    "Seção possivelmente curta: Indicadores e monitoramento (72 palavras)",
+    "Seção possivelmente curta: Limitações (71 palavras)",
+    "Texto possivelmente curto para paper: 670 palavras."
+  ],
+  "ok": false
+}

@@ -1,0 +1,198 @@
+{
+  "version": "rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit",
+  "generated_at": "2026-07-06T21:03:25-03:00",
+  "config_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/atividade_wellhub.toml",
+  "output_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub",
+  "prefixo": "atividade_wellhub",
+  "tipo_documento": "atividade",
+  "instituicao_perfil": "fgv",
+  "instituicao_profile_path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/institution_profile.toml",
+  "modelo_openai": "gpt-5.4",
+  "estilo_bibliografico": "abnt",
+  "pdf_engine": "lualatex",
+  "input_zip": null,
+  "input_zip_sha256": null,
+  "input_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/fontes",
+  "doi_manifest": null,
+  "doi_manifest_sha256": null,
+  "outputs": {
+    "output_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub",
+    "document_json": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.document.json",
+    "org": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.org",
+    "bib": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.bib",
+    "pdf": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.pdf",
+    "docx": null,
+    "resumos_paper": null,
+    "idiomas_adicionais": {},
+    "relatorio_pesquisa": null,
+    "prompt_lock": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.prompt_lock.json",
+    "compliance_report": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.compliance_report.md",
+    "quality_report": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.quality_report.md"
+  },
+  "warnings": [],
+  "prompts": {
+    "research": {
+      "task": "research",
+      "total_chars": 5011,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/triagem_prompt.txt",
+          "label": "../../prompts/research/triagem_prompt.txt",
+          "chars": 847,
+          "sha256": "19a74e68fb572264e07f055e6ca482722e06afaba01155961e9b32ce1c070726",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/diretivas_extras.txt",
+          "label": "../../prompts/research/diretivas_extras.txt",
+          "chars": 1489,
+          "sha256": "3a63f6ed28b1dbdb9a484748ef556549bd144429325cf49f71d6b343a32e258b",
+          "sanitized": false
+        }
+      ]
+    },
+    "bibliography": {
+      "task": "bibliography",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    },
+    "document": {
+      "task": "document",
+      "total_chars": 2953,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        },
+        {
+          "category": "document_type",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/atividade.txt",
+          "label": "../../prompts/document/atividade.txt",
+          "chars": 325,
+          "sha256": "70748caae36c743e545c4a15e68c38e305823f67681e57a8366a4ddf1a974670",
+          "sanitized": false
+        }
+      ]
+    },
+    "mindmap": {
+      "task": "mindmap",
+      "total_chars": 2583,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        }
+      ]
+    },
+    "prisma": {
+      "task": "prisma",
+      "total_chars": 5011,
+      "sources": [
+        {
+          "category": "global",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt",
+          "label": "../../prompts/global/orientacao_geral_execucao.txt",
+          "chars": 2096,
+          "sha256": "f7147bb64d0d6a2301755182422836f4f370696b3505f90d3d5d21a150c34ba2",
+          "sanitized": false
+        },
+        {
+          "category": "institution",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/prompts/fgv_geral.txt",
+          "label": "profile://prompts/fgv_geral.txt",
+          "chars": 392,
+          "sha256": "c9c117c88db503cd6ebecf2646199c2f368e592c9768075445cbf652f28f1b9b",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/triagem_prompt.txt",
+          "label": "../../prompts/research/triagem_prompt.txt",
+          "chars": 847,
+          "sha256": "19a74e68fb572264e07f055e6ca482722e06afaba01155961e9b32ce1c070726",
+          "sanitized": false
+        },
+        {
+          "category": "research",
+          "path": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/research/diretivas_extras.txt",
+          "label": "../../prompts/research/diretivas_extras.txt",
+          "chars": 1489,
+          "sha256": "3a63f6ed28b1dbdb9a484748ef556549bd144429325cf49f71d6b343a32e258b",
+          "sanitized": false
+        }
+      ]
+    }
+  },
+  "extra": {
+    "mode": "full",
+    "work_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/.academic_pipeline/work/atividade_wellhub",
+    "cache_dir": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/atividade_wellhub/.academic_pipeline/cache/atividade_wellhub",
+    "precheck": {
+      "version": "rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit",
+      "generated_at": "2026-07-06T21:02:33-03:00",
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "docx_validation": null
+  }
+}

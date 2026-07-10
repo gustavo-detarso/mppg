@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-07-09T11:28:13.940927",
+  "source": "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_referencias.xlsx :: aba Triagem completa",
+  "prompt_curadoria": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/prompt_curadoria_atestmed_ia.yaml",
+  "usar_ia": false,
+  "reexportar_xlsx": true,
+  "max_incluir": 30,
+  "top_n_candidatos": 140,
+  "limiar_minimo_inclusao": 45,
+  "registros": 250,
+  "incluidos": 14,
+  "ai_log": []
+}

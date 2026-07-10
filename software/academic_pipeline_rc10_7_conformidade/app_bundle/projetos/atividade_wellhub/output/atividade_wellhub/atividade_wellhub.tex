@@ -1,0 +1,143 @@
+% Created 2026-07-06 seg 21:03
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt,a4paper]{article}
+\usepackage{fgv-paper}
+% Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+\usepackage[backend=biber,sorting=nty,giveninits=true]{biblatex}
+
+\addbibresource{atividade_wellhub.bib}
+\geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{tabularray}
+\usepackage{ltablex}
+\keepXColumns
+\setlength{\emergencystretch}{3em}
+\sloppy
+\definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+\definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+\definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+\setlength{\headheight}{58pt}
+\setlength{\headsep}{18pt}
+\newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}}{}}
+\newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+\newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+\fancypagestyle{fgvreportstyle}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\fancypagestyle{plain}{%
+\fancyhf{}%
+\fancyhead[L]{\FGVHeaderBlock}%
+\renewcommand{\headrulewidth}{0pt}%
+\fancyfoot[C]{\thepage}%
+}
+\AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+\institution{fgv}
+\programname{}
+\coursename{MBA Executivo em Administração: Gestão de Saúde}
+\disciplinename{Transformação digital e inovação em saúde}
+\professorname{Fernando Pedro de Moraes}
+\cityname{Brasília}
+\author{Gustavo M. Mendes de Tarso}
+\date{\today}
+\title{Wellhub e a Quarta Revolução Industrial}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={Wellhub e a Quarta Revolução Industrial},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Pt_Br}}
+\begin{document}
+
+\begingroup
+\linespread{1}\selectfont
+\begin{tcolorbox}[title=Ficha Técnica,
+  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
+\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
+\textbf{Curso}                   & MBA Executivo em Administração: Gestão de Saúde \\
+\textbf{Turma}                   & MBS02488-MGS-T01 - 614307/2024 \\
+\textbf{Pólo}                    & Brasília \\
+\textbf{Disciplina}              & Transformação digital e inovação em saúde \\
+\textbf{Professor}               & Fernando Pedro de Moraes \\
+\textbf{Aluno(s)}                & Gustavo M. Mendes de Tarso \\
+\textbf{Data}                    & 2026 \\
+\textbf{Título do trabalho}      & Wellhub e a Quarta Revolução Industrial \\
+\end{tblr}
+\end{tcolorbox}
+\endgroup
+
+\clearpage
+
+\section{Introdução}
+\label{sec:orgf4bfe62}
+
+O Wellhub pode ser compreendido como um exemplo representativo da Quarta Revolução Industrial porque integra serviços físicos de bem-estar, infraestrutura digital, uso de dados e recursos de inteligência artificial em uma única plataforma voltada ao ambiente corporativo.
+
+A questão orientadora desta atividade pode ser formulada da seguinte maneira: de que modo o Wellhub expressa a convergência tecnológica característica da Quarta Revolução Industrial e quais problemas busca resolver, ao mesmo tempo em que produz novos desafios?
+
+O objetivo do trabalho é analisar o caso a partir do corpus fornecido, destacando o problema que a plataforma enfrenta, sua solução digital, o uso de dados e inteligência artificial, seu modelo de negócio e seus principais limites no campo da saúde e do bem-estar no trabalho.
+
+
+
+\section{Desenvolvimento}
+\label{sec:org139de12}
+
+\subsection{Problema enfrentado pela plataforma}
+\label{sec:org07d1deb}
+
+O exemplo evidencia que a plataforma se dirige a problemas recorrentes no mundo do trabalho contemporâneo, como sedentarismo, estresse, burnout e baixa adesão a práticas de autocuidado. Soma-se a isso a dificuldade de acesso a serviços de atividade física, saúde mental, nutrição, sono e meditação, especialmente quando esses serviços são contratados de modo fragmentado e isolado.
+
+Do ponto de vista organizacional, o Wellhub também responde à dificuldade das empresas em oferecer benefícios de saúde preventiva que sejam compatíveis com perfis, rotinas e necessidades distintas. Benefícios tradicionais tendem a apresentar baixa utilização quando não oferecem alternativas práticas, acessíveis e ajustadas à vida cotidiana do trabalhador.
+
+\subsection{Solução digital e convergência tecnológica}
+\label{sec:org3f31bf1}
+
+A solução proposta pelo Wellhub consiste em reunir, em uma única assinatura e em um único ambiente digital, serviços que antes eram acessados separadamente. Pelo aplicativo, o usuário pode verificar elegibilidade, selecionar plano, localizar academias e estúdios, reservar aulas e acessar aplicativos voltados a exercícios, terapia, mindfulness, nutrição e sono.
+
+Esse arranjo demonstra a convergência própria da Quarta Revolução Industrial. A dimensão física aparece nos espaços, profissionais e serviços presenciais. A dimensão digital está no aplicativo, nas buscas, reservas, check-ins, pagamentos e gestão do benefício. A dimensão humana e biológica se manifesta no cuidado com atividade física, saúde mental, alimentação, descanso e formação de hábitos. Já a dimensão organizacional envolve a articulação entre empresa, colaboradores e rede de parceiros.
+
+Assim, o Wellhub não se limita a ser um benefício de academia. Ele reorganiza o acesso ao bem-estar e à saúde preventiva no trabalho por meio de uma lógica de plataforma, em que diferentes serviços são integrados, coordenados e disponibilizados de modo centralizado.
+
+\subsection{Dados e inteligência artificial}
+\label{sec:orge3e446a}
+
+O uso de dados está presente em diversas etapas da experiência: cadastro dos usuários, escolha dos planos, check-ins, preferências de atividades, utilização dos parceiros e engajamento com os recursos disponíveis. Para as empresas, esses dados permitem acompanhar adesão, engajamento e retorno do investimento do benefício.
+
+A inteligência artificial aparece na ferramenta Wellhub AI, descrita como mecanismo de personalização baseado em preferências do usuário, contexto, histórico de check-ins e princípios de ciência comportamental. Seu papel é sugerir atividades, apoiar a criação de rotinas, estabelecer metas e indicar opções mais adequadas aos objetivos de bem-estar de cada pessoa.
+
+Essa personalização é coerente com a Quarta Revolução Industrial porque substitui soluções homogêneas por recomendações orientadas por dados, com potencial de tornar o serviço mais aderente ao perfil, à rotina e ao momento de cada usuário.
+
+\subsection{Modelo de negócio e implicações}
+\label{sec:org94abe18}
+
+O modelo de negócio do Wellhub é B2B2C, articulando empresas, consumidores e parceiros. As empresas contratam a plataforma como benefício corporativo; os colaboradores elegíveis escolhem e pagam mensalmente um plano compatível com suas preferências; e os parceiros integram a rede de oferta de serviços.
+
+Esse modelo amplia a capilaridade do benefício e cria valor ao reduzir a fragmentação do acesso. Ao mesmo tempo, desloca para a plataforma uma função de intermediação estratégica, com efeitos sobre a relação entre usuários, empresas e prestadores de serviços.
+
+\subsection{Limites e riscos do exemplo}
+\label{sec:org39b3800}
+
+Embora o caso seja inovador, ele também apresenta limites relevantes. Um primeiro problema é a exclusão de pessoas que não trabalham em empresas conveniadas ou que não conseguem pagar pelos planos disponíveis. Além disso, existem diferenças territoriais de acesso, já que regiões com maior concentração urbana tendem a oferecer rede mais ampla de parceiros.
+
+Também há risco de dependência de academias, estúdios e profissionais em relação à plataforma para captação de clientes. Em paralelo, o uso intensivo de dados exige atenção a possíveis usos inadequados ou vazamentos de informações pessoais relativas a hábitos, preferências e utilização dos serviços.
+
+Outro limite importante é a possibilidade de as empresas tratarem o bem-estar oferecido pela plataforma como substituto de políticas mais amplas de saúde ocupacional, prevenção de adoecimentos e melhoria das condições de trabalho. Há, ainda, o risco de confundir recursos de bem-estar com acompanhamento clínico, médico ou psicológico individualizado, o que exige distinção clara entre promoção de saúde e cuidado especializado.
+
+
+
+\section{Conclusão}
+\label{sec:orgfc62d08}
+
+A análise do Wellhub permite concluir que a plataforma materializa a lógica da Quarta Revolução Industrial ao combinar serviços presenciais, ambiente digital, uso de dados e inteligência artificial para reorganizar o acesso ao bem-estar corporativo e à saúde preventiva.
+
+Seu principal mérito está em enfrentar a fragmentação dos serviços e aumentar a possibilidade de adesão por meio de personalização, integração e conveniência. Contudo, essa inovação não elimina problemas estruturais e pode, inclusive, reproduzir desigualdades, dependências econômicas e riscos relacionados à governança de dados e à compreensão inadequada do papel do bem-estar nas organizações.
+
+Portanto, o Wellhub é um exemplo pertinente de transformação digital em saúde e bem-estar no trabalho, desde que sua adoção seja entendida como instrumento complementar, e não como substituto de políticas integrais de cuidado, prevenção e melhoria das condições laborais.
+
+\printbibliography
+\end{document}

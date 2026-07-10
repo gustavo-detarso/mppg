@@ -680,14 +680,63 @@ def select_many(
     values: Sequence[tuple[Any, str]],
     *,
     defaults: Iterable[Any] = (),
+    select_all_value: Any | None = None,
+    select_all_values: Iterable[Any] = (),
     width: int = 116,
     _input: Any | None = None,
     _output: Any | None = None,
 ) -> list[Any] | None:
-    """Lista de múltipla escolha. Clique marca; Ctrl+S confirma o conjunto."""
+    """Lista de múltipla escolha com opção de marcar todos, quando configurada.
+
+    ``select_all_value`` é uma opção mestre presente em ``values``. Ao marcá-la
+    por teclado ou clique, todas as opções em ``select_all_values`` são
+    marcadas visualmente na mesma tela. Ao desmarcar qualquer item individual,
+    a opção mestre também é desmarcada. Isso evita a ambiguidade de registrar
+    ``Todas`` apenas depois da confirmação.
+    """
     ui = _imports()
     app: Any
-    checklist = ui["CheckboxList"](values=list(values), default_values=list(defaults))
+    option_values = [value for value, _label in values]
+    all_targets = [value for value in select_all_values if value in option_values and value != select_all_value]
+    if select_all_value is not None and not all_targets:
+        all_targets = [value for value in option_values if value != select_all_value]
+
+    base_checkbox = ui["CheckboxList"]
+
+    if select_all_value is None:
+        checklist = base_checkbox(values=list(values), default_values=list(defaults))
+    else:
+        class SelectAllCheckboxList(base_checkbox):
+            def _sync_select_all(self) -> None:
+                targets_selected = bool(all_targets) and all(value in self.current_values for value in all_targets)
+                if targets_selected:
+                    if select_all_value not in self.current_values:
+                        self.current_values.insert(0, select_all_value)
+                else:
+                    while select_all_value in self.current_values:
+                        self.current_values.remove(select_all_value)
+
+            def _handle_enter(self) -> None:
+                current = self.values[self._selected_index][0]
+                if current == select_all_value:
+                    targets_selected = bool(all_targets) and all(value in self.current_values for value in all_targets)
+                    if targets_selected:
+                        self.current_values[:] = [
+                            value for value in self.current_values
+                            if value != select_all_value and value not in all_targets
+                        ]
+                    else:
+                        preserved = [
+                            value for value in self.current_values
+                            if value != select_all_value and value not in all_targets
+                        ]
+                        self.current_values[:] = [select_all_value, *all_targets, *preserved]
+                    return
+                super()._handle_enter()
+                self._sync_select_all()
+
+        checklist = SelectAllCheckboxList(values=list(values), default_values=list(defaults))
+        checklist._sync_select_all()
 
     def finish(value: list[Any] | None) -> None:
         app.exit(result=value)
@@ -718,7 +767,7 @@ def select_many(
                 ),
             ),
             ui["Label"](
-                text="Espaço marca • A todos • L limpar • Ctrl+S continuar • Esc voltar",
+                text="Espaço marca • [Todas] marca/desmarca a seleção completa quando disponível • A todos • L limpar • Ctrl+S continuar • Esc voltar",
                 style="class:bottom-toolbar",
             ),
         ],

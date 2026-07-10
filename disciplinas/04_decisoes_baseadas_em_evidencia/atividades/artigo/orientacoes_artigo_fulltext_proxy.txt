@@ -1,0 +1,17 @@
+ORIENTAÇÃO COMPLEMENTAR — FULL TEXT ORIGINAL E TEXTOS PROXY OPEN-ACCESS
+
+O artigo deve deixar de tratar as 14 referências de forma genérica. Para isso, o corpus deve conter textos físicos sempre que possível.
+
+Definições:
+- PDF original: texto completo da própria referência incluída no PRISMA.
+- PDF proxy open-access: artigo de acesso aberto, tematicamente próximo ao título, tema, recorte, objetivo e pergunta de pesquisa, usado quando o texto completo da referência original não foi baixado.
+- O PDF proxy não substitui automaticamente a referência original. Ele é fonte de apoio contextual e deve ser identificado como tal.
+
+Regras obrigatórias:
+1. Use `manifesto_fulltext_artigos.csv` para saber quais referências têm PDF original, proxy ou nenhum texto.
+2. A matriz de evidências deve ter uma coluna "base de leitura": texto completo original, proxy open-access ou metadados/resumo.
+3. Para referências com PDF original, discuta achados específicos do texto.
+4. Para referências sem PDF original e com proxy, use o proxy para aprofundar o eixo temático, mas não atribua ao artigo original achados do proxy.
+5. Para referências sem PDF original nem proxy, use somente título, resumo, DOI e metadados disponíveis, com linguagem cautelosa.
+6. O artigo deve correlacionar cada referência ou proxy ao tema do ATESTMED, ao recorte, ao objetivo e à pergunta de pesquisa.
+7. Não invente achados quantitativos. Estatísticas geradas em R descrevem o corpus; não são efeito causal nem medida de acurácia.

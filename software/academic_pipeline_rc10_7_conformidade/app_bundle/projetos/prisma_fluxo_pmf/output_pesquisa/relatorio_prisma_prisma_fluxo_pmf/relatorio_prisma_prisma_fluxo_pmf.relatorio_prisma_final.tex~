@@ -1,0 +1,258 @@
+% Created 2026-07-09 qui 00:59
+% Intended LaTeX compiler: lualatex
+\documentclass[12pt,a4paper]{article}
+\usepackage{fgv-paper}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[backend=biber,sorting=nty,giveninits=true]{biblatex}
+
+\author{Gustavo M. Mendes de Tarso}
+\date{2026}
+\title{Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade}
+\hypersetup{
+ pdfauthor={Gustavo M. Mendes de Tarso},
+ pdftitle={Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Brazilian}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Identificação}
+\label{sec:org82b5b49}
+\begin{itemize}
+\item Perfil: \texttt{relatorio\_prisma\_busca\_orientada\_fgv}.
+\item Etapa: consolidação após triagem humana.
+\item Layout institucional: paper\textsubscript{fgv}.
+\item Projeto: prisma\textsubscript{fluxo}\textsubscript{pmf}.
+\end{itemize}
+
+\section{Questão e escopo da revisão}
+\label{sec:org57ca51e}
+\begin{itemize}
+\item Tema: Redesenho baseado em evidências do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal
+\item Recorte: Brasil; organização do fluxo entre análise documental, teleperícia, perícia presencial, capacidade ordinária e mutirões. O ATESTMED é tomado como referência institucional de análise documental, sem restringir a busca à experiência brasileira.
+\item Objetivo: Analisar evidências e alternativas para redesenhar o tratamento de requerimentos por incapacidade, combinando análise documental, avaliação remota, perícia presencial, capacidade territorial e critérios auditáveis de alocação.
+\item Pergunta de pesquisa: Como estruturar um fluxo de alocação de requerimentos entre análise documental, teleperícia e perícia presencial que reduza o tempo de espera sem comprometer a qualidade decisória, a equidade territorial e o controle?
+\item Tipo de estudo: revisão estruturada de evidências para análise e redesenho de política pública
+\end{itemize}
+
+\section{Protocolo de busca}
+\label{sec:org1349e6d}
+\begin{itemize}
+\item Estratégia: \texttt{blocos\_tematicos}.
+\end{itemize}
+\subsection{Blocos e consultas executadas}
+\label{sec:orgbeba9ad}
+\begin{itemize}
+\item Benefícios por incapacidade e avaliação médico-pericial: \texttt{disability benefits AND medical assessment}
+\item Benefícios por incapacidade e avaliação médico-pericial: \texttt{incapacity benefit AND medical evaluation}
+\item Benefícios por incapacidade e avaliação médico-pericial: \texttt{work disability AND medical certification}
+\item Análise documental e elegibilidade: \texttt{documentary assessment AND disability}
+\item Análise documental e elegibilidade: \texttt{medical certificate AND disability benefits}
+\item Análise documental e elegibilidade: \texttt{medical documentation AND work incapacity}
+\item Teleperícia e avaliação remota: \texttt{remote medical assessment AND disability}
+\item Teleperícia e avaliação remota: \texttt{telemedicine AND disability assessment}
+\item Teleperícia e avaliação remota: \texttt{telehealth AND medical certification}
+\item Capacidade, filas e alocação de serviços: \texttt{disability benefits AND waiting time}
+\item Capacidade, filas e alocação de serviços: \texttt{medical assessment AND service capacity}
+\item Capacidade, filas e alocação de serviços: \texttt{case allocation AND disability services}
+\item Equidade territorial, qualidade e controle: \texttt{disability assessment AND equity of access}
+\item Equidade territorial, qualidade e controle: \texttt{remote assessment AND quality assurance}
+\item Equidade territorial, qualidade e controle: \texttt{medical certification AND audit}
+\item Palavras-chave: benefícios por incapacidade; disability benefits assessment; análise documental de incapacidade; documentary review disability claims; teleperícia; telemedicine disability evaluation; perícia médica presencial; triagem de requerimentos por incapacidade; work capacity assessment; gestão de filas em saúde; equidade territorial no acesso; auditabilidade de decisões administrativas
+\item Idiomas: português; inglês; espanhol
+\item Bases selecionadas: Crossref; OpenAlex; Semantic Scholar; Scopus; Web of Science; PubMed/NCBI; Europe PMC; SciELO; CORE
+\end{itemize}
+
+\subsection{Critérios de inclusão}
+\label{sec:org8c6ff6f}
+\begin{itemize}
+\item Estudos que analisem benefícios por incapacidade, afastamento por doença, seguro por incapacidade, certificação médica ou avaliação médico-pericial.
+\item Estudos que abordem triagem documental, elegibilidade, análise de documentos médicos, validação de atestados ou processos de decisão sobre incapacidade.
+\item Estudos que examinem teleperícia, telemedicina aplicada à avaliação, avaliação médica remota, videoperícia ou modalidades híbridas de avaliação.
+\item Estudos que analisem capacidade operacional, filas, tempo de espera, produtividade, priorização de casos, alocação de profissionais ou gestão de demanda em serviços periciais ou sistemas de benefícios.
+\item Estudos que discutam acesso territorial, equidade, barreiras geográficas, inclusão de populações remotas ou desigualdades de acesso à avaliação médico-pericial.
+\item Estudos que tratem de qualidade decisória, confiabilidade, auditoria, controle, integridade, prevenção de fraude, revisão de decisões ou riscos associados à avaliação remota ou documental.
+\item Estudos empíricos, avaliações de política pública, estudos de caso institucionais, revisões sistemáticas, revisões de escopo ou relatórios técnicos com evidência útil para a pergunta de pesquisa.
+\item Publicações em português, inglês ou espanhol.
+\end{itemize}
+
+\subsection{Critérios de exclusão}
+\label{sec:orgbb9b8e2}
+\begin{itemize}
+\item Telemedicina exclusivamente assistencial, sem relação substantiva com avaliação de incapacidade, certificação, elegibilidade, triagem ou gestão de fluxos.
+\item Estudos clínicos que não contribuam para compreender processos de avaliação médico-pericial, decisão administrativa, capacidade, acesso, qualidade ou controle.
+\item Textos sem relação substantiva com a pergunta de pesquisa ou com ao menos um eixo da matriz analítica.
+\item Editorial, comentário, notícia, apresentação, resumo de congresso ou opinião sem análise, dados, revisão ou contribuição institucional verificável.
+\item Duplicidades entre bases ou consultas.
+\item Registros sem título, resumo ou metadados suficientes para triagem humana.
+\item Publicações em idioma diferente de português, inglês ou espanhol quando não houver informação suficiente para avaliação confiável.
+\end{itemize}
+
+\section{Registro por fonte}
+\label{sec:orgfdf5e02}
+\begin{center}
+\begin{tabular}{lrl}
+Base & Registros recuperados & Situação\\
+\hline
+Crossref & 300 & ok\\
+OpenAlex & 300 & ok\\
+Semantic Scholar & 300 & ok\\
+Scopus & 15 & ok\\
+Web of Science & 0 & não executada: credencial ausente\\
+PubMed/NCBI & 289 & ok\\
+Europe PMC & 300 & ok\\
+SciELO & 0 & bloqueada por anti-automação\\
+CORE & 233 & parcial\\
+\end{tabular}
+\end{center}
+
+\section{Fluxo de seleção}
+\label{sec:orgdeddd46}
+\begin{center}
+\begin{tabular}{lr}
+Etapa & Quantidade\\
+\hline
+registros identificados & 1737\\
+duplicatas removidas & 236\\
+registros apos deduplicacao & 1501\\
+registros pre triagem ia avaliados & 800\\
+registros enviados para triagem & 250\\
+triagem titulo resumo concluida & 0\\
+textos completos avaliados & 250\\
+estudos incluidos & 20\\
+registros na planilha & 250\\
+registros com triagem titulo resumo concluida & 250\\
+registros excluidos titulo resumo & 230\\
+textos completos excluidos & 5\\
+\end{tabular}
+\end{center}
+
+\section{Estudos incluídos}
+\label{sec:org792062b}
+\begin{enumerate}
+\item N. Di Fazio; G. Delogu; D. Morena; Eugenia Carfora; Dalila Tripi; R. Rinaldi; P. Frati; V. Fineschi (2024). Telehealth Intervention: A Proposal for a Telemedicine Manual to Ascertain the Civil Disability Status in Italy. International Journal of Environmental Research and Public Health. DOI: \url{https://doi.org/10.3390/ijerph21030253}.
+\item Yangwoo Kim; Inah Kim (2025). Medical certification in sickness benefit schemes (I): theoretical perspectives and return-to-work. Annals of Occupational and Environmental Medicine. DOI: \url{https://doi.org/10.35371/aoem.2025.37.e23}.
+\item Geiger; Garthwaite; Warren; Bambra (2018). Assessing work disability for social security benefits: international models for the direct assessment of work capacity. Disability and Rehabilitation. DOI: \url{https://doi.org/10.1080/09638288.2017.1366556}.
+\item I. Ebuenyi; B. Regeer; M. Nthenge; R. Nardodkar; M. Waltz; J. Bunders-Aelen (2018). 381 Evaluation of the international classification of functioning, disability and health for assessing disability of the brazilian national social security institute. International Journal of Law and Psychiatry. DOI: \url{https://doi.org/10.1136/oemed-2018-icohabstracts.1570}.
+\item Kim; Kim (2025). Medical certification in sickness benefit scheme (II): practical approaches for evaluating work disability. Annals of Occupational and Environmental Medicine. DOI: \url{https://doi.org/10.35371/aoem.2025.37.e24}.
+\item Miriam Cláudia Spada Bim; Manoel de Carvalho; N. T. Murofuse (2015). Análise dos modelos de avaliação de requerentes ao beneficio de prestação continuada: 2006 a 2012. DOI: \url{https://doi.org/10.1590/1414-49802015000100003}.
+\item Romy Steenbeek; Antonius JM Schellart; Henny Mulders; Johannes R. Anema; Herman Kroneman; Jan Besseling (2011). The development of instruments to measure the work disability assessment behaviour of insurance physicians. BMC Public Health. DOI: \url{https://doi.org/10.1186/1471-2458-11-1}.
+\item Jessica Anner; Urban Schwegler; Regina Kunz; Bruno Trezzini; Wout de Boer (2012). Evaluation of work disability and the international classification of functioning, disability and health: what to expect and what not. BMC Public Health. DOI: \url{https://doi.org/10.1186/1471-2458-12-470}.
+\item T. Rosburg; R. Kunz; B. Trezzini; Urban Schwegler; J. Jeger (2021). The assessment of capacity limitations in psychiatric work disability evaluations by the social functioning scale Mini-ICF-APP. BMC Psychiatry. DOI: \url{https://doi.org/10.1186/s12888-021-03467-w}.
+\item Vasudeva; Sheikh; Sahu (2021). International Classification of Functioning, Disability, and Health augmented by telemedicine and artificial intelligence for assessment of functional disability. Journal of Family Medicine and Primary Care. DOI: \url{https://doi.org/10.4103/jfmpc.jfmpc\_692\_21}.
+\item Rafael Augusto; T. Torres; Raquel Barbosa Cintra; E. Sá (2015). Critérios para avaliação de incapacidade laborativa na insuficiência cardíaca Criteria for evaluation of incapacity to work in heart failure. DOI: \url{https://doi.org/10.11606/issn.1679-9836.v94i4p282-288}.
+\item Riley Bove; Carolyn Bevan; Elizabeth Crabtree; Chao Zhao; Refujia Gomez; Priya Garcha; John Morrissey; Jason Dierkhising; Ari Green; Stephen L. Hauser; Bruce Cree; Mitchell T. Wallin; Jeffrey M. Gelfand (2018). Toward a low-cost, in-home, telemedicine-enabled assessment of disability in multiple sclerosis. Multiple Sclerosis Journal. DOI: \url{https://doi.org/10.1177/1352458518793527}.
+\item Georgios Theotokatos; R. Escorpizo; T. Angelopoulos; Nikolaos Chrysagis; Jerome Bickenbach; Aikaterini Venieri; Konstantinos Karteroliotis; E. Grammatopoulou; E. Skordilis (2023). Psychometric Properties of the 12-Item World Health Organization Disability Assessment Schedule (WHODAS 2.0), Greek Version: A Cross-Sectional Study on Applicants of Welfare Benefits. Cureus. DOI: \url{https://doi.org/10.7759/cureus.48588}.
+\item Wei-Fen Hsieh; Lieu-Hen Chen; Hao-Ming Hung; E. Sato-Shimokawara; Y. Takama; Toru Yamaguchi; Eric Hsiao-Kuang Wu; Yu-Wei Chen (2015). An intelligent decision supporting system for international classification of functioning, disability, and health. DOI: \url{https://doi.org/10.1186/s40327-015-0023-5}.
+\item Alejandro Heredia-Ciuró; A. Lazo-Prados; Paula Blasco-Valls; A. Calvache-Mateo; L. López-López; J. Martín-Núñez; M. Valenza (2022). Agreement between face-to-face and tele-assessment of upper limb disability in lung cancer survivors during COVID-19 era. Journal of Telemedicine and Telecare. DOI: \url{https://doi.org/10.1177/1357633x221079543}.
+\item K. Jones (2014). An evaluation of the discriminant and predictive validity of relative social disadvantage as screening criteria for priority access to public general dental care, in Australia. BMC Health Services Research. DOI: \url{https://doi.org/10.1186/1472-6963-14-106}.
+\item A. Wright; Emily L. Clarke; Catriona Dunn; B. Williams; D. Treanor; D. Brettle (2020). A Point-of-Use Quality Assurance Tool for Digital Pathology Remote Working. Journal of Pathology Informatics. DOI: \url{https://doi.org/10.4103/jpi.jpi\_25\_20}.
+\item A. Al-Qudah; Pratiti Ghosh Dastidar; M. Flounders; Thanmayi Palegar; Christopher Miao; M. Khalifa; M. Doheim; Marcelo Rocha; M. Starr; Jussie Correia Lima; A. Al-Bayati; Raul Nogueira; Nirav R. Bhatt (2026). Abstract WP023: Virtual vs. Bedside: IVT for Minor Stroke via Telemedicine vs. In-Person Evaluation; Insights from the UTOPIA Study. Stroke. DOI: \url{https://doi.org/10.1161/str.57.suppl\_1.wp023}.
+\item H. Ruiseñor-Escudero; I. Familiar; M. Nyakato; Agatha Kutessa; Jackie L Namukooli; Titus Ssesanga; C. Joyce; B. Laughton; Janet Grab; M. Chernoff; Tichaona Vhembo; L. Fairlie; P. Kamthunzi; M. Boivin (2018). Building capacity in neurodevelopment assessment of children in Sub-Saharan Africa: A Quality Assurance Model to implement standardized neurodevelopment testing. Child Neuropsychology: A Journal of Normal and Abnormal Development in Childhood and Adolescence. DOI: \url{https://doi.org/10.1080/09297049.2018.1497588}.
+\item Muskaan; Subhasish Chatterjee; Mousumi Saha; Etika Rana (2025). Validation and Test Retest Reliability Testing of The Telematic Fugl Meyer Assessment Scale - Upper Extremity (TFMA-UE). Journal of Clinical and Diagnostic Research. DOI: \url{https://doi.org/10.7860/jcdr/2025/80478.21693}.
+
+\item Matriz editável (CSV/XLSX): \texttt{/home/gustavodetarso/Documentos/mppg/software/academic\_pipeline\_rc10\_7\_conformidade/app\_bundle/projetos/prisma\_fluxo\_pmf/output\_pesquisa/relatorio\_prisma\_prisma\_fluxo\_pmf/relatorio\_prisma\_prisma\_fluxo\_pmf.matriz\_estudos\_incluidos.xlsx}
+\end{enumerate}
+
+\section{Anexo A — Matriz dos estudos incluídos}
+\label{sec:org3e513ac}
+A matriz abaixo é a versão documental da planilha de triagem. Os campos analíticos devem ser preenchidos após a leitura do texto completo dos estudos incluídos. A versão editável permanece disponível em CSV/XLSX.
+
+\subsection{A.1 Identificação, contexto e método}
+\label{sec:orge919ce6}
+\begin{landscape}
+\footnotesize
+\begin{longtable}{p{0.22\linewidth}p{0.11\linewidth}p{0.17\linewidth}p{0.17\linewidth}p{0.16\linewidth}}
+Estudo & Contexto/país & Objetivo & Desenho/método & Amostra/base\\
+\hline
+\endfirsthead
+\multicolumn{5}{l}{Continued from previous page} \\
+\hline
+
+Estudo & Contexto/país & Objetivo & Desenho/método & Amostra/base \\
+
+\hline
+\endhead
+\hline\multicolumn{5}{r}{Continued on next page} \\
+\endfoot
+\endlastfoot
+\hline
+N. Di Fazio; G. Delogu; D. Morena; Eugenia Carfora; Dalila Tripi; R. Rinaldi; P. Frati; V. Fineschi (2024) — Telehealth Intervention: A Proposal for a Telemedicine Manual to Ascertain the Civil Disability Status in Italy & Itália/INPS & Propor manual/protocolo de telemedicina para aferição do status de deficiência civil por comissões médico-legais. & Artigo propositivo/normativo com comparação entre métodos atuais e estratégia telemática. & Sem amostra empírica principal; proposta de protocolo institucional.\\
+Yangwoo Kim; Inah Kim (2025) — Medical certification in sickness benefit schemes (I): theoretical perspectives and return-to-work & Coreia do Sul com comparação internacional OECD & Examinar fundamentos teóricos e aplicações práticas da certificação médica em benefícios por doença, com foco em elegibilidade e retorno ao trabalho. & Revisão narrativa/analítica de políticas e modelos internacionais. & Sem amostra empírica primária; literatura e experiências comparadas.\\
+Geiger; Garthwaite; Warren; Bambra (2018) — Assessing work disability for social security benefits: international models for the direct assessment of work capacity & Comparado internacionalmente & Descrever modelos internacionais de avaliação direta da capacidade para o trabalho em benefícios por incapacidade. & Estudo comparado com análise documental de mais de 150 documentos e 40 entrevistas com especialistas. & Oito países e múltiplas fontes institucionais/documentais.\\
+I. Ebuenyi; B. Regeer; M. Nthenge; R. Nardodkar; M. Waltz; J. Bunders-Aelen (2018) — 381 Evaluation of the international classification of functioning, disability and health for assessing disability of the brazilian national social security institute & Brasil/INSS/BPC & Analisar resultados do uso da CIF na avaliação de pessoas com deficiência para concessão do BPC no INSS. & Estudo retrospectivo com análise de escores por domínios da CIF e resultado de concessão. & 173 requerentes de BPC avaliados no INSS em 2016.\\
+Kim; Kim (2025) — Medical certification in sickness benefit scheme (II): practical approaches for evaluating work disability & Coreia com comparação internacional & Revisar abordagens práticas para avaliar incapacidade laboral em esquemas de benefício por doença e extrair lições para implementação. & Revisão narrativa/política comparada com síntese de experiências internacionais e pilotos coreanos. & Não aplicável; síntese de sistemas e diretrizes.\\
+Miriam Cláudia Spada Bim; Manoel de Carvalho; N. T. Murofuse (2015) — Análise dos modelos de avaliação de requerentes ao beneficio de prestação continuada: 2006 a 2012 & Brasil; BPC/assistência social; agência da Previdência Social no Paraná & Analisar resultados da avaliação de requerentes ao BPC antes e depois da adoção de modelo médico-social baseado na CIF/ICF. & Estudo observacional retrospectivo com análise documental de requerimentos e desfechos administrativos em dois períodos. & 1.404 requerimentos de BPC em Assis Chateaubriand-PR entre 2006 e 2012.\\
+Romy Steenbeek; Antonius JM Schellart; Henny Mulders; Johannes R. Anema; Herman Kroneman; Jan Besseling (2011) — The development of instruments to measure the work disability assessment behaviour of insurance physicians & Países Baixos/medicina do seguro & Desenvolver instrumentos para medir comportamento de avaliação de incapacidade laboral de médicos do seguro e seus determinantes. & Estudo de desenvolvimento e validação de instrumento com base teórica ASE, entrevistas, análise fatorial e análise de confiabilidade. & 231 médicos do seguro.\\
+Jessica Anner; Urban Schwegler; Regina Kunz; Bruno Trezzini; Wout de Boer (2012) — Evaluation of work disability and the international classification of functioning, disability and health: what to expect and what not & Contexto internacional de seguro social & Discutir o que a ICF pode e não pode oferecer à avaliação de incapacidade para fins de seguro social e trabalho. & Artigo de discussão conceitual e comparativa sobre avaliação de incapacidade. & Sem amostra empírica primária; análise conceitual e institucional.\\
+T. Rosburg; R. Kunz; B. Trezzini; Urban Schwegler; J. Jeger (2021) — The assessment of capacity limitations in psychiatric work disability evaluations by the social functioning scale Mini-ICF-APP & Suíça/seguro por invalidez & Avaliar o papel da escala Mini-ICF-APP nas avaliações psiquiátricas de incapacidade laboral e sua relação com capacidade residual de trabalho. & Estudo observacional analítico com regressões sobre avaliações periciais. & 946 requerentes com transtornos mentais em avaliações de benefício por incapacidade.\\
+Vasudeva; Sheikh; Sahu (2021) — International Classification of Functioning, Disability, and Health augmented by telemedicine and artificial intelligence for assessment of functional disability & Contexto internacional/geral & Propor uso da ICF/CIF, telemedicina e inteligência artificial para tornar a avaliação de deficiência funcional mais justa, transparente e centrada em funcionalidade. & Artigo conceitual/propositivo com discussão de modelo e agenda de pilotos. & Sem amostra empírica principal; proposta teórico-aplicada.\\
+Rafael Augusto; T. Torres; Raquel Barbosa Cintra; E. Sá (2015) — Critérios para avaliação de incapacidade laborativa na insuficiência cardíaca Criteria for evaluation of incapacity to work in heart failure & Brasil; perícia previdenciária & Identificar critérios para determinação de incapacidade total e permanente em insuficiência cardíaca no contexto previdenciário. & Revisão de literatura sem limite temporal e análise de legislação previdenciária. & Bases PubMed/Medline, BVS, Scopus, Web of Science e Cochrane; sem amostra primária.\\
+Riley Bove; Carolyn Bevan; Elizabeth Crabtree; Chao Zhao; Refujia Gomez; Priya Garcha; John Morrissey; Jason Dierkhising; Ari Green; Stephen L. Hauser; Bruce Cree; Mitchell T. Wallin; Jeffrey M. Gelfand (2018) — Toward a low-cost, in-home, telemedicine-enabled assessment of disability in multiple sclerosis & Estados Unidos & Desenvolver e validar exame de incapacidade em esclerose múltipla por telemedicina domiciliar sem examinador local. & Estudo de validação/prova de conceito com comparação cega entre avaliação presencial e televídeo. & 41 adultos com esclerose múltipla.\\
+Georgios Theotokatos; R. Escorpizo; T. Angelopoulos; Nikolaos Chrysagis; Jerome Bickenbach; Aikaterini Venieri; Konstantinos Karteroliotis; E. Grammatopoulou; E. Skordilis (2023) — Psychometric Properties of the 12-Item World Health Organization Disability Assessment Schedule (WHODAS 2.0), Greek Version: A Cross-Sectional Study on Applicants of Welfare Benefits & Grécia & Examinar propriedades psicométricas da versão grega de 12 itens do WHODAS 2.0 em solicitantes de benefícios assistenciais. & Estudo transversal psicométrico com análise fatorial, validade concorrente e consistência interna. & 10.163 adultos requerentes de benefícios em três regiões.\\
+Wei-Fen Hsieh; Lieu-Hen Chen; Hao-Ming Hung; E. Sato-Shimokawara; Y. Takama; Toru Yamaguchi; Eric Hsiao-Kuang Wu; Yu-Wei Chen (2015) — An intelligent decision supporting system for international classification of functioning, disability, and health & Taiwan & Desenvolver protótipo de sistema inteligente baseado em sensores para apoiar avaliações ICF/CIF e reduzir carga operacional da equipe. & Estudo de desenvolvimento de sistema/protótipo com experimentos técnicos e teste com usuários. & Experimentos com dispositivos e grupo de 20 idosos em parte dos testes, conforme resumo.\\
+Alejandro Heredia-Ciuró; A. Lazo-Prados; Paula Blasco-Valls; A. Calvache-Mateo; L. López-López; J. Martín-Núñez; M. Valenza (2022) — Agreement between face-to-face and tele-assessment of upper limb disability in lung cancer survivors during COVID-19 era & Espanha/ambiente hospitalar oncológico & Comparar concordância entre avaliação presencial e teleavaliação de incapacidade de membro superior em sobreviventes de câncer de pulmão. & Estudo de confiabilidade/concordância entre duas modalidades de avaliação. & 20 sobreviventes de câncer de pulmão.\\
+K. Jones (2014) — An evaluation of the discriminant and predictive validity of relative social disadvantage as screening criteria for priority access to public general dental care, in Australia & Austrália & Avaliar validade discriminante e preditiva de desvantagem social relativa como critério de triagem para acesso prioritário à odontologia pública. & Estudo observacional de validação com análise de sensibilidade, especificidade e curva ROC. & 615 adultos buscando atendimento odontológico público.\\
+A. Wright; Emily L. Clarke; Catriona Dunn; B. Williams; D. Treanor; D. Brettle (2020) — A Point-of-Use Quality Assurance Tool for Digital Pathology Remote Working & Reino Unido/patologia digital & Desenvolver ferramenta de garantia de qualidade para condições de visualização em patologia digital remota. & Desenvolvimento de ferramenta psicofísica web para validação de tela/ambiente de leitura. & Não centrado em população pericial; foco em ambiente de trabalho remoto em patologia.\\
+A. Al-Qudah; Pratiti Ghosh Dastidar; M. Flounders; Thanmayi Palegar; Christopher Miao; M. Khalifa; M. Doheim; Marcelo Rocha; M. Starr; Jussie Correia Lima; A. Al-Bayati; Raul Nogueira; Nirav R. Bhatt (2026) — Abstract WP023: Virtual vs. Bedside: IVT for Minor Stroke via Telemedicine vs. In-Person Evaluation; Insights from the UTOPIA Study & Provavelmente EUA/rede hospitalar multinstitucional & Comparar trombólise guiada por telestroke versus avaliação presencial em AVC isquêmico leve. & Análise retrospectiva multicêntrica de coorte. & 480 pacientes com AVC isquêmico leve tratados com IVT.\\
+H. Ruiseñor-Escudero; I. Familiar; M. Nyakato; Agatha Kutessa; Jackie L Namukooli; Titus Ssesanga; C. Joyce; B. Laughton; Janet Grab; M. Chernoff; Tichaona Vhembo; L. Fairlie; P. Kamthunzi; M. Boivin (2018) — Building capacity in neurodevelopment assessment of children in Sub-Saharan Africa: A Quality Assurance Model to implement standardized neurodevelopment testing & África Subsaariana/múltiplos países & Descrever modelo de garantia de qualidade para aplicação padronizada de testes neurodesenvolvimentais com supervisão remota. & Implementação multicêntrica de modelo QA com vídeos, rubricas, feedback e supervisão centralizada. & 615 crianças em 6 sítios de 4 países; 18 aplicadores.\\
+Muskaan; Subhasish Chatterjee; Mousumi Saha; Etika Rana (2025) — Validation and Test Retest Reliability Testing of The Telematic Fugl Meyer Assessment Scale - Upper Extremity (TFMA-UE) & Índia & Traduzir, validar e testar confiabilidade teste-reteste da versão em hindi da escala telemática FMA-UE. & Estudo de validação transcultural e confiabilidade. & Pacientes com AVC falantes de hindi; tamanho não claramente informado no resumo.\\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+\subsection{A.2 Achados, limitações e contribuição}
+\label{sec:org6e85b40}
+\begin{landscape}
+\footnotesize
+\begin{longtable}{p{0.20\linewidth}p{0.26\linewidth}p{0.19\linewidth}p{0.19\linewidth}}
+Estudo & Achados principais & Limitações & Contribuição para a pergunta\\
+\hline
+\endfirsthead
+\multicolumn{4}{l}{Continued from previous page} \\
+\hline
+
+Estudo & Achados principais & Limitações & Contribuição para a pergunta \\
+
+\hline
+\endhead
+\hline\multicolumn{4}{r}{Continued on next page} \\
+\endfoot
+\endlastfoot
+\hline
+N. Di Fazio; G. Delogu; D. Morena; Eugenia Carfora; Dalila Tripi; R. Rinaldi; P. Frati; V. Fineschi (2024) — Telehealth Intervention: A Proposal for a Telemedicine Manual to Ascertain the Civil Disability Status in Italy & A teleavaliação pode otimizar tempo e acessibilidade em casos selecionados, especialmente quando documentação é suficiente ou há impossibilidade de deslocamento; não substitui totalmente o exame presencial. & Baixa base empírica; foco em proposta/manual; pouca avaliação formal de validade, confiabilidade e risco. & Oferece desenho operacional concreto para teleperícia/avaliação remota com critérios de uso restrito e integração documental.\\
+Yangwoo Kim; Inah Kim (2025) — Medical certification in sickness benefit schemes (I): theoretical perspectives and return-to-work & Define certificação como processo distinto entre diagnóstico clínico e avaliação de capacidade laboral; destaca tendência a modelos orientados a retorno ao trabalho e uso da ICF como referência. & Sem componente tecnológico robusto; não avalia IA, automação ou teleperícia; utilidade maior como contexto decisório. & Ajuda a separar assistência clínica de decisão administrativa e a estruturar critérios de elegibilidade no redesenho do fluxo PMF.\\
+Geiger; Garthwaite; Warren; Bambra (2018) — Assessing work disability for social security benefits: international models for the direct assessment of work capacity & Identifica três modelos de avaliação direta: estruturada, demonstrada e pericial especializada, cada qual com vantagens e limitações em validade, custo e legitimidade. & Não trata diretamente de IA, automação ou teleperícia; natureza predominantemente analítica e comparativa. & Ajuda a enquadrar o que deve ser automatizado, protocolizado ou mantido como julgamento especializado no redesenho PMF/ATESTMED.\\
+I. Ebuenyi; B. Regeer; M. Nthenge; R. Nardodkar; M. Waltz; J. Bunders-Aelen (2018) — 381 Evaluation of the international classification of functioning, disability and health for assessing disability of the brazilian national social security institute & Houve divergências entre avaliação médica e social, especialmente em atividade/participação, com maioria de indeferimentos. & Resumo de congresso/abstract; foco em BPC e deficiência, não diretamente em benefício por incapacidade laboral; sem automação ou teleavaliação. & Oferece evidência de que instrumentos estruturados podem revelar assimetrias e necessidade de integração de critérios entre atores avaliadores.\\
+Kim; Kim (2025) — Medical certification in sickness benefit scheme (II): practical approaches for evaluating work disability & Destaca utilidade de diretrizes específicas por doença, ferramentas estruturadas de certificação, suporte clínico à decisão e integração de expertise em saúde ocupacional para maior consistência e justiça. & Não é estudo experimental; pouca ênfase em IA; possível heterogeneidade entre sistemas nacionais. & Ajuda a estruturar o componente não algorítmico do redesenho: protocolos, critérios padronizados, suporte ao médico e redução de incerteza decisória.\\
+Miriam Cláudia Spada Bim; Manoel de Carvalho; N. T. Murofuse (2015) — Análise dos modelos de avaliação de requerentes ao beneficio de prestação continuada: 2006 a 2012 & Após a implementação do modelo com avaliação social baseada na CIF/ICF, aumentou a proporção de indeferimentos. Os autores concluem que a alteração legal e do modelo avaliativo não ampliou direitos de forma positiva no contexto estudado. & Estudo local, sem desenho causal robusto, possível influência de mudanças institucionais concomitantes e limitada generalização para outros benefícios e períodos. & Mostra que redesenhos de fluxo e instrumentos estruturados alteram resultados decisórios e precisam ser monitorados quanto a equidade, seletividade e efeitos não intencionais.\\
+Romy Steenbeek; Antonius JM Schellart; Henny Mulders; Johannes R. Anema; Herman Kroneman; Jan Besseling (2011) — The development of instruments to measure the work disability assessment behaviour of insurance physicians & Foram construídas escalas e dimensões com confiabilidade suficiente para captar intenções, atitudes, normas sociais, autoeficácia, barreiras e comportamento no processo avaliativo. & Foco comportamental e autorrelatado; sem teste de impacto em desfechos administrativos; contexto institucional específico. & Oferece base para mapear fontes de heterogeneidade decisória e desenhar protocolos, treinamento, auditoria e variáveis para sistemas de apoio à decisão na PMF.\\
+Jessica Anner; Urban Schwegler; Regina Kunz; Bruno Trezzini; Wout de Boer (2012) — Evaluation of work disability and the international classification of functioning, disability and health: what to expect and what not & Identifica elementos centrais dos relatórios periciais, aponta déficit de padronização/transparência e mostra como a ICF pode estruturar capacidade funcional, embora não resolva sozinha exigências legais e causais. & Sem teste empírico de implementação; não aborda tecnologia digital diretamente. & Fornece base para transformar critérios periciais em campos estruturados, auditáveis e potencialmente automatizáveis no ATESTMED.\\
+T. Rosburg; R. Kunz; B. Trezzini; Urban Schwegler; J. Jeger (2021) — The assessment of capacity limitations in psychiatric work disability evaluations by the social functioning scale Mini-ICF-APP & As limitações de capacidade medidas pela Mini-ICF-APP variam por diagnóstico e se associam às estimativas de capacidade residual de trabalho, apoiando uso de instrumento estruturado. & Foco em saúde mental e contexto específico; não aborda teleperícia ou automação; possível dependência de julgamentos dos peritos. & Mostra que instrumentos padronizados podem servir como camada estruturante para decisões mais consistentes e para futura automação/triagem baseada em evidências.\\
+Vasudeva; Sheikh; Sahu (2021) — International Classification of Functioning, Disability, and Health augmented by telemedicine and artificial intelligence for assessment of functional disability & Defende substituir foco em impairment por funcionalidade; sugere IA em níveis e telemedicina para apoiar juntas/boards; destaca potencial de transparência e padronização. & Sem validação empírica robusta; não mede desempenho, acurácia, impacto operacional ou equidade em implementação real. & Oferece arcabouço direto para redesenho do fluxo pericial com avaliação remota, critérios funcionais estruturados e suporte algorítmico auditável.\\
+Rafael Augusto; T. Torres; Raquel Barbosa Cintra; E. Sá (2015) — Critérios para avaliação de incapacidade laborativa na insuficiência cardíaca Criteria for evaluation of incapacity to work in heart failure & Aponta fatores funcionais, cognitivos e prognósticos associados à incapacidade e ao retorno ao trabalho, propondo parâmetros úteis à avaliação pericial em insuficiência cardíaca. & Revisão não claramente sistemática, foco em uma condição clínica específica e ausência de validação operacional dos critérios em rotina pericial. & Ajuda a mostrar como protocolos clínico-funcionais podem reduzir variabilidade decisória e servir de base para suporte decisório ou automação parcial.\\
+Riley Bove; Carolyn Bevan; Elizabeth Crabtree; Chao Zhao; Refujia Gomez; Priya Garcha; John Morrissey; Jason Dierkhising; Ari Green; Stephen L. Hauser; Bruce Cree; Mitchell T. Wallin; Jeffrey M. Gelfand (2018) — Toward a low-cost, in-home, telemedicine-enabled assessment of disability in multiple sclerosis & Alta correlação entre EDSS presencial e tele-EDSS; 88\% das avaliações dentro de 1 ponto; kappa e correlação sugerem viabilidade para incapacidade leve a moderada. & Amostra pequena; doença específica; contexto clínico e de pesquisa, não administrativo-pericial. & Sustenta tecnicamente que avaliação remota padronizada pode alcançar confiabilidade aceitável quando o instrumento é estruturado.\\
+Georgios Theotokatos; R. Escorpizo; T. Angelopoulos; Nikolaos Chrysagis; Jerome Bickenbach; Aikaterini Venieri; Konstantinos Karteroliotis; E. Grammatopoulou; E. Skordilis (2023) — Psychometric Properties of the 12-Item World Health Organization Disability Assessment Schedule (WHODAS 2.0), Greek Version: A Cross-Sectional Study on Applicants of Welfare Benefits & WHODAS 2.0 apresentou alta consistência interna, estrutura fatorial adequada e associação significativa com percentual de incapacidade e comorbidades. & Não aborda automação nem teleperícia; contexto de welfare benefits pode diferir da incapacidade laboral previdenciária. & Fornece base para critérios estruturados, comparáveis e auditáveis de funcionalidade, úteis para padronização decisória e eventual digitalização do fluxo.\\
+Wei-Fen Hsieh; Lieu-Hen Chen; Hao-Ming Hung; E. Sato-Shimokawara; Y. Takama; Toru Yamaguchi; Eric Hsiao-Kuang Wu; Yu-Wei Chen (2015) — An intelligent decision supporting system for international classification of functioning, disability, and health & Integra sensores e base de dados para medir mobilidade, registrar avaliações e permitir monitoramento remoto; sugere viabilidade de apoio tecnológico à avaliação funcional. & Protótipo com amostra pequena; contexto assistencial/funcional mais amplo que perícia previdenciária; sem avaliação de impacto decisório real em benefícios. & Mostra como captura digital estruturada e suporte inteligente podem reduzir subjetividade, padronizar evidências e apoiar avaliação remota no fluxo de incapacidade.\\
+Alejandro Heredia-Ciuró; A. Lazo-Prados; Paula Blasco-Valls; A. Calvache-Mateo; L. López-López; J. Martín-Núñez; M. Valenza (2022) — Agreement between face-to-face and tele-assessment of upper limb disability in lung cancer survivors during COVID-19 era & Boa concordância global entre avaliação presencial e online em algumas medidas funcionais e musculoesqueléticas. & Amostra pequena; contexto clínico assistencial; sem decisão administrativa; sem incapacidade laboral/benefício; baixa transferibilidade para perícia federal. & Contribui apenas marginalmente para discutir viabilidade técnica de avaliação remota.\\
+K. Jones (2014) — An evaluation of the discriminant and predictive validity of relative social disadvantage as screening criteria for priority access to public general dental care, in Australia & Alguns indicadores sociais mostraram utilidade para priorização clínica e discussão sobre transparência e equidade no acesso. & Setor odontológico; sem incapacidade laboral, sem perícia, sem teleavaliação, sem IA e sem análise documental administrativa. & Contribuição apenas indireta para desenho de critérios de fila e priorização auditável.\\
+A. Wright; Emily L. Clarke; Catriona Dunn; B. Williams; D. Treanor; D. Brettle (2020) — A Point-of-Use Quality Assurance Tool for Digital Pathology Remote Working & Propõe instrumento de checagem de qualidade do ambiente de visualização para diagnósticos remotos. & Domínio não pericial; sem incapacidade/benefício; sem avaliação de elegibilidade; aplicabilidade indireta. & Contribuição apenas analógica para requisitos de QA em teletrabalho decisório.\\
+A. Al-Qudah; Pratiti Ghosh Dastidar; M. Flounders; Thanmayi Palegar; Christopher Miao; M. Khalifa; M. Doheim; Marcelo Rocha; M. Starr; Jussie Correia Lima; A. Al-Bayati; Raul Nogueira; Nirav R. Bhatt (2026) — Abstract WP023: Virtual vs. Bedside: IVT for Minor Stroke via Telemedicine vs. In-Person Evaluation; Insights from the UTOPIA Study & Telestroke foi amplamente utilizado com comparação de fluxos, tempos e segurança segundo critérios padronizados de incapacidade neurológica. & Contexto assistencial agudo; desfechos clínicos, não administrativos; sem relação com benefício, certificação ou perícia federal. & Muito indireta; apenas reforça que avaliação remota exige critérios estruturados para reduzir variabilidade.\\
+H. Ruiseñor-Escudero; I. Familiar; M. Nyakato; Agatha Kutessa; Jackie L Namukooli; Titus Ssesanga; C. Joyce; B. Laughton; Janet Grab; M. Chernoff; Tichaona Vhembo; L. Fairlie; P. Kamthunzi; M. Boivin (2018) — Building capacity in neurodevelopment assessment of children in Sub-Saharan Africa: A Quality Assurance Model to implement standardized neurodevelopment testing & Alta validade dos testes e viabilidade de supervisão remota padronizada em múltiplos contextos. & Campo pediátrico/neurodesenvolvimento; não administrativo; sem elegibilidade/benefício; sem IA. & Contribuição indireta para desenho de supervisão remota e QA de avaliadores.\\
+Muskaan; Subhasish Chatterjee; Mousumi Saha; Etika Rana (2025) — Validation and Test Retest Reliability Testing of The Telematic Fugl Meyer Assessment Scale - Upper Extremity (TFMA-UE) & Busca viabilizar uso remoto padronizado da escala em telemedicina para avaliação sensório-motora. & Escopo clínico-reabilitador; sem relação com elegibilidade, benefício, auditoria decisória ou automação documental. & Contribuição apenas indireta como exemplo de instrumento remoto validado; insuficiente para inclusão final.\\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+\section{Nota metodológica}
+\label{sec:orgb0d2f07}
+As contagens e os estudos incluídos foram consolidados exclusivamente a partir da planilha de triagem preenchida pela pessoa responsável. O sistema não inferiu decisões de elegibilidade.
+\end{document}

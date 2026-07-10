@@ -1,0 +1,269 @@
+# Dados estruturados completos — Seminário ATESTMED / Perícia Médica Federal
+# Uso: no TUI, escolha “usar arquivo estruturado já existente” e informe este arquivo.
+# O arquivo reúne o núcleo substantivo da pesquisa, o protocolo PRISMA e a matriz analítica.
+# Credenciais (API keys e e-mails) permanecem exclusivamente no .env.
+
+titulo_trabalho = "Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade"
+tema = "Redesenho baseado em evidências do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal"
+recorte = "Brasil; organização do fluxo entre análise documental, teleperícia, perícia presencial, capacidade ordinária e mutirões. O ATESTMED é referência institucional de análise documental, sem restringir a revisão exclusivamente à experiência brasileira."
+objetivo = "Analisar evidências e alternativas para redesenhar o tratamento de requerimentos por incapacidade, combinando análise documental, avaliação remota, perícia presencial, capacidade territorial e critérios auditáveis de alocação."
+pergunta_pesquisa = "Como estruturar um fluxo de alocação de requerimentos entre análise documental, teleperícia e perícia presencial que reduza o tempo de espera sem comprometer a qualidade decisória, a equidade territorial e o controle?"
+tipo_estudo = "revisão estruturada de evidências para análise e redesenho de política pública"
+idiomas = ["português", "inglês", "espanhol"]
+
+palavras_chave = [
+  "benefícios por incapacidade",
+  "disability benefits",
+  "incapacity benefit",
+  "Perícia Médica Federal",
+  "medical disability assessment",
+  "medical certification",
+  "análise documental de benefícios",
+  "documentary assessment",
+  "teleperícia",
+  "telemedicine",
+  "telehealth",
+  "remote medical assessment",
+  "perícia presencial",
+  "gestão de filas e tempo de espera",
+  "service capacity",
+  "case allocation",
+  "equidade territorial em serviços públicos",
+  "quality assurance",
+  "audit"
+]
+
+[pesquisa]
+titulo_trabalho = "Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade"
+tema = "Redesenho baseado em evidências do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal"
+recorte = "Brasil; organização do fluxo entre análise documental, teleperícia, perícia presencial, capacidade ordinária e mutirões. O ATESTMED é tomado como referência institucional de análise documental, sem restringir a busca à experiência brasileira."
+objetivo = "Analisar evidências e alternativas para redesenhar o tratamento de requerimentos por incapacidade, combinando análise documental, avaliação remota, perícia presencial, capacidade territorial e critérios auditáveis de alocação."
+pergunta_pesquisa = "Como estruturar um fluxo de alocação de requerimentos entre análise documental, teleperícia e perícia presencial que reduza o tempo de espera sem comprometer a qualidade decisória, a equidade territorial e o controle?"
+hipotese = "Um fluxo híbrido, com regras auditáveis de elegibilidade e encaminhamento, pode reduzir a pressão sobre a perícia presencial quando combina suficiência documental, complexidade clínica e administrativa, urgência, risco, acessibilidade digital, capacidade territorial e revisão humana dos casos não elegíveis à decisão remota."
+tipo_estudo = "revisão estruturada de evidências para análise e redesenho de política pública"
+idiomas = ["português", "inglês", "espanhol"]
+
+palavras_chave = [
+  "benefícios por incapacidade",
+  "disability benefits",
+  "incapacity benefit",
+  "Perícia Médica Federal",
+  "medical disability assessment",
+  "medical certification",
+  "análise documental de benefícios",
+  "documentary assessment",
+  "teleperícia",
+  "telemedicine",
+  "telehealth",
+  "remote medical assessment",
+  "perícia presencial",
+  "gestão de filas e tempo de espera",
+  "service capacity",
+  "case allocation",
+  "equidade territorial em serviços públicos",
+  "quality assurance",
+  "audit"
+]
+
+[atividade]
+curso = "Mestrado Acadêmico em Políticas Públicas e Governo"
+disciplina = "Decisões Baseadas em Evidências"
+titulo_trabalho = "Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade"
+
+[delimitacao]
+objeto_empirico = "Fluxo de análise e encaminhamento de requerimentos de benefícios por incapacidade na Perícia Médica Federal, com atenção às interações entre ATESTMED, teleperícia, perícia presencial, capacidade ordinária e mutirões."
+unidade_de_analise = "Arranjos, critérios e evidências sobre classificação e alocação de requerimentos para modalidades de análise e avaliação médico-pericial."
+contexto_institucional = "Administração pública federal brasileira. A literatura internacional será utilizada como referência comparativa, sem transposição automática de soluções para o contexto brasileiro."
+
+exclusoes_de_escopo = [
+  "Telemedicina clínica sem relação substantiva com avaliação de incapacidade, certificação, elegibilidade, triagem ou gestão de fluxos.",
+  "Estudos exclusivamente tecnológicos que não discutam efeitos sobre processo decisório, capacidade, acesso, equidade, qualidade ou controle.",
+  "Recomendações voltadas apenas à expansão de atendimento, sem critérios de elegibilidade, governança, avaliação de riscos ou possibilidade de revisão."
+]
+
+[metodologia]
+desenho = "Revisão estruturada de evidências com protocolo PRISMA, triagem humana de títulos, resumos e textos completos e matriz analítica final dos estudos incluídos."
+perspectiva_teorica = "Análise de políticas públicas orientada por evidências e desenho de políticas, com foco na coerência entre problema, objetivos, instrumentos, capacidades estatais, implementação, resultados e salvaguardas."
+logica_analitica = "Comparar análise documental, avaliação remota e perícia presencial como instrumentos complementares, identificando condições de uso, efeitos esperados, limitações, riscos e requisitos de governança."
+decisao_final = "humana obrigatória"
+
+[busca_prisma]
+estrategia = "blocos_tematicos"
+consulta_geral = ""
+
+# Parâmetros definidos para a primeira execução.
+limite_por_base = 20
+limite_scopus_por_consulta = 10
+limite_triagem_inicial = 250
+
+# Fontes recomendadas. O TUI ainda pode permitir ajuste conforme as credenciais
+# detectadas no .env; fontes sem credencial obrigatória não devem interromper
+# as demais.
+bases = [
+  "crossref",
+  "openalex",
+  "semantic_scholar",
+  "scopus",
+  "pubmed",
+  "europe_pmc"
+]
+
+pre_triagem_ia = true
+pre_triagem_ia_modelo = ""
+pre_triagem_ia_lote = 20
+pre_triagem_ia_max_registros = 800
+pre_triagem_ia_reserva_incertos = 40
+pre_triagem_ia_min_confianca = 55
+pre_triagem_ia_max_chars_resumo = 1000
+
+meta_estudos_incluidos = 15
+ano_inicio = ""
+ano_fim = ""
+
+enriquecer_unpaywall = true
+limite_unpaywall = 250
+
+criterios_inclusao = [
+  "Estudos que analisem benefícios por incapacidade, afastamento por doença, seguro por incapacidade, certificação médica ou avaliação médico-pericial.",
+  "Estudos que abordem triagem documental, elegibilidade, análise de documentos médicos, validação de atestados ou processos de decisão sobre incapacidade.",
+  "Estudos que examinem teleperícia, telemedicina aplicada à avaliação, avaliação médica remota, videoperícia ou modalidades híbridas de avaliação.",
+  "Estudos que analisem capacidade operacional, filas, tempo de espera, produtividade, priorização de casos, alocação de profissionais ou gestão de demanda em serviços periciais ou sistemas de benefícios.",
+  "Estudos que discutam acesso territorial, equidade, barreiras geográficas, inclusão de populações remotas ou desigualdades de acesso à avaliação médico-pericial.",
+  "Estudos que tratem de qualidade decisória, confiabilidade, auditoria, controle, integridade, prevenção de fraude, revisão de decisões ou riscos associados à avaliação remota ou documental.",
+  "Estudos empíricos, avaliações de política pública, estudos de caso institucionais, revisões sistemáticas, revisões de escopo ou relatórios técnicos com evidência útil para a pergunta de pesquisa.",
+  "Publicações em português, inglês ou espanhol."
+]
+
+criterios_exclusao = [
+  "Telemedicina exclusivamente assistencial, sem relação substantiva com avaliação de incapacidade, certificação, elegibilidade, triagem ou gestão de fluxos.",
+  "Estudos clínicos que não contribuam para compreender processos de avaliação médico-pericial, decisão administrativa, capacidade, acesso, qualidade ou controle.",
+  "Textos sem relação substantiva com a pergunta de pesquisa ou com ao menos um eixo da matriz analítica.",
+  "Editorial, comentário, notícia, apresentação, resumo de congresso ou opinião sem análise, dados, revisão ou contribuição institucional verificável.",
+  "Duplicidades entre bases ou consultas.",
+  "Registros sem título, resumo ou metadados suficientes para triagem humana.",
+  "Publicações em idioma diferente de português, inglês ou espanhol quando não houver informação suficiente para avaliação confiável."
+]
+
+[[busca_prisma.estrategias]]
+id = "beneficios_incapacidade_avaliacao_medico_pericial"
+rotulo = "Benefícios por incapacidade e avaliação médico-pericial"
+consultas = [
+  "disability benefits AND medical assessment",
+  "incapacity benefit AND medical evaluation",
+  "work disability AND medical certification"
+]
+
+[[busca_prisma.estrategias]]
+id = "analise_documental_elegibilidade"
+rotulo = "Análise documental e elegibilidade"
+consultas = [
+  "documentary assessment AND disability",
+  "medical certificate AND disability benefits",
+  "medical documentation AND work incapacity"
+]
+
+[[busca_prisma.estrategias]]
+id = "telepericia_avaliacao_remota"
+rotulo = "Teleperícia e avaliação remota"
+consultas = [
+  "remote medical assessment AND disability",
+  "telemedicine AND disability assessment",
+  "telehealth AND medical certification"
+]
+
+[[busca_prisma.estrategias]]
+id = "capacidade_filas_alocacao"
+rotulo = "Capacidade, filas e alocação de serviços"
+consultas = [
+  "disability benefits AND waiting time",
+  "medical assessment AND service capacity",
+  "case allocation AND disability services"
+]
+
+[[busca_prisma.estrategias]]
+id = "equidade_qualidade_controle"
+rotulo = "Equidade territorial, qualidade e controle"
+consultas = [
+  "disability assessment AND equity of access",
+  "remote assessment AND quality assurance",
+  "medical certification AND audit"
+]
+
+[matriz_analitica]
+pergunta_operacional = "Quais critérios, capacidades e salvaguardas tornam defensável a alocação de um requerimento para análise documental, teleperícia ou perícia presencial?"
+resultado_primario = "Redução do tempo de espera e do estoque de requerimentos sem deterioração da qualidade decisória, do devido processo, da rastreabilidade e da equidade territorial."
+
+resultados_secundarios = [
+  "Aproveitamento da capacidade médico-pericial.",
+  "Taxa de encaminhamento correto entre modalidades.",
+  "Necessidade de reanálise, recurso, reversão ou complemento documental.",
+  "Cobertura e acesso territorial.",
+  "Tratamento de casos urgentes, complexos ou com barreiras digitais.",
+  "Auditabilidade e possibilidade de revisão humana."
+]
+
+[[matriz_analitica.eixos]]
+id = "elegibilidade_documental"
+pergunta = "Quais condições documentais e administrativas permitem análise sem exame presencial?"
+variaveis = [
+  "completude documental",
+  "consistência das informações",
+  "atualidade dos documentos",
+  "necessidade de exame físico",
+  "complexidade clínica",
+  "incerteza diagnóstica"
+]
+
+[[matriz_analitica.eixos]]
+id = "elegibilidade_remota"
+pergunta = "Quais casos podem ser avaliados remotamente com segurança e qualidade?"
+variaveis = [
+  "necessidade de interação clínica",
+  "acesso e letramento digital",
+  "confiabilidade do canal",
+  "privacidade",
+  "barreiras de comunicação",
+  "possibilidade de conversão para perícia presencial"
+]
+
+[[matriz_analitica.eixos]]
+id = "capacidade_e_fila"
+pergunta = "Como a distribuição de capacidade influencia o tempo de espera e o estoque?"
+variaveis = [
+  "demanda represada",
+  "tempo de espera",
+  "capacidade por território",
+  "disponibilidade de agenda",
+  "absenteísmo",
+  "capacidade de mutirões",
+  "produtividade compatível com qualidade"
+]
+
+[[matriz_analitica.eixos]]
+id = "equidade_territorial"
+pergunta = "Como evitar que o fluxo produza acesso desigual entre territórios e grupos?"
+variaveis = [
+  "distância até atendimento presencial",
+  "conectividade",
+  "vulnerabilidade",
+  "disponibilidade regional de peritos",
+  "necessidades de acessibilidade",
+  "tratamento de exceções"
+]
+
+[[matriz_analitica.eixos]]
+id = "qualidade_controle"
+pergunta = "Quais salvaguardas preservam qualidade decisória, legalidade e auditabilidade?"
+variaveis = [
+  "revisão humana",
+  "justificativa do encaminhamento",
+  "registro de evidências",
+  "trilha de auditoria",
+  "proteção de dados",
+  "monitoramento de erros",
+  "regras de exceção",
+  "possibilidade de recurso"
+]
+
+[nota_de_uso]
+orientacao = "O arquivo orienta a criação do TOML final e a revisão PRISMA. A hipótese, a matriz e os resultados esperados não são dados observados; eles definem a estrutura de busca, triagem e extração analítica. A inclusão ou exclusão de estudos permanece decisão humana documentada na planilha."

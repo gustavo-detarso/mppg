@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-09T19:57:27+00:00",
+  "model": "gpt-4.1-mini",
+  "source_method": "síntese do document.json canônico; sem nova análise do corpus",
+  "items": {
+    "pt-br": {
+      "abstract": "Este trabalho examina o uso do ATESTMED na Perícia Médica Federal, integrando saúde digital e decisões baseadas em evidências para a concessão de benefícios por incapacidade. A partir de uma revisão estruturada de 20 estudos completos, realizou-se análise qualitativa e quantitativa, identificando quatro eixos centrais: suficiência documental, teleperícia, capacidade operacional e auditoria. A combinação equilibrada de análise documental, teleperícia e perícia presencial pode reduzir o tempo de espera sem comprometer a qualidade, desde que acompanhada de critérios e monitoramento claros. A proposta operacional modela um fluxo decisório em três etapas: análise documental automatizada pelo ATESTMED, triagem para teleperícia em casos de dúvidas, e escalonamento para perícia presencial em situações complexas, contemplando auditoria contínua e indicadores de desempenho. A proposta visa garantir eficiência, segurança, auditabilidade e equidade territorial, atendendo desafios como filas, qualidade decisória e desigualdades regionais. A discussão ressalta os riscos da automação parcial, a importância da governança robusta e a necessidade de formação permanente. Limitações metodológicas e necessidade de validação empírica futura são reconhecidas. Conclui-se que a integração criteriosa entre tecnologia e perícia presencial, alinhada a indicadores, pode otimizar o processo decisório na Perícia Médica Federal, promovendo sustentabilidade e justiça no sistema previdenciário.",
+      "keywords": [
+        "saúde digital",
+        "perícia médica",
+        "benefícios por incapacidade",
+        "decisão baseada em evidências",
+        "teleperícia"
+      ],
+      "language_code": "pt-br",
+      "language_label": "pt-BR",
+      "heading": "Resumo",
+      "keywords_heading": "Palavras-chave",
+      "include_keywords": true
+    }
+  }
+}

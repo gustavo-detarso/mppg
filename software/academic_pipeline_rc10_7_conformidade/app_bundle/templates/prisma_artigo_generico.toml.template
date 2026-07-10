@@ -1,0 +1,276 @@
+[projeto]
+nome = "{{PREFIX}}"
+descricao = "Artigo final gerado automaticamente a partir dos estudos selecionados no PRISMA final."
+preset = "paper_local_fgv"
+
+[instituicao]
+perfil = "fgv"
+
+[openai]
+model = "{{OPENAI_MODEL}}"
+
+[pipeline]
+modo_entrada = "documentos_locais"
+executar_pesquisa = false
+executar_documento = true
+executar_bundle = false
+
+[paths]
+document_output_dir = "{{OUT_DIR}}"
+research_output_dir = "output_pesquisa"
+work_dir = "{{WORK_DIR}}"
+cache_dir = "{{CACHE_DIR}}"
+document_prefix = "{{PREFIX}}"
+research_prefix = "relatorio_prisma_{{PREFIX}}"
+create_document_subdir = false
+create_research_subdir = true
+create_work_subdir = true
+create_cache_subdir = true
+
+[orientacoes]
+inline = """ORIENTAÇÃO METODOLÓGICA — PRISMA COM GARANTIA DE FULL TEXT
+
+A seleção final do artigo deve ser formada por estudos do universo PRISMA preliminar/curadoria com texto completo original recuperado. A indisponibilidade de texto completo deve ser registrada como motivo formal de exclusão na etapa de elegibilidade, e o próximo registro mais aderente ao tema, recorte, objetivo e pergunta de pesquisa deve ser chamado pelo ranking até atingir o número-alvo de estudos.
+
+A redação deve obedecer às regras:
+- Ler os PDFs dos estudos incluídos antes de redigir resultados e discussão.
+- Construir matriz de evidências por estudo, com aderência explícita ao tema, recorte, objetivo e pergunta de pesquisa.
+- Não tratar resumo, metadado ou proxy como full text original.
+- Não atribuir achados específicos a estudo excluído por texto completo não recuperado.
+- Documentar no método: textos completos procurados, textos não recuperados, textos avaliados e estudos incluídos.
+- Inserir tabela com: estudo, base de leitura, achado relevante, aderência ao ATESTMED/saúde digital, implicação decisória e limitação.
+- A proposta operacional deve nascer da aderência dos textos lidos, não de afirmações genéricas.
+
+ORIENTAÇÃO METODOLÓGICA — PRISMA COM GARANTIA DE FULL TEXT E BUSCA EXAUSTIVA
+
+A seleção final do artigo deve ser formada por estudos do universo PRISMA preliminar/curadoria com texto completo original recuperado. A indisponibilidade de texto completo deve ser registrada como motivo formal de exclusão na etapa de elegibilidade, e o próximo registro mais aderente ao tema, recorte, objetivo e pergunta de pesquisa deve ser chamado pelo ranking até atingir o número-alvo de estudos.
+
+A busca de texto completo deve usar, quando disponíveis:
+- DOI/URL direta e descoberta em landing page;
+- Unpaywall;
+- OpenAlex;
+- Crossref;
+- Semantic Scholar;
+- Europe PMC;
+- CORE;
+- Scopus/Elsevier por DOI, título, EID ou PII, respeitando credenciais e permissões institucionais.
+
+Títulos diretamente centrais ao objeto, como estudos sobre ATESTMED ou atestado por incapacidade, devem ser priorizados no ranking e submetidos à busca profunda. Se ainda assim o texto completo não for recuperado, a exclusão por texto completo não recuperado deve ser documentada expressamente na matriz PRISMA e no relatório de pendências.
+
+A redação deve obedecer às regras:
+- Ler os PDFs dos estudos incluídos antes de redigir resultados e discussão.
+- Construir matriz de evidências por estudo, com aderência explícita ao tema, recorte, objetivo e pergunta de pesquisa.
+- Não tratar resumo, metadado ou proxy como full text original.
+- Não atribuir achados específicos a estudo excluído por texto completo não recuperado.
+- Documentar no método: textos completos procurados, textos não recuperados, textos avaliados e estudos incluídos.
+- Inserir tabela com: estudo, base de leitura, achado relevante, aderência ao ATESTMED/saúde digital, implicação decisória e limitação.
+- A proposta operacional deve nascer da aderência dos textos lidos, não de afirmações genéricas.
+"""
+paths = {{ORIENTACOES_PATHS}}
+inline = '''
+{{ORIENTACOES_INLINE}}
+'''
+
+[dados_pesquisa_estruturados]
+ativo = {{DADOS_ATIVO}}
+path = "{{DADOS_PESQUISA_PATH}}"
+prisma_config_path = "{{PRISMA_CONFIG_PATH}}"
+
+[documentos_locais]
+ativos = true
+modo_entrada = "documentos_locais"
+input_zip = ""
+input_dir = "{{DADOS_DIR}}"
+tipos = ["pdf", "csv", "json", "txt", "md", "org", "png"]
+recursive = true
+limpar_extracao_anterior = true
+copiar_para_fulltext_cache = true
+limpar_cache_anterior = true
+max_caracteres_por_doc = 80000
+auto_detect_bib = true
+gerar_bib_revisado_ia = false
+enriquecer_metadados_buscadores = false
+fontes_metadados = []
+min_score_match_metadados = 0.82
+extrair_doi_dos_pdfs = false
+doi_manifest_path = ""
+preferir_doi_manual = true
+buscar_metadados_por_doi = false
+incluir_notas_metadados_inferidos = false
+deduplicar_bib = true
+deduplicar_referencias = true
+autor_padrao = ""
+ano_padrao = "s.d."
+
+[pesquisa]
+tema = "{{TEMA}}"
+recorte = "{{RECORTE}}"
+objetivo = "{{OBJETIVO}}"
+pergunta_pesquisa = "{{PERGUNTA}}"
+hipotese = "{{HIPOTESE}}"
+palavras_chave = {{PALAVRAS}}
+gerar_palavras_chave_ia = {{GERAR_PALAVRAS_IA}}
+idiomas = ["português", "inglês", "espanhol"]
+tipo_estudo = "paper acadêmico baseado em revisão estruturada de evidências"
+
+[paper]
+ativo = true
+tese_central = "{{TESE}}"
+estrutura_desejada = {{ESTRUTURA}}
+argumentos_obrigatorios = {{ARGUMENTOS}}
+orientacoes_metodologicas = "Explicitar revisão estruturada com fluxo PRISMA, curadoria assistida por IA e decisão humana final sobre estudos incluídos."
+limites_do_escopo = "Não extrapolar além das evidências selecionadas e dos limites definidos no arquivo estruturado de pesquisa."
+tom_de_redacao = "acadêmico analítico"
+instrucoes_adicionais = "Usar citações frequentes, em autor-data, exclusivamente com as chaves BibTeX permitidas."
+
+[resumo_artigos]
+ativo = false
+geracao_em_etapas = false
+modo = "analitico_comparativo"
+usar_apenas_corpus_local = false
+incluir_referencias = true
+incluir_mapa_mental = false
+
+[atividade]
+curso = "Mestrado Acadêmico em Políticas Públicas e Governo"
+turma = "2026.1"
+polo = "Brasília"
+disciplina = "Decisões Baseadas em Evidência"
+professor = "{{PROFESSOR}}"
+aluno = "{{AUTOR}}"
+data = "2026"
+titulo_trabalho = "{{TITULO}}"
+
+[documento]
+tipo_documento = "paper"
+tipo_conteudo = "paper"
+genero_academico = "paper"
+layout = "paper_fgv"
+classe_latex = "fgv-paper"
+titulo_trabalho = "{{TITULO}}"
+autor = "{{AUTOR}}"
+inferir_campos_vazios_ia = true
+institution_name = "Fundação Getúlio Vargas"
+program_name = ""
+course_name = "Mestrado Acadêmico em Políticas Públicas e Governo"
+discipline_name = "Decisões Baseadas em Evidência"
+professor_name = "{{PROFESSOR}}"
+city_name = "Brasília"
+ano = "2026"
+data = "2026"
+papertype = "Paper acadêmico"
+perfil_redacao = "academico_analitico"
+covernote = "Trabalho acadêmico elaborado para a disciplina Decisões Baseadas em Evidência."
+estilo_citacao = "abnt"
+sistema_citacao = "autor-data"
+referencias_formais = true
+exportar_org = true
+exportar_pdf = true
+exportar_docx = true
+gerar_documento_json = true
+modo_renderizacao = "document_model"
+usar_citacoes_latex_diretas = true
+validar_org_final = true
+falhar_se_org_tiver_chave_crua = true
+falhar_se_org_tiver_empty_citation = true
+falhar_se_org_tiver_mencao_tecnica = true
+
+[idiomas_saida]
+principal = "pt-BR"
+gerar_traducao_ia = false
+idiomas_adicionais = []
+preservar_referencias_originais = true
+max_chars_por_lote = 12000
+
+[resumos_paper]
+ativo = true
+principal = "pt-BR"
+gerar_resumo_principal = true
+gerar_resumo_adicional = false
+idiomas_adicionais = []
+gerar_palavras_chave_adicionais = true
+max_palavras = 250
+
+[bibliografia]
+ativo = true
+bib_path = "{{BIB_PATH}}"
+referencias_bib = "{{BIB_PATH}}"
+estilo_citacao = "abnt"
+latex_style = "abnt"
+latex_options = "backend=biber,style=abnt,sorting=nty,giveninits=true"
+docx_csl = "{{CSL_PATH}}"
+sistema_citacao = "autor-data"
+backend = "biber"
+gerar_arquivo_bib = true
+buscar_metadados_por_doi = false
+enriquecer_metadados_buscadores = false
+
+[relatorio_pesquisa]
+ativo = false
+tipo = "prisma"
+titulo = ""
+exportar_json = false
+exportar_org = false
+exportar_pdf = false
+exportar_docx = false
+exportar_xlsx = false
+exportar_fluxograma = false
+validar = false
+falhar_se_invalido = false
+prisma_json_path = ""
+pesquisa_dir_existente = "{{DADOS_DIR}}"
+
+[docx]
+ativo = true
+reference_docx = ""
+usar_pandoc = true
+csl_path = "{{CSL_PATH}}"
+falhar_se_pandoc_falhar = true
+incluir_capa = true
+incluir_referencias = true
+incluir_mapa_mental = false
+
+[latex]
+pdf_engine = "lualatex"
+org_latex_class_init = "{{ORG_LATEX_CLASS_INIT}}"
+latex_extra_path = "{{LATEX_EXTRA_PATH}}"
+fgv_logo_path = "{{FGV_LOGO_PATH}}"
+
+[prompts]
+ativos = true
+global_paths = ["{{PROMPT_GLOBAL}}"]
+institution_paths = ["profile://prompts/fgv_geral.txt"]
+research_paths = []
+paper_paths = ["{{PROMPT_PAPER}}"]
+atividade_paths = []
+resumo_artigos_paths = []
+dissertacao_paths = []
+prisma_paths = []
+document_paths = []
+
+[mapa_mental]
+gerar = false
+ativo = false
+posicao = "apos_referencias"
+titulo = "Mapa mental dos textos analisados"
+arquivo = "mapa_mental"
+formato = "png"
+renderizar = false
+inserir_no_org = false
+plantuml_jar_path = ""
+plantuml_limit_size = 8192
+colorido = true
+falhar_se_nao_renderizar = false
+
+[conformidade]
+ativo = true
+gerar_relatorio = true
+
+[qualidade]
+ativo = true
+gerar_relatorio = true
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false

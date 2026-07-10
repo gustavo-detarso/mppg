@@ -1,0 +1,22 @@
+# Modelo genérico de dados estruturados para o perfil
+# relatorio_prisma_busca_orientada_fgv.
+#
+# Este arquivo não contém um tema predefinido. Ao escolher “copiar e editar o
+# modelo padrão na pasta do projeto”, o assistente cria uma cópia chamada
+# dados_pesquisa_prisma.toml e solicita o preenchimento dos campos relevantes.
+# O arquivo original dentro de app_bundle/misc/fgv nunca é alterado.
+#
+# Hipótese/tese é opcional e não deve ser convertida automaticamente em
+# critério de inclusão, exclusão ou string de busca. Para pedir sugestões de
+# palavras-chave à IA, mantenha palavras_chave = [] e selecione essa opção no
+# assistente.
+
+[pesquisa]
+tema = ""
+recorte = ""
+objetivo = ""
+pergunta_pesquisa = ""
+hipotese = ""
+palavras_chave = []
+idiomas = ["português", "inglês", "espanhol"]
+tipo_estudo = "revisão estruturada da literatura"

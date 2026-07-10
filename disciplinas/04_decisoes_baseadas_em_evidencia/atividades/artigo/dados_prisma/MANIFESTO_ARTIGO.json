@@ -1,0 +1,115 @@
+{
+  "gerado_em": "2026-07-09T12:14:19",
+  "out_dir_origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf",
+  "artigo_dir": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo",
+  "destino": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma",
+  "prefixo": "relatorio_prisma_prisma_fluxo_pmf",
+  "arquivos": [
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.busca_prisma_log.json",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.busca_prisma_log.json",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.busca_prisma_log.json",
+      "tamanho_bytes": 78267,
+      "mtime_iso": "2026-07-09T02:53:29",
+      "sha256": "12978c0effa15020ad598e52013d7cce21cf7fe578a1b2a5b7b585ab5926a22f"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_log.json",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_log.json",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_log.json",
+      "tamanho_bytes": 580,
+      "mtime_iso": "2026-07-09T11:28:13",
+      "sha256": "879803bd02bf17a11bdc8a1bdd9f5911e7cfb87449fdcfc6d35ab07cd624ada6"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_referencias.xlsx",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_referencias.xlsx",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_referencias.xlsx",
+      "tamanho_bytes": 294758,
+      "mtime_iso": "2026-07-09T11:28:13",
+      "sha256": "43608e5aa7bf0f2d279e4bf6b3b2dd0772b2d4a6ab69b4a1a367b5e38567775f"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_resumo.txt",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_resumo.txt",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_resumo.txt",
+      "tamanho_bytes": 986,
+      "mtime_iso": "2026-07-09T11:28:13",
+      "sha256": "3271a96b561f2e65fadf6ca7038e6903594ce6c123be61472e9bd660bbd7996c"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma.png",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma.png",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma.png",
+      "tamanho_bytes": 174480,
+      "mtime_iso": "2026-07-09T11:28:45",
+      "sha256": "14fd200d31c9cfa007289eaeff81cb8bdf9b38d4f73a9c50b9ca7fc72447689e"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma_contagens.json",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma_contagens.json",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma_contagens.json",
+      "tamanho_bytes": 320,
+      "mtime_iso": "2026-07-09T11:28:45",
+      "sha256": "35a8a8b575073936db27722f24fe83ec814e6a42fc5ca00a78d0e48d7fe14e96"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.bib",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.bib",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.bib",
+      "tamanho_bytes": 19060,
+      "mtime_iso": "2026-07-09T12:14:19",
+      "sha256": "0fb15e35cccd099bd62109848b00b80dccb2c7d751cc82b216e0e56ecee009dc"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas_seminario.csv",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas_seminario.csv",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas_seminario.csv",
+      "tamanho_bytes": 71478,
+      "mtime_iso": "2026-07-09T11:28:13",
+      "sha256": "dd406d4187835a0744aaa0557009f0f59d4874798ffecaab687d9b64d7467c7f"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_final.pdf",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_final.pdf",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_final.pdf",
+      "tamanho_bytes": 203425,
+      "mtime_iso": "2026-07-09T11:28:56",
+      "sha256": "1342ab9c2c44691e4f7323700bdc48712ffc6fc21a9560b792d13c621a9ea451"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar.pdf",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar.pdf",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar.pdf",
+      "tamanho_bytes": 165975,
+      "mtime_iso": "2026-07-09T02:54:00",
+      "sha256": "9d0e4795db3b1fa2c125c850f797eddae308fffe0014ced78c930a2742beae09"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv",
+      "tamanho_bytes": 761608,
+      "mtime_iso": "2026-07-09T11:28:13",
+      "sha256": "1918895ed24e5e36a83d96d4076d00969ec6a6d2fbc2a07cfdaa30187860fd47"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.csv",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.csv",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.csv",
+      "tamanho_bytes": 418994,
+      "mtime_iso": "2026-07-09T02:53:29",
+      "sha256": "36e6aeab3e90b4132bbd482deecb7ac6fb4f318da82281d303ac41dbeb6724a7"
+    },
+    {
+      "arquivo": "relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.xlsx",
+      "caminho": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.xlsx",
+      "origem": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.xlsx",
+      "tamanho_bytes": 174740,
+      "mtime_iso": "2026-07-09T02:53:29",
+      "sha256": "2fc61a1ba13582e8ce1c5a9a34978a3a3602241333e17a8ea3205ad5e65fba75"
+    }
+  ],
+  "opcionais_ausentes": [],
+  "toml_artigo_gerado": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml"
+}

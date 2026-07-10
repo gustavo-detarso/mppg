@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "decision_final": "humana_obrigatoria",
+  "records_available": 1437,
+  "records_evaluated": 800,
+  "records_not_evaluated_limit": 637,
+  "batches_planned": 40,
+  "batches_completed": 40,
+  "batches_failed": 0,
+  "errors": [],
+  "model": "gpt-5.4",
+  "recommendation_counts": {
+    "INCERTO_METADADOS": 736,
+    "PROVAVEL_EXCLUSAO": 574,
+    "PRIORIDADE_ALTA": 31,
+    "REVISAR_HUMANO": 96
+  }
+}

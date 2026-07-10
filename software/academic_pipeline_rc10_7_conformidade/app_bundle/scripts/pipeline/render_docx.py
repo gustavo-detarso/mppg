@@ -145,6 +145,28 @@ def setup_styles(doc: Any) -> None:
             pass
 
 
+def _paper_abstract_sidecar_exists(output_path: Path, cfg: dict[str, Any] | None) -> bool:
+    """Informa se o resumo auditável será inserido pelo pipeline após o DOCX.
+
+    Quando existe sidecar, o ``document_model.abstract`` não deve ser emitido
+    aqui: isso evitaria duplicação entre o resumo original do modelo e o pacote
+    final multilíngue gerado a partir do document.json validado.
+    """
+    cfg = cfg or {}
+    project = cfg.get("projeto", {}) if isinstance(cfg.get("projeto"), dict) else {}
+    section = cfg.get("resumos_paper", {}) if isinstance(cfg.get("resumos_paper"), dict) else {}
+    if str(project.get("preset") or "").strip() != "paper_local_fgv":
+        return False
+    if not bool(section.get("ativo", False)) or not bool(section.get("gerar_resumo_principal", True)):
+        return False
+    paths = cfg.get("paths", {}) if isinstance(cfg.get("paths"), dict) else {}
+    prefix = str(paths.get("document_prefix") or "").strip() or output_path.stem
+    for directory in [output_path.parent, *output_path.parents][:5]:
+        if (directory / f"{prefix}.resumos_paper.json").is_file():
+            return True
+    return False
+
+
 def add_paragraph_from_content(doc: Any, content: list[Any], refs: dict[str, dict[str, str]]) -> None:
     p = doc.add_paragraph()
     p.paragraph_format.first_line_indent = Cm(1.25)
@@ -179,7 +201,7 @@ def _md_inlines(content: list[Any]) -> str:
     return "".join(parts)
 
 
-def render_markdown_for_pandoc(doc_model: AcademicDocument, out_dir: Path) -> str:
+def render_markdown_for_pandoc(doc_model: AcademicDocument, out_dir: Path, cfg: dict[str, Any] | None = None) -> str:
     meta = doc_model.metadata
     lines = [
         f"% {meta.titulo}",
@@ -193,7 +215,7 @@ def render_markdown_for_pandoc(doc_model: AcademicDocument, out_dir: Path) -> st
         meta.disciplina,
         "",
     ]
-    if doc_model.abstract and doc_model.abstract.texto:
+    if doc_model.abstract and doc_model.abstract.texto and not _paper_abstract_sidecar_exists(out_dir / "documento.docx", cfg):
         lines += ["# RESUMO", "", doc_model.abstract.texto, ""]
         if doc_model.abstract.palavras_chave:
             lines += ["Palavras-chave: " + "; ".join(doc_model.abstract.palavras_chave) + ".", ""]
@@ -234,7 +256,7 @@ def _render_docx_with_pandoc(doc_model: AcademicDocument, output_path: Path, bib
         csl = config_dir / csl
     with tempfile.TemporaryDirectory() as tmp:
         md_path = Path(tmp) / "documento.md"
-        md_path.write_text(render_markdown_for_pandoc(doc_model, output_path.parent), encoding="utf-8")
+        md_path.write_text(render_markdown_for_pandoc(doc_model, output_path.parent, cfg=cfg), encoding="utf-8")
         cmd = [pandoc, str(md_path), "-o", str(output_path), "--citeproc", "--bibliography", str(bib_path), "--resource-path", str(output_path.parent)]
         if csl.exists():
             cmd += ["--csl", str(csl)]
@@ -292,7 +314,7 @@ def render_docx(doc_model: AcademicDocument, output_path: Path, bib_path: Path |
                 r.font.size = Pt(14)
         doc.add_page_break()
 
-    if doc_model.abstract and doc_model.abstract.texto:
+    if doc_model.abstract and doc_model.abstract.texto and not _paper_abstract_sidecar_exists(output_path, cfg):
         doc.add_heading(doc_model.abstract.titulo.upper(), level=1)
         p = doc.add_paragraph(doc_model.abstract.texto)
         p.paragraph_format.line_spacing = 1.5

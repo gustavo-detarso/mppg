@@ -1,0 +1,8 @@
+Academic Pipeline TUI — registro operacional
+Data: 2026-06-28T20:33:22
+Comando: /home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/novo_documento/relatorio_prisma_busca_orientada_config.toml --check-config
+Código de saída: 0
+
+academic_pipeline rc10.7.44-tui-direct-click-and-path-browser — check-config
+Status: OK
+Nenhum problema encontrado.

@@ -1,4 +1,0 @@
-Diretrizes para relatório de pesquisa/PRISMA:
-- Registrar estratégia de busca, bases, critérios, triagem, elegibilidade, incluídos e excluídos de forma auditável.
-- Não inflar aderência quando houver escassez de literatura; registrar limitação em aviso metodológico.
-- Distinguir relatório metodológico de documento acadêmico argumentativo.

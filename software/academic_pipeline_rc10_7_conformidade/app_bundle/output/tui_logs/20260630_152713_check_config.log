@@ -1,0 +1,8 @@
+Academic Pipeline TUI — registro operacional
+Data: 2026-06-30T15:27:13
+Comando: /home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/prisma_fluxo_pmf.toml --check-config
+Código de saída: 0
+
+academic_pipeline rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit — check-config
+Status: OK
+Nenhum problema encontrado.

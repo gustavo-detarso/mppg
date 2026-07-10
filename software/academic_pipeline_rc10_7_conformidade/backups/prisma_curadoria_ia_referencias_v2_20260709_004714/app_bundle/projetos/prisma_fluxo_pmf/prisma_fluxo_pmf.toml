@@ -1,0 +1,419 @@
+# Gerado por academic_pipeline_toml_generator_interativo.py
+# Preset: relatorio_prisma_busca_orientada_fgv — Relatório PRISMA com busca orientada FGV
+# Descrição: Executa busca bibliográfica externa rastreável nas fontes configuráveis, deduplica registros, gera triagem humana e produz relatório PRISMA preliminar/final em ORG e PDF no layout institucional escolhido. O fluxo começa pela descoberta externa e não exige corpus local.
+
+[projeto]
+nome = "prisma_fluxo_pmf"
+descricao = "Executa busca bibliográfica externa rastreável nas fontes configuráveis, deduplica registros, gera triagem humana e produz relatório PRISMA preliminar/final em ORG e PDF no layout institucional escolhido. O fluxo começa pela descoberta externa e não exige corpus local."
+preset = "relatorio_prisma_busca_orientada_fgv"
+
+[instituicao]
+perfil = "fgv"
+
+[openai]
+model = "gpt-5.4"
+
+[pipeline]
+modo_entrada = "busca_externa"
+executar_pesquisa = true
+executar_documento = false
+executar_bundle = false
+pesquisa_dir_existente = ""
+
+[paths]
+# A partir da rc10.7.20, todos os diretórios de saída/cache/trabalho ficam aqui.
+document_output_dir = "output"
+research_output_dir = "output_pesquisa"
+work_dir = ".academic_pipeline/work"
+cache_dir = ".academic_pipeline/cache"
+document_prefix = "prisma_fluxo_pmf"
+research_prefix = "relatorio_prisma_prisma_fluxo_pmf"
+create_document_subdir = true
+create_research_subdir = true
+create_work_subdir = true
+create_cache_subdir = true
+
+[orientacoes]
+paths = []
+inline = ""
+
+[documentos_locais]
+ativos = false
+modo_entrada = "documentos_locais"
+input_zip = ""
+input_dir = ""
+tipos = ["pdf", "docx", "txt", "md", "org"]
+recursive = true
+limpar_extracao_anterior = true
+copiar_para_fulltext_cache = true
+limpar_cache_anterior = true
+auto_detect_bib = true
+gerar_bib_revisado_ia = true
+enriquecer_metadados_buscadores = false
+fontes_metadados = []
+min_score_match_metadados = 0.82
+extrair_doi_dos_pdfs = false
+doi_manifest_path = ""
+preferir_doi_manual = true
+buscar_metadados_por_doi = false
+incluir_notas_metadados_inferidos = false
+deduplicar_bib = true
+deduplicar_referencias = true
+autor_padrao = ""
+ano_padrao = "s.d."
+
+[pesquisa]
+tema = "Redesenho baseado em evidências do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal"
+recorte = "Brasil; organização do fluxo entre análise documental, teleperícia, perícia presencial, capacidade ordinária e mutirões. O ATESTMED é tomado como referência institucional de análise documental, sem restringir a busca à experiência brasileira."
+objetivo = "Analisar evidências e alternativas para redesenhar o tratamento de requerimentos por incapacidade, combinando análise documental, avaliação remota, perícia presencial, capacidade territorial e critérios auditáveis de alocação."
+pergunta_pesquisa = "Como estruturar um fluxo de alocação de requerimentos entre análise documental, teleperícia e perícia presencial que reduza o tempo de espera sem comprometer a qualidade decisória, a equidade territorial e o controle?"
+hipotese = ""
+palavras_chave = [
+  "benefícios por incapacidade",
+  "disability benefits assessment",
+  "análise documental de incapacidade",
+  "documentary review disability claims",
+  "teleperícia",
+  "telemedicine disability evaluation",
+  "perícia médica presencial",
+  "triagem de requerimentos por incapacidade",
+  "work capacity assessment",
+  "gestão de filas em saúde",
+  "equidade territorial no acesso",
+  "auditabilidade de decisões administrativas"
+]
+gerar_palavras_chave_ia = false
+idiomas = [
+  "português",
+  "inglês",
+  "espanhol"
+]
+tipo_estudo = "revisão estruturada de evidências para análise e redesenho de política pública"
+fonte_dados_pesquisa = "arquivo_estruturado"
+dados_pesquisa_path = "../../../../../disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_pesquisa_atestmed_prisma_completo.toml"
+fonte_palavras_chave = "ia"
+palavras_chave_path = ""
+fonte_hipotese = "nao_informada"
+hipotese_path = ""
+periodo = ""
+bases = [
+  "crossref",
+  "openalex",
+  "semantic_scholar",
+  "scopus",
+  "wos",
+  "pubmed",
+  "europe_pmc",
+  "scielo",
+  "core"
+]
+
+[busca_prisma]
+ativo = true
+modo = "busca_externa"
+bases = [
+  "crossref",
+  "openalex",
+  "semantic_scholar",
+  "scopus",
+  "wos",
+  "pubmed",
+  "europe_pmc",
+  "scielo",
+  "core"
+]
+estrategia = "blocos_tematicos"
+consulta_geral = ""
+limite_por_base = 20
+limite_scopus_por_consulta = 10
+limite_triagem_inicial = 250
+pre_triagem_ia = true
+pre_triagem_ia_modelo = ""
+pre_triagem_ia_lote = 20
+pre_triagem_ia_max_registros = 800
+pre_triagem_ia_reserva_incertos = 40
+pre_triagem_ia_min_confianca = 55
+pre_triagem_ia_max_chars_resumo = 1200
+# A IA só prioriza a leitura; inclusão/exclusão final continua obrigatoriamente humana.
+meta_estudos_incluidos = 15
+ano_inicio = ""
+ano_fim = ""
+email_contato = ""
+# Chaves e e-mails específicos ficam no .env da raiz do software; nunca são gravados neste TOML.
+enriquecer_unpaywall = true
+limite_unpaywall = 250
+criterios_inclusao = [
+  "Estudos que analisem benefícios por incapacidade, afastamento por doença, seguro por incapacidade, certificação médica ou avaliação médico-pericial.",
+  "Estudos que abordem triagem documental, elegibilidade, análise de documentos médicos, validação de atestados ou processos de decisão sobre incapacidade.",
+  "Estudos que examinem teleperícia, telemedicina aplicada à avaliação, avaliação médica remota, videoperícia ou modalidades híbridas de avaliação.",
+  "Estudos que analisem capacidade operacional, filas, tempo de espera, produtividade, priorização de casos, alocação de profissionais ou gestão de demanda em serviços periciais ou sistemas de benefícios.",
+  "Estudos que discutam acesso territorial, equidade, barreiras geográficas, inclusão de populações remotas ou desigualdades de acesso à avaliação médico-pericial.",
+  "Estudos que tratem de qualidade decisória, confiabilidade, auditoria, controle, integridade, prevenção de fraude, revisão de decisões ou riscos associados à avaliação remota ou documental.",
+  "Estudos empíricos, avaliações de política pública, estudos de caso institucionais, revisões sistemáticas, revisões de escopo ou relatórios técnicos com evidência útil para a pergunta de pesquisa.",
+  "Publicações em português, inglês ou espanhol."
+]
+criterios_exclusao = [
+  "Telemedicina exclusivamente assistencial, sem relação substantiva com avaliação de incapacidade, certificação, elegibilidade, triagem ou gestão de fluxos.",
+  "Estudos clínicos que não contribuam para compreender processos de avaliação médico-pericial, decisão administrativa, capacidade, acesso, qualidade ou controle.",
+  "Textos sem relação substantiva com a pergunta de pesquisa ou com ao menos um eixo da matriz analítica.",
+  "Editorial, comentário, notícia, apresentação, resumo de congresso ou opinião sem análise, dados, revisão ou contribuição institucional verificável.",
+  "Duplicidades entre bases ou consultas.",
+  "Registros sem título, resumo ou metadados suficientes para triagem humana.",
+  "Publicações em idioma diferente de português, inglês ou espanhol quando não houver informação suficiente para avaliação confiável."
+]
+fonte_estrategia_busca = "mesmo_arquivo_estruturado"
+estrategia_busca_path = "../../../../../disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_pesquisa_atestmed_prisma_completo.toml"
+fonte_criterios = "mesmo_arquivo_estruturado"
+criterios_path = "../../../../../disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_pesquisa_atestmed_prisma_completo.toml"
+corpus_local_opcional = ""
+decisao_automatica_inclusao = false
+baixar_texto_completo_automaticamente = false
+
+[[busca_prisma.estrategias]]
+id = "beneficios_incapacidade_avaliacao_medico_pericial"
+rotulo = "Benefícios por incapacidade e avaliação médico-pericial"
+consultas = [
+  "disability benefits AND medical assessment",
+  "incapacity benefit AND medical evaluation",
+  "work disability AND medical certification"
+]
+
+[[busca_prisma.estrategias]]
+id = "analise_documental_elegibilidade"
+rotulo = "Análise documental e elegibilidade"
+consultas = [
+  "documentary assessment AND disability",
+  "medical certificate AND disability benefits",
+  "medical documentation AND work incapacity"
+]
+
+[[busca_prisma.estrategias]]
+id = "telepericia_avaliacao_remota"
+rotulo = "Teleperícia e avaliação remota"
+consultas = [
+  "remote medical assessment AND disability",
+  "telemedicine AND disability assessment",
+  "telehealth AND medical certification"
+]
+
+[[busca_prisma.estrategias]]
+id = "capacidade_filas_alocacao"
+rotulo = "Capacidade, filas e alocação de serviços"
+consultas = [
+  "disability benefits AND waiting time",
+  "medical assessment AND service capacity",
+  "case allocation AND disability services"
+]
+
+[[busca_prisma.estrategias]]
+id = "equidade_qualidade_controle"
+rotulo = "Equidade territorial, qualidade e controle"
+consultas = [
+  "disability assessment AND equity of access",
+  "remote assessment AND quality assurance",
+  "medical certification AND audit"
+]
+
+[resumo_artigos]
+ativo = false
+geracao_em_etapas = false
+# Quando true, o pipeline gera o document.json em chamadas separadas:
+# análise do artigo 1/N, análise do artigo 2/N, comparação e síntese.
+# Isso exibe progresso no terminal e salva checkpoints .checkpoint_*.json no output.
+modo = "analitico_comparativo"
+usar_apenas_corpus_local = false
+incluir_introducao = false
+incluir_resumos_individuais = false
+incluir_comparacao = false
+incluir_sintese_analitica = false
+incluir_consideracoes_finais = false
+incluir_referencias = true
+incluir_mapa_mental = false
+uma_secao_por_artigo = false
+comparar_convergencias = false
+comparar_divergencias = false
+apontar_limites = false
+nivel_detalhamento = "medio"
+profundidade_analitica = "medio"
+
+[atividade]
+curso = "Mestrado Acadêmico em Políticas Públicas e Governo"
+turma = "2026.1"
+polo = "Brasília"
+disciplina = "Decisões Baseadas em Evidência"
+professor = "Marcos Aurélio Pereira Valadão"
+aluno = "Gustavo M. Mendes de Tarso"
+data = "2026"
+titulo_trabalho = "Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade"
+gerar_dados_atividade_ia = false
+fonte_dados_atividade = ""
+
+[documento]
+tipo_documento = "paper"
+tipo_conteudo = "relatorio_prisma"
+genero_academico = "relatorio_prisma"
+layout = "paper_fgv"
+classe_latex = "fgv-paper"
+titulo_trabalho = "Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade"
+autor = "Gustavo M. Mendes de Tarso"
+inferir_campos_vazios_ia = true
+institution_name = "fgv"
+program_name = ""
+course_name = "Mestrado Acadêmico em Políticas Públicas e Governo"
+discipline_name = "Decisões Baseadas em Evidência"
+professor_name = "Marcos Aurélio Pereira Valadão"
+city_name = "Brasília"
+ano = "2026"
+data = "2026"
+papertype = "Paper acadêmico"
+perfil_redacao = "academico_analitico"
+covernote = "Trabalho acadêmico elaborado para a disciplina."
+estilo_citacao = "abnt"
+exportar_org = true
+exportar_pdf = true
+exportar_docx = false
+gerar_documento_json = true
+modo_renderizacao = "document_model"
+usar_citacoes_latex_diretas = true
+validar_org_final = true
+falhar_se_org_tiver_chave_crua = true
+falhar_se_org_tiver_empty_citation = true
+falhar_se_org_tiver_mencao_tecnica = true
+sistema_citacao = "autor-data"
+referencias_formais = true
+[idiomas_saida]
+principal = "pt-BR"
+gerar_traducao_ia = false
+idiomas_adicionais = []
+preservar_referencias_originais = true
+max_chars_por_lote = 12000
+# A tradução atua no document.json canônico; não recria análise, corpus ou bibliografia.
+
+[resumos_paper]
+ativo = false
+principal = "pt-BR"
+gerar_resumo_principal = false
+gerar_resumo_adicional = false
+idiomas_adicionais = []
+gerar_palavras_chave_adicionais = true
+max_palavras = 250
+# O resumo é sintetizado do document.json validado e inserido no ORG, PDF e DOCX.
+
+[bibliografia]
+# O .bib é neutro. O estilo visual é aplicado na renderização.
+estilo_citacao = "abnt"
+latex_style = "abnt"
+latex_options = "backend=biber,style=abnt,sorting=nty,giveninits=true"
+docx_csl = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+buscar_metadados_por_doi = false
+enriquecer_metadados_buscadores = false
+sistema_citacao = "autor-data"
+backend = "biber"
+ativo = true
+[relatorio_pesquisa]
+ativo = true
+tipo = "prisma"
+titulo = "Redesenho do fluxo de análise dos benefícios por incapacidade na Perícia Médica Federal: revisão de evidências sobre triagem documental, teleperícia e alocação de capacidade"
+exportar_json = true
+exportar_org = true
+exportar_pdf = true
+exportar_docx = false
+exportar_xlsx = true
+exportar_fluxograma = false
+validar = true
+falhar_se_invalido = false
+prisma_json_path = ""
+pesquisa_dir_existente = ""
+criterios_inclusao = [
+  "Estudos que analisem benefícios por incapacidade, afastamento por doença, seguro por incapacidade, certificação médica ou avaliação médico-pericial.",
+  "Estudos que abordem triagem documental, elegibilidade, análise de documentos médicos, validação de atestados ou processos de decisão sobre incapacidade.",
+  "Estudos que examinem teleperícia, telemedicina aplicada à avaliação, avaliação médica remota, videoperícia ou modalidades híbridas de avaliação.",
+  "Estudos que analisem capacidade operacional, filas, tempo de espera, produtividade, priorização de casos, alocação de profissionais ou gestão de demanda em serviços periciais ou sistemas de benefícios.",
+  "Estudos que discutam acesso territorial, equidade, barreiras geográficas, inclusão de populações remotas ou desigualdades de acesso à avaliação médico-pericial.",
+  "Estudos que tratem de qualidade decisória, confiabilidade, auditoria, controle, integridade, prevenção de fraude, revisão de decisões ou riscos associados à avaliação remota ou documental.",
+  "Estudos empíricos, avaliações de política pública, estudos de caso institucionais, revisões sistemáticas, revisões de escopo ou relatórios técnicos com evidência útil para a pergunta de pesquisa.",
+  "Publicações em português, inglês ou espanhol."
+]
+criterios_exclusao = [
+  "Telemedicina exclusivamente assistencial, sem relação substantiva com avaliação de incapacidade, certificação, elegibilidade, triagem ou gestão de fluxos.",
+  "Estudos clínicos que não contribuam para compreender processos de avaliação médico-pericial, decisão administrativa, capacidade, acesso, qualidade ou controle.",
+  "Textos sem relação substantiva com a pergunta de pesquisa ou com ao menos um eixo da matriz analítica.",
+  "Editorial, comentário, notícia, apresentação, resumo de congresso ou opinião sem análise, dados, revisão ou contribuição institucional verificável.",
+  "Duplicidades entre bases ou consultas.",
+  "Registros sem título, resumo ou metadados suficientes para triagem humana.",
+  "Publicações em idioma diferente de português, inglês ou espanhol quando não houver informação suficiente para avaliação confiável."
+]
+
+[docx]
+ativo = false
+reference_docx = "../../institutions/fgv/docx/reference_fgv.docx"
+usar_pandoc = false
+csl_path = "../../templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+falhar_se_pandoc_falhar = false
+incluir_capa = true
+incluir_referencias = true
+incluir_mapa_mental = false
+
+[latex]
+pdf_engine = "lualatex"
+org_latex_class_init = "../../misc/academic-writing.el"
+latex_extra_path = "../../misc/fgv"
+fgv_logo_path = "../../misc/fgv.png"
+
+[prompts]
+ativos = true
+global_paths = [
+  "../../prompts/global/orientacao_geral_execucao.txt"
+]
+institution_paths = ["profile://prompts/fgv_geral.txt"]
+research_paths = [
+  "../../prompts/research/triagem_prompt.txt",
+  "../../prompts/research/diretivas_extras.txt"
+]
+paper_paths = []
+atividade_paths = []
+resumo_artigos_paths = []
+dissertacao_paths = []
+prisma_paths = [
+  "../../prompts/prisma/relatorio_prisma.txt"
+]
+document_paths = []
+
+[mapa_mental]
+gerar = false
+ativo = false
+posicao = "apos_referencias"
+titulo = "Mapa mental dos textos analisados"
+arquivo = "mapa_mental"
+formato = "png"
+renderizar = false
+inserir_no_org = false
+plantuml_jar_path = ""
+plantuml_limit_size = 8192
+colorido = true
+sobrescrever_cores_existentes = true
+cores_niveis = ["#D9EAF7", "#DFF2E1", "#FFF2CC", "#F8D7DA", "#F8D7DA", "#F8D7DA", "#F8D7DA"]
+falhar_se_nao_renderizar = false
+
+[conformidade]
+ativo = false
+gerar_relatorio = true
+
+[qualidade]
+ativo = false
+gerar_relatorio = true
+
+[controle]
+nao_interativo = true
+dry_run = false
+mock_run = false
+
+[prisma_curadoria_ia]
+ativo = false
+usar_ia = false
+max_incluir = 27
+top_n_candidatos = 90
+batch_size = 6
+modelo = "gpt-4.1-mini"
+tema = "Seminário ATESTMED/Perícia Médica Federal sobre redesenho do fluxo de análise dos benefícios por incapacidade, com foco em avaliação médico-pericial, análise documental, teleperícia, capacidade/fila, qualidade, integridade e equidade."
+
