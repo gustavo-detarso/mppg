@@ -1,15 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'artigo_final_atestmed_abnt.blg'
-[64] biber:342> INFO - === qui jul  9, 2026, 23:16:58
-[77] Biber.pm:421> INFO - Reading 'artigo_final_atestmed_abnt.bcf'
-[187] Biber.pm:1002> INFO - Found 21 citekeys in bib section 0
-[198] Biber.pm:4487> INFO - Processing section 0
-[204] Biber.pm:4678> INFO - Looking for bibtex file 'artigo_final_atestmed_abnt.bib' for section 0
-[205] bibtex.pm:1713> INFO - LaTeX decoding ...
-[215] bibtex.pm:1519> INFO - Found BibTeX data source 'artigo_final_atestmed_abnt.bib'
-[361] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[362] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[362] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
-[362] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
-[381] bbl.pm:676> INFO - Writing 'artigo_final_atestmed_abnt.bbl' with encoding 'UTF-8'
-[388] bbl.pm:779> INFO - Output to artigo_final_atestmed_abnt.bbl
+[69] biber:342> INFO - === sex jul 10, 2026, 10:26:51
+[84] Biber.pm:421> INFO - Reading 'artigo_final_atestmed_abnt.bcf'
+[199] Biber.pm:1002> INFO - Found 21 citekeys in bib section 0
+[210] Biber.pm:4487> INFO - Processing section 0
+[217] Biber.pm:4678> INFO - Looking for bibtex file 'artigo_final_atestmed_abnt.bib' for section 0
+[218] bibtex.pm:1713> INFO - LaTeX decoding ...
+[227] bibtex.pm:1519> INFO - Found BibTeX data source 'artigo_final_atestmed_abnt.bib'
+[388] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[388] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[388] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
+[388] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[409] bbl.pm:676> INFO - Writing 'artigo_final_atestmed_abnt.bbl' with encoding 'UTF-8'
+[417] bbl.pm:779> INFO - Output to artigo_final_atestmed_abnt.bbl

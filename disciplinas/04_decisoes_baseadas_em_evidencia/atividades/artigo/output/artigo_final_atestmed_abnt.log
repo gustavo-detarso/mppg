@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.27)  9 JUL 2026 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.27)  10 JUL 2026 10:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1458,24 +1458,28 @@ LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 [41]
 
 [42]
+
+[43]
+
+[44]
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
-409.
+419.
  (/home/gustavodetarso/texlive/2025/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 409.
+(Font)              scaled to size 12.0pt on input line 419.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-[43]
+[45]
 
-[44]
+[46]
 
-[45] (./artigo_final_atestmed_abnt.aux)
+[47] (./artigo_final_atestmed_abnt.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1488,9 +1492,9 @@ Package logreq Info: Writing requests to 'artigo_final_atestmed_abnt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28722 strings out of 467748
- 497002 string characters out of 5421749
- 1416700 words of memory out of 5000000
+ 28724 strings out of 467748
+ 497016 string characters out of 5421749
+ 1415701 words of memory out of 5000000
  56786 multiletter control sequences out of 15000+600000
  679951 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1501,10 +1505,10 @@ t1xtt.pfb></home/gustavodetarso/texlive/2025/texmf-dist/fonts/type1/public/newt
 x/ztmb.pfb></home/gustavodetarso/texlive/2025/texmf-dist/fonts/type1/public/new
 tx/ztmr.pfb></home/gustavodetarso/texlive/2025/texmf-dist/fonts/type1/public/ne
 wtx/ztmri.pfb>
-Output written on artigo_final_atestmed_abnt.pdf (46 pages, 303734 bytes).
+Output written on artigo_final_atestmed_abnt.pdf (48 pages, 308050 bytes).
 PDF statistics:
- 926 PDF objects out of 1000 (max. 8388607)
- 859 compressed objects within 9 object streams
- 87 named destinations out of 1000 (max. 500000)
+ 934 PDF objects out of 1000 (max. 8388607)
+ 865 compressed objects within 9 object streams
+ 89 named destinations out of 1000 (max. 500000)
  18065 words of extra memory for PDF output out of 20736 (max. 10000000)
 
