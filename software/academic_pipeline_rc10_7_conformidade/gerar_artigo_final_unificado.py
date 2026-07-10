@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import zipfile
 from datetime import datetime
 from pathlib import Path
 
@@ -384,6 +385,292 @@ def validate_pdf(pdf: Path, quiet: bool = False) -> None:
         print("[OK] Validação textual do PDF sem problemas.")
 
 
+
+def _strip_braces_quotes(value: str) -> str:
+    value = value.strip().rstrip(',').strip()
+    changed = True
+    while changed and len(value) >= 2:
+        changed = False
+        if (value[0] == '{' and value[-1] == '}') or (value[0] == '"' and value[-1] == '"'):
+            value = value[1:-1].strip()
+            changed = True
+    value = value.replace(r"\&", "&")
+    value = value.replace("{", "").replace("}", "")
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
+
+
+def parse_bib_entries_for_docx(bib: Path) -> dict[str, dict[str, str]]:
+    """Extrai metadados suficientes para materializar citações e referências no DOCX."""
+    if not bib.exists():
+        return {}
+    txt = bib.read_text(encoding="utf-8", errors="ignore")
+    entries: dict[str, dict[str, str]] = {}
+    for m in re.finditer(r"@(\w+)\s*\{\s*([^,\s]+)\s*,", txt):
+        key = m.group(2).strip()
+        start = m.end()
+        level = 1
+        i = start
+        while i < len(txt) and level > 0:
+            if txt[i] == "{":
+                level += 1
+            elif txt[i] == "}":
+                level -= 1
+            i += 1
+        body = txt[start:max(start, i - 1)]
+        fields: dict[str, str] = {"ENTRYTYPE": m.group(1), "ID": key}
+        field_pat = re.compile(
+            r"(?is)\b([A-Za-z][A-Za-z0-9_:-]*)\s*=\s*(\{(?:[^{}]|\{[^{}]*\})*\}|\"[^\"]*\")\s*,?"
+        )
+        for fm in field_pat.finditer(body):
+            fields[fm.group(1).lower()] = _strip_braces_quotes(fm.group(2))
+        if "year" not in fields:
+            date = fields.get("date", "")
+            ym = re.search(r"(19|20)\d{2}", date)
+            if ym:
+                fields["year"] = ym.group(0)
+        entries[key] = fields
+    return entries
+
+
+def _split_authors(author_field: str) -> list[str]:
+    author_field = _strip_braces_quotes(author_field or "")
+    if not author_field:
+        return []
+    if " and " in author_field:
+        parts = re.split(r"\s+and\s+", author_field)
+    elif ";" in author_field:
+        parts = author_field.split(";")
+    else:
+        parts = [author_field]
+    return [p.strip() for p in parts if p.strip()]
+
+
+def _author_surname(author: str) -> str:
+    author = _strip_braces_quotes(author)
+    if not author:
+        return ""
+    if "," in author:
+        return author.split(",", 1)[0].strip()
+    tokens = author.split()
+    if len(tokens) == 1:
+        return tokens[0]
+    # Autor institucional ou já abreviado em maiúsculas.
+    if author.upper() == author and len(tokens) <= 4:
+        return author.title()
+    return tokens[-1]
+
+
+def _citation_authors(fields: dict[str, str], textual: bool = False) -> str:
+    authors = [_author_surname(a) for a in _split_authors(fields.get("author", ""))]
+    authors = [a for a in authors if a]
+    if not authors:
+        title = fields.get("title", fields.get("ID", "Fonte"))
+        return title.split(":", 1)[0][:60]
+    if len(authors) == 1:
+        return authors[0]
+    if len(authors) == 2:
+        return f"{authors[0]} e {authors[1]}" if textual else f"{authors[0]}; {authors[1]}"
+    if len(authors) == 3:
+        return f"{authors[0]}, {authors[1]} e {authors[2]}" if textual else f"{authors[0]}; {authors[1]}; {authors[2]}"
+    return f"{authors[0]} et al."
+
+
+def _cite_text_for_key(key: str, entries: dict[str, dict[str, str]], textual: bool = False) -> str:
+    fields = entries.get(key.strip(), {"ID": key.strip()})
+    year = fields.get("year", "s.d.") or "s.d."
+    authors = _citation_authors(fields, textual=textual)
+    return f"{authors} ({year})" if textual else f"{authors}, {year}"
+
+
+def materialize_citations_for_docx(txt: str, entries: dict[str, dict[str, str]]) -> str:
+    def repl_textcite(m: re.Match[str]) -> str:
+        keys = [k.strip() for k in m.group(1).split(",") if k.strip()]
+        return "; ".join(_cite_text_for_key(k, entries, textual=True) for k in keys)
+
+    def repl_parencite(m: re.Match[str]) -> str:
+        keys = [k.strip() for k in m.group(1).split(",") if k.strip()]
+        return "(" + "; ".join(_cite_text_for_key(k, entries, textual=False) for k in keys) + ")"
+
+    txt = re.sub(r"\\textcite\{([^}]+)\}", repl_textcite, txt)
+    txt = re.sub(r"\\parencite\{([^}]+)\}", repl_parencite, txt)
+    txt = re.sub(r"\\cite\{([^}]+)\}", repl_parencite, txt)
+    return txt
+
+
+def _reference_line(fields: dict[str, str]) -> str:
+    authors = fields.get("author", "").replace(" and ", "; ")
+    authors = _strip_braces_quotes(authors)
+    if authors:
+        authors = authors.upper()
+    else:
+        authors = fields.get("ID", "REFERÊNCIA").upper()
+    title = fields.get("title", "Sem título")
+    year = fields.get("year", "s.d.") or "s.d."
+    venue = fields.get("journaltitle") or fields.get("journal") or fields.get("publisher") or fields.get("institution") or ""
+    parts = [f"{authors}. {title}."]
+    if venue:
+        parts.append(f"{venue}, {year}.")
+    else:
+        parts.append(f"{year}.")
+    if fields.get("doi"):
+        parts.append(f"DOI: {fields['doi']}.")
+    if fields.get("url"):
+        parts.append(f"Disponível em: {fields['url']}.")
+    return " ".join(parts)
+
+
+def render_references_for_docx(entries: dict[str, dict[str, str]]) -> str:
+    if not entries:
+        return ""
+    lines = [_reference_line(fields) for _, fields in entries.items()]
+    return "\n\n".join(lines)
+
+
+def make_docx_source_org(org: Path, bib: Path, out: Path, prefix: str) -> Path:
+    entries = parse_bib_entries_for_docx(bib)
+    txt = org.read_text(encoding="utf-8", errors="ignore")
+    txt = generic_text_fixes(txt)
+    txt = materialize_citations_for_docx(txt, entries)
+
+    cleaned_lines: list[str] = []
+    for line in txt.splitlines():
+        if re.match(r"^#\+(LATEX|LATEX_HEADER|LATEX_CLASS|LATEX_CLASS_OPTIONS):", line, flags=re.I):
+            continue
+        if re.match(r"^\\(makemytitle|clearpage|newpage|tableofcontents)\b", line.strip()):
+            continue
+        cleaned_lines.append(line)
+    txt = "\n".join(cleaned_lines)
+
+    refs = render_references_for_docx(entries)
+    txt = re.sub(r"(?m)^\\nocite\{\*\}\s*$", "", txt)
+    if refs:
+        txt, n = re.subn(r"(?m)^\\printbibliography(?:\[[^\]]*\])?\s*$", refs, txt, count=1)
+        if n == 0 and "* Referências" not in txt:
+            txt = txt.rstrip() + "\n\n* Referências\n" + refs + "\n"
+    else:
+        txt = re.sub(r"(?m)^\\printbibliography(?:\[[^\]]*\])?\s*$", "", txt)
+
+    txt = txt.replace(r"\%", "%").replace(r"\&", "&")
+    txt = re.sub(r"\\[a-zA-Z]+(?:\[[^\]]*\])?(?:\{[^}]*\})?", "", txt)
+
+    tmp = out / f"{prefix}.docx_source.org"
+    tmp.write_text(txt.rstrip() + "\n", encoding="utf-8")
+    return tmp
+
+
+def ensure_reference_docx(reference_docx: Path, quiet: bool = False) -> Path:
+    if reference_docx.exists():
+        return reference_docx
+    try:
+        from docx import Document
+        from docx.shared import Cm, Pt
+        from docx.enum.text import WD_ALIGN_PARAGRAPH
+        from docx.oxml import OxmlElement
+        from docx.oxml.ns import qn
+    except Exception as exc:
+        raise SystemExit(
+            "ERRO: python-docx não está disponível para criar o reference DOCX.\n"
+            "Instale no ambiente do projeto com: pipenv install python-docx\n"
+            f"Detalhe: {exc}"
+        )
+
+    def set_style_font(style, name: str = "Times New Roman", size_pt: int = 12, bold: bool | None = None) -> None:
+        style.font.name = name
+        style.font.size = Pt(size_pt)
+        if bold is not None:
+            style.font.bold = bold
+        rpr = style._element.get_or_add_rPr()
+        rfonts = rpr.rFonts
+        if rfonts is None:
+            rfonts = OxmlElement("w:rFonts")
+            rpr.append(rfonts)
+        for attr in ["w:ascii", "w:hAnsi", "w:cs", "w:eastAsia"]:
+            rfonts.set(qn(attr), name)
+
+    reference_docx.parent.mkdir(parents=True, exist_ok=True)
+    doc = Document()
+    section = doc.sections[0]
+    section.page_width = Cm(21.0)
+    section.page_height = Cm(29.7)
+    section.top_margin = Cm(3.0)
+    section.bottom_margin = Cm(2.0)
+    section.left_margin = Cm(3.0)
+    section.right_margin = Cm(2.0)
+
+    styles = doc.styles
+    normal = styles["Normal"]
+    set_style_font(normal, size_pt=12)
+    normal.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    normal.paragraph_format.line_spacing = 1.5
+    normal.paragraph_format.space_before = Pt(0)
+    normal.paragraph_format.space_after = Pt(0)
+    normal.paragraph_format.first_line_indent = Cm(1.25)
+
+    for name, size, bold, before, after in [
+        ("Title", 14, True, 0, 12),
+        ("Heading 1", 12, True, 12, 6),
+        ("Heading 2", 12, True, 12, 6),
+        ("Heading 3", 12, True, 12, 6),
+    ]:
+        if name in styles:
+            st = styles[name]
+            set_style_font(st, size_pt=size, bold=bold)
+            st.paragraph_format.line_spacing = 1.5
+            st.paragraph_format.space_before = Pt(before)
+            st.paragraph_format.space_after = Pt(after)
+            if name.startswith("Heading"):
+                st.paragraph_format.first_line_indent = Cm(0)
+
+    for name in ["Body Text", "Body Text 2", "Body Text 3"]:
+        if name in styles:
+            st = styles[name]
+            set_style_font(st, size_pt=12)
+            st.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+            st.paragraph_format.line_spacing = 1.5
+            st.paragraph_format.space_before = Pt(0)
+            st.paragraph_format.space_after = Pt(0)
+            st.paragraph_format.first_line_indent = Cm(1.25)
+
+    if "Bibliography" in styles:
+        st = styles["Bibliography"]
+        set_style_font(st, size_pt=12)
+        st.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        st.paragraph_format.line_spacing = 1.0
+        st.paragraph_format.space_before = Pt(0)
+        st.paragraph_format.space_after = Pt(6)
+        st.paragraph_format.first_line_indent = Cm(0)
+
+    doc.add_paragraph("Modelo ABNT/FGV para exportação DOCX.")
+    doc.save(reference_docx)
+    if not quiet:
+        print(f"[OK] reference DOCX criado: {reference_docx}")
+    return reference_docx
+
+
+def validate_docx(docx_path: Path) -> None:
+    if not docx_path.exists() or docx_path.stat().st_size < 1000:
+        raise SystemExit(f"ERRO: DOCX não foi gerado corretamente: {docx_path}")
+    try:
+        with zipfile.ZipFile(docx_path) as zf:
+            names = set(zf.namelist())
+            if "word/document.xml" not in names:
+                raise SystemExit(f"ERRO: DOCX inválido, word/document.xml ausente: {docx_path}")
+    except zipfile.BadZipFile:
+        raise SystemExit(f"ERRO: arquivo DOCX inválido: {docx_path}")
+
+
+def emit_docx_stage(art: Path, prefix: str, project_root: Path, reference_docx: Path | None = None, quiet: bool = False) -> Path:
+    """Gera DOCX canônico por python-docx, usando ORG/document.json/BIB finais.
+
+    Versão v11: remove resíduos de blocos LaTeX/Org, extrai Resumo/Abstract
+    dos blocos exportados e prioriza os metadados de capa do ORG final.
+    O argumento reference_docx é mantido apenas por compatibilidade com a CLI v8/v9.
+    """
+    from app_bundle.scripts.pipeline.render_docx_canonico import render_docx_for_article
+
+    return render_docx_for_article(art=art, prefix=prefix, cfg=None, output=None, quiet=quiet)
+
 def prepare_fulltext_stage(art: Path, cfg: Path, target_n: int, min_palavras: int, chars_por_pdf: int, quiet: bool = False) -> None:
     if not quiet:
         print("[ETAPA] Preparando corpus full text...")
@@ -439,6 +726,9 @@ def main() -> int:
     ap.add_argument("--skip-prepare", action="store_true")
     ap.add_argument("--skip-generate", action="store_true")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--emit-docx", action="store_true", help="Também gera DOCX a partir do ORG final, com reference DOCX ABNT/FGV.")
+    ap.add_argument("--docx-only", action="store_true", help="Gera somente o DOCX a partir do ORG/BIB existentes ou recém-gerados, sem recompilar PDF.")
+    ap.add_argument("--reference-docx", default=None, help="Modelo DOCX de referência. Se omitido, cria/usa app_bundle/templates/docx/reference_abnt_fgv.docx.")
     args = ap.parse_args()
 
     project_root = Path(__file__).resolve().parent
@@ -464,8 +754,20 @@ def main() -> int:
     if not args.skip_generate:
         generate_article_stage(art, cfg, quiet=args.quiet)
 
+    reference_docx = Path(args.reference_docx).resolve() if args.reference_docx else None
+
+    if args.docx_only:
+        docx = emit_docx_stage(art, prefix, project_root=project_root, reference_docx=reference_docx, quiet=args.quiet)
+        print(f"[OK] DOCX final: {docx}")
+        return 0
+
     pdf = final_fix_stage(art, prefix, project_root=project_root, quiet=args.quiet)
     print(f"[OK] PDF final: {pdf}")
+
+    if args.emit_docx:
+        docx = emit_docx_stage(art, prefix, project_root=project_root, reference_docx=reference_docx, quiet=args.quiet)
+        print(f"[OK] DOCX final: {docx}")
+
     return 0
 
 

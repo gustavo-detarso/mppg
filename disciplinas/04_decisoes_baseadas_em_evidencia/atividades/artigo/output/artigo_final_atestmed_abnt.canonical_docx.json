@@ -1,0 +1,68 @@
+{
+  "schema_version": "docx-canonico-v14",
+  "generated_at": "2026-07-10T10:36:21",
+  "paths": {
+    "art_dir": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo",
+    "output_dir": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output",
+    "prefix": "artigo_final_atestmed_abnt",
+    "org": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.org",
+    "bib": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.bib",
+    "document_json": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.document.json",
+    "resumos_json": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.resumos_paper.json",
+    "compliance_json": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.compliance_report.json",
+    "run_report_json": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.run_report.json",
+    "cfg": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+    "docx": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.docx",
+    "canonical_json": "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/output/artigo_final_atestmed_abnt.canonical_docx.json"
+  },
+  "metadata": {
+    "title": "ATESTMED, saúde digital e decisão baseada em evidências: revisão estruturada e proposta de redesenho do fluxo pericial",
+    "subtitle": "",
+    "author": "Gustavo M. Mendes de Tarso",
+    "institution": "Fundação Getúlio Vargas",
+    "program": "",
+    "course": "Mestrado Acadêmico em Políticas Públicas e Governo",
+    "discipline": "Decisões Baseadas em Evidência",
+    "professor": "Marcos Aurélio Pereira Valadão",
+    "city": "Brasília",
+    "year": "2026",
+    "covernote": "Trabalho acadêmico elaborado para a disciplina Decisões Baseadas em Evidência.",
+    "papertype": "Artigo acadêmico"
+  },
+  "layout": {
+    "papel": "A4",
+    "margens_cm": {
+      "superior": 3.0,
+      "esquerda": 3.0,
+      "direita": 2.0,
+      "inferior": 2.0
+    },
+    "fonte_texto_pt": 12,
+    "fonte_auxiliar_pt": 10,
+    "espacamento_texto": 1.5,
+    "recuo_primeira_linha_cm": 1.25,
+    "recuo_citacao_longa_cm": 4.0
+  },
+  "abstracts": {
+    "abstract_pt": "Este trabalho examina o uso do ATESTMED na Perícia Médica Federal, integrando saúde digital e decisões baseadas em evidências para a concessão de benefícios por incapacidade. O ATESTMED é tratado como análise documental digital assíncrona, distinta da teleperícia, que pressupõe interação remota síncrona, e da perícia presencial, que permite avaliação direta e exame físico. A partir de uma revisão estruturada de 20 estudos com versão integral recuperada, realizou-se análise qualitativa, com descrição quantitativa do fluxo de seleção, identificando quatro eixos centrais — suficiência documental, mediação digital, capacidade operacional e auditoria. A proposta operacional modela um fluxo decisório escalonado, composto por análise documental estruturada pelo ATESTMED, encaminhamento para teleperícia em casos de incerteza intermediária e escalonamento para perícia presencial em situações complexas, contemplando auditoria contínua e indicadores de desempenho por modalidade. A proposta visa garantir eficiência, segurança, auditabilidade e equidade territorial, atendendo desafios como filas, qualidade decisória e desigualdades regionais. A discussão ressalta os riscos da automação parcial, a importância da governança robusta e a necessidade de formação permanente. Limitações metodológicas e necessidade de validação empírica futura são reconhecidas. Conclui-se que a integração criteriosa entre análise documental, teleperícia e perícia presencial, alinhada a indicadores, pode otimizar o processo decisório na Perícia Médica Federal, promovendo sustentabilidade e justiça no sistema previdenciário.",
+    "keywords_pt": [
+      "ATESTMED",
+      "perícia médica",
+      "documentos médicos",
+      "decisão baseada em evidências",
+      "saúde digital"
+    ],
+    "abstract_en": "This paper examines the use of ATESTMED in the Brazilian Federal Medical Expert Service, integrating digital health and evidence-based decision-making in the granting of temporary incapacity benefits. ATESTMED is treated as asynchronous digital documentary analysis, distinct from remote medical expert assessment, which presupposes synchronous remote interaction, and from in-person medical expert examination, which allows direct assessment and physical examination. Based on a structured review of 20 studies whose original full versions were retrieved, a qualitative analysis was conducted, with a quantitative description of the selection flow, identifying four central axes: documentary sufficiency, digital mediation, operational capacity, and auditing. The operational proposal models a tiered decision-making flow composed of structured documentary analysis through ATESTMED, referral to remote medical expert assessment in cases of intermediate uncertainty, and escalation to in-person medical expert examination in complex situations, including continuous auditing and performance indicators by modality. The proposal seeks to ensure efficiency, safety, auditability, and territorial equity, addressing challenges such as queues, decision quality, and regional inequalities. The discussion highlights the risks of partial automation, the importance of robust governance, and the need for continuous training. Methodological limitations and the need for future empirical validation are acknowledged. The paper concludes that the careful integration of documentary analysis, remote medical expert assessment, and in-person medical expert examination, aligned with indicators, can optimize decision-making in the Brazilian Federal Medical Expert Service, promoting sustainability and justice in the social security system.",
+    "keywords_en": [
+      "ATESTMED",
+      "medical expert assessment",
+      "medical documents",
+      "evidence-based decision-making",
+      "digital health"
+    ]
+  },
+  "body_blocks": 154,
+  "bibliography_entries": 21,
+  "references_rendered": 21,
+  "source_priority": "ORG final; document.json como fallback; BIB final para referências"
+}
