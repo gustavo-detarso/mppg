@@ -7,7 +7,11 @@ import tomllib
 from pathlib import Path
 from typing import Any
 
-from institution_profiles import available_institution_profiles, find_app_bundle
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .institution_profiles import available_institution_profiles, find_app_bundle
+else:
+    from institution_profiles import available_institution_profiles, find_app_bundle
 
 
 def _fmt_list(values: list[str] | tuple[str, ...] | None) -> str:
