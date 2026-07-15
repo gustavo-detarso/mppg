@@ -1,0 +1,6252 @@
+{
+  "phase": "AP-003D",
+  "mode": "preparation-only",
+  "generated_at_utc": "2026-07-15T20:38:27.684923+00:00",
+  "git": {
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "head": "148e067ebbfd1cbdc7e72e2a4d5189893c06f8b7",
+    "upstream": "origin/ap-refactor/03-orchestrator-decomposition",
+    "upstream_head": "148e067ebbfd1cbdc7e72e2a4d5189893c06f8b7"
+  },
+  "files": {
+    "orchestrator": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+    "orchestrator_sha256": "4261568e60308764ef1f56ab1e13d6ccfd886d76dce965ec6d3e8fd66cdee51d",
+    "parser": "academic_pipeline/cli_parser.py",
+    "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+    "dispatch": "academic_pipeline/command_dispatch.py",
+    "dispatch_sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3"
+  },
+  "contracts": {
+    "top_level_main_count": 2,
+    "historical_wrapper": "_original_main_before_prisma_artigo_generico_wrapper",
+    "first_main": {
+      "line": 899,
+      "end_line": 1578,
+      "statement_count": 124
+    }
+  },
+  "helpers": {
+    "count": 48,
+    "selected_count": 14,
+    "overlap_count": 27,
+    "items": [
+      {
+        "name": "stage",
+        "line": 272,
+        "end_line": 274,
+        "arguments": [
+          "message"
+        ],
+        "calls": [
+          "print"
+        ],
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1163-1163",
+          "1172-1234",
+          "1236-1289",
+          "1296-1449",
+          "1451-1451",
+          "1454-1456",
+          "1457-1457",
+          "1461-1466",
+          "1470-1480",
+          "1531-1531",
+          "1546-1546"
+        ]
+      },
+      {
+        "name": "_json_or_none",
+        "line": 277,
+        "end_line": 283,
+        "arguments": [
+          "value"
+        ],
+        "calls": [
+          "json.loads"
+        ],
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1511-1521"
+        ]
+      },
+      {
+        "name": "load_config",
+        "line": 1648,
+        "end_line": 1649,
+        "arguments": [
+          "path"
+        ],
+        "calls": [
+          "_refs_v6_apply_runtime_policy",
+          "_refs_v6_original_load_config"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 6,
+        "explicit_helpers": [
+          "_refs_v6_apply_runtime_policy"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "refs"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helpers documentais explícitos: _refs_v6_apply_runtime_policy",
+          "termos documentais: refs"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "make_client",
+        "line": 295,
+        "end_line": 300,
+        "arguments": [
+          "model_override"
+        ],
+        "calls": [
+          "OpenAI",
+          "RuntimeError",
+          "load_dotenv",
+          "os.getenv"
+        ],
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1172-1234",
+          "1236-1289",
+          "1296-1449"
+        ]
+      },
+      {
+        "name": "_section",
+        "line": 303,
+        "end_line": 305,
+        "arguments": [
+          "cfg",
+          "name"
+        ],
+        "calls": [
+          "cfg.get",
+          "isinstance"
+        ],
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "output_paths",
+        "line": 308,
+        "end_line": 317,
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "Path",
+          "Path(str(cfg.get('__config_dir__') or Path.cwd())).resolve",
+          "Path.cwd",
+          "_section",
+          "bool",
+          "cfg.get",
+          "out_dir.mkdir",
+          "paths.get",
+          "projeto.get",
+          "resolve_path",
+          "str",
+          "str(paths.get('document_prefix') or projeto.get('nome') or 'documento').strip"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 5,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document",
+          "documento",
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: output_paths",
+          "termos documentais: document, documento, output"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1153-1153"
+        ]
+      },
+      {
+        "name": "research_output_paths",
+        "line": 320,
+        "end_line": 337,
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "Path",
+          "Path(str(cfg.get('__config_dir__') or Path.cwd())).resolve",
+          "Path.cwd",
+          "_section",
+          "bool",
+          "cfg.get",
+          "out_dir.mkdir",
+          "paths.get",
+          "projeto.get",
+          "resolve_path",
+          "str",
+          "str(paths.get('research_prefix') or default_prefix).strip",
+          "str(projeto.get('nome') or '').strip"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 4,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "document",
+          "documento",
+          "output"
+        ],
+        "prisma_terms": [
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper de sobreposição: research_output_paths",
+          "termos documentais: bib, document, documento, output",
+          "excluído por PRISMA/artigo genérico: prisma"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1153-1153"
+        ]
+      },
+      {
+        "name": "work_cache_paths",
+        "line": 340,
+        "end_line": 350,
+        "arguments": [
+          "cfg",
+          "prefix"
+        ],
+        "calls": [
+          "Path",
+          "Path(str(cfg.get('__config_dir__') or Path.cwd())).resolve",
+          "Path.cwd",
+          "_section",
+          "bool",
+          "cache_dir.mkdir",
+          "cfg.get",
+          "paths.get",
+          "resolve_path",
+          "str",
+          "work_dir.mkdir"
+        ],
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1154-1154"
+        ]
+      },
+      {
+        "name": "apply_cli_path_overrides",
+        "line": 353,
+        "end_line": 386,
+        "arguments": [
+          "cfg",
+          "args"
+        ],
+        "calls": [
+          "cfg.setdefault",
+          "getattr",
+          "isinstance"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 3,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document",
+          "documento",
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: document, documento, output"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1058-1059"
+        ]
+      },
+      {
+        "name": "load_existing_document_json",
+        "line": 389,
+        "end_line": 390,
+        "arguments": [
+          "path"
+        ],
+        "calls": [
+          "AcademicDocument.model_validate_json",
+          "path.read_text"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 5,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: load_existing_document_json",
+          "termos documentais: document"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1035-1055",
+          "1236-1289",
+          "1296-1449"
+        ]
+      },
+      {
+        "name": "resolve_bib_for_existing_document",
+        "line": 393,
+        "end_line": 420,
+        "arguments": [
+          "document",
+          "document_json_path",
+          "out_dir",
+          "prefix"
+        ],
+        "calls": [
+          "Path",
+          "Path(raw).expanduser",
+          "c.exists",
+          "c.resolve",
+          "candidates.append",
+          "candidates.extend",
+          "document_json_path.with_name",
+          "document_json_path.with_suffix",
+          "found.exists",
+          "found.read_text",
+          "found.resolve",
+          "list",
+          "m.group",
+          "m.group(1).strip",
+          "next",
+          "out_dir.mkdir",
+          "p.is_absolute",
+          "re.finditer",
+          "shutil.copy2",
+          "str",
+          "str(document.bibliography.bib_path or f'{prefix}.bib').strip",
+          "target.resolve"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 5,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliography",
+          "document",
+          "output",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: resolve_bib_for_existing_document",
+          "termos documentais: bib, bibliography, document, output, render"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1296-1449"
+        ]
+      },
+      {
+        "name": "_openai_model_from_cfg",
+        "line": 423,
+        "end_line": 424,
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "(cfg.get('openai', {}) if isinstance(cfg.get('openai'), dict) else {}).get",
+          "cfg.get",
+          "isinstance",
+          "os.getenv",
+          "str"
+        ],
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1160-1160"
+        ]
+      },
+      {
+        "name": "_load_optional_config",
+        "line": 427,
+        "end_line": 433,
+        "arguments": [
+          "path"
+        ],
+        "calls": [
+          "FileNotFoundError",
+          "Path",
+          "Path(path).expanduser",
+          "Path(path).expanduser().resolve",
+          "load_config",
+          "p.exists"
+        ],
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1057-1057"
+        ]
+      },
+      {
+        "name": "_resolve_latex_paths_for_recompile",
+        "line": 436,
+        "end_line": 442,
+        "arguments": [
+          "args",
+          "cfg"
+        ],
+        "calls": [
+          "(cfg or {}).get",
+          "Path",
+          "Path(str((cfg or {}).get('__config_dir__') or Path.cwd())).resolve",
+          "Path.cwd",
+          "isinstance",
+          "latex_cfg.get",
+          "resolve_path",
+          "str"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 5,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "latex",
+          "org",
+          "pdf",
+          "recompile"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: _resolve_latex_paths_for_recompile",
+          "termos documentais: latex, org, pdf, recompile"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "run_recompile",
+        "line": 445,
+        "end_line": 471,
+        "arguments": [
+          "args",
+          "cfg"
+        ],
+        "calls": [
+          "(cfg or {}).get",
+          "FileNotFoundError",
+          "Path",
+          "Path(args.org).expanduser",
+          "Path(args.org).expanduser().resolve",
+          "Path.cwd",
+          "RuntimeError",
+          "_resolve_latex_paths_for_recompile",
+          "cfg.get",
+          "clean_aux_files",
+          "make_run_report",
+          "org_path.exists",
+          "print_outputs",
+          "run_compile_sequence",
+          "stage",
+          "str",
+          "write_json",
+          "write_outputs_manifest"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 10,
+        "explicit_helpers": [
+          "_resolve_latex_paths_for_recompile"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "latex",
+          "org",
+          "output",
+          "pdf",
+          "recompile"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: run_recompile",
+          "helpers documentais explícitos: _resolve_latex_paths_for_recompile",
+          "termos documentais: latex, org, output, pdf, recompile"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "render_external_prisma_outputs",
+        "line": 475,
+        "end_line": 532,
+        "arguments": [
+          "cfg",
+          "out_dir",
+          "prefix",
+          "prisma_payload",
+          "phase"
+        ],
+        "calls": [
+          "Path",
+          "Path(str(cfg.get('__config_dir__') or Path.cwd())).resolve",
+          "Path.cwd",
+          "bool",
+          "cfg.get",
+          "ensure_prisma_flow_diagram",
+          "isinstance",
+          "latex_cfg.get",
+          "print",
+          "render_external_prisma_org_report",
+          "report_cfg.get",
+          "resolve_path",
+          "run_compile_sequence",
+          "stage",
+          "str"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 6,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document",
+          "latex",
+          "org",
+          "output",
+          "pdf",
+          "render"
+        ],
+        "prisma_terms": [
+          "prisma",
+          "triagem"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper de sobreposição: render_external_prisma_outputs",
+          "termos documentais: document, latex, org, output, pdf, render",
+          "excluído por PRISMA/artigo genérico: prisma, triagem"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1172-1234"
+        ]
+      },
+      {
+        "name": "render_additional_language_versions",
+        "line": 535,
+        "end_line": 648,
+        "arguments": [
+          "client",
+          "model",
+          "cfg",
+          "document",
+          "bib_path",
+          "bib_keys",
+          "out_dir",
+          "prefix",
+          "doc_cfg",
+          "latex_cfg",
+          "config_dir",
+          "abstract_bundle"
+        ],
+        "calls": [
+          "bib_path.exists",
+          "bib_path.resolve",
+          "bool",
+          "build_quality_report",
+          "cfg.get",
+          "doc_cfg.get",
+          "docx_cfg.get",
+          "inject_paper_abstracts_into_docx",
+          "inject_paper_abstracts_into_org",
+          "isinstance",
+          "language_bib.resolve",
+          "language_dir.mkdir",
+          "latex_cfg.get",
+          "quality.get",
+          "raise_if_errors",
+          "render_docx",
+          "render_org_latex",
+          "requested_translation_languages",
+          "resolve_path",
+          "run_compile_sequence",
+          "shutil.copy2",
+          "stage",
+          "str",
+          "translate_document_model",
+          "translated_document.model_dump",
+          "translation_batch_size",
+          "validate_docx_file",
+          "validate_org_text",
+          "validation.get",
+          "warnings.extend",
+          "write_json",
+          "write_quality_report"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 20,
+        "explicit_helpers": [
+          "render_org_latex"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract",
+          "bib",
+          "bibliografia",
+          "bibliography",
+          "document",
+          "docx",
+          "idioma",
+          "language",
+          "latex",
+          "org",
+          "output",
+          "pdf",
+          "quality",
+          "reference",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: render_additional_language_versions",
+          "helpers documentais explícitos: render_org_latex",
+          "termos documentais: abstract, bib, bibliografia, bibliography, document, docx, idioma, language, latex, org, output, pdf, quality, reference, render"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1483-1509"
+        ]
+      },
+      {
+        "name": "_prisma_curadoria_default_config",
+        "line": 653,
+        "end_line": 654,
+        "arguments": [],
+        "calls": [],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_default_out_dir",
+        "line": 657,
+        "end_line": 658,
+        "arguments": [],
+        "calls": [],
+        "selected": false,
+        "overlap": true,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output",
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_default_prompt",
+        "line": 661,
+        "end_line": 662,
+        "arguments": [],
+        "calls": [],
+        "selected": false,
+        "overlap": true,
+        "score": 2,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document",
+          "documento"
+        ],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: document, documento",
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_script_path",
+        "line": 665,
+        "end_line": 666,
+        "arguments": [],
+        "calls": [],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_arg",
+        "line": 669,
+        "end_line": 670,
+        "arguments": [
+          "args",
+          "name",
+          "default"
+        ],
+        "calls": [
+          "getattr"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_config_from_args",
+        "line": 673,
+        "end_line": 678,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_default_config"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_out_from_args",
+        "line": 681,
+        "end_line": 682,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_default_out_dir"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_prompt_from_args",
+        "line": 685,
+        "end_line": 686,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_default_prompt"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_input_from_args",
+        "line": 689,
+        "end_line": 696,
+        "arguments": [
+          "args",
+          "default_xlsx"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_out_from_args",
+          "str"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_run_command",
+        "line": 699,
+        "end_line": 710,
+        "arguments": [
+          "cmd"
+        ],
+        "calls": [
+          "' '.join",
+          "print",
+          "subprocess.run"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_build_cmd",
+        "line": 713,
+        "end_line": 759,
+        "arguments": [
+          "args",
+          "usar_ia",
+          "reexportar_xlsx"
+        ],
+        "calls": [
+          "Path",
+          "SystemExit",
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_config_from_args",
+          "_prisma_curadoria_input_from_args",
+          "_prisma_curadoria_out_from_args",
+          "_prisma_curadoria_prompt_from_args",
+          "_prisma_curadoria_script_path",
+          "script.exists",
+          "str"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_run_ia",
+        "line": 762,
+        "end_line": 764,
+        "arguments": [
+          "args",
+          "usar_ia"
+        ],
+        "calls": [
+          "_prisma_curadoria_build_cmd",
+          "_prisma_curadoria_run_command"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_reexportar_xlsx",
+        "line": 767,
+        "end_line": 769,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_build_cmd",
+          "_prisma_curadoria_run_command"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_pipeline_supports_flag",
+        "line": 772,
+        "end_line": 786,
+        "arguments": [
+          "flag"
+        ],
+        "calls": [
+          "subprocess.run"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_importar_no_pipeline",
+        "line": 789,
+        "end_line": 809,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_curadoria_config_from_args",
+          "_prisma_curadoria_out_from_args",
+          "_prisma_curadoria_pipeline_supports_flag",
+          "_prisma_curadoria_run_command",
+          "print",
+          "str",
+          "triagem.exists"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma",
+          "triagem"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma, triagem"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_fluxo_completo",
+        "line": 812,
+        "end_line": 819,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_importar_no_pipeline",
+          "_prisma_curadoria_run_ia",
+          "bool"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_mostrar_caminhos",
+        "line": 822,
+        "end_line": 841,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_curadoria_config_from_args",
+          "_prisma_curadoria_out_from_args",
+          "_prisma_curadoria_prompt_from_args",
+          "_prisma_curadoria_script_path",
+          "print"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [
+          "curadoria",
+          "prisma",
+          "triagem"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output",
+          "excluído por PRISMA/artigo genérico: curadoria, prisma, triagem"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_menu",
+        "line": 844,
+        "end_line": 880,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_fluxo_completo",
+          "_prisma_curadoria_importar_no_pipeline",
+          "_prisma_curadoria_mostrar_caminhos",
+          "_prisma_curadoria_reexportar_xlsx",
+          "_prisma_curadoria_run_ia",
+          "input",
+          "input('Escolha uma opção: ').strip",
+          "print"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma",
+          "triagem"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma, triagem"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_curadoria_dispatch",
+        "line": 883,
+        "end_line": 895,
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_fluxo_completo",
+          "_prisma_curadoria_importar_no_pipeline",
+          "_prisma_curadoria_menu",
+          "_prisma_curadoria_reexportar_xlsx",
+          "_prisma_curadoria_run_ia",
+          "bool"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "905-912"
+        ]
+      },
+      {
+        "name": "main",
+        "line": 1837,
+        "end_line": 1859,
+        "arguments": [],
+        "calls": [
+          "_original_main_before_prisma_artigo_generico_wrapper",
+          "_prisma_artigo_generico_run_export",
+          "_prisma_artigo_generico_run_freeze",
+          "_prisma_artigo_generico_strip",
+          "list"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib"
+        ],
+        "prisma_terms": [
+          "artigo_generico",
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: bib",
+          "excluído por PRISMA/artigo genérico: artigo_generico, curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_refs_v6_disabled",
+        "line": 1587,
+        "end_line": 1602,
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "bibliography.get",
+          "bool",
+          "cfg.get",
+          "document.get",
+          "isinstance",
+          "local.get"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 7,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliografia",
+          "bibliography",
+          "document",
+          "documento",
+          "latex",
+          "refs"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: _refs_v6_disabled",
+          "termos documentais: bib, bibliografia, bibliography, document, documento, latex, refs"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_refs_v6_apply_runtime_policy",
+        "line": 1605,
+        "end_line": 1643,
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "(current + '\\n\\n' + instruction).strip",
+          "_refs_v6_disabled",
+          "cfg.setdefault",
+          "isinstance",
+          "orientations.get",
+          "str",
+          "str(orientations.get('inline') or '').strip"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 13,
+        "explicit_helpers": [
+          "_refs_v6_disabled"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliografia",
+          "bibliography",
+          "document",
+          "documento",
+          "latex",
+          "pdf",
+          "refs"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: _refs_v6_apply_runtime_policy",
+          "helpers documentais explícitos: _refs_v6_disabled",
+          "termos documentais: bib, bibliografia, bibliography, document, documento, latex, pdf, refs"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "build_bibliography",
+        "line": 1655,
+        "end_line": 1666,
+        "arguments": [
+          "cfg",
+          "docs",
+          "out_dir",
+          "prefix",
+          "client",
+          "model"
+        ],
+        "calls": [
+          "Path",
+          "SimpleNamespace",
+          "_refs_v6_disabled",
+          "_refs_v6_original_build_bibliography"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 8,
+        "explicit_helpers": [
+          "_refs_v6_disabled"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliography",
+          "refs"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: build_bibliography",
+          "helpers documentais explícitos: _refs_v6_disabled",
+          "termos documentais: bib, bibliography, refs"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1296-1449"
+        ]
+      },
+      {
+        "name": "_refs_v6_clear_document_bibliography",
+        "line": 1669,
+        "end_line": 1680,
+        "arguments": [
+          "document"
+        ],
+        "calls": [
+          "getattr"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 5,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliography",
+          "document",
+          "refs"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: _refs_v6_clear_document_bibliography",
+          "termos documentais: bib, bibliography, document, refs"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_refs_v6_strip_org",
+        "line": 1683,
+        "end_line": 1711,
+        "arguments": [
+          "text"
+        ],
+        "calls": [
+          "_re.sub",
+          "_re.sub('\\\\n{3,}', '\\n\\n', text).strip"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 8,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliografia",
+          "bibliography",
+          "document",
+          "latex",
+          "org",
+          "refs",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: _refs_v6_strip_org",
+          "termos documentais: bib, bibliografia, bibliography, document, latex, org, refs, render"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "render_org_latex",
+        "line": 1717,
+        "end_line": 1743,
+        "arguments": [
+          "document",
+          "org_path",
+          "bib_filename",
+          "cfg",
+          "bib_keys"
+        ],
+        "calls": [
+          "Path",
+          "Path(org_path).write_text",
+          "_refs_v6_clear_document_bibliography",
+          "_refs_v6_disabled",
+          "_refs_v6_original_render_org_latex",
+          "_refs_v6_strip_org"
+        ],
+        "selected": true,
+        "overlap": false,
+        "score": 22,
+        "explicit_helpers": [
+          "_refs_v6_clear_document_bibliography",
+          "_refs_v6_disabled",
+          "_refs_v6_strip_org"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliography",
+          "document",
+          "latex",
+          "org",
+          "refs",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helper documental explícito: render_org_latex",
+          "helpers documentais explícitos: _refs_v6_clear_document_bibliography, _refs_v6_disabled, _refs_v6_strip_org",
+          "termos documentais: bib, bibliography, document, latex, org, refs, render"
+        ],
+        "called_by_first_main": true,
+        "call_sites": [
+          "1453-1453"
+        ]
+      },
+      {
+        "name": "_prisma_artigo_generico_get_arg",
+        "line": 1756,
+        "end_line": 1762,
+        "arguments": [
+          "argv",
+          "name"
+        ],
+        "calls": [
+          "enumerate",
+          "item.split",
+          "item.startswith",
+          "len"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "artigo_generico",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: artigo_generico, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_artigo_generico_strip",
+        "line": 1764,
+        "end_line": 1777,
+        "arguments": [
+          "argv"
+        ],
+        "calls": [
+          "any",
+          "item.startswith",
+          "len",
+          "result.append"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 2,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "output"
+        ],
+        "prisma_terms": [
+          "artigo_generico",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: bib, output",
+          "excluído por PRISMA/artigo genérico: artigo_generico, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_artigo_generico_out_dir",
+        "line": 1779,
+        "end_line": 1787,
+        "arguments": [
+          "argv"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_artigo_generico_get_arg",
+          "cfg_path.exists",
+          "cfg_path.resolve"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [
+          "artigo_generico",
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output",
+          "excluído por PRISMA/artigo genérico: artigo_generico, curadoria, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_artigo_generico_run_export",
+        "line": 1789,
+        "end_line": 1808,
+        "arguments": [
+          "argv",
+          "silent"
+        ],
+        "calls": [
+          "Path",
+          "Path(__file__).with_name",
+          "SystemExit",
+          "_prisma_artigo_generico_get_arg",
+          "_prisma_artigo_generico_out_dir",
+          "helper.exists",
+          "out_dir.name.startswith",
+          "print",
+          "str",
+          "subprocess.run"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 3,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "latex",
+          "output"
+        ],
+        "prisma_terms": [
+          "artigo_generico",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: bib, latex, output",
+          "excluído por PRISMA/artigo genérico: artigo_generico, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      },
+      {
+        "name": "_prisma_artigo_generico_run_freeze",
+        "line": 1810,
+        "end_line": 1833,
+        "arguments": [
+          "argv",
+          "silent"
+        ],
+        "calls": [
+          "Path",
+          "Path(__file__).resolve",
+          "Path(__file__).with_name",
+          "SystemExit",
+          "_prisma_artigo_generico_get_arg",
+          "_prisma_artigo_generico_out_dir",
+          "cmd.append",
+          "helper.exists",
+          "out_dir.name.startswith",
+          "print",
+          "str",
+          "subprocess.run"
+        ],
+        "selected": false,
+        "overlap": true,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [
+          "artigo_generico",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output",
+          "excluído por PRISMA/artigo genérico: artigo_generico, prisma"
+        ],
+        "called_by_first_main": false,
+        "call_sites": []
+      }
+    ]
+  },
+  "main_statements": {
+    "count": 124,
+    "selected_count": 16,
+    "overlap_count": 7,
+    "contiguous_ranges": [
+      {
+        "start_body_index": 36,
+        "end_body_index": 36,
+        "line": 1035,
+        "end_line": 1055,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 68,
+        "end_body_index": 68,
+        "line": 1155,
+        "end_line": 1155,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 80,
+        "end_body_index": 80,
+        "line": 1236,
+        "end_line": 1289,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 86,
+        "end_body_index": 86,
+        "line": 1451,
+        "end_line": 1451,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 88,
+        "end_body_index": 91,
+        "line": 1453,
+        "end_line": 1458,
+        "statement_count": 4
+      },
+      {
+        "start_body_index": 93,
+        "end_body_index": 93,
+        "line": 1461,
+        "end_line": 1466,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 96,
+        "end_body_index": 96,
+        "line": 1470,
+        "end_line": 1480,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 98,
+        "end_body_index": 98,
+        "line": 1483,
+        "end_line": 1509,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 106,
+        "end_body_index": 106,
+        "line": 1532,
+        "end_line": 1538,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 108,
+        "end_body_index": 108,
+        "line": 1540,
+        "end_line": 1540,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 112,
+        "end_body_index": 112,
+        "line": 1547,
+        "end_line": 1547,
+        "statement_count": 1
+      },
+      {
+        "start_body_index": 116,
+        "end_body_index": 117,
+        "line": 1552,
+        "end_line": 1569,
+        "statement_count": 2
+      }
+    ],
+    "items": [
+      {
+        "body_index": 0,
+        "kind": "ImportFrom",
+        "line": 900,
+        "end_line": 900,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.cli_parser import parse_args as parse_cli_args",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [
+          "cli_parser",
+          "parse_cli_args"
+        ],
+        "reasons": [
+          "excluído por parser AP-003B: cli_parser, parse_cli_args"
+        ]
+      },
+      {
+        "body_index": 1,
+        "kind": "assignment",
+        "line": 902,
+        "end_line": 902,
+        "condition": "",
+        "calls": [
+          "parse_cli_args"
+        ],
+        "loaded_names": [
+          "PIPELINE_VERSION",
+          "parse_cli_args"
+        ],
+        "stored_names": [
+          "args"
+        ],
+        "terminal_flow": false,
+        "source": "args = parse_cli_args(pipeline_version=PIPELINE_VERSION)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [
+          "parse_cli_args"
+        ],
+        "reasons": [
+          "excluído por parser AP-003B: parse_cli_args"
+        ]
+      },
+      {
+        "body_index": 2,
+        "kind": "if",
+        "line": 905,
+        "end_line": 912,
+        "condition": "getattr(args, \"prisma_curadoria_menu\", False)\n        or getattr(args, \"prisma_curadoria_ia\", False)\n        or getattr(args, \"prisma_curadoria_reexportar_xlsx\", False)\n        or getattr(args, \"prisma_curadoria_importar\", False)\n        or getattr(args, \"prisma_curadoria_fluxo_completo\", False)",
+        "calls": [
+          "_prisma_curadoria_dispatch",
+          "getattr"
+        ],
+        "loaded_names": [
+          "_prisma_curadoria_dispatch",
+          "args"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if (\n        getattr(args, \"prisma_curadoria_menu\", False)\n        or getattr(args, \"prisma_curadoria_ia\", False)\n        or getattr(args, \"prisma_curadoria_reexportar_xlsx\", False)\n        or getattr(args, \"prisma_curadoria_importar\", False)\n        or getattr(args, \"prisma_curadoria_fluxo_completo\", False)\n    ):\n        return _prisma_curadoria_dispatch(args)",
+        "selected": false,
+        "overlap": true,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [
+          "curadoria",
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por PRISMA/artigo genérico: curadoria, prisma"
+        ]
+      },
+      {
+        "body_index": 3,
+        "kind": "ImportFrom",
+        "line": 914,
+        "end_line": 916,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_001 as _ap003c_dispatch_001,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 4,
+        "kind": "assignment",
+        "line": 918,
+        "end_line": 921,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_001",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_001",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_001"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_001 = _ap003c_dispatch_001(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 5,
+        "kind": "if",
+        "line": 922,
+        "end_line": 923,
+        "condition": "_ap003c_result_001.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_001"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_001.handled:\n        return _ap003c_result_001.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 6,
+        "kind": "ImportFrom",
+        "line": 925,
+        "end_line": 927,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_002 as _ap003c_dispatch_002,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 7,
+        "kind": "assignment",
+        "line": 929,
+        "end_line": 932,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_002",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_002",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_002"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_002 = _ap003c_dispatch_002(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 8,
+        "kind": "if",
+        "line": 933,
+        "end_line": 934,
+        "condition": "_ap003c_result_002.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_002"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_002.handled:\n        return _ap003c_result_002.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 9,
+        "kind": "ImportFrom",
+        "line": 936,
+        "end_line": 938,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_003 as _ap003c_dispatch_003,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 10,
+        "kind": "assignment",
+        "line": 940,
+        "end_line": 943,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_003",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_003",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_003"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_003 = _ap003c_dispatch_003(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 11,
+        "kind": "if",
+        "line": 944,
+        "end_line": 945,
+        "condition": "_ap003c_result_003.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_003"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_003.handled:\n        return _ap003c_result_003.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 12,
+        "kind": "ImportFrom",
+        "line": 947,
+        "end_line": 949,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_004 as _ap003c_dispatch_004,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 13,
+        "kind": "assignment",
+        "line": 951,
+        "end_line": 954,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_004",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_004",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_004"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_004 = _ap003c_dispatch_004(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 14,
+        "kind": "if",
+        "line": 955,
+        "end_line": 956,
+        "condition": "_ap003c_result_004.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_004"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_004.handled:\n        return _ap003c_result_004.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 15,
+        "kind": "ImportFrom",
+        "line": 958,
+        "end_line": 960,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_005 as _ap003c_dispatch_005,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 16,
+        "kind": "assignment",
+        "line": 962,
+        "end_line": 965,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_005",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_005",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_005"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_005 = _ap003c_dispatch_005(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 17,
+        "kind": "if",
+        "line": 966,
+        "end_line": 967,
+        "condition": "_ap003c_result_005.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_005"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_005.handled:\n        return _ap003c_result_005.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 18,
+        "kind": "ImportFrom",
+        "line": 969,
+        "end_line": 971,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_006 as _ap003c_dispatch_006,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 19,
+        "kind": "assignment",
+        "line": 973,
+        "end_line": 976,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_006",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_006",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_006"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_006 = _ap003c_dispatch_006(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 20,
+        "kind": "if",
+        "line": 977,
+        "end_line": 978,
+        "condition": "_ap003c_result_006.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_006"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_006.handled:\n        return _ap003c_result_006.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 21,
+        "kind": "ImportFrom",
+        "line": 980,
+        "end_line": 982,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_007 as _ap003c_dispatch_007,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 22,
+        "kind": "assignment",
+        "line": 984,
+        "end_line": 987,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_007",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_007",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_007"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_007 = _ap003c_dispatch_007(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 23,
+        "kind": "if",
+        "line": 988,
+        "end_line": 989,
+        "condition": "_ap003c_result_007.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_007"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_007.handled:\n        return _ap003c_result_007.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 24,
+        "kind": "ImportFrom",
+        "line": 991,
+        "end_line": 993,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_008 as _ap003c_dispatch_008,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 25,
+        "kind": "assignment",
+        "line": 995,
+        "end_line": 998,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_008",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_008",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_008"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_008 = _ap003c_dispatch_008(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 26,
+        "kind": "if",
+        "line": 999,
+        "end_line": 1000,
+        "condition": "_ap003c_result_008.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_008"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_008.handled:\n        return _ap003c_result_008.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 27,
+        "kind": "ImportFrom",
+        "line": 1002,
+        "end_line": 1004,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_009 as _ap003c_dispatch_009,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 28,
+        "kind": "assignment",
+        "line": 1006,
+        "end_line": 1009,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_009",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_009",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_009"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_009 = _ap003c_dispatch_009(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 29,
+        "kind": "if",
+        "line": 1010,
+        "end_line": 1011,
+        "condition": "_ap003c_result_009.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_009"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_009.handled:\n        return _ap003c_result_009.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 30,
+        "kind": "ImportFrom",
+        "line": 1013,
+        "end_line": 1015,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_010 as _ap003c_dispatch_010,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 31,
+        "kind": "assignment",
+        "line": 1017,
+        "end_line": 1020,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_010",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_010",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_010"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_010 = _ap003c_dispatch_010(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 32,
+        "kind": "if",
+        "line": 1021,
+        "end_line": 1022,
+        "condition": "_ap003c_result_010.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_010"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_010.handled:\n        return _ap003c_result_010.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 33,
+        "kind": "ImportFrom",
+        "line": 1024,
+        "end_line": 1026,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_011 as _ap003c_dispatch_011,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 34,
+        "kind": "assignment",
+        "line": 1028,
+        "end_line": 1031,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_011",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_011",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_011"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_011 = _ap003c_dispatch_011(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 35,
+        "kind": "if",
+        "line": 1032,
+        "end_line": 1033,
+        "condition": "_ap003c_result_011.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_011"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_011.handled:\n        return _ap003c_result_011.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 36,
+        "kind": "if",
+        "line": 1035,
+        "end_line": 1055,
+        "condition": "args.quality_report",
+        "calls": [
+          "Path",
+          "Path(args.bib).expanduser",
+          "Path(args.bib).expanduser().resolve",
+          "Path(args.document_json).expanduser",
+          "Path(args.document_json).expanduser().resolve",
+          "Path(args.org).expanduser",
+          "Path(args.org).expanduser().resolve",
+          "RuntimeError",
+          "bib_entry_key",
+          "bib_path.exists",
+          "bib_path.read_text",
+          "build_quality_report",
+          "document_json.with_suffix",
+          "list",
+          "load_existing_document_json",
+          "print",
+          "report.get",
+          "split_bib_entries",
+          "write_quality_report"
+        ],
+        "loaded_names": [
+          "Path",
+          "args",
+          "bib_entry_key",
+          "bib_keys",
+          "bib_path",
+          "build_quality_report",
+          "document",
+          "document_json",
+          "e",
+          "k",
+          "load_existing_document_json",
+          "org",
+          "out",
+          "report",
+          "split_bib_entries",
+          "write_quality_report"
+        ],
+        "stored_names": [
+          "bib_keys",
+          "bib_path",
+          "document",
+          "document_json",
+          "e",
+          "k",
+          "org",
+          "out",
+          "report"
+        ],
+        "terminal_flow": true,
+        "source": "if args.quality_report:\n        if not args.document_json:\n            raise RuntimeError(\"--quality-report exige --document-json caminho/document.json\")\n        document_json = Path(args.document_json).expanduser().resolve()\n        document = load_existing_document_json(document_json)\n        org = Path(args.org).expanduser().resolve() if args.org else None\n        bib_keys: list[str] = []\n        if args.bib:\n            # Compatibilidade temporária entre pacote e script direto.\n            if __package__:\n                from .bibliography_manager import split_bib_entries, bib_entry_key\n            else:\n                from bibliography_manager import split_bib_entries, bib_entry_key\n            bib_path = Path(args.bib).expanduser().resolve()\n            if bib_path.exists():\n                bib_keys = [k for e in split_bib_entries(bib_path.read_text(encoding='utf-8', errors='ignore')) if (k := bib_entry_key(e))]\n        report = build_quality_report(document, org_path=org, bib_keys=bib_keys or list(document.bibliography.entries_used or []))\n        out = document_json.with_suffix(\".quality_report.md\")\n        write_quality_report(report, out)\n        print(f\"Relatório de qualidade: {out}\")\n        return 0 if report.get(\"ok\") else 1",
+        "selected": true,
+        "overlap": false,
+        "score": 10,
+        "explicit_helpers": [
+          "load_existing_document_json"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "bibliography",
+          "document",
+          "org",
+          "quality"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helpers documentais explícitos: load_existing_document_json",
+          "termos documentais: bib, bibliography, document, org, quality"
+        ]
+      },
+      {
+        "body_index": 37,
+        "kind": "assignment",
+        "line": 1057,
+        "end_line": 1057,
+        "condition": "",
+        "calls": [
+          "_load_optional_config"
+        ],
+        "loaded_names": [
+          "_load_optional_config",
+          "args"
+        ],
+        "stored_names": [
+          "cfg"
+        ],
+        "terminal_flow": false,
+        "source": "cfg = _load_optional_config(args.config) if args.config else None",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 38,
+        "kind": "if",
+        "line": 1058,
+        "end_line": 1059,
+        "condition": "cfg",
+        "calls": [
+          "apply_cli_path_overrides"
+        ],
+        "loaded_names": [
+          "apply_cli_path_overrides",
+          "args",
+          "cfg"
+        ],
+        "stored_names": [
+          "cfg"
+        ],
+        "terminal_flow": false,
+        "source": "if cfg:\n        cfg = apply_cli_path_overrides(cfg, args)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 39,
+        "kind": "ImportFrom",
+        "line": 1061,
+        "end_line": 1063,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_012 as _ap003c_dispatch_012,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 40,
+        "kind": "assignment",
+        "line": 1065,
+        "end_line": 1068,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_012",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_012",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_012"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_012 = _ap003c_dispatch_012(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 41,
+        "kind": "if",
+        "line": 1069,
+        "end_line": 1070,
+        "condition": "_ap003c_result_012.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_012"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_012.handled:\n        return _ap003c_result_012.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 42,
+        "kind": "ImportFrom",
+        "line": 1071,
+        "end_line": 1073,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_013 as _ap003c_dispatch_013,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 43,
+        "kind": "assignment",
+        "line": 1075,
+        "end_line": 1078,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_013",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_013",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_013"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_013 = _ap003c_dispatch_013(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 44,
+        "kind": "if",
+        "line": 1079,
+        "end_line": 1080,
+        "condition": "_ap003c_result_013.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_013"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_013.handled:\n        return _ap003c_result_013.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 45,
+        "kind": "ImportFrom",
+        "line": 1082,
+        "end_line": 1084,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_014 as _ap003c_dispatch_014,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 46,
+        "kind": "assignment",
+        "line": 1086,
+        "end_line": 1089,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_014",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_014",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_014"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_014 = _ap003c_dispatch_014(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 47,
+        "kind": "if",
+        "line": 1090,
+        "end_line": 1091,
+        "condition": "_ap003c_result_014.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_014"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_014.handled:\n        return _ap003c_result_014.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 48,
+        "kind": "ImportFrom",
+        "line": 1093,
+        "end_line": 1095,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_015 as _ap003c_dispatch_015,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 49,
+        "kind": "assignment",
+        "line": 1097,
+        "end_line": 1100,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_015",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_015",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_015"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_015 = _ap003c_dispatch_015(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 50,
+        "kind": "if",
+        "line": 1101,
+        "end_line": 1102,
+        "condition": "_ap003c_result_015.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_015"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_015.handled:\n        return _ap003c_result_015.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 51,
+        "kind": "ImportFrom",
+        "line": 1104,
+        "end_line": 1106,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_016 as _ap003c_dispatch_016,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 52,
+        "kind": "assignment",
+        "line": 1108,
+        "end_line": 1111,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_016",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_016",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_016"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_016 = _ap003c_dispatch_016(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 53,
+        "kind": "if",
+        "line": 1112,
+        "end_line": 1113,
+        "condition": "_ap003c_result_016.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_016"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_016.handled:\n        return _ap003c_result_016.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 54,
+        "kind": "ImportFrom",
+        "line": 1115,
+        "end_line": 1117,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_017 as _ap003c_dispatch_017,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 55,
+        "kind": "assignment",
+        "line": 1119,
+        "end_line": 1122,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_017",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_017",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_017"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_017 = _ap003c_dispatch_017(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 56,
+        "kind": "if",
+        "line": 1123,
+        "end_line": 1124,
+        "condition": "_ap003c_result_017.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_017"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_017.handled:\n        return _ap003c_result_017.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 57,
+        "kind": "ImportFrom",
+        "line": 1126,
+        "end_line": 1128,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_018 as _ap003c_dispatch_018,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 58,
+        "kind": "assignment",
+        "line": 1130,
+        "end_line": 1133,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_018",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_018",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_018"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_018 = _ap003c_dispatch_018(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 59,
+        "kind": "if",
+        "line": 1134,
+        "end_line": 1135,
+        "condition": "_ap003c_result_018.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_018"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_018.handled:\n        return _ap003c_result_018.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 60,
+        "kind": "if",
+        "line": 1137,
+        "end_line": 1138,
+        "condition": "not cfg",
+        "calls": [
+          "RuntimeError"
+        ],
+        "loaded_names": [
+          "cfg"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if not cfg:\n        raise RuntimeError(\"Informe --config, ou use --doctor sem config.\")",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 61,
+        "kind": "ImportFrom",
+        "line": 1140,
+        "end_line": 1142,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "from academic_pipeline.command_dispatch import (\n        dispatch_stage_019 as _ap003c_dispatch_019,\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_",
+          "command_dispatch",
+          "dispatch_stage"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_, command_dispatch, dispatch_stage"
+        ]
+      },
+      {
+        "body_index": 62,
+        "kind": "assignment",
+        "line": 1144,
+        "end_line": 1147,
+        "condition": "",
+        "calls": [
+          "_ap003c_dispatch_019",
+          "globals",
+          "locals"
+        ],
+        "loaded_names": [
+          "_ap003c_dispatch_019",
+          "args"
+        ],
+        "stored_names": [
+          "_ap003c_result_019"
+        ],
+        "terminal_flow": false,
+        "source": "_ap003c_result_019 = _ap003c_dispatch_019(\n        args,\n        {**globals(), **locals()},\n    )",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 63,
+        "kind": "if",
+        "line": 1148,
+        "end_line": 1149,
+        "condition": "_ap003c_result_019.handled",
+        "calls": [],
+        "loaded_names": [
+          "_ap003c_result_019"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if _ap003c_result_019.handled:\n        return _ap003c_result_019.value",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [
+          "_ap003c_"
+        ],
+        "parser_terms": [],
+        "reasons": [
+          "excluído por despacho AP-003C: _ap003c_"
+        ]
+      },
+      {
+        "body_index": 64,
+        "kind": "assignment",
+        "line": 1151,
+        "end_line": 1151,
+        "condition": "",
+        "calls": [
+          "bool"
+        ],
+        "loaded_names": [
+          "args",
+          "cfg"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "cfg[\"__somente_renderizar__\"] = bool(args.somente_renderizar)",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: render"
+        ]
+      },
+      {
+        "body_index": 65,
+        "kind": "assignment",
+        "line": 1152,
+        "end_line": 1152,
+        "condition": "",
+        "calls": [
+          "external_search_enabled"
+        ],
+        "loaded_names": [
+          "args",
+          "cfg",
+          "external_search_enabled"
+        ],
+        "stored_names": [
+          "is_external_prisma_run"
+        ],
+        "terminal_flow": false,
+        "source": "is_external_prisma_run = external_search_enabled(cfg) and not args.somente_renderizar",
+        "selected": false,
+        "overlap": true,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "render"
+        ],
+        "prisma_terms": [
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: render",
+          "excluído por PRISMA/artigo genérico: prisma"
+        ]
+      },
+      {
+        "body_index": 66,
+        "kind": "assignment",
+        "line": 1153,
+        "end_line": 1153,
+        "condition": "",
+        "calls": [
+          "output_paths",
+          "research_output_paths"
+        ],
+        "loaded_names": [
+          "cfg",
+          "is_external_prisma_run",
+          "output_paths",
+          "research_output_paths"
+        ],
+        "stored_names": [
+          "out_dir",
+          "prefix"
+        ],
+        "terminal_flow": false,
+        "source": "out_dir, prefix = research_output_paths(cfg) if is_external_prisma_run else output_paths(cfg)",
+        "selected": false,
+        "overlap": true,
+        "score": 8,
+        "explicit_helpers": [
+          "output_paths"
+        ],
+        "overlap_helpers": [
+          "research_output_paths"
+        ],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helpers documentais explícitos: output_paths",
+          "termos documentais: output",
+          "helpers sobrepostos com PRISMA: research_output_paths",
+          "excluído por PRISMA/artigo genérico: prisma"
+        ]
+      },
+      {
+        "body_index": 67,
+        "kind": "assignment",
+        "line": 1154,
+        "end_line": 1154,
+        "condition": "",
+        "calls": [
+          "work_cache_paths"
+        ],
+        "loaded_names": [
+          "cfg",
+          "prefix",
+          "work_cache_paths"
+        ],
+        "stored_names": [
+          "cache_dir",
+          "work_dir"
+        ],
+        "terminal_flow": false,
+        "source": "work_dir, cache_dir = work_cache_paths(cfg, prefix)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 68,
+        "kind": "assignment",
+        "line": 1155,
+        "end_line": 1155,
+        "condition": "",
+        "calls": [
+          "cfg.get",
+          "isinstance"
+        ],
+        "loaded_names": [
+          "cfg"
+        ],
+        "stored_names": [
+          "doc_cfg"
+        ],
+        "terminal_flow": false,
+        "source": "doc_cfg = cfg.get(\"documento\", {}) if isinstance(cfg.get(\"documento\"), dict) else {}",
+        "selected": true,
+        "overlap": false,
+        "score": 2,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document",
+          "documento"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: document, documento"
+        ]
+      },
+      {
+        "body_index": 69,
+        "kind": "assignment",
+        "line": 1156,
+        "end_line": 1156,
+        "condition": "",
+        "calls": [
+          "cfg.get",
+          "isinstance"
+        ],
+        "loaded_names": [
+          "cfg"
+        ],
+        "stored_names": [
+          "latex_cfg"
+        ],
+        "terminal_flow": false,
+        "source": "latex_cfg = cfg.get(\"latex\", {}) if isinstance(cfg.get(\"latex\"), dict) else {}",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "latex"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: latex"
+        ]
+      },
+      {
+        "body_index": 70,
+        "kind": "assignment",
+        "line": 1157,
+        "end_line": 1157,
+        "condition": "",
+        "calls": [
+          "Path",
+          "Path(str(cfg.get('__config_dir__'))).resolve",
+          "cfg.get",
+          "str"
+        ],
+        "loaded_names": [
+          "Path",
+          "cfg"
+        ],
+        "stored_names": [
+          "config_dir"
+        ],
+        "terminal_flow": false,
+        "source": "config_dir = Path(str(cfg.get(\"__config_dir__\"))).resolve()",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 71,
+        "kind": "assignment",
+        "line": 1158,
+        "end_line": 1158,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [
+          "warnings"
+        ],
+        "terminal_flow": false,
+        "source": "warnings: list[str] = []",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 72,
+        "kind": "assignment",
+        "line": 1159,
+        "end_line": 1159,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "Any"
+        ],
+        "stored_names": [
+          "client"
+        ],
+        "terminal_flow": false,
+        "source": "client: Any | None = None",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 73,
+        "kind": "assignment",
+        "line": 1160,
+        "end_line": 1160,
+        "condition": "",
+        "calls": [
+          "_openai_model_from_cfg"
+        ],
+        "loaded_names": [
+          "_openai_model_from_cfg",
+          "cfg"
+        ],
+        "stored_names": [
+          "model"
+        ],
+        "terminal_flow": false,
+        "source": "model = _openai_model_from_cfg(cfg)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 74,
+        "kind": "expression",
+        "line": 1163,
+        "end_line": 1163,
+        "condition": "",
+        "calls": [
+          "stage"
+        ],
+        "loaded_names": [
+          "stage"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "stage(\"Validando configuração preventiva\")",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 75,
+        "kind": "assignment",
+        "line": 1164,
+        "end_line": 1164,
+        "condition": "",
+        "calls": [
+          "check_config"
+        ],
+        "loaded_names": [
+          "cfg",
+          "check_config"
+        ],
+        "stored_names": [
+          "precheck"
+        ],
+        "terminal_flow": false,
+        "source": "precheck = check_config(cfg)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 76,
+        "kind": "if",
+        "line": 1165,
+        "end_line": 1166,
+        "condition": "precheck.get(\"warnings\")",
+        "calls": [
+          "precheck.get",
+          "warnings.extend"
+        ],
+        "loaded_names": [
+          "precheck",
+          "warnings"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "if precheck.get(\"warnings\"):\n        warnings.extend(precheck[\"warnings\"])",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 77,
+        "kind": "if",
+        "line": 1167,
+        "end_line": 1168,
+        "condition": "precheck.get(\"errors\")",
+        "calls": [
+          "'\\n- '.join",
+          "RuntimeError",
+          "precheck.get"
+        ],
+        "loaded_names": [
+          "precheck"
+        ],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "if precheck.get(\"errors\"):\n        raise RuntimeError(\"Configuração inválida:\\n- \" + \"\\n- \".join(precheck[\"errors\"]))",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 78,
+        "kind": "assignment",
+        "line": 1170,
+        "end_line": 1170,
+        "condition": "",
+        "calls": [
+          "Path",
+          "Path(args.document_json).expanduser",
+          "Path(args.document_json).expanduser().resolve"
+        ],
+        "loaded_names": [
+          "Path",
+          "args",
+          "out_dir",
+          "prefix"
+        ],
+        "stored_names": [
+          "document_json_path"
+        ],
+        "terminal_flow": false,
+        "source": "document_json_path = Path(args.document_json).expanduser().resolve() if args.document_json else out_dir / f\"{prefix}.document.json\"",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: document"
+        ]
+      },
+      {
+        "body_index": 79,
+        "kind": "if",
+        "line": 1172,
+        "end_line": 1234,
+        "condition": "is_external_prisma_run",
+        "calls": [
+          "Path",
+          "RuntimeError",
+          "artifacts.get",
+          "bool",
+          "cfg.get",
+          "isinstance",
+          "make_client",
+          "make_run_report",
+          "print_outputs",
+          "prisma_outputs.setdefault",
+          "render_external_prisma_outputs",
+          "run_external_prisma_search",
+          "search_cfg.get",
+          "stage",
+          "str",
+          "write_json",
+          "write_outputs_manifest",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown"
+        ],
+        "loaded_names": [
+          "PIPELINE_VERSION",
+          "Path",
+          "args",
+          "artifacts",
+          "cache_dir",
+          "cfg",
+          "client",
+          "is_external_prisma_run",
+          "make_client",
+          "make_run_report",
+          "model",
+          "org_path",
+          "out_dir",
+          "outputs",
+          "pdf_path",
+          "precheck",
+          "prefix",
+          "print_outputs",
+          "prisma_outputs",
+          "prompt_lock",
+          "prompt_lock_md",
+          "prompt_lock_path",
+          "render_external_prisma_outputs",
+          "report",
+          "report_json_path",
+          "run_external_prisma_search",
+          "search_cfg",
+          "stage",
+          "warnings",
+          "work_dir",
+          "write_json",
+          "write_outputs_manifest",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown"
+        ],
+        "stored_names": [
+          "artifacts",
+          "client",
+          "model",
+          "org_path",
+          "outputs",
+          "pdf_path",
+          "prisma_outputs",
+          "prompt_lock",
+          "prompt_lock_md",
+          "prompt_lock_path",
+          "report",
+          "report_json_path",
+          "search_cfg"
+        ],
+        "terminal_flow": true,
+        "source": "if is_external_prisma_run:\n        if args.somente_mapa_mental:\n            raise RuntimeError(\"O perfil de busca PRISMA não produz document.json; use a geração normal ou --prisma-importar-triagem.\")\n        search_cfg = cfg.get(\"busca_prisma\", {}) if isinstance(cfg.get(\"busca_prisma\"), dict) else {}\n        if bool(search_cfg.get(\"pre_triagem_ia\", False)):\n            stage(\"Inicializando cliente OpenAI para pré-triagem assistida\")\n            client, model = make_client(model)\n        stage(\"Executando busca bibliográfica externa e preparando triagem humana\")\n        prisma_outputs = run_external_prisma_search(\n            cfg,\n            out_dir,\n            prefix,\n            progress=stage,\n            client=client,\n            model=model,\n        )\n        org_path, pdf_path = render_external_prisma_outputs(\n            cfg,\n            out_dir,\n            prefix,\n            prisma_outputs,\n            phase=\"preliminar\",\n        )\n        artifacts = prisma_outputs.setdefault(\"artefatos\", {}) if isinstance(prisma_outputs, dict) else {}\n        if org_path:\n            artifacts[\"relatorio_org\"] = str(org_path)\n        if pdf_path:\n            artifacts[\"relatorio_pdf\"] = str(pdf_path)\n        report_json_path = artifacts.get(\"prisma_report_json\") if isinstance(artifacts, dict) else \"\"\n        if report_json_path:\n            write_json(Path(str(report_json_path)), prisma_outputs)\n        prompt_lock_path = out_dir / f\"{prefix}.prompt_lock.json\"\n        prompt_lock_md = out_dir / f\"{prefix}.prompt_lock.md\"\n        stage(\"Registrando prompt_lock\")\n        prompt_lock = write_prompt_lock(cfg, prompt_lock_path)\n        write_prompt_lock_markdown(prompt_lock, prompt_lock_md)\n        outputs = {\n            \"output_dir\": str(out_dir),\n            \"work_dir\": str(work_dir),\n            \"cache_dir\": str(cache_dir),\n            \"document_json\": None,\n            \"org\": str(org_path) if org_path else None,\n            \"bib\": None,\n            \"pdf\": str(pdf_path) if pdf_path else None,\n            \"docx\": None,\n            \"relatorio_pesquisa\": prisma_outputs,\n            \"prompt_lock\": str(prompt_lock_path),\n        }\n        report = make_run_report(\n            cfg=cfg,\n            config_path=Path(str(cfg.get(\"__config_path__\"))),\n            out_dir=out_dir,\n            prefix=prefix,\n            model=None,\n            outputs=outputs,\n            warnings=warnings,\n            extra={\"mode\": \"prisma_busca_externa\", \"precheck\": precheck},\n        )\n        write_json(out_dir / f\"{prefix}.run_report.json\", report)\n        write_json(out_dir / f\"{prefix}.rc10_report.json\", outputs)\n        write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)\n        print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} — busca PRISMA concluída; aguarda triagem humana\")\n        return 0",
+        "selected": false,
+        "overlap": true,
+        "score": 11,
+        "explicit_helpers": [],
+        "overlap_helpers": [
+          "render_external_prisma_outputs"
+        ],
+        "document_terms": [
+          "bib",
+          "document",
+          "docx",
+          "mapa",
+          "mental",
+          "org",
+          "output",
+          "pdf",
+          "render"
+        ],
+        "prisma_terms": [
+          "prisma",
+          "triagem"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: bib, document, docx, mapa, mental, org, output, pdf, render",
+          "helpers sobrepostos com PRISMA: render_external_prisma_outputs",
+          "excluído por PRISMA/artigo genérico: prisma, triagem"
+        ]
+      },
+      {
+        "body_index": 80,
+        "kind": "if",
+        "line": 1236,
+        "end_line": 1289,
+        "condition": "args.somente_mapa_mental",
+        "calls": [
+          "(mm_diag or {}).get",
+          "FileNotFoundError",
+          "Path",
+          "RuntimeError",
+          "attach_existing_mindmap_if_available",
+          "bool",
+          "cfg.get",
+          "delete_existing_mindmap_outputs",
+          "dict",
+          "document.model_dump",
+          "document_json_path.exists",
+          "generate_and_attach_mindmap",
+          "json.dumps",
+          "load_existing_document_json",
+          "make_client",
+          "make_run_report",
+          "print",
+          "print_outputs",
+          "should_generate_mindmap",
+          "stage",
+          "str",
+          "warnings.append",
+          "write_json",
+          "write_outputs_manifest"
+        ],
+        "loaded_names": [
+          "PIPELINE_VERSION",
+          "Path",
+          "args",
+          "attach_existing_mindmap_if_available",
+          "cfg",
+          "client",
+          "delete_existing_mindmap_outputs",
+          "document",
+          "document_json_path",
+          "generate_and_attach_mindmap",
+          "json",
+          "load_existing_document_json",
+          "make_client",
+          "make_run_report",
+          "mm_diag",
+          "model",
+          "out_dir",
+          "outputs",
+          "prefix",
+          "print_outputs",
+          "removed_mindmap_files",
+          "report",
+          "should_generate_mindmap",
+          "stage",
+          "w",
+          "warnings",
+          "write_json",
+          "write_outputs_manifest"
+        ],
+        "stored_names": [
+          "client",
+          "document",
+          "mm_diag",
+          "model",
+          "outputs",
+          "removed_mindmap_files",
+          "report",
+          "w"
+        ],
+        "terminal_flow": true,
+        "source": "if args.somente_mapa_mental:\n        if not document_json_path.exists():\n            raise FileNotFoundError(f\"document.json não encontrado para --somente-mapa-mental: {document_json_path}\")\n        if not should_generate_mindmap(cfg):\n            raise RuntimeError(\"[mapa_mental] não está ativo no TOML. Ative gerar=true/ativo=true para usar --somente-mapa-mental.\")\n        stage(\"Carregando document.json existente\")\n        document = load_existing_document_json(document_json_path)\n        removed_mindmap_files: list[str] = []\n        if args.forcar_regeneracao_mapa_mental:\n            stage(\"Removendo mapa mental existente\")\n            removed_mindmap_files = delete_existing_mindmap_outputs(cfg, out_dir)\n        mm_diag = None\n        if args.reusar_mapa_mental:\n            stage(\"Tentando reutilizar mapa mental existente\")\n            mm_diag = attach_existing_mindmap_if_available(document, cfg, out_dir)\n            if not mm_diag:\n                warnings.append(\"Mapa mental existente não encontrado; gerando novo mapa mental.\")\n        if not mm_diag:\n            stage(\"Inicializando cliente OpenAI\")\n            client, model = make_client(model)\n            stage(\"Gerando/renderizando apenas o mapa mental\")\n            mm_diag = generate_and_attach_mindmap(client, model, cfg, document, out_dir)\n        if removed_mindmap_files:\n            mm_diag = dict(mm_diag or {})\n            mm_diag[\"removed_before_regeneration\"] = removed_mindmap_files\n        document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n        stage(\"Salvando document.json atualizado\")\n        write_json(document_json_path, document.model_dump())\n        outputs = {\n            \"output_dir\": str(out_dir),\n            \"document_json\": str(document_json_path),\n            \"mindmap_puml\": (mm_diag or {}).get(\"puml_path\") if mm_diag else None,\n            \"mindmap_image\": (mm_diag or {}).get(\"image_path\") if mm_diag else None,\n            \"mindmap_reused\": bool((mm_diag or {}).get(\"reused\")),\n            \"mindmap_removed\": removed_mindmap_files,\n        }\n        report = make_run_report(\n            cfg=cfg,\n            config_path=Path(str(cfg.get(\"__config_path__\"))),\n            out_dir=out_dir,\n            prefix=prefix,\n            model=model,\n            outputs=outputs,\n            warnings=warnings,\n            extra={\"mode\": \"somente_mapa_mental\"},\n        )\n        write_json(out_dir / f\"{prefix}.run_report.json\", report)\n        write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)\n        print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} — mapa mental renderizado\")\n        if warnings:\n            print(\"Avisos:\")\n            for w in warnings:\n                print(f\"- {w}\")\n        return 0",
+        "selected": true,
+        "overlap": false,
+        "score": 10,
+        "explicit_helpers": [
+          "load_existing_document_json"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "document",
+          "mapa",
+          "mental",
+          "output",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helpers documentais explícitos: load_existing_document_json",
+          "termos documentais: document, mapa, mental, output, render"
+        ]
+      },
+      {
+        "body_index": 81,
+        "kind": "assignment",
+        "line": 1291,
+        "end_line": 1291,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [
+          "prisma_outputs"
+        ],
+        "terminal_flow": false,
+        "source": "prisma_outputs = None",
+        "selected": false,
+        "overlap": true,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output",
+          "excluído por PRISMA/artigo genérico: prisma"
+        ]
+      },
+      {
+        "body_index": 82,
+        "kind": "assignment",
+        "line": 1292,
+        "end_line": 1292,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "Any"
+        ],
+        "stored_names": [
+          "source_info"
+        ],
+        "terminal_flow": false,
+        "source": "source_info: dict[str, Any] | None = None",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 83,
+        "kind": "assignment",
+        "line": 1293,
+        "end_line": 1293,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "Any"
+        ],
+        "stored_names": [
+          "paper_abstract_bundle"
+        ],
+        "terminal_flow": false,
+        "source": "paper_abstract_bundle: dict[str, Any] = {}",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: abstract"
+        ]
+      },
+      {
+        "body_index": 84,
+        "kind": "assignment",
+        "line": 1294,
+        "end_line": 1294,
+        "condition": "",
+        "calls": [
+          "abstract_sidecar_path"
+        ],
+        "loaded_names": [
+          "abstract_sidecar_path",
+          "out_dir",
+          "prefix"
+        ],
+        "stored_names": [
+          "paper_abstract_path"
+        ],
+        "terminal_flow": false,
+        "source": "paper_abstract_path = abstract_sidecar_path(out_dir, prefix)",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: abstract"
+        ]
+      },
+      {
+        "body_index": 85,
+        "kind": "if",
+        "line": 1296,
+        "end_line": 1449,
+        "condition": "args.somente_renderizar",
+        "calls": [
+          "', '.join",
+          "(cfg.get('documentos_locais', {}) if isinstance(cfg.get('documentos_locais'), dict) else {}).get",
+          "FileNotFoundError",
+          "Path",
+          "RuntimeError",
+          "attach_existing_mindmap_if_available",
+          "bool",
+          "build_bibliography",
+          "build_document_model",
+          "cfg.get",
+          "collect_orientation_docs",
+          "copy_documents_to_fulltext_cache",
+          "delete_existing_mindmap_outputs",
+          "discover_local_documents",
+          "document.model_dump",
+          "document_json_path.exists",
+          "generate_and_attach_mindmap",
+          "generate_paper_abstract_bundle",
+          "isinstance",
+          "json.dumps",
+          "load_existing_document_json",
+          "make_client",
+          "make_run_report",
+          "paper_abstract_path.exists",
+          "paper_abstracts_enabled",
+          "pipeline_cfg.get",
+          "print_outputs",
+          "prisma_enabled",
+          "raise_if_errors",
+          "read_paper_abstract_bundle",
+          "resolve_bib_for_existing_document",
+          "resumo_cfg_for_stage.get",
+          "run_prisma_report_outputs",
+          "sanitize_document_model_raw_bibkeys",
+          "sanitize_document_model_technical_leaks",
+          "should_generate_mindmap",
+          "stage",
+          "str",
+          "validate_document_model",
+          "warnings.append",
+          "write_json",
+          "write_outputs_manifest",
+          "write_paper_abstract_bundle",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown"
+        ],
+        "loaded_names": [
+          "PIPELINE_VERSION",
+          "PaperAbstractError",
+          "Path",
+          "args",
+          "attach_existing_mindmap_if_available",
+          "bib_keys",
+          "bib_path",
+          "bib_result",
+          "build_bibliography",
+          "build_document_model",
+          "cache_dir",
+          "cfg",
+          "clean_cache",
+          "client",
+          "collect_orientation_docs",
+          "copy_documents_to_fulltext_cache",
+          "delete_existing_mindmap_outputs",
+          "discover_local_documents",
+          "docs",
+          "document",
+          "document_json_path",
+          "exc",
+          "executar_documento",
+          "generate_and_attach_mindmap",
+          "generate_paper_abstract_bundle",
+          "json",
+          "leak_repairs",
+          "load_existing_document_json",
+          "make_client",
+          "make_run_report",
+          "mm_diag",
+          "model",
+          "orientations",
+          "out_dir",
+          "outputs",
+          "paper_abstract_bundle",
+          "paper_abstract_path",
+          "paper_abstracts_enabled",
+          "pipeline_cfg",
+          "prefix",
+          "print_outputs",
+          "prisma_enabled",
+          "prisma_outputs",
+          "prompt_lock",
+          "prompt_lock_md",
+          "prompt_lock_path",
+          "raise_if_errors",
+          "raw_key_repairs",
+          "read_paper_abstract_bundle",
+          "removed_mindmap_files",
+          "report",
+          "resolve_bib_for_existing_document",
+          "resumo_cfg_for_stage",
+          "run_prisma_report_outputs",
+          "sanitize_document_model_raw_bibkeys",
+          "sanitize_document_model_technical_leaks",
+          "should_generate_mindmap",
+          "source_info",
+          "stage",
+          "validate_document_model",
+          "warnings",
+          "work_dir",
+          "write_json",
+          "write_outputs_manifest",
+          "write_paper_abstract_bundle",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown"
+        ],
+        "stored_names": [
+          "bib_keys",
+          "bib_path",
+          "bib_result",
+          "clean_cache",
+          "client",
+          "docs",
+          "document",
+          "executar_documento",
+          "leak_repairs",
+          "mm_diag",
+          "model",
+          "orientations",
+          "outputs",
+          "paper_abstract_bundle",
+          "pipeline_cfg",
+          "prisma_outputs",
+          "prompt_lock",
+          "prompt_lock_md",
+          "prompt_lock_path",
+          "raw_key_repairs",
+          "removed_mindmap_files",
+          "report",
+          "resumo_cfg_for_stage",
+          "source_info"
+        ],
+        "terminal_flow": true,
+        "source": "if args.somente_renderizar:\n        if not document_json_path.exists():\n            raise FileNotFoundError(f\"document.json não encontrado para --somente-renderizar: {document_json_path}\")\n        stage(\"Carregando document.json existente\")\n        document = load_existing_document_json(document_json_path)\n        stage(\"Resolvendo bibliografia para renderização\")\n        bib_path, bib_keys = resolve_bib_for_existing_document(document, document_json_path, out_dir, prefix)\n        stage(\"Saneando document_model existente\")\n        document, leak_repairs = sanitize_document_model_technical_leaks(document)\n        if leak_repairs:\n            warnings.append(\"Menções técnicas removidas/reescritas no document_model existente: \" + \", \".join(leak_repairs[:20]))\n        document, raw_key_repairs = sanitize_document_model_raw_bibkeys(document, bib_keys)\n        if raw_key_repairs:\n            warnings.append(\"Chaves BibTeX cruas convertidas em citações LaTeX no document_model existente: \" + \", \".join(raw_key_repairs[:20]))\n        if paper_abstracts_enabled(cfg):\n            if paper_abstract_path.exists():\n                paper_abstract_bundle = read_paper_abstract_bundle(paper_abstract_path)\n            else:\n                warnings.append(\n                    \"RESUMO: arquivo de resumos não encontrado no modo --somente-renderizar; \"\n                    \"o ORG/DOCX será recompilado sem inserir resumo. Execute uma geração completa para criá-lo.\"\n                )\n        if args.forcar_regeneracao_mapa_mental:\n            if not should_generate_mindmap(cfg):\n                raise RuntimeError(\"[mapa_mental] não está ativo no TOML. Ative gerar=true/ativo=true para usar --forcar-regeneracao-mapa-mental.\")\n            stage(\"Removendo mapa mental existente\")\n            removed_mindmap_files = delete_existing_mindmap_outputs(cfg, out_dir)\n            if removed_mindmap_files:\n                warnings.append(\"Arquivos de mapa mental removidos antes da regeneração: \" + \", \".join(removed_mindmap_files[:10]))\n            stage(\"Inicializando cliente OpenAI para regenerar mapa mental\")\n            client, model = make_client(model)\n            stage(\"Regenerando mapa mental antes da renderização\")\n            mm_diag = generate_and_attach_mindmap(client, model, cfg, document, out_dir)\n            document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n            stage(\"Salvando document.json atualizado com novo mapa mental\")\n            write_json(document_json_path, document.model_dump())\n        elif args.reusar_mapa_mental:\n            stage(\"Tentando reutilizar mapa mental existente\")\n            mm_diag = attach_existing_mindmap_if_available(document, cfg, out_dir)\n            if mm_diag:\n                document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n                write_json(document_json_path, document.model_dump())\n            else:\n                warnings.append(\"--reusar-mapa-mental informado, mas nenhum mapa existente foi encontrado; renderização seguirá com figuras já registradas no document.json.\")\n    else:\n        pipeline_cfg = cfg.get(\"pipeline\", {}) if isinstance(cfg.get(\"pipeline\"), dict) else {}\n        executar_documento = bool(pipeline_cfg.get(\"executar_documento\", True))\n        stage(\"Inicializando cliente OpenAI\")\n        client, model = make_client(model)\n        stage(\"Descobrindo e extraindo documentos locais\")\n        docs, source_info = discover_local_documents(cfg, work_dir)\n        clean_cache = bool((cfg.get(\"documentos_locais\", {}) if isinstance(cfg.get(\"documentos_locais\"), dict) else {}).get(\"limpar_cache_anterior\", True))\n        stage(\"Copiando documentos para fulltext_cache\")\n        copy_documents_to_fulltext_cache(docs, cache_dir, clean=clean_cache)\n        stage(\"Carregando orientações do projeto\")\n        orientations = collect_orientation_docs(cfg, work_dir)\n        stage(\"Gerando e validando bibliografia\")\n        bib_result = build_bibliography(cfg, docs, out_dir, prefix, client, model)\n        bib_path = bib_result.bib_path\n        bib_keys = bib_result.keys\n        stage(\"Verificando geração de relatório PRISMA\")\n        prisma_outputs = run_prisma_report_outputs(cfg, docs, orientations, bib_result, out_dir, prefix) if prisma_enabled(cfg) else None\n\n        if not executar_documento:\n            outputs = {\n                \"output_dir\": str(out_dir),\n        \"work_dir\": str(work_dir),\n        \"cache_dir\": str(cache_dir),\n                \"work_dir\": str(work_dir),\n                \"cache_dir\": str(cache_dir),\n                \"document_json\": None,\n                \"org\": None,\n                \"bib\": str(bib_path),\n                \"pdf\": None,\n                \"docx\": None,\n                \"relatorio_pesquisa\": prisma_outputs,\n            }\n            prompt_lock_path = out_dir / f\"{prefix}.prompt_lock.json\"\n            prompt_lock_md = out_dir / f\"{prefix}.prompt_lock.md\"\n            stage(\"Registrando prompt_lock\")\n            prompt_lock = write_prompt_lock(cfg, prompt_lock_path)\n            write_prompt_lock_markdown(prompt_lock, prompt_lock_md)\n            outputs[\"prompt_lock\"] = str(prompt_lock_path)\n            report = make_run_report(\n                cfg=cfg,\n                config_path=Path(str(cfg.get(\"__config_path__\"))),\n                out_dir=out_dir,\n                prefix=prefix,\n                model=model,\n                outputs=outputs,\n                warnings=warnings,\n                extra={\"mode\": \"research_only\", \"source_info\": source_info, \"work_dir\": str(work_dir), \"cache_dir\": str(cache_dir)},\n            )\n            write_json(out_dir / f\"{prefix}.run_report.json\", report)\n            write_json(out_dir / f\"{prefix}.rc10_report.json\", outputs)  # compatibilidade\n            write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)\n            print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} concluído sem documento acadêmico\")\n            return 0\n\n        resumo_cfg_for_stage = cfg.get(\"resumo_artigos\", {}) if isinstance(cfg.get(\"resumo_artigos\"), dict) else {}\n        if resumo_cfg_for_stage.get(\"ativo\") and bool(resumo_cfg_for_stage.get(\"geracao_em_etapas\", True)):\n            stage(\"Gerando document.json canônico com IA em etapas\")\n        else:\n            stage(\"Gerando document.json canônico com IA\")\n        document = build_document_model(\n            client,\n            model,\n            cfg,\n            docs,\n            orientations,\n            bib_keys,\n            bib_path,\n            progress=stage,\n            checkpoint_dir=out_dir,\n            prefix=prefix,\n        )\n        if not document.bibliography.entries_used:\n            document.bibliography.entries_used = bib_keys\n        if not document.bibliography.bib_path:\n            document.bibliography.bib_path = bib_path.name\n        stage(\"Saneando linguagem técnica do document_model\")\n        document, leak_repairs = sanitize_document_model_technical_leaks(document)\n        if leak_repairs:\n            warnings.append(\"Menções técnicas removidas/reescritas no document_model: \" + \", \".join(leak_repairs[:20]))\n        document, raw_key_repairs = sanitize_document_model_raw_bibkeys(document, bib_keys)\n        if raw_key_repairs:\n            warnings.append(\"Chaves BibTeX cruas convertidas em citações LaTeX no document_model: \" + \", \".join(raw_key_repairs[:20]))\n        stage(\"Validando document_model\")\n        raise_if_errors(validate_document_model(document, bib_keys), \"Validação do document_model falhou\")\n        if paper_abstracts_enabled(cfg):\n            stage(\"Gerando resumo e palavras-chave do paper\")\n            try:\n                paper_abstract_bundle = generate_paper_abstract_bundle(client, model, document, cfg)\n                write_paper_abstract_bundle(paper_abstract_path, paper_abstract_bundle)\n            except PaperAbstractError as exc:\n                raise RuntimeError(\"Falha ao gerar o resumo acadêmico do paper: \" + str(exc)) from exc\n        stage(\"Gerando/anexando mapa mental, se configurado\")\n        mm_diag = None\n        if args.forcar_regeneracao_mapa_mental:\n            removed_mindmap_files = delete_existing_mindmap_outputs(cfg, out_dir)\n            if removed_mindmap_files:\n                warnings.append(\"Arquivos de mapa mental removidos antes da regeneração: \" + \", \".join(removed_mindmap_files[:10]))\n        if args.reusar_mapa_mental:\n            mm_diag = attach_existing_mindmap_if_available(document, cfg, out_dir)\n            if not mm_diag:\n                warnings.append(\"Mapa mental existente não encontrado; gerando novo mapa mental.\")\n        if not mm_diag:\n            mm_diag = generate_and_attach_mindmap(client, model, cfg, document, out_dir)\n        document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n        document.diagnostics.source_info_json = json.dumps(source_info or {}, ensure_ascii=False)\n        if prisma_outputs:\n            document.diagnostics.relatorio_pesquisa_json = json.dumps(prisma_outputs, ensure_ascii=False)\n        stage(\"Salvando document.json\")\n        write_json(document_json_path, document.model_dump())",
+        "selected": false,
+        "overlap": true,
+        "score": 29,
+        "explicit_helpers": [
+          "build_bibliography",
+          "load_existing_document_json",
+          "resolve_bib_for_existing_document"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract",
+          "bib",
+          "bibliografia",
+          "bibliography",
+          "document",
+          "documento",
+          "docx",
+          "latex",
+          "mapa",
+          "mental",
+          "org",
+          "output",
+          "pdf",
+          "render"
+        ],
+        "prisma_terms": [
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helpers documentais explícitos: build_bibliography, load_existing_document_json, resolve_bib_for_existing_document",
+          "termos documentais: abstract, bib, bibliografia, bibliography, document, documento, docx, latex, mapa, mental, org, output, pdf, render",
+          "excluído por PRISMA/artigo genérico: prisma"
+        ]
+      },
+      {
+        "body_index": 86,
+        "kind": "expression",
+        "line": 1451,
+        "end_line": 1451,
+        "condition": "",
+        "calls": [
+          "stage"
+        ],
+        "loaded_names": [
+          "stage"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "stage(\"Renderizando ORG/LaTeX\")",
+        "selected": true,
+        "overlap": false,
+        "score": 3,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "latex",
+          "org",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: latex, org, render"
+        ]
+      },
+      {
+        "body_index": 87,
+        "kind": "assignment",
+        "line": 1452,
+        "end_line": 1452,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "out_dir",
+          "prefix"
+        ],
+        "stored_names": [
+          "org_path"
+        ],
+        "terminal_flow": false,
+        "source": "org_path = out_dir / f\"{prefix}.org\"",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "org"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: org"
+        ]
+      },
+      {
+        "body_index": 88,
+        "kind": "assignment",
+        "line": 1453,
+        "end_line": 1453,
+        "condition": "",
+        "calls": [
+          "locals",
+          "render_org_latex"
+        ],
+        "loaded_names": [
+          "bib_keys",
+          "bib_path",
+          "cfg",
+          "document",
+          "org_path",
+          "prefix",
+          "render_org_latex"
+        ],
+        "stored_names": [
+          "org_text"
+        ],
+        "terminal_flow": false,
+        "source": "org_text = render_org_latex(document, org_path, bib_path.name if 'bib_path' in locals() else f\"{prefix}.bib\", cfg=cfg, bib_keys=bib_keys if 'bib_keys' in locals() else None)",
+        "selected": true,
+        "overlap": false,
+        "score": 10,
+        "explicit_helpers": [
+          "render_org_latex"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "document",
+          "latex",
+          "org",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helpers documentais explícitos: render_org_latex",
+          "termos documentais: bib, document, latex, org, render"
+        ]
+      },
+      {
+        "body_index": 89,
+        "kind": "if",
+        "line": 1454,
+        "end_line": 1456,
+        "condition": "paper_abstract_bundle",
+        "calls": [
+          "inject_paper_abstracts_into_org",
+          "main_document_abstract_languages",
+          "stage"
+        ],
+        "loaded_names": [
+          "cfg",
+          "inject_paper_abstracts_into_org",
+          "main_document_abstract_languages",
+          "org_path",
+          "paper_abstract_bundle",
+          "stage"
+        ],
+        "stored_names": [
+          "org_text"
+        ],
+        "terminal_flow": false,
+        "source": "if paper_abstract_bundle:\n        stage(\"Inserindo resumo e palavras-chave no ORG\")\n        org_text = inject_paper_abstracts_into_org(org_path, paper_abstract_bundle, main_document_abstract_languages(cfg))",
+        "selected": true,
+        "overlap": false,
+        "score": 4,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract",
+          "document",
+          "language",
+          "org"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: abstract, document, language, org"
+        ]
+      },
+      {
+        "body_index": 90,
+        "kind": "expression",
+        "line": 1457,
+        "end_line": 1457,
+        "condition": "",
+        "calls": [
+          "stage"
+        ],
+        "loaded_names": [
+          "stage"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "stage(\"Validando ORG renderizado\")",
+        "selected": true,
+        "overlap": false,
+        "score": 2,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "org",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: org, render"
+        ]
+      },
+      {
+        "body_index": 91,
+        "kind": "expression",
+        "line": 1458,
+        "end_line": 1458,
+        "condition": "",
+        "calls": [
+          "raise_if_errors",
+          "validate_org_text"
+        ],
+        "loaded_names": [
+          "bib_keys",
+          "org_text",
+          "raise_if_errors",
+          "validate_org_text"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "raise_if_errors(validate_org_text(org_text, bib_keys), \"Validação do ORG renderizado falhou\")",
+        "selected": true,
+        "overlap": false,
+        "score": 3,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "org",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: bib, org, render"
+        ]
+      },
+      {
+        "body_index": 92,
+        "kind": "assignment",
+        "line": 1460,
+        "end_line": 1460,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [
+          "pdf_path"
+        ],
+        "terminal_flow": false,
+        "source": "pdf_path = None",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "pdf"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: pdf"
+        ]
+      },
+      {
+        "body_index": 93,
+        "kind": "if",
+        "line": 1461,
+        "end_line": 1466,
+        "condition": "bool(doc_cfg.get(\"exportar_pdf\", True))",
+        "calls": [
+          "bool",
+          "doc_cfg.get",
+          "latex_cfg.get",
+          "resolve_path",
+          "run_compile_sequence",
+          "stage",
+          "str"
+        ],
+        "loaded_names": [
+          "academic_writing",
+          "config_dir",
+          "doc_cfg",
+          "latex_cfg",
+          "latex_extra",
+          "org_path",
+          "pdf_engine",
+          "resolve_path",
+          "run_compile_sequence",
+          "stage"
+        ],
+        "stored_names": [
+          "academic_writing",
+          "latex_extra",
+          "pdf_engine",
+          "pdf_path"
+        ],
+        "terminal_flow": false,
+        "source": "if bool(doc_cfg.get(\"exportar_pdf\", True)):\n        academic_writing = resolve_path(latex_cfg.get(\"org_latex_class_init\"), config_dir)\n        latex_extra = resolve_path(latex_cfg.get(\"latex_extra_path\"), config_dir)\n        pdf_engine = str(latex_cfg.get(\"pdf_engine\") or \"lualatex\")\n        stage(\"Compilando PDF via Emacs/LaTeX\")\n        pdf_path = run_compile_sequence(org_path, academic_writing=academic_writing, latex_extra_path=latex_extra, pdf_engine=pdf_engine)",
+        "selected": true,
+        "overlap": false,
+        "score": 3,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "latex",
+          "org",
+          "pdf"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: latex, org, pdf"
+        ]
+      },
+      {
+        "body_index": 94,
+        "kind": "assignment",
+        "line": 1468,
+        "end_line": 1468,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [
+          "docx_path"
+        ],
+        "terminal_flow": false,
+        "source": "docx_path = None",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "docx"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: docx"
+        ]
+      },
+      {
+        "body_index": 95,
+        "kind": "assignment",
+        "line": 1469,
+        "end_line": 1469,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "Any"
+        ],
+        "stored_names": [
+          "docx_validation"
+        ],
+        "terminal_flow": false,
+        "source": "docx_validation: dict[str, Any] | None = None",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "docx"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: docx"
+        ]
+      },
+      {
+        "body_index": 96,
+        "kind": "if",
+        "line": 1470,
+        "end_line": 1480,
+        "condition": "bool(doc_cfg.get(\"exportar_docx\", True))",
+        "calls": [
+          "bool",
+          "cfg.get",
+          "doc_cfg.get",
+          "docx_cfg.get",
+          "docx_validation.get",
+          "inject_paper_abstracts_into_docx",
+          "isinstance",
+          "main_document_abstract_languages",
+          "render_docx",
+          "resolve_path",
+          "stage",
+          "validate_docx_file",
+          "warnings.extend"
+        ],
+        "loaded_names": [
+          "bib_path",
+          "cfg",
+          "config_dir",
+          "doc_cfg",
+          "document",
+          "docx_cfg",
+          "docx_path",
+          "docx_validation",
+          "inject_paper_abstracts_into_docx",
+          "main_document_abstract_languages",
+          "out_dir",
+          "paper_abstract_bundle",
+          "prefix",
+          "ref",
+          "render_docx",
+          "resolve_path",
+          "stage",
+          "validate_docx_file",
+          "w",
+          "warnings"
+        ],
+        "stored_names": [
+          "docx_cfg",
+          "docx_path",
+          "docx_validation",
+          "ref",
+          "w"
+        ],
+        "terminal_flow": false,
+        "source": "if bool(doc_cfg.get(\"exportar_docx\", True)):\n        docx_cfg = cfg.get(\"docx\", {}) if isinstance(cfg.get(\"docx\"), dict) else {}\n        ref = resolve_path(docx_cfg.get(\"reference_docx\") or doc_cfg.get(\"docx_reference\"), config_dir)\n        stage(\"Renderizando DOCX\")\n        docx_path = render_docx(document, out_dir / f\"{prefix}.docx\", bib_path=bib_path, reference_docx=ref, cfg=cfg)\n        if paper_abstract_bundle:\n            stage(\"Inserindo resumo e palavras-chave no DOCX\")\n            inject_paper_abstracts_into_docx(docx_path, paper_abstract_bundle, main_document_abstract_languages(cfg))\n        docx_validation = validate_docx_file(docx_path, expected_title=document.metadata.titulo, require_references=bool(document.bibliography.entries_used))\n        if docx_validation and docx_validation.get(\"warnings\"):\n            warnings.extend([f\"DOCX: {w}\" for w in docx_validation.get(\"warnings\", [])])",
+        "selected": true,
+        "overlap": false,
+        "score": 8,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract",
+          "bib",
+          "bibliography",
+          "document",
+          "docx",
+          "language",
+          "reference",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: abstract, bib, bibliography, document, docx, language, reference, render"
+        ]
+      },
+      {
+        "body_index": 97,
+        "kind": "assignment",
+        "line": 1482,
+        "end_line": 1482,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "Any"
+        ],
+        "stored_names": [
+          "translated_outputs"
+        ],
+        "terminal_flow": false,
+        "source": "translated_outputs: dict[str, Any] = {}",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output"
+        ]
+      },
+      {
+        "body_index": 98,
+        "kind": "if",
+        "line": 1483,
+        "end_line": 1509,
+        "condition": "args.somente_renderizar",
+        "calls": [
+          "render_additional_language_versions",
+          "requested_translation_languages",
+          "warnings.append",
+          "warnings.extend"
+        ],
+        "loaded_names": [
+          "TranslationError",
+          "args",
+          "bib_keys",
+          "bib_path",
+          "cfg",
+          "client",
+          "config_dir",
+          "doc_cfg",
+          "document",
+          "exc",
+          "latex_cfg",
+          "model",
+          "out_dir",
+          "paper_abstract_bundle",
+          "prefix",
+          "render_additional_language_versions",
+          "requested_translation_languages",
+          "translation_warnings",
+          "warnings"
+        ],
+        "stored_names": [
+          "translated_outputs",
+          "translation_warnings"
+        ],
+        "terminal_flow": false,
+        "source": "if args.somente_renderizar:\n        if requested_translation_languages(cfg):\n            warnings.append(\n                \"Versões adicionais por IA não foram atualizadas no modo --somente-renderizar. \"\n                \"Execute a geração completa para traduzir o document.json canônico.\"\n            )\n    elif requested_translation_languages(cfg):\n        try:\n            translated_outputs, translation_warnings = render_additional_language_versions(\n                client=client,\n                model=model,\n                cfg=cfg,\n                document=document,\n                bib_path=bib_path,\n                bib_keys=bib_keys,\n                out_dir=out_dir,\n                prefix=prefix,\n                doc_cfg=doc_cfg,\n                latex_cfg=latex_cfg,\n                config_dir=config_dir,\n                abstract_bundle=paper_abstract_bundle or None,\n            )\n            warnings.extend(translation_warnings)\n        except TranslationError as exc:\n            # Traduções são saídas opcionais: uma falha nelas não invalida o\n            # paper principal que já foi gerado e validado.\n            warnings.append(f\"TRADUÇÃO: {exc}\")",
+        "selected": true,
+        "overlap": false,
+        "score": 12,
+        "explicit_helpers": [
+          "render_additional_language_versions"
+        ],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract",
+          "bib",
+          "document",
+          "language",
+          "latex",
+          "output",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "helpers documentais explícitos: render_additional_language_versions",
+          "termos documentais: abstract, bib, document, language, latex, output, render"
+        ]
+      },
+      {
+        "body_index": 99,
+        "kind": "assignment",
+        "line": 1511,
+        "end_line": 1521,
+        "condition": "",
+        "calls": [
+          "_json_or_none",
+          "getattr",
+          "str"
+        ],
+        "loaded_names": [
+          "_json_or_none",
+          "bib_path",
+          "document",
+          "document_json_path",
+          "docx_path",
+          "org_path",
+          "out_dir",
+          "paper_abstract_bundle",
+          "paper_abstract_path",
+          "pdf_path",
+          "prisma_outputs",
+          "translated_outputs"
+        ],
+        "stored_names": [
+          "outputs"
+        ],
+        "terminal_flow": false,
+        "source": "outputs = {\n        \"output_dir\": str(out_dir),\n        \"document_json\": str(document_json_path),\n        \"org\": str(org_path),\n        \"bib\": str(bib_path),\n        \"pdf\": str(pdf_path) if pdf_path else None,\n        \"docx\": str(docx_path) if docx_path else None,\n        \"resumos_paper\": str(paper_abstract_path) if paper_abstract_bundle else None,\n        \"idiomas_adicionais\": translated_outputs,\n        \"relatorio_pesquisa\": _json_or_none(getattr(document.diagnostics, \"relatorio_pesquisa_json\", \"\")) if getattr(document, \"diagnostics\", None) else prisma_outputs,\n    }",
+        "selected": false,
+        "overlap": true,
+        "score": 8,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "abstract",
+          "bib",
+          "document",
+          "docx",
+          "idioma",
+          "org",
+          "output",
+          "pdf"
+        ],
+        "prisma_terms": [
+          "prisma"
+        ],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: abstract, bib, document, docx, idioma, org, output, pdf",
+          "excluído por PRISMA/artigo genérico: prisma"
+        ]
+      },
+      {
+        "body_index": 100,
+        "kind": "assignment",
+        "line": 1524,
+        "end_line": 1524,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "out_dir",
+          "prefix"
+        ],
+        "stored_names": [
+          "prompt_lock_path"
+        ],
+        "terminal_flow": false,
+        "source": "prompt_lock_path = out_dir / f\"{prefix}.prompt_lock.json\"",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 101,
+        "kind": "assignment",
+        "line": 1525,
+        "end_line": 1525,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "out_dir",
+          "prefix"
+        ],
+        "stored_names": [
+          "prompt_lock_md"
+        ],
+        "terminal_flow": false,
+        "source": "prompt_lock_md = out_dir / f\"{prefix}.prompt_lock.md\"",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 102,
+        "kind": "assignment",
+        "line": 1526,
+        "end_line": 1526,
+        "condition": "",
+        "calls": [
+          "write_prompt_lock"
+        ],
+        "loaded_names": [
+          "cfg",
+          "prompt_lock_path",
+          "write_prompt_lock"
+        ],
+        "stored_names": [
+          "prompt_lock"
+        ],
+        "terminal_flow": false,
+        "source": "prompt_lock = write_prompt_lock(cfg, prompt_lock_path)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 103,
+        "kind": "expression",
+        "line": 1527,
+        "end_line": 1527,
+        "condition": "",
+        "calls": [
+          "write_prompt_lock_markdown"
+        ],
+        "loaded_names": [
+          "prompt_lock",
+          "prompt_lock_md",
+          "write_prompt_lock_markdown"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "write_prompt_lock_markdown(prompt_lock, prompt_lock_md)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 104,
+        "kind": "assignment",
+        "line": 1528,
+        "end_line": 1528,
+        "condition": "",
+        "calls": [
+          "str"
+        ],
+        "loaded_names": [
+          "outputs",
+          "prompt_lock_path"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "outputs[\"prompt_lock\"] = str(prompt_lock_path)",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output"
+        ]
+      },
+      {
+        "body_index": 105,
+        "kind": "expression",
+        "line": 1531,
+        "end_line": 1531,
+        "condition": "",
+        "calls": [
+          "stage"
+        ],
+        "loaded_names": [
+          "stage"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "stage(\"Executando conformidade institucional\")",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 106,
+        "kind": "assignment",
+        "line": 1532,
+        "end_line": 1538,
+        "condition": "",
+        "calls": [
+          "run_institution_compliance"
+        ],
+        "loaded_names": [
+          "bib_path",
+          "cfg",
+          "docx_path",
+          "org_path",
+          "pdf_path",
+          "run_institution_compliance"
+        ],
+        "stored_names": [
+          "compliance_report"
+        ],
+        "terminal_flow": false,
+        "source": "compliance_report = run_institution_compliance(\n        cfg,\n        org_path=org_path,\n        bib_path=bib_path,\n        docx_path=docx_path,\n        pdf_path=pdf_path,\n    )",
+        "selected": true,
+        "overlap": false,
+        "score": 5,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "compliance",
+          "docx",
+          "org",
+          "pdf"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: bib, compliance, docx, org, pdf"
+        ]
+      },
+      {
+        "body_index": 107,
+        "kind": "assignment",
+        "line": 1539,
+        "end_line": 1539,
+        "condition": "",
+        "calls": [
+          "write_compliance_reports"
+        ],
+        "loaded_names": [
+          "compliance_report",
+          "out_dir",
+          "prefix",
+          "write_compliance_reports"
+        ],
+        "stored_names": [
+          "compliance_json",
+          "compliance_md"
+        ],
+        "terminal_flow": false,
+        "source": "compliance_md, compliance_json = write_compliance_reports(compliance_report, out_dir / prefix)",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "compliance"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: compliance"
+        ]
+      },
+      {
+        "body_index": 108,
+        "kind": "assignment",
+        "line": 1540,
+        "end_line": 1540,
+        "condition": "",
+        "calls": [
+          "str"
+        ],
+        "loaded_names": [
+          "compliance_md",
+          "outputs"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "outputs[\"compliance_report\"] = str(compliance_md)",
+        "selected": true,
+        "overlap": false,
+        "score": 2,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "compliance",
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: compliance, output"
+        ]
+      },
+      {
+        "body_index": 109,
+        "kind": "if",
+        "line": 1541,
+        "end_line": 1542,
+        "condition": "compliance_report.get(\"warnings\")",
+        "calls": [
+          "compliance_report.get",
+          "w.get",
+          "warnings.extend"
+        ],
+        "loaded_names": [
+          "compliance_report",
+          "w",
+          "warnings"
+        ],
+        "stored_names": [
+          "w"
+        ],
+        "terminal_flow": false,
+        "source": "if compliance_report.get(\"warnings\"):\n        warnings.extend([f\"CONFORMIDADE: {w.get('message')}\" for w in compliance_report.get(\"warnings\", [])])",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "compliance"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: compliance"
+        ]
+      },
+      {
+        "body_index": 110,
+        "kind": "if",
+        "line": 1543,
+        "end_line": 1544,
+        "condition": "not compliance_report.get(\"ok\")",
+        "calls": [
+          "compliance_report.get",
+          "e.get",
+          "warnings.extend"
+        ],
+        "loaded_names": [
+          "compliance_report",
+          "e",
+          "warnings"
+        ],
+        "stored_names": [
+          "e"
+        ],
+        "terminal_flow": false,
+        "source": "if not compliance_report.get(\"ok\"):\n        warnings.extend([f\"CONFORMIDADE CRÍTICA: {e.get('message')}\" for e in compliance_report.get(\"errors\", [])])",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "compliance"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: compliance"
+        ]
+      },
+      {
+        "body_index": 111,
+        "kind": "expression",
+        "line": 1546,
+        "end_line": 1546,
+        "condition": "",
+        "calls": [
+          "stage"
+        ],
+        "loaded_names": [
+          "stage"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "stage(\"Gerando relatório de qualidade\")",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 112,
+        "kind": "assignment",
+        "line": 1547,
+        "end_line": 1547,
+        "condition": "",
+        "calls": [
+          "build_quality_report"
+        ],
+        "loaded_names": [
+          "bib_keys",
+          "build_quality_report",
+          "document",
+          "org_path"
+        ],
+        "stored_names": [
+          "quality"
+        ],
+        "terminal_flow": false,
+        "source": "quality = build_quality_report(document, org_path=org_path, bib_keys=bib_keys)",
+        "selected": true,
+        "overlap": false,
+        "score": 4,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "bib",
+          "document",
+          "org",
+          "quality"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: bib, document, org, quality"
+        ]
+      },
+      {
+        "body_index": 113,
+        "kind": "assignment",
+        "line": 1548,
+        "end_line": 1548,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [
+          "out_dir",
+          "prefix"
+        ],
+        "stored_names": [
+          "quality_path"
+        ],
+        "terminal_flow": false,
+        "source": "quality_path = out_dir / f\"{prefix}.quality_report.md\"",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "quality"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: quality"
+        ]
+      },
+      {
+        "body_index": 114,
+        "kind": "expression",
+        "line": 1549,
+        "end_line": 1549,
+        "condition": "",
+        "calls": [
+          "write_quality_report"
+        ],
+        "loaded_names": [
+          "quality",
+          "quality_path",
+          "write_quality_report"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "write_quality_report(quality, quality_path)",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "quality"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: quality"
+        ]
+      },
+      {
+        "body_index": 115,
+        "kind": "if",
+        "line": 1550,
+        "end_line": 1551,
+        "condition": "quality.get(\"warnings\")",
+        "calls": [
+          "quality.get",
+          "warnings.extend"
+        ],
+        "loaded_names": [
+          "quality",
+          "w",
+          "warnings"
+        ],
+        "stored_names": [
+          "w"
+        ],
+        "terminal_flow": false,
+        "source": "if quality.get(\"warnings\"):\n        warnings.extend([f\"QUALIDADE: {w}\" for w in quality.get(\"warnings\", [])])",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "quality"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: quality"
+        ]
+      },
+      {
+        "body_index": 116,
+        "kind": "assignment",
+        "line": 1552,
+        "end_line": 1552,
+        "condition": "",
+        "calls": [
+          "str"
+        ],
+        "loaded_names": [
+          "outputs",
+          "quality_path"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "outputs[\"quality_report\"] = str(quality_path)",
+        "selected": true,
+        "overlap": false,
+        "score": 2,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output",
+          "quality"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output, quality"
+        ]
+      },
+      {
+        "body_index": 117,
+        "kind": "assignment",
+        "line": 1554,
+        "end_line": 1569,
+        "condition": "",
+        "calls": [
+          "Path",
+          "cfg.get",
+          "make_run_report",
+          "str"
+        ],
+        "loaded_names": [
+          "Path",
+          "args",
+          "cache_dir",
+          "cfg",
+          "docx_validation",
+          "make_run_report",
+          "model",
+          "out_dir",
+          "outputs",
+          "precheck",
+          "prefix",
+          "warnings",
+          "work_dir"
+        ],
+        "stored_names": [
+          "report"
+        ],
+        "terminal_flow": false,
+        "source": "report = make_run_report(\n        cfg=cfg,\n        config_path=Path(str(cfg.get(\"__config_path__\"))),\n        out_dir=out_dir,\n        prefix=prefix,\n        model=model,\n        outputs=outputs,\n        warnings=warnings,\n        extra={\n            \"mode\": \"somente_renderizar\" if args.somente_renderizar else \"full\",\n            \"work_dir\": str(work_dir),\n            \"cache_dir\": str(cache_dir),\n            \"precheck\": precheck,\n            \"docx_validation\": docx_validation,\n        },\n    )",
+        "selected": true,
+        "overlap": false,
+        "score": 3,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "docx",
+          "output",
+          "render"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: docx, output, render"
+        ]
+      },
+      {
+        "body_index": 118,
+        "kind": "expression",
+        "line": 1570,
+        "end_line": 1570,
+        "condition": "",
+        "calls": [
+          "write_json"
+        ],
+        "loaded_names": [
+          "out_dir",
+          "prefix",
+          "report",
+          "write_json"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "write_json(out_dir / f\"{prefix}.run_report.json\", report)",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 119,
+        "kind": "expression",
+        "line": 1571,
+        "end_line": 1571,
+        "condition": "",
+        "calls": [
+          "write_json"
+        ],
+        "loaded_names": [
+          "out_dir",
+          "outputs",
+          "prefix",
+          "write_json"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "write_json(out_dir / f\"{prefix}.rc10_report.json\", outputs)",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output"
+        ]
+      },
+      {
+        "body_index": 120,
+        "kind": "expression",
+        "line": 1572,
+        "end_line": 1572,
+        "condition": "",
+        "calls": [
+          "write_outputs_manifest"
+        ],
+        "loaded_names": [
+          "out_dir",
+          "outputs",
+          "prefix",
+          "write_outputs_manifest"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output"
+        ]
+      },
+      {
+        "body_index": 121,
+        "kind": "expression",
+        "line": 1573,
+        "end_line": 1573,
+        "condition": "",
+        "calls": [
+          "print_outputs"
+        ],
+        "loaded_names": [
+          "PIPELINE_VERSION",
+          "outputs",
+          "print_outputs"
+        ],
+        "stored_names": [],
+        "terminal_flow": false,
+        "source": "print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} concluído\")",
+        "selected": false,
+        "overlap": false,
+        "score": 1,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [
+          "output"
+        ],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "termos documentais: output"
+        ]
+      },
+      {
+        "body_index": 122,
+        "kind": "if",
+        "line": 1574,
+        "end_line": 1577,
+        "condition": "warnings",
+        "calls": [
+          "print"
+        ],
+        "loaded_names": [
+          "w",
+          "warnings"
+        ],
+        "stored_names": [
+          "w"
+        ],
+        "terminal_flow": false,
+        "source": "if warnings:\n        print(\"Avisos:\")\n        for w in warnings:\n            print(f\"- {w}\")",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      },
+      {
+        "body_index": 123,
+        "kind": "return",
+        "line": 1578,
+        "end_line": 1578,
+        "condition": "",
+        "calls": [],
+        "loaded_names": [],
+        "stored_names": [],
+        "terminal_flow": true,
+        "source": "return 0",
+        "selected": false,
+        "overlap": false,
+        "score": 0,
+        "explicit_helpers": [],
+        "overlap_helpers": [],
+        "document_terms": [],
+        "prisma_terms": [],
+        "dispatch_terms": [],
+        "parser_terms": [],
+        "reasons": [
+          "sem evidência documental suficiente"
+        ]
+      }
+    ]
+  }
+}

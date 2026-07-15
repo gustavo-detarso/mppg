@@ -307,14 +307,8 @@ def _section(cfg: dict[str, Any], name: str) -> dict[str, Any]:
 
 def output_paths(cfg: dict[str, Any]) -> tuple[Path, str]:
     """Resolve a saída final do documento pela seção [paths]."""
-    config_dir = Path(str(cfg.get("__config_dir__") or Path.cwd())).resolve()
-    paths = _section(cfg, "paths")
-    projeto = _section(cfg, "projeto")
-    prefix = str(paths.get("document_prefix") or projeto.get("nome") or "documento").strip() or "documento"
-    out_base = resolve_path(paths.get("document_output_dir") or "../../output/documento", config_dir) or (config_dir / "output/documento")
-    out_dir = out_base / prefix if bool(paths.get("create_document_subdir", True)) else out_base
-    out_dir.mkdir(parents=True, exist_ok=True)
-    return out_dir, prefix
+    from academic_pipeline.document_orchestration import output_paths_impl as _ap003d_impl_output_paths
+    return _ap003d_impl_output_paths({**globals(), **locals()}, cfg)
 
 
 def research_output_paths(cfg: dict[str, Any]) -> tuple[Path, str]:
@@ -356,68 +350,19 @@ def apply_cli_path_overrides(cfg: dict[str, Any], args: argparse.Namespace) -> d
     A prioridade fica: CLI > TOML. Os caminhos continuam sendo resolvidos
     posteriormente em relação ao diretório do TOML, salvo quando absolutos.
     """
-    paths = cfg.setdefault("paths", {})
-    if not isinstance(paths, dict):
-        paths = {}
-        cfg["paths"] = paths
-    if getattr(args, "output_dir", ""):
-        paths["document_output_dir"] = args.output_dir
-    if getattr(args, "work_dir", ""):
-        paths["work_dir"] = args.work_dir
-    if getattr(args, "cache_dir", ""):
-        paths["cache_dir"] = args.cache_dir
-    if getattr(args, "research_output_dir", ""):
-        paths["research_output_dir"] = args.research_output_dir
-    if getattr(args, "output_prefix", ""):
-        paths["document_prefix"] = args.output_prefix
-    if getattr(args, "no_output_subdir", False):
-        paths["create_document_subdir"] = False
-
-    doc = cfg.setdefault("documento", {})
-    if not isinstance(doc, dict):
-        doc = {}
-        cfg["documento"] = doc
-    if getattr(args, "layout", ""):
-        doc["layout"] = args.layout
-    if getattr(args, "tipo_conteudo", ""):
-        doc["tipo_conteudo"] = args.tipo_conteudo
-    if getattr(args, "genero_academico", ""):
-        doc["genero_academico"] = args.genero_academico
-    return cfg
+    from academic_pipeline.document_orchestration import apply_cli_path_overrides_impl as _ap003d_impl_apply_cli_path_overrides
+    return _ap003d_impl_apply_cli_path_overrides({**globals(), **locals()}, cfg, args)
 
 
 def load_existing_document_json(path: Path) -> AcademicDocument:
-    return AcademicDocument.model_validate_json(path.read_text(encoding="utf-8"))
+    from academic_pipeline.document_orchestration import load_existing_document_json_impl as _ap003d_impl_load_existing_document_json
+    return _ap003d_impl_load_existing_document_json({**globals(), **locals()}, path)
 
 
 def resolve_bib_for_existing_document(document: AcademicDocument, document_json_path: Path, out_dir: Path, prefix: str) -> tuple[Path, list[str]]:
     """Resolve o .bib em modo --somente-renderizar sem exigir que ele já esteja no output_dir."""
-    raw = str(document.bibliography.bib_path or f"{prefix}.bib").strip()
-    candidates: list[Path] = []
-    if raw:
-        p = Path(raw).expanduser()
-        if p.is_absolute():
-            candidates.append(p)
-        else:
-            candidates.extend([document_json_path.parent / p, out_dir / p])
-    candidates.extend([
-        document_json_path.with_suffix(".bib"),
-        document_json_path.with_name(prefix + ".bib"),
-        out_dir / f"{prefix}.bib",
-    ])
-    found = next((c.resolve() for c in candidates if c.exists()), out_dir / f"{prefix}.bib")
-    target = out_dir / found.name
-    if found.exists() and found.resolve() != target.resolve():
-        import shutil
-        out_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(found, target)
-        found = target
-    keys = list(document.bibliography.entries_used or [])
-    if found.exists() and not keys:
-        import re
-        text = found.read_text(encoding="utf-8", errors="ignore")
-        keys = [m.group(1).strip() for m in re.finditer(r"@[^{}]+\{\s*([^,]+)\s*,", text)]
-    return found, keys
+    from academic_pipeline.document_orchestration import resolve_bib_for_existing_document_impl as _ap003d_impl_resolve_bib_for_existing_document
+    return _ap003d_impl_resolve_bib_for_existing_document({**globals(), **locals()}, document, document_json_path, out_dir, prefix)
 
 
 def _openai_model_from_cfg(cfg: dict[str, Any]) -> str:
@@ -434,41 +379,13 @@ def _load_optional_config(path: str | None) -> dict[str, Any] | None:
 
 
 def _resolve_latex_paths_for_recompile(args: argparse.Namespace, cfg: dict[str, Any] | None) -> tuple[Path | None, Path | None, str]:
-    base = Path(str((cfg or {}).get("__config_dir__") or Path.cwd())).resolve()
-    latex_cfg = (cfg or {}).get("latex", {}) if isinstance((cfg or {}).get("latex", {}), dict) else {}
-    academic_writing = resolve_path(args.academic_writing or latex_cfg.get("org_latex_class_init"), base)
-    latex_extra = resolve_path(args.latex_extra_path or latex_cfg.get("latex_extra_path"), base)
-    pdf_engine = str(args.pdf_engine or latex_cfg.get("pdf_engine") or "lualatex")
-    return academic_writing, latex_extra, pdf_engine
+    from academic_pipeline.document_orchestration import _resolve_latex_paths_for_recompile_impl as _ap003d_impl__resolve_latex_paths_for_recompile
+    return _ap003d_impl__resolve_latex_paths_for_recompile({**globals(), **locals()}, args, cfg)
 
 
 def run_recompile(args: argparse.Namespace, cfg: dict[str, Any] | None) -> int:
-    if not args.org:
-        raise RuntimeError("Use --recompile --org caminho/arquivo.org")
-    org_path = Path(args.org).expanduser().resolve()
-    if not org_path.exists():
-        raise FileNotFoundError(f"ORG não encontrado: {org_path}")
-    academic_writing, latex_extra, pdf_engine = _resolve_latex_paths_for_recompile(args, cfg)
-    removed = [] if args.no_clean else clean_aux_files(org_path)
-    pdf = run_compile_sequence(org_path, academic_writing=academic_writing, latex_extra_path=latex_extra, pdf_engine=pdf_engine)
-    out_dir = org_path.parent
-    prefix = org_path.stem
-    outputs = {"org": str(org_path), "pdf": str(pdf), "removed_aux": removed}
-    write_outputs_manifest(out_dir / f"{prefix}.outputs.txt", outputs)
-    stage("Gerando run_report e manifestos")
-    report = make_run_report(
-        cfg=cfg or {"__config_dir__": str(Path.cwd())},
-        config_path=Path(str((cfg or {}).get("__config_path__"))) if cfg and cfg.get("__config_path__") else None,
-        out_dir=out_dir,
-        prefix=prefix,
-        model=None,
-        outputs=outputs,
-        warnings=[],
-        extra={"mode": "recompile"},
-    )
-    write_json(out_dir / f"{prefix}.run_report.json", report)
-    print_outputs(outputs, title="Recompilação concluída")
-    return 0
+    from academic_pipeline.document_orchestration import run_recompile_impl as _ap003d_impl_run_recompile
+    return _ap003d_impl_run_recompile({**globals(), **locals()}, args, cfg)
 
 
 
@@ -532,120 +449,15 @@ def render_external_prisma_outputs(
     return org_path, pdf_path
 
 
-def render_additional_language_versions(
-    *,
-    client: Any,
-    model: str,
-    cfg: dict[str, Any],
-    document: AcademicDocument,
-    bib_path: Path,
-    bib_keys: list[str],
-    out_dir: Path,
-    prefix: str,
-    doc_cfg: dict[str, Any],
-    latex_cfg: dict[str, Any],
-    config_dir: Path,
-    abstract_bundle: dict[str, Any] | None = None,
-) -> tuple[dict[str, Any], list[str]]:
+def render_additional_language_versions(*, client: Any, model: str, cfg: dict[str, Any], document: AcademicDocument, bib_path: Path, bib_keys: list[str], out_dir: Path, prefix: str, doc_cfg: dict[str, Any], latex_cfg: dict[str, Any], config_dir: Path, abstract_bundle: dict[str, Any] | None=None) -> tuple[dict[str, Any], list[str]]:
     """Traduz e renderiza versões adicionais a partir do document.json canônico.
 
     Cada versão recebe diretório próprio dentro de ``idiomas/<codigo>`` e
     compartilha a bibliografia original, copiada sem tradução. A função nunca
     consulta novamente o corpus nem gera uma segunda análise acadêmica.
     """
-    result: dict[str, Any] = {}
-    warnings: list[str] = []
-    languages = requested_translation_languages(cfg)
-    if not languages:
-        return result, warnings
-    base_dir = out_dir / "idiomas"
-    max_chars = translation_batch_size(cfg)
-    docx_cfg = cfg.get("docx", {}) if isinstance(cfg.get("docx"), dict) else {}
-    reference_docx = resolve_path(docx_cfg.get("reference_docx") or doc_cfg.get("docx_reference"), config_dir)
-    academic_writing = resolve_path(latex_cfg.get("org_latex_class_init"), config_dir)
-    latex_extra = resolve_path(latex_cfg.get("latex_extra_path"), config_dir)
-    pdf_engine = str(latex_cfg.get("pdf_engine") or "lualatex")
-
-    for language_code, language_label in languages:
-        stage(f"Traduzindo paper para {language_label}")
-        translated_document, audit = translate_document_model(
-            client,
-            model,
-            document,
-            language_code,
-            max_chars=max_chars,
-        )
-        language_dir = base_dir / language_code
-        language_dir.mkdir(parents=True, exist_ok=True)
-        language_prefix = f"{prefix}_{language_code}"
-        language_bib = language_dir / bib_path.name
-        if bib_path.exists() and bib_path.resolve() != language_bib.resolve():
-            shutil.copy2(bib_path, language_bib)
-        document_json = language_dir / f"{language_prefix}.document.json"
-        write_json(document_json, translated_document.model_dump())
-        audit_path = language_dir / f"{language_prefix}.translation_audit.json"
-        write_json(audit_path, audit)
-
-        stage(f"Renderizando ORG traduzido ({language_label})")
-        org_path = language_dir / f"{language_prefix}.org"
-        org_text = render_org_latex(
-            translated_document,
-            org_path,
-            language_bib.name,
-            cfg=cfg,
-            bib_keys=bib_keys,
-        )
-        if abstract_bundle:
-            org_text = inject_paper_abstracts_into_org(org_path, abstract_bundle, [language_code])
-        raise_if_errors(validate_org_text(org_text, bib_keys), f"Validação do ORG traduzido falhou ({language_label})")
-
-        pdf_path: Path | None = None
-        if bool(doc_cfg.get("exportar_pdf", True)):
-            stage(f"Compilando PDF traduzido ({language_label})")
-            pdf_path = run_compile_sequence(
-                org_path,
-                academic_writing=academic_writing,
-                latex_extra_path=latex_extra,
-                pdf_engine=pdf_engine,
-            )
-
-        docx_path: Path | None = None
-        if bool(doc_cfg.get("exportar_docx", True)):
-            stage(f"Renderizando DOCX traduzido ({language_label})")
-            docx_path = render_docx(
-                translated_document,
-                language_dir / f"{language_prefix}.docx",
-                bib_path=language_bib,
-                reference_docx=reference_docx,
-                cfg=cfg,
-            )
-            if abstract_bundle:
-                inject_paper_abstracts_into_docx(docx_path, abstract_bundle, [language_code])
-            validation = validate_docx_file(
-                docx_path,
-                expected_title=translated_document.metadata.titulo,
-                require_references=bool(translated_document.bibliography.entries_used),
-            )
-            if validation and validation.get("warnings"):
-                warnings.extend([f"DOCX {language_code}: {item}" for item in validation.get("warnings", [])])
-
-        quality = build_quality_report(translated_document, org_path=org_path, bib_keys=bib_keys)
-        quality_path = language_dir / f"{language_prefix}.quality_report.md"
-        write_quality_report(quality, quality_path)
-        if quality.get("warnings"):
-            warnings.extend([f"QUALIDADE {language_code}: {item}" for item in quality.get("warnings", [])])
-        result[language_code] = {
-            "idioma": language_label,
-            "output_dir": str(language_dir),
-            "document_json": str(document_json),
-            "translation_audit": str(audit_path),
-            "org": str(org_path),
-            "pdf": str(pdf_path) if pdf_path else None,
-            "docx": str(docx_path) if docx_path else None,
-            "bib": str(language_bib),
-            "quality_report": str(quality_path),
-        }
-    return result, warnings
+    from academic_pipeline.document_orchestration import render_additional_language_versions_impl as _ap003d_impl_render_additional_language_versions
+    return _ap003d_impl_render_additional_language_versions({**globals(), **locals()}, client=client, model=model, cfg=cfg, document=document, bib_path=bib_path, bib_keys=bib_keys, out_dir=out_dir, prefix=prefix, doc_cfg=doc_cfg, latex_cfg=latex_cfg, config_dir=config_dir, abstract_bundle=abstract_bundle)
 
 
 
@@ -1032,27 +844,38 @@ def main() -> int:
     if _ap003c_result_011.handled:
         return _ap003c_result_011.value
 
-    if args.quality_report:
-        if not args.document_json:
-            raise RuntimeError("--quality-report exige --document-json caminho/document.json")
-        document_json = Path(args.document_json).expanduser().resolve()
-        document = load_existing_document_json(document_json)
-        org = Path(args.org).expanduser().resolve() if args.org else None
-        bib_keys: list[str] = []
-        if args.bib:
-            # Compatibilidade temporária entre pacote e script direto.
-            if __package__:
-                from .bibliography_manager import split_bib_entries, bib_entry_key
-            else:
-                from bibliography_manager import split_bib_entries, bib_entry_key
-            bib_path = Path(args.bib).expanduser().resolve()
-            if bib_path.exists():
-                bib_keys = [k for e in split_bib_entries(bib_path.read_text(encoding='utf-8', errors='ignore')) if (k := bib_entry_key(e))]
-        report = build_quality_report(document, org_path=org, bib_keys=bib_keys or list(document.bibliography.entries_used or []))
-        out = document_json.with_suffix(".quality_report.md")
-        write_quality_report(report, out)
-        print(f"Relatório de qualidade: {out}")
-        return 0 if report.get("ok") else 1
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_001 as _ap003d_stage_001,
+    )
+
+    _ap003d_result_001 = _ap003d_stage_001(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_001.terminal:
+        return _ap003d_result_001.value
+    if 'bib_entry_key' in _ap003d_result_001.values:
+        bib_entry_key = _ap003d_result_001.values['bib_entry_key']
+    if 'bib_keys' in _ap003d_result_001.values:
+        bib_keys = _ap003d_result_001.values['bib_keys']
+    if 'bib_path' in _ap003d_result_001.values:
+        bib_path = _ap003d_result_001.values['bib_path']
+    if 'document' in _ap003d_result_001.values:
+        document = _ap003d_result_001.values['document']
+    if 'document_json' in _ap003d_result_001.values:
+        document_json = _ap003d_result_001.values['document_json']
+    if 'e' in _ap003d_result_001.values:
+        e = _ap003d_result_001.values['e']
+    if 'k' in _ap003d_result_001.values:
+        k = _ap003d_result_001.values['k']
+    if 'org' in _ap003d_result_001.values:
+        org = _ap003d_result_001.values['org']
+    if 'out' in _ap003d_result_001.values:
+        out = _ap003d_result_001.values['out']
+    if 'report' in _ap003d_result_001.values:
+        report = _ap003d_result_001.values['report']
+    if 'split_bib_entries' in _ap003d_result_001.values:
+        split_bib_entries = _ap003d_result_001.values['split_bib_entries']
 
     cfg = _load_optional_config(args.config) if args.config else None
     if cfg:
@@ -1152,7 +975,18 @@ def main() -> int:
     is_external_prisma_run = external_search_enabled(cfg) and not args.somente_renderizar
     out_dir, prefix = research_output_paths(cfg) if is_external_prisma_run else output_paths(cfg)
     work_dir, cache_dir = work_cache_paths(cfg, prefix)
-    doc_cfg = cfg.get("documento", {}) if isinstance(cfg.get("documento"), dict) else {}
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_002 as _ap003d_stage_002,
+    )
+
+    _ap003d_result_002 = _ap003d_stage_002(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_002.terminal:
+        return _ap003d_result_002.value
+    if 'doc_cfg' in _ap003d_result_002.values:
+        doc_cfg = _ap003d_result_002.values['doc_cfg']
     latex_cfg = cfg.get("latex", {}) if isinstance(cfg.get("latex"), dict) else {}
     config_dir = Path(str(cfg.get("__config_dir__"))).resolve()
     warnings: list[str] = []
@@ -1233,60 +1067,32 @@ def main() -> int:
         print_outputs(outputs, title=f"academic_pipeline {PIPELINE_VERSION} — busca PRISMA concluída; aguarda triagem humana")
         return 0
 
-    if args.somente_mapa_mental:
-        if not document_json_path.exists():
-            raise FileNotFoundError(f"document.json não encontrado para --somente-mapa-mental: {document_json_path}")
-        if not should_generate_mindmap(cfg):
-            raise RuntimeError("[mapa_mental] não está ativo no TOML. Ative gerar=true/ativo=true para usar --somente-mapa-mental.")
-        stage("Carregando document.json existente")
-        document = load_existing_document_json(document_json_path)
-        removed_mindmap_files: list[str] = []
-        if args.forcar_regeneracao_mapa_mental:
-            stage("Removendo mapa mental existente")
-            removed_mindmap_files = delete_existing_mindmap_outputs(cfg, out_dir)
-        mm_diag = None
-        if args.reusar_mapa_mental:
-            stage("Tentando reutilizar mapa mental existente")
-            mm_diag = attach_existing_mindmap_if_available(document, cfg, out_dir)
-            if not mm_diag:
-                warnings.append("Mapa mental existente não encontrado; gerando novo mapa mental.")
-        if not mm_diag:
-            stage("Inicializando cliente OpenAI")
-            client, model = make_client(model)
-            stage("Gerando/renderizando apenas o mapa mental")
-            mm_diag = generate_and_attach_mindmap(client, model, cfg, document, out_dir)
-        if removed_mindmap_files:
-            mm_diag = dict(mm_diag or {})
-            mm_diag["removed_before_regeneration"] = removed_mindmap_files
-        document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)
-        stage("Salvando document.json atualizado")
-        write_json(document_json_path, document.model_dump())
-        outputs = {
-            "output_dir": str(out_dir),
-            "document_json": str(document_json_path),
-            "mindmap_puml": (mm_diag or {}).get("puml_path") if mm_diag else None,
-            "mindmap_image": (mm_diag or {}).get("image_path") if mm_diag else None,
-            "mindmap_reused": bool((mm_diag or {}).get("reused")),
-            "mindmap_removed": removed_mindmap_files,
-        }
-        report = make_run_report(
-            cfg=cfg,
-            config_path=Path(str(cfg.get("__config_path__"))),
-            out_dir=out_dir,
-            prefix=prefix,
-            model=model,
-            outputs=outputs,
-            warnings=warnings,
-            extra={"mode": "somente_mapa_mental"},
-        )
-        write_json(out_dir / f"{prefix}.run_report.json", report)
-        write_outputs_manifest(out_dir / f"{prefix}.outputs.txt", outputs)
-        print_outputs(outputs, title=f"academic_pipeline {PIPELINE_VERSION} — mapa mental renderizado")
-        if warnings:
-            print("Avisos:")
-            for w in warnings:
-                print(f"- {w}")
-        return 0
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_003 as _ap003d_stage_003,
+    )
+
+    _ap003d_result_003 = _ap003d_stage_003(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_003.terminal:
+        return _ap003d_result_003.value
+    if 'client' in _ap003d_result_003.values:
+        client = _ap003d_result_003.values['client']
+    if 'document' in _ap003d_result_003.values:
+        document = _ap003d_result_003.values['document']
+    if 'mm_diag' in _ap003d_result_003.values:
+        mm_diag = _ap003d_result_003.values['mm_diag']
+    if 'model' in _ap003d_result_003.values:
+        model = _ap003d_result_003.values['model']
+    if 'outputs' in _ap003d_result_003.values:
+        outputs = _ap003d_result_003.values['outputs']
+    if 'removed_mindmap_files' in _ap003d_result_003.values:
+        removed_mindmap_files = _ap003d_result_003.values['removed_mindmap_files']
+    if 'report' in _ap003d_result_003.values:
+        report = _ap003d_result_003.values['report']
+    if 'w' in _ap003d_result_003.values:
+        w = _ap003d_result_003.values['w']
 
     prisma_outputs = None
     source_info: dict[str, Any] | None = None
@@ -1448,65 +1254,90 @@ def main() -> int:
         stage("Salvando document.json")
         write_json(document_json_path, document.model_dump())
 
-    stage("Renderizando ORG/LaTeX")
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_004 as _ap003d_stage_004,
+    )
+
+    _ap003d_result_004 = _ap003d_stage_004(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_004.terminal:
+        return _ap003d_result_004.value
     org_path = out_dir / f"{prefix}.org"
-    org_text = render_org_latex(document, org_path, bib_path.name if 'bib_path' in locals() else f"{prefix}.bib", cfg=cfg, bib_keys=bib_keys if 'bib_keys' in locals() else None)
-    if paper_abstract_bundle:
-        stage("Inserindo resumo e palavras-chave no ORG")
-        org_text = inject_paper_abstracts_into_org(org_path, paper_abstract_bundle, main_document_abstract_languages(cfg))
-    stage("Validando ORG renderizado")
-    raise_if_errors(validate_org_text(org_text, bib_keys), "Validação do ORG renderizado falhou")
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_005 as _ap003d_stage_005,
+    )
+
+    _ap003d_result_005 = _ap003d_stage_005(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_005.terminal:
+        return _ap003d_result_005.value
+    if 'org_text' in _ap003d_result_005.values:
+        org_text = _ap003d_result_005.values['org_text']
 
     pdf_path = None
-    if bool(doc_cfg.get("exportar_pdf", True)):
-        academic_writing = resolve_path(latex_cfg.get("org_latex_class_init"), config_dir)
-        latex_extra = resolve_path(latex_cfg.get("latex_extra_path"), config_dir)
-        pdf_engine = str(latex_cfg.get("pdf_engine") or "lualatex")
-        stage("Compilando PDF via Emacs/LaTeX")
-        pdf_path = run_compile_sequence(org_path, academic_writing=academic_writing, latex_extra_path=latex_extra, pdf_engine=pdf_engine)
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_006 as _ap003d_stage_006,
+    )
+
+    _ap003d_result_006 = _ap003d_stage_006(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_006.terminal:
+        return _ap003d_result_006.value
+    if 'academic_writing' in _ap003d_result_006.values:
+        academic_writing = _ap003d_result_006.values['academic_writing']
+    if 'latex_extra' in _ap003d_result_006.values:
+        latex_extra = _ap003d_result_006.values['latex_extra']
+    if 'pdf_engine' in _ap003d_result_006.values:
+        pdf_engine = _ap003d_result_006.values['pdf_engine']
+    if 'pdf_path' in _ap003d_result_006.values:
+        pdf_path = _ap003d_result_006.values['pdf_path']
 
     docx_path = None
     docx_validation: dict[str, Any] | None = None
-    if bool(doc_cfg.get("exportar_docx", True)):
-        docx_cfg = cfg.get("docx", {}) if isinstance(cfg.get("docx"), dict) else {}
-        ref = resolve_path(docx_cfg.get("reference_docx") or doc_cfg.get("docx_reference"), config_dir)
-        stage("Renderizando DOCX")
-        docx_path = render_docx(document, out_dir / f"{prefix}.docx", bib_path=bib_path, reference_docx=ref, cfg=cfg)
-        if paper_abstract_bundle:
-            stage("Inserindo resumo e palavras-chave no DOCX")
-            inject_paper_abstracts_into_docx(docx_path, paper_abstract_bundle, main_document_abstract_languages(cfg))
-        docx_validation = validate_docx_file(docx_path, expected_title=document.metadata.titulo, require_references=bool(document.bibliography.entries_used))
-        if docx_validation and docx_validation.get("warnings"):
-            warnings.extend([f"DOCX: {w}" for w in docx_validation.get("warnings", [])])
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_007 as _ap003d_stage_007,
+    )
+
+    _ap003d_result_007 = _ap003d_stage_007(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_007.terminal:
+        return _ap003d_result_007.value
+    if 'docx_cfg' in _ap003d_result_007.values:
+        docx_cfg = _ap003d_result_007.values['docx_cfg']
+    if 'docx_path' in _ap003d_result_007.values:
+        docx_path = _ap003d_result_007.values['docx_path']
+    if 'docx_validation' in _ap003d_result_007.values:
+        docx_validation = _ap003d_result_007.values['docx_validation']
+    if 'ref' in _ap003d_result_007.values:
+        ref = _ap003d_result_007.values['ref']
+    if 'w' in _ap003d_result_007.values:
+        w = _ap003d_result_007.values['w']
 
     translated_outputs: dict[str, Any] = {}
-    if args.somente_renderizar:
-        if requested_translation_languages(cfg):
-            warnings.append(
-                "Versões adicionais por IA não foram atualizadas no modo --somente-renderizar. "
-                "Execute a geração completa para traduzir o document.json canônico."
-            )
-    elif requested_translation_languages(cfg):
-        try:
-            translated_outputs, translation_warnings = render_additional_language_versions(
-                client=client,
-                model=model,
-                cfg=cfg,
-                document=document,
-                bib_path=bib_path,
-                bib_keys=bib_keys,
-                out_dir=out_dir,
-                prefix=prefix,
-                doc_cfg=doc_cfg,
-                latex_cfg=latex_cfg,
-                config_dir=config_dir,
-                abstract_bundle=paper_abstract_bundle or None,
-            )
-            warnings.extend(translation_warnings)
-        except TranslationError as exc:
-            # Traduções são saídas opcionais: uma falha nelas não invalida o
-            # paper principal que já foi gerado e validado.
-            warnings.append(f"TRADUÇÃO: {exc}")
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_008 as _ap003d_stage_008,
+    )
+
+    _ap003d_result_008 = _ap003d_stage_008(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_008.terminal:
+        return _ap003d_result_008.value
+    if 'exc' in _ap003d_result_008.values:
+        exc = _ap003d_result_008.values['exc']
+    if 'translated_outputs' in _ap003d_result_008.values:
+        translated_outputs = _ap003d_result_008.values['translated_outputs']
+    if 'translation_warnings' in _ap003d_result_008.values:
+        translation_warnings = _ap003d_result_008.values['translation_warnings']
 
     outputs = {
         "output_dir": str(out_dir),
@@ -1529,44 +1360,63 @@ def main() -> int:
 
     # Conformidade institucional: valida artefatos contra o perfil escolhido.
     stage("Executando conformidade institucional")
-    compliance_report = run_institution_compliance(
-        cfg,
-        org_path=org_path,
-        bib_path=bib_path,
-        docx_path=docx_path,
-        pdf_path=pdf_path,
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_009 as _ap003d_stage_009,
     )
+
+    _ap003d_result_009 = _ap003d_stage_009(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_009.terminal:
+        return _ap003d_result_009.value
+    if 'compliance_report' in _ap003d_result_009.values:
+        compliance_report = _ap003d_result_009.values['compliance_report']
     compliance_md, compliance_json = write_compliance_reports(compliance_report, out_dir / prefix)
-    outputs["compliance_report"] = str(compliance_md)
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_010 as _ap003d_stage_010,
+    )
+
+    _ap003d_result_010 = _ap003d_stage_010(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_010.terminal:
+        return _ap003d_result_010.value
     if compliance_report.get("warnings"):
         warnings.extend([f"CONFORMIDADE: {w.get('message')}" for w in compliance_report.get("warnings", [])])
     if not compliance_report.get("ok"):
         warnings.extend([f"CONFORMIDADE CRÍTICA: {e.get('message')}" for e in compliance_report.get("errors", [])])
 
     stage("Gerando relatório de qualidade")
-    quality = build_quality_report(document, org_path=org_path, bib_keys=bib_keys)
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_011 as _ap003d_stage_011,
+    )
+
+    _ap003d_result_011 = _ap003d_stage_011(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_011.terminal:
+        return _ap003d_result_011.value
+    if 'quality' in _ap003d_result_011.values:
+        quality = _ap003d_result_011.values['quality']
     quality_path = out_dir / f"{prefix}.quality_report.md"
     write_quality_report(quality, quality_path)
     if quality.get("warnings"):
         warnings.extend([f"QUALIDADE: {w}" for w in quality.get("warnings", [])])
-    outputs["quality_report"] = str(quality_path)
-
-    report = make_run_report(
-        cfg=cfg,
-        config_path=Path(str(cfg.get("__config_path__"))),
-        out_dir=out_dir,
-        prefix=prefix,
-        model=model,
-        outputs=outputs,
-        warnings=warnings,
-        extra={
-            "mode": "somente_renderizar" if args.somente_renderizar else "full",
-            "work_dir": str(work_dir),
-            "cache_dir": str(cache_dir),
-            "precheck": precheck,
-            "docx_validation": docx_validation,
-        },
+    from academic_pipeline.document_orchestration import (
+        run_document_stage_012 as _ap003d_stage_012,
     )
+
+    _ap003d_result_012 = _ap003d_stage_012(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003d_result_012.terminal:
+        return _ap003d_result_012.value
+    if 'report' in _ap003d_result_012.values:
+        report = _ap003d_result_012.values['report']
     write_json(out_dir / f"{prefix}.run_report.json", report)
     write_json(out_dir / f"{prefix}.rc10_report.json", outputs)  # compatibilidade com scripts antigos
     write_outputs_manifest(out_dir / f"{prefix}.outputs.txt", outputs)
@@ -1585,162 +1435,46 @@ def main() -> int:
 # compatibilidade, TOMLs antigos com todos os flags bibliográficos desligados
 # também entram no modo sem referências.
 def _refs_v6_disabled(cfg: dict[str, Any] | None) -> bool:
-    if not isinstance(cfg, dict):
-        return False
-    bibliography = cfg.get("bibliografia", {}) if isinstance(cfg.get("bibliografia"), dict) else {}
-    document = cfg.get("documento", {}) if isinstance(cfg.get("documento"), dict) else {}
-    local = cfg.get("documentos_locais", {}) if isinstance(cfg.get("documentos_locais"), dict) else {}
-
-    if "ativo" in bibliography:
-        return not bool(bibliography.get("ativo"))
-    if "referencias_formais" in document:
-        return not bool(document.get("referencias_formais"))
-    return (
-        local.get("auto_detect_bib") is False
-        and local.get("gerar_bib_revisado_ia") is False
-        and document.get("usar_citacoes_latex_diretas") is False
-    )
+    from academic_pipeline.document_orchestration import _refs_v6_disabled_impl as _ap003d_impl__refs_v6_disabled
+    return _ap003d_impl__refs_v6_disabled({**globals(), **locals()}, cfg)
 
 
 def _refs_v6_apply_runtime_policy(cfg: dict[str, Any]) -> dict[str, Any]:
-    if not _refs_v6_disabled(cfg):
-        return cfg
-    bibliography = cfg.setdefault("bibliografia", {})
-    if not isinstance(bibliography, dict):
-        bibliography = {}
-        cfg["bibliografia"] = bibliography
-    bibliography["ativo"] = False
-    bibliography["gerar_arquivo_bib"] = False
-    bibliography["buscar_metadados_por_doi"] = False
-    bibliography["enriquecer_metadados_buscadores"] = False
-
-    document = cfg.setdefault("documento", {})
-    if not isinstance(document, dict):
-        document = {}
-        cfg["documento"] = document
-    document["referencias_formais"] = False
-    document["usar_citacoes_latex_diretas"] = False
-
-    local = cfg.setdefault("documentos_locais", {})
-    if isinstance(local, dict):
-        local["auto_detect_bib"] = False
-        local["gerar_bib_revisado_ia"] = False
-        local["enriquecer_metadados_buscadores"] = False
-        local["extrair_doi_dos_pdfs"] = False
-        local["buscar_metadados_por_doi"] = False
-
-    orientations = cfg.setdefault("orientacoes", {})
-    if not isinstance(orientations, dict):
-        orientations = {}
-        cfg["orientacoes"] = orientations
-    instruction = (
-        "Não inclua citações no corpo do texto, notas bibliográficas, seção Referências, "
-        "lista bibliográfica ou arquivo .bib. Use exclusivamente o corpus local e não invente fontes."
-    )
-    current = str(orientations.get("inline") or "").strip()
-    if instruction not in current:
-        orientations["inline"] = (current + "\n\n" + instruction).strip()
-    return cfg
+    from academic_pipeline.document_orchestration import _refs_v6_apply_runtime_policy_impl as _ap003d_impl__refs_v6_apply_runtime_policy
+    return _ap003d_impl__refs_v6_apply_runtime_policy({**globals(), **locals()}, cfg)
 
 
 # Carrega a política antes de qualquer rotina de descoberta, bibliografia ou IA.
 _refs_v6_original_load_config = load_config
 def load_config(path: Path) -> dict[str, Any]:
-    return _refs_v6_apply_runtime_policy(_refs_v6_original_load_config(path))
+    from academic_pipeline.document_orchestration import load_config_impl as _ap003d_impl_load_config
+    return _ap003d_impl_load_config({**globals(), **locals()}, path)
 
 
 # Impede a construção física do .bib. Um Path sentinela mantém compatibilidade
 # com funções que recebem bib_path, mas o arquivo não é criado e as chaves ficam vazias.
 _refs_v6_original_build_bibliography = build_bibliography
-def build_bibliography(
-    cfg: dict[str, Any],
-    docs: Any,
-    out_dir: Path,
-    prefix: str,
-    client: Any,
-    model: str,
-) -> Any:
-    if _refs_v6_disabled(cfg):
-        from types import SimpleNamespace
-        return SimpleNamespace(bib_path=Path(out_dir) / f"{prefix}.bib", keys=[])
-    return _refs_v6_original_build_bibliography(cfg, docs, out_dir, prefix, client, model)
+def build_bibliography(cfg: dict[str, Any], docs: Any, out_dir: Path, prefix: str, client: Any, model: str) -> Any:
+    from academic_pipeline.document_orchestration import build_bibliography_impl as _ap003d_impl_build_bibliography
+    return _ap003d_impl_build_bibliography({**globals(), **locals()}, cfg, docs, out_dir, prefix, client, model)
 
 
 def _refs_v6_clear_document_bibliography(document: Any) -> Any:
-    bibliography = getattr(document, "bibliography", None)
-    if bibliography is not None:
-        try:
-            bibliography.entries_used = []
-        except Exception:
-            pass
-        try:
-            bibliography.bib_path = ""
-        except Exception:
-            pass
-    return document
+    from academic_pipeline.document_orchestration import _refs_v6_clear_document_bibliography_impl as _ap003d_impl__refs_v6_clear_document_bibliography
+    return _ap003d_impl__refs_v6_clear_document_bibliography({**globals(), **locals()}, document)
 
 
 def _refs_v6_strip_org(text: str) -> str:
-    import re as _re
-    # Diretivas e comandos de bibliografia.
-    text = _re.sub(
-        r"(?im)^.*(?:#\+(?:print_)?bibliography|\\addbibresource|\\printbibliography).*(?:\n|$)",
-        "",
-        text,
-    )
-    # Citações Org e LaTeX que possam ter sido produzidas antes da renderização.
-    text = _re.sub(r"(?is)\[cite(?:/[\w-]+)?\s*:[^\]]*\]", "", text)
-    text = _re.sub(r"(?is)\[@[A-Za-z0-9_:.+/\-]+(?:;\s*@[A-Za-z0-9_:.+/\-]+)*\]", "", text)
-    text = _re.sub(
-        r"(?is)\\(?:auto|text|para|smart|foot|super)?cite(?:\[[^\]]*\])?(?:\[[^\]]*\])?\{[^}]*\}",
-        "",
-        text,
-    )
-    # A seção final é removida apenas quando usa um título inequívoco.
-    text = _re.sub(
-        r"(?ims)^\*+\s*(?:refer[eê]ncias|bibliografia)\s*$.*?(?=^\*+\s+|\Z)",
-        "",
-        text,
-    )
-    text = _re.sub(
-        r"(?is)\\(?:section|section\*|chapter|chapter\*)\{\s*(?:refer[eê]ncias|bibliografia)\s*\}.*?(?=\\(?:section|chapter)\{|\\end\{document\}|\Z)",
-        "",
-        text,
-    )
-    # Normalização visual após a remoção.
-    return _re.sub(r"\n{3,}", "\n\n", text).strip() + "\n"
+    from academic_pipeline.document_orchestration import _refs_v6_strip_org_impl as _ap003d_impl__refs_v6_strip_org
+    return _ap003d_impl__refs_v6_strip_org({**globals(), **locals()}, text)
 
 
 # Garante que PDF/ORG não exibam citações ou referências mesmo se um artefato
 # intermediário trouxer marcas bibliográficas inesperadas.
 _refs_v6_original_render_org_latex = render_org_latex
-def render_org_latex(
-    document: Any,
-    org_path: Path,
-    bib_filename: str,
-    *,
-    cfg: dict[str, Any],
-    bib_keys: list[str] | None = None,
-) -> str:
-    if not _refs_v6_disabled(cfg):
-        return _refs_v6_original_render_org_latex(
-            document,
-            org_path,
-            bib_filename,
-            cfg=cfg,
-            bib_keys=bib_keys,
-        )
-    document = _refs_v6_clear_document_bibliography(document)
-    rendered = _refs_v6_original_render_org_latex(
-        document,
-        org_path,
-        bib_filename,
-        cfg=cfg,
-        bib_keys=[],
-    )
-    clean = _refs_v6_strip_org(rendered)
-    Path(org_path).write_text(clean, encoding="utf-8")
-    return clean
+def render_org_latex(document: Any, org_path: Path, bib_filename: str, *, cfg: dict[str, Any], bib_keys: list[str] | None=None) -> str:
+    from academic_pipeline.document_orchestration import render_org_latex_impl as _ap003d_impl_render_org_latex
+    return _ap003d_impl_render_org_latex({**globals(), **locals()}, document, org_path, bib_filename, cfg=cfg, bib_keys=bib_keys)
 # <<< PATCH_REFERENCIAS_FORMAIS_EFETIVAS_V6_RUNTIME <<<
 
 
