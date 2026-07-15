@@ -39,12 +39,6 @@ MIGRATED_FILES = tuple(
     for module_name in LEGACY_MODULES
 )
 
-ALLOWED_REMAINING_TOP_LEVEL_BARE_IMPORTS = {
-    "academic_pipeline_gui",
-    "academic_pipeline_rc10",
-    "academic_pipeline_toml_generator_interativo",
-    "academic_pipeline_tui",
-}
 
 
 def _run_python(
@@ -225,7 +219,7 @@ def test_migrated_support_modules_have_no_top_level_bare_local_imports() -> None
     assert failures == []
 
 
-def test_remaining_top_level_bare_imports_are_confined_to_entrypoints() -> None:
+def test_no_top_level_bare_local_imports_remain() -> None:
     failures: dict[str, list[str]] = {}
 
     for path in sorted(PIPELINE_DIR.glob("*.py")):
@@ -233,9 +227,8 @@ def test_remaining_top_level_bare_imports_are_confined_to_entrypoints() -> None:
         if rows:
             failures[path.stem] = rows
 
-    assert failures
-    assert "academic_pipeline_rc10" in failures
-    assert set(failures) <= ALLOWED_REMAINING_TOP_LEVEL_BARE_IMPORTS
+    assert failures == {}
+
 
 
 def test_official_and_legacy_entrypoints_remain_equivalent() -> None:

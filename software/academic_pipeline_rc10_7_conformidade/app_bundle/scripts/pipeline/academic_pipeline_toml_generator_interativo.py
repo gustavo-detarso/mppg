@@ -36,16 +36,32 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from prisma_busca_externa import (
-    expand_provider_selection,
-    provider_selection_choices,
-    provider_statuses,
-)
-from bibliography_manager import (
-    expand_metadata_provider_selection,
-    metadata_provider_selection_choices,
-    metadata_provider_statuses,
-)
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .prisma_busca_externa import (
+        expand_provider_selection,
+        provider_selection_choices,
+        provider_statuses,
+    )
+else:
+    from prisma_busca_externa import (
+        expand_provider_selection,
+        provider_selection_choices,
+        provider_statuses,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .bibliography_manager import (
+        expand_metadata_provider_selection,
+        metadata_provider_selection_choices,
+        metadata_provider_statuses,
+    )
+else:
+    from bibliography_manager import (
+        expand_metadata_provider_selection,
+        metadata_provider_selection_choices,
+        metadata_provider_statuses,
+    )
 
 try:
     import readline  # noqa: F401
@@ -225,7 +241,11 @@ def tui_theme_enabled() -> bool:
 
 def _fgv_ui() -> Any:
     try:
-        import academic_pipeline_tui_widgets as widgets
+        # Compatibilidade temporária entre pacote e script direto.
+        if __package__:
+            from . import academic_pipeline_tui_widgets as widgets
+        else:
+            import academic_pipeline_tui_widgets as widgets
     except ImportError as exc:  # pragma: no cover - depende da instalação local
         raise RuntimeError(
             "O tema visual FGV requer prompt-toolkit. Execute: pipenv install prompt-toolkit"
