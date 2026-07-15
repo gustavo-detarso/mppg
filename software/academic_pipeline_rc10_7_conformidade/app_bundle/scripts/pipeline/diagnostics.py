@@ -20,8 +20,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from utils import resolve_path, write_json, write_text, normalize_title_loose
-from prompt_manager import validate_prompt_paths, prompt_report_for_cfg
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import resolve_path, write_json, write_text, normalize_title_loose
+else:
+    from utils import resolve_path, write_json, write_text, normalize_title_loose
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prompt_manager import validate_prompt_paths, prompt_report_for_cfg
+else:
+    from prompt_manager import validate_prompt_paths, prompt_report_for_cfg
 
 PIPELINE_VERSION = "rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit"
 

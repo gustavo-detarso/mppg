@@ -10,10 +10,38 @@ from typing import Any, Callable
 
 from pydantic import Field
 
-from document_model import AcademicDocument, Section, Block, TextSpan, StrictBaseModel
-from corpus_manager import SourceDoc
-from utils import shorten_text, write_json, slugify
-from prompt_manager import load_prompt_bundle
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_model import (
+        AcademicDocument,
+        Section,
+        Block,
+        TextSpan,
+        StrictBaseModel,
+    )
+else:
+    from document_model import (
+        AcademicDocument,
+        Section,
+        Block,
+        TextSpan,
+        StrictBaseModel,
+    )
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .corpus_manager import SourceDoc
+else:
+    from corpus_manager import SourceDoc
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import shorten_text, write_json, slugify
+else:
+    from utils import shorten_text, write_json, slugify
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prompt_manager import load_prompt_bundle
+else:
+    from prompt_manager import load_prompt_bundle
 
 
 def _is_resumo_artigos_profile(cfg: dict[str, Any]) -> bool:

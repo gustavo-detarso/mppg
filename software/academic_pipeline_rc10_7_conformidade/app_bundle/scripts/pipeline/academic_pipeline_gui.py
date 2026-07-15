@@ -36,14 +36,25 @@ except Exception as exc:  # pragma: no cover - depende do sistema do usuário
 else:
     _TK_IMPORT_ERROR = None
 
-from academic_pipeline_toml_generator_interativo import (
-    PRESETS,
-    latex_class_for_layout,
-    rel_for_toml,
-    render_toml,
-    slugify,
-    write_text,
-)
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .academic_pipeline_toml_generator_interativo import (
+        PRESETS,
+        latex_class_for_layout,
+        rel_for_toml,
+        render_toml,
+        slugify,
+        write_text,
+    )
+else:
+    from academic_pipeline_toml_generator_interativo import (
+        PRESETS,
+        latex_class_for_layout,
+        rel_for_toml,
+        render_toml,
+        slugify,
+        write_text,
+    )
 
 
 HERE = Path(__file__).resolve()

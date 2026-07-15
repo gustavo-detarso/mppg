@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "academic-pipeline-mppg"
+version = "0.1.0"
+description = "Pipeline acadêmica modular para geração, validação e renderização de documentos."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+academic-pipeline = "academic_pipeline.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["academic_pipeline*", "app_bundle*"]
+exclude = ["app_bundle.tests*"]
+namespaces = false
