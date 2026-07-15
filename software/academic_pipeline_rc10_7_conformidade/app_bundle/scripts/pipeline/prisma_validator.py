@@ -3,7 +3,11 @@
 from __future__ import annotations
 
 import re
-from prisma_model import PrismaReport
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prisma_model import PrismaReport
+else:
+    from prisma_model import PrismaReport
 
 
 def validate_prisma_report(report: PrismaReport, *, strict: bool = True) -> list[str]:

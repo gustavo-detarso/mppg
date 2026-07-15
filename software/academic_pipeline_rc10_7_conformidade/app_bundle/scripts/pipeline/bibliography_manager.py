@@ -15,9 +15,33 @@ from typing import Any
 
 from pydantic import BaseModel, Field
 
-from corpus_manager import SourceDoc
-from prompt_manager import load_prompt_bundle
-from utils import normalize_title_loose, shorten_text, write_text, write_json, resolve_path
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .corpus_manager import SourceDoc
+else:
+    from corpus_manager import SourceDoc
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prompt_manager import load_prompt_bundle
+else:
+    from prompt_manager import load_prompt_bundle
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import (
+        normalize_title_loose,
+        shorten_text,
+        write_text,
+        write_json,
+        resolve_path,
+    )
+else:
+    from utils import (
+        normalize_title_loose,
+        shorten_text,
+        write_text,
+        write_json,
+        resolve_path,
+    )
 
 
 # Fontes efetivamente implementadas para enriquecimento de metadados de
