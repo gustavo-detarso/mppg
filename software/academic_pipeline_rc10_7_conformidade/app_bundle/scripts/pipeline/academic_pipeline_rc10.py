@@ -40,50 +40,231 @@ from typing import Any
 
 from dotenv import load_dotenv
 
-from bibliography_manager import build_bibliography
-from corpus_manager import collect_orientation_docs, copy_documents_to_fulltext_cache, discover_local_documents
-from document_builder import build_document_model
-from document_model import AcademicDocument
-from document_validator import raise_if_errors, validate_document_model, validate_org_text, sanitize_document_model_technical_leaks, sanitize_document_model_raw_bibkeys
-from diagnostics import (
-    PIPELINE_VERSION,
-    check_config,
-    clean_aux_files,
-    make_run_report,
-    print_check_config_report,
-    print_doctor_report,
-    print_outputs,
-    run_doctor,
-    validate_docx_file,
-    write_outputs_manifest,
-)
-from latex_compile import run_compile_sequence
-from mindmap_manager import generate_and_attach_mindmap, should_generate_mindmap, attach_existing_mindmap_if_available, delete_existing_mindmap_outputs
-from render_docx import render_docx
-from render_org_latex import render_org_latex
-from prisma_pipeline import run_prisma_report_outputs, prisma_enabled
-from prisma_busca_externa import external_search_enabled, import_manual_prisma_triage, render_external_prisma_org_report, run_external_prisma_search
-from utils import write_json, resolve_path
-from project_tools import init_project, make_doi_manifest, inspect_bib, render_bib_inspection_markdown
-from quality_report import build_quality_report, write_quality_report
-from institution_profiles import apply_institution_profile, describe_institution_profiles
-from institution_layouts import available_layouts, resolve_layout_spec
-from prompt_manager import prompt_report_for_cfg, load_prompt_bundle
-from institution_explainer import explain_profile
-from institution_compliance import run_institution_compliance, render_compliance_markdown, write_compliance_reports
-from prompt_lock import write_prompt_lock, write_prompt_lock_markdown, build_prompt_lock
-from document_translation import TranslationError, requested_translation_languages, translation_batch_size, translate_document_model
-from paper_abstracts import (
-    PaperAbstractError,
-    abstract_sidecar_path,
-    generate_paper_abstract_bundle,
-    inject_paper_abstracts_into_docx,
-    inject_paper_abstracts_into_org,
-    main_document_abstract_languages,
-    paper_abstracts_enabled,
-    read_paper_abstract_bundle,
-    write_paper_abstract_bundle,
-)
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .bibliography_manager import build_bibliography
+else:
+    from bibliography_manager import build_bibliography
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .corpus_manager import (
+        collect_orientation_docs,
+        copy_documents_to_fulltext_cache,
+        discover_local_documents,
+    )
+else:
+    from corpus_manager import (
+        collect_orientation_docs,
+        copy_documents_to_fulltext_cache,
+        discover_local_documents,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .document_builder import build_document_model
+else:
+    from document_builder import build_document_model
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .document_model import AcademicDocument
+else:
+    from document_model import AcademicDocument
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .document_validator import (
+        raise_if_errors,
+        validate_document_model,
+        validate_org_text,
+        sanitize_document_model_technical_leaks,
+        sanitize_document_model_raw_bibkeys,
+    )
+else:
+    from document_validator import (
+        raise_if_errors,
+        validate_document_model,
+        validate_org_text,
+        sanitize_document_model_technical_leaks,
+        sanitize_document_model_raw_bibkeys,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .diagnostics import (
+        PIPELINE_VERSION,
+        check_config,
+        clean_aux_files,
+        make_run_report,
+        print_check_config_report,
+        print_doctor_report,
+        print_outputs,
+        run_doctor,
+        validate_docx_file,
+        write_outputs_manifest,
+    )
+else:
+    from diagnostics import (
+        PIPELINE_VERSION,
+        check_config,
+        clean_aux_files,
+        make_run_report,
+        print_check_config_report,
+        print_doctor_report,
+        print_outputs,
+        run_doctor,
+        validate_docx_file,
+        write_outputs_manifest,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .latex_compile import run_compile_sequence
+else:
+    from latex_compile import run_compile_sequence
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .mindmap_manager import (
+        generate_and_attach_mindmap,
+        should_generate_mindmap,
+        attach_existing_mindmap_if_available,
+        delete_existing_mindmap_outputs,
+    )
+else:
+    from mindmap_manager import (
+        generate_and_attach_mindmap,
+        should_generate_mindmap,
+        attach_existing_mindmap_if_available,
+        delete_existing_mindmap_outputs,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .render_docx import render_docx
+else:
+    from render_docx import render_docx
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .render_org_latex import render_org_latex
+else:
+    from render_org_latex import render_org_latex
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .prisma_pipeline import run_prisma_report_outputs, prisma_enabled
+else:
+    from prisma_pipeline import run_prisma_report_outputs, prisma_enabled
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .prisma_busca_externa import (
+        external_search_enabled,
+        import_manual_prisma_triage,
+        render_external_prisma_org_report,
+        run_external_prisma_search,
+    )
+else:
+    from prisma_busca_externa import (
+        external_search_enabled,
+        import_manual_prisma_triage,
+        render_external_prisma_org_report,
+        run_external_prisma_search,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .utils import write_json, resolve_path
+else:
+    from utils import write_json, resolve_path
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .project_tools import (
+        init_project,
+        make_doi_manifest,
+        inspect_bib,
+        render_bib_inspection_markdown,
+    )
+else:
+    from project_tools import (
+        init_project,
+        make_doi_manifest,
+        inspect_bib,
+        render_bib_inspection_markdown,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .quality_report import build_quality_report, write_quality_report
+else:
+    from quality_report import build_quality_report, write_quality_report
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .institution_profiles import apply_institution_profile, describe_institution_profiles
+else:
+    from institution_profiles import apply_institution_profile, describe_institution_profiles
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .institution_layouts import available_layouts, resolve_layout_spec
+else:
+    from institution_layouts import available_layouts, resolve_layout_spec
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .prompt_manager import prompt_report_for_cfg, load_prompt_bundle
+else:
+    from prompt_manager import prompt_report_for_cfg, load_prompt_bundle
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .institution_explainer import explain_profile
+else:
+    from institution_explainer import explain_profile
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .institution_compliance import (
+        run_institution_compliance,
+        render_compliance_markdown,
+        write_compliance_reports,
+    )
+else:
+    from institution_compliance import (
+        run_institution_compliance,
+        render_compliance_markdown,
+        write_compliance_reports,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .prompt_lock import write_prompt_lock, write_prompt_lock_markdown, build_prompt_lock
+else:
+    from prompt_lock import write_prompt_lock, write_prompt_lock_markdown, build_prompt_lock
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .document_translation import (
+        TranslationError,
+        requested_translation_languages,
+        translation_batch_size,
+        translate_document_model,
+    )
+else:
+    from document_translation import (
+        TranslationError,
+        requested_translation_languages,
+        translation_batch_size,
+        translate_document_model,
+    )
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from .paper_abstracts import (
+        PaperAbstractError,
+        abstract_sidecar_path,
+        generate_paper_abstract_bundle,
+        inject_paper_abstracts_into_docx,
+        inject_paper_abstracts_into_org,
+        main_document_abstract_languages,
+        paper_abstracts_enabled,
+        read_paper_abstract_bundle,
+        write_paper_abstract_bundle,
+    )
+else:
+    from paper_abstracts import (
+        PaperAbstractError,
+        abstract_sidecar_path,
+        generate_paper_abstract_bundle,
+        inject_paper_abstracts_into_docx,
+        inject_paper_abstracts_into_org,
+        main_document_abstract_languages,
+        paper_abstracts_enabled,
+        read_paper_abstract_bundle,
+        write_paper_abstract_bundle,
+    )
 
 DEFAULT_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.4")
 
@@ -317,7 +498,11 @@ def render_external_prisma_outputs(
     org_path = render_external_prisma_org_report(cfg, out_dir, prefix, prisma_payload, phase=phase)
     # >>> PATCH_PRISMA_DIAGRAMA_FLUXO_AUTOMATICO_V1 >>>
     try:
-        from prisma_diagrama_fluxo import ensure_prisma_flow_diagram
+        # Compatibilidade temporária entre pacote e script direto.
+        if __package__:
+            from .prisma_diagrama_fluxo import ensure_prisma_flow_diagram
+        else:
+            from prisma_diagrama_fluxo import ensure_prisma_flow_diagram
         ensure_prisma_flow_diagram(
             cfg=cfg,
             out_dir=out_dir,
@@ -841,20 +1026,36 @@ def main() -> int:
         return _prisma_curadoria_dispatch(args)
     # <<< PATCH_PRISMA_CURADORIA_IA_MENU_PRINCIPAL_V1_DISPATCH <<<
     if args.gui:
-        from academic_pipeline_gui import run_gui
+        # Compatibilidade temporária entre pacote e script direto.
+        if __package__:
+            from .academic_pipeline_gui import run_gui
+        else:
+            from academic_pipeline_gui import run_gui
         return run_gui()
 
     if args.tui:
-        from academic_pipeline_tui import run_tui
+        # Compatibilidade temporária entre pacote e script direto.
+        if __package__:
+            from .academic_pipeline_tui import run_tui
+        else:
+            from academic_pipeline_tui import run_tui
         return run_tui(no_clear=bool(args.no_clear))
 
     if args.list_toml_profiles:
-        from academic_pipeline_toml_generator_interativo import print_profiles
+        # Compatibilidade temporária entre pacote e script direto.
+        if __package__:
+            from .academic_pipeline_toml_generator_interativo import print_profiles
+        else:
+            from academic_pipeline_toml_generator_interativo import print_profiles
         print_profiles()
         return 0
 
     if args.init_toml:
-        from academic_pipeline_toml_generator_interativo import generate_interactive
+        # Compatibilidade temporária entre pacote e script direto.
+        if __package__:
+            from .academic_pipeline_toml_generator_interativo import generate_interactive
+        else:
+            from academic_pipeline_toml_generator_interativo import generate_interactive
         generate_interactive(non_interactive_profile=args.toml_profile or None, no_clear=bool(args.no_clear))
         return 0
 
@@ -937,7 +1138,11 @@ def main() -> int:
         org = Path(args.org).expanduser().resolve() if args.org else None
         bib_keys: list[str] = []
         if args.bib:
-            from bibliography_manager import split_bib_entries, bib_entry_key
+            # Compatibilidade temporária entre pacote e script direto.
+            if __package__:
+                from .bibliography_manager import split_bib_entries, bib_entry_key
+            else:
+                from bibliography_manager import split_bib_entries, bib_entry_key
             bib_path = Path(args.bib).expanduser().resolve()
             if bib_path.exists():
                 bib_keys = [k for e in split_bib_entries(bib_path.read_text(encoding='utf-8', errors='ignore')) if (k := bib_entry_key(e))]
