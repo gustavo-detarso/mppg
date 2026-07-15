@@ -4,7 +4,11 @@ from __future__ import annotations
 
 import html
 from pathlib import Path
-from prisma_model import PrismaFlow, PrismaReport
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prisma_model import PrismaFlow, PrismaReport
+else:
+    from prisma_model import PrismaFlow, PrismaReport
 
 
 def flow_items(flow: PrismaFlow) -> list[tuple[str, int]]:

@@ -3,10 +3,34 @@
 from __future__ import annotations
 
 from pathlib import Path
-from prisma_model import PrismaReport, StudyRecord
-from render_prisma_flow import render_prisma_flow_latex
-from utils import latex_escape, write_text
-from render_org_latex import bibliography_style_from_cfg, render_bibliography_preamble, strip_org_cite_export_lines
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prisma_model import PrismaReport, StudyRecord
+else:
+    from prisma_model import PrismaReport, StudyRecord
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .render_prisma_flow import render_prisma_flow_latex
+else:
+    from render_prisma_flow import render_prisma_flow_latex
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import latex_escape, write_text
+else:
+    from utils import latex_escape, write_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .render_org_latex import (
+        bibliography_style_from_cfg,
+        render_bibliography_preamble,
+        strip_org_cite_export_lines,
+    )
+else:
+    from render_org_latex import (
+        bibliography_style_from_cfg,
+        render_bibliography_preamble,
+        strip_org_cite_export_lines,
+    )
 
 
 def _table(headers: list[str], rows: list[list[str]], name: str = "", caption: str = "") -> str:
