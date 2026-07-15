@@ -495,7 +495,7 @@ def _prisma_curadoria_dispatch(args) -> int:
 # <<< PATCH_PRISMA_CURADORIA_IA_MENU_PRINCIPAL_V1 <<<
 
 
-def main() -> int:
+def _ap003f_pipeline_core() -> int:
     from academic_pipeline.cli_parser import parse_args as parse_cli_args
 
     args = parse_cli_args(pipeline_version=PIPELINE_VERSION)
@@ -1322,7 +1322,6 @@ def _prisma_artigo_generico_run_freeze(argv, silent=False):
     from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_run_freeze_impl_001 as _ap003e_impl__prisma_artigo_generico_run_freeze_1
     return _ap003e_impl__prisma_artigo_generico_run_freeze_1({**globals(), **locals()}, argv, silent)
 
-_original_main_before_prisma_artigo_generico_wrapper = main
 
 def main(*args, **kwargs):
     from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_entrypoint as _ap003e_entrypoint

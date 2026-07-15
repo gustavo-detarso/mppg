@@ -101,48 +101,62 @@ def test_historical_helpers_are_thin_wrappers() -> None:
 
 
 
-def test_first_main_delegates_all_document_stages() -> None:
+def test_ap003f_core_delegates_all_document_stages() -> None:
     source = ORCHESTRATOR.read_text(encoding="utf-8")
     tree = ast.parse(source, filename=str(ORCHESTRATOR))
-    mains = [
+    cores = [
         node
         for node in tree.body
-        if isinstance(node, ast.FunctionDef) and node.name == "main"
+        if isinstance(node, ast.FunctionDef)
+        and node.name == "_ap003f_pipeline_core"
     ]
-    assert len(mains) == 2
+    assert len(cores) == 1
+
     calls = [
         ast.unparse(node.func)
-        for node in ast.walk(mains[0])
+        for node in ast.walk(cores[0])
         if isinstance(node, ast.Call)
     ]
-    for index, _name in enumerate(EXPECTED_STAGES, start=1):
-        alias = f"_ap003d_stage_{index:03d}"
-        assert calls.count(alias) == 1
+
+    for index, _stage in enumerate(EXPECTED_STAGES, start=1):
+        assert calls.count(
+            f"_ap003d_stage_{index:03d}"
+        ) == 1
 
 
-def test_two_mains_and_historical_alias_remain_preserved() -> None:
+
+def test_ap003f_document_contract_accepts_one_main_and_one_core() -> None:
     source = ORCHESTRATOR.read_text(encoding="utf-8")
     tree = ast.parse(source, filename=str(ORCHESTRATOR))
+
     mains = [
         node
         for node in tree.body
-        if isinstance(node, ast.FunctionDef) and node.name == "main"
+        if isinstance(node, ast.FunctionDef)
+        and node.name == "main"
     ]
-    assert len(mains) == 2
-
-    aliases = []
-    for node in tree.body:
-        if not isinstance(node, ast.Assign):
-            continue
-        if not isinstance(node.value, ast.Name) or node.value.id != "main":
-            continue
-        if any(
+    cores = [
+        node
+        for node in tree.body
+        if isinstance(node, ast.FunctionDef)
+        and node.name == "_ap003f_pipeline_core"
+    ]
+    aliases = [
+        node
+        for node in tree.body
+        if isinstance(node, ast.Assign)
+        and any(
             isinstance(target, ast.Name)
-            and target.id == WRAPPER_NAME
+            and target.id
+            == "_original_main_before_prisma_artigo_generico_wrapper"
             for target in node.targets
-        ):
-            aliases.append(node)
-    assert len(aliases) == 1
+        )
+    ]
+
+    assert len(mains) == 1
+    assert len(cores) == 1
+    assert aliases == []
+
 
 
 def test_parser_and_dispatch_are_byte_identical() -> None:

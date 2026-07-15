@@ -45,19 +45,38 @@ def test_entrypoint_help_is_offline_and_successful(script: str, fragment: str) -
     assert fragment in (proc.stdout + proc.stderr)
 
 
-def test_rc10_source_preserves_two_top_level_main_definitions() -> None:
+def test_rc10_source_has_unified_public_main_and_internal_core() -> None:
     source = Path(rc10.__file__).read_text(encoding="utf-8")
     tree = ast.parse(source)
+
     mains = [
         node
         for node in tree.body
-        if isinstance(node, ast.FunctionDef) and node.name == "main"
+        if isinstance(node, ast.FunctionDef)
+        and node.name == "main"
+    ]
+    cores = [
+        node
+        for node in tree.body
+        if isinstance(node, ast.FunctionDef)
+        and node.name == "_ap003f_pipeline_core"
+    ]
+    aliases = [
+        node
+        for node in tree.body
+        if isinstance(node, ast.Assign)
+        and any(
+            isinstance(target, ast.Name)
+            and target.id
+            == "_original_main_before_prisma_artigo_generico_wrapper"
+            for target in node.targets
+        )
     ]
 
-    assert len(mains) == 2
-    assert mains[0].args.vararg is None
-    assert mains[1].args.vararg is not None
-    assert mains[1].args.kwarg is not None
+    assert len(mains) == 1
+    assert len(cores) == 1
+    assert aliases == []
+
 
 
 def test_stage_prints_flushed_execution_marker(capsys: pytest.CaptureFixture[str]) -> None:

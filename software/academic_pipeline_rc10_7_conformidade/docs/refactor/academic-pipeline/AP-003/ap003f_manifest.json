@@ -1,0 +1,44 @@
+{
+  "phase": "AP-003F",
+  "branch": "ap-refactor/03-orchestrator-decomposition",
+  "head_before_application": "f493ab1d09f38467bf47de05760963500abd554d",
+  "strategy": {
+    "public_main": "former second main",
+    "internal_core": "former first main",
+    "internal_core_name": "_ap003f_pipeline_core",
+    "historical_alias_removed": "_original_main_before_prisma_artigo_generico_wrapper",
+    "prisma_alias_replacements": 2
+  },
+  "source": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+  "source_sha256_before": "431882d57a5a6ed334985b51a04db782ceda8de5cff1aa0e3bf856c4aa2c5b3a",
+  "source_sha256_after": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+  "prisma": "academic_pipeline/prisma_generic_orchestration.py",
+  "prisma_sha256_before": "5b659ef03bee30e7e55dd50ad323edc3d0cdeaa98b1e14d02591396ba5e8d69c",
+  "prisma_sha256_after": "f250487a7787c967a0bad0ac38d5dbe210ff63981078d3c65e1d77655ff5f072",
+  "package_main_sha256": "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4",
+  "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+  "dispatch_sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3",
+  "document_sha256": "3f2a3c95e08ccc3c19e3019a225c36fcf532cf4468f75b13c56b7c43bbc88a8e",
+  "core_normalized_ast_sha256": "05ab0bb4c403f3a7322fe674157c54623535e71411d37e7470fd8af2715aba3e",
+  "result": {
+    "top_level_main_count": 1,
+    "core_count": 1,
+    "historical_alias_assignment_count": 0,
+    "direct_guard_count": 1
+  },
+  "created": [
+    "docs/refactor/academic-pipeline/AP-003/AP-003F_MAIN_UNIFICATION_EXTRACTION.md",
+    "docs/refactor/academic-pipeline/AP-003/ap003f_manifest.json",
+    "tests/characterization/test_ap003f_main_unification_contract.py"
+  ],
+  "modified": [
+    "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+    "academic_pipeline/prisma_generic_orchestration.py"
+  ],
+  "preserved_byte_identical": [
+    "academic_pipeline/__main__.py",
+    "academic_pipeline/cli_parser.py",
+    "academic_pipeline/command_dispatch.py",
+    "academic_pipeline/document_orchestration.py"
+  ]
+}
