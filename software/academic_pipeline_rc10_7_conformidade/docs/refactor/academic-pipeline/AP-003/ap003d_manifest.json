@@ -1,0 +1,460 @@
+{
+  "phase": "AP-003D",
+  "branch": "ap-refactor/03-orchestrator-decomposition",
+  "head_before_application": "148e067ebbfd1cbdc7e72e2a4d5189893c06f8b7",
+  "source": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+  "source_sha256_before": "4261568e60308764ef1f56ab1e13d6ccfd886d76dce965ec6d3e8fd66cdee51d",
+  "source_sha256_after": "da4c6c9b817d6607873e0412b5829729e36c3d70a1745b4b7d39ea4e31d31367",
+  "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+  "dispatch_sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3",
+  "document_module": "academic_pipeline/document_orchestration.py",
+  "helper_count": 14,
+  "stage_count": 12,
+  "helpers": [
+    {
+      "name": "load_config",
+      "implementation": "load_config_impl",
+      "line": 1648,
+      "end_line": 1649,
+      "runtime_names": [
+        "_refs_v6_apply_runtime_policy",
+        "_refs_v6_original_load_config"
+      ]
+    },
+    {
+      "name": "output_paths",
+      "implementation": "output_paths_impl",
+      "line": 308,
+      "end_line": 317,
+      "runtime_names": [
+        "Path",
+        "_section",
+        "resolve_path"
+      ]
+    },
+    {
+      "name": "apply_cli_path_overrides",
+      "implementation": "apply_cli_path_overrides_impl",
+      "line": 353,
+      "end_line": 386,
+      "runtime_names": []
+    },
+    {
+      "name": "load_existing_document_json",
+      "implementation": "load_existing_document_json_impl",
+      "line": 389,
+      "end_line": 390,
+      "runtime_names": [
+        "AcademicDocument"
+      ]
+    },
+    {
+      "name": "resolve_bib_for_existing_document",
+      "implementation": "resolve_bib_for_existing_document_impl",
+      "line": 393,
+      "end_line": 420,
+      "runtime_names": [
+        "Path",
+        "c",
+        "m"
+      ]
+    },
+    {
+      "name": "_resolve_latex_paths_for_recompile",
+      "implementation": "_resolve_latex_paths_for_recompile_impl",
+      "line": 436,
+      "end_line": 442,
+      "runtime_names": [
+        "Path",
+        "resolve_path"
+      ]
+    },
+    {
+      "name": "run_recompile",
+      "implementation": "run_recompile_impl",
+      "line": 445,
+      "end_line": 471,
+      "runtime_names": [
+        "Path",
+        "_resolve_latex_paths_for_recompile",
+        "clean_aux_files",
+        "make_run_report",
+        "print_outputs",
+        "run_compile_sequence",
+        "stage",
+        "write_json",
+        "write_outputs_manifest"
+      ]
+    },
+    {
+      "name": "render_additional_language_versions",
+      "implementation": "render_additional_language_versions_impl",
+      "line": 535,
+      "end_line": 648,
+      "runtime_names": [
+        "Any",
+        "Path",
+        "build_quality_report",
+        "inject_paper_abstracts_into_docx",
+        "inject_paper_abstracts_into_org",
+        "item",
+        "raise_if_errors",
+        "render_docx",
+        "render_org_latex",
+        "requested_translation_languages",
+        "resolve_path",
+        "run_compile_sequence",
+        "shutil",
+        "stage",
+        "translate_document_model",
+        "translation_batch_size",
+        "validate_docx_file",
+        "validate_org_text",
+        "write_json",
+        "write_quality_report"
+      ]
+    },
+    {
+      "name": "_refs_v6_disabled",
+      "implementation": "_refs_v6_disabled_impl",
+      "line": 1587,
+      "end_line": 1602,
+      "runtime_names": []
+    },
+    {
+      "name": "_refs_v6_apply_runtime_policy",
+      "implementation": "_refs_v6_apply_runtime_policy_impl",
+      "line": 1605,
+      "end_line": 1643,
+      "runtime_names": [
+        "_refs_v6_disabled"
+      ]
+    },
+    {
+      "name": "build_bibliography",
+      "implementation": "build_bibliography_impl",
+      "line": 1655,
+      "end_line": 1666,
+      "runtime_names": [
+        "Path",
+        "_refs_v6_disabled",
+        "_refs_v6_original_build_bibliography"
+      ]
+    },
+    {
+      "name": "_refs_v6_clear_document_bibliography",
+      "implementation": "_refs_v6_clear_document_bibliography_impl",
+      "line": 1669,
+      "end_line": 1680,
+      "runtime_names": []
+    },
+    {
+      "name": "_refs_v6_strip_org",
+      "implementation": "_refs_v6_strip_org_impl",
+      "line": 1683,
+      "end_line": 1711,
+      "runtime_names": []
+    },
+    {
+      "name": "render_org_latex",
+      "implementation": "render_org_latex_impl",
+      "line": 1717,
+      "end_line": 1743,
+      "runtime_names": [
+        "Path",
+        "_refs_v6_clear_document_bibliography",
+        "_refs_v6_disabled",
+        "_refs_v6_original_render_org_latex",
+        "_refs_v6_strip_org"
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "run_document_stage_001",
+      "start_body_index": 36,
+      "end_body_index": 36,
+      "line": 1035,
+      "end_line": 1055,
+      "runtime_names": [
+        "Path",
+        "build_quality_report",
+        "k",
+        "load_existing_document_json",
+        "write_quality_report"
+      ],
+      "stored_names": [
+        "bib_entry_key",
+        "bib_keys",
+        "bib_path",
+        "document",
+        "document_json",
+        "e",
+        "k",
+        "org",
+        "out",
+        "report",
+        "split_bib_entries"
+      ]
+    },
+    {
+      "name": "run_document_stage_002",
+      "start_body_index": 68,
+      "end_body_index": 68,
+      "line": 1155,
+      "end_line": 1155,
+      "runtime_names": [
+        "cfg"
+      ],
+      "stored_names": [
+        "doc_cfg"
+      ]
+    },
+    {
+      "name": "run_document_stage_003",
+      "start_body_index": 80,
+      "end_body_index": 80,
+      "line": 1236,
+      "end_line": 1289,
+      "runtime_names": [
+        "PIPELINE_VERSION",
+        "Path",
+        "attach_existing_mindmap_if_available",
+        "cfg",
+        "delete_existing_mindmap_outputs",
+        "document_json_path",
+        "generate_and_attach_mindmap",
+        "json",
+        "load_existing_document_json",
+        "make_client",
+        "make_run_report",
+        "mm_diag",
+        "model",
+        "out_dir",
+        "prefix",
+        "print_outputs",
+        "should_generate_mindmap",
+        "stage",
+        "warnings",
+        "write_json",
+        "write_outputs_manifest"
+      ],
+      "stored_names": [
+        "client",
+        "document",
+        "mm_diag",
+        "model",
+        "outputs",
+        "removed_mindmap_files",
+        "report",
+        "w"
+      ]
+    },
+    {
+      "name": "run_document_stage_004",
+      "start_body_index": 86,
+      "end_body_index": 86,
+      "line": 1451,
+      "end_line": 1451,
+      "runtime_names": [
+        "stage"
+      ],
+      "stored_names": []
+    },
+    {
+      "name": "run_document_stage_005",
+      "start_body_index": 88,
+      "end_body_index": 91,
+      "line": 1453,
+      "end_line": 1458,
+      "runtime_names": [
+        "bib_keys",
+        "bib_path",
+        "cfg",
+        "document",
+        "inject_paper_abstracts_into_org",
+        "main_document_abstract_languages",
+        "org_path",
+        "paper_abstract_bundle",
+        "prefix",
+        "raise_if_errors",
+        "render_org_latex",
+        "stage",
+        "validate_org_text"
+      ],
+      "stored_names": [
+        "org_text"
+      ]
+    },
+    {
+      "name": "run_document_stage_006",
+      "start_body_index": 93,
+      "end_body_index": 93,
+      "line": 1461,
+      "end_line": 1466,
+      "runtime_names": [
+        "config_dir",
+        "doc_cfg",
+        "latex_cfg",
+        "org_path",
+        "resolve_path",
+        "run_compile_sequence",
+        "stage"
+      ],
+      "stored_names": [
+        "academic_writing",
+        "latex_extra",
+        "pdf_engine",
+        "pdf_path"
+      ]
+    },
+    {
+      "name": "run_document_stage_007",
+      "start_body_index": 96,
+      "end_body_index": 96,
+      "line": 1470,
+      "end_line": 1480,
+      "runtime_names": [
+        "bib_path",
+        "cfg",
+        "config_dir",
+        "doc_cfg",
+        "document",
+        "inject_paper_abstracts_into_docx",
+        "main_document_abstract_languages",
+        "out_dir",
+        "paper_abstract_bundle",
+        "prefix",
+        "render_docx",
+        "resolve_path",
+        "stage",
+        "validate_docx_file",
+        "w",
+        "warnings"
+      ],
+      "stored_names": [
+        "docx_cfg",
+        "docx_path",
+        "docx_validation",
+        "ref",
+        "w"
+      ]
+    },
+    {
+      "name": "run_document_stage_008",
+      "start_body_index": 98,
+      "end_body_index": 98,
+      "line": 1483,
+      "end_line": 1509,
+      "runtime_names": [
+        "TranslationError",
+        "bib_keys",
+        "bib_path",
+        "cfg",
+        "client",
+        "config_dir",
+        "doc_cfg",
+        "document",
+        "latex_cfg",
+        "model",
+        "out_dir",
+        "paper_abstract_bundle",
+        "prefix",
+        "render_additional_language_versions",
+        "requested_translation_languages",
+        "warnings"
+      ],
+      "stored_names": [
+        "exc",
+        "translated_outputs",
+        "translation_warnings"
+      ]
+    },
+    {
+      "name": "run_document_stage_009",
+      "start_body_index": 106,
+      "end_body_index": 106,
+      "line": 1532,
+      "end_line": 1538,
+      "runtime_names": [
+        "bib_path",
+        "cfg",
+        "docx_path",
+        "org_path",
+        "pdf_path",
+        "run_institution_compliance"
+      ],
+      "stored_names": [
+        "compliance_report"
+      ]
+    },
+    {
+      "name": "run_document_stage_010",
+      "start_body_index": 108,
+      "end_body_index": 108,
+      "line": 1540,
+      "end_line": 1540,
+      "runtime_names": [
+        "compliance_md",
+        "outputs"
+      ],
+      "stored_names": []
+    },
+    {
+      "name": "run_document_stage_011",
+      "start_body_index": 112,
+      "end_body_index": 112,
+      "line": 1547,
+      "end_line": 1547,
+      "runtime_names": [
+        "bib_keys",
+        "build_quality_report",
+        "document",
+        "org_path"
+      ],
+      "stored_names": [
+        "quality"
+      ]
+    },
+    {
+      "name": "run_document_stage_012",
+      "start_body_index": 116,
+      "end_body_index": 117,
+      "line": 1552,
+      "end_line": 1569,
+      "runtime_names": [
+        "Path",
+        "cache_dir",
+        "cfg",
+        "docx_validation",
+        "make_run_report",
+        "model",
+        "out_dir",
+        "outputs",
+        "precheck",
+        "prefix",
+        "quality_path",
+        "warnings",
+        "work_dir"
+      ],
+      "stored_names": [
+        "report"
+      ]
+    }
+  ],
+  "created": [
+    "academic_pipeline/document_orchestration.py",
+    "docs/refactor/academic-pipeline/AP-003/AP-003D_DOCUMENT_EXTRACTION.md",
+    "docs/refactor/academic-pipeline/AP-003/ap003d_manifest.json",
+    "tests/characterization/test_ap003d_document_contract.py"
+  ],
+  "modified": [
+    "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+  ],
+  "preserved": {
+    "top_level_main_count": 2,
+    "historical_wrapper": "_original_main_before_prisma_artigo_generico_wrapper",
+    "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+    "dispatch_sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3"
+  }
+}
