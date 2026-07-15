@@ -18,15 +18,30 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from bibliography_manager import (
-    bib_entry_key,
-    deduplicate_entries,
-    entry_identity,
-    extract_field,
-    normalize_doi,
-    split_bib_entries,
-)
-from utils import normalize_title_loose, slugify, write_json, write_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .bibliography_manager import (
+        bib_entry_key,
+        deduplicate_entries,
+        entry_identity,
+        extract_field,
+        normalize_doi,
+        split_bib_entries,
+    )
+else:
+    from bibliography_manager import (
+        bib_entry_key,
+        deduplicate_entries,
+        entry_identity,
+        extract_field,
+        normalize_doi,
+        split_bib_entries,
+    )
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import normalize_title_loose, slugify, write_json, write_text
+else:
+    from utils import normalize_title_loose, slugify, write_json, write_text
 
 SUPPORTED_SOURCE_SUFFIXES = {".pdf", ".docx", ".txt", ".md", ".org", ".rst", ".tex"}
 

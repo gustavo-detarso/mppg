@@ -8,20 +8,49 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from bibliography_manager import BibBuildResult, bib_entry_key, split_bib_entries
-from corpus_manager import SourceDoc
-from prisma_model import (
-    Diagnostics,
-    PrismaFlow,
-    PrismaMetadata,
-    PrismaReport,
-    QueryRecord,
-    ScreeningCriteria,
-    SearchStrategy,
-    StudyRecord,
-)
-from utils import normalize_title_loose, resolve_path, shorten_text
-from prompt_manager import load_prompt_bundle
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .bibliography_manager import BibBuildResult, bib_entry_key, split_bib_entries
+else:
+    from bibliography_manager import BibBuildResult, bib_entry_key, split_bib_entries
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .corpus_manager import SourceDoc
+else:
+    from corpus_manager import SourceDoc
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prisma_model import (
+        Diagnostics,
+        PrismaFlow,
+        PrismaMetadata,
+        PrismaReport,
+        QueryRecord,
+        ScreeningCriteria,
+        SearchStrategy,
+        StudyRecord,
+    )
+else:
+    from prisma_model import (
+        Diagnostics,
+        PrismaFlow,
+        PrismaMetadata,
+        PrismaReport,
+        QueryRecord,
+        ScreeningCriteria,
+        SearchStrategy,
+        StudyRecord,
+    )
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import normalize_title_loose, resolve_path, shorten_text
+else:
+    from utils import normalize_title_loose, resolve_path, shorten_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prompt_manager import load_prompt_bundle
+else:
+    from prompt_manager import load_prompt_bundle
 
 
 def _as_list(value: Any) -> list[Any]:

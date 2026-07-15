@@ -7,8 +7,16 @@ import re
 from pathlib import Path
 from typing import Any
 
-from document_model import AcademicDocument, Block, Citation, TextSpan
-from utils import normalize_title_loose, write_json, write_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_model import AcademicDocument, Block, Citation, TextSpan
+else:
+    from document_model import AcademicDocument, Block, Citation, TextSpan
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import normalize_title_loose, write_json, write_text
+else:
+    from utils import normalize_title_loose, write_json, write_text
 
 TECHNICAL_TERMS = [
     "metadados incompletos",

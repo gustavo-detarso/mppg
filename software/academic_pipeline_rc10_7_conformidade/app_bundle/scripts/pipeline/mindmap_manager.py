@@ -11,9 +11,21 @@ from typing import Any
 
 from pydantic import BaseModel
 
-from document_model import AcademicDocument, FigureSpec
-from utils import write_text, slugify, shorten_text
-from prompt_manager import load_prompt_bundle
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_model import AcademicDocument, FigureSpec
+else:
+    from document_model import AcademicDocument, FigureSpec
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import write_text, slugify, shorten_text
+else:
+    from utils import write_text, slugify, shorten_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prompt_manager import load_prompt_bundle
+else:
+    from prompt_manager import load_prompt_bundle
 
 
 class MindmapOutput(BaseModel):

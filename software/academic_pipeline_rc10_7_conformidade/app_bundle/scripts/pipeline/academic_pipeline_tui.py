@@ -21,7 +21,11 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
-import academic_pipeline_tui_widgets as ui
+# Compatibilidade temporária entre pacote e script direto.
+if __package__:
+    from . import academic_pipeline_tui_widgets as ui
+else:
+    import academic_pipeline_tui_widgets as ui
 
 try:
     from article_workflow import ArticleWorkflow

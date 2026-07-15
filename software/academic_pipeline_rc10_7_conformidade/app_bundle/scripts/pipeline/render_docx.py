@@ -9,9 +9,21 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-from document_model import AcademicDocument, Citation, TextSpan, Block
-from utils import normalize_title_loose, write_text
-from render_org_latex import is_ai_generated_reference_section_title
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_model import AcademicDocument, Citation, TextSpan, Block
+else:
+    from document_model import AcademicDocument, Citation, TextSpan, Block
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import normalize_title_loose, write_text
+else:
+    from utils import normalize_title_loose, write_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .render_org_latex import is_ai_generated_reference_section_title
+else:
+    from render_org_latex import is_ai_generated_reference_section_title
 
 try:
     from docx import Document

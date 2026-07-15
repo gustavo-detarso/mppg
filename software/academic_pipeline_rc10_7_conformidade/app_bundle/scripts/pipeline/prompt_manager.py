@@ -15,8 +15,16 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any, Iterable
 
-from institution_profiles import find_app_bundle
-from utils import shorten_text, write_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .institution_profiles import find_app_bundle
+else:
+    from institution_profiles import find_app_bundle
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import shorten_text, write_text
+else:
+    from utils import shorten_text, write_text
 
 
 @dataclass

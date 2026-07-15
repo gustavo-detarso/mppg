@@ -16,7 +16,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-from document_translation import normalize_language, requested_translation_languages
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_translation import (
+        normalize_language,
+        requested_translation_languages,
+    )
+else:
+    from document_translation import normalize_language, requested_translation_languages
 
 
 class PaperAbstractError(RuntimeError):

@@ -23,7 +23,11 @@ try:
 except Exception:
     docx = None  # type: ignore
 
-from utils import shorten_text, resolve_path, slugify
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import shorten_text, resolve_path, slugify
+else:
+    from utils import shorten_text, resolve_path, slugify
 
 TEXT_SUFFIXES = {".txt", ".md", ".org", ".rst", ".tex", ".json", ".csv", ".yaml", ".yml", ".xml"}
 BINARY_SUFFIXES = {".pdf", ".docx"}

@@ -16,10 +16,26 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any
 
-from bibliography_manager import split_bib_entries, bib_entry_key
-from diagnostics import now_iso, PIPELINE_VERSION
-from institution_profiles import find_app_bundle
-from utils import normalize_title_loose, resolve_path, write_json, write_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .bibliography_manager import split_bib_entries, bib_entry_key
+else:
+    from bibliography_manager import split_bib_entries, bib_entry_key
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .diagnostics import now_iso, PIPELINE_VERSION
+else:
+    from diagnostics import now_iso, PIPELINE_VERSION
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .institution_profiles import find_app_bundle
+else:
+    from institution_profiles import find_app_bundle
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import normalize_title_loose, resolve_path, write_json, write_text
+else:
+    from utils import normalize_title_loose, resolve_path, write_json, write_text
 
 
 @dataclass

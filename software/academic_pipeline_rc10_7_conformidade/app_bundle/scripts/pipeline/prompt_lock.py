@@ -12,9 +12,21 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from diagnostics import now_iso, PIPELINE_VERSION
-from prompt_manager import prompt_report_for_cfg
-from utils import write_json, write_text
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .diagnostics import now_iso, PIPELINE_VERSION
+else:
+    from diagnostics import now_iso, PIPELINE_VERSION
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prompt_manager import prompt_report_for_cfg
+else:
+    from prompt_manager import prompt_report_for_cfg
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import write_json, write_text
+else:
+    from utils import write_json, write_text
 
 
 def build_prompt_lock(cfg: dict[str, Any]) -> dict[str, Any]:

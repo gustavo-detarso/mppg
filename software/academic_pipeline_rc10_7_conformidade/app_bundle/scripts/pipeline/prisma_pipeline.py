@@ -6,16 +6,56 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from bibliography_manager import BibBuildResult
-from corpus_manager import SourceDoc
-from latex_compile import run_compile_sequence
-from prisma_builder import build_prisma_report
-from prisma_validator import raise_if_prisma_errors, validate_prisma_report
-from render_prisma_docx import render_prisma_docx
-from render_prisma_flow import render_prisma_flow_svg
-from render_prisma_org import render_prisma_org
-from render_prisma_xlsx import render_prisma_xlsx
-from utils import resolve_path, write_json
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .bibliography_manager import BibBuildResult
+else:
+    from bibliography_manager import BibBuildResult
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .corpus_manager import SourceDoc
+else:
+    from corpus_manager import SourceDoc
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .latex_compile import run_compile_sequence
+else:
+    from latex_compile import run_compile_sequence
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prisma_builder import build_prisma_report
+else:
+    from prisma_builder import build_prisma_report
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prisma_validator import raise_if_prisma_errors, validate_prisma_report
+else:
+    from prisma_validator import raise_if_prisma_errors, validate_prisma_report
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .render_prisma_docx import render_prisma_docx
+else:
+    from render_prisma_docx import render_prisma_docx
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .render_prisma_flow import render_prisma_flow_svg
+else:
+    from render_prisma_flow import render_prisma_flow_svg
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .render_prisma_org import render_prisma_org
+else:
+    from render_prisma_org import render_prisma_org
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .render_prisma_xlsx import render_prisma_xlsx
+else:
+    from render_prisma_xlsx import render_prisma_xlsx
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import resolve_path, write_json
+else:
+    from utils import resolve_path, write_json
 
 
 def prisma_enabled(cfg: dict[str, Any]) -> bool:
