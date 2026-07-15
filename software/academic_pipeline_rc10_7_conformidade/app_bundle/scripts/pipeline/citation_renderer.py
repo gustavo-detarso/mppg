@@ -4,7 +4,11 @@ from __future__ import annotations
 
 import re
 from typing import Iterable
-from document_model import Citation, Inline, TextSpan
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_model import Citation, Inline, TextSpan
+else:
+    from document_model import Citation, Inline, TextSpan
 
 
 def render_latex_citation(citation: Citation) -> str:

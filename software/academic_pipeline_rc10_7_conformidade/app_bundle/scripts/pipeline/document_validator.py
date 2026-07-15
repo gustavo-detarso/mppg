@@ -4,9 +4,27 @@ from __future__ import annotations
 
 import re
 from typing import Any
-from document_model import AcademicDocument, Citation, TextSpan, Block
-from citation_renderer import extract_cited_keys_from_model_inline, extract_latex_cited_keys
-from utils import normalize_title_loose
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_model import AcademicDocument, Citation, TextSpan, Block
+else:
+    from document_model import AcademicDocument, Citation, TextSpan, Block
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .citation_renderer import (
+        extract_cited_keys_from_model_inline,
+        extract_latex_cited_keys,
+    )
+else:
+    from citation_renderer import (
+        extract_cited_keys_from_model_inline,
+        extract_latex_cited_keys,
+    )
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import normalize_title_loose
+else:
+    from utils import normalize_title_loose
 
 TECHNICAL_LEAK_TERMS = [
     "metadados incompletos", "metadados inferidos", "metadados bibliográficos",
