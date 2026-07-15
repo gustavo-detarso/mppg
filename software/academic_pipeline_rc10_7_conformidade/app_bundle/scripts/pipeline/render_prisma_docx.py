@@ -5,7 +5,11 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from prisma_model import PrismaReport, StudyRecord
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .prisma_model import PrismaReport, StudyRecord
+else:
+    from prisma_model import PrismaReport, StudyRecord
 
 try:
     from docx import Document

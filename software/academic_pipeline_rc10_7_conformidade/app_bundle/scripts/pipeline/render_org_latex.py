@@ -7,10 +7,36 @@ import re
 from pathlib import Path
 from typing import Any
 
-from document_model import AcademicDocument, Block
-from citation_renderer import render_latex_inlines
-from utils import latex_escape, normalize_snippet_placeholders, write_text, resolve_path
-from institution_layouts import resolve_layout_spec
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .document_model import AcademicDocument, Block
+else:
+    from document_model import AcademicDocument, Block
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .citation_renderer import render_latex_inlines
+else:
+    from citation_renderer import render_latex_inlines
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .utils import (
+        latex_escape,
+        normalize_snippet_placeholders,
+        write_text,
+        resolve_path,
+    )
+else:
+    from utils import (
+        latex_escape,
+        normalize_snippet_placeholders,
+        write_text,
+        resolve_path,
+    )
+# Compatibilidade temporária entre pacote oficial e execução direta.
+if __package__:
+    from .institution_layouts import resolve_layout_spec
+else:
+    from institution_layouts import resolve_layout_spec
 
 
 def clean_heading_title(title: str) -> str:
