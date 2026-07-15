@@ -1,0 +1,3586 @@
+{
+  "phase": "AP-003G",
+  "mode": "preparation-only",
+  "generated_at_utc": "2026-07-15T21:57:36.020774+00:00",
+  "git": {
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "head": "7174664e22a941f4a6643d289106f37fa37289b5",
+    "upstream": "origin/ap-refactor/03-orchestrator-decomposition",
+    "upstream_head": "7174664e22a941f4a6643d289106f37fa37289b5"
+  },
+  "architecture": {
+    "public_main": {
+      "name": "main",
+      "line": 1326,
+      "end_line": 1328,
+      "statement_count": 2,
+      "calls": [
+        "_ap003e_entrypoint",
+        "globals",
+        "locals"
+      ],
+      "arguments": [],
+      "vararg": "args",
+      "kwarg": "kwargs"
+    },
+    "internal_core": {
+      "name": "_ap003f_pipeline_core",
+      "line": 498,
+      "end_line": 1243,
+      "statement_count": 213,
+      "calls": [
+        "', '.join",
+        "'\\n- '.join",
+        "(cfg.get('documentos_locais', {}) if isinstance(cfg.get('documentos_locais'), dict) else {}).get",
+        "FileNotFoundError",
+        "Path",
+        "Path(args.document_json).expanduser",
+        "Path(args.document_json).expanduser().resolve",
+        "Path(str(cfg.get('__config_dir__'))).resolve",
+        "RuntimeError",
+        "_ap003c_dispatch_001",
+        "_ap003c_dispatch_002",
+        "_ap003c_dispatch_003",
+        "_ap003c_dispatch_004",
+        "_ap003c_dispatch_005",
+        "_ap003c_dispatch_006",
+        "_ap003c_dispatch_007",
+        "_ap003c_dispatch_008",
+        "_ap003c_dispatch_009",
+        "_ap003c_dispatch_010",
+        "_ap003c_dispatch_011",
+        "_ap003c_dispatch_012",
+        "_ap003c_dispatch_013",
+        "_ap003c_dispatch_014",
+        "_ap003c_dispatch_015",
+        "_ap003c_dispatch_016",
+        "_ap003c_dispatch_017",
+        "_ap003c_dispatch_018",
+        "_ap003c_dispatch_019",
+        "_ap003d_stage_001",
+        "_ap003d_stage_002",
+        "_ap003d_stage_003",
+        "_ap003d_stage_004",
+        "_ap003d_stage_005",
+        "_ap003d_stage_006",
+        "_ap003d_stage_007",
+        "_ap003d_stage_008",
+        "_ap003d_stage_009",
+        "_ap003d_stage_010",
+        "_ap003d_stage_011",
+        "_ap003d_stage_012",
+        "_ap003e_stage_001",
+        "_ap003e_stage_002",
+        "_ap003e_stage_003",
+        "_ap003e_stage_004",
+        "_ap003e_stage_005",
+        "_ap003e_stage_006",
+        "_ap003e_stage_007",
+        "_ap003e_stage_008",
+        "_load_optional_config",
+        "_openai_model_from_cfg",
+        "abstract_sidecar_path",
+        "apply_cli_path_overrides",
+        "attach_existing_mindmap_if_available",
+        "bool",
+        "build_bibliography",
+        "build_document_model",
+        "cfg.get",
+        "check_config",
+        "collect_orientation_docs",
+        "compliance_report.get",
+        "copy_documents_to_fulltext_cache",
+        "delete_existing_mindmap_outputs",
+        "discover_local_documents",
+        "document.model_dump",
+        "document_json_path.exists",
+        "e.get",
+        "generate_and_attach_mindmap",
+        "generate_paper_abstract_bundle",
+        "globals",
+        "isinstance",
+        "json.dumps",
+        "load_existing_document_json",
+        "locals",
+        "make_client",
+        "make_run_report",
+        "paper_abstract_path.exists",
+        "paper_abstracts_enabled",
+        "parse_cli_args",
+        "pipeline_cfg.get",
+        "precheck.get",
+        "print",
+        "print_outputs",
+        "prisma_enabled",
+        "quality.get",
+        "raise_if_errors",
+        "read_paper_abstract_bundle",
+        "resolve_bib_for_existing_document",
+        "resumo_cfg_for_stage.get",
+        "run_prisma_report_outputs",
+        "sanitize_document_model_raw_bibkeys",
+        "sanitize_document_model_technical_leaks",
+        "should_generate_mindmap",
+        "stage",
+        "str",
+        "validate_document_model",
+        "w.get",
+        "warnings.append",
+        "warnings.extend",
+        "work_cache_paths",
+        "write_compliance_reports",
+        "write_json",
+        "write_outputs_manifest",
+        "write_paper_abstract_bundle",
+        "write_prompt_lock",
+        "write_prompt_lock_markdown",
+        "write_quality_report"
+      ],
+      "arguments": [],
+      "vararg": null,
+      "kwarg": null
+    },
+    "direct_guard": {
+      "line": 1332,
+      "end_line": 1333,
+      "calls": [
+        "SystemExit",
+        "main"
+      ]
+    },
+    "prisma_core_references": [
+      {
+        "line": 706,
+        "column": 13,
+        "context": "Load"
+      },
+      {
+        "line": 702,
+        "column": 17,
+        "context": "Load"
+      }
+    ],
+    "package_main_calls": [
+      "SystemExit",
+      "main"
+    ],
+    "modules": {
+      "orchestrator": {
+        "sha256": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+        "line_count": 1333,
+        "byte_count": 57269,
+        "imports": [
+          "__future__",
+          "argparse",
+          "dotenv",
+          "json",
+          "os",
+          "pathlib",
+          "shutil",
+          "sys",
+          "tomllib",
+          "typing"
+        ],
+        "top_level_function_count": 50,
+        "top_level_functions": [
+          {
+            "name": "stage",
+            "line": 272,
+            "end_line": 275,
+            "statement_count": 3,
+            "calls": [
+              "_ap003e_impl_stage_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "message"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_json_or_none",
+            "line": 278,
+            "end_line": 280,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__json_or_none_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "value"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "load_config",
+            "line": 283,
+            "end_line": 289,
+            "statement_count": 5,
+            "calls": [
+              "apply_institution_profile",
+              "path.open",
+              "path.resolve",
+              "str",
+              "tomllib.load"
+            ],
+            "arguments": [
+              "path"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "make_client",
+            "line": 292,
+            "end_line": 294,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl_make_client_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "model_override"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_section",
+            "line": 297,
+            "end_line": 299,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__section_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg",
+              "name"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "output_paths",
+            "line": 302,
+            "end_line": 305,
+            "statement_count": 3,
+            "calls": [
+              "_ap003d_impl_output_paths",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "research_output_paths",
+            "line": 308,
+            "end_line": 317,
+            "statement_count": 3,
+            "calls": [
+              "_ap003e_impl_research_output_paths_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "work_cache_paths",
+            "line": 320,
+            "end_line": 330,
+            "statement_count": 10,
+            "calls": [
+              "Path",
+              "Path(str(cfg.get('__config_dir__') or Path.cwd())).resolve",
+              "Path.cwd",
+              "_section",
+              "bool",
+              "cache_dir.mkdir",
+              "cfg.get",
+              "paths.get",
+              "resolve_path",
+              "str",
+              "work_dir.mkdir"
+            ],
+            "arguments": [
+              "cfg",
+              "prefix"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "apply_cli_path_overrides",
+            "line": 333,
+            "end_line": 340,
+            "statement_count": 3,
+            "calls": [
+              "_ap003d_impl_apply_cli_path_overrides",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "load_existing_document_json",
+            "line": 343,
+            "end_line": 345,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl_load_existing_document_json",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "path"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "resolve_bib_for_existing_document",
+            "line": 348,
+            "end_line": 351,
+            "statement_count": 3,
+            "calls": [
+              "_ap003d_impl_resolve_bib_for_existing_document",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "document",
+              "document_json_path",
+              "out_dir",
+              "prefix"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_openai_model_from_cfg",
+            "line": 354,
+            "end_line": 355,
+            "statement_count": 1,
+            "calls": [
+              "(cfg.get('openai', {}) if isinstance(cfg.get('openai'), dict) else {}).get",
+              "cfg.get",
+              "isinstance",
+              "os.getenv",
+              "str"
+            ],
+            "arguments": [
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_load_optional_config",
+            "line": 358,
+            "end_line": 364,
+            "statement_count": 4,
+            "calls": [
+              "FileNotFoundError",
+              "Path",
+              "Path(path).expanduser",
+              "Path(path).expanduser().resolve",
+              "load_config",
+              "p.exists"
+            ],
+            "arguments": [
+              "path"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_resolve_latex_paths_for_recompile",
+            "line": 367,
+            "end_line": 369,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl__resolve_latex_paths_for_recompile",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_recompile",
+            "line": 372,
+            "end_line": 374,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl_run_recompile",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "render_external_prisma_outputs",
+            "line": 378,
+            "end_line": 386,
+            "statement_count": 3,
+            "calls": [
+              "_ap003e_impl_render_external_prisma_outputs_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg",
+              "out_dir",
+              "prefix",
+              "prisma_payload",
+              "phase"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "render_additional_language_versions",
+            "line": 389,
+            "end_line": 397,
+            "statement_count": 3,
+            "calls": [
+              "_ap003d_impl_render_additional_language_versions",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "client",
+              "model",
+              "cfg",
+              "document",
+              "bib_path",
+              "bib_keys",
+              "out_dir",
+              "prefix",
+              "doc_cfg",
+              "latex_cfg",
+              "config_dir",
+              "abstract_bundle"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_default_config",
+            "line": 402,
+            "end_line": 404,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_default_config_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_default_out_dir",
+            "line": 407,
+            "end_line": 409,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_default_out_dir_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_default_prompt",
+            "line": 412,
+            "end_line": 414,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_default_prompt_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_script_path",
+            "line": 417,
+            "end_line": 419,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_script_path_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_arg",
+            "line": 422,
+            "end_line": 424,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_arg_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "name",
+              "default"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_config_from_args",
+            "line": 427,
+            "end_line": 429,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_config_from_args_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_out_from_args",
+            "line": 432,
+            "end_line": 434,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_out_from_args_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_prompt_from_args",
+            "line": 437,
+            "end_line": 439,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_prompt_from_args_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_input_from_args",
+            "line": 442,
+            "end_line": 444,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_input_from_args_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "default_xlsx"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_run_command",
+            "line": 447,
+            "end_line": 449,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_run_command_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cmd"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_build_cmd",
+            "line": 452,
+            "end_line": 454,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_build_cmd_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "usar_ia",
+              "reexportar_xlsx"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_run_ia",
+            "line": 457,
+            "end_line": 459,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_run_ia_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "usar_ia"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_reexportar_xlsx",
+            "line": 462,
+            "end_line": 464,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_reexportar_xlsx_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_pipeline_supports_flag",
+            "line": 467,
+            "end_line": 469,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_pipeline_supports_flag_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "flag"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_importar_no_pipeline",
+            "line": 472,
+            "end_line": 474,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_importar_no_pipeline_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_fluxo_completo",
+            "line": 477,
+            "end_line": 479,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_fluxo_completo_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_mostrar_caminhos",
+            "line": 482,
+            "end_line": 484,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_mostrar_caminhos_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_menu",
+            "line": 487,
+            "end_line": 489,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_menu_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_dispatch",
+            "line": 492,
+            "end_line": 494,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_curadoria_dispatch_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003f_pipeline_core",
+            "line": 498,
+            "end_line": 1243,
+            "statement_count": 213,
+            "calls": [
+              "', '.join",
+              "'\\n- '.join",
+              "(cfg.get('documentos_locais', {}) if isinstance(cfg.get('documentos_locais'), dict) else {}).get",
+              "FileNotFoundError",
+              "Path",
+              "Path(args.document_json).expanduser",
+              "Path(args.document_json).expanduser().resolve",
+              "Path(str(cfg.get('__config_dir__'))).resolve",
+              "RuntimeError",
+              "_ap003c_dispatch_001",
+              "_ap003c_dispatch_002",
+              "_ap003c_dispatch_003",
+              "_ap003c_dispatch_004",
+              "_ap003c_dispatch_005",
+              "_ap003c_dispatch_006",
+              "_ap003c_dispatch_007",
+              "_ap003c_dispatch_008",
+              "_ap003c_dispatch_009",
+              "_ap003c_dispatch_010",
+              "_ap003c_dispatch_011",
+              "_ap003c_dispatch_012",
+              "_ap003c_dispatch_013",
+              "_ap003c_dispatch_014",
+              "_ap003c_dispatch_015",
+              "_ap003c_dispatch_016",
+              "_ap003c_dispatch_017",
+              "_ap003c_dispatch_018",
+              "_ap003c_dispatch_019",
+              "_ap003d_stage_001",
+              "_ap003d_stage_002",
+              "_ap003d_stage_003",
+              "_ap003d_stage_004",
+              "_ap003d_stage_005",
+              "_ap003d_stage_006",
+              "_ap003d_stage_007",
+              "_ap003d_stage_008",
+              "_ap003d_stage_009",
+              "_ap003d_stage_010",
+              "_ap003d_stage_011",
+              "_ap003d_stage_012",
+              "_ap003e_stage_001",
+              "_ap003e_stage_002",
+              "_ap003e_stage_003",
+              "_ap003e_stage_004",
+              "_ap003e_stage_005",
+              "_ap003e_stage_006",
+              "_ap003e_stage_007",
+              "_ap003e_stage_008",
+              "_load_optional_config",
+              "_openai_model_from_cfg",
+              "abstract_sidecar_path",
+              "apply_cli_path_overrides",
+              "attach_existing_mindmap_if_available",
+              "bool",
+              "build_bibliography",
+              "build_document_model",
+              "cfg.get",
+              "check_config",
+              "collect_orientation_docs",
+              "compliance_report.get",
+              "copy_documents_to_fulltext_cache",
+              "delete_existing_mindmap_outputs",
+              "discover_local_documents",
+              "document.model_dump",
+              "document_json_path.exists",
+              "e.get",
+              "generate_and_attach_mindmap",
+              "generate_paper_abstract_bundle",
+              "globals",
+              "isinstance",
+              "json.dumps",
+              "load_existing_document_json",
+              "locals",
+              "make_client",
+              "make_run_report",
+              "paper_abstract_path.exists",
+              "paper_abstracts_enabled",
+              "parse_cli_args",
+              "pipeline_cfg.get",
+              "precheck.get",
+              "print",
+              "print_outputs",
+              "prisma_enabled",
+              "quality.get",
+              "raise_if_errors",
+              "read_paper_abstract_bundle",
+              "resolve_bib_for_existing_document",
+              "resumo_cfg_for_stage.get",
+              "run_prisma_report_outputs",
+              "sanitize_document_model_raw_bibkeys",
+              "sanitize_document_model_technical_leaks",
+              "should_generate_mindmap",
+              "stage",
+              "str",
+              "validate_document_model",
+              "w.get",
+              "warnings.append",
+              "warnings.extend",
+              "work_cache_paths",
+              "write_compliance_reports",
+              "write_json",
+              "write_outputs_manifest",
+              "write_paper_abstract_bundle",
+              "write_prompt_lock",
+              "write_prompt_lock_markdown",
+              "write_quality_report"
+            ],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_disabled",
+            "line": 1252,
+            "end_line": 1254,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl__refs_v6_disabled",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_apply_runtime_policy",
+            "line": 1257,
+            "end_line": 1259,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl__refs_v6_apply_runtime_policy",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "load_config",
+            "line": 1264,
+            "end_line": 1266,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl_load_config",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "path"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "build_bibliography",
+            "line": 1272,
+            "end_line": 1274,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl_build_bibliography",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "cfg",
+              "docs",
+              "out_dir",
+              "prefix",
+              "client",
+              "model"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_clear_document_bibliography",
+            "line": 1277,
+            "end_line": 1279,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl__refs_v6_clear_document_bibliography",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "document"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_strip_org",
+            "line": 1282,
+            "end_line": 1284,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl__refs_v6_strip_org",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "text"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "render_org_latex",
+            "line": 1290,
+            "end_line": 1292,
+            "statement_count": 2,
+            "calls": [
+              "_ap003d_impl_render_org_latex",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "document",
+              "org_path",
+              "bib_filename",
+              "cfg",
+              "bib_keys"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_get_arg",
+            "line": 1305,
+            "end_line": 1307,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_artigo_generico_get_arg_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "argv",
+              "name"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_strip",
+            "line": 1309,
+            "end_line": 1311,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_artigo_generico_strip_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "argv"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_out_dir",
+            "line": 1313,
+            "end_line": 1315,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_artigo_generico_out_dir_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "argv"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_run_export",
+            "line": 1317,
+            "end_line": 1319,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_artigo_generico_run_export_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "argv",
+              "silent"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_run_freeze",
+            "line": 1321,
+            "end_line": 1323,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_impl__prisma_artigo_generico_run_freeze_1",
+              "globals",
+              "locals"
+            ],
+            "arguments": [
+              "argv",
+              "silent"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "main",
+            "line": 1326,
+            "end_line": 1328,
+            "statement_count": 2,
+            "calls": [
+              "_ap003e_entrypoint",
+              "globals",
+              "locals"
+            ],
+            "arguments": [],
+            "vararg": "args",
+            "kwarg": "kwargs"
+          }
+        ],
+        "historical_alias_name_occurrences": [],
+        "core_name_occurrences": []
+      },
+      "package_main": {
+        "sha256": "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4",
+        "line_count": 9,
+        "byte_count": 197,
+        "imports": [
+          ".cli",
+          "__future__"
+        ],
+        "top_level_function_count": 0,
+        "top_level_functions": [],
+        "historical_alias_name_occurrences": [],
+        "core_name_occurrences": []
+      },
+      "parser": {
+        "sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+        "line_count": 133,
+        "byte_count": 9097,
+        "imports": [
+          "__future__",
+          "argparse",
+          "collections.abc"
+        ],
+        "top_level_function_count": 2,
+        "top_level_functions": [
+          {
+            "name": "build_parser",
+            "line": 7,
+            "end_line": 122,
+            "statement_count": 64,
+            "calls": [
+              "argparse.ArgumentParser",
+              "parser.add_argument"
+            ],
+            "arguments": [
+              "pipeline_version"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "parse_args",
+            "line": 125,
+            "end_line": 130,
+            "statement_count": 1,
+            "calls": [
+              "build_parser",
+              "build_parser(pipeline_version=pipeline_version).parse_args"
+            ],
+            "arguments": [
+              "argv",
+              "pipeline_version"
+            ],
+            "vararg": null,
+            "kwarg": null
+          }
+        ],
+        "historical_alias_name_occurrences": [],
+        "core_name_occurrences": []
+      },
+      "dispatch": {
+        "sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3",
+        "line_count": 325,
+        "byte_count": 14483,
+        "imports": [
+          "__future__",
+          "collections.abc",
+          "dataclasses",
+          "typing"
+        ],
+        "top_level_function_count": 20,
+        "top_level_functions": [
+          {
+            "name": "_not_handled",
+            "line": 14,
+            "end_line": 15,
+            "statement_count": 1,
+            "calls": [
+              "DispatchResult"
+            ],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_001",
+            "line": 18,
+            "end_line": 29,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "runtime['run_gui']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_002",
+            "line": 32,
+            "end_line": 43,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "bool",
+              "runtime['run_tui']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_003",
+            "line": 46,
+            "end_line": 58,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "runtime['print_profiles']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_004",
+            "line": 61,
+            "end_line": 73,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "bool",
+              "runtime['generate_interactive']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_005",
+            "line": 76,
+            "end_line": 84,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "print",
+              "runtime['describe_institution_profiles']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_006",
+            "line": 87,
+            "end_line": 108,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "RuntimeError",
+              "_not_handled",
+              "layouts.items",
+              "print",
+              "runtime['Path']",
+              "runtime['Path'](args.config).expanduser",
+              "runtime['Path'](args.config).expanduser().resolve",
+              "runtime['available_layouts']",
+              "runtime['load_config']",
+              "runtime['resolve_layout_spec']",
+              "spec.get",
+              "str",
+              "str(spec.get('description') or spec.get('descricao') or '').strip",
+              "str(spec.get('genero_academico') or '').strip"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_007",
+            "line": 111,
+            "end_line": 119,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "print",
+              "runtime['explain_profile']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_008",
+            "line": 122,
+            "end_line": 133,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "RuntimeError",
+              "_not_handled",
+              "print",
+              "runtime['Path']",
+              "runtime['Path'](args.config).expanduser",
+              "runtime['Path'](args.config).expanduser().resolve",
+              "runtime['json'].dumps",
+              "runtime['load_config']",
+              "runtime['prompt_report_for_cfg']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_009",
+            "line": 136,
+            "end_line": 152,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "bool",
+              "print",
+              "runtime['Path']",
+              "runtime['Path'](args.base_dir).expanduser",
+              "runtime['Path'](args.base_dir).expanduser().resolve",
+              "runtime['init_project']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_010",
+            "line": 155,
+            "end_line": 177,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "RuntimeError",
+              "_not_handled",
+              "print",
+              "runtime['Path']",
+              "runtime['Path'](args.input_dir).expanduser",
+              "runtime['Path'](args.input_dir).expanduser().resolve",
+              "runtime['Path'](args.input_zip).expanduser",
+              "runtime['Path'](args.input_zip).expanduser().resolve",
+              "runtime['Path'](args.output).expanduser",
+              "runtime['Path'](args.output).expanduser().resolve",
+              "runtime['make_doi_manifest']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_011",
+            "line": 180,
+            "end_line": 192,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "bib.with_name",
+              "print",
+              "report.get",
+              "runtime['Path']",
+              "runtime['Path'](args.inspect_bib).expanduser",
+              "runtime['Path'](args.inspect_bib).expanduser().resolve",
+              "runtime['inspect_bib']",
+              "runtime['render_bib_inspection_markdown']",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_012",
+            "line": 195,
+            "end_line": 202,
+            "statement_count": 2,
+            "calls": [
+              "RuntimeError",
+              "_not_handled"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_013",
+            "line": 205,
+            "end_line": 212,
+            "statement_count": 2,
+            "calls": [
+              "RuntimeError",
+              "_not_handled"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_014",
+            "line": 215,
+            "end_line": 231,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "RuntimeError",
+              "_not_handled",
+              "print",
+              "runtime['external_search_enabled']",
+              "runtime['output_paths']",
+              "runtime['research_output_paths']",
+              "runtime['write_prompt_lock']",
+              "runtime['write_prompt_lock_markdown']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_015",
+            "line": 234,
+            "end_line": 252,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "RuntimeError",
+              "_not_handled",
+              "print",
+              "report.get",
+              "runtime['Path']",
+              "runtime['Path'](args.bib).expanduser",
+              "runtime['Path'](args.bib).expanduser().resolve",
+              "runtime['Path'](args.docx).expanduser",
+              "runtime['Path'](args.docx).expanduser().resolve",
+              "runtime['Path'](args.org).expanduser",
+              "runtime['Path'](args.org).expanduser().resolve",
+              "runtime['Path'](args.pdf).expanduser",
+              "runtime['Path'](args.pdf).expanduser().resolve",
+              "runtime['output_paths']",
+              "runtime['render_compliance_markdown']",
+              "runtime['run_institution_compliance']",
+              "runtime['write_compliance_reports']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_016",
+            "line": 255,
+            "end_line": 267,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "report.get",
+              "runtime['external_search_enabled']",
+              "runtime['output_paths']",
+              "runtime['print_doctor_report']",
+              "runtime['research_output_paths']",
+              "runtime['run_doctor']",
+              "runtime['write_json']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_017",
+            "line": 270,
+            "end_line": 283,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "RuntimeError",
+              "_not_handled",
+              "report.get",
+              "runtime['check_config']",
+              "runtime['external_search_enabled']",
+              "runtime['output_paths']",
+              "runtime['print_check_config_report']",
+              "runtime['research_output_paths']",
+              "runtime['write_json']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_018",
+            "line": 286,
+            "end_line": 293,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "_not_handled",
+              "runtime['run_recompile']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "dispatch_stage_019",
+            "line": 296,
+            "end_line": 322,
+            "statement_count": 2,
+            "calls": [
+              "DispatchResult",
+              "RuntimeError",
+              "_not_handled",
+              "artifacts.get",
+              "isinstance",
+              "prisma_outputs.setdefault",
+              "runtime['Path']",
+              "runtime['cfg'].get",
+              "runtime['external_search_enabled']",
+              "runtime['import_manual_prisma_triage']",
+              "runtime['make_run_report']",
+              "runtime['print_outputs']",
+              "runtime['render_external_prisma_outputs']",
+              "runtime['research_output_paths']",
+              "runtime['stage']",
+              "runtime['write_json']",
+              "runtime['write_outputs_manifest']",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          }
+        ],
+        "historical_alias_name_occurrences": [],
+        "core_name_occurrences": []
+      },
+      "document": {
+        "sha256": "3f2a3c95e08ccc3c19e3019a225c36fcf532cf4468f75b13c56b7c43bbc88a8e",
+        "line_count": 437,
+        "byte_count": 28560,
+        "imports": [
+          "__future__",
+          "dataclasses",
+          "typing"
+        ],
+        "top_level_function_count": 26,
+        "top_level_functions": [
+          {
+            "name": "load_config_impl",
+            "line": 11,
+            "end_line": 12,
+            "statement_count": 1,
+            "calls": [
+              "runtime['_refs_v6_apply_runtime_policy']",
+              "runtime['_refs_v6_original_load_config']"
+            ],
+            "arguments": [
+              "runtime",
+              "path"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "output_paths_impl",
+            "line": 14,
+            "end_line": 23,
+            "statement_count": 9,
+            "calls": [
+              "bool",
+              "cfg.get",
+              "out_dir.mkdir",
+              "paths.get",
+              "projeto.get",
+              "runtime['Path']",
+              "runtime['Path'](str(cfg.get('__config_dir__') or runtime['Path'].cwd())).resolve",
+              "runtime['Path'].cwd",
+              "runtime['_section']",
+              "runtime['resolve_path']",
+              "str",
+              "str(paths.get('document_prefix') or projeto.get('nome') or 'documento').strip"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "apply_cli_path_overrides_impl",
+            "line": 25,
+            "end_line": 57,
+            "statement_count": 15,
+            "calls": [
+              "cfg.setdefault",
+              "getattr",
+              "isinstance"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "load_existing_document_json_impl",
+            "line": 59,
+            "end_line": 60,
+            "statement_count": 1,
+            "calls": [
+              "path.read_text",
+              "runtime['AcademicDocument'].model_validate_json"
+            ],
+            "arguments": [
+              "runtime",
+              "path"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "resolve_bib_for_existing_document_impl",
+            "line": 62,
+            "end_line": 85,
+            "statement_count": 11,
+            "calls": [
+              "c.exists",
+              "c.resolve",
+              "candidates.append",
+              "candidates.extend",
+              "document_json_path.with_name",
+              "document_json_path.with_suffix",
+              "found.exists",
+              "found.read_text",
+              "found.resolve",
+              "list",
+              "m.group",
+              "m.group(1).strip",
+              "next",
+              "out_dir.mkdir",
+              "p.is_absolute",
+              "re.finditer",
+              "runtime['Path']",
+              "runtime['Path'](raw).expanduser",
+              "shutil.copy2",
+              "str",
+              "str(document.bibliography.bib_path or f'{prefix}.bib').strip",
+              "target.resolve"
+            ],
+            "arguments": [
+              "runtime",
+              "document",
+              "document_json_path",
+              "out_dir",
+              "prefix"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_resolve_latex_paths_for_recompile_impl",
+            "line": 87,
+            "end_line": 93,
+            "statement_count": 6,
+            "calls": [
+              "(cfg or {}).get",
+              "isinstance",
+              "latex_cfg.get",
+              "runtime['Path']",
+              "runtime['Path'](str((cfg or {}).get('__config_dir__') or runtime['Path'].cwd())).resolve",
+              "runtime['Path'].cwd",
+              "runtime['resolve_path']",
+              "str"
+            ],
+            "arguments": [
+              "runtime",
+              "args",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_recompile_impl",
+            "line": 95,
+            "end_line": 112,
+            "statement_count": 15,
+            "calls": [
+              "(cfg or {}).get",
+              "FileNotFoundError",
+              "RuntimeError",
+              "cfg.get",
+              "org_path.exists",
+              "runtime['Path']",
+              "runtime['Path'](args.org).expanduser",
+              "runtime['Path'](args.org).expanduser().resolve",
+              "runtime['Path'].cwd",
+              "runtime['_resolve_latex_paths_for_recompile']",
+              "runtime['clean_aux_files']",
+              "runtime['make_run_report']",
+              "runtime['print_outputs']",
+              "runtime['run_compile_sequence']",
+              "runtime['stage']",
+              "runtime['write_json']",
+              "runtime['write_outputs_manifest']",
+              "str"
+            ],
+            "arguments": [
+              "runtime",
+              "args",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "render_additional_language_versions_impl",
+            "line": 114,
+            "end_line": 171,
+            "statement_count": 14,
+            "calls": [
+              "bib_path.exists",
+              "bib_path.resolve",
+              "bool",
+              "cfg.get",
+              "doc_cfg.get",
+              "docx_cfg.get",
+              "isinstance",
+              "language_bib.resolve",
+              "language_dir.mkdir",
+              "latex_cfg.get",
+              "quality.get",
+              "runtime['build_quality_report']",
+              "runtime['inject_paper_abstracts_into_docx']",
+              "runtime['inject_paper_abstracts_into_org']",
+              "runtime['raise_if_errors']",
+              "runtime['render_docx']",
+              "runtime['render_org_latex']",
+              "runtime['requested_translation_languages']",
+              "runtime['resolve_path']",
+              "runtime['run_compile_sequence']",
+              "runtime['shutil'].copy2",
+              "runtime['stage']",
+              "runtime['translate_document_model']",
+              "runtime['translation_batch_size']",
+              "runtime['validate_docx_file']",
+              "runtime['validate_org_text']",
+              "runtime['write_json']",
+              "runtime['write_quality_report']",
+              "str",
+              "translated_document.model_dump",
+              "validation.get",
+              "warnings.extend"
+            ],
+            "arguments": [
+              "runtime",
+              "client",
+              "model",
+              "cfg",
+              "document",
+              "bib_path",
+              "bib_keys",
+              "out_dir",
+              "prefix",
+              "doc_cfg",
+              "latex_cfg",
+              "config_dir",
+              "abstract_bundle"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_disabled_impl",
+            "line": 173,
+            "end_line": 183,
+            "statement_count": 7,
+            "calls": [
+              "bibliography.get",
+              "bool",
+              "cfg.get",
+              "document.get",
+              "isinstance",
+              "local.get"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_apply_runtime_policy_impl",
+            "line": 185,
+            "end_line": 217,
+            "statement_count": 19,
+            "calls": [
+              "(current + '\\n\\n' + instruction).strip",
+              "cfg.setdefault",
+              "isinstance",
+              "orientations.get",
+              "runtime['_refs_v6_disabled']",
+              "str",
+              "str(orientations.get('inline') or '').strip"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "build_bibliography_impl",
+            "line": 219,
+            "end_line": 223,
+            "statement_count": 2,
+            "calls": [
+              "SimpleNamespace",
+              "runtime['Path']",
+              "runtime['_refs_v6_disabled']",
+              "runtime['_refs_v6_original_build_bibliography']"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg",
+              "docs",
+              "out_dir",
+              "prefix",
+              "client",
+              "model"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_clear_document_bibliography_impl",
+            "line": 225,
+            "end_line": 236,
+            "statement_count": 3,
+            "calls": [
+              "getattr"
+            ],
+            "arguments": [
+              "runtime",
+              "document"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_refs_v6_strip_org_impl",
+            "line": 238,
+            "end_line": 246,
+            "statement_count": 8,
+            "calls": [
+              "_re.sub",
+              "_re.sub('\\\\n{3,}', '\\n\\n', text).strip"
+            ],
+            "arguments": [
+              "runtime",
+              "text"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "render_org_latex_impl",
+            "line": 248,
+            "end_line": 255,
+            "statement_count": 6,
+            "calls": [
+              "runtime['Path']",
+              "runtime['Path'](org_path).write_text",
+              "runtime['_refs_v6_clear_document_bibliography']",
+              "runtime['_refs_v6_disabled']",
+              "runtime['_refs_v6_original_render_org_latex']",
+              "runtime['_refs_v6_strip_org']"
+            ],
+            "arguments": [
+              "runtime",
+              "document",
+              "org_path",
+              "bib_filename",
+              "cfg",
+              "bib_keys"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_001",
+            "line": 257,
+            "end_line": 282,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "RuntimeError",
+              "bib_entry_key",
+              "bib_path.exists",
+              "bib_path.read_text",
+              "document_json.with_suffix",
+              "list",
+              "locals",
+              "print",
+              "report.get",
+              "runtime['Path']",
+              "runtime['Path'](args.bib).expanduser",
+              "runtime['Path'](args.bib).expanduser().resolve",
+              "runtime['Path'](args.document_json).expanduser",
+              "runtime['Path'](args.document_json).expanduser().resolve",
+              "runtime['Path'](args.org).expanduser",
+              "runtime['Path'](args.org).expanduser().resolve",
+              "runtime['build_quality_report']",
+              "runtime['load_existing_document_json']",
+              "runtime['write_quality_report']",
+              "split_bib_entries"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_002",
+            "line": 284,
+            "end_line": 290,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "isinstance",
+              "locals",
+              "runtime['cfg'].get"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_003",
+            "line": 292,
+            "end_line": 335,
+            "statement_count": 4,
+            "calls": [
+              "(runtime['mm_diag'] or {}).get",
+              "DocumentStageResult",
+              "FileNotFoundError",
+              "RuntimeError",
+              "bool",
+              "dict",
+              "document.model_dump",
+              "locals",
+              "print",
+              "runtime['Path']",
+              "runtime['attach_existing_mindmap_if_available']",
+              "runtime['cfg'].get",
+              "runtime['delete_existing_mindmap_outputs']",
+              "runtime['document_json_path'].exists",
+              "runtime['generate_and_attach_mindmap']",
+              "runtime['json'].dumps",
+              "runtime['load_existing_document_json']",
+              "runtime['make_client']",
+              "runtime['make_run_report']",
+              "runtime['print_outputs']",
+              "runtime['should_generate_mindmap']",
+              "runtime['stage']",
+              "runtime['warnings'].append",
+              "runtime['write_json']",
+              "runtime['write_outputs_manifest']",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_004",
+            "line": 337,
+            "end_line": 343,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "locals",
+              "runtime['stage']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_005",
+            "line": 345,
+            "end_line": 356,
+            "statement_count": 7,
+            "calls": [
+              "DocumentStageResult",
+              "locals",
+              "runtime['inject_paper_abstracts_into_org']",
+              "runtime['main_document_abstract_languages']",
+              "runtime['raise_if_errors']",
+              "runtime['render_org_latex']",
+              "runtime['stage']",
+              "runtime['validate_org_text']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_006",
+            "line": 358,
+            "end_line": 369,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "bool",
+              "locals",
+              "runtime['doc_cfg'].get",
+              "runtime['latex_cfg'].get",
+              "runtime['resolve_path']",
+              "runtime['run_compile_sequence']",
+              "runtime['stage']",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_007",
+            "line": 371,
+            "end_line": 387,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "bool",
+              "docx_cfg.get",
+              "docx_validation.get",
+              "isinstance",
+              "locals",
+              "runtime['cfg'].get",
+              "runtime['doc_cfg'].get",
+              "runtime['inject_paper_abstracts_into_docx']",
+              "runtime['main_document_abstract_languages']",
+              "runtime['render_docx']",
+              "runtime['resolve_path']",
+              "runtime['stage']",
+              "runtime['validate_docx_file']",
+              "runtime['warnings'].extend"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_008",
+            "line": 389,
+            "end_line": 403,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "locals",
+              "runtime['render_additional_language_versions']",
+              "runtime['requested_translation_languages']",
+              "runtime['warnings'].append",
+              "runtime['warnings'].extend"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_009",
+            "line": 405,
+            "end_line": 411,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "locals",
+              "runtime['run_institution_compliance']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_010",
+            "line": 413,
+            "end_line": 419,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "locals",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_011",
+            "line": 421,
+            "end_line": 427,
+            "statement_count": 4,
+            "calls": [
+              "DocumentStageResult",
+              "locals",
+              "runtime['build_quality_report']"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_document_stage_012",
+            "line": 429,
+            "end_line": 436,
+            "statement_count": 5,
+            "calls": [
+              "DocumentStageResult",
+              "locals",
+              "runtime['Path']",
+              "runtime['cfg'].get",
+              "runtime['make_run_report']",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          }
+        ],
+        "historical_alias_name_occurrences": [],
+        "core_name_occurrences": []
+      },
+      "prisma": {
+        "sha256": "f250487a7787c967a0bad0ac38d5dbe210ff63981078d3c65e1d77655ff5f072",
+        "line_count": 715,
+        "byte_count": 39978,
+        "imports": [
+          "__future__",
+          "dataclasses",
+          "typing"
+        ],
+        "top_level_function_count": 71,
+        "top_level_functions": [
+          {
+            "name": "_invoke_with_runtime",
+            "line": 13,
+            "end_line": 31,
+            "statement_count": 5,
+            "calls": [
+              "added.append",
+              "function",
+              "namespace.pop",
+              "previous.items",
+              "runtime.items"
+            ],
+            "arguments": [
+              "function",
+              "runtime",
+              "args",
+              "kwargs"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body_stage_1",
+            "line": 33,
+            "end_line": 35,
+            "statement_count": 2,
+            "calls": [
+              "print"
+            ],
+            "arguments": [
+              "message"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "stage_impl_001",
+            "line": 37,
+            "end_line": 38,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "message"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__json_or_none_1",
+            "line": 40,
+            "end_line": 46,
+            "statement_count": 2,
+            "calls": [
+              "json.loads"
+            ],
+            "arguments": [
+              "value"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_json_or_none_impl_001",
+            "line": 48,
+            "end_line": 49,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "value"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body_make_client_1",
+            "line": 51,
+            "end_line": 56,
+            "statement_count": 4,
+            "calls": [
+              "OpenAI",
+              "RuntimeError",
+              "load_dotenv",
+              "os.getenv"
+            ],
+            "arguments": [
+              "model_override"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "make_client_impl_001",
+            "line": 58,
+            "end_line": 59,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "model_override"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__section_1",
+            "line": 61,
+            "end_line": 63,
+            "statement_count": 2,
+            "calls": [
+              "cfg.get",
+              "isinstance"
+            ],
+            "arguments": [
+              "cfg",
+              "name"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_section_impl_001",
+            "line": 65,
+            "end_line": 66,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg",
+              "name"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body_research_output_paths_1",
+            "line": 68,
+            "end_line": 85,
+            "statement_count": 11,
+            "calls": [
+              "Path",
+              "Path(str(cfg.get('__config_dir__') or Path.cwd())).resolve",
+              "Path.cwd",
+              "_section",
+              "bool",
+              "cfg.get",
+              "out_dir.mkdir",
+              "paths.get",
+              "projeto.get",
+              "resolve_path",
+              "str",
+              "str(paths.get('research_prefix') or default_prefix).strip",
+              "str(projeto.get('nome') or '').strip"
+            ],
+            "arguments": [
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "research_output_paths_impl_001",
+            "line": 87,
+            "end_line": 88,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body_render_external_prisma_outputs_1",
+            "line": 90,
+            "end_line": 121,
+            "statement_count": 11,
+            "calls": [
+              "Path",
+              "Path(str(cfg.get('__config_dir__') or Path.cwd())).resolve",
+              "Path.cwd",
+              "bool",
+              "cfg.get",
+              "ensure_prisma_flow_diagram",
+              "isinstance",
+              "latex_cfg.get",
+              "print",
+              "render_external_prisma_org_report",
+              "report_cfg.get",
+              "resolve_path",
+              "run_compile_sequence",
+              "stage",
+              "str"
+            ],
+            "arguments": [
+              "cfg",
+              "out_dir",
+              "prefix",
+              "prisma_payload",
+              "phase"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "render_external_prisma_outputs_impl_001",
+            "line": 123,
+            "end_line": 124,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "cfg",
+              "out_dir",
+              "prefix",
+              "prisma_payload",
+              "phase"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_default_config_1",
+            "line": 126,
+            "end_line": 127,
+            "statement_count": 1,
+            "calls": [],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_default_config_impl_001",
+            "line": 129,
+            "end_line": 130,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_default_out_dir_1",
+            "line": 132,
+            "end_line": 133,
+            "statement_count": 1,
+            "calls": [],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_default_out_dir_impl_001",
+            "line": 135,
+            "end_line": 136,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_default_prompt_1",
+            "line": 138,
+            "end_line": 139,
+            "statement_count": 1,
+            "calls": [],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_default_prompt_impl_001",
+            "line": 141,
+            "end_line": 142,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_script_path_1",
+            "line": 144,
+            "end_line": 145,
+            "statement_count": 1,
+            "calls": [],
+            "arguments": [],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_script_path_impl_001",
+            "line": 147,
+            "end_line": 148,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_arg_1",
+            "line": 150,
+            "end_line": 151,
+            "statement_count": 1,
+            "calls": [
+              "getattr"
+            ],
+            "arguments": [
+              "args",
+              "name",
+              "default"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_arg_impl_001",
+            "line": 153,
+            "end_line": 154,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args",
+              "name",
+              "default"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_config_from_args_1",
+            "line": 156,
+            "end_line": 157,
+            "statement_count": 1,
+            "calls": [
+              "_prisma_curadoria_arg",
+              "_prisma_curadoria_default_config"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_config_from_args_impl_001",
+            "line": 159,
+            "end_line": 160,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_out_from_args_1",
+            "line": 162,
+            "end_line": 163,
+            "statement_count": 1,
+            "calls": [
+              "_prisma_curadoria_arg",
+              "_prisma_curadoria_default_out_dir"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_out_from_args_impl_001",
+            "line": 165,
+            "end_line": 166,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_prompt_from_args_1",
+            "line": 168,
+            "end_line": 169,
+            "statement_count": 1,
+            "calls": [
+              "_prisma_curadoria_arg",
+              "_prisma_curadoria_default_prompt"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_prompt_from_args_impl_001",
+            "line": 171,
+            "end_line": 172,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_input_from_args_1",
+            "line": 174,
+            "end_line": 181,
+            "statement_count": 4,
+            "calls": [
+              "Path",
+              "_prisma_curadoria_arg",
+              "_prisma_curadoria_out_from_args",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "default_xlsx"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_input_from_args_impl_001",
+            "line": 183,
+            "end_line": 184,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args",
+              "default_xlsx"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_run_command_1",
+            "line": 186,
+            "end_line": 197,
+            "statement_count": 8,
+            "calls": [
+              "' '.join",
+              "print",
+              "subprocess.run"
+            ],
+            "arguments": [
+              "cmd"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_run_command_impl_001",
+            "line": 199,
+            "end_line": 200,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "cmd"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_build_cmd_1",
+            "line": 202,
+            "end_line": 230,
+            "statement_count": 15,
+            "calls": [
+              "Path",
+              "SystemExit",
+              "_prisma_curadoria_arg",
+              "_prisma_curadoria_config_from_args",
+              "_prisma_curadoria_input_from_args",
+              "_prisma_curadoria_out_from_args",
+              "_prisma_curadoria_prompt_from_args",
+              "_prisma_curadoria_script_path",
+              "script.exists",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "usar_ia",
+              "reexportar_xlsx"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_build_cmd_impl_001",
+            "line": 232,
+            "end_line": 233,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args",
+              "usar_ia",
+              "reexportar_xlsx"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_run_ia_1",
+            "line": 235,
+            "end_line": 237,
+            "statement_count": 2,
+            "calls": [
+              "_prisma_curadoria_build_cmd",
+              "_prisma_curadoria_run_command"
+            ],
+            "arguments": [
+              "args",
+              "usar_ia"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_run_ia_impl_001",
+            "line": 239,
+            "end_line": 240,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args",
+              "usar_ia"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_reexportar_xlsx_1",
+            "line": 242,
+            "end_line": 244,
+            "statement_count": 2,
+            "calls": [
+              "_prisma_curadoria_build_cmd",
+              "_prisma_curadoria_run_command"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_reexportar_xlsx_impl_001",
+            "line": 246,
+            "end_line": 247,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_pipeline_supports_flag_1",
+            "line": 249,
+            "end_line": 256,
+            "statement_count": 4,
+            "calls": [
+              "subprocess.run"
+            ],
+            "arguments": [
+              "flag"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_pipeline_supports_flag_impl_001",
+            "line": 258,
+            "end_line": 259,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "flag"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_importar_no_pipeline_1",
+            "line": 261,
+            "end_line": 277,
+            "statement_count": 8,
+            "calls": [
+              "Path",
+              "_prisma_curadoria_config_from_args",
+              "_prisma_curadoria_out_from_args",
+              "_prisma_curadoria_pipeline_supports_flag",
+              "_prisma_curadoria_run_command",
+              "print",
+              "str",
+              "triagem.exists"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_importar_no_pipeline_impl_001",
+            "line": 279,
+            "end_line": 280,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_fluxo_completo_1",
+            "line": 282,
+            "end_line": 286,
+            "statement_count": 3,
+            "calls": [
+              "_prisma_curadoria_arg",
+              "_prisma_curadoria_importar_no_pipeline",
+              "_prisma_curadoria_run_ia",
+              "bool"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_fluxo_completo_impl_001",
+            "line": 288,
+            "end_line": 289,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_mostrar_caminhos_1",
+            "line": 291,
+            "end_line": 309,
+            "statement_count": 18,
+            "calls": [
+              "Path",
+              "_prisma_curadoria_config_from_args",
+              "_prisma_curadoria_out_from_args",
+              "_prisma_curadoria_prompt_from_args",
+              "_prisma_curadoria_script_path",
+              "print"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_mostrar_caminhos_impl_001",
+            "line": 311,
+            "end_line": 312,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_menu_1",
+            "line": 314,
+            "end_line": 347,
+            "statement_count": 1,
+            "calls": [
+              "_prisma_curadoria_fluxo_completo",
+              "_prisma_curadoria_importar_no_pipeline",
+              "_prisma_curadoria_mostrar_caminhos",
+              "_prisma_curadoria_reexportar_xlsx",
+              "_prisma_curadoria_run_ia",
+              "input",
+              "input('Escolha uma opção: ').strip",
+              "print"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_menu_impl_001",
+            "line": 349,
+            "end_line": 350,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_curadoria_dispatch_1",
+            "line": 352,
+            "end_line": 364,
+            "statement_count": 6,
+            "calls": [
+              "_prisma_curadoria_arg",
+              "_prisma_curadoria_fluxo_completo",
+              "_prisma_curadoria_importar_no_pipeline",
+              "_prisma_curadoria_menu",
+              "_prisma_curadoria_reexportar_xlsx",
+              "_prisma_curadoria_run_ia",
+              "bool"
+            ],
+            "arguments": [
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_curadoria_dispatch_impl_001",
+            "line": 366,
+            "end_line": 367,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "args"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_artigo_generico_get_arg_1",
+            "line": 369,
+            "end_line": 375,
+            "statement_count": 2,
+            "calls": [
+              "enumerate",
+              "item.split",
+              "item.startswith",
+              "len"
+            ],
+            "arguments": [
+              "argv",
+              "name"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_get_arg_impl_001",
+            "line": 377,
+            "end_line": 378,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "argv",
+              "name"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_artigo_generico_strip_1",
+            "line": 380,
+            "end_line": 398,
+            "statement_count": 6,
+            "calls": [
+              "any",
+              "item.startswith",
+              "len",
+              "result.append"
+            ],
+            "arguments": [
+              "argv"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_strip_impl_001",
+            "line": 400,
+            "end_line": 401,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "argv"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_artigo_generico_out_dir_1",
+            "line": 403,
+            "end_line": 413,
+            "statement_count": 6,
+            "calls": [
+              "Path",
+              "_prisma_artigo_generico_get_arg",
+              "cfg_path.exists",
+              "cfg_path.resolve"
+            ],
+            "arguments": [
+              "argv"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_out_dir_impl_001",
+            "line": 415,
+            "end_line": 416,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "argv"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_artigo_generico_run_export_1",
+            "line": 418,
+            "end_line": 442,
+            "statement_count": 15,
+            "calls": [
+              "Path",
+              "Path(__file__).with_name",
+              "SystemExit",
+              "_prisma_artigo_generico_get_arg",
+              "_prisma_artigo_generico_out_dir",
+              "helper.exists",
+              "out_dir.name.startswith",
+              "print",
+              "str",
+              "subprocess.run"
+            ],
+            "arguments": [
+              "argv",
+              "silent"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_run_export_impl_001",
+            "line": 444,
+            "end_line": 445,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "argv",
+              "silent"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body__prisma_artigo_generico_run_freeze_1",
+            "line": 447,
+            "end_line": 477,
+            "statement_count": 17,
+            "calls": [
+              "Path",
+              "Path(__file__).resolve",
+              "Path(__file__).with_name",
+              "SystemExit",
+              "_prisma_artigo_generico_get_arg",
+              "_prisma_artigo_generico_out_dir",
+              "cmd.append",
+              "helper.exists",
+              "out_dir.name.startswith",
+              "print",
+              "str",
+              "subprocess.run"
+            ],
+            "arguments": [
+              "argv",
+              "silent"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_prisma_artigo_generico_run_freeze_impl_001",
+            "line": 479,
+            "end_line": 480,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime",
+              "argv",
+              "silent"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_001",
+            "line": 482,
+            "end_line": 491,
+            "statement_count": 5,
+            "calls": [
+              "PrismaStageResult",
+              "_prisma_curadoria_dispatch",
+              "getattr",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_002",
+            "line": 493,
+            "end_line": 510,
+            "statement_count": 10,
+            "calls": [
+              "PrismaStageResult",
+              "external_search_enabled",
+              "locals",
+              "output_paths",
+              "research_output_paths"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_003",
+            "line": 512,
+            "end_line": 520,
+            "statement_count": 5,
+            "calls": [
+              "PrismaStageResult",
+              "locals",
+              "stage"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_004",
+            "line": 522,
+            "end_line": 623,
+            "statement_count": 37,
+            "calls": [
+              "Path",
+              "PrismaStageResult",
+              "RuntimeError",
+              "artifacts.get",
+              "bool",
+              "cfg.get",
+              "isinstance",
+              "locals",
+              "make_client",
+              "make_run_report",
+              "print_outputs",
+              "prisma_outputs.setdefault",
+              "render_external_prisma_outputs",
+              "run_external_prisma_search",
+              "search_cfg.get",
+              "stage",
+              "str",
+              "write_json",
+              "write_outputs_manifest",
+              "write_prompt_lock",
+              "write_prompt_lock_markdown"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_005",
+            "line": 625,
+            "end_line": 631,
+            "statement_count": 4,
+            "calls": [
+              "PrismaStageResult",
+              "locals"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_006",
+            "line": 633,
+            "end_line": 663,
+            "statement_count": 16,
+            "calls": [
+              "PrismaStageResult",
+              "_json_or_none",
+              "getattr",
+              "locals",
+              "str"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_007",
+            "line": 665,
+            "end_line": 673,
+            "statement_count": 5,
+            "calls": [
+              "PrismaStageResult",
+              "locals",
+              "stage"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "run_prisma_stage_008",
+            "line": 675,
+            "end_line": 683,
+            "statement_count": 5,
+            "calls": [
+              "PrismaStageResult",
+              "locals",
+              "stage"
+            ],
+            "arguments": [
+              "args",
+              "runtime"
+            ],
+            "vararg": null,
+            "kwarg": null
+          },
+          {
+            "name": "_ap003e_body_main_2",
+            "line": 685,
+            "end_line": 711,
+            "statement_count": 13,
+            "calls": [
+              "_ap003f_pipeline_core",
+              "_prisma_artigo_generico_run_export",
+              "_prisma_artigo_generico_run_freeze",
+              "_prisma_artigo_generico_strip",
+              "list"
+            ],
+            "arguments": [],
+            "vararg": "args",
+            "kwarg": "kwargs"
+          },
+          {
+            "name": "run_prisma_generic_entrypoint",
+            "line": 713,
+            "end_line": 714,
+            "statement_count": 1,
+            "calls": [
+              "_invoke_with_runtime"
+            ],
+            "arguments": [
+              "runtime"
+            ],
+            "vararg": "args",
+            "kwarg": "kwargs"
+          }
+        ],
+        "historical_alias_name_occurrences": [],
+        "core_name_occurrences": [
+          {
+            "line": 706,
+            "column": 13,
+            "context": "Load"
+          },
+          {
+            "line": 702,
+            "column": 17,
+            "context": "Load"
+          }
+        ]
+      }
+    }
+  },
+  "compilation": {
+    "status": "passed",
+    "files": [
+      "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "academic_pipeline/__main__.py",
+      "academic_pipeline/cli_parser.py",
+      "academic_pipeline/command_dispatch.py",
+      "academic_pipeline/document_orchestration.py",
+      "academic_pipeline/prisma_generic_orchestration.py"
+    ]
+  },
+  "help_surfaces": {
+    "direct_script": {
+      "command": [
+        "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-xjgxxCDp/bin/python",
+        "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "098edf3ca34431d06f3e4a49a85241a59d1dcb2fcf2739f0a8bd5a3e1a7a5ff0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "tests/characterization/snapshots/ap003a/direct_script_help.txt",
+      "semantically_equivalent": true
+    },
+    "package_module": {
+      "command": [
+        "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-xjgxxCDp/bin/python",
+        "-m",
+        "academic_pipeline",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "bcbbf242c7c3f113858492a99f29213eed2c498c517cb4524965428bd9ed501a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "tests/characterization/snapshots/ap003a/package_module_help.txt",
+      "semantically_equivalent": true
+    },
+    "console_script": {
+      "command": [
+        "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-xjgxxCDp/bin/academic-pipeline",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "bcbbf242c7c3f113858492a99f29213eed2c498c517cb4524965428bd9ed501a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "tests/characterization/snapshots/ap003a/package_module_help.txt",
+      "semantically_equivalent": true
+    }
+  },
+  "contract_suite": {
+    "command": [
+      "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-xjgxxCDp/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/characterization/test_ap003a_orchestrator_contract.py",
+      "tests/characterization/test_ap003b_parser_contract.py",
+      "tests/characterization/test_ap003c_dispatch_contract.py",
+      "tests/characterization/test_ap003d_document_contract.py",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py",
+      "tests/characterization/test_ap003f_main_unification_contract.py"
+    ],
+    "returncode": 0,
+    "stdout": "......................................                                   [100%]\n38 passed in 7.92s",
+    "stderr": ""
+  },
+  "known_xfails_expected": [
+    "_refs_v6_strip_org usa para em vez de paren",
+    "extract_org_abstracts pode reter palavras-chave",
+    "WorkflowState._normalize pode reabrir etapa bloqueada"
+  ],
+  "next_gate": {
+    "specific_suite": [
+      "tests/characterization/test_ap003a_orchestrator_contract.py",
+      "tests/characterization/test_ap003b_parser_contract.py",
+      "tests/characterization/test_ap003c_dispatch_contract.py",
+      "tests/characterization/test_ap003d_document_contract.py",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py",
+      "tests/characterization/test_ap003f_main_unification_contract.py"
+    ],
+    "consolidated_suite": [
+      "app_bundle/tests",
+      "tests"
+    ],
+    "expected_consolidated_baseline": {
+      "passed": 401,
+      "xfailed": 3
+    }
+  }
+}

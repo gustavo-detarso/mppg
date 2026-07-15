@@ -1,0 +1,80 @@
+{
+  "phase": "AP-003G",
+  "status": "closed",
+  "generated_at_utc": "2026-07-15T22:02:17.471094+00:00",
+  "git": {
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "head": "7174664e22a941f4a6643d289106f37fa37289b5",
+    "upstream": "origin/ap-refactor/03-orchestrator-decomposition",
+    "upstream_head": "7174664e22a941f4a6643d289106f37fa37289b5"
+  },
+  "production_hashes": {
+    "orchestrator": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+    "package_main": "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4",
+    "parser": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+    "dispatch": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3",
+    "document": "3f2a3c95e08ccc3c19e3019a225c36fcf532cf4468f75b13c56b7c43bbc88a8e",
+    "prisma": "f250487a7787c967a0bad0ac38d5dbe210ff63981078d3c65e1d77655ff5f072"
+  },
+  "final_architecture": {
+    "top_level_main_count": 1,
+    "internal_core_count": 1,
+    "internal_core_name": "_ap003f_pipeline_core",
+    "historical_alias_count": 0,
+    "direct_guard_count": 1,
+    "prisma_core_reference_count": 2
+  },
+  "baseline_before_ap003g_contract": {
+    "passed": 401,
+    "xfailed": 3
+  },
+  "ap003g_contract_test_count": 7,
+  "expected_after_ap003g_contract": {
+    "specific_passed": 45,
+    "consolidated_passed": 408,
+    "consolidated_xfailed": 3
+  },
+  "validation": {
+    "specific": {
+      "status": "passed",
+      "command": [
+        "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-xjgxxCDp/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/characterization/test_ap003a_orchestrator_contract.py",
+        "tests/characterization/test_ap003b_parser_contract.py",
+        "tests/characterization/test_ap003c_dispatch_contract.py",
+        "tests/characterization/test_ap003d_document_contract.py",
+        "tests/characterization/test_ap003e_prisma_generic_contract.py",
+        "tests/characterization/test_ap003f_main_unification_contract.py",
+        "tests/characterization/test_ap003g_stabilization_contract.py"
+      ],
+      "passed": 45,
+      "xfailed": 0,
+      "stdout": ".............................................                            [100%]\n45 passed in 12.00s"
+    },
+    "consolidated": {
+      "status": "passed",
+      "command": [
+        "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-xjgxxCDp/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "app_bundle/tests",
+        "tests"
+      ],
+      "passed": 408,
+      "xfailed": 3,
+      "stdout": "............x........................x.................................. [ 17%]\n........................................................................ [ 35%]\n........................................................................ [ 52%]\n........................................................................ [ 70%]\n.........................................x.............................. [ 87%]\n...................................................                      [100%]\n=========================== short test summary info ============================\nXFAIL app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure - Defeito legado catalogado: refresh_from_files marca etapas posteriores como bloqueadas, mas WorkflowState.save/_normalize volta a etapa para pendente quando a dependência imediata está OK, ignorando falha anterior.\nXFAIL app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract - Defeito legado catalogado: extract_org_abstracts inclui a linha Palavras-chave no abstract quando o ORG usa heading Resumo seguido de rótulo inline, sem heading próprio.\nXFAIL app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations - Defeito legado catalogado: _refs_v6_strip_org usa o padrão 'para' em vez de 'paren' e ainda não remove \\parencite.\n408 passed, 3 xfailed in 54.62s"
+    }
+  },
+  "created": [
+    "docs/refactor/academic-pipeline/AP-003/AP-003G_STABILIZATION_CLOSURE.md",
+    "docs/refactor/academic-pipeline/AP-003/ap003g_manifest.json",
+    "tests/characterization/test_ap003g_stabilization_contract.py"
+  ],
+  "modified_production_files": [],
+  "closed_at_utc": "2026-07-15T22:03:25.518086+00:00"
+}
