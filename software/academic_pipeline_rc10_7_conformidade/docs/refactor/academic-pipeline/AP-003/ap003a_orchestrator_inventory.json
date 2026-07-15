@@ -1,0 +1,1633 @@
+{
+  "entrypoints": {
+    "console_scripts": {
+      "academic-pipeline": "academic_pipeline.cli:main"
+    },
+    "package_main_exists": true,
+    "project_name": "academic-pipeline-mppg",
+    "project_version": "0.1.0"
+  },
+  "generated_at_utc": "2026-07-15T16:57:14.668186+00:00",
+  "orchestrator": {
+    "argparse_calls": [
+      {
+        "call": "argparse.ArgumentParser",
+        "line": 900
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 901
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 902
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 903
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 904
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 905
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 906
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 907
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 908
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 909
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 910
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 911
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 912
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 913
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 914
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 915
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 916
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 917
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 918
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 919
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 920
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 921
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 922
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 923
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 924
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 925
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 926
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 927
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 928
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 929
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 930
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 931
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 932
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 933
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 934
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 935
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 936
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 937
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 938
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 939
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 940
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 941
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 942
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 943
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 944
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 945
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 946
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 947
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 948
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 949
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 950
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 952
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 957
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 962
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 967
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 972
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 977
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 982
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 987
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 992
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 997
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 1003
+      },
+      {
+        "call": "parser.add_argument",
+        "line": 1009
+      }
+    ],
+    "functions": [
+      {
+        "arguments": [
+          "message"
+        ],
+        "calls": [
+          "print"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": "Mostra etapas de execução em tempo real.",
+        "line_end": 274,
+        "line_start": 272,
+        "name": "stage"
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "calls": [
+          "json.loads"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 283,
+        "line_start": 277,
+        "name": "_json_or_none"
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "calls": [
+          "apply_institution_profile",
+          "path.open",
+          "path.resolve",
+          "str",
+          "tomllib.load"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 292,
+        "line_start": 286,
+        "name": "load_config"
+      },
+      {
+        "arguments": [
+          "model_override"
+        ],
+        "calls": [
+          "OpenAI",
+          "RuntimeError",
+          "load_dotenv",
+          "os.getenv"
+        ],
+        "candidate_groups": [
+          "entrypoint-e-fluxo-principal"
+        ],
+        "docstring": null,
+        "line_end": 300,
+        "line_start": 295,
+        "name": "make_client"
+      },
+      {
+        "arguments": [
+          "cfg",
+          "name"
+        ],
+        "calls": [
+          "cfg.get",
+          "isinstance"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 305,
+        "line_start": 303,
+        "name": "_section"
+      },
+      {
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "Path",
+          "Path.cwd",
+          "_section",
+          "bool",
+          "cfg.get",
+          "out_dir.mkdir",
+          "paths.get",
+          "projeto.get",
+          "resolve",
+          "resolve_path",
+          "str",
+          "strip"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": "Resolve a saída final do documento pela seção [paths].",
+        "line_end": 317,
+        "line_start": 308,
+        "name": "output_paths"
+      },
+      {
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "Path",
+          "Path.cwd",
+          "_section",
+          "bool",
+          "cfg.get",
+          "out_dir.mkdir",
+          "paths.get",
+          "projeto.get",
+          "resolve",
+          "resolve_path",
+          "str",
+          "strip"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental",
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": "Resolve a saída canônica da busca e consolidação PRISMA.\n\nA pesquisa bibliográfica não deve compartilhar ``document_output_dir`` com\ndocumentos acadêmicos. ``research_output_dir`` e ``research_prefix`` são\nresolvidos em relação ao TOML; na ausência deles, usa-se uma pasta\n``output_pesquisa`` dentro do próprio projeto.",
+        "line_end": 337,
+        "line_start": 320,
+        "name": "research_output_paths"
+      },
+      {
+        "arguments": [
+          "cfg",
+          "prefix"
+        ],
+        "calls": [
+          "Path",
+          "Path.cwd",
+          "_section",
+          "bool",
+          "cache_dir.mkdir",
+          "cfg.get",
+          "paths.get",
+          "resolve",
+          "resolve_path",
+          "str",
+          "work_dir.mkdir"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": "Resolve diretórios operacionais pela seção [paths].",
+        "line_end": 350,
+        "line_start": 340,
+        "name": "work_cache_paths"
+      },
+      {
+        "arguments": [
+          "cfg",
+          "args"
+        ],
+        "calls": [
+          "cfg.setdefault",
+          "getattr",
+          "isinstance"
+        ],
+        "candidate_groups": [
+          "despacho-de-comandos",
+          "entrypoint-e-fluxo-principal"
+        ],
+        "docstring": "Aplica overrides de caminhos informados na linha de comando.\n\nA prioridade fica: CLI > TOML. Os caminhos continuam sendo resolvidos\nposteriormente em relação ao diretório do TOML, salvo quando absolutos.",
+        "line_end": 386,
+        "line_start": 353,
+        "name": "apply_cli_path_overrides"
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "calls": [
+          "AcademicDocument.model_validate_json",
+          "path.read_text"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": null,
+        "line_end": 390,
+        "line_start": 389,
+        "name": "load_existing_document_json"
+      },
+      {
+        "arguments": [
+          "document",
+          "document_json_path",
+          "out_dir",
+          "prefix"
+        ],
+        "calls": [
+          "Path",
+          "c.exists",
+          "c.resolve",
+          "candidates.append",
+          "candidates.extend",
+          "document_json_path.with_name",
+          "document_json_path.with_suffix",
+          "expanduser",
+          "found.exists",
+          "found.read_text",
+          "found.resolve",
+          "list",
+          "m.group",
+          "next",
+          "out_dir.mkdir",
+          "p.is_absolute",
+          "re.finditer",
+          "shutil.copy2",
+          "str",
+          "strip",
+          "target.resolve"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": "Resolve o .bib em modo --somente-renderizar sem exigir que ele já esteja no output_dir.",
+        "line_end": 420,
+        "line_start": 393,
+        "name": "resolve_bib_for_existing_document"
+      },
+      {
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "cfg.get",
+          "get",
+          "isinstance",
+          "os.getenv",
+          "str"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 424,
+        "line_start": 423,
+        "name": "_openai_model_from_cfg"
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "calls": [
+          "FileNotFoundError",
+          "Path",
+          "expanduser",
+          "load_config",
+          "p.exists",
+          "resolve"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 433,
+        "line_start": 427,
+        "name": "_load_optional_config"
+      },
+      {
+        "arguments": [
+          "args",
+          "cfg"
+        ],
+        "calls": [
+          "Path",
+          "Path.cwd",
+          "get",
+          "isinstance",
+          "latex_cfg.get",
+          "resolve",
+          "resolve_path",
+          "str"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": null,
+        "line_end": 442,
+        "line_start": 436,
+        "name": "_resolve_latex_paths_for_recompile"
+      },
+      {
+        "arguments": [
+          "args",
+          "cfg"
+        ],
+        "calls": [
+          "FileNotFoundError",
+          "Path",
+          "Path.cwd",
+          "RuntimeError",
+          "_resolve_latex_paths_for_recompile",
+          "cfg.get",
+          "clean_aux_files",
+          "expanduser",
+          "get",
+          "make_run_report",
+          "org_path.exists",
+          "print_outputs",
+          "resolve",
+          "run_compile_sequence",
+          "stage",
+          "str",
+          "write_json",
+          "write_outputs_manifest"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": null,
+        "line_end": 471,
+        "line_start": 445,
+        "name": "run_recompile"
+      },
+      {
+        "arguments": [
+          "cfg",
+          "out_dir",
+          "prefix",
+          "prisma_payload",
+          "phase"
+        ],
+        "calls": [
+          "Path",
+          "Path.cwd",
+          "bool",
+          "cfg.get",
+          "ensure_prisma_flow_diagram",
+          "isinstance",
+          "latex_cfg.get",
+          "print",
+          "render_external_prisma_org_report",
+          "report_cfg.get",
+          "resolve",
+          "resolve_path",
+          "run_compile_sequence",
+          "stage",
+          "str"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental",
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": "Renderiza relatório PRISMA externo em ORG e, quando solicitado, em PDF.\n\nO perfil de busca não constrói ``document.json``. Por isso, esta rotina\nusa o relatório estruturado da busca/triagem e preserva o layout e a engine\nde LaTeX definidos no TOML, como os demais perfis que exportam PDF.",
+        "line_end": 532,
+        "line_start": 475,
+        "name": "render_external_prisma_outputs"
+      },
+      {
+        "arguments": [
+          "client",
+          "model",
+          "cfg",
+          "document",
+          "bib_path",
+          "bib_keys",
+          "out_dir",
+          "prefix",
+          "doc_cfg",
+          "latex_cfg",
+          "config_dir",
+          "abstract_bundle"
+        ],
+        "calls": [
+          "bib_path.exists",
+          "bib_path.resolve",
+          "bool",
+          "build_quality_report",
+          "cfg.get",
+          "doc_cfg.get",
+          "docx_cfg.get",
+          "inject_paper_abstracts_into_docx",
+          "inject_paper_abstracts_into_org",
+          "isinstance",
+          "language_bib.resolve",
+          "language_dir.mkdir",
+          "latex_cfg.get",
+          "quality.get",
+          "raise_if_errors",
+          "render_docx",
+          "render_org_latex",
+          "requested_translation_languages",
+          "resolve_path",
+          "run_compile_sequence",
+          "shutil.copy2",
+          "stage",
+          "str",
+          "translate_document_model",
+          "translated_document.model_dump",
+          "translation_batch_size",
+          "validate_docx_file",
+          "validate_org_text",
+          "validation.get",
+          "warnings.extend",
+          "write_json",
+          "write_quality_report"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": "Traduz e renderiza versões adicionais a partir do document.json canônico.\n\nCada versão recebe diretório próprio dentro de ``idiomas/<codigo>`` e\ncompartilha a bibliografia original, copiada sem tradução. A função nunca\nconsulta novamente o corpus nem gera uma segunda análise acadêmica.",
+        "line_end": 648,
+        "line_start": 535,
+        "name": "render_additional_language_versions"
+      },
+      {
+        "arguments": [],
+        "calls": [],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 654,
+        "line_start": 653,
+        "name": "_prisma_curadoria_default_config"
+      },
+      {
+        "arguments": [],
+        "calls": [],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 658,
+        "line_start": 657,
+        "name": "_prisma_curadoria_default_out_dir"
+      },
+      {
+        "arguments": [],
+        "calls": [],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 662,
+        "line_start": 661,
+        "name": "_prisma_curadoria_default_prompt"
+      },
+      {
+        "arguments": [],
+        "calls": [],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 666,
+        "line_start": 665,
+        "name": "_prisma_curadoria_script_path"
+      },
+      {
+        "arguments": [
+          "args",
+          "name",
+          "default"
+        ],
+        "calls": [
+          "getattr"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 670,
+        "line_start": 669,
+        "name": "_prisma_curadoria_arg"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_default_config"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 678,
+        "line_start": 673,
+        "name": "_prisma_curadoria_config_from_args"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_default_out_dir"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 682,
+        "line_start": 681,
+        "name": "_prisma_curadoria_out_from_args"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_default_prompt"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 686,
+        "line_start": 685,
+        "name": "_prisma_curadoria_prompt_from_args"
+      },
+      {
+        "arguments": [
+          "args",
+          "default_xlsx"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_out_from_args",
+          "str"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 696,
+        "line_start": 689,
+        "name": "_prisma_curadoria_input_from_args"
+      },
+      {
+        "arguments": [
+          "cmd"
+        ],
+        "calls": [
+          "join",
+          "print",
+          "subprocess.run"
+        ],
+        "candidate_groups": [
+          "despacho-de-comandos",
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 710,
+        "line_start": 699,
+        "name": "_prisma_curadoria_run_command"
+      },
+      {
+        "arguments": [
+          "args",
+          "usar_ia",
+          "reexportar_xlsx"
+        ],
+        "calls": [
+          "Path",
+          "SystemExit",
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_config_from_args",
+          "_prisma_curadoria_input_from_args",
+          "_prisma_curadoria_out_from_args",
+          "_prisma_curadoria_prompt_from_args",
+          "_prisma_curadoria_script_path",
+          "script.exists",
+          "str"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 759,
+        "line_start": 713,
+        "name": "_prisma_curadoria_build_cmd"
+      },
+      {
+        "arguments": [
+          "args",
+          "usar_ia"
+        ],
+        "calls": [
+          "_prisma_curadoria_build_cmd",
+          "_prisma_curadoria_run_command"
+        ],
+        "candidate_groups": [
+          "despacho-de-comandos",
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 764,
+        "line_start": 762,
+        "name": "_prisma_curadoria_run_ia"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_build_cmd",
+          "_prisma_curadoria_run_command"
+        ],
+        "candidate_groups": [
+          "despacho-de-comandos",
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 769,
+        "line_start": 767,
+        "name": "_prisma_curadoria_reexportar_xlsx"
+      },
+      {
+        "arguments": [
+          "flag"
+        ],
+        "calls": [
+          "subprocess.run"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 786,
+        "line_start": 772,
+        "name": "_prisma_curadoria_pipeline_supports_flag"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_curadoria_config_from_args",
+          "_prisma_curadoria_out_from_args",
+          "_prisma_curadoria_pipeline_supports_flag",
+          "_prisma_curadoria_run_command",
+          "print",
+          "str",
+          "triagem.exists"
+        ],
+        "candidate_groups": [
+          "despacho-de-comandos",
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 809,
+        "line_start": 789,
+        "name": "_prisma_curadoria_importar_no_pipeline"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_importar_no_pipeline",
+          "_prisma_curadoria_run_ia",
+          "bool"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 819,
+        "line_start": 812,
+        "name": "_prisma_curadoria_fluxo_completo"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_curadoria_config_from_args",
+          "_prisma_curadoria_out_from_args",
+          "_prisma_curadoria_prompt_from_args",
+          "_prisma_curadoria_script_path",
+          "print"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 841,
+        "line_start": 822,
+        "name": "_prisma_curadoria_mostrar_caminhos"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_fluxo_completo",
+          "_prisma_curadoria_importar_no_pipeline",
+          "_prisma_curadoria_mostrar_caminhos",
+          "_prisma_curadoria_reexportar_xlsx",
+          "_prisma_curadoria_run_ia",
+          "input",
+          "print",
+          "strip"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 880,
+        "line_start": 844,
+        "name": "_prisma_curadoria_menu"
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "calls": [
+          "_prisma_curadoria_arg",
+          "_prisma_curadoria_fluxo_completo",
+          "_prisma_curadoria_importar_no_pipeline",
+          "_prisma_curadoria_menu",
+          "_prisma_curadoria_reexportar_xlsx",
+          "_prisma_curadoria_run_ia",
+          "bool"
+        ],
+        "candidate_groups": [
+          "despacho-de-comandos",
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 895,
+        "line_start": 883,
+        "name": "_prisma_curadoria_dispatch"
+      },
+      {
+        "arguments": [],
+        "calls": [
+          "FileNotFoundError",
+          "Path",
+          "RuntimeError",
+          "_json_or_none",
+          "_load_optional_config",
+          "_openai_model_from_cfg",
+          "_prisma_curadoria_dispatch",
+          "abstract_sidecar_path",
+          "apply_cli_path_overrides",
+          "argparse.ArgumentParser",
+          "artifacts.get",
+          "attach_existing_mindmap_if_available",
+          "available_layouts",
+          "bib.with_name",
+          "bib_entry_key",
+          "bib_path.exists",
+          "bib_path.read_text",
+          "bool",
+          "build_bibliography",
+          "build_document_model",
+          "build_quality_report",
+          "cfg.get",
+          "check_config",
+          "collect_orientation_docs",
+          "compliance_report.get",
+          "copy_documents_to_fulltext_cache",
+          "delete_existing_mindmap_outputs",
+          "describe_institution_profiles",
+          "dict",
+          "discover_local_documents",
+          "doc_cfg.get",
+          "document.model_dump",
+          "document_json.with_suffix",
+          "document_json_path.exists",
+          "docx_cfg.get",
+          "docx_validation.get",
+          "e.get",
+          "expanduser",
+          "explain_profile",
+          "external_search_enabled",
+          "generate_and_attach_mindmap",
+          "generate_interactive",
+          "generate_paper_abstract_bundle",
+          "get",
+          "getattr",
+          "import_manual_prisma_triage",
+          "init_project",
+          "inject_paper_abstracts_into_docx",
+          "inject_paper_abstracts_into_org",
+          "inspect_bib",
+          "isinstance",
+          "join",
+          "json.dumps",
+          "latex_cfg.get",
+          "layouts.items",
+          "list",
+          "load_config",
+          "load_existing_document_json",
+          "locals",
+          "main_document_abstract_languages",
+          "make_client",
+          "make_doi_manifest",
+          "make_run_report",
+          "output_paths",
+          "paper_abstract_path.exists",
+          "paper_abstracts_enabled",
+          "parser.add_argument",
+          "parser.parse_args",
+          "pipeline_cfg.get",
+          "precheck.get",
+          "print",
+          "print_check_config_report",
+          "print_doctor_report",
+          "print_outputs",
+          "print_profiles",
+          "prisma_enabled",
+          "prisma_outputs.setdefault",
+          "prompt_report_for_cfg",
+          "quality.get",
+          "raise_if_errors",
+          "read_paper_abstract_bundle",
+          "render_additional_language_versions",
+          "render_bib_inspection_markdown",
+          "render_compliance_markdown",
+          "render_docx",
+          "render_external_prisma_outputs",
+          "render_org_latex",
+          "report.get",
+          "requested_translation_languages",
+          "research_output_paths",
+          "resolve",
+          "resolve_bib_for_existing_document",
+          "resolve_layout_spec",
+          "resolve_path",
+          "resumo_cfg_for_stage.get",
+          "run_compile_sequence",
+          "run_doctor",
+          "run_external_prisma_search",
+          "run_gui",
+          "run_institution_compliance",
+          "run_prisma_report_outputs",
+          "run_recompile",
+          "run_tui",
+          "sanitize_document_model_raw_bibkeys",
+          "sanitize_document_model_technical_leaks",
+          "search_cfg.get",
+          "should_generate_mindmap",
+          "spec.get",
+          "split_bib_entries",
+          "stage",
+          "str",
+          "strip",
+          "validate_document_model",
+          "validate_docx_file",
+          "validate_org_text",
+          "w.get",
+          "warnings.append",
+          "warnings.extend",
+          "work_cache_paths",
+          "write_compliance_reports",
+          "write_json",
+          "write_outputs_manifest",
+          "write_paper_abstract_bundle",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown",
+          "write_quality_report"
+        ],
+        "candidate_groups": [
+          "parser-e-argumentos",
+          "despacho-de-comandos",
+          "orquestracao-documental",
+          "prisma-e-artigo-generico",
+          "entrypoint-e-fluxo-principal"
+        ],
+        "docstring": null,
+        "line_end": 1682,
+        "line_start": 899,
+        "name": "main"
+      },
+      {
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "bibliography.get",
+          "bool",
+          "cfg.get",
+          "document.get",
+          "isinstance",
+          "local.get"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": null,
+        "line_end": 1706,
+        "line_start": 1691,
+        "name": "_refs_v6_disabled"
+      },
+      {
+        "arguments": [
+          "cfg"
+        ],
+        "calls": [
+          "_refs_v6_disabled",
+          "cfg.setdefault",
+          "isinstance",
+          "orientations.get",
+          "str",
+          "strip"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 1747,
+        "line_start": 1709,
+        "name": "_refs_v6_apply_runtime_policy"
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "calls": [
+          "_refs_v6_apply_runtime_policy",
+          "_refs_v6_original_load_config"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 1753,
+        "line_start": 1752,
+        "name": "load_config"
+      },
+      {
+        "arguments": [
+          "cfg",
+          "docs",
+          "out_dir",
+          "prefix",
+          "client",
+          "model"
+        ],
+        "calls": [
+          "Path",
+          "SimpleNamespace",
+          "_refs_v6_disabled",
+          "_refs_v6_original_build_bibliography"
+        ],
+        "candidate_groups": [
+          "nao-classificado"
+        ],
+        "docstring": null,
+        "line_end": 1770,
+        "line_start": 1759,
+        "name": "build_bibliography"
+      },
+      {
+        "arguments": [
+          "document"
+        ],
+        "calls": [
+          "getattr"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": null,
+        "line_end": 1784,
+        "line_start": 1773,
+        "name": "_refs_v6_clear_document_bibliography"
+      },
+      {
+        "arguments": [
+          "text"
+        ],
+        "calls": [
+          "_re.sub",
+          "strip"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": null,
+        "line_end": 1815,
+        "line_start": 1787,
+        "name": "_refs_v6_strip_org"
+      },
+      {
+        "arguments": [
+          "document",
+          "org_path",
+          "bib_filename",
+          "cfg",
+          "bib_keys"
+        ],
+        "calls": [
+          "Path",
+          "_refs_v6_clear_document_bibliography",
+          "_refs_v6_disabled",
+          "_refs_v6_original_render_org_latex",
+          "_refs_v6_strip_org",
+          "write_text"
+        ],
+        "candidate_groups": [
+          "orquestracao-documental"
+        ],
+        "docstring": null,
+        "line_end": 1847,
+        "line_start": 1821,
+        "name": "render_org_latex"
+      },
+      {
+        "arguments": [
+          "argv",
+          "name"
+        ],
+        "calls": [
+          "enumerate",
+          "item.split",
+          "item.startswith",
+          "len"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 1866,
+        "line_start": 1860,
+        "name": "_prisma_artigo_generico_get_arg"
+      },
+      {
+        "arguments": [
+          "argv"
+        ],
+        "calls": [
+          "any",
+          "item.startswith",
+          "len",
+          "result.append"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 1881,
+        "line_start": 1868,
+        "name": "_prisma_artigo_generico_strip"
+      },
+      {
+        "arguments": [
+          "argv"
+        ],
+        "calls": [
+          "Path",
+          "_prisma_artigo_generico_get_arg",
+          "cfg_path.exists",
+          "cfg_path.resolve"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 1891,
+        "line_start": 1883,
+        "name": "_prisma_artigo_generico_out_dir"
+      },
+      {
+        "arguments": [
+          "argv",
+          "silent"
+        ],
+        "calls": [
+          "Path",
+          "SystemExit",
+          "_prisma_artigo_generico_get_arg",
+          "_prisma_artigo_generico_out_dir",
+          "helper.exists",
+          "out_dir.name.startswith",
+          "print",
+          "str",
+          "subprocess.run",
+          "with_name"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 1912,
+        "line_start": 1893,
+        "name": "_prisma_artigo_generico_run_export"
+      },
+      {
+        "arguments": [
+          "argv",
+          "silent"
+        ],
+        "calls": [
+          "Path",
+          "SystemExit",
+          "_prisma_artigo_generico_get_arg",
+          "_prisma_artigo_generico_out_dir",
+          "cmd.append",
+          "helper.exists",
+          "out_dir.name.startswith",
+          "print",
+          "resolve",
+          "str",
+          "subprocess.run",
+          "with_name"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico"
+        ],
+        "docstring": null,
+        "line_end": 1937,
+        "line_start": 1914,
+        "name": "_prisma_artigo_generico_run_freeze"
+      },
+      {
+        "arguments": [
+          "*args",
+          "**kwargs"
+        ],
+        "calls": [
+          "_original_main_before_prisma_artigo_generico_wrapper",
+          "_prisma_artigo_generico_run_export",
+          "_prisma_artigo_generico_run_freeze",
+          "_prisma_artigo_generico_strip",
+          "list"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico",
+          "entrypoint-e-fluxo-principal"
+        ],
+        "docstring": null,
+        "line_end": 1963,
+        "line_start": 1941,
+        "name": "main"
+      }
+    ],
+    "historical_wrapper": [],
+    "line_count": 1968,
+    "main_definitions": [
+      {
+        "arguments": [],
+        "calls": [
+          "FileNotFoundError",
+          "Path",
+          "RuntimeError",
+          "_json_or_none",
+          "_load_optional_config",
+          "_openai_model_from_cfg",
+          "_prisma_curadoria_dispatch",
+          "abstract_sidecar_path",
+          "apply_cli_path_overrides",
+          "argparse.ArgumentParser",
+          "artifacts.get",
+          "attach_existing_mindmap_if_available",
+          "available_layouts",
+          "bib.with_name",
+          "bib_entry_key",
+          "bib_path.exists",
+          "bib_path.read_text",
+          "bool",
+          "build_bibliography",
+          "build_document_model",
+          "build_quality_report",
+          "cfg.get",
+          "check_config",
+          "collect_orientation_docs",
+          "compliance_report.get",
+          "copy_documents_to_fulltext_cache",
+          "delete_existing_mindmap_outputs",
+          "describe_institution_profiles",
+          "dict",
+          "discover_local_documents",
+          "doc_cfg.get",
+          "document.model_dump",
+          "document_json.with_suffix",
+          "document_json_path.exists",
+          "docx_cfg.get",
+          "docx_validation.get",
+          "e.get",
+          "expanduser",
+          "explain_profile",
+          "external_search_enabled",
+          "generate_and_attach_mindmap",
+          "generate_interactive",
+          "generate_paper_abstract_bundle",
+          "get",
+          "getattr",
+          "import_manual_prisma_triage",
+          "init_project",
+          "inject_paper_abstracts_into_docx",
+          "inject_paper_abstracts_into_org",
+          "inspect_bib",
+          "isinstance",
+          "join",
+          "json.dumps",
+          "latex_cfg.get",
+          "layouts.items",
+          "list",
+          "load_config",
+          "load_existing_document_json",
+          "locals",
+          "main_document_abstract_languages",
+          "make_client",
+          "make_doi_manifest",
+          "make_run_report",
+          "output_paths",
+          "paper_abstract_path.exists",
+          "paper_abstracts_enabled",
+          "parser.add_argument",
+          "parser.parse_args",
+          "pipeline_cfg.get",
+          "precheck.get",
+          "print",
+          "print_check_config_report",
+          "print_doctor_report",
+          "print_outputs",
+          "print_profiles",
+          "prisma_enabled",
+          "prisma_outputs.setdefault",
+          "prompt_report_for_cfg",
+          "quality.get",
+          "raise_if_errors",
+          "read_paper_abstract_bundle",
+          "render_additional_language_versions",
+          "render_bib_inspection_markdown",
+          "render_compliance_markdown",
+          "render_docx",
+          "render_external_prisma_outputs",
+          "render_org_latex",
+          "report.get",
+          "requested_translation_languages",
+          "research_output_paths",
+          "resolve",
+          "resolve_bib_for_existing_document",
+          "resolve_layout_spec",
+          "resolve_path",
+          "resumo_cfg_for_stage.get",
+          "run_compile_sequence",
+          "run_doctor",
+          "run_external_prisma_search",
+          "run_gui",
+          "run_institution_compliance",
+          "run_prisma_report_outputs",
+          "run_recompile",
+          "run_tui",
+          "sanitize_document_model_raw_bibkeys",
+          "sanitize_document_model_technical_leaks",
+          "search_cfg.get",
+          "should_generate_mindmap",
+          "spec.get",
+          "split_bib_entries",
+          "stage",
+          "str",
+          "strip",
+          "validate_document_model",
+          "validate_docx_file",
+          "validate_org_text",
+          "w.get",
+          "warnings.append",
+          "warnings.extend",
+          "work_cache_paths",
+          "write_compliance_reports",
+          "write_json",
+          "write_outputs_manifest",
+          "write_paper_abstract_bundle",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown",
+          "write_quality_report"
+        ],
+        "candidate_groups": [
+          "parser-e-argumentos",
+          "despacho-de-comandos",
+          "orquestracao-documental",
+          "prisma-e-artigo-generico",
+          "entrypoint-e-fluxo-principal"
+        ],
+        "docstring": null,
+        "line_end": 1682,
+        "line_start": 899,
+        "name": "main"
+      },
+      {
+        "arguments": [
+          "*args",
+          "**kwargs"
+        ],
+        "calls": [
+          "_original_main_before_prisma_artigo_generico_wrapper",
+          "_prisma_artigo_generico_run_export",
+          "_prisma_artigo_generico_run_freeze",
+          "_prisma_artigo_generico_strip",
+          "list"
+        ],
+        "candidate_groups": [
+          "prisma-e-artigo-generico",
+          "entrypoint-e-fluxo-principal"
+        ],
+        "docstring": null,
+        "line_end": 1963,
+        "line_start": 1941,
+        "name": "main"
+      }
+    ],
+    "main_guards": [
+      {
+        "calls": [
+          "SystemExit",
+          "main"
+        ],
+        "line_end": 1968,
+        "line_start": 1967,
+        "test": "__name__ == '__main__'"
+      }
+    ],
+    "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+    "sha256": "e0a1b4b80f3cae45c99316223430d2bb6360167ef0b220974cdb0e9b735b87cc",
+    "wrapper_symbol": {
+      "canonical_top_level_definition_count": 0,
+      "name": "_original_main_before_prisma_artigo_generico_wrapper",
+      "productive_occurrences": [
+        {
+          "kind": "name-store",
+          "line": 1939,
+          "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "kind": "name-load",
+          "line": 1957,
+          "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "kind": "name-load",
+          "line": 1960,
+          "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ]
+    }
+  },
+  "phase": "AP-003A",
+  "repository": {
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "head": "56b33739518026f379e076bdfdf06e781268c358",
+    "remote_integration_commit": "56b33739518026f379e076bdfdf06e781268c358",
+    "remote_integration_ref": "origin/refactor/academic-pipeline",
+    "software_root": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline/software/academic_pipeline_rc10_7_conformidade",
+    "worktree_root": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline"
+  },
+  "schema_version": 1
+}

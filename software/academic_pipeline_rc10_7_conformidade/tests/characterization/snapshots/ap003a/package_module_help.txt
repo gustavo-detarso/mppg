@@ -1,0 +1,130 @@
+# command: <PYTHON> -m academic_pipeline --help
+# returncode: 0
+# stdout
+usage: academic-pipeline [-h] [--config CONFIG] [--tui] [--gui] [--init-toml] [--toml-profile TOML_PROFILE]
+                         [--no-clear] [--list-toml-profiles] [--list-institutions] [--list-layouts]
+                         [--explain-profile [EXPLAIN_PROFILE]] [--show-prompts] [--write-prompt-lock]
+                         [--check-institution-compliance] [--doctor] [--check-config] [--recompile] [--org ORG]
+                         [--academic-writing ACADEMIC_WRITING] [--latex-extra-path LATEX_EXTRA_PATH]
+                         [--pdf-engine PDF_ENGINE] [--no-clean] [--somente-renderizar] [--somente-mapa-mental]
+                         [--reusar-mapa-mental] [--forcar-regeneracao-mapa-mental] [--document-json DOCUMENT_JSON]
+                         [--prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM] [--init-project INIT_PROJECT]
+                         [--project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}]
+                         [--institution INSTITUTION] [--base-dir BASE_DIR] [--overwrite-project] [--make-doi-manifest]
+                         [--input-zip INPUT_ZIP] [--input-dir INPUT_DIR] [--output OUTPUT] [--output-dir OUTPUT_DIR]
+                         [--work-dir WORK_DIR] [--cache-dir CACHE_DIR] [--research-output-dir RESEARCH_OUTPUT_DIR]
+                         [--output-prefix OUTPUT_PREFIX] [--layout LAYOUT] [--tipo-conteudo TIPO_CONTEUDO]
+                         [--genero-academico GENERO_ACADEMICO] [--no-output-subdir] [--inspect-bib INSPECT_BIB]
+                         [--quality-report] [--bib BIB] [--docx DOCX] [--pdf PDF] [--prisma-curadoria-menu]
+                         [--prisma-curadoria-ia] [--prisma-curadoria-sem-ia] [--prisma-curadoria-reexportar-xlsx]
+                         [--prisma-curadoria-importar] [--prisma-curadoria-fluxo-completo]
+                         [--prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT]
+                         [--prisma-curadoria-input PRISMA_CURADORIA_INPUT]
+                         [--prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR]
+                         [--prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR]
+                         [--prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS]
+                         [--prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO]
+
+academic_pipeline rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit — document_model canônico
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       Arquivo TOML
+  --tui                 Abre a Central Operacional FGV em terminal (prompt_toolkit)
+  --gui                 Abre a interface gráfica FGV de atividades acadêmicas
+  --init-toml           Abre o gerador interativo completo de TOML
+  --toml-profile TOML_PROFILE
+                        Preset inicial para --init-toml, ex.: atividade_local_fgv
+  --no-clear            Não limpa a tela entre etapas do --init-toml
+  --list-toml-profiles  Lista presets do gerador de TOML
+  --list-institutions   Lista perfis institucionais disponíveis
+  --list-layouts        Lista layouts disponíveis do perfil institucional informado no TOML
+  --explain-profile [EXPLAIN_PROFILE]
+                        Explica um perfil institucional, ex.: --explain-profile fgv
+  --show-prompts        Mostra os prompts/diretivas ativos para o TOML informado
+  --write-prompt-lock   Gera prompt_lock.json/md para o TOML e encerra
+  --check-institution-compliance
+                        Valida conformidade institucional de artefatos já gerados
+  --doctor              Diagnostica ambiente, ferramentas, arquivos FGV e estilo bibliográfico
+  --check-config        Valida preventivamente o TOML e encerra
+  --recompile           Recompila um .org existente sem chamar IA
+  --org ORG             Arquivo .org para --recompile
+  --academic-writing ACADEMIC_WRITING
+                        Override do academic-writing.el para --recompile
+  --latex-extra-path LATEX_EXTRA_PATH
+                        Override do latex_extra_path para --recompile
+  --pdf-engine PDF_ENGINE
+                        Override do pdf_engine para --recompile
+  --no-clean            Não remove auxiliares no --recompile
+  --somente-renderizar  Usa document.json existente e só renderiza saídas
+  --somente-mapa-mental
+                        Usa document.json existente e gera/renderiza apenas o mapa mental
+  --reusar-mapa-mental  Reaproveita imagem de mapa mental existente quando disponível, sem chamar IA/PlantUML
+  --forcar-regeneracao-mapa-mental
+                        Remove mapa mental existente e recria PlantUML/imagem quando a etapa de mapa mental for
+                        executada
+  --document-json DOCUMENT_JSON
+                        Caminho de document.json existente
+  --prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM
+                        Importa CSV de triagem humana do perfil relatorio_prisma_busca_orientada_fgv e consolida
+                        matriz/relatório PRISMA
+  --init-project INIT_PROJECT
+                        Cria app_bundle/projetos/<nome> com TOML, ZIPs placeholder e doi_manifest.csv
+  --project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}
+                        Tipo de projeto para --init-project
+  --institution INSTITUTION
+                        Perfil institucional usado por --init-project, ex.: fgv
+  --base-dir BASE_DIR   Raiz do academic_pipeline ou app_bundle para --init-project
+  --overwrite-project   Permite sobrescrever arquivos seguros criados por --init-project
+  --make-doi-manifest   Gera doi_manifest.csv a partir de --input-zip ou --input-dir
+  --input-zip INPUT_ZIP
+                        ZIP de documentos para --make-doi-manifest
+  --input-dir INPUT_DIR
+                        Pasta de documentos para --make-doi-manifest
+  --output OUTPUT       Arquivo de saída para --make-doi-manifest
+  --output-dir OUTPUT_DIR
+                        Override de [paths].document_output_dir para a geração/renderização do documento
+  --work-dir WORK_DIR   Override de [paths].work_dir para extrações temporárias
+  --cache-dir CACHE_DIR
+                        Override de [paths].cache_dir para fulltext_cache
+  --research-output-dir RESEARCH_OUTPUT_DIR
+                        Override de [paths].research_output_dir para relatório PRISMA
+  --output-prefix OUTPUT_PREFIX
+                        Override de [paths].document_prefix
+  --layout LAYOUT       Override de [documento].layout, ex.: atividade_fgv
+  --tipo-conteudo TIPO_CONTEUDO
+                        Override de [documento].tipo_conteudo, ex.: resumo_artigos
+  --genero-academico GENERO_ACADEMICO
+                        Override de [documento].genero_academico, ex.: atividade
+  --no-output-subdir    Não cria subdiretório com document_prefix dentro de --output-dir/[paths].document_output_dir
+  --inspect-bib INSPECT_BIB
+                        Inspeciona arquivo .bib e gera relatório .md/.json
+  --quality-report      Gera quality_report.md a partir de --document-json e opcionalmente --org
+  --bib BIB             Arquivo .bib opcional para --quality-report ou --check-institution-compliance
+  --docx DOCX           Arquivo .docx opcional para --check-institution-compliance
+  --pdf PDF             Arquivo .pdf opcional para --check-institution-compliance
+  --prisma-curadoria-menu
+                        Abre o sub-menu PRISMA de curadoria IA de referências.
+  --prisma-curadoria-ia
+                        Executa a curadoria IA v2 de referências e gera XLSX/CSV para o PRISMA.
+  --prisma-curadoria-sem-ia
+                        Usa a etapa de curadoria sem chamada à IA, apenas com heurística local.
+  --prisma-curadoria-reexportar-xlsx
+                        Reexporta o XLSX de curadoria revisado para triagem_humana.csv.
+  --prisma-curadoria-importar
+                        Importa triagem_humana.csv e executa a geração final do PRISMA.
+  --prisma-curadoria-fluxo-completo
+                        Executa curadoria IA e depois importa a triagem para gerar o PRISMA final.
+  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT
+                        Caminho do YAML de prompt estruturado da curadoria.
+  --prisma-curadoria-input PRISMA_CURADORIA_INPUT
+                        Entrada específica para a curadoria: XLSX/CSV de triagem ou XLSX revisado.
+  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR
+                        Diretório de saída do relatório PRISMA.
+  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR
+                        Número máximo de referências incluídas pela curadoria.
+  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS
+                        Número de candidatos enviados/avaliados pela curadoria IA.
+  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO
+                        Limiar mínimo de inclusão da curadoria v2.
+# stderr
