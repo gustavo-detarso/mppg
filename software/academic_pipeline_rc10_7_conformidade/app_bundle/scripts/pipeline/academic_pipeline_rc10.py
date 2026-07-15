@@ -911,110 +911,126 @@ def main() -> int:
     ):
         return _prisma_curadoria_dispatch(args)
     # <<< PATCH_PRISMA_CURADORIA_IA_MENU_PRINCIPAL_V1_DISPATCH <<<
-    if args.gui:
-        # Compatibilidade temporária entre pacote e script direto.
-        if __package__:
-            from .academic_pipeline_gui import run_gui
-        else:
-            from academic_pipeline_gui import run_gui
-        return run_gui()
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_001 as _ap003c_dispatch_001,
+    )
 
-    if args.tui:
-        # Compatibilidade temporária entre pacote e script direto.
-        if __package__:
-            from .academic_pipeline_tui import run_tui
-        else:
-            from academic_pipeline_tui import run_tui
-        return run_tui(no_clear=bool(args.no_clear))
+    _ap003c_result_001 = _ap003c_dispatch_001(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_001.handled:
+        return _ap003c_result_001.value
 
-    if args.list_toml_profiles:
-        # Compatibilidade temporária entre pacote e script direto.
-        if __package__:
-            from .academic_pipeline_toml_generator_interativo import print_profiles
-        else:
-            from academic_pipeline_toml_generator_interativo import print_profiles
-        print_profiles()
-        return 0
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_002 as _ap003c_dispatch_002,
+    )
 
-    if args.init_toml:
-        # Compatibilidade temporária entre pacote e script direto.
-        if __package__:
-            from .academic_pipeline_toml_generator_interativo import generate_interactive
-        else:
-            from academic_pipeline_toml_generator_interativo import generate_interactive
-        generate_interactive(non_interactive_profile=args.toml_profile or None, no_clear=bool(args.no_clear))
-        return 0
+    _ap003c_result_002 = _ap003c_dispatch_002(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_002.handled:
+        return _ap003c_result_002.value
 
-    if args.list_institutions:
-        print(describe_institution_profiles())
-        return 0
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_003 as _ap003c_dispatch_003,
+    )
 
-    if args.list_layouts:
-        if not args.config:
-            raise RuntimeError("--list-layouts exige --config caminho.toml")
-        cfg_layouts = load_config(Path(args.config).expanduser().resolve())
-        layouts = available_layouts(cfg_layouts)
-        if not layouts:
-            print("Nenhum layout declarado no perfil institucional.")
-        else:
-            print("Layouts disponíveis:")
-            for layout_id, spec in layouts.items():
-                desc = str(spec.get("description") or spec.get("descricao") or "").strip()
-                genero = str(spec.get("genero_academico") or "").strip()
-                print(f"- {layout_id}" + (f" ({genero})" if genero else "") + (f": {desc}" if desc else ""))
-            resolved = resolve_layout_spec(cfg_layouts)
-            print(f"Layout resolvido para este TOML: {resolved.id}")
-        return 0
+    _ap003c_result_003 = _ap003c_dispatch_003(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_003.handled:
+        return _ap003c_result_003.value
 
-    if args.explain_profile:
-        print(explain_profile(args.explain_profile))
-        return 0
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_004 as _ap003c_dispatch_004,
+    )
 
-    if args.show_prompts:
-        if not args.config:
-            raise RuntimeError("--show-prompts exige --config caminho.toml")
-        cfg_preview = load_config(Path(args.config).expanduser().resolve())
-        print(json.dumps(prompt_report_for_cfg(cfg_preview), ensure_ascii=False, indent=2))
-        return 0
+    _ap003c_result_004 = _ap003c_dispatch_004(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_004.handled:
+        return _ap003c_result_004.value
 
-    if args.init_project:
-        base_dir = Path(args.base_dir).expanduser().resolve() if args.base_dir else None
-        result = init_project(args.init_project, project_type=args.project_type, base_dir=base_dir, overwrite=bool(args.overwrite_project), institution=args.institution)
-        print("Projeto criado:")
-        print(f"- Diretório: {result.project_dir}")
-        print(f"- TOML: {result.config_path}")
-        print(f"- DOI manifest: {result.doi_manifest_path}")
-        print(f"- Documentos ZIP: {result.documentos_zip_path}")
-        print(f"- Orientações ZIP: {result.orientacoes_zip_path}")
-        print(f"- README: {result.readme_path}")
-        return 0
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_005 as _ap003c_dispatch_005,
+    )
 
-    if args.make_doi_manifest:
-        input_zip = Path(args.input_zip).expanduser().resolve() if args.input_zip else None
-        input_dir = Path(args.input_dir).expanduser().resolve() if args.input_dir else None
-        if args.output:
-            output = Path(args.output).expanduser().resolve()
-        else:
-            if input_zip:
-                output = input_zip.parent / "doi_manifest.csv"
-            elif input_dir:
-                output = input_dir / "doi_manifest.csv"
-            else:
-                raise RuntimeError("Use --make-doi-manifest com --input-zip ou --input-dir.")
-        result = make_doi_manifest(input_zip, input_dir, output, overwrite=True)
-        print("DOI manifest gerado:")
-        print(f"- Fonte: {result['source']}")
-        print(f"- Saída: {result['output']}")
-        print(f"- Arquivos listados: {result['total_files']}")
-        return 0
+    _ap003c_result_005 = _ap003c_dispatch_005(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_005.handled:
+        return _ap003c_result_005.value
 
-    if args.inspect_bib:
-        bib = Path(args.inspect_bib).expanduser().resolve()
-        prefix = bib.with_name(bib.name + "_inspection")
-        report = inspect_bib(bib, output_prefix=prefix)
-        print(render_bib_inspection_markdown(report))
-        print(f"Relatórios: {str(prefix)}.md e {str(prefix)}.json")
-        return 0 if report.get("ok") else 1
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_006 as _ap003c_dispatch_006,
+    )
+
+    _ap003c_result_006 = _ap003c_dispatch_006(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_006.handled:
+        return _ap003c_result_006.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_007 as _ap003c_dispatch_007,
+    )
+
+    _ap003c_result_007 = _ap003c_dispatch_007(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_007.handled:
+        return _ap003c_result_007.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_008 as _ap003c_dispatch_008,
+    )
+
+    _ap003c_result_008 = _ap003c_dispatch_008(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_008.handled:
+        return _ap003c_result_008.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_009 as _ap003c_dispatch_009,
+    )
+
+    _ap003c_result_009 = _ap003c_dispatch_009(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_009.handled:
+        return _ap003c_result_009.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_010 as _ap003c_dispatch_010,
+    )
+
+    _ap003c_result_010 = _ap003c_dispatch_010(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_010.handled:
+        return _ap003c_result_010.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_011 as _ap003c_dispatch_011,
+    )
+
+    _ap003c_result_011 = _ap003c_dispatch_011(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_011.handled:
+        return _ap003c_result_011.value
 
     if args.quality_report:
         if not args.document_json:
@@ -1042,101 +1058,95 @@ def main() -> int:
     if cfg:
         cfg = apply_cli_path_overrides(cfg, args)
 
-    if args.somente_renderizar and args.somente_mapa_mental:
-        raise RuntimeError("Use apenas um entre --somente-renderizar e --somente-mapa-mental.")
-    if args.reusar_mapa_mental and args.forcar_regeneracao_mapa_mental:
-        raise RuntimeError("Use apenas um entre --reusar-mapa-mental e --forcar-regeneracao-mapa-mental.")
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_012 as _ap003c_dispatch_012,
+    )
 
-    if args.write_prompt_lock:
-        if not cfg:
-            raise RuntimeError("--write-prompt-lock exige --config caminho.toml")
-        out_dir, prefix = research_output_paths(cfg) if external_search_enabled(cfg) else output_paths(cfg)
-        lock_path = out_dir / f"{prefix}.prompt_lock.json"
-        lock_md = out_dir / f"{prefix}.prompt_lock.md"
-        lock = write_prompt_lock(cfg, lock_path)
-        write_prompt_lock_markdown(lock, lock_md)
-        print(f"Prompt lock gerado: {lock_path}")
-        print(f"Prompt lock markdown: {lock_md}")
-        return 0
+    _ap003c_result_012 = _ap003c_dispatch_012(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_012.handled:
+        return _ap003c_result_012.value
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_013 as _ap003c_dispatch_013,
+    )
 
-    if args.check_institution_compliance:
-        if not cfg:
-            raise RuntimeError("--check-institution-compliance exige --config caminho.toml")
-        out_dir, prefix = output_paths(cfg)
-        org = Path(args.org).expanduser().resolve() if args.org else out_dir / f"{prefix}.org"
-        bib = Path(args.bib).expanduser().resolve() if args.bib else out_dir / f"{prefix}.bib"
-        docx = Path(args.docx).expanduser().resolve() if args.docx else out_dir / f"{prefix}.docx"
-        pdf = Path(args.pdf).expanduser().resolve() if args.pdf else out_dir / f"{prefix}.pdf"
-        report = run_institution_compliance(cfg, org_path=org, bib_path=bib, docx_path=docx, pdf_path=pdf)
-        md_path, json_path = write_compliance_reports(report, out_dir / prefix)
-        print(render_compliance_markdown(report))
-        print(f"Relatórios: {md_path} e {json_path}")
-        return 0 if report.get("ok") else 2
+    _ap003c_result_013 = _ap003c_dispatch_013(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_013.handled:
+        return _ap003c_result_013.value
 
-    if args.doctor:
-        report = run_doctor(cfg)
-        print_doctor_report(report)
-        if cfg:
-            out_dir, prefix = research_output_paths(cfg) if external_search_enabled(cfg) else output_paths(cfg)
-            write_json(out_dir / f"{prefix}.doctor_report.json", report)
-        return 0 if report.get("ok") else 2
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_014 as _ap003c_dispatch_014,
+    )
 
-    if args.check_config:
-        if not cfg:
-            raise RuntimeError("--check-config exige --config caminho.toml")
-        report = check_config(cfg)
-        print_check_config_report(report)
-        out_dir, prefix = research_output_paths(cfg) if external_search_enabled(cfg) else output_paths(cfg)
-        write_json(out_dir / f"{prefix}.check_config_report.json", report)
-        return 0 if report.get("ok") else 2
+    _ap003c_result_014 = _ap003c_dispatch_014(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_014.handled:
+        return _ap003c_result_014.value
 
-    if args.recompile:
-        return run_recompile(args, cfg)
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_015 as _ap003c_dispatch_015,
+    )
+
+    _ap003c_result_015 = _ap003c_dispatch_015(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_015.handled:
+        return _ap003c_result_015.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_016 as _ap003c_dispatch_016,
+    )
+
+    _ap003c_result_016 = _ap003c_dispatch_016(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_016.handled:
+        return _ap003c_result_016.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_017 as _ap003c_dispatch_017,
+    )
+
+    _ap003c_result_017 = _ap003c_dispatch_017(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_017.handled:
+        return _ap003c_result_017.value
+
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_018 as _ap003c_dispatch_018,
+    )
+
+    _ap003c_result_018 = _ap003c_dispatch_018(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_018.handled:
+        return _ap003c_result_018.value
 
     if not cfg:
         raise RuntimeError("Informe --config, ou use --doctor sem config.")
 
-    if args.prisma_importar_triagem:
-        if not external_search_enabled(cfg):
-            raise RuntimeError("--prisma-importar-triagem exige um TOML do perfil relatorio_prisma_busca_orientada_fgv.")
-        out_dir, prefix = research_output_paths(cfg)
-        stage("Importando planilha de triagem PRISMA preenchida")
-        prisma_outputs = import_manual_prisma_triage(cfg, out_dir, prefix, Path(args.prisma_importar_triagem))
-        org_path, pdf_path = render_external_prisma_outputs(
-            cfg,
-            out_dir,
-            prefix,
-            prisma_outputs,
-            phase="final",
-        )
-        artifacts = prisma_outputs.setdefault("artefatos", {}) if isinstance(prisma_outputs, dict) else {}
-        if org_path:
-            artifacts["relatorio_org"] = str(org_path)
-        if pdf_path:
-            artifacts["relatorio_pdf"] = str(pdf_path)
-        report_json_path = artifacts.get("prisma_report_json") if isinstance(artifacts, dict) else ""
-        if report_json_path:
-            write_json(Path(str(report_json_path)), prisma_outputs)
-        outputs = {
-            "output_dir": str(out_dir),
-            "org": str(org_path) if org_path else None,
-            "pdf": str(pdf_path) if pdf_path else None,
-            "relatorio_pesquisa": prisma_outputs,
-        }
-        report = make_run_report(
-            cfg=cfg,
-            config_path=Path(str(cfg.get("__config_path__"))),
-            out_dir=out_dir,
-            prefix=prefix,
-            model=None,
-            outputs=outputs,
-            warnings=[],
-            extra={"mode": "prisma_importar_triagem"},
-        )
-        write_json(out_dir / f"{prefix}.run_report.json", report)
-        write_outputs_manifest(out_dir / f"{prefix}.outputs.txt", outputs)
-        print_outputs(outputs, title=f"academic_pipeline {PIPELINE_VERSION} — triagem PRISMA consolidada")
-        return 0
+    from academic_pipeline.command_dispatch import (
+        dispatch_stage_019 as _ap003c_dispatch_019,
+    )
+
+    _ap003c_result_019 = _ap003c_dispatch_019(
+        args,
+        {**globals(), **locals()},
+    )
+    if _ap003c_result_019.handled:
+        return _ap003c_result_019.value
 
     cfg["__somente_renderizar__"] = bool(args.somente_renderizar)
     is_external_prisma_run = external_search_enabled(cfg) and not args.somente_renderizar

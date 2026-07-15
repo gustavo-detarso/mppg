@@ -1,0 +1,407 @@
+{
+  "phase": "AP-003C",
+  "branch": "ap-refactor/03-orchestrator-decomposition",
+  "head_before_application": "90dc81b60720c25d2514ca6a3dec29dcba91efe8",
+  "source": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+  "source_sha256_before": "51af32106184df8fd5810222a8ccdb5cc0818aa3e167ff8bd2e1c96199ef1a0f",
+  "source_sha256_after": "4261568e60308764ef1f56ab1e13d6ccfd886d76dce965ec6d3e8fd66cdee51d",
+  "parser": "academic_pipeline/cli_parser.py",
+  "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+  "dispatch_module": "academic_pipeline/command_dispatch.py",
+  "inventory_candidate_count": 29,
+  "extracted_stage_count": 19,
+  "skipped_candidate_count": 10,
+  "stages": [
+    {
+      "name": "dispatch_stage_001",
+      "body_index": 3,
+      "line": 914,
+      "end_line": 920,
+      "condition": "args.gui",
+      "args_attributes": [
+        "gui"
+      ],
+      "runtime_names": [
+        "run_gui"
+      ]
+    },
+    {
+      "name": "dispatch_stage_002",
+      "body_index": 4,
+      "line": 922,
+      "end_line": 928,
+      "condition": "args.tui",
+      "args_attributes": [
+        "no_clear",
+        "tui"
+      ],
+      "runtime_names": [
+        "run_tui"
+      ]
+    },
+    {
+      "name": "dispatch_stage_003",
+      "body_index": 5,
+      "line": 930,
+      "end_line": 937,
+      "condition": "args.list_toml_profiles",
+      "args_attributes": [
+        "list_toml_profiles"
+      ],
+      "runtime_names": [
+        "print_profiles"
+      ]
+    },
+    {
+      "name": "dispatch_stage_004",
+      "body_index": 6,
+      "line": 939,
+      "end_line": 946,
+      "condition": "args.init_toml",
+      "args_attributes": [
+        "init_toml",
+        "no_clear",
+        "toml_profile"
+      ],
+      "runtime_names": [
+        "generate_interactive"
+      ]
+    },
+    {
+      "name": "dispatch_stage_005",
+      "body_index": 7,
+      "line": 948,
+      "end_line": 950,
+      "condition": "args.list_institutions",
+      "args_attributes": [
+        "list_institutions"
+      ],
+      "runtime_names": [
+        "describe_institution_profiles"
+      ]
+    },
+    {
+      "name": "dispatch_stage_006",
+      "body_index": 8,
+      "line": 952,
+      "end_line": 967,
+      "condition": "args.list_layouts",
+      "args_attributes": [
+        "config",
+        "list_layouts"
+      ],
+      "runtime_names": [
+        "Path",
+        "available_layouts",
+        "load_config",
+        "resolve_layout_spec"
+      ]
+    },
+    {
+      "name": "dispatch_stage_007",
+      "body_index": 9,
+      "line": 969,
+      "end_line": 971,
+      "condition": "args.explain_profile",
+      "args_attributes": [
+        "explain_profile"
+      ],
+      "runtime_names": [
+        "explain_profile"
+      ]
+    },
+    {
+      "name": "dispatch_stage_008",
+      "body_index": 10,
+      "line": 973,
+      "end_line": 978,
+      "condition": "args.show_prompts",
+      "args_attributes": [
+        "config",
+        "show_prompts"
+      ],
+      "runtime_names": [
+        "Path",
+        "json",
+        "load_config",
+        "prompt_report_for_cfg"
+      ]
+    },
+    {
+      "name": "dispatch_stage_009",
+      "body_index": 11,
+      "line": 980,
+      "end_line": 990,
+      "condition": "args.init_project",
+      "args_attributes": [
+        "base_dir",
+        "init_project",
+        "institution",
+        "overwrite_project",
+        "project_type"
+      ],
+      "runtime_names": [
+        "Path",
+        "init_project"
+      ]
+    },
+    {
+      "name": "dispatch_stage_010",
+      "body_index": 12,
+      "line": 992,
+      "end_line": 1009,
+      "condition": "args.make_doi_manifest",
+      "args_attributes": [
+        "input_dir",
+        "input_zip",
+        "make_doi_manifest",
+        "output"
+      ],
+      "runtime_names": [
+        "Path",
+        "make_doi_manifest"
+      ]
+    },
+    {
+      "name": "dispatch_stage_011",
+      "body_index": 13,
+      "line": 1011,
+      "end_line": 1017,
+      "condition": "args.inspect_bib",
+      "args_attributes": [
+        "inspect_bib"
+      ],
+      "runtime_names": [
+        "Path",
+        "inspect_bib",
+        "render_bib_inspection_markdown"
+      ]
+    },
+    {
+      "name": "dispatch_stage_012",
+      "body_index": 17,
+      "line": 1045,
+      "end_line": 1046,
+      "condition": "args.somente_renderizar and args.somente_mapa_mental",
+      "args_attributes": [
+        "somente_mapa_mental",
+        "somente_renderizar"
+      ],
+      "runtime_names": []
+    },
+    {
+      "name": "dispatch_stage_013",
+      "body_index": 18,
+      "line": 1047,
+      "end_line": 1048,
+      "condition": "args.reusar_mapa_mental and args.forcar_regeneracao_mapa_mental",
+      "args_attributes": [
+        "forcar_regeneracao_mapa_mental",
+        "reusar_mapa_mental"
+      ],
+      "runtime_names": []
+    },
+    {
+      "name": "dispatch_stage_014",
+      "body_index": 19,
+      "line": 1050,
+      "end_line": 1060,
+      "condition": "args.write_prompt_lock",
+      "args_attributes": [
+        "write_prompt_lock"
+      ],
+      "runtime_names": [
+        "cfg",
+        "external_search_enabled",
+        "output_paths",
+        "research_output_paths",
+        "write_prompt_lock",
+        "write_prompt_lock_markdown"
+      ]
+    },
+    {
+      "name": "dispatch_stage_015",
+      "body_index": 20,
+      "line": 1062,
+      "end_line": 1074,
+      "condition": "args.check_institution_compliance",
+      "args_attributes": [
+        "bib",
+        "check_institution_compliance",
+        "docx",
+        "org",
+        "pdf"
+      ],
+      "runtime_names": [
+        "Path",
+        "cfg",
+        "output_paths",
+        "render_compliance_markdown",
+        "run_institution_compliance",
+        "write_compliance_reports"
+      ]
+    },
+    {
+      "name": "dispatch_stage_016",
+      "body_index": 21,
+      "line": 1076,
+      "end_line": 1082,
+      "condition": "args.doctor",
+      "args_attributes": [
+        "doctor"
+      ],
+      "runtime_names": [
+        "cfg",
+        "external_search_enabled",
+        "output_paths",
+        "print_doctor_report",
+        "research_output_paths",
+        "run_doctor",
+        "write_json"
+      ]
+    },
+    {
+      "name": "dispatch_stage_017",
+      "body_index": 22,
+      "line": 1084,
+      "end_line": 1091,
+      "condition": "args.check_config",
+      "args_attributes": [
+        "check_config"
+      ],
+      "runtime_names": [
+        "cfg",
+        "check_config",
+        "external_search_enabled",
+        "output_paths",
+        "print_check_config_report",
+        "research_output_paths",
+        "write_json"
+      ]
+    },
+    {
+      "name": "dispatch_stage_018",
+      "body_index": 23,
+      "line": 1093,
+      "end_line": 1094,
+      "condition": "args.recompile",
+      "args_attributes": [
+        "recompile"
+      ],
+      "runtime_names": [
+        "cfg",
+        "run_recompile"
+      ]
+    },
+    {
+      "name": "dispatch_stage_019",
+      "body_index": 25,
+      "line": 1099,
+      "end_line": 1139,
+      "condition": "args.prisma_importar_triagem",
+      "args_attributes": [
+        "prisma_importar_triagem"
+      ],
+      "runtime_names": [
+        "PIPELINE_VERSION",
+        "Path",
+        "cfg",
+        "external_search_enabled",
+        "import_manual_prisma_triage",
+        "make_run_report",
+        "print_outputs",
+        "render_external_prisma_outputs",
+        "research_output_paths",
+        "stage",
+        "write_json",
+        "write_outputs_manifest"
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "body_index": 14,
+      "line": 1019,
+      "end_line": 1039,
+      "condition": "args.quality_report",
+      "reason": "contém nó não extraível: NamedExpr"
+    },
+    {
+      "body_index": 15,
+      "line": 1041,
+      "end_line": 1041,
+      "condition": "",
+      "reason": "tipo Assign, não If"
+    },
+    {
+      "body_index": 26,
+      "line": 1141,
+      "end_line": 1141,
+      "condition": "",
+      "reason": "tipo Assign, não If"
+    },
+    {
+      "body_index": 27,
+      "line": 1142,
+      "end_line": 1142,
+      "condition": "",
+      "reason": "tipo Assign, não If"
+    },
+    {
+      "body_index": 40,
+      "line": 1160,
+      "end_line": 1160,
+      "condition": "",
+      "reason": "tipo Assign, não If"
+    },
+    {
+      "body_index": 41,
+      "line": 1162,
+      "end_line": 1224,
+      "condition": "is_external_prisma_run",
+      "reason": "carrega nome antes da primeira atribuição local: model"
+    },
+    {
+      "body_index": 42,
+      "line": 1226,
+      "end_line": 1279,
+      "condition": "args.somente_mapa_mental",
+      "reason": "carrega nome antes da primeira atribuição local: model"
+    },
+    {
+      "body_index": 47,
+      "line": 1286,
+      "end_line": 1439,
+      "condition": "args.somente_renderizar",
+      "reason": "possui else/elif"
+    },
+    {
+      "body_index": 60,
+      "line": 1473,
+      "end_line": 1499,
+      "condition": "args.somente_renderizar",
+      "reason": "possui else/elif"
+    },
+    {
+      "body_index": 79,
+      "line": 1544,
+      "end_line": 1559,
+      "condition": "",
+      "reason": "tipo Assign, não If"
+    }
+  ],
+  "created": [
+    "academic_pipeline/command_dispatch.py",
+    "docs/refactor/academic-pipeline/AP-003/AP-003C_DISPATCH_EXTRACTION.md",
+    "docs/refactor/academic-pipeline/AP-003/ap003c_manifest.json",
+    "tests/characterization/test_ap003c_dispatch_contract.py"
+  ],
+  "modified": [
+    "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+  ],
+  "preserved": {
+    "top_level_main_definitions": 2,
+    "historical_wrapper_alias": "_original_main_before_prisma_artigo_generico_wrapper",
+    "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8"
+  }
+}

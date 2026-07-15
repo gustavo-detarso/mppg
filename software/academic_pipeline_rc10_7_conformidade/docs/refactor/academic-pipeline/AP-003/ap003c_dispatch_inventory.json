@@ -1,0 +1,823 @@
+{
+  "phase": "AP-003C",
+  "mode": "preparation-only",
+  "generated_at_utc": "2026-07-15T20:07:15.855833+00:00",
+  "git": {
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "head": "90dc81b60720c25d2514ca6a3dec29dcba91efe8",
+    "upstream": "origin/ap-refactor/03-orchestrator-decomposition",
+    "upstream_head": "90dc81b60720c25d2514ca6a3dec29dcba91efe8"
+  },
+  "orchestrator": {
+    "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+    "sha256": "51af32106184df8fd5810222a8ccdb5cc0818aa3e167ff8bd2e1c96199ef1a0f",
+    "line_count": 1854,
+    "main_count": 2,
+    "legacy_main": {
+      "line": 899,
+      "end_line": 1568,
+      "parse_statement_line": 902,
+      "parse_statement_end_line": 902
+    }
+  },
+  "dispatch": {
+    "candidate_count": 29,
+    "terminal_candidate_count": 23,
+    "nonterminal_candidate_count": 6,
+    "args_attributes": [
+      "base_dir",
+      "bib",
+      "check_config",
+      "check_institution_compliance",
+      "config",
+      "doctor",
+      "document_json",
+      "docx",
+      "explain_profile",
+      "forcar_regeneracao_mapa_mental",
+      "gui",
+      "init_project",
+      "init_toml",
+      "input_dir",
+      "input_zip",
+      "inspect_bib",
+      "institution",
+      "list_institutions",
+      "list_layouts",
+      "list_toml_profiles",
+      "make_doi_manifest",
+      "no_clear",
+      "org",
+      "output",
+      "overwrite_project",
+      "pdf",
+      "prisma_importar_triagem",
+      "project_type",
+      "quality_report",
+      "recompile",
+      "reusar_mapa_mental",
+      "show_prompts",
+      "somente_mapa_mental",
+      "somente_renderizar",
+      "toml_profile",
+      "tui",
+      "write_prompt_lock"
+    ],
+    "candidates": [
+      {
+        "body_index": 3,
+        "kind": "if",
+        "line": 914,
+        "end_line": 920,
+        "condition": "args.gui",
+        "args_attributes": [
+          "gui"
+        ],
+        "calls": [
+          "run_gui"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return run_gui()"
+        ],
+        "source": "if args.gui:\n        # Compatibilidade temporária entre pacote e script direto.\n        if __package__:\n            from .academic_pipeline_gui import run_gui\n        else:\n            from academic_pipeline_gui import run_gui\n        return run_gui()"
+      },
+      {
+        "body_index": 4,
+        "kind": "if",
+        "line": 922,
+        "end_line": 928,
+        "condition": "args.tui",
+        "args_attributes": [
+          "no_clear",
+          "tui"
+        ],
+        "calls": [
+          "bool",
+          "run_tui"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return run_tui(no_clear=bool(args.no_clear))"
+        ],
+        "source": "if args.tui:\n        # Compatibilidade temporária entre pacote e script direto.\n        if __package__:\n            from .academic_pipeline_tui import run_tui\n        else:\n            from academic_pipeline_tui import run_tui\n        return run_tui(no_clear=bool(args.no_clear))"
+      },
+      {
+        "body_index": 5,
+        "kind": "if",
+        "line": 930,
+        "end_line": 937,
+        "condition": "args.list_toml_profiles",
+        "args_attributes": [
+          "list_toml_profiles"
+        ],
+        "calls": [
+          "print_profiles"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0"
+        ],
+        "source": "if args.list_toml_profiles:\n        # Compatibilidade temporária entre pacote e script direto.\n        if __package__:\n            from .academic_pipeline_toml_generator_interativo import print_profiles\n        else:\n            from academic_pipeline_toml_generator_interativo import print_profiles\n        print_profiles()\n        return 0"
+      },
+      {
+        "body_index": 6,
+        "kind": "if",
+        "line": 939,
+        "end_line": 946,
+        "condition": "args.init_toml",
+        "args_attributes": [
+          "init_toml",
+          "no_clear",
+          "toml_profile"
+        ],
+        "calls": [
+          "bool",
+          "generate_interactive"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0"
+        ],
+        "source": "if args.init_toml:\n        # Compatibilidade temporária entre pacote e script direto.\n        if __package__:\n            from .academic_pipeline_toml_generator_interativo import generate_interactive\n        else:\n            from academic_pipeline_toml_generator_interativo import generate_interactive\n        generate_interactive(non_interactive_profile=args.toml_profile or None, no_clear=bool(args.no_clear))\n        return 0"
+      },
+      {
+        "body_index": 7,
+        "kind": "if",
+        "line": 948,
+        "end_line": 950,
+        "condition": "args.list_institutions",
+        "args_attributes": [
+          "list_institutions"
+        ],
+        "calls": [
+          "describe_institution_profiles",
+          "print"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0"
+        ],
+        "source": "if args.list_institutions:\n        print(describe_institution_profiles())\n        return 0"
+      },
+      {
+        "body_index": 8,
+        "kind": "if",
+        "line": 952,
+        "end_line": 967,
+        "condition": "args.list_layouts",
+        "args_attributes": [
+          "config",
+          "list_layouts"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.config).expanduser",
+          "Path(args.config).expanduser().resolve",
+          "RuntimeError",
+          "available_layouts",
+          "layouts.items",
+          "load_config",
+          "print",
+          "resolve_layout_spec",
+          "spec.get",
+          "str",
+          "str(spec.get('description') or spec.get('descricao') or '').strip",
+          "str(spec.get('genero_academico') or '').strip"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0",
+          "raise raise RuntimeError(\"--list-layouts exige --config caminho.toml\")"
+        ],
+        "source": "if args.list_layouts:\n        if not args.config:\n            raise RuntimeError(\"--list-layouts exige --config caminho.toml\")\n        cfg_layouts = load_config(Path(args.config).expanduser().resolve())\n        layouts = available_layouts(cfg_layouts)\n        if not layouts:\n            print(\"Nenhum layout declarado no perfil institucional.\")\n        else:\n            print(\"Layouts disponíveis:\")\n            for layout_id, spec in layouts.items():\n                desc = str(spec.get(\"description\") or spec.get(\"descricao\") or \"\").strip()\n                genero = str(spec.get(\"genero_academico\") or \"\").strip()\n                print(f\"- {layout_id}\" + (f\" ({genero})\" if genero else \"\") + (f\": {desc}\" if desc else \"\"))\n            resolved = resolve_layout_spec(cfg_layouts)\n            print(f\"Layout resolvido para este TOML: {resolved.id}\")\n        return 0"
+      },
+      {
+        "body_index": 9,
+        "kind": "if",
+        "line": 969,
+        "end_line": 971,
+        "condition": "args.explain_profile",
+        "args_attributes": [
+          "explain_profile"
+        ],
+        "calls": [
+          "explain_profile",
+          "print"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0"
+        ],
+        "source": "if args.explain_profile:\n        print(explain_profile(args.explain_profile))\n        return 0"
+      },
+      {
+        "body_index": 10,
+        "kind": "if",
+        "line": 973,
+        "end_line": 978,
+        "condition": "args.show_prompts",
+        "args_attributes": [
+          "config",
+          "show_prompts"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.config).expanduser",
+          "Path(args.config).expanduser().resolve",
+          "RuntimeError",
+          "json.dumps",
+          "load_config",
+          "print",
+          "prompt_report_for_cfg"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0",
+          "raise raise RuntimeError(\"--show-prompts exige --config caminho.toml\")"
+        ],
+        "source": "if args.show_prompts:\n        if not args.config:\n            raise RuntimeError(\"--show-prompts exige --config caminho.toml\")\n        cfg_preview = load_config(Path(args.config).expanduser().resolve())\n        print(json.dumps(prompt_report_for_cfg(cfg_preview), ensure_ascii=False, indent=2))\n        return 0"
+      },
+      {
+        "body_index": 11,
+        "kind": "if",
+        "line": 980,
+        "end_line": 990,
+        "condition": "args.init_project",
+        "args_attributes": [
+          "base_dir",
+          "init_project",
+          "institution",
+          "overwrite_project",
+          "project_type"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.base_dir).expanduser",
+          "Path(args.base_dir).expanduser().resolve",
+          "bool",
+          "init_project",
+          "print"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0"
+        ],
+        "source": "if args.init_project:\n        base_dir = Path(args.base_dir).expanduser().resolve() if args.base_dir else None\n        result = init_project(args.init_project, project_type=args.project_type, base_dir=base_dir, overwrite=bool(args.overwrite_project), institution=args.institution)\n        print(\"Projeto criado:\")\n        print(f\"- Diretório: {result.project_dir}\")\n        print(f\"- TOML: {result.config_path}\")\n        print(f\"- DOI manifest: {result.doi_manifest_path}\")\n        print(f\"- Documentos ZIP: {result.documentos_zip_path}\")\n        print(f\"- Orientações ZIP: {result.orientacoes_zip_path}\")\n        print(f\"- README: {result.readme_path}\")\n        return 0"
+      },
+      {
+        "body_index": 12,
+        "kind": "if",
+        "line": 992,
+        "end_line": 1009,
+        "condition": "args.make_doi_manifest",
+        "args_attributes": [
+          "input_dir",
+          "input_zip",
+          "make_doi_manifest",
+          "output"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.input_dir).expanduser",
+          "Path(args.input_dir).expanduser().resolve",
+          "Path(args.input_zip).expanduser",
+          "Path(args.input_zip).expanduser().resolve",
+          "Path(args.output).expanduser",
+          "Path(args.output).expanduser().resolve",
+          "RuntimeError",
+          "make_doi_manifest",
+          "print"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0",
+          "raise raise RuntimeError(\"Use --make-doi-manifest com --input-zip ou --input-dir.\")"
+        ],
+        "source": "if args.make_doi_manifest:\n        input_zip = Path(args.input_zip).expanduser().resolve() if args.input_zip else None\n        input_dir = Path(args.input_dir).expanduser().resolve() if args.input_dir else None\n        if args.output:\n            output = Path(args.output).expanduser().resolve()\n        else:\n            if input_zip:\n                output = input_zip.parent / \"doi_manifest.csv\"\n            elif input_dir:\n                output = input_dir / \"doi_manifest.csv\"\n            else:\n                raise RuntimeError(\"Use --make-doi-manifest com --input-zip ou --input-dir.\")\n        result = make_doi_manifest(input_zip, input_dir, output, overwrite=True)\n        print(\"DOI manifest gerado:\")\n        print(f\"- Fonte: {result['source']}\")\n        print(f\"- Saída: {result['output']}\")\n        print(f\"- Arquivos listados: {result['total_files']}\")\n        return 0"
+      },
+      {
+        "body_index": 13,
+        "kind": "if",
+        "line": 1011,
+        "end_line": 1017,
+        "condition": "args.inspect_bib",
+        "args_attributes": [
+          "inspect_bib"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.inspect_bib).expanduser",
+          "Path(args.inspect_bib).expanduser().resolve",
+          "bib.with_name",
+          "inspect_bib",
+          "print",
+          "render_bib_inspection_markdown",
+          "report.get",
+          "str"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0 if report.get(\"ok\") else 1"
+        ],
+        "source": "if args.inspect_bib:\n        bib = Path(args.inspect_bib).expanduser().resolve()\n        prefix = bib.with_name(bib.name + \"_inspection\")\n        report = inspect_bib(bib, output_prefix=prefix)\n        print(render_bib_inspection_markdown(report))\n        print(f\"Relatórios: {str(prefix)}.md e {str(prefix)}.json\")\n        return 0 if report.get(\"ok\") else 1"
+      },
+      {
+        "body_index": 14,
+        "kind": "if",
+        "line": 1019,
+        "end_line": 1039,
+        "condition": "args.quality_report",
+        "args_attributes": [
+          "bib",
+          "document_json",
+          "org",
+          "quality_report"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.bib).expanduser",
+          "Path(args.bib).expanduser().resolve",
+          "Path(args.document_json).expanduser",
+          "Path(args.document_json).expanduser().resolve",
+          "Path(args.org).expanduser",
+          "Path(args.org).expanduser().resolve",
+          "RuntimeError",
+          "bib_entry_key",
+          "bib_path.exists",
+          "bib_path.read_text",
+          "build_quality_report",
+          "document_json.with_suffix",
+          "list",
+          "load_existing_document_json",
+          "print",
+          "report.get",
+          "split_bib_entries",
+          "write_quality_report"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0 if report.get(\"ok\") else 1",
+          "raise raise RuntimeError(\"--quality-report exige --document-json caminho/document.json\")"
+        ],
+        "source": "if args.quality_report:\n        if not args.document_json:\n            raise RuntimeError(\"--quality-report exige --document-json caminho/document.json\")\n        document_json = Path(args.document_json).expanduser().resolve()\n        document = load_existing_document_json(document_json)\n        org = Path(args.org).expanduser().resolve() if args.org else None\n        bib_keys: list[str] = []\n        if args.bib:\n            # Compatibilidade temporária entre pacote e script direto.\n            if __package__:\n                from .bibliography_manager import split_bib_entries, bib_entry_key\n            else:\n                from bibliography_manager import split_bib_entries, bib_entry_key\n            bib_path = Path(args.bib).expanduser().resolve()\n            if bib_path.exists():\n                bib_keys = [k for e in split_bib_entries(bib_path.read_text(encoding='utf-8', errors='ignore')) if (k := bib_entry_key(e))]\n        report = build_quality_report(document, org_path=org, bib_keys=bib_keys or list(document.bibliography.entries_used or []))\n        out = document_json.with_suffix(\".quality_report.md\")\n        write_quality_report(report, out)\n        print(f\"Relatório de qualidade: {out}\")\n        return 0 if report.get(\"ok\") else 1"
+      },
+      {
+        "body_index": 15,
+        "kind": "assignment",
+        "line": 1041,
+        "end_line": 1041,
+        "condition": "",
+        "args_attributes": [
+          "config"
+        ],
+        "calls": [
+          "_load_optional_config"
+        ],
+        "terminal_flow": false,
+        "returns_or_raises": [],
+        "source": "cfg = _load_optional_config(args.config) if args.config else None"
+      },
+      {
+        "body_index": 17,
+        "kind": "if",
+        "line": 1045,
+        "end_line": 1046,
+        "condition": "args.somente_renderizar and args.somente_mapa_mental",
+        "args_attributes": [
+          "somente_mapa_mental",
+          "somente_renderizar"
+        ],
+        "calls": [
+          "RuntimeError"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "raise raise RuntimeError(\"Use apenas um entre --somente-renderizar e --somente-mapa-mental.\")"
+        ],
+        "source": "if args.somente_renderizar and args.somente_mapa_mental:\n        raise RuntimeError(\"Use apenas um entre --somente-renderizar e --somente-mapa-mental.\")"
+      },
+      {
+        "body_index": 18,
+        "kind": "if",
+        "line": 1047,
+        "end_line": 1048,
+        "condition": "args.reusar_mapa_mental and args.forcar_regeneracao_mapa_mental",
+        "args_attributes": [
+          "forcar_regeneracao_mapa_mental",
+          "reusar_mapa_mental"
+        ],
+        "calls": [
+          "RuntimeError"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "raise raise RuntimeError(\"Use apenas um entre --reusar-mapa-mental e --forcar-regeneracao-mapa-mental.\")"
+        ],
+        "source": "if args.reusar_mapa_mental and args.forcar_regeneracao_mapa_mental:\n        raise RuntimeError(\"Use apenas um entre --reusar-mapa-mental e --forcar-regeneracao-mapa-mental.\")"
+      },
+      {
+        "body_index": 19,
+        "kind": "if",
+        "line": 1050,
+        "end_line": 1060,
+        "condition": "args.write_prompt_lock",
+        "args_attributes": [
+          "write_prompt_lock"
+        ],
+        "calls": [
+          "RuntimeError",
+          "external_search_enabled",
+          "output_paths",
+          "print",
+          "research_output_paths",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0",
+          "raise raise RuntimeError(\"--write-prompt-lock exige --config caminho.toml\")"
+        ],
+        "source": "if args.write_prompt_lock:\n        if not cfg:\n            raise RuntimeError(\"--write-prompt-lock exige --config caminho.toml\")\n        out_dir, prefix = research_output_paths(cfg) if external_search_enabled(cfg) else output_paths(cfg)\n        lock_path = out_dir / f\"{prefix}.prompt_lock.json\"\n        lock_md = out_dir / f\"{prefix}.prompt_lock.md\"\n        lock = write_prompt_lock(cfg, lock_path)\n        write_prompt_lock_markdown(lock, lock_md)\n        print(f\"Prompt lock gerado: {lock_path}\")\n        print(f\"Prompt lock markdown: {lock_md}\")\n        return 0"
+      },
+      {
+        "body_index": 20,
+        "kind": "if",
+        "line": 1062,
+        "end_line": 1074,
+        "condition": "args.check_institution_compliance",
+        "args_attributes": [
+          "bib",
+          "check_institution_compliance",
+          "docx",
+          "org",
+          "pdf"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.bib).expanduser",
+          "Path(args.bib).expanduser().resolve",
+          "Path(args.docx).expanduser",
+          "Path(args.docx).expanduser().resolve",
+          "Path(args.org).expanduser",
+          "Path(args.org).expanduser().resolve",
+          "Path(args.pdf).expanduser",
+          "Path(args.pdf).expanduser().resolve",
+          "RuntimeError",
+          "output_paths",
+          "print",
+          "render_compliance_markdown",
+          "report.get",
+          "run_institution_compliance",
+          "write_compliance_reports"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0 if report.get(\"ok\") else 2",
+          "raise raise RuntimeError(\"--check-institution-compliance exige --config caminho.toml\")"
+        ],
+        "source": "if args.check_institution_compliance:\n        if not cfg:\n            raise RuntimeError(\"--check-institution-compliance exige --config caminho.toml\")\n        out_dir, prefix = output_paths(cfg)\n        org = Path(args.org).expanduser().resolve() if args.org else out_dir / f\"{prefix}.org\"\n        bib = Path(args.bib).expanduser().resolve() if args.bib else out_dir / f\"{prefix}.bib\"\n        docx = Path(args.docx).expanduser().resolve() if args.docx else out_dir / f\"{prefix}.docx\"\n        pdf = Path(args.pdf).expanduser().resolve() if args.pdf else out_dir / f\"{prefix}.pdf\"\n        report = run_institution_compliance(cfg, org_path=org, bib_path=bib, docx_path=docx, pdf_path=pdf)\n        md_path, json_path = write_compliance_reports(report, out_dir / prefix)\n        print(render_compliance_markdown(report))\n        print(f\"Relatórios: {md_path} e {json_path}\")\n        return 0 if report.get(\"ok\") else 2"
+      },
+      {
+        "body_index": 21,
+        "kind": "if",
+        "line": 1076,
+        "end_line": 1082,
+        "condition": "args.doctor",
+        "args_attributes": [
+          "doctor"
+        ],
+        "calls": [
+          "external_search_enabled",
+          "output_paths",
+          "print_doctor_report",
+          "report.get",
+          "research_output_paths",
+          "run_doctor",
+          "write_json"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0 if report.get(\"ok\") else 2"
+        ],
+        "source": "if args.doctor:\n        report = run_doctor(cfg)\n        print_doctor_report(report)\n        if cfg:\n            out_dir, prefix = research_output_paths(cfg) if external_search_enabled(cfg) else output_paths(cfg)\n            write_json(out_dir / f\"{prefix}.doctor_report.json\", report)\n        return 0 if report.get(\"ok\") else 2"
+      },
+      {
+        "body_index": 22,
+        "kind": "if",
+        "line": 1084,
+        "end_line": 1091,
+        "condition": "args.check_config",
+        "args_attributes": [
+          "check_config"
+        ],
+        "calls": [
+          "RuntimeError",
+          "check_config",
+          "external_search_enabled",
+          "output_paths",
+          "print_check_config_report",
+          "report.get",
+          "research_output_paths",
+          "write_json"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0 if report.get(\"ok\") else 2",
+          "raise raise RuntimeError(\"--check-config exige --config caminho.toml\")"
+        ],
+        "source": "if args.check_config:\n        if not cfg:\n            raise RuntimeError(\"--check-config exige --config caminho.toml\")\n        report = check_config(cfg)\n        print_check_config_report(report)\n        out_dir, prefix = research_output_paths(cfg) if external_search_enabled(cfg) else output_paths(cfg)\n        write_json(out_dir / f\"{prefix}.check_config_report.json\", report)\n        return 0 if report.get(\"ok\") else 2"
+      },
+      {
+        "body_index": 23,
+        "kind": "if",
+        "line": 1093,
+        "end_line": 1094,
+        "condition": "args.recompile",
+        "args_attributes": [
+          "recompile"
+        ],
+        "calls": [
+          "run_recompile"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return run_recompile(args, cfg)"
+        ],
+        "source": "if args.recompile:\n        return run_recompile(args, cfg)"
+      },
+      {
+        "body_index": 25,
+        "kind": "if",
+        "line": 1099,
+        "end_line": 1139,
+        "condition": "args.prisma_importar_triagem",
+        "args_attributes": [
+          "prisma_importar_triagem"
+        ],
+        "calls": [
+          "Path",
+          "RuntimeError",
+          "artifacts.get",
+          "cfg.get",
+          "external_search_enabled",
+          "import_manual_prisma_triage",
+          "isinstance",
+          "make_run_report",
+          "print_outputs",
+          "prisma_outputs.setdefault",
+          "render_external_prisma_outputs",
+          "research_output_paths",
+          "stage",
+          "str",
+          "write_json",
+          "write_outputs_manifest"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0",
+          "raise raise RuntimeError(\"--prisma-importar-triagem exige um TOML do perfil relatorio_prisma_busca_orientada_fgv.\")"
+        ],
+        "source": "if args.prisma_importar_triagem:\n        if not external_search_enabled(cfg):\n            raise RuntimeError(\"--prisma-importar-triagem exige um TOML do perfil relatorio_prisma_busca_orientada_fgv.\")\n        out_dir, prefix = research_output_paths(cfg)\n        stage(\"Importando planilha de triagem PRISMA preenchida\")\n        prisma_outputs = import_manual_prisma_triage(cfg, out_dir, prefix, Path(args.prisma_importar_triagem))\n        org_path, pdf_path = render_external_prisma_outputs(\n            cfg,\n            out_dir,\n            prefix,\n            prisma_outputs,\n            phase=\"final\",\n        )\n        artifacts = prisma_outputs.setdefault(\"artefatos\", {}) if isinstance(prisma_outputs, dict) else {}\n        if org_path:\n            artifacts[\"relatorio_org\"] = str(org_path)\n        if pdf_path:\n            artifacts[\"relatorio_pdf\"] = str(pdf_path)\n        report_json_path = artifacts.get(\"prisma_report_json\") if isinstance(artifacts, dict) else \"\"\n        if report_json_path:\n            write_json(Path(str(report_json_path)), prisma_outputs)\n        outputs = {\n            \"output_dir\": str(out_dir),\n            \"org\": str(org_path) if org_path else None,\n            \"pdf\": str(pdf_path) if pdf_path else None,\n            \"relatorio_pesquisa\": prisma_outputs,\n        }\n        report = make_run_report(\n            cfg=cfg,\n            config_path=Path(str(cfg.get(\"__config_path__\"))),\n            out_dir=out_dir,\n            prefix=prefix,\n            model=None,\n            outputs=outputs,\n            warnings=[],\n            extra={\"mode\": \"prisma_importar_triagem\"},\n        )\n        write_json(out_dir / f\"{prefix}.run_report.json\", report)\n        write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)\n        print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} — triagem PRISMA consolidada\")\n        return 0"
+      },
+      {
+        "body_index": 26,
+        "kind": "assignment",
+        "line": 1141,
+        "end_line": 1141,
+        "condition": "",
+        "args_attributes": [
+          "somente_renderizar"
+        ],
+        "calls": [
+          "bool"
+        ],
+        "terminal_flow": false,
+        "returns_or_raises": [],
+        "source": "cfg[\"__somente_renderizar__\"] = bool(args.somente_renderizar)"
+      },
+      {
+        "body_index": 27,
+        "kind": "assignment",
+        "line": 1142,
+        "end_line": 1142,
+        "condition": "",
+        "args_attributes": [
+          "somente_renderizar"
+        ],
+        "calls": [
+          "external_search_enabled"
+        ],
+        "terminal_flow": false,
+        "returns_or_raises": [],
+        "source": "is_external_prisma_run = external_search_enabled(cfg) and not args.somente_renderizar"
+      },
+      {
+        "body_index": 40,
+        "kind": "assignment",
+        "line": 1160,
+        "end_line": 1160,
+        "condition": "",
+        "args_attributes": [
+          "document_json"
+        ],
+        "calls": [
+          "Path",
+          "Path(args.document_json).expanduser",
+          "Path(args.document_json).expanduser().resolve"
+        ],
+        "terminal_flow": false,
+        "returns_or_raises": [],
+        "source": "document_json_path = Path(args.document_json).expanduser().resolve() if args.document_json else out_dir / f\"{prefix}.document.json\""
+      },
+      {
+        "body_index": 41,
+        "kind": "if",
+        "line": 1162,
+        "end_line": 1224,
+        "condition": "is_external_prisma_run",
+        "args_attributes": [
+          "somente_mapa_mental"
+        ],
+        "calls": [
+          "Path",
+          "RuntimeError",
+          "artifacts.get",
+          "bool",
+          "cfg.get",
+          "isinstance",
+          "make_client",
+          "make_run_report",
+          "print_outputs",
+          "prisma_outputs.setdefault",
+          "render_external_prisma_outputs",
+          "run_external_prisma_search",
+          "search_cfg.get",
+          "stage",
+          "str",
+          "write_json",
+          "write_outputs_manifest",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0",
+          "raise raise RuntimeError(\"O perfil de busca PRISMA não produz document.json; use a geração normal ou --prisma-importar-triagem.\")"
+        ],
+        "source": "if is_external_prisma_run:\n        if args.somente_mapa_mental:\n            raise RuntimeError(\"O perfil de busca PRISMA não produz document.json; use a geração normal ou --prisma-importar-triagem.\")\n        search_cfg = cfg.get(\"busca_prisma\", {}) if isinstance(cfg.get(\"busca_prisma\"), dict) else {}\n        if bool(search_cfg.get(\"pre_triagem_ia\", False)):\n            stage(\"Inicializando cliente OpenAI para pré-triagem assistida\")\n            client, model = make_client(model)\n        stage(\"Executando busca bibliográfica externa e preparando triagem humana\")\n        prisma_outputs = run_external_prisma_search(\n            cfg,\n            out_dir,\n            prefix,\n            progress=stage,\n            client=client,\n            model=model,\n        )\n        org_path, pdf_path = render_external_prisma_outputs(\n            cfg,\n            out_dir,\n            prefix,\n            prisma_outputs,\n            phase=\"preliminar\",\n        )\n        artifacts = prisma_outputs.setdefault(\"artefatos\", {}) if isinstance(prisma_outputs, dict) else {}\n        if org_path:\n            artifacts[\"relatorio_org\"] = str(org_path)\n        if pdf_path:\n            artifacts[\"relatorio_pdf\"] = str(pdf_path)\n        report_json_path = artifacts.get(\"prisma_report_json\") if isinstance(artifacts, dict) else \"\"\n        if report_json_path:\n            write_json(Path(str(report_json_path)), prisma_outputs)\n        prompt_lock_path = out_dir / f\"{prefix}.prompt_lock.json\"\n        prompt_lock_md = out_dir / f\"{prefix}.prompt_lock.md\"\n        stage(\"Registrando prompt_lock\")\n        prompt_lock = write_prompt_lock(cfg, prompt_lock_path)\n        write_prompt_lock_markdown(prompt_lock, prompt_lock_md)\n        outputs = {\n            \"output_dir\": str(out_dir),\n            \"work_dir\": str(work_dir),\n            \"cache_dir\": str(cache_dir),\n            \"document_json\": None,\n            \"org\": str(org_path) if org_path else None,\n            \"bib\": None,\n            \"pdf\": str(pdf_path) if pdf_path else None,\n            \"docx\": None,\n            \"relatorio_pesquisa\": prisma_outputs,\n            \"prompt_lock\": str(prompt_lock_path),\n        }\n        report = make_run_report(\n            cfg=cfg,\n            config_path=Path(str(cfg.get(\"__config_path__\"))),\n            out_dir=out_dir,\n            prefix=prefix,\n            model=None,\n            outputs=outputs,\n            warnings=warnings,\n            extra={\"mode\": \"prisma_busca_externa\", \"precheck\": precheck},\n        )\n        write_json(out_dir / f\"{prefix}.run_report.json\", report)\n        write_json(out_dir / f\"{prefix}.rc10_report.json\", outputs)\n        write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)\n        print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} — busca PRISMA concluída; aguarda triagem humana\")\n        return 0"
+      },
+      {
+        "body_index": 42,
+        "kind": "if",
+        "line": 1226,
+        "end_line": 1279,
+        "condition": "args.somente_mapa_mental",
+        "args_attributes": [
+          "forcar_regeneracao_mapa_mental",
+          "reusar_mapa_mental",
+          "somente_mapa_mental"
+        ],
+        "calls": [
+          "(mm_diag or {}).get",
+          "FileNotFoundError",
+          "Path",
+          "RuntimeError",
+          "attach_existing_mindmap_if_available",
+          "bool",
+          "cfg.get",
+          "delete_existing_mindmap_outputs",
+          "dict",
+          "document.model_dump",
+          "document_json_path.exists",
+          "generate_and_attach_mindmap",
+          "json.dumps",
+          "load_existing_document_json",
+          "make_client",
+          "make_run_report",
+          "print",
+          "print_outputs",
+          "should_generate_mindmap",
+          "stage",
+          "str",
+          "warnings.append",
+          "write_json",
+          "write_outputs_manifest"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "return 0",
+          "raise raise FileNotFoundError(f\"document.json não encontrado para --somente-mapa-mental: {document_json_path}\")",
+          "raise raise RuntimeError(\"[mapa_mental] não está ativo no TOML. Ative gerar=true/ativo=true para usar --somente-mapa-mental.\")"
+        ],
+        "source": "if args.somente_mapa_mental:\n        if not document_json_path.exists():\n            raise FileNotFoundError(f\"document.json não encontrado para --somente-mapa-mental: {document_json_path}\")\n        if not should_generate_mindmap(cfg):\n            raise RuntimeError(\"[mapa_mental] não está ativo no TOML. Ative gerar=true/ativo=true para usar --somente-mapa-mental.\")\n        stage(\"Carregando document.json existente\")\n        document = load_existing_document_json(document_json_path)\n        removed_mindmap_files: list[str] = []\n        if args.forcar_regeneracao_mapa_mental:\n            stage(\"Removendo mapa mental existente\")\n            removed_mindmap_files = delete_existing_mindmap_outputs(cfg, out_dir)\n        mm_diag = None\n        if args.reusar_mapa_mental:\n            stage(\"Tentando reutilizar mapa mental existente\")\n            mm_diag = attach_existing_mindmap_if_available(document, cfg, out_dir)\n            if not mm_diag:\n                warnings.append(\"Mapa mental existente não encontrado; gerando novo mapa mental.\")\n        if not mm_diag:\n            stage(\"Inicializando cliente OpenAI\")\n            client, model = make_client(model)\n            stage(\"Gerando/renderizando apenas o mapa mental\")\n            mm_diag = generate_and_attach_mindmap(client, model, cfg, document, out_dir)\n        if removed_mindmap_files:\n            mm_diag = dict(mm_diag or {})\n            mm_diag[\"removed_before_regeneration\"] = removed_mindmap_files\n        document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n        stage(\"Salvando document.json atualizado\")\n        write_json(document_json_path, document.model_dump())\n        outputs = {\n            \"output_dir\": str(out_dir),\n            \"document_json\": str(document_json_path),\n            \"mindmap_puml\": (mm_diag or {}).get(\"puml_path\") if mm_diag else None,\n            \"mindmap_image\": (mm_diag or {}).get(\"image_path\") if mm_diag else None,\n            \"mindmap_reused\": bool((mm_diag or {}).get(\"reused\")),\n            \"mindmap_removed\": removed_mindmap_files,\n        }\n        report = make_run_report(\n            cfg=cfg,\n            config_path=Path(str(cfg.get(\"__config_path__\"))),\n            out_dir=out_dir,\n            prefix=prefix,\n            model=model,\n            outputs=outputs,\n            warnings=warnings,\n            extra={\"mode\": \"somente_mapa_mental\"},\n        )\n        write_json(out_dir / f\"{prefix}.run_report.json\", report)\n        write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)\n        print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} — mapa mental renderizado\")\n        if warnings:\n            print(\"Avisos:\")\n            for w in warnings:\n                print(f\"- {w}\")\n        return 0"
+      },
+      {
+        "body_index": 47,
+        "kind": "if",
+        "line": 1286,
+        "end_line": 1439,
+        "condition": "args.somente_renderizar",
+        "args_attributes": [
+          "forcar_regeneracao_mapa_mental",
+          "reusar_mapa_mental",
+          "somente_renderizar"
+        ],
+        "calls": [
+          "', '.join",
+          "(cfg.get('documentos_locais', {}) if isinstance(cfg.get('documentos_locais'), dict) else {}).get",
+          "FileNotFoundError",
+          "Path",
+          "RuntimeError",
+          "attach_existing_mindmap_if_available",
+          "bool",
+          "build_bibliography",
+          "build_document_model",
+          "cfg.get",
+          "collect_orientation_docs",
+          "copy_documents_to_fulltext_cache",
+          "delete_existing_mindmap_outputs",
+          "discover_local_documents",
+          "document.model_dump",
+          "document_json_path.exists",
+          "generate_and_attach_mindmap",
+          "generate_paper_abstract_bundle",
+          "isinstance",
+          "json.dumps",
+          "load_existing_document_json",
+          "make_client",
+          "make_run_report",
+          "paper_abstract_path.exists",
+          "paper_abstracts_enabled",
+          "pipeline_cfg.get",
+          "print_outputs",
+          "prisma_enabled",
+          "raise_if_errors",
+          "read_paper_abstract_bundle",
+          "resolve_bib_for_existing_document",
+          "resumo_cfg_for_stage.get",
+          "run_prisma_report_outputs",
+          "sanitize_document_model_raw_bibkeys",
+          "sanitize_document_model_technical_leaks",
+          "should_generate_mindmap",
+          "stage",
+          "str",
+          "validate_document_model",
+          "warnings.append",
+          "write_json",
+          "write_outputs_manifest",
+          "write_paper_abstract_bundle",
+          "write_prompt_lock",
+          "write_prompt_lock_markdown"
+        ],
+        "terminal_flow": true,
+        "returns_or_raises": [
+          "raise raise FileNotFoundError(f\"document.json não encontrado para --somente-renderizar: {document_json_path}\")",
+          "return 0",
+          "raise raise RuntimeError(\"[mapa_mental] não está ativo no TOML. Ative gerar=true/ativo=true para usar --forcar-regeneracao-mapa-mental.\")",
+          "raise raise RuntimeError(\"Falha ao gerar o resumo acadêmico do paper: \" + str(exc)) from exc"
+        ],
+        "source": "if args.somente_renderizar:\n        if not document_json_path.exists():\n            raise FileNotFoundError(f\"document.json não encontrado para --somente-renderizar: {document_json_path}\")\n        stage(\"Carregando document.json existente\")\n        document = load_existing_document_json(document_json_path)\n        stage(\"Resolvendo bibliografia para renderização\")\n        bib_path, bib_keys = resolve_bib_for_existing_document(document, document_json_path, out_dir, prefix)\n        stage(\"Saneando document_model existente\")\n        document, leak_repairs = sanitize_document_model_technical_leaks(document)\n        if leak_repairs:\n            warnings.append(\"Menções técnicas removidas/reescritas no document_model existente: \" + \", \".join(leak_repairs[:20]))\n        document, raw_key_repairs = sanitize_document_model_raw_bibkeys(document, bib_keys)\n        if raw_key_repairs:\n            warnings.append(\"Chaves BibTeX cruas convertidas em citações LaTeX no document_model existente: \" + \", \".join(raw_key_repairs[:20]))\n        if paper_abstracts_enabled(cfg):\n            if paper_abstract_path.exists():\n                paper_abstract_bundle = read_paper_abstract_bundle(paper_abstract_path)\n            else:\n                warnings.append(\n                    \"RESUMO: arquivo de resumos não encontrado no modo --somente-renderizar; \"\n                    \"o ORG/DOCX será recompilado sem inserir resumo. Execute uma geração completa para criá-lo.\"\n                )\n        if args.forcar_regeneracao_mapa_mental:\n            if not should_generate_mindmap(cfg):\n                raise RuntimeError(\"[mapa_mental] não está ativo no TOML. Ative gerar=true/ativo=true para usar --forcar-regeneracao-mapa-mental.\")\n            stage(\"Removendo mapa mental existente\")\n            removed_mindmap_files = delete_existing_mindmap_outputs(cfg, out_dir)\n            if removed_mindmap_files:\n                warnings.append(\"Arquivos de mapa mental removidos antes da regeneração: \" + \", \".join(removed_mindmap_files[:10]))\n            stage(\"Inicializando cliente OpenAI para regenerar mapa mental\")\n            client, model = make_client(model)\n            stage(\"Regenerando mapa mental antes da renderização\")\n            mm_diag = generate_and_attach_mindmap(client, model, cfg, document, out_dir)\n            document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n            stage(\"Salvando document.json atualizado com novo mapa mental\")\n            write_json(document_json_path, document.model_dump())\n        elif args.reusar_mapa_mental:\n            stage(\"Tentando reutilizar mapa mental existente\")\n            mm_diag = attach_existing_mindmap_if_available(document, cfg, out_dir)\n            if mm_diag:\n                document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n                write_json(document_json_path, document.model_dump())\n            else:\n                warnings.append(\"--reusar-mapa-mental informado, mas nenhum mapa existente foi encontrado; renderização seguirá com figuras já registradas no document.json.\")\n    else:\n        pipeline_cfg = cfg.get(\"pipeline\", {}) if isinstance(cfg.get(\"pipeline\"), dict) else {}\n        executar_documento = bool(pipeline_cfg.get(\"executar_documento\", True))\n        stage(\"Inicializando cliente OpenAI\")\n        client, model = make_client(model)\n        stage(\"Descobrindo e extraindo documentos locais\")\n        docs, source_info = discover_local_documents(cfg, work_dir)\n        clean_cache = bool((cfg.get(\"documentos_locais\", {}) if isinstance(cfg.get(\"documentos_locais\"), dict) else {}).get(\"limpar_cache_anterior\", True))\n        stage(\"Copiando documentos para fulltext_cache\")\n        copy_documents_to_fulltext_cache(docs, cache_dir, clean=clean_cache)\n        stage(\"Carregando orientações do projeto\")\n        orientations = collect_orientation_docs(cfg, work_dir)\n        stage(\"Gerando e validando bibliografia\")\n        bib_result = build_bibliography(cfg, docs, out_dir, prefix, client, model)\n        bib_path = bib_result.bib_path\n        bib_keys = bib_result.keys\n        stage(\"Verificando geração de relatório PRISMA\")\n        prisma_outputs = run_prisma_report_outputs(cfg, docs, orientations, bib_result, out_dir, prefix) if prisma_enabled(cfg) else None\n\n        if not executar_documento:\n            outputs = {\n                \"output_dir\": str(out_dir),\n        \"work_dir\": str(work_dir),\n        \"cache_dir\": str(cache_dir),\n                \"work_dir\": str(work_dir),\n                \"cache_dir\": str(cache_dir),\n                \"document_json\": None,\n                \"org\": None,\n                \"bib\": str(bib_path),\n                \"pdf\": None,\n                \"docx\": None,\n                \"relatorio_pesquisa\": prisma_outputs,\n            }\n            prompt_lock_path = out_dir / f\"{prefix}.prompt_lock.json\"\n            prompt_lock_md = out_dir / f\"{prefix}.prompt_lock.md\"\n            stage(\"Registrando prompt_lock\")\n            prompt_lock = write_prompt_lock(cfg, prompt_lock_path)\n            write_prompt_lock_markdown(prompt_lock, prompt_lock_md)\n            outputs[\"prompt_lock\"] = str(prompt_lock_path)\n            report = make_run_report(\n                cfg=cfg,\n                config_path=Path(str(cfg.get(\"__config_path__\"))),\n                out_dir=out_dir,\n                prefix=prefix,\n                model=model,\n                outputs=outputs,\n                warnings=warnings,\n                extra={\"mode\": \"research_only\", \"source_info\": source_info, \"work_dir\": str(work_dir), \"cache_dir\": str(cache_dir)},\n            )\n            write_json(out_dir / f\"{prefix}.run_report.json\", report)\n            write_json(out_dir / f\"{prefix}.rc10_report.json\", outputs)  # compatibilidade\n            write_outputs_manifest(out_dir / f\"{prefix}.outputs.txt\", outputs)\n            print_outputs(outputs, title=f\"academic_pipeline {PIPELINE_VERSION} concluído sem documento acadêmico\")\n            return 0\n\n        resumo_cfg_for_stage = cfg.get(\"resumo_artigos\", {}) if isinstance(cfg.get(\"resumo_artigos\"), dict) else {}\n        if resumo_cfg_for_stage.get(\"ativo\") and bool(resumo_cfg_for_stage.get(\"geracao_em_etapas\", True)):\n            stage(\"Gerando document.json canônico com IA em etapas\")\n        else:\n            stage(\"Gerando document.json canônico com IA\")\n        document = build_document_model(\n            client,\n            model,\n            cfg,\n            docs,\n            orientations,\n            bib_keys,\n            bib_path,\n            progress=stage,\n            checkpoint_dir=out_dir,\n            prefix=prefix,\n        )\n        if not document.bibliography.entries_used:\n            document.bibliography.entries_used = bib_keys\n        if not document.bibliography.bib_path:\n            document.bibliography.bib_path = bib_path.name\n        stage(\"Saneando linguagem técnica do document_model\")\n        document, leak_repairs = sanitize_document_model_technical_leaks(document)\n        if leak_repairs:\n            warnings.append(\"Menções técnicas removidas/reescritas no document_model: \" + \", \".join(leak_repairs[:20]))\n        document, raw_key_repairs = sanitize_document_model_raw_bibkeys(document, bib_keys)\n        if raw_key_repairs:\n            warnings.append(\"Chaves BibTeX cruas convertidas em citações LaTeX no document_model: \" + \", \".join(raw_key_repairs[:20]))\n        stage(\"Validando document_model\")\n        raise_if_errors(validate_document_model(document, bib_keys), \"Validação do document_model falhou\")\n        if paper_abstracts_enabled(cfg):\n            stage(\"Gerando resumo e palavras-chave do paper\")\n            try:\n                paper_abstract_bundle = generate_paper_abstract_bundle(client, model, document, cfg)\n                write_paper_abstract_bundle(paper_abstract_path, paper_abstract_bundle)\n            except PaperAbstractError as exc:\n                raise RuntimeError(\"Falha ao gerar o resumo acadêmico do paper: \" + str(exc)) from exc\n        stage(\"Gerando/anexando mapa mental, se configurado\")\n        mm_diag = None\n        if args.forcar_regeneracao_mapa_mental:\n            removed_mindmap_files = delete_existing_mindmap_outputs(cfg, out_dir)\n            if removed_mindmap_files:\n                warnings.append(\"Arquivos de mapa mental removidos antes da regeneração: \" + \", \".join(removed_mindmap_files[:10]))\n        if args.reusar_mapa_mental:\n            mm_diag = attach_existing_mindmap_if_available(document, cfg, out_dir)\n            if not mm_diag:\n                warnings.append(\"Mapa mental existente não encontrado; gerando novo mapa mental.\")\n        if not mm_diag:\n            mm_diag = generate_and_attach_mindmap(client, model, cfg, document, out_dir)\n        document.diagnostics.mindmap_json = json.dumps(mm_diag, ensure_ascii=False)\n        document.diagnostics.source_info_json = json.dumps(source_info or {}, ensure_ascii=False)\n        if prisma_outputs:\n            document.diagnostics.relatorio_pesquisa_json = json.dumps(prisma_outputs, ensure_ascii=False)\n        stage(\"Salvando document.json\")\n        write_json(document_json_path, document.model_dump())"
+      },
+      {
+        "body_index": 60,
+        "kind": "if",
+        "line": 1473,
+        "end_line": 1499,
+        "condition": "args.somente_renderizar",
+        "args_attributes": [
+          "somente_renderizar"
+        ],
+        "calls": [
+          "render_additional_language_versions",
+          "requested_translation_languages",
+          "warnings.append",
+          "warnings.extend"
+        ],
+        "terminal_flow": false,
+        "returns_or_raises": [],
+        "source": "if args.somente_renderizar:\n        if requested_translation_languages(cfg):\n            warnings.append(\n                \"Versões adicionais por IA não foram atualizadas no modo --somente-renderizar. \"\n                \"Execute a geração completa para traduzir o document.json canônico.\"\n            )\n    elif requested_translation_languages(cfg):\n        try:\n            translated_outputs, translation_warnings = render_additional_language_versions(\n                client=client,\n                model=model,\n                cfg=cfg,\n                document=document,\n                bib_path=bib_path,\n                bib_keys=bib_keys,\n                out_dir=out_dir,\n                prefix=prefix,\n                doc_cfg=doc_cfg,\n                latex_cfg=latex_cfg,\n                config_dir=config_dir,\n                abstract_bundle=paper_abstract_bundle or None,\n            )\n            warnings.extend(translation_warnings)\n        except TranslationError as exc:\n            # Traduções são saídas opcionais: uma falha nelas não invalida o\n            # paper principal que já foi gerado e validado.\n            warnings.append(f\"TRADUÇÃO: {exc}\")"
+      },
+      {
+        "body_index": 79,
+        "kind": "assignment",
+        "line": 1544,
+        "end_line": 1559,
+        "condition": "",
+        "args_attributes": [
+          "somente_renderizar"
+        ],
+        "calls": [
+          "Path",
+          "cfg.get",
+          "make_run_report",
+          "str"
+        ],
+        "terminal_flow": false,
+        "returns_or_raises": [],
+        "source": "report = make_run_report(\n        cfg=cfg,\n        config_path=Path(str(cfg.get(\"__config_path__\"))),\n        out_dir=out_dir,\n        prefix=prefix,\n        model=model,\n        outputs=outputs,\n        warnings=warnings,\n        extra={\n            \"mode\": \"somente_renderizar\" if args.somente_renderizar else \"full\",\n            \"work_dir\": str(work_dir),\n            \"cache_dir\": str(cache_dir),\n            \"precheck\": precheck,\n            \"docx_validation\": docx_validation,\n        },\n    )"
+      }
+    ]
+  }
+}
