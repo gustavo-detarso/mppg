@@ -1,0 +1,26 @@
+{
+  "phase": "AP-003B",
+  "branch": "ap-refactor/03-orchestrator-decomposition",
+  "source": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+  "source_sha256_before": "e0a1b4b80f3cae45c99316223430d2bb6360167ef0b220974cdb0e9b735b87cc",
+  "source_sha256_after": "51af32106184df8fd5810222a8ccdb5cc0818aa3e167ff8bd2e1c96199ef1a0f",
+  "parser_block": {
+    "start_line": 900,
+    "end_line": 1016
+  },
+  "parser_operations": 64,
+  "add_argument_calls": 62,
+  "created": [
+    "academic_pipeline/cli_parser.py",
+    "tests/characterization/test_ap003b_parser_contract.py",
+    "docs/refactor/academic-pipeline/AP-003/AP-003B_PARSER_EXTRACTION.md",
+    "docs/refactor/academic-pipeline/AP-003/ap003b_manifest.json"
+  ],
+  "modified": [
+    "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+  ],
+  "preserved": {
+    "top_level_main_definitions": 2,
+    "historical_wrapper_alias": "_original_main_before_prisma_artigo_generico_wrapper"
+  }
+}
