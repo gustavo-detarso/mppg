@@ -226,7 +226,7 @@ def test_pipeline_has_no_top_level_bare_local_imports() -> None:
     assert failures == {}
 
 
-def test_rc10_preserves_two_main_definitions_and_wrapper_marker() -> None:
+def test_rc10_exposes_one_main_core_and_no_wrapper_marker() -> None:
     path = PIPELINE_DIR / "academic_pipeline_rc10.py"
     source = path.read_text(encoding="utf-8")
     tree = ast.parse(source, filename=str(path))
@@ -237,9 +237,28 @@ def test_rc10_preserves_two_main_definitions_and_wrapper_marker() -> None:
         if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
         and node.name == "main"
     ]
+    cores = [
+        node
+        for node in tree.body
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+        and node.name == "_ap003f_pipeline_core"
+    ]
+    aliases = [
+        node
+        for node in tree.body
+        if isinstance(node, ast.Assign)
+        and any(
+            isinstance(target, ast.Name)
+            and target.id
+            == "_original_main_before_prisma_artigo_generico_wrapper"
+            for target in node.targets
+        )
+    ]
 
-    assert len(mains) == 2
-    assert "_original_main_before_prisma_artigo_generico_wrapper" in source
+    assert len(mains) == 1
+    assert len(cores) == 1
+    assert aliases == []
+
 
 
 def test_rc10_official_package_and_legacy_commands_match() -> None:

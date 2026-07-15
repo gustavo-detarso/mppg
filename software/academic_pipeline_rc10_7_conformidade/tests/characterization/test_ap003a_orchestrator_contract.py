@@ -83,13 +83,20 @@ def _capture(command: list[str]) -> str:
     return _normalize(captured)
 
 
-def test_ap003a_phase_gate_keeps_two_top_level_main_definitions() -> None:
+def test_ap003a_phase_gate_is_released_by_ap003f() -> None:
     functions = _top_level_functions(_tree(ORCHESTRATOR))
-    mains = [node for node in functions if node.name == "main"]
-    assert len(mains) == 2, (
-        "Trava temporária da AP-003A: os dois main() devem permanecer até a AP-003F; "
-        f"foram encontrados {len(mains)}."
-    )
+    mains = [
+        node for node in functions
+        if node.name == "main"
+    ]
+    cores = [
+        node for node in functions
+        if node.name == "_ap003f_pipeline_core"
+    ]
+
+    assert len(mains) == 1
+    assert len(cores) == 1
+
 
 
 def test_ap003a_historical_wrapper_state_is_documented() -> None:

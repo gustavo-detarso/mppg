@@ -699,11 +699,11 @@ def _ap003e_body_main_2(*args, **kwargs):
         old_argv = sys.argv[:]
         sys.argv = [sys.argv[0]] + _prisma_artigo_generico_strip(original_argv)
         try:
-            rc = _original_main_before_prisma_artigo_generico_wrapper(*args, **kwargs)
+            rc = _ap003f_pipeline_core(*args, **kwargs)
         finally:
             sys.argv = old_argv
     else:
-        rc = _original_main_before_prisma_artigo_generico_wrapper(*args, **kwargs)
+        rc = _ap003f_pipeline_core(*args, **kwargs)
     if has_import:
         _prisma_artigo_generico_run_export(original_argv, silent=True)
     if wants_freeze or wants_toml or wants_final:
