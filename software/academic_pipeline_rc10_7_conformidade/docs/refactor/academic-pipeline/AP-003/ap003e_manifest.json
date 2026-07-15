@@ -1,0 +1,434 @@
+{
+  "phase": "AP-003E",
+  "branch": "ap-refactor/03-orchestrator-decomposition",
+  "head_before_application": "698d37d54e164ea3c4163b747a6659bc1082f635",
+  "source": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+  "source_sha256_before": "da4c6c9b817d6607873e0412b5829729e36c3d70a1745b4b7d39ea4e31d31367",
+  "source_sha256_after": "431882d57a5a6ed334985b51a04db782ceda8de5cff1aa0e3bf856c4aa2c5b3a",
+  "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+  "dispatch_sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3",
+  "document_sha256": "3f2a3c95e08ccc3c19e3019a225c36fcf532cf4468f75b13c56b7c43bbc88a8e",
+  "prisma_module": "academic_pipeline/prisma_generic_orchestration.py",
+  "helper_count": 30,
+  "stage_count": 8,
+  "helpers": [
+    {
+      "occurrence": "stage#1",
+      "name": "stage",
+      "implementation": "stage_impl_001",
+      "alias": "_ap003e_impl_stage_1",
+      "line": 272,
+      "end_line": 274
+    },
+    {
+      "occurrence": "_json_or_none#1",
+      "name": "_json_or_none",
+      "implementation": "_json_or_none_impl_001",
+      "alias": "_ap003e_impl__json_or_none_1",
+      "line": 277,
+      "end_line": 283
+    },
+    {
+      "occurrence": "make_client#1",
+      "name": "make_client",
+      "implementation": "make_client_impl_001",
+      "alias": "_ap003e_impl_make_client_1",
+      "line": 295,
+      "end_line": 300
+    },
+    {
+      "occurrence": "_section#1",
+      "name": "_section",
+      "implementation": "_section_impl_001",
+      "alias": "_ap003e_impl__section_1",
+      "line": 303,
+      "end_line": 305
+    },
+    {
+      "occurrence": "research_output_paths#1",
+      "name": "research_output_paths",
+      "implementation": "research_output_paths_impl_001",
+      "alias": "_ap003e_impl_research_output_paths_1",
+      "line": 314,
+      "end_line": 331
+    },
+    {
+      "occurrence": "render_external_prisma_outputs#1",
+      "name": "render_external_prisma_outputs",
+      "implementation": "render_external_prisma_outputs_impl_001",
+      "alias": "_ap003e_impl_render_external_prisma_outputs_1",
+      "line": 392,
+      "end_line": 449
+    },
+    {
+      "occurrence": "_prisma_curadoria_default_config#1",
+      "name": "_prisma_curadoria_default_config",
+      "implementation": "_prisma_curadoria_default_config_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_default_config_1",
+      "line": 465,
+      "end_line": 466
+    },
+    {
+      "occurrence": "_prisma_curadoria_default_out_dir#1",
+      "name": "_prisma_curadoria_default_out_dir",
+      "implementation": "_prisma_curadoria_default_out_dir_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_default_out_dir_1",
+      "line": 469,
+      "end_line": 470
+    },
+    {
+      "occurrence": "_prisma_curadoria_default_prompt#1",
+      "name": "_prisma_curadoria_default_prompt",
+      "implementation": "_prisma_curadoria_default_prompt_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_default_prompt_1",
+      "line": 473,
+      "end_line": 474
+    },
+    {
+      "occurrence": "_prisma_curadoria_script_path#1",
+      "name": "_prisma_curadoria_script_path",
+      "implementation": "_prisma_curadoria_script_path_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_script_path_1",
+      "line": 477,
+      "end_line": 478
+    },
+    {
+      "occurrence": "_prisma_curadoria_arg#1",
+      "name": "_prisma_curadoria_arg",
+      "implementation": "_prisma_curadoria_arg_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_arg_1",
+      "line": 481,
+      "end_line": 482
+    },
+    {
+      "occurrence": "_prisma_curadoria_config_from_args#1",
+      "name": "_prisma_curadoria_config_from_args",
+      "implementation": "_prisma_curadoria_config_from_args_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_config_from_args_1",
+      "line": 485,
+      "end_line": 490
+    },
+    {
+      "occurrence": "_prisma_curadoria_out_from_args#1",
+      "name": "_prisma_curadoria_out_from_args",
+      "implementation": "_prisma_curadoria_out_from_args_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_out_from_args_1",
+      "line": 493,
+      "end_line": 494
+    },
+    {
+      "occurrence": "_prisma_curadoria_prompt_from_args#1",
+      "name": "_prisma_curadoria_prompt_from_args",
+      "implementation": "_prisma_curadoria_prompt_from_args_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_prompt_from_args_1",
+      "line": 497,
+      "end_line": 498
+    },
+    {
+      "occurrence": "_prisma_curadoria_input_from_args#1",
+      "name": "_prisma_curadoria_input_from_args",
+      "implementation": "_prisma_curadoria_input_from_args_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_input_from_args_1",
+      "line": 501,
+      "end_line": 508
+    },
+    {
+      "occurrence": "_prisma_curadoria_run_command#1",
+      "name": "_prisma_curadoria_run_command",
+      "implementation": "_prisma_curadoria_run_command_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_run_command_1",
+      "line": 511,
+      "end_line": 522
+    },
+    {
+      "occurrence": "_prisma_curadoria_build_cmd#1",
+      "name": "_prisma_curadoria_build_cmd",
+      "implementation": "_prisma_curadoria_build_cmd_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_build_cmd_1",
+      "line": 525,
+      "end_line": 571
+    },
+    {
+      "occurrence": "_prisma_curadoria_run_ia#1",
+      "name": "_prisma_curadoria_run_ia",
+      "implementation": "_prisma_curadoria_run_ia_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_run_ia_1",
+      "line": 574,
+      "end_line": 576
+    },
+    {
+      "occurrence": "_prisma_curadoria_reexportar_xlsx#1",
+      "name": "_prisma_curadoria_reexportar_xlsx",
+      "implementation": "_prisma_curadoria_reexportar_xlsx_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_reexportar_xlsx_1",
+      "line": 579,
+      "end_line": 581
+    },
+    {
+      "occurrence": "_prisma_curadoria_pipeline_supports_flag#1",
+      "name": "_prisma_curadoria_pipeline_supports_flag",
+      "implementation": "_prisma_curadoria_pipeline_supports_flag_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_pipeline_supports_flag_1",
+      "line": 584,
+      "end_line": 598
+    },
+    {
+      "occurrence": "_prisma_curadoria_importar_no_pipeline#1",
+      "name": "_prisma_curadoria_importar_no_pipeline",
+      "implementation": "_prisma_curadoria_importar_no_pipeline_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_importar_no_pipeline_1",
+      "line": 601,
+      "end_line": 621
+    },
+    {
+      "occurrence": "_prisma_curadoria_fluxo_completo#1",
+      "name": "_prisma_curadoria_fluxo_completo",
+      "implementation": "_prisma_curadoria_fluxo_completo_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_fluxo_completo_1",
+      "line": 624,
+      "end_line": 631
+    },
+    {
+      "occurrence": "_prisma_curadoria_mostrar_caminhos#1",
+      "name": "_prisma_curadoria_mostrar_caminhos",
+      "implementation": "_prisma_curadoria_mostrar_caminhos_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_mostrar_caminhos_1",
+      "line": 634,
+      "end_line": 653
+    },
+    {
+      "occurrence": "_prisma_curadoria_menu#1",
+      "name": "_prisma_curadoria_menu",
+      "implementation": "_prisma_curadoria_menu_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_menu_1",
+      "line": 656,
+      "end_line": 692
+    },
+    {
+      "occurrence": "_prisma_curadoria_dispatch#1",
+      "name": "_prisma_curadoria_dispatch",
+      "implementation": "_prisma_curadoria_dispatch_impl_001",
+      "alias": "_ap003e_impl__prisma_curadoria_dispatch_1",
+      "line": 695,
+      "end_line": 707
+    },
+    {
+      "occurrence": "_prisma_artigo_generico_get_arg#1",
+      "name": "_prisma_artigo_generico_get_arg",
+      "implementation": "_prisma_artigo_generico_get_arg_impl_001",
+      "alias": "_ap003e_impl__prisma_artigo_generico_get_arg_1",
+      "line": 1490,
+      "end_line": 1496
+    },
+    {
+      "occurrence": "_prisma_artigo_generico_strip#1",
+      "name": "_prisma_artigo_generico_strip",
+      "implementation": "_prisma_artigo_generico_strip_impl_001",
+      "alias": "_ap003e_impl__prisma_artigo_generico_strip_1",
+      "line": 1498,
+      "end_line": 1511
+    },
+    {
+      "occurrence": "_prisma_artigo_generico_out_dir#1",
+      "name": "_prisma_artigo_generico_out_dir",
+      "implementation": "_prisma_artigo_generico_out_dir_impl_001",
+      "alias": "_ap003e_impl__prisma_artigo_generico_out_dir_1",
+      "line": 1513,
+      "end_line": 1521
+    },
+    {
+      "occurrence": "_prisma_artigo_generico_run_export#1",
+      "name": "_prisma_artigo_generico_run_export",
+      "implementation": "_prisma_artigo_generico_run_export_impl_001",
+      "alias": "_ap003e_impl__prisma_artigo_generico_run_export_1",
+      "line": 1523,
+      "end_line": 1542
+    },
+    {
+      "occurrence": "_prisma_artigo_generico_run_freeze#1",
+      "name": "_prisma_artigo_generico_run_freeze",
+      "implementation": "_prisma_artigo_generico_run_freeze_impl_001",
+      "alias": "_ap003e_impl__prisma_artigo_generico_run_freeze_1",
+      "line": 1544,
+      "end_line": 1567
+    }
+  ],
+  "stages": [
+    {
+      "name": "run_prisma_stage_001",
+      "start_body_index": 2,
+      "end_body_index": 2,
+      "line": 717,
+      "end_line": 724,
+      "runtime_names": [
+        "_prisma_curadoria_dispatch"
+      ],
+      "produced_names": []
+    },
+    {
+      "name": "run_prisma_stage_002",
+      "start_body_index": 78,
+      "end_body_index": 79,
+      "line": 975,
+      "end_line": 976,
+      "runtime_names": [
+        "cfg",
+        "external_search_enabled",
+        "is_external_prisma_run",
+        "output_paths",
+        "research_output_paths"
+      ],
+      "produced_names": [
+        "is_external_prisma_run",
+        "out_dir",
+        "prefix"
+      ]
+    },
+    {
+      "name": "run_prisma_stage_003",
+      "start_body_index": 90,
+      "end_body_index": 90,
+      "line": 997,
+      "end_line": 997,
+      "runtime_names": [
+        "stage"
+      ],
+      "produced_names": []
+    },
+    {
+      "name": "run_prisma_stage_004",
+      "start_body_index": 95,
+      "end_body_index": 95,
+      "line": 1006,
+      "end_line": 1068,
+      "runtime_names": [
+        "PIPELINE_VERSION",
+        "Path",
+        "artifacts",
+        "cache_dir",
+        "cfg",
+        "client",
+        "is_external_prisma_run",
+        "make_client",
+        "make_run_report",
+        "model",
+        "org_path",
+        "out_dir",
+        "outputs",
+        "pdf_path",
+        "precheck",
+        "prefix",
+        "print_outputs",
+        "prisma_outputs",
+        "prompt_lock",
+        "prompt_lock_md",
+        "prompt_lock_path",
+        "render_external_prisma_outputs",
+        "report",
+        "report_json_path",
+        "run_external_prisma_search",
+        "search_cfg",
+        "stage",
+        "warnings",
+        "work_dir",
+        "write_json",
+        "write_outputs_manifest",
+        "write_prompt_lock",
+        "write_prompt_lock_markdown"
+      ],
+      "produced_names": [
+        "artifacts",
+        "client",
+        "model",
+        "org_path",
+        "outputs",
+        "pdf_path",
+        "prisma_outputs",
+        "prompt_lock",
+        "prompt_lock_md",
+        "prompt_lock_path",
+        "report",
+        "report_json_path",
+        "search_cfg"
+      ]
+    },
+    {
+      "name": "run_prisma_stage_005",
+      "start_body_index": 107,
+      "end_body_index": 107,
+      "line": 1097,
+      "end_line": 1097,
+      "runtime_names": [],
+      "produced_names": [
+        "prisma_outputs"
+      ]
+    },
+    {
+      "name": "run_prisma_stage_006",
+      "start_body_index": 145,
+      "end_body_index": 145,
+      "line": 1342,
+      "end_line": 1352,
+      "runtime_names": [
+        "_json_or_none",
+        "bib_path",
+        "document",
+        "document_json_path",
+        "docx_path",
+        "org_path",
+        "out_dir",
+        "paper_abstract_bundle",
+        "paper_abstract_path",
+        "pdf_path",
+        "prisma_outputs",
+        "translated_outputs"
+      ],
+      "produced_names": [
+        "outputs"
+      ]
+    },
+    {
+      "name": "run_prisma_stage_007",
+      "start_body_index": 151,
+      "end_body_index": 151,
+      "line": 1362,
+      "end_line": 1362,
+      "runtime_names": [
+        "stage"
+      ],
+      "produced_names": []
+    },
+    {
+      "name": "run_prisma_stage_008",
+      "start_body_index": 162,
+      "end_body_index": 162,
+      "line": 1391,
+      "end_line": 1391,
+      "runtime_names": [
+        "stage"
+      ],
+      "produced_names": []
+    }
+  ],
+  "entrypoint": {
+    "name": "run_prisma_generic_entrypoint",
+    "line": 1571,
+    "end_line": 1593
+  },
+  "created": [
+    "academic_pipeline/prisma_generic_orchestration.py",
+    "docs/refactor/academic-pipeline/AP-003/AP-003E_PRISMA_GENERIC_EXTRACTION.md",
+    "docs/refactor/academic-pipeline/AP-003/ap003e_manifest.json",
+    "tests/characterization/test_ap003e_prisma_generic_contract.py"
+  ],
+  "modified": [
+    "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+  ],
+  "preserved": {
+    "top_level_main_count": 2,
+    "historical_wrapper": "_original_main_before_prisma_artigo_generico_wrapper",
+    "parser_sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+    "dispatch_sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3",
+    "document_sha256": "3f2a3c95e08ccc3c19e3019a225c36fcf532cf4468f75b13c56b7c43bbc88a8e"
+  }
+}
