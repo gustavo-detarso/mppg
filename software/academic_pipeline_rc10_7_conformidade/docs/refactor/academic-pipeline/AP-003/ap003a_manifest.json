@@ -1,0 +1,17 @@
+{
+  "backup_directory": "/home/gustavodetarso/.cache/academic-pipeline-refactor/backups/AP-003A/20260715T165714Z",
+  "base_ref": "origin/refactor/academic-pipeline",
+  "branch": "ap-refactor/03-orchestrator-decomposition",
+  "generated_at_utc": "2026-07-15T16:57:16.028800+00:00",
+  "head_before_commit": "56b33739518026f379e076bdfdf06e781268c358",
+  "phase": "AP-003A",
+  "productive_code_changed": false,
+  "targets": {
+    "docs/refactor/academic-pipeline/AP-003/AP-003A_ORCHESTRATOR_MAP.md": "generated",
+    "docs/refactor/academic-pipeline/AP-003/ap003a_orchestrator_inventory.json": "generated",
+    "tests/characterization/snapshots/ap003a/direct_script_help.txt": "generated",
+    "tests/characterization/snapshots/ap003a/package_module_help.txt": "generated",
+    "tests/characterization/test_ap003a_orchestrator_contract.py": "written",
+    "tools/refactor/ap003a_inventory_orchestrator.py": "written"
+  }
+}
