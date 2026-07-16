@@ -1,0 +1,345 @@
+{
+  "phase": "AP-004C",
+  "mode": "internal-symbol-application-v1.4",
+  "application_schema_version": 1,
+  "application_revision": "1.4",
+  "generated_at_utc": "2026-07-16T16:34:56+00:00",
+  "baseline": {
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "head": "aa9829f09a5c1b9e69c634637c311b03f360b07e",
+    "remote_head": "aa9829f09a5c1b9e69c634637c311b03f360b07e",
+    "subject": "refactor(academic-pipeline): consolidar módulos e arquivos da AP-004B",
+    "passed": 463,
+    "xfailed": 3
+  },
+  "approval": {
+    "inventory_mode": "internal-symbol-inventory-v1.3-read-only",
+    "inventory_revision": "1.3",
+    "approved": true,
+    "approved_scope": "7 símbolos na onda 1 e 13 aliases na onda 2"
+  },
+  "inventory_baseline": {
+    "source_manifest": [
+      {
+        "path": "academic_pipeline/document_orchestration.py",
+        "sha256": "3f2a3c95e08ccc3c19e3019a225c36fcf532cf4468f75b13c56b7c43bbc88a8e",
+        "size_bytes": 28560,
+        "ast_sha256": "6acb2b6e58cf3fc110054db1a87dffb2632799223869222b54330831ca31751b"
+      },
+      {
+        "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+        "sha256": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+        "size_bytes": 57269,
+        "ast_sha256": "5104b0e7cb9340076f8eb41cd20d9e1eb01ac784feb24fb233fe085e7b7d12b5"
+      },
+      {
+        "path": "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+        "sha256": "74f3241139ad3f4bee850e7cd30a54607287860fcecbfb1521231ef2df7899b4",
+        "size_bytes": 231463,
+        "ast_sha256": "749334ab2acb5f7243f3753039d5643d73f350fdead51594066a646c43249f67"
+      },
+      {
+        "path": "app_bundle/scripts/pipeline/article_workflow/state.py",
+        "sha256": "f681a4157b3fa2b7a1cca07dd7b49de015e559cb38a422e8e4aab6ba7a71a6cd",
+        "size_bytes": 6634,
+        "ast_sha256": "04cf4baebecc7d2d38d730a7c5fbc5992d31f7d61810f1c277b36825743534e6"
+      },
+      {
+        "path": "app_bundle/scripts/pipeline/render_docx_canonico.py",
+        "sha256": "443bb2f31aab6a9cbe14be6852b12afe9cdb02e46e71a3d9f2928714c77c7ef3",
+        "size_bytes": 52566,
+        "ast_sha256": "e80328cb7c9e471f01f0cd292d4ec9dac177f03d6114915e8420d6029663507d"
+      },
+      {
+        "path": "docs/refactor/academic-pipeline/AP-003/ap003g_manifest.json",
+        "sha256": "39152d839ab1b620c10c50f3d85ffb64806c0e021fe22adc14050cce2e9bff82",
+        "size_bytes": 4519
+      },
+      {
+        "path": "docs/refactor/academic-pipeline/AP-004/ap004a_naming_inventory.json",
+        "sha256": "ce4daa760c5964c65527e3c73e581df8086e86a9efd28ad9b1ed648e508dc1fa",
+        "size_bytes": 3088189
+      },
+      {
+        "path": "docs/refactor/academic-pipeline/AP-004/ap004b_module_file_application.json",
+        "sha256": "e7b8d7735fc10b5ac305774f1d31d00bc295ec618ceb8951dc94b52a9b5a82e5",
+        "size_bytes": 17388
+      },
+      {
+        "path": "docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json",
+        "sha256": "6c0ae5889e95cf75e72b5097c206c37d742f0f0f71181cc83b939ad776748f1d",
+        "size_bytes": 751035
+      },
+      {
+        "path": "tests/characterization/test_ap003g_stabilization_contract.py",
+        "sha256": "fa3d38bf4484639ed364c2d3abd2ab9d5af0c4c88e49ed37b12ca542a83e632a",
+        "size_bytes": 6680,
+        "ast_sha256": "541fd055fc009069aa2c9c8186936fc8ab2b8ca7caa98dd6062da35013ff8f36"
+      },
+      {
+        "path": "tests/characterization/test_ap004b_module_file_application_contract.py",
+        "size": 15513,
+        "sha256": "350ef6c817e3d4f30b8556395df56c7515bcdb1495646dfdc14a865e1bf969b0",
+        "ast_sha256": "79a67f7b58656edf22ac25f6fc24fc9e9239a30fbb41566ec9fb2bb3d4c21e3b"
+      },
+      {
+        "path": "tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "size": 10822,
+        "sha256": "c8561e456da3d4d66cb9ad659fc82af0d5d5e9e5b728920abf2582110de49c22",
+        "ast_sha256": "dd352fff6bad4a697aef10e602b850ff69a4c1ca39c9f87f6791ea153e9db0a5"
+      }
+    ],
+    "preparatory_dirty_paths": [
+      "docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_STRATEGY.md",
+      "docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_inventory.json",
+      "tests/characterization/test_ap004b_module_file_application_contract.py",
+      "tests/characterization/test_ap004b_module_file_inventory_contract.py",
+      "tests/characterization/test_ap004c_internal_symbol_inventory_contract.py",
+      "tools/refactor/ap004c_inventory_internal_symbols.py"
+    ],
+    "validated_before_first_write": true
+  },
+  "waves": {
+    "wave_1": {
+      "name": "local-private-safe",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "mappings": [
+        {
+          "old": "_generate_interactive_before_wizard_documentos_locais_v4",
+          "new": "_generate_interactive_before_wizard_documentos_locais",
+          "replacement_count": 2
+        },
+        {
+          "old": "_generate_interactive_with_wizard_documentos_locais_v4",
+          "new": "_generate_interactive_with_wizard_documentos_locais",
+          "replacement_count": 2
+        },
+        {
+          "old": "_v5_is_local_document",
+          "new": "_is_local_document",
+          "replacement_count": 3
+        },
+        {
+          "old": "_v5_reference_default",
+          "new": "_reference_default",
+          "replacement_count": 2
+        },
+        {
+          "old": "_v5_normalise_prompt",
+          "new": "_normalise_prompt",
+          "replacement_count": 3
+        },
+        {
+          "old": "_v5_configure_reference_policy",
+          "new": "_configure_reference_policy",
+          "replacement_count": 2
+        },
+        {
+          "old": "_v5_ensure_reference_policy",
+          "new": "_ensure_reference_policy",
+          "replacement_count": 2
+        }
+      ],
+      "source_sha256_before": "74f3241139ad3f4bee850e7cd30a54607287860fcecbfb1521231ef2df7899b4",
+      "source_sha256_after": "ba97b28f4dbe84eca2c3703243079c5e9ebb61ada0d08516816a793888067ad3",
+      "ast_sha256_before": "749334ab2acb5f7243f3753039d5643d73f350fdead51594066a646c43249f67",
+      "ast_sha256_after_normalized": "749334ab2acb5f7243f3753039d5643d73f350fdead51594066a646c43249f67",
+      "checkpoint": "passed"
+    },
+    "wave_2": {
+      "name": "contract-bound-safe",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "mappings": [
+        {
+          "old": "_ap003d_impl_output_paths",
+          "new": "_impl_output_paths",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_apply_cli_path_overrides",
+          "new": "_impl_apply_cli_path_overrides",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_load_existing_document_json",
+          "new": "_impl_load_existing_document_json",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_resolve_bib_for_existing_document",
+          "new": "_impl_resolve_bib_for_existing_document",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl__resolve_latex_paths_for_recompile",
+          "new": "_impl_resolve_latex_paths_for_recompile",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_run_recompile",
+          "new": "_impl_run_recompile",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_render_additional_language_versions",
+          "new": "_impl_render_additional_language_versions",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl__refs_v6_disabled",
+          "new": "_impl_refs_disabled",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl__refs_v6_apply_runtime_policy",
+          "new": "_impl_refs_apply_runtime_policy",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_load_config",
+          "new": "_impl_load_config",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_build_bibliography",
+          "new": "_impl_build_bibliography",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl__refs_v6_clear_document_bibliography",
+          "new": "_impl_refs_clear_document_bibliography",
+          "replacement_count": 2
+        },
+        {
+          "old": "_ap003d_impl_render_org_latex",
+          "new": "_impl_render_org_latex",
+          "replacement_count": 2
+        }
+      ],
+      "source_sha256_before": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+      "source_sha256_after": "c871997af007fcc465e36299985e27ddaed0e56b2223869f9bc81774c6fdc5ec",
+      "ast_sha256_before": "5104b0e7cb9340076f8eb41cd20d9e1eb01ac784feb24fb233fe085e7b7d12b5",
+      "ast_sha256_after_normalized": "5104b0e7cb9340076f8eb41cd20d9e1eb01ac784feb24fb233fe085e7b7d12b5",
+      "checkpoint": "passed"
+    }
+  },
+  "protected_controls": [
+    {
+      "name": "_refs_v6_strip_org",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "ast_dump_sha256_before": "13d428e880f1f0e88f38682b37245dbc39c661e8fc80b17d82029b1d9025ed2a",
+      "ast_dump_sha256_after": "13d428e880f1f0e88f38682b37245dbc39c661e8fc80b17d82029b1d9025ed2a"
+    },
+    {
+      "name": "_ap003d_impl__refs_v6_strip_org",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "ast_dump_sha256_before": "0cb84580d7e578bedc643e7ea50aeadbb9be1577038d1713ee4e7c0895460879",
+      "ast_dump_sha256_after": "0cb84580d7e578bedc643e7ea50aeadbb9be1577038d1713ee4e7c0895460879"
+    },
+    {
+      "name": "_normalize",
+      "path": "app_bundle/scripts/pipeline/article_workflow/state.py",
+      "ast_dump_sha256_before": "e3d8010d01a7c58d5cb964c8dda50dd840d71f56e427562ba9f3581cbfb0fe28",
+      "ast_dump_sha256_after": "e3d8010d01a7c58d5cb964c8dda50dd840d71f56e427562ba9f3581cbfb0fe28"
+    },
+    {
+      "name": "extract_org_abstracts",
+      "path": "app_bundle/scripts/pipeline/render_docx_canonico.py",
+      "ast_dump_sha256_before": "1b09b66565e5383111bd0124685e6010d34a6c5275828ecc51c90f86a66892b6",
+      "ast_dump_sha256_after": "1b09b66565e5383111bd0124685e6010d34a6c5275828ecc51c90f86a66892b6"
+    }
+  ],
+  "deferred": {
+    "count": 49,
+    "policy": "não alterados"
+  },
+  "contract_updates": [
+    "tests/characterization/test_ap003d_document_contract.py",
+    "tests/characterization/test_ap003f_main_unification_contract.py",
+    "tests/characterization/test_ap003g_stabilization_contract.py",
+    "tests/characterization/test_ap004b_module_file_application_contract.py",
+    "tests/characterization/test_ap004c_internal_symbol_inventory_contract.py"
+  ],
+  "scope": {
+    "productive_changed_paths": [
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+    ],
+    "all_changed_paths": [
+      "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_APPLICATION.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_STRATEGY.md",
+      "docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_application.json",
+      "docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_inventory.json",
+      "tests/characterization/test_ap003d_document_contract.py",
+      "tests/characterization/test_ap003f_main_unification_contract.py",
+      "tests/characterization/test_ap003g_stabilization_contract.py",
+      "tests/characterization/test_ap004b_module_file_application_contract.py",
+      "tests/characterization/test_ap004b_module_file_inventory_contract.py",
+      "tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+      "tests/characterization/test_ap004c_internal_symbol_inventory_contract.py",
+      "tools/refactor/ap004c_apply_internal_symbols.py",
+      "tools/refactor/ap004c_inventory_internal_symbols.py"
+    ],
+    "application_artifacts": [
+      "docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_APPLICATION.md",
+      "docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_application.json",
+      "tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+      "tools/refactor/ap004c_apply_internal_symbols.py"
+    ],
+    "known_xfails": [
+      "_refs_v6_strip_org",
+      "extract_org_abstracts",
+      "WorkflowState._normalize"
+    ],
+    "module_file_changes": false,
+    "expected_commit_subject": "refactor(academic-pipeline): consolidar símbolos internos da AP-004C"
+  },
+  "backup": {
+    "path": "/home/gustavodetarso/.cache/academic-pipeline-refactor/backups/AP-004C-APPLICATION/20260716T163455Z"
+  },
+  "validation": {
+    "py_compile": "passed",
+    "git_diff_check": "passed",
+    "application_contract": {
+      "status": "passed",
+      "passed": 19,
+      "failed": 0,
+      "xfailed": 0,
+      "skipped": 0,
+      "errors": 0,
+      "summary": "19 passed"
+    },
+    "specific_suite": {
+      "status": "passed",
+      "passed": 161,
+      "failed": 0,
+      "xfailed": 1,
+      "skipped": 0,
+      "errors": 0,
+      "summary": "161 passed, 1 xfailed"
+    },
+    "consolidated_suite": {
+      "status": "passed",
+      "passed": 482,
+      "failed": 0,
+      "xfailed": 3,
+      "skipped": 0,
+      "errors": 0,
+      "summary": "482 passed, 3 xfailed"
+    }
+  },
+  "tool": {
+    "path": "tools/refactor/ap004c_apply_internal_symbols.py",
+    "version": 1,
+    "revision": "1.4",
+    "sha256": "a31ba8f4082fe4687f4fe0b4c9d97f213bd1ab13995923724ca24b67d6dbb145"
+  },
+  "next_gate": {
+    "blocked": true,
+    "message": "Não consolidar sem revisão do diff e aprovação expressa."
+  }
+}

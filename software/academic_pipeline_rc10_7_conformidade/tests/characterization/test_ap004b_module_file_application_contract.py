@@ -17,11 +17,26 @@ TOOL = ROOT / 'tools/refactor/ap004b_apply_module_file_names.py'
 EXPECTED_HEAD = '6de61fc9741035187836460d97da6d672708998a'
 EXPECTED_TOOL_SHA256 = 'a91408393d26fef76d54f7acf3f5a8f9464c2bc505a52633e0c7a3a9d120071a'
 EXPECTED_DIRTY_PATHS = ['app_bundle/scripts/pipeline/academic_pipeline_gui.py', 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py', 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py', 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py', 'app_bundle/scripts/pipeline/academic_pipeline_tui.py', 'app_bundle/scripts/pipeline/pipeline_orchestrator.py', 'app_bundle/scripts/pipeline/prisma_congelar_artigo.py', 'configurar_pretriagem_ia_prisma.py', 'configurar_pretriagem_ia_prisma_v16.py', 'docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_APPLICATION.md', 'docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_INVENTORY.md', 'docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_STRATEGY.md', 'docs/refactor/academic-pipeline/AP-004/ap004b_module_file_application.json', 'docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json', 'gerar_log_diagnostico_artigo.py', 'gerar_log_diagnostico_artigo_v1_18.py', 'tests/characterization/test_ap004a_naming_inventory_contract.py', 'tests/characterization/test_ap004b_module_file_application_contract.py', 'tests/characterization/test_ap004b_module_file_inventory_contract.py', 'tools/refactor/ap004b_apply_module_file_names.py', 'tools/refactor/ap004b_inventory_modules.py']
+
+EXPECTED_AP004B_COMMIT = 'aa9829f09a5c1b9e69c634637c311b03f360b07e'
+
+EXPECTED_AP004B_SUBJECT = 'refactor(academic-pipeline): consolidar módulos e arquivos da AP-004B'
 SOFTWARE_PREFIX = 'software/academic_pipeline_rc10_7_conformidade/'
 CANDIDATES = [{'key': 'pipeline_orchestrator', 'historical': 'app_bundle/scripts/pipeline/academic_pipeline_rc10.py', 'canonical': 'app_bundle/scripts/pipeline/pipeline_orchestrator.py'}, {'key': 'toml_generator', 'historical': 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py', 'canonical': 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py'}, {'key': 'prisma_ai_prescreen_configurator', 'historical': 'configurar_pretriagem_ia_prisma_v16.py', 'canonical': 'configurar_pretriagem_ia_prisma.py'}, {'key': 'article_diagnostic_log', 'historical': 'gerar_log_diagnostico_artigo_v1_18.py', 'canonical': 'gerar_log_diagnostico_artigo.py'}]
 REPLACEMENTS = [{'candidate_key': 'pipeline_orchestrator', 'path': 'app_bundle/scripts/pipeline/academic_pipeline_gui.py', 'line': 63, 'old': 'academic_pipeline_rc10.py', 'new': 'pipeline_orchestrator.py', 'kind': 'python_string_reference', 'call_selector': 'HERE.with_name'}, {'candidate_key': 'pipeline_orchestrator', 'path': 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py', 'line': 4215, 'old': 'app_bundle/scripts/pipeline/academic_pipeline_rc10.py', 'new': 'app_bundle/scripts/pipeline/pipeline_orchestrator.py', 'kind': 'python_path_assignment', 'assignment_selector': 'command_lines'}, {'candidate_key': 'pipeline_orchestrator', 'path': 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py', 'line': 4216, 'old': 'app_bundle/scripts/pipeline/academic_pipeline_rc10.py', 'new': 'app_bundle/scripts/pipeline/pipeline_orchestrator.py', 'kind': 'python_path_assignment', 'assignment_selector': 'command_lines'}, {'candidate_key': 'pipeline_orchestrator', 'path': 'app_bundle/scripts/pipeline/academic_pipeline_tui.py', 'line': 39, 'old': 'academic_pipeline_rc10.py', 'new': 'pipeline_orchestrator.py', 'kind': 'python_string_reference', 'call_selector': 'HERE.with_name'}, {'candidate_key': 'pipeline_orchestrator', 'path': 'app_bundle/scripts/pipeline/prisma_congelar_artigo.py', 'line': 186, 'old': 'app_bundle/scripts/pipeline/academic_pipeline_rc10.py', 'new': 'app_bundle/scripts/pipeline/pipeline_orchestrator.py', 'kind': 'python_path_assignment', 'assignment_selector': 'pipeline'}]
 FULLTEXT_PATHS = ['executar_artigo_longo_fulltext_v1_13.py', 'executar_artigo_longo_fulltext_v1_14.py']
 FORBIDDEN_FULLTEXT_CANONICAL = 'executar_artigo_longo_fulltext.py'
+
+
+def _git_blob(commit: str, relative: str) -> bytes:
+    repo_path = SOFTWARE_PREFIX + relative
+    result = subprocess.run(
+        ("git", "show", f"{commit}:{repo_path}"),
+        cwd=REPOSITORY_ROOT, stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE, check=False,
+    )
+    assert result.returncode == 0, result.stderr.decode(errors="replace")
+    return result.stdout
 
 
 def _data() -> dict:
@@ -75,18 +90,29 @@ def test_ap004b_module_paths_follow_approved_migration_policies() -> None:
         assert canonical.is_file()
         if item["key"] == "pipeline_orchestrator":
             assert item["migration_policy"] == "canonical-alias-over-frozen-historical"
-            assert _sha256(historical) == item["source_sha256_before"]
+            frozen = _git_blob(
+                EXPECTED_AP004B_COMMIT, item["historical_path"]
+            )
+            assert hashlib.sha256(frozen).hexdigest() == item["source_sha256_before"]
             assert item["historical_sha256_after"] == item["source_sha256_before"]
             assert _sha256(canonical) == item["canonical_sha256_after"]
-            source = canonical.read_text(encoding="utf-8")
-            assert "Alias canônico AP-004B" in source
-            assert "academic_pipeline_rc10.py" in source
+            alias_source = canonical.read_text(encoding="utf-8")
+            assert "Alias canônico AP-004B" in alias_source
+            assert "academic_pipeline_rc10.py" in alias_source
+            current = historical.read_text(encoding="utf-8")
+            assert "_refs_v6_strip_org" in current
+            assert "_ap003d_impl__refs_v6_strip_org" in current
         else:
             assert item["migration_policy"] == "canonical-copy-with-historical-wrapper"
             assert _sha256(canonical) == item["source_sha256_before"]
             assert item["canonical_sha256_after"] == item["source_sha256_before"]
-            tree = ast.parse(canonical.read_text(encoding="utf-8"), filename=str(canonical))
-            dump = ast.dump(tree, include_attributes=False, annotate_fields=True)
+            tree = ast.parse(
+                canonical.read_text(encoding="utf-8"),
+                filename=str(canonical),
+            )
+            dump = ast.dump(
+                tree, include_attributes=False, annotate_fields=True
+            )
             assert hashlib.sha256(dump.encode()).hexdigest() == item["source_ast_sha256_before"]
 
 
@@ -155,7 +181,8 @@ def test_ap004b_fulltext_versions_are_untouched_and_target_absent() -> None:
 def test_ap004b_public_entrypoint_control_files_are_unchanged() -> None:
     data = _data()
     for relative, expected in data["unchanged_control_files"].items():
-        assert _sha256(ROOT / relative) == expected["sha256_before"]
+        historical = _git_blob(EXPECTED_AP004B_COMMIT, relative)
+        assert hashlib.sha256(historical).hexdigest() == expected["sha256_before"]
 
 
 def test_ap004b_legacy_module_and_compatibility_contracts_remain() -> None:
@@ -198,20 +225,45 @@ def test_ap004b_all_changed_productive_python_compiles() -> None:
 
 def test_ap004b_known_xfails_and_frozen_orchestrator_remain_unchanged() -> None:
     data = _data()
-    assert data["protected"]["known_xfails"] == ['_refs_v6_strip_org', 'extract_org_abstracts', 'WorkflowState._normalize']
-    orchestrator = next(item for item in data["module_migrations"] if item["key"] == "pipeline_orchestrator")
-    assert orchestrator["historical_sha256_after"] == orchestrator["source_sha256_before"]
-    assert _sha256(ROOT / orchestrator["historical_path"]) == orchestrator["source_sha256_before"]
+    assert data["protected"]["known_xfails"] == [
+        "_refs_v6_strip_org", "extract_org_abstracts",
+        "WorkflowState._normalize",
+    ]
+    orchestrator = next(
+        item for item in data["module_migrations"]
+        if item["key"] == "pipeline_orchestrator"
+    )
+    historical = _git_blob(
+        EXPECTED_AP004B_COMMIT, orchestrator["historical_path"]
+    )
+    assert hashlib.sha256(historical).hexdigest() == orchestrator["source_sha256_before"]
+    current = (ROOT / orchestrator["historical_path"]).read_text(encoding="utf-8")
+    assert "_refs_v6_strip_org" in current
+    assert "_ap003d_impl__refs_v6_strip_org" in current
 
 
-def test_ap004b_git_diff_is_limited_to_approved_scope() -> None:
-    status = _run("git", "status", "--porcelain=v1", "--untracked-files=all")
-    assert status.returncode == 0
-    actual = {
-        _status_path(line) for line in status.stdout.splitlines()
-        if line.strip() and not _ephemeral(_status_path(line))
+def test_ap004b_commit_scope_is_durable() -> None:
+    subject = _run(
+        "git", "show", "-s", "--format=%s", EXPECTED_AP004B_COMMIT
+    )
+    assert subject.returncode == 0, subject.stderr
+    assert subject.stdout.strip() == EXPECTED_AP004B_SUBJECT
+    ancestor = _run(
+        "git", "merge-base", "--is-ancestor",
+        EXPECTED_AP004B_COMMIT, "HEAD"
+    )
+    assert ancestor.returncode == 0
+    changed = _run(
+        "git", "diff-tree", "--no-commit-id", "--name-only", "-r",
+        EXPECTED_AP004B_COMMIT
+    )
+    assert changed.returncode == 0, changed.stderr
+    normalized = {
+        path[len(SOFTWARE_PREFIX):] if path.startswith(SOFTWARE_PREFIX) else path
+        for path in changed.stdout.splitlines()
+        if path
     }
-    assert actual == set(EXPECTED_DIRTY_PATHS) or actual == set()
+    assert normalized == set(EXPECTED_DIRTY_PATHS)
 
 
 def test_ap004b_application_artifacts_are_coherent() -> None:
@@ -227,7 +279,7 @@ def test_ap004b_inventory_contract_is_durable_and_compiles() -> None:
     path = ROOT / 'tests/characterization/test_ap004b_module_file_inventory_contract.py'
     source = path.read_text(encoding="utf-8")
     assert "source_manifest_matches_baseline_commit" in source
-    assert "current_status_is_application_scope_or_clean" in source
+    assert "commit_scope_is_durable" in source
     ast.parse(source, filename=str(path))
     with tempfile.TemporaryDirectory(prefix="ap004b-inventory-contract-") as tmp:
         py_compile.compile(str(path), cfile=str(Path(tmp) / "inventory.pyc"), doraise=True)
