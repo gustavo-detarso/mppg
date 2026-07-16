@@ -26,7 +26,7 @@ EXPECTED_HELPERS = [{'occurrence': 'stage#1', 'name': 'stage', 'alias': '_ap003e
 EXPECTED_STAGES = ['run_prisma_stage_001', 'run_prisma_stage_002', 'run_prisma_stage_003', 'run_prisma_stage_004', 'run_prisma_stage_005', 'run_prisma_stage_006', 'run_prisma_stage_007', 'run_prisma_stage_008']
 EXPECTED_PARSER_SHA256 = "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8"
 EXPECTED_DISPATCH_SHA256 = "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3"
-EXPECTED_DOCUMENT_SHA256 = "3f2a3c95e08ccc3c19e3019a225c36fcf532cf4468f75b13c56b7c43bbc88a8e"
+EXPECTED_DOCUMENT_SHA256 = 'c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06'
 
 
 def _snapshot_stdout(path: Path) -> str:

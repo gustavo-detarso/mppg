@@ -1249,18 +1249,18 @@ def _ap003f_pipeline_core() -> int:
 # Política unificada: uma escolha explícita no TOML sempre prevalece. Para
 # compatibilidade, TOMLs antigos com todos os flags bibliográficos desligados
 # também entram no modo sem referências.
-def _refs_v6_disabled(cfg: dict[str, Any] | None) -> bool:
-    from academic_pipeline.document_orchestration import _refs_v6_disabled_impl as _impl_refs_disabled
+def _refs_disabled(cfg: dict[str, Any] | None) -> bool:
+    from academic_pipeline.document_orchestration import _refs_disabled_impl as _impl_refs_disabled
     return _impl_refs_disabled({**globals(), **locals()}, cfg)
 
 
-def _refs_v6_apply_runtime_policy(cfg: dict[str, Any]) -> dict[str, Any]:
-    from academic_pipeline.document_orchestration import _refs_v6_apply_runtime_policy_impl as _impl_refs_apply_runtime_policy
+def _refs_apply_runtime_policy(cfg: dict[str, Any]) -> dict[str, Any]:
+    from academic_pipeline.document_orchestration import _refs_apply_runtime_policy_impl as _impl_refs_apply_runtime_policy
     return _impl_refs_apply_runtime_policy({**globals(), **locals()}, cfg)
 
 
 # Carrega a política antes de qualquer rotina de descoberta, bibliografia ou IA.
-_refs_v6_original_load_config = load_config
+_refs_original_load_config = load_config
 def load_config(path: Path) -> dict[str, Any]:
     from academic_pipeline.document_orchestration import load_config_impl as _impl_load_config
     return _impl_load_config({**globals(), **locals()}, path)
@@ -1268,25 +1268,25 @@ def load_config(path: Path) -> dict[str, Any]:
 
 # Impede a construção física do .bib. Um Path sentinela mantém compatibilidade
 # com funções que recebem bib_path, mas o arquivo não é criado e as chaves ficam vazias.
-_refs_v6_original_build_bibliography = build_bibliography
+_refs_original_build_bibliography = build_bibliography
 def build_bibliography(cfg: dict[str, Any], docs: Any, out_dir: Path, prefix: str, client: Any, model: str) -> Any:
     from academic_pipeline.document_orchestration import build_bibliography_impl as _impl_build_bibliography
     return _impl_build_bibliography({**globals(), **locals()}, cfg, docs, out_dir, prefix, client, model)
 
 
-def _refs_v6_clear_document_bibliography(document: Any) -> Any:
-    from academic_pipeline.document_orchestration import _refs_v6_clear_document_bibliography_impl as _impl_refs_clear_document_bibliography
+def _refs_clear_document_bibliography(document: Any) -> Any:
+    from academic_pipeline.document_orchestration import _refs_clear_document_bibliography_impl as _impl_refs_clear_document_bibliography
     return _impl_refs_clear_document_bibliography({**globals(), **locals()}, document)
 
 
 def _refs_v6_strip_org(text: str) -> str:
-    from academic_pipeline.document_orchestration import _refs_v6_strip_org_impl as _ap003d_impl__refs_v6_strip_org
+    from academic_pipeline.document_orchestration import _refs_strip_org_impl as _ap003d_impl__refs_v6_strip_org
     return _ap003d_impl__refs_v6_strip_org({**globals(), **locals()}, text)
 
 
 # Garante que PDF/ORG não exibam citações ou referências mesmo se um artefato
 # intermediário trouxer marcas bibliográficas inesperadas.
-_refs_v6_original_render_org_latex = render_org_latex
+_refs_original_render_org_latex = render_org_latex
 def render_org_latex(document: Any, org_path: Path, bib_filename: str, *, cfg: dict[str, Any], bib_keys: list[str] | None=None) -> str:
     from academic_pipeline.document_orchestration import render_org_latex_impl as _impl_render_org_latex
     return _impl_render_org_latex({**globals(), **locals()}, document, org_path, bib_filename, cfg=cfg, bib_keys=bib_keys)

@@ -78,7 +78,7 @@ if __name__ == "__main__":
     print("OK")
 
 # rc10.4 smoke checks (executar manualmente via python, sem pytest obrigatório)
-def _rc10_4_imports():
+def _load_pipeline_imports():
     import sys
     from pathlib import Path
     root = Path(__file__).resolve().parents[1] / 'scripts' / 'pipeline'
@@ -89,7 +89,7 @@ def _rc10_4_imports():
 
 if __name__ == '__main__':
     try:
-        assert _rc10_4_imports()
+        assert _load_pipeline_imports()
         print('rc10.6 imports: OK')
     except Exception as exc:
         print(f'rc10.4 imports: ERRO: {exc}')

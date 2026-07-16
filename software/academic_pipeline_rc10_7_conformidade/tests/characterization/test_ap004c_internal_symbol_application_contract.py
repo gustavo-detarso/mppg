@@ -156,9 +156,22 @@ def test_ap004c_all_deferred_symbols_remain_deferred() -> None:
 def test_ap004c_orchestrator_hash_is_rebaselined_in_ap003g_contract() -> None:
     data = _data()
     expected = data["waves"]["wave_2"]["source_sha256_after"]
-    source = (ROOT / "tests/characterization/test_ap003g_stabilization_contract.py").read_text(encoding="utf-8")
-    assert expected in source
-    assert _sha256(ROOT / "app_bundle/scripts/pipeline/academic_pipeline_rc10.py") == expected
+    commit = _find_commit()
+    assert commit is not None
+    contract = _run(
+        "git",
+        "show",
+        f"{commit}:{SOFTWARE_PREFIX}tests/characterization/test_ap003g_stabilization_contract.py",
+    )
+    assert contract.returncode == 0, contract.stderr
+    assert expected in contract.stdout
+    orchestrator = _run(
+        "git",
+        "show",
+        f"{commit}:{SOFTWARE_PREFIX}app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+    )
+    assert orchestrator.returncode == 0, orchestrator.stderr
+    assert hashlib.sha256(orchestrator.stdout.encode("utf-8")).hexdigest() == expected
 
 
 def test_ap004c_core_ast_hash_is_rebaselined_in_ap003f_contract() -> None:
@@ -233,20 +246,19 @@ def test_ap004c_git_scope_is_exact_or_commit_is_durable() -> None:
         if line.strip() and not _ephemeral(_status_path(line))
     }
     expected = set(EXPECTED_DIRTY_PATHS)
-    if actual:
+    commit = _find_commit()
+    if commit is None:
         assert actual == expected
         assert _run("git", "rev-parse", "HEAD").stdout.strip() == BASELINE_HEAD
-    else:
-        commit = _find_commit()
-        assert commit is not None
-        changed = _run("git", "diff-tree", "--no-commit-id", "--name-only", "-r", commit)
-        assert changed.returncode == 0, changed.stderr
-        normalized = {
-            path[len(SOFTWARE_PREFIX):] if path.startswith(SOFTWARE_PREFIX) else path
-            for path in changed.stdout.splitlines() if path
-        }
-        assert normalized == expected
-        assert _run("git", "merge-base", "--is-ancestor", BASELINE_HEAD, "HEAD").returncode == 0
+        return
+    changed = _run("git", "diff-tree", "--no-commit-id", "--name-only", "-r", commit)
+    assert changed.returncode == 0, changed.stderr
+    normalized = {
+        path[len(SOFTWARE_PREFIX):] if path.startswith(SOFTWARE_PREFIX) else path
+        for path in changed.stdout.splitlines() if path
+    }
+    assert normalized == expected
+    assert _run("git", "merge-base", "--is-ancestor", BASELINE_HEAD, "HEAD").returncode == 0
 
 
 def test_ap004c_known_xfails_remain_catalogued() -> None:

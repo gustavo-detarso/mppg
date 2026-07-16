@@ -7,8 +7,8 @@ import pytest
 from pathlib import Path
 
 from academic_pipeline_rc10 import (
-    _refs_v6_apply_runtime_policy,
-    _refs_v6_disabled,
+    _refs_apply_runtime_policy,
+    _refs_disabled,
     _refs_v6_strip_org,
     apply_cli_path_overrides,
     output_paths,
@@ -143,8 +143,8 @@ def test_cli_path_overrides_have_priority_and_preserve_other_values() -> None:
 
 
 def test_reference_policy_explicit_bibliography_flag_has_priority() -> None:
-    assert _refs_v6_disabled({"bibliografia": {"ativo": False}})
-    assert not _refs_v6_disabled(
+    assert _refs_disabled({"bibliografia": {"ativo": False}})
+    assert not _refs_disabled(
         {
             "bibliografia": {"ativo": True},
             "documento": {"referencias_formais": False},
@@ -161,7 +161,7 @@ def test_reference_policy_supports_legacy_all_flags_disabled() -> None:
         "documento": {"usar_citacoes_latex_diretas": False},
     }
 
-    assert _refs_v6_disabled(cfg)
+    assert _refs_disabled(cfg)
 
 
 def test_runtime_reference_policy_is_idempotent_and_disables_all_sources() -> None:
@@ -172,8 +172,8 @@ def test_runtime_reference_policy_is_idempotent_and_disables_all_sources() -> No
         "orientacoes": {"inline": "Orientação original."},
     }
 
-    first = _refs_v6_apply_runtime_policy(cfg)
-    second = _refs_v6_apply_runtime_policy(first)
+    first = _refs_apply_runtime_policy(cfg)
+    second = _refs_apply_runtime_policy(first)
 
     assert first is cfg
     assert second is cfg
