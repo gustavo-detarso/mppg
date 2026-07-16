@@ -183,7 +183,7 @@ def freeze(args):
     print(f"[OK] Manifesto JSON: {dest/'MANIFESTO_ARTIGO.json'}")
     if args.gerar_artigo_final:
         if not toml_out: raise RuntimeError("TOML não gerado.")
-        pipeline=Path(args.pipeline_script).resolve() if args.pipeline_script else Path.cwd()/ "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        pipeline=Path(args.pipeline_script).resolve() if args.pipeline_script else Path.cwd()/ "app_bundle/scripts/pipeline/pipeline_orchestrator.py"
         print(f"[ETAPA] Gerando artigo final com: {toml_out}")
         proc=subprocess.run([sys.executable,str(pipeline),"--config",str(toml_out)])
         if proc.returncode: raise SystemExit(proc.returncode)

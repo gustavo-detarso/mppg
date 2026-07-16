@@ -16,6 +16,7 @@ CONVENTION = ROOT / 'docs/refactor/academic-pipeline/AP-004/AP-004_NAMING_CONVEN
 TOOL = ROOT / 'tools/refactor/ap004a_inventory_names.py'
 EXPECTED_HEAD = '59ec50368de7302a9f25fe45809649e4baf2c144'
 EXPECTED_AP003G_COMMIT = '59ec50368de7302a9f25fe45809649e4baf2c144'
+EXPECTED_AP004A_SUBJECT = 'chore(academic-pipeline): consolidar inventário de nomes da AP-004A'
 EXPECTED_TOOL_SHA256 = '9dc6e5a28de82a9ff4cb2019370132c032ce933dcd9062b3722136a92a8ac426'
 EXPECTED_OUTPUTS = ['docs/refactor/academic-pipeline/AP-004/AP-004A_NAMING_INVENTORY.md', 'docs/refactor/academic-pipeline/AP-004/AP-004_NAMING_CONVENTION.md', 'docs/refactor/academic-pipeline/AP-004/ap004a_naming_inventory.json', 'tools/refactor/ap004a_inventory_names.py', 'tests/characterization/test_ap004a_naming_inventory_contract.py']
 CLASSIFICATIONS = ['renomeação segura', 'renomeação com compatibilidade', 'renomeação de alto risco', 'nome que deve permanecer']
@@ -59,7 +60,31 @@ def _ephemeral(path: str) -> bool:
     return "__pycache__" in parts or ".pytest_cache" in parts or path.endswith((".pyc", ".pyo"))
 
 
-def test_ap004a_v4_2_is_bound_to_current_head_and_ap003g() -> None:
+def _software_relative(path: str) -> str:
+    normalized = path.strip().strip('"').replace("\\", "/")
+    prefix = "software/academic_pipeline_rc10_7_conformidade/"
+    return normalized[len(prefix):] if normalized.startswith(prefix) else normalized
+
+
+def _commit_paths(commit: str) -> set[str]:
+    output = _run("git", "diff-tree", "--no-commit-id", "--name-only", "-r", commit)
+    return {_software_relative(line) for line in output.splitlines() if line.strip()}
+
+
+def _find_ap004a_commit() -> str:
+    output = _run("git", "log", "--format=%H%x09%s", f"{EXPECTED_HEAD}..HEAD")
+    matches = []
+    for line in output.splitlines():
+        if "\t" not in line:
+            continue
+        commit, subject = line.split("\t", 1)
+        if subject == EXPECTED_AP004A_SUBJECT:
+            matches.append(commit)
+    assert len(matches) == 1, matches
+    return matches[0]
+
+
+def test_ap004a_v4_2_is_bound_to_inventory_baseline_and_ap003g() -> None:
     data = _data()
     assert data["phase"] == "AP-004A"
     assert data["mode"] == "inventory-and-convention-v4.2-read-only"
@@ -68,7 +93,14 @@ def test_ap004a_v4_2_is_bound_to_current_head_and_ap003g() -> None:
     assert data["tool"]["version"] == 4
     assert data["tool"]["revision"] == "4.2"
     assert data["git"]["head"] == EXPECTED_HEAD
-    assert _run("git", "rev-parse", "HEAD") == EXPECTED_HEAD
+    current_head = _run("git", "rev-parse", "HEAD")
+    if current_head != EXPECTED_HEAD:
+        closure = _find_ap004a_commit()
+        subprocess.run(
+            ("git", "merge-base", "--is-ancestor", closure, current_head),
+            cwd=ROOT, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        )
+        assert _run("git", "rev-parse", f"{closure}^") == EXPECTED_HEAD
     assert data["ap003g_closure"]["commit"] == EXPECTED_AP003G_COMMIT
     assert data["ap003g_closure"]["published"] is True
 
@@ -245,13 +277,20 @@ def test_ap004a_v4_2_core_symbol_is_scoped_to_symbol_normalization() -> None:
     assert module[0]["target_phase"] == "AP-004B/AP-004E"
 
 
-def test_ap004a_v4_2_changes_only_allowed_files_and_generated_python_compiles() -> None:
-    status = _run("git", "status", "--porcelain=v1", "--untracked-files=all")
-    actual = {
-        path for line in status.splitlines() if line.strip()
-        for path in [_status_path(line)] if not _ephemeral(path)
-    }
-    assert actual == set(EXPECTED_OUTPUTS)
+def test_ap004a_v4_2_commit_scope_and_generated_python_are_durable() -> None:
+    current_head = _run("git", "rev-parse", "HEAD")
+    if current_head == EXPECTED_HEAD:
+        status = _run("git", "status", "--porcelain=v1", "--untracked-files=all")
+        actual = {
+            path for line in status.splitlines() if line.strip()
+            for path in [_status_path(line)] if not _ephemeral(path)
+        }
+        assert actual == set(EXPECTED_OUTPUTS)
+    else:
+        closure = _find_ap004a_commit()
+        assert _commit_paths(closure) == set(EXPECTED_OUTPUTS)
+        for relative in EXPECTED_OUTPUTS:
+            _run("git", "ls-files", "--error-unmatch", relative)
     assert _sha256(TOOL) == EXPECTED_TOOL_SHA256
     ast.parse(TOOL.read_text(encoding="utf-8"), filename=str(TOOL))
     assert CONVENTION.is_file()

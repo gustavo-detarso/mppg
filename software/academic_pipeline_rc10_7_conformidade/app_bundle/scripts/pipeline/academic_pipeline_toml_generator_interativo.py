@@ -4212,8 +4212,8 @@ def generate_interactive(non_interactive_profile: str | None = None, project_nam
         f"- {config_path}",
         "",
         "Próximos comandos sugeridos:",
-        f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --show-prompts",
-        f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --check-config",
+        f"pipenv run python app_bundle/scripts/pipeline/pipeline_orchestrator.py --config {config_for_cli} --show-prompts",
+        f"pipenv run python app_bundle/scripts/pipeline/pipeline_orchestrator.py --config {config_for_cli} --check-config",
     ]
     if preset.render_only:
         doc_json = data.get("document_json") or "CAMINHO/document.document.json"
