@@ -36,7 +36,7 @@ except Exception:  # pragma: no cover - fallback para instalações incompletas
 HERE = Path(__file__).resolve()
 APP = HERE.parents[2]
 ROOT = APP.parent
-PIPELINE = HERE.with_name("academic_pipeline_rc10.py")
+PIPELINE = HERE.with_name("pipeline_orchestrator.py")
 TOML_WIZARD = HERE.with_name("academic_pipeline_toml_generator_interativo.py")
 ARTICLE_FINALIZER = HERE.with_name("gerar_artigo_final_unificado.py")
 STATE_PATH = APP / ".academic_pipeline_tui_state.json"

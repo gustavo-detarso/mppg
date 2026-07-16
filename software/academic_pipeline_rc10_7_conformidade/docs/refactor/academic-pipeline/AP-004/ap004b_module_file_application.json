@@ -1,0 +1,327 @@
+{
+  "phase": "AP-004B",
+  "mode": "module-file-application-v1.4",
+  "application_schema_version": 1,
+  "generated_at_utc": "2026-07-16T01:00:14+00:00",
+  "tool": {
+    "version": 1,
+    "revision": "1.4",
+    "path": "tools/refactor/ap004b_apply_module_file_names.py",
+    "sha256": "a91408393d26fef76d54f7acf3f5a8f9464c2bc505a52633e0c7a3a9d120071a"
+  },
+  "baseline": {
+    "head": "6de61fc9741035187836460d97da6d672708998a",
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "remote_ref": "origin/ap-refactor/03-orchestrator-decomposition",
+    "git_state": {
+      "branch": "ap-refactor/03-orchestrator-decomposition",
+      "head": "6de61fc9741035187836460d97da6d672708998a",
+      "remote_head": "6de61fc9741035187836460d97da6d672708998a",
+      "initial_status_paths": [
+        "docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_INVENTORY.md",
+        "docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_STRATEGY.md",
+        "docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json",
+        "tests/characterization/test_ap004a_naming_inventory_contract.py",
+        "tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "tools/refactor/ap004b_inventory_modules.py"
+      ],
+      "initial_status_lines": [
+        " M software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004a_naming_inventory_contract.py",
+        "?? software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_INVENTORY.md",
+        "?? software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_STRATEGY.md",
+        "?? software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json",
+        "?? software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "?? software/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004b_inventory_modules.py"
+      ]
+    },
+    "consolidated": {
+      "passed": 431,
+      "xfailed": 3
+    }
+  },
+  "approval": {
+    "approved": true,
+    "inventory_revision": "1.6",
+    "inventory_mode": "module-file-inventory-v1.6-read-only",
+    "inventory_sha256": "6c0ae5889e95cf75e72b5097c206c37d742f0f0f71181cc83b939ad776748f1d",
+    "decision": "orquestrador histórico congelado com alias canônico; três módulos canônicos com wrappers; cinco ocorrências produtivas migradas; dois consumidores full-text adiados"
+  },
+  "scope": {
+    "module_migrations": 4,
+    "selected_actionable_records": 5,
+    "deferred_actionable_records": 2,
+    "compatibility_contract_records_preserved": 24,
+    "productive_changed_paths": [
+      "app_bundle/scripts/pipeline/academic_pipeline_gui.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_tui.py",
+      "app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "app_bundle/scripts/pipeline/prisma_congelar_artigo.py",
+      "configurar_pretriagem_ia_prisma.py",
+      "configurar_pretriagem_ia_prisma_v16.py",
+      "gerar_log_diagnostico_artigo.py",
+      "gerar_log_diagnostico_artigo_v1_18.py"
+    ],
+    "application_artifacts": [
+      "docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_APPLICATION.md",
+      "docs/refactor/academic-pipeline/AP-004/ap004b_module_file_application.json",
+      "tests/characterization/test_ap004b_module_file_application_contract.py",
+      "tools/refactor/ap004b_apply_module_file_names.py"
+    ],
+    "expected_dirty_paths": [
+      "app_bundle/scripts/pipeline/academic_pipeline_gui.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py",
+      "app_bundle/scripts/pipeline/academic_pipeline_tui.py",
+      "app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "app_bundle/scripts/pipeline/prisma_congelar_artigo.py",
+      "configurar_pretriagem_ia_prisma.py",
+      "configurar_pretriagem_ia_prisma_v16.py",
+      "docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_APPLICATION.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_STRATEGY.md",
+      "docs/refactor/academic-pipeline/AP-004/ap004b_module_file_application.json",
+      "docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json",
+      "gerar_log_diagnostico_artigo.py",
+      "gerar_log_diagnostico_artigo_v1_18.py",
+      "tests/characterization/test_ap004a_naming_inventory_contract.py",
+      "tests/characterization/test_ap004b_module_file_application_contract.py",
+      "tests/characterization/test_ap004b_module_file_inventory_contract.py",
+      "tools/refactor/ap004b_apply_module_file_names.py",
+      "tools/refactor/ap004b_inventory_modules.py"
+    ],
+    "forbidden_fulltext_target": "executar_artigo_longo_fulltext.py",
+    "functional_change": "proibida",
+    "cli_semantics_change": "proibida",
+    "physical_directory_rename": "proibida até AP-006"
+  },
+  "module_migrations": [
+    {
+      "key": "pipeline_orchestrator",
+      "historical_path": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "canonical_path": "app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "canonical_filename": "pipeline_orchestrator.py",
+      "source_sha256_before": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+      "source_ast_sha256_before": "5104b0e7cb9340076f8eb41cd20d9e1eb01ac784feb24fb233fe085e7b7d12b5",
+      "historical_sha256_after": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+      "historical_ast_sha256_after": "5104b0e7cb9340076f8eb41cd20d9e1eb01ac784feb24fb233fe085e7b7d12b5",
+      "canonical_sha256_after": "ffe2780bac2b57acd8129829c63bd0cdb21297d28daf4f8b6e4f074a72d8552c",
+      "canonical_ast_sha256_after": "bde3bce3899c7acb3c2e2e198e43bf0d15907e7afd97259213c383a101410c2d",
+      "wrapper_sha256_after": null,
+      "wrapper_ast_sha256_after": null,
+      "mode": "0o600",
+      "migration_policy": "canonical-alias-over-frozen-historical",
+      "wrapper_policy": "historical-source-frozen-by-AP-003G"
+    },
+    {
+      "key": "toml_generator",
+      "historical_path": "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py",
+      "canonical_path": "app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py",
+      "canonical_filename": "academic_pipeline_toml_generator.py",
+      "source_sha256_before": "3a3d5835ff81671897a44e4cdca588f04176ff03ed1e935d3ed29bf34eb531f1",
+      "source_ast_sha256_before": "2bfd168e4e60eb2e50c733b8aaf3fbc6da1d62b8864a196ae285ef423d7cfa68",
+      "historical_sha256_after": "f56188dd2caa25af62d02a543004b5b6cb5bec7b84d5c3b651c29af55bdcaf63",
+      "historical_ast_sha256_after": "38c36f986bb5147506b21f955264730e518a30a939cbc97175f185b0061cd10d",
+      "canonical_sha256_after": "3a3d5835ff81671897a44e4cdca588f04176ff03ed1e935d3ed29bf34eb531f1",
+      "canonical_ast_sha256_after": "2bfd168e4e60eb2e50c733b8aaf3fbc6da1d62b8864a196ae285ef423d7cfa68",
+      "wrapper_sha256_after": "f56188dd2caa25af62d02a543004b5b6cb5bec7b84d5c3b651c29af55bdcaf63",
+      "wrapper_ast_sha256_after": "38c36f986bb5147506b21f955264730e518a30a939cbc97175f185b0061cd10d",
+      "mode": "0o644",
+      "migration_policy": "canonical-copy-with-historical-wrapper",
+      "wrapper_policy": "exec-canonical-source-in-legacy-namespace-until-AP-004E"
+    },
+    {
+      "key": "prisma_ai_prescreen_configurator",
+      "historical_path": "configurar_pretriagem_ia_prisma_v16.py",
+      "canonical_path": "configurar_pretriagem_ia_prisma.py",
+      "canonical_filename": "configurar_pretriagem_ia_prisma.py",
+      "source_sha256_before": "82d629145538c05120256e07f7567c3de0bb0244822ab5433d1c41d565c9bdc9",
+      "source_ast_sha256_before": "6e6b6a2cd44813a0b0f4f6e8310a77ad961c86633c6864ccd7abd19ed440ac0b",
+      "historical_sha256_after": "1f5d4132cd6aa21a73a25ccd297755bd0ebf00305297e54bd88bd2b5534cad09",
+      "historical_ast_sha256_after": "6a2c3964e6a38f18aa488f3cf65d8e311b519dea289888281e33acdf0ce3792b",
+      "canonical_sha256_after": "82d629145538c05120256e07f7567c3de0bb0244822ab5433d1c41d565c9bdc9",
+      "canonical_ast_sha256_after": "6e6b6a2cd44813a0b0f4f6e8310a77ad961c86633c6864ccd7abd19ed440ac0b",
+      "wrapper_sha256_after": "1f5d4132cd6aa21a73a25ccd297755bd0ebf00305297e54bd88bd2b5534cad09",
+      "wrapper_ast_sha256_after": "6a2c3964e6a38f18aa488f3cf65d8e311b519dea289888281e33acdf0ce3792b",
+      "mode": "0o644",
+      "migration_policy": "canonical-copy-with-historical-wrapper",
+      "wrapper_policy": "exec-canonical-source-in-legacy-namespace-until-AP-004E"
+    },
+    {
+      "key": "article_diagnostic_log",
+      "historical_path": "gerar_log_diagnostico_artigo_v1_18.py",
+      "canonical_path": "gerar_log_diagnostico_artigo.py",
+      "canonical_filename": "gerar_log_diagnostico_artigo.py",
+      "source_sha256_before": "17a83fda712aa3ab63957358282f70aa425d53b587dca8bae4defd36c5f4d757",
+      "source_ast_sha256_before": "5d7e36bdeae7c0b01240534367f48593a9334936245ffd52e574195ea37ee0a9",
+      "historical_sha256_after": "8a1e1847a53f6e309b360dd6bdcb658eb7904badc05fd44fea4b81f4957d1f62",
+      "historical_ast_sha256_after": "04aac656d3966b144f7118cb9373dda6fb0651b3f3c777eb147af3ad1738614d",
+      "canonical_sha256_after": "17a83fda712aa3ab63957358282f70aa425d53b587dca8bae4defd36c5f4d757",
+      "canonical_ast_sha256_after": "5d7e36bdeae7c0b01240534367f48593a9334936245ffd52e574195ea37ee0a9",
+      "wrapper_sha256_after": "8a1e1847a53f6e309b360dd6bdcb658eb7904badc05fd44fea4b81f4957d1f62",
+      "wrapper_ast_sha256_after": "04aac656d3966b144f7118cb9373dda6fb0651b3f3c777eb147af3ad1738614d",
+      "mode": "0o644",
+      "migration_policy": "canonical-copy-with-historical-wrapper",
+      "wrapper_policy": "exec-canonical-source-in-legacy-namespace-until-AP-004E"
+    }
+  ],
+  "consumer_replacements": [
+    {
+      "candidate_key": "pipeline_orchestrator",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_gui.py",
+      "line": 63,
+      "actual_literal_line": 63,
+      "inventory_line": 63,
+      "selector_kind": "call",
+      "selector_value": "HERE.with_name",
+      "kind": "python_string_reference",
+      "old": "academic_pipeline_rc10.py",
+      "new": "pipeline_orchestrator.py",
+      "sha256_before": "6f8c51e8d529e887c9569dbeabd8fa76bef9262f38e1c1f0f6daa6b04223f204",
+      "sha256_after": "f26fabb06247063b756902e112e187164b497400095327db0601093f8914df01",
+      "literal_before": "\"academic_pipeline_rc10.py\"",
+      "literal_after": "\"pipeline_orchestrator.py\""
+    },
+    {
+      "candidate_key": "pipeline_orchestrator",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "line": 4215,
+      "actual_literal_line": 4215,
+      "inventory_line": 4215,
+      "selector_kind": "assignment",
+      "selector_value": "command_lines",
+      "kind": "python_path_assignment",
+      "old": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "new": "app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "sha256_before": "236f0b1093ee3c6b44d225e9c0b3a27c0498f7790907121b13563d7819e0b1e6",
+      "sha256_after": "74f3241139ad3f4bee850e7cd30a54607287860fcecbfb1521231ef2df7899b4",
+      "literal_before": "f\"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --show-prompts\"",
+      "literal_after": "f\"pipenv run python app_bundle/scripts/pipeline/pipeline_orchestrator.py --config {config_for_cli} --show-prompts\""
+    },
+    {
+      "candidate_key": "pipeline_orchestrator",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "line": 4216,
+      "actual_literal_line": 4216,
+      "inventory_line": 4216,
+      "selector_kind": "assignment",
+      "selector_value": "command_lines",
+      "kind": "python_path_assignment",
+      "old": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "new": "app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "sha256_before": "236f0b1093ee3c6b44d225e9c0b3a27c0498f7790907121b13563d7819e0b1e6",
+      "sha256_after": "74f3241139ad3f4bee850e7cd30a54607287860fcecbfb1521231ef2df7899b4",
+      "literal_before": "f\"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --check-config\"",
+      "literal_after": "f\"pipenv run python app_bundle/scripts/pipeline/pipeline_orchestrator.py --config {config_for_cli} --check-config\""
+    },
+    {
+      "candidate_key": "pipeline_orchestrator",
+      "path": "app_bundle/scripts/pipeline/academic_pipeline_tui.py",
+      "line": 39,
+      "actual_literal_line": 39,
+      "inventory_line": 39,
+      "selector_kind": "call",
+      "selector_value": "HERE.with_name",
+      "kind": "python_string_reference",
+      "old": "academic_pipeline_rc10.py",
+      "new": "pipeline_orchestrator.py",
+      "sha256_before": "38c6fa4c2ec7f88f8b0075e9db4d71b969efc6b27a617e07ce0697736f162af5",
+      "sha256_after": "2c073b8e2608a374ae2800648b88dccab69c3449c59abddcea22c0be1fd13698",
+      "literal_before": "\"academic_pipeline_rc10.py\"",
+      "literal_after": "\"pipeline_orchestrator.py\""
+    },
+    {
+      "candidate_key": "pipeline_orchestrator",
+      "path": "app_bundle/scripts/pipeline/prisma_congelar_artigo.py",
+      "line": 186,
+      "actual_literal_line": 186,
+      "inventory_line": 186,
+      "selector_kind": "assignment",
+      "selector_value": "pipeline",
+      "kind": "python_path_assignment",
+      "old": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "new": "app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "sha256_before": "635019423c7f81dcfbcdacbe5707710fd27193149d91f86c44d9e91ca3cb3e18",
+      "sha256_after": "f5ed293927d7933cf34c95b690b403d17a266c75e3cad4c2003ec0f2111f240d",
+      "literal_before": "\"app_bundle/scripts/pipeline/academic_pipeline_rc10.py\"",
+      "literal_after": "\"app_bundle/scripts/pipeline/pipeline_orchestrator.py\""
+    }
+  ],
+  "deferred_fulltext": {
+    "executar_artigo_longo_fulltext_v1_13.py": {
+      "sha256_before": "1694ab48bac702a311a4c64071ad943d366fbd9c511c8decb676230e689955fc",
+      "ast_sha256_before": "a44eddc7bff19ffb324d02ed09fb93f96c013e41c8c6f0c5090c5d2185db7ba4",
+      "decision": "untouched-deferred-high-risk"
+    },
+    "executar_artigo_longo_fulltext_v1_14.py": {
+      "sha256_before": "dac21bd05dd32cdd1dcae4d94bdf82845ea26751c1e95cb2481262cba2338ba1",
+      "ast_sha256_before": "6591e7d6d57e18ed7ec2a969af1b31a28be05b0d0c51ffe40718835c45fe0581",
+      "decision": "untouched-deferred-high-risk"
+    }
+  },
+  "unchanged_control_files": {
+    "app_bundle/scripts/pipeline/academic_pipeline_rc10.py": {
+      "sha256_before": "8516c1b4d55921440905dd4eba84241efde9093a151f9c6ccc33757474bf8977",
+      "ast_sha256_before": "5104b0e7cb9340076f8eb41cd20d9e1eb01ac784feb24fb233fe085e7b7d12b5"
+    },
+    "pyproject.toml": {
+      "sha256_before": "e672be492527f05a671b011b78caab2888d84cf9f2be35557f6a29e781f55650",
+      "ast_sha256_before": null
+    },
+    "academic_pipeline/__main__.py": {
+      "sha256_before": "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4",
+      "ast_sha256_before": "2ce00e8b90f59fc0ad5608b90a792987cfa2683ba5df38cdb4b315030abf0454"
+    },
+    "academic_pipeline/cli.py": {
+      "sha256_before": "bbda5a88d1234f649bb6d171a14b75e51d03bf3d721d91656ad624912f26c2db",
+      "ast_sha256_before": "0add6ee06b53941a86b8e1310ea4efeb5e027dc31fe67b47f6ba72bec3c14935"
+    },
+    "academic_pipeline/legacy.py": {
+      "sha256_before": "f11ddffc30f60ac0c5e0856e8bf00ffaae866a8df806fd3c2b99f1afaa09e6b9",
+      "ast_sha256_before": "089de5515c1851c0b58b11a79f5e972c0e0fc7c0c35e7c15a751fa42400fbc4d"
+    },
+    "academic_pipeline/prisma_generic_orchestration.py": {
+      "sha256_before": "f250487a7787c967a0bad0ac38d5dbe210ff63981078d3c65e1d77655ff5f072",
+      "ast_sha256_before": "e4a52fa423d2485e7e819bfc7bbf45b615bcbd0f2999e5536a6b7a97d9e2a8ce"
+    }
+  },
+  "protected": {
+    "known_xfails": [
+      "_refs_v6_strip_org",
+      "extract_org_abstracts",
+      "WorkflowState._normalize"
+    ],
+    "fulltext_collision": "suspended-manual-review-required",
+    "physical_directory": "academic_pipeline_rc10_7_conformidade"
+  },
+  "validation": {
+    "py_compile": "passed",
+    "git_diff_check": "passed",
+    "specific_suite": {
+      "passed": 157,
+      "failed": 0,
+      "xfailed": 1,
+      "errors": 0,
+      "skipped": 0,
+      "summary": "157 passed, 1 xfailed in 35.09s",
+      "status": "passed"
+    },
+    "consolidated_suite": {
+      "passed": 448,
+      "failed": 0,
+      "xfailed": 3,
+      "errors": 0,
+      "skipped": 0,
+      "summary": "448 passed, 3 xfailed in 50.54s",
+      "status": "passed"
+    }
+  },
+  "next_gate": {
+    "commit_allowed": false,
+    "requires_explicit_consolidation_approval": true,
+    "integration_allowed": false
+  }
+}

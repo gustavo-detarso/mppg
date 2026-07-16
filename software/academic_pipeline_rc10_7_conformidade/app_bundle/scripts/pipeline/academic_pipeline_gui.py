@@ -60,7 +60,7 @@ else:
 HERE = Path(__file__).resolve()
 APP = HERE.parents[2]
 ROOT = APP.parent
-PIPELINE = HERE.with_name("academic_pipeline_rc10.py")
+PIPELINE = HERE.with_name("pipeline_orchestrator.py")
 GUI_STATE_PATH = APP / ".academic_pipeline_gui_state.toml"
 
 # Paleta inspirada no sistema visual FGV usado nos ativos já presentes no bundle.
