@@ -15,6 +15,10 @@ TOOL = ROOT / 'tools/refactor/ap004b_inventory_modules.py'
 EXPECTED_HEAD = '6de61fc9741035187836460d97da6d672708998a'
 EXPECTED_CANDIDATES = ['app_bundle/scripts/pipeline/academic_pipeline_rc10.py', 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py', 'configurar_pretriagem_ia_prisma_v16.py', 'gerar_log_diagnostico_artigo_v1_18.py', 'executar_artigo_longo_fulltext_v1_13.py', 'executar_artigo_longo_fulltext_v1_14.py']
 EXPECTED_DIRTY_PATHS = ['app_bundle/scripts/pipeline/academic_pipeline_gui.py', 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py', 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py', 'app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py', 'app_bundle/scripts/pipeline/academic_pipeline_tui.py', 'app_bundle/scripts/pipeline/pipeline_orchestrator.py', 'app_bundle/scripts/pipeline/prisma_congelar_artigo.py', 'configurar_pretriagem_ia_prisma.py', 'configurar_pretriagem_ia_prisma_v16.py', 'docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_APPLICATION.md', 'docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_INVENTORY.md', 'docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_STRATEGY.md', 'docs/refactor/academic-pipeline/AP-004/ap004b_module_file_application.json', 'docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json', 'gerar_log_diagnostico_artigo.py', 'gerar_log_diagnostico_artigo_v1_18.py', 'tests/characterization/test_ap004a_naming_inventory_contract.py', 'tests/characterization/test_ap004b_module_file_application_contract.py', 'tests/characterization/test_ap004b_module_file_inventory_contract.py', 'tools/refactor/ap004b_apply_module_file_names.py', 'tools/refactor/ap004b_inventory_modules.py']
+
+EXPECTED_AP004B_COMMIT = 'aa9829f09a5c1b9e69c634637c311b03f360b07e'
+
+EXPECTED_AP004B_SUBJECT = 'refactor(academic-pipeline): consolidar módulos e arquivos da AP-004B'
 SOFTWARE_PREFIX = 'software/academic_pipeline_rc10_7_conformidade/'
 EFFECTIVE = {"actionable_productive", "compatibility_contract"}
 EXCLUDED = {
@@ -161,13 +165,28 @@ def test_ap004b_v1_6_inventory_artifacts_and_tool_remain_available() -> None:
     assert data["tool"]["sha256"] == _sha256(TOOL)
 
 
-def test_ap004b_v1_6_current_status_is_application_scope_or_clean() -> None:
-    status = _run("git", "status", "--porcelain=v1", "--untracked-files=all")
-    actual = {
-        _status_path(line) for line in status.splitlines()
-        if line.strip() and not _ephemeral(_status_path(line))
+def test_ap004b_v1_6_commit_scope_is_durable() -> None:
+    assert (
+        _run(
+            "git", "show", "-s", "--format=%s",
+            EXPECTED_AP004B_COMMIT
+        )
+        == EXPECTED_AP004B_SUBJECT
+    )
+    _run(
+        "git", "merge-base", "--is-ancestor",
+        EXPECTED_AP004B_COMMIT, "HEAD"
+    )
+    changed = _run(
+        "git", "diff-tree", "--no-commit-id", "--name-only", "-r",
+        EXPECTED_AP004B_COMMIT
+    )
+    normalized = {
+        path[len(SOFTWARE_PREFIX):] if path.startswith(SOFTWARE_PREFIX) else path
+        for path in changed.splitlines()
+        if path
     }
-    assert actual == set(EXPECTED_DIRTY_PATHS) or actual == set()
+    assert normalized == set(EXPECTED_DIRTY_PATHS)
 
 
 def test_ap004b_v1_6_generated_python_compiles() -> None:

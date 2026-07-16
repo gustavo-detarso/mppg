@@ -4827,15 +4827,15 @@ def _wiz_run_generate_interactive_with_local_flow(
         _pathlib.Path.write_text = original_write_text
 
 
-_generate_interactive_before_wizard_documentos_locais_v4 = generate_interactive
+_generate_interactive_before_wizard_documentos_locais = generate_interactive
 
 
-def _generate_interactive_with_wizard_documentos_locais_v4(
+def _generate_interactive_with_wizard_documentos_locais(
     *args: object,
     **kwargs: object,
 ) -> object:
     return _wiz_run_generate_interactive_with_local_flow(
-        _generate_interactive_before_wizard_documentos_locais_v4,
+        _generate_interactive_before_wizard_documentos_locais,
         *args,
         **kwargs,
     )
@@ -4844,7 +4844,7 @@ def _generate_interactive_with_wizard_documentos_locais_v4(
 # Importação pelo academic_pipeline_rc10.py passa a receber esta função.
 # Execução direta deste arquivo também funciona, pois main() chama o nome
 # global generate_interactive em tempo de execução.
-generate_interactive = _generate_interactive_with_wizard_documentos_locais_v4
+generate_interactive = _generate_interactive_with_wizard_documentos_locais
 # <<< PATCH_WIZARD_DOCUMENTOS_LOCAIS_V4 <<<
 
 
@@ -4855,7 +4855,7 @@ generate_interactive = _generate_interactive_with_wizard_documentos_locais_v4
 _WIZ_V5_REFERENCE_POLICY: bool | None = None
 
 
-def _v5_is_local_document(data: dict[str, Any]) -> bool:
+def _is_local_document(data: dict[str, Any]) -> bool:
     preset = data.get("preset")
     return bool(
         getattr(preset, "local_corpus", False)
@@ -4864,14 +4864,14 @@ def _v5_is_local_document(data: dict[str, Any]) -> bool:
     )
 
 
-def _v5_reference_default(data: dict[str, Any]) -> bool:
+def _reference_default(data: dict[str, Any]) -> bool:
     """Atividade local começa sem referências; paper/dissertação preservam o padrão acadêmico."""
     preset = data.get("preset")
     key = str(getattr(preset, "key", ""))
     return key in {"paper_local_fgv", "paper_prisma_fgv", "dissertacao_local_fgv", "dissertacao_prisma_fgv", "resumo_artigos_local_fgv"}
 
 
-def _v5_normalise_prompt(value: object) -> str:
+def _normalise_prompt(value: object) -> str:
     import unicodedata as _unicodedata
 
     raw = str(value or "").strip().casefold()
@@ -4881,7 +4881,7 @@ def _v5_normalise_prompt(value: object) -> str:
     )
 
 
-def _v5_configure_reference_policy(data: dict[str, Any]) -> bool:
+def _configure_reference_policy(data: dict[str, Any]) -> bool:
     """Pergunta uma única vez e armazena a decisão no próprio estado do wizard."""
     global _WIZ_V5_REFERENCE_POLICY
     if "incluir_referencias_formais" in data:
@@ -4889,7 +4889,7 @@ def _v5_configure_reference_policy(data: dict[str, Any]) -> bool:
         _WIZ_V5_REFERENCE_POLICY = value
         return value
 
-    default = _v5_reference_default(data)
+    default = _reference_default(data)
     value = ask_bool(
         "Este documento local deve conter citações e referências bibliográficas formais?",
         default,
@@ -4909,10 +4909,10 @@ _v5_collect_outputs_and_options_original = collect_outputs_and_options
 
 def collect_outputs_and_options(data: dict[str, Any]) -> None:
     """Coleta saídas e suprime perguntas bibliográficas quando a política for sem referências."""
-    if not _v5_is_local_document(data):
+    if not _is_local_document(data):
         return _v5_collect_outputs_and_options_original(data)
 
-    include_references = _v5_configure_reference_policy(data)
+    include_references = _configure_reference_policy(data)
     if include_references:
         return _v5_collect_outputs_and_options_original(data)
 
@@ -4922,7 +4922,7 @@ def collect_outputs_and_options(data: dict[str, Any]) -> None:
     original_choice = globals()["ask_choice"]
 
     def policy_bool(prompt: str, default: bool = True) -> bool:
-        normalized = _v5_normalise_prompt(prompt)
+        normalized = _normalise_prompt(prompt)
         suppressed = (
             "gerar mapa mental apos referencias",
             "buscar/enriquecer metadados por doi/buscadores",
@@ -4934,7 +4934,7 @@ def collect_outputs_and_options(data: dict[str, Any]) -> None:
         return original_bool(prompt, default)
 
     def policy_choice(prompt: str, choices: list[str], default: str) -> str:
-        if "estilo bibliografico" in _v5_normalise_prompt(prompt):
+        if "estilo bibliografico" in _normalise_prompt(prompt):
             return "abnt"
         return original_choice(prompt, choices, default)
 
@@ -4961,7 +4961,7 @@ _v5_render_toml_original = render_toml
 def render_toml(data: dict[str, Any]) -> str:
     """Renderiza valores coerentes, sem depender de mutação posterior do arquivo."""
     text = _v5_render_toml_original(data)
-    if _v5_is_local_document(data) and not bool(data.get("incluir_referencias_formais", True)):
+    if _is_local_document(data) and not bool(data.get("incluir_referencias_formais", True)):
         text = _wiz_disable_references(text)
     try:
         tomllib.loads(text)
@@ -4975,14 +4975,14 @@ def render_toml(data: dict[str, Any]) -> str:
 if "_WizInputController" in globals():
     _v5_original_ensure_reference_policy = _WizInputController._ensure_reference_policy
 
-    def _v5_ensure_reference_policy(self: object) -> None:
+    def _ensure_reference_policy(self: object) -> None:
         policy = globals().get("_WIZ_V5_REFERENCE_POLICY")
         if policy is not None:
             self.state.references_formal = bool(policy)
             return
         return _v5_original_ensure_reference_policy(self)
 
-    _WizInputController._ensure_reference_policy = _v5_ensure_reference_policy
+    _WizInputController._ensure_reference_policy = _ensure_reference_policy
 # <<< PATCH_POLITICA_REFERENCIAS_FORMAIS_V5 <<<
 
 # >>> PATCH_CORRECAO_REFERENCIAS_V5_2 >>>

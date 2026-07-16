@@ -73,6 +73,7 @@ def test_historical_helpers_are_thin_wrappers() -> None:
         name: EXPECTED_HELPERS.count(name)
         for name in set(EXPECTED_HELPERS)
     }
+    implementation_aliases = {'output_paths': '_impl_output_paths', 'apply_cli_path_overrides': '_impl_apply_cli_path_overrides', 'load_existing_document_json': '_impl_load_existing_document_json', 'resolve_bib_for_existing_document': '_impl_resolve_bib_for_existing_document', '_resolve_latex_paths_for_recompile': '_impl_resolve_latex_paths_for_recompile', 'run_recompile': '_impl_run_recompile', 'render_additional_language_versions': '_impl_render_additional_language_versions', '_refs_v6_disabled': '_impl_refs_disabled', '_refs_v6_apply_runtime_policy': '_impl_refs_apply_runtime_policy', 'load_config': '_impl_load_config', 'build_bibliography': '_impl_build_bibliography', '_refs_v6_clear_document_bibliography': '_impl_refs_clear_document_bibliography', 'render_org_latex': '_impl_render_org_latex'}
 
     for helper, expected_wrapper_count in expected_wrapper_counts.items():
         matches = [
@@ -80,9 +81,10 @@ def test_historical_helpers_are_thin_wrappers() -> None:
             for node in functions
             if node.name == helper
         ]
-
         assert len(matches) >= expected_wrapper_count
-
+        expected_impl = implementation_aliases.get(
+            helper, f"_ap003d_impl_{helper}"
+        )
         thin_wrappers = []
         for match in matches:
             calls = [
@@ -90,13 +92,8 @@ def test_historical_helpers_are_thin_wrappers() -> None:
                 for node in ast.walk(match)
                 if isinstance(node, ast.Call)
             ]
-
-            if any(
-                name.startswith(f"_ap003d_impl_{helper}")
-                for name in calls
-            ):
+            if expected_impl in calls:
                 thin_wrappers.append(match)
-
         assert len(thin_wrappers) == expected_wrapper_count
 
 

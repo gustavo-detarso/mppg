@@ -301,8 +301,8 @@ def _section(cfg: dict[str, Any], name: str) -> dict[str, Any]:
 
 def output_paths(cfg: dict[str, Any]) -> tuple[Path, str]:
     """Resolve a saída final do documento pela seção [paths]."""
-    from academic_pipeline.document_orchestration import output_paths_impl as _ap003d_impl_output_paths
-    return _ap003d_impl_output_paths({**globals(), **locals()}, cfg)
+    from academic_pipeline.document_orchestration import output_paths_impl as _impl_output_paths
+    return _impl_output_paths({**globals(), **locals()}, cfg)
 
 
 def research_output_paths(cfg: dict[str, Any]) -> tuple[Path, str]:
@@ -336,19 +336,19 @@ def apply_cli_path_overrides(cfg: dict[str, Any], args: argparse.Namespace) -> d
     A prioridade fica: CLI > TOML. Os caminhos continuam sendo resolvidos
     posteriormente em relação ao diretório do TOML, salvo quando absolutos.
     """
-    from academic_pipeline.document_orchestration import apply_cli_path_overrides_impl as _ap003d_impl_apply_cli_path_overrides
-    return _ap003d_impl_apply_cli_path_overrides({**globals(), **locals()}, cfg, args)
+    from academic_pipeline.document_orchestration import apply_cli_path_overrides_impl as _impl_apply_cli_path_overrides
+    return _impl_apply_cli_path_overrides({**globals(), **locals()}, cfg, args)
 
 
 def load_existing_document_json(path: Path) -> AcademicDocument:
-    from academic_pipeline.document_orchestration import load_existing_document_json_impl as _ap003d_impl_load_existing_document_json
-    return _ap003d_impl_load_existing_document_json({**globals(), **locals()}, path)
+    from academic_pipeline.document_orchestration import load_existing_document_json_impl as _impl_load_existing_document_json
+    return _impl_load_existing_document_json({**globals(), **locals()}, path)
 
 
 def resolve_bib_for_existing_document(document: AcademicDocument, document_json_path: Path, out_dir: Path, prefix: str) -> tuple[Path, list[str]]:
     """Resolve o .bib em modo --somente-renderizar sem exigir que ele já esteja no output_dir."""
-    from academic_pipeline.document_orchestration import resolve_bib_for_existing_document_impl as _ap003d_impl_resolve_bib_for_existing_document
-    return _ap003d_impl_resolve_bib_for_existing_document({**globals(), **locals()}, document, document_json_path, out_dir, prefix)
+    from academic_pipeline.document_orchestration import resolve_bib_for_existing_document_impl as _impl_resolve_bib_for_existing_document
+    return _impl_resolve_bib_for_existing_document({**globals(), **locals()}, document, document_json_path, out_dir, prefix)
 
 
 def _openai_model_from_cfg(cfg: dict[str, Any]) -> str:
@@ -365,13 +365,13 @@ def _load_optional_config(path: str | None) -> dict[str, Any] | None:
 
 
 def _resolve_latex_paths_for_recompile(args: argparse.Namespace, cfg: dict[str, Any] | None) -> tuple[Path | None, Path | None, str]:
-    from academic_pipeline.document_orchestration import _resolve_latex_paths_for_recompile_impl as _ap003d_impl__resolve_latex_paths_for_recompile
-    return _ap003d_impl__resolve_latex_paths_for_recompile({**globals(), **locals()}, args, cfg)
+    from academic_pipeline.document_orchestration import _resolve_latex_paths_for_recompile_impl as _impl_resolve_latex_paths_for_recompile
+    return _impl_resolve_latex_paths_for_recompile({**globals(), **locals()}, args, cfg)
 
 
 def run_recompile(args: argparse.Namespace, cfg: dict[str, Any] | None) -> int:
-    from academic_pipeline.document_orchestration import run_recompile_impl as _ap003d_impl_run_recompile
-    return _ap003d_impl_run_recompile({**globals(), **locals()}, args, cfg)
+    from academic_pipeline.document_orchestration import run_recompile_impl as _impl_run_recompile
+    return _impl_run_recompile({**globals(), **locals()}, args, cfg)
 
 
 
@@ -393,8 +393,8 @@ def render_additional_language_versions(*, client: Any, model: str, cfg: dict[st
     compartilha a bibliografia original, copiada sem tradução. A função nunca
     consulta novamente o corpus nem gera uma segunda análise acadêmica.
     """
-    from academic_pipeline.document_orchestration import render_additional_language_versions_impl as _ap003d_impl_render_additional_language_versions
-    return _ap003d_impl_render_additional_language_versions({**globals(), **locals()}, client=client, model=model, cfg=cfg, document=document, bib_path=bib_path, bib_keys=bib_keys, out_dir=out_dir, prefix=prefix, doc_cfg=doc_cfg, latex_cfg=latex_cfg, config_dir=config_dir, abstract_bundle=abstract_bundle)
+    from academic_pipeline.document_orchestration import render_additional_language_versions_impl as _impl_render_additional_language_versions
+    return _impl_render_additional_language_versions({**globals(), **locals()}, client=client, model=model, cfg=cfg, document=document, bib_path=bib_path, bib_keys=bib_keys, out_dir=out_dir, prefix=prefix, doc_cfg=doc_cfg, latex_cfg=latex_cfg, config_dir=config_dir, abstract_bundle=abstract_bundle)
 
 
 
@@ -1250,33 +1250,33 @@ def _ap003f_pipeline_core() -> int:
 # compatibilidade, TOMLs antigos com todos os flags bibliográficos desligados
 # também entram no modo sem referências.
 def _refs_v6_disabled(cfg: dict[str, Any] | None) -> bool:
-    from academic_pipeline.document_orchestration import _refs_v6_disabled_impl as _ap003d_impl__refs_v6_disabled
-    return _ap003d_impl__refs_v6_disabled({**globals(), **locals()}, cfg)
+    from academic_pipeline.document_orchestration import _refs_v6_disabled_impl as _impl_refs_disabled
+    return _impl_refs_disabled({**globals(), **locals()}, cfg)
 
 
 def _refs_v6_apply_runtime_policy(cfg: dict[str, Any]) -> dict[str, Any]:
-    from academic_pipeline.document_orchestration import _refs_v6_apply_runtime_policy_impl as _ap003d_impl__refs_v6_apply_runtime_policy
-    return _ap003d_impl__refs_v6_apply_runtime_policy({**globals(), **locals()}, cfg)
+    from academic_pipeline.document_orchestration import _refs_v6_apply_runtime_policy_impl as _impl_refs_apply_runtime_policy
+    return _impl_refs_apply_runtime_policy({**globals(), **locals()}, cfg)
 
 
 # Carrega a política antes de qualquer rotina de descoberta, bibliografia ou IA.
 _refs_v6_original_load_config = load_config
 def load_config(path: Path) -> dict[str, Any]:
-    from academic_pipeline.document_orchestration import load_config_impl as _ap003d_impl_load_config
-    return _ap003d_impl_load_config({**globals(), **locals()}, path)
+    from academic_pipeline.document_orchestration import load_config_impl as _impl_load_config
+    return _impl_load_config({**globals(), **locals()}, path)
 
 
 # Impede a construção física do .bib. Um Path sentinela mantém compatibilidade
 # com funções que recebem bib_path, mas o arquivo não é criado e as chaves ficam vazias.
 _refs_v6_original_build_bibliography = build_bibliography
 def build_bibliography(cfg: dict[str, Any], docs: Any, out_dir: Path, prefix: str, client: Any, model: str) -> Any:
-    from academic_pipeline.document_orchestration import build_bibliography_impl as _ap003d_impl_build_bibliography
-    return _ap003d_impl_build_bibliography({**globals(), **locals()}, cfg, docs, out_dir, prefix, client, model)
+    from academic_pipeline.document_orchestration import build_bibliography_impl as _impl_build_bibliography
+    return _impl_build_bibliography({**globals(), **locals()}, cfg, docs, out_dir, prefix, client, model)
 
 
 def _refs_v6_clear_document_bibliography(document: Any) -> Any:
-    from academic_pipeline.document_orchestration import _refs_v6_clear_document_bibliography_impl as _ap003d_impl__refs_v6_clear_document_bibliography
-    return _ap003d_impl__refs_v6_clear_document_bibliography({**globals(), **locals()}, document)
+    from academic_pipeline.document_orchestration import _refs_v6_clear_document_bibliography_impl as _impl_refs_clear_document_bibliography
+    return _impl_refs_clear_document_bibliography({**globals(), **locals()}, document)
 
 
 def _refs_v6_strip_org(text: str) -> str:
@@ -1288,8 +1288,8 @@ def _refs_v6_strip_org(text: str) -> str:
 # intermediário trouxer marcas bibliográficas inesperadas.
 _refs_v6_original_render_org_latex = render_org_latex
 def render_org_latex(document: Any, org_path: Path, bib_filename: str, *, cfg: dict[str, Any], bib_keys: list[str] | None=None) -> str:
-    from academic_pipeline.document_orchestration import render_org_latex_impl as _ap003d_impl_render_org_latex
-    return _ap003d_impl_render_org_latex({**globals(), **locals()}, document, org_path, bib_filename, cfg=cfg, bib_keys=bib_keys)
+    from academic_pipeline.document_orchestration import render_org_latex_impl as _impl_render_org_latex
+    return _impl_render_org_latex({**globals(), **locals()}, document, org_path, bib_filename, cfg=cfg, bib_keys=bib_keys)
 # <<< PATCH_REFERENCIAS_FORMAIS_EFETIVAS_V6_RUNTIME <<<
 
 
