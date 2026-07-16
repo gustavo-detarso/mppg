@@ -281,36 +281,34 @@ def test_ap004c_current_status_is_output_scope_or_clean_and_commit_is_durable() 
         if line.strip() and not _ephemeral(_status_path(line))
     }
     expected = set(EXPECTED_AP004C_APPLICATION_OUTPUTS)
-    if actual:
+    result = _run(
+        "git", "log", "--format=%H%x00%s", f"{BASELINE_HEAD}..HEAD"
+    )
+    assert result.returncode == 0, result.stderr
+    matches = []
+    for line in result.stdout.splitlines():
+        if "\x00" not in line:
+            continue
+        commit, subject = line.split("\x00", 1)
+        if subject == EXPECTED_AP004C_APPLICATION_SUBJECT:
+            matches.append(commit)
+    if not matches:
         assert actual == expected
         assert _run("git", "rev-parse", "HEAD").stdout.strip() == BASELINE_HEAD
-    else:
-        result = _run(
-            "git", "log", "--format=%H%x00%s", f"{BASELINE_HEAD}..HEAD"
-        )
-        assert result.returncode == 0, result.stderr
-        matches = []
-        for line in result.stdout.splitlines():
-            if "\x00" not in line:
-                continue
-            commit, subject = line.split("\x00", 1)
-            if subject == EXPECTED_AP004C_APPLICATION_SUBJECT:
-                matches.append(commit)
-        assert len(matches) == 1
-        changed = _run(
-            "git", "diff-tree", "--no-commit-id", "--name-only",
-            "-r", matches[0],
-        )
-        assert changed.returncode == 0, changed.stderr
-        normalized = {
-            path[len(SOFTWARE_PREFIX):]
-            if path.startswith(SOFTWARE_PREFIX) else path
-            for path in changed.stdout.splitlines() if path
-        }
-        assert normalized == expected
-        assert _run(
-            "git", "merge-base", "--is-ancestor", BASELINE_HEAD, "HEAD"
-        ).returncode == 0
+        return
+    assert len(matches) == 1
+    changed = _run(
+        "git", "diff-tree", "--no-commit-id", "--name-only", "-r", matches[0]
+    )
+    assert changed.returncode == 0, changed.stderr
+    normalized = {
+        path[len(SOFTWARE_PREFIX):] if path.startswith(SOFTWARE_PREFIX) else path
+        for path in changed.stdout.splitlines() if path
+    }
+    assert normalized == expected
+    assert _run(
+        "git", "merge-base", "--is-ancestor", BASELINE_HEAD, "HEAD"
+    ).returncode == 0
 
 
 def test_ap004c_generated_artifacts_and_tool_compile() -> None:

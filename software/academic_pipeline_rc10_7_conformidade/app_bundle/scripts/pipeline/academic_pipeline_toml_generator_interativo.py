@@ -4852,7 +4852,7 @@ generate_interactive = _generate_interactive_with_wizard_documentos_locais
 # Política nativa de referências para documentos locais. Esta camada atua em
 # collect_outputs_and_options() e render_toml(), não após o TOML ser salvo.
 
-_WIZ_V5_REFERENCE_POLICY: bool | None = None
+_WIZ_REFERENCE_POLICY: bool | None = None
 
 
 def _is_local_document(data: dict[str, Any]) -> bool:
@@ -4883,10 +4883,10 @@ def _normalise_prompt(value: object) -> str:
 
 def _configure_reference_policy(data: dict[str, Any]) -> bool:
     """Pergunta uma única vez e armazena a decisão no próprio estado do wizard."""
-    global _WIZ_V5_REFERENCE_POLICY
+    global _WIZ_REFERENCE_POLICY
     if "incluir_referencias_formais" in data:
         value = bool(data["incluir_referencias_formais"])
-        _WIZ_V5_REFERENCE_POLICY = value
+        _WIZ_REFERENCE_POLICY = value
         return value
 
     default = _reference_default(data)
@@ -4895,7 +4895,7 @@ def _configure_reference_policy(data: dict[str, Any]) -> bool:
         default,
     )
     data["incluir_referencias_formais"] = bool(value)
-    _WIZ_V5_REFERENCE_POLICY = bool(value)
+    _WIZ_REFERENCE_POLICY = bool(value)
     if not value:
         print(
             "- Política sem referências selecionada: citações, .bib, DOI, estilo bibliográfico "
@@ -4904,17 +4904,17 @@ def _configure_reference_policy(data: dict[str, Any]) -> bool:
     return bool(value)
 
 
-_v5_collect_outputs_and_options_original = collect_outputs_and_options
+_collect_outputs_and_options_original = collect_outputs_and_options
 
 
 def collect_outputs_and_options(data: dict[str, Any]) -> None:
     """Coleta saídas e suprime perguntas bibliográficas quando a política for sem referências."""
     if not _is_local_document(data):
-        return _v5_collect_outputs_and_options_original(data)
+        return _collect_outputs_and_options_original(data)
 
     include_references = _configure_reference_policy(data)
     if include_references:
-        return _v5_collect_outputs_and_options_original(data)
+        return _collect_outputs_and_options_original(data)
 
     # A função original continua coletando ORG/PDF/DOCX/conformidade/qualidade,
     # mas estes retornos impedem perguntas incompatíveis e gravam valores seguros.
@@ -4941,7 +4941,7 @@ def collect_outputs_and_options(data: dict[str, Any]) -> None:
     globals()["ask_bool"] = policy_bool
     globals()["ask_choice"] = policy_choice
     try:
-        _v5_collect_outputs_and_options_original(data)
+        _collect_outputs_and_options_original(data)
     finally:
         globals()["ask_bool"] = original_bool
         globals()["ask_choice"] = original_choice
@@ -4955,12 +4955,12 @@ def collect_outputs_and_options(data: dict[str, Any]) -> None:
     data["preservar_referencias_originais"] = False
 
 
-_v5_render_toml_original = render_toml
+_render_toml_original = render_toml
 
 
 def render_toml(data: dict[str, Any]) -> str:
     """Renderiza valores coerentes, sem depender de mutação posterior do arquivo."""
-    text = _v5_render_toml_original(data)
+    text = _render_toml_original(data)
     if _is_local_document(data) and not bool(data.get("incluir_referencias_formais", True)):
         text = _wiz_disable_references(text)
     try:
@@ -4973,14 +4973,14 @@ def render_toml(data: dict[str, Any]) -> str:
 # Compatibilidade: v3/v4 interceptam Path.write_text e poderiam perguntar outra
 # vez ao salvar. A decisão já foi tomada na etapa de saídas, então a sincronizamos.
 if "_WizInputController" in globals():
-    _v5_original_ensure_reference_policy = _WizInputController._ensure_reference_policy
+    _original_ensure_reference_policy = _WizInputController._ensure_reference_policy
 
     def _ensure_reference_policy(self: object) -> None:
-        policy = globals().get("_WIZ_V5_REFERENCE_POLICY")
+        policy = globals().get("_WIZ_REFERENCE_POLICY")
         if policy is not None:
             self.state.references_formal = bool(policy)
             return
-        return _v5_original_ensure_reference_policy(self)
+        return _original_ensure_reference_policy(self)
 
     _WizInputController._ensure_reference_policy = _ensure_reference_policy
 # <<< PATCH_POLITICA_REFERENCIAS_FORMAIS_V5 <<<
@@ -4990,11 +4990,11 @@ if "_WizInputController" in globals():
 # A função abaixo é chamada pela renderização final e também pelo interceptor
 # de salvamento do wizard, portanto a decisão se mantém em todos os fluxos.
 
-_wiz_disable_references_pre_v5_2 = _wiz_disable_references
+_wiz_disable_references_original = _wiz_disable_references
 
 
 def _wiz_disable_references(text: str) -> str:
-    text = _wiz_disable_references_pre_v5_2(text)
+    text = _wiz_disable_references_original(text)
     for _section, _key in (
         ("documento", "referencias_formais"),
         ("bibliografia", "ativo"),

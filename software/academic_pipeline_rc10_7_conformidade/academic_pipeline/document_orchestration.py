@@ -9,7 +9,7 @@ class DocumentStageResult:
     values: dict[str, Any]
 
 def load_config_impl(runtime, path):
-    return runtime['_refs_v6_apply_runtime_policy'](runtime['_refs_v6_original_load_config'](path))
+    return runtime['_refs_apply_runtime_policy'](runtime['_refs_original_load_config'](path))
 
 def output_paths_impl(runtime, cfg):
     """Resolve a saída final do documento pela seção [paths]."""
@@ -170,7 +170,7 @@ def render_additional_language_versions_impl(runtime, *, client, model, cfg, doc
         result[language_code] = {'idioma': language_label, 'output_dir': str(language_dir), 'document_json': str(document_json), 'translation_audit': str(audit_path), 'org': str(org_path), 'pdf': str(pdf_path) if pdf_path else None, 'docx': str(docx_path) if docx_path else None, 'bib': str(language_bib), 'quality_report': str(quality_path)}
     return (result, warnings)
 
-def _refs_v6_disabled_impl(runtime, cfg):
+def _refs_disabled_impl(runtime, cfg):
     if not isinstance(cfg, dict):
         return False
     bibliography = cfg.get('bibliografia', {}) if isinstance(cfg.get('bibliografia'), dict) else {}
@@ -182,8 +182,8 @@ def _refs_v6_disabled_impl(runtime, cfg):
         return not bool(document.get('referencias_formais'))
     return local.get('auto_detect_bib') is False and local.get('gerar_bib_revisado_ia') is False and (document.get('usar_citacoes_latex_diretas') is False)
 
-def _refs_v6_apply_runtime_policy_impl(runtime, cfg):
-    if not runtime['_refs_v6_disabled'](cfg):
+def _refs_apply_runtime_policy_impl(runtime, cfg):
+    if not runtime['_refs_disabled'](cfg):
         return cfg
     bibliography = cfg.setdefault('bibliografia', {})
     if not isinstance(bibliography, dict):
@@ -217,12 +217,12 @@ def _refs_v6_apply_runtime_policy_impl(runtime, cfg):
     return cfg
 
 def build_bibliography_impl(runtime, cfg, docs, out_dir, prefix, client, model):
-    if runtime['_refs_v6_disabled'](cfg):
+    if runtime['_refs_disabled'](cfg):
         from types import SimpleNamespace
         return SimpleNamespace(bib_path=runtime['Path'](out_dir) / f'{prefix}.bib', keys=[])
-    return runtime['_refs_v6_original_build_bibliography'](cfg, docs, out_dir, prefix, client, model)
+    return runtime['_refs_original_build_bibliography'](cfg, docs, out_dir, prefix, client, model)
 
-def _refs_v6_clear_document_bibliography_impl(runtime, document):
+def _refs_clear_document_bibliography_impl(runtime, document):
     bibliography = getattr(document, 'bibliography', None)
     if bibliography is not None:
         try:
@@ -235,7 +235,7 @@ def _refs_v6_clear_document_bibliography_impl(runtime, document):
             pass
     return document
 
-def _refs_v6_strip_org_impl(runtime, text):
+def _refs_strip_org_impl(runtime, text):
     import re as _re
     text = _re.sub('(?im)^.*(?:#\\+(?:print_)?bibliography|\\\\addbibresource|\\\\printbibliography).*(?:\\n|$)', '', text)
     text = _re.sub('(?is)\\[cite(?:/[\\w-]+)?\\s*:[^\\]]*\\]', '', text)
@@ -246,10 +246,10 @@ def _refs_v6_strip_org_impl(runtime, text):
     return _re.sub('\\n{3,}', '\n\n', text).strip() + '\n'
 
 def render_org_latex_impl(runtime, document, org_path, bib_filename, *, cfg, bib_keys):
-    if not runtime['_refs_v6_disabled'](cfg):
-        return runtime['_refs_v6_original_render_org_latex'](document, org_path, bib_filename, cfg=cfg, bib_keys=bib_keys)
-    document = runtime['_refs_v6_clear_document_bibliography'](document)
-    rendered = runtime['_refs_v6_original_render_org_latex'](document, org_path, bib_filename, cfg=cfg, bib_keys=[])
+    if not runtime['_refs_disabled'](cfg):
+        return runtime['_refs_original_render_org_latex'](document, org_path, bib_filename, cfg=cfg, bib_keys=bib_keys)
+    document = runtime['_refs_clear_document_bibliography'](document)
+    rendered = runtime['_refs_original_render_org_latex'](document, org_path, bib_filename, cfg=cfg, bib_keys=[])
     clean = runtime['_refs_v6_strip_org'](rendered)
     runtime['Path'](org_path).write_text(clean, encoding='utf-8')
     return clean
@@ -434,4 +434,4 @@ def run_document_stage_012(args, runtime):
         if _ap003d_name in locals():
             _ap003d_values[_ap003d_name] = locals()[_ap003d_name]
     return DocumentStageResult(False, None, _ap003d_values)
-__all__ = ['DocumentStageResult', 'load_config_impl', 'output_paths_impl', 'apply_cli_path_overrides_impl', 'load_existing_document_json_impl', 'resolve_bib_for_existing_document_impl', '_resolve_latex_paths_for_recompile_impl', 'run_recompile_impl', 'render_additional_language_versions_impl', '_refs_v6_disabled_impl', '_refs_v6_apply_runtime_policy_impl', 'build_bibliography_impl', '_refs_v6_clear_document_bibliography_impl', '_refs_v6_strip_org_impl', 'render_org_latex_impl', 'run_document_stage_001', 'run_document_stage_002', 'run_document_stage_003', 'run_document_stage_004', 'run_document_stage_005', 'run_document_stage_006', 'run_document_stage_007', 'run_document_stage_008', 'run_document_stage_009', 'run_document_stage_010', 'run_document_stage_011', 'run_document_stage_012']
+__all__ = ['DocumentStageResult', 'load_config_impl', 'output_paths_impl', 'apply_cli_path_overrides_impl', 'load_existing_document_json_impl', 'resolve_bib_for_existing_document_impl', '_resolve_latex_paths_for_recompile_impl', 'run_recompile_impl', 'render_additional_language_versions_impl', '_refs_disabled_impl', '_refs_apply_runtime_policy_impl', 'build_bibliography_impl', '_refs_clear_document_bibliography_impl', '_refs_strip_org_impl', 'render_org_latex_impl', 'run_document_stage_001', 'run_document_stage_002', 'run_document_stage_003', 'run_document_stage_004', 'run_document_stage_005', 'run_document_stage_006', 'run_document_stage_007', 'run_document_stage_008', 'run_document_stage_009', 'run_document_stage_010', 'run_document_stage_011', 'run_document_stage_012']
