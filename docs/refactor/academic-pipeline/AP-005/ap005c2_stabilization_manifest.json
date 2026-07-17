@@ -17,7 +17,7 @@
     "tools/refactor/ap005c_inventory_toml_capture_aliases.py"
   ],
   "commit": 0,
-  "contract_fingerprint": "9cfc858992cdb30343d02d6526eb36ae6e8f2cc82fecf762f6849673022528f1",
+  "contract_fingerprint": "2014d0ca0daa8d19918cd813370b1c19b5e9c5312b757a45514be4c04ed9110f",
   "core_file_hashes": {
     "docs/refactor/academic-pipeline/AP-005/AP-005C_TOML_CAPTURE_ALIAS_STRATEGY.md": "4e01b0596b7f55033074f775ababaff48f84fbef46312d490c4a05e5c7792e6c",
     "docs/refactor/academic-pipeline/AP-005/ap005c_toml_capture_alias_inventory.json": "f97714602a8c0d076d54819ec429ad8c492768e1754ea2a326e4e3f71dfc5f63",
@@ -26,7 +26,7 @@
     "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_inventory_contract.py": "afbd6003479a49b9633f54f41032ddf2906a82147073728b675642e7c695c170",
     "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py": "031a7f56feab2fca7d6729bb5ed117f92abe26a05f80866ca9218d4b539f4795",
     "tools/refactor/ap005c1_apply_toml_capture_aliases.py": "4be0bc2bc9de73513f7743be8489a750006dc58c835c21e74cf0f231f07f4a68",
-    "tools/refactor/ap005c_inventory_toml_capture_aliases.py": "d3a59884d0a6262adb1e07593bb476f7c4fce05587e65742563f8911184a98f8"
+    "tools/refactor/ap005c_inventory_toml_capture_aliases.py": "aed2b3859c124052b0ffa2d0b6a309f6485af3af18added6504c1d65c7fb8137"
   },
   "entries": [
     {

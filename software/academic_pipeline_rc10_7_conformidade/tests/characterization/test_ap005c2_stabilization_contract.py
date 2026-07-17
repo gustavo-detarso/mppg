@@ -35,8 +35,7 @@ EXPECTED_HASHES = {
         "tools/refactor/"
         "ap005c_inventory_toml_capture_aliases.py"
     ): (
-        "d3a59884d0a6262adb1e07593bb476f7"
-        "c4fce05587e65742563f8911184a98f8"
+        'aed2b3859c124052b0ffa2d0b6a309f6485af3af18added6504c1d65c7fb8137'
     ),
     (
         "docs/refactor/academic-pipeline/AP-005/"

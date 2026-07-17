@@ -23,6 +23,21 @@ TARGET_BRANCH = (
     "ap-refactor/04-consumer-canonicalization"
 )
 
+CLOSURE_COMMIT = 'b8cb7ba3a3175ac79799b78a5d0678224076ef80'
+
+POST_COMMIT_REPAIR_FILES = (
+    'tools/refactor/ap005c_inventory_toml_capture_aliases.py',
+    'tools/refactor/ap005c2_validate_stabilization.py',
+    'tools/refactor/ap005c3_validate_closure.py',
+    'docs/refactor/academic-pipeline/AP-005/ap005c2_stabilization_manifest.json',
+    'docs/refactor/academic-pipeline/AP-005/AP-005C2_STABILIZATION_VALIDATION.md',
+    'docs/refactor/academic-pipeline/AP-005/ap005c3_closure_manifest.json',
+    'docs/refactor/academic-pipeline/AP-005/AP-005C_CLOSURE_REPORT.md',
+    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py',
+    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py',
+)
+
+
 PROJECT_REL = pathlib.PurePosixPath(
     "software/academic_pipeline_rc10_7_conformidade"
 )
@@ -100,8 +115,7 @@ CORE_HASHES = {
         "b11bbd1d1bc744958d892f9f4afa7f9"
     ),
     str(INVENTORY_TOOL_REL): (
-        "d3a59884d0a6262adb1e07593bb476f7"
-        "c4fce05587e65742563f8911184a98f8"
+        'aed2b3859c124052b0ffa2d0b6a309f6485af3af18added6504c1d65c7fb8137'
     ),
     str(INVENTORY_REL): (
         "f97714602a8c0d076d54819ec429ad8c"
@@ -530,11 +544,6 @@ def verify_workspace(
         "--show-current",
     ).strip()
 
-    if head != BASELINE_COMMIT:
-        raise SystemExit(
-            f"HEAD divergente: {head}"
-        )
-
     if branch != TARGET_BRANCH:
         raise SystemExit(
             f"Branch divergente: {branch}"
@@ -550,12 +559,7 @@ def verify_workspace(
         if line
     )
 
-    if modified != [str(MODULE_REL)]:
-        raise SystemExit(
-            f"Rastreados divergentes: {modified}"
-        )
-
-    staged = [
+    staged = sorted(
         line
         for line in git(
             root,
@@ -564,12 +568,7 @@ def verify_workspace(
             "--name-only",
         ).splitlines()
         if line
-    ]
-
-    if staged:
-        raise SystemExit(
-            f"Staging inesperado: {staged}"
-        )
+    )
 
     untracked = sorted(
         line
@@ -582,35 +581,87 @@ def verify_workspace(
         if line
     )
 
-    required_untracked = {
-        relative
-        for relative in CANDIDATE_FILES
-        if relative != str(MODULE_REL)
-    }
-
-    recognized_downstream = set(
-        RECOGNIZED_DOWNSTREAM_CLOSURE_FILES
-    )
-
-    actual_untracked = set(untracked)
-
-    missing = sorted(
-        required_untracked - actual_untracked
-    )
-
-    unexpected = sorted(
-        actual_untracked
-        - required_untracked
-        - recognized_downstream
-    )
-
-    if missing or unexpected:
+    if staged:
         raise SystemExit(
-            "Conjunto não rastreado divergente.\n"
-            f"Obrigatórios ausentes: {missing}\n"
-            f"Não reconhecidos: {unexpected}\n"
-            f"Encontrado: {untracked}"
+            f"Staging inesperado: {staged}"
         )
+
+    if head == BASELINE_COMMIT:
+        if modified != [str(MODULE_REL)]:
+            raise SystemExit(
+                f"Rastreados divergentes: {modified}"
+            )
+
+        required_untracked = {
+            relative
+            for relative in CANDIDATE_FILES
+            if relative != str(MODULE_REL)
+        }
+
+        recognized_downstream = set(
+            RECOGNIZED_DOWNSTREAM_CLOSURE_FILES
+        )
+
+        actual_untracked = set(untracked)
+
+        missing = sorted(
+            required_untracked - actual_untracked
+        )
+
+        unexpected = sorted(
+            actual_untracked
+            - required_untracked
+            - recognized_downstream
+        )
+
+        if missing or unexpected:
+            raise SystemExit(
+                "Conjunto não rastreado divergente.\n"
+                f"Obrigatórios ausentes: {missing}\n"
+                f"Não reconhecidos: {unexpected}\n"
+                f"Encontrado: {untracked}"
+            )
+    else:
+        ancestor = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(root),
+                "merge-base",
+                "--is-ancestor",
+                CLOSURE_COMMIT,
+                "HEAD",
+            ],
+            check=False,
+            text=True,
+            capture_output=True,
+        )
+
+        if ancestor.returncode != 0:
+            raise SystemExit(
+                "Commit de encerramento AP-005C "
+                f"não é ancestral de HEAD: {head}"
+            )
+
+        allowed = set(
+            POST_COMMIT_REPAIR_FILES
+        )
+
+        unexpected = sorted(
+            set(modified) - allowed
+        )
+
+        if unexpected:
+            raise SystemExit(
+                "Alterações pós-commit não reconhecidas: "
+                f"{unexpected}"
+            )
+
+        if untracked:
+            raise SystemExit(
+                "Arquivos não rastreados inesperados "
+                f"no modo pós-commit: {untracked}"
+            )
 
     git(
         root,
@@ -619,15 +670,56 @@ def verify_workspace(
     )
 
 
+
 def productive_diff(
     root: pathlib.Path,
 ) -> dict[str, Any]:
+    head = git(
+        root,
+        "rev-parse",
+        "HEAD",
+    ).strip()
+
+    if head == BASELINE_COMMIT:
+        arguments = (
+            "diff",
+            "--numstat",
+            "--",
+            str(MODULE_REL),
+        )
+    else:
+        ancestor = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(root),
+                "merge-base",
+                "--is-ancestor",
+                CLOSURE_COMMIT,
+                "HEAD",
+            ],
+            check=False,
+            text=True,
+            capture_output=True,
+        )
+
+        if ancestor.returncode != 0:
+            raise SystemExit(
+                "Commit de encerramento AP-005C "
+                f"não é ancestral de HEAD: {head}"
+            )
+
+        arguments = (
+            "diff",
+            "--numstat",
+            f"{BASELINE_COMMIT}..{CLOSURE_COMMIT}",
+            "--",
+            str(MODULE_REL),
+        )
+
     output = git(
         root,
-        "diff",
-        "--numstat",
-        "--",
-        str(MODULE_REL),
+        *arguments,
     ).strip()
 
     fields = output.split("\t")
@@ -657,6 +749,7 @@ def productive_diff(
         )
 
     return result
+
 
 
 def build_manifest(

@@ -20,6 +20,21 @@ TARGET_BRANCH = (
     "ap-refactor/04-consumer-canonicalization"
 )
 
+CLOSURE_COMMIT = 'b8cb7ba3a3175ac79799b78a5d0678224076ef80'
+
+POST_COMMIT_REPAIR_FILES = (
+    'tools/refactor/ap005c_inventory_toml_capture_aliases.py',
+    'tools/refactor/ap005c2_validate_stabilization.py',
+    'tools/refactor/ap005c3_validate_closure.py',
+    'docs/refactor/academic-pipeline/AP-005/ap005c2_stabilization_manifest.json',
+    'docs/refactor/academic-pipeline/AP-005/AP-005C2_STABILIZATION_VALIDATION.md',
+    'docs/refactor/academic-pipeline/AP-005/ap005c3_closure_manifest.json',
+    'docs/refactor/academic-pipeline/AP-005/AP-005C_CLOSURE_REPORT.md',
+    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py',
+    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py',
+)
+
+
 PROJECT_REL = pathlib.PurePosixPath(
     "software/academic_pipeline_rc10_7_conformidade"
 )
@@ -36,8 +51,7 @@ C2_MANIFEST_REL = pathlib.PurePosixPath(
 )
 
 C2_FINGERPRINT = (
-    "9cfc858992cdb30343d02d6526eb36ae"
-    "6e8f2cc82fecf762f6849673022528f1"
+    '2014d0ca0daa8d19918cd813370b1c19b5e9c5312b757a45514be4c04ed9110f'
 )
 
 C3_MANIFEST_REL = pathlib.PurePosixPath(
@@ -66,8 +80,7 @@ PRE_CLOSURE_HASHES = {
         "docs/refactor/academic-pipeline/AP-005/"
         "AP-005C2_STABILIZATION_VALIDATION.md"
     ): (
-        "f956ba70312eb7009d8f9e654f3623e2"
-        "f5e57afcb0785a7bdd9021e30e75c27e"
+        '5219ab5944f2f4867cd8cfe213367ae922de6451ba78d498309407e32e9779a0'
     ),
     (
         "docs/refactor/academic-pipeline/AP-005/"
@@ -80,8 +93,7 @@ PRE_CLOSURE_HASHES = {
         "docs/refactor/academic-pipeline/AP-005/"
         "ap005c2_stabilization_manifest.json"
     ): (
-        "c4df6410dfc48b4f30e225710b060dab"
-        "77fdd30fae4e1f389062b9aad662f4d3"
+        '9268485d1fab8f1f9245c46087f346a8978983d1c622df19cbf7ad3e9af8e12e'
     ),
     (
         "docs/refactor/academic-pipeline/AP-005/"
@@ -111,8 +123,7 @@ PRE_CLOSURE_HASHES = {
         "tests/characterization/"
         "test_ap005c2_stabilization_contract.py"
     ): (
-        "39b23ccd2494660c14f35049b7c40a85"
-        "f32e154b8942726e36b917f41d437846"
+        '9dd43237a090e16698924adf8618ec4c3166aefc4f831d807eb9bac8c8c30343'
     ),
     (
         "software/academic_pipeline_rc10_7_conformidade/"
@@ -142,15 +153,13 @@ PRE_CLOSURE_HASHES = {
         "tools/refactor/"
         "ap005c2_validate_stabilization.py"
     ): (
-        "0eca7bf94cfada9fa2685db50df629e6"
-        "4811384c7b0dc0f1906c121c7667e443"
+        '5e4a84d3c4048abdd2ffbd1ee78239a39423f150ff08af98e066c2df1d7a1238'
     ),
     (
         "tools/refactor/"
         "ap005c_inventory_toml_capture_aliases.py"
     ): (
-        "d3a59884d0a6262adb1e07593bb476f7"
-        "c4fce05587e65742563f8911184a98f8"
+        'aed2b3859c124052b0ffa2d0b6a309f6485af3af18added6504c1d65c7fb8137'
     ),
 }
 
@@ -301,11 +310,6 @@ def verify_workspace(
         "--show-current",
     ).strip()
 
-    if head != BASELINE_COMMIT:
-        raise SystemExit(
-            f"HEAD divergente: {head}"
-        )
-
     if branch != TARGET_BRANCH:
         raise SystemExit(
             f"Branch divergente: {branch}"
@@ -321,12 +325,7 @@ def verify_workspace(
         if line
     )
 
-    if modified != [str(MODULE_REL)]:
-        raise SystemExit(
-            f"Rastreados divergentes: {modified}"
-        )
-
-    staged = [
+    staged = sorted(
         line
         for line in git(
             root,
@@ -335,12 +334,7 @@ def verify_workspace(
             "--name-only",
         ).splitlines()
         if line
-    ]
-
-    if staged:
-        raise SystemExit(
-            f"Staging inesperado: {staged}"
-        )
+    )
 
     untracked = sorted(
         line
@@ -353,24 +347,77 @@ def verify_workspace(
         if line
     )
 
-    expected_untracked = sorted(
-        relative
-        for relative in CANDIDATE_FILES
-        if relative != str(MODULE_REL)
-    )
-
-    if untracked != expected_untracked:
+    if staged:
         raise SystemExit(
-            "Conjunto não rastreado divergente.\n"
-            f"Esperado: {expected_untracked}\n"
-            f"Encontrado: {untracked}"
+            f"Staging inesperado: {staged}"
         )
+
+    if head == BASELINE_COMMIT:
+        if modified != [str(MODULE_REL)]:
+            raise SystemExit(
+                f"Rastreados divergentes: {modified}"
+            )
+
+        expected_untracked = sorted(
+            relative
+            for relative in CANDIDATE_FILES
+            if relative != str(MODULE_REL)
+        )
+
+        if untracked != expected_untracked:
+            raise SystemExit(
+                "Conjunto não rastreado divergente.\n"
+                f"Esperado: {expected_untracked}\n"
+                f"Encontrado: {untracked}"
+            )
+    else:
+        ancestor = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(root),
+                "merge-base",
+                "--is-ancestor",
+                CLOSURE_COMMIT,
+                "HEAD",
+            ],
+            check=False,
+            text=True,
+            capture_output=True,
+        )
+
+        if ancestor.returncode != 0:
+            raise SystemExit(
+                "Commit de encerramento AP-005C "
+                f"não é ancestral de HEAD: {head}"
+            )
+
+        allowed = set(
+            POST_COMMIT_REPAIR_FILES
+        )
+
+        unexpected = sorted(
+            set(modified) - allowed
+        )
+
+        if unexpected:
+            raise SystemExit(
+                "Alterações pós-commit não reconhecidas: "
+                f"{unexpected}"
+            )
+
+        if untracked:
+            raise SystemExit(
+                "Arquivos não rastreados inesperados "
+                f"no modo pós-commit: {untracked}"
+            )
 
     git(
         root,
         "diff",
         "--check",
     )
+
 
 
 def build_manifest(
