@@ -1,0 +1,172 @@
+{
+  "application_strategy": {
+    "atomic": true,
+    "batch": "AP-005C.1",
+    "direct_substitution_by_current_name": "prohibited",
+    "legacy_alias_removal": "prohibited",
+    "new_public_exports": false,
+    "operation": "introduce_explicit_capture_symbols_preserve_legacy_aliases_and_migrate_internal_consumers",
+    "productive_application_status": "blocked_pending_characterization_and_explicit_approval"
+  },
+  "baseline_commit": "9372de8f621c9012a28d4c4a9a64e252a398bdf3",
+  "contract_fingerprint": "6775af14e03baaa9138b0d24fce40625fb7f1fc7293d665b46fdc7f4defd35d8",
+  "entries": [
+    {
+      "canonical_capture_name": "_captured_wiz_input_ensure_reference_policy",
+      "captured_expression": "_WizInputController._ensure_reference_policy",
+      "consumer_migration_policy": "migrate_internal_consumers_to_canonical_capture_name",
+      "direct_substitution_allowed": false,
+      "enclosure": [
+        "If@4975"
+      ],
+      "later_bindings": [
+        {
+          "kind": "AttributeAssign",
+          "line": 4985,
+          "source": "_WizInputController._ensure_reference_policy = _ensure_reference_policy"
+        }
+      ],
+      "legacy_alias": "_original_ensure_reference_policy",
+      "legacy_alias_policy": "preserve_as_compatibility_alias",
+      "ordering_contract": "capture_after_previous_binding_and_before_redefinition",
+      "previous_bindings": [
+        {
+          "kind": "ClassMethodDef",
+          "line": 4640,
+          "source": "def _ensure_reference_policy(self) -> None:"
+        }
+      ],
+      "reference_count": 1,
+      "reference_lines": [
+        4983
+      ],
+      "removal_allowed": false,
+      "requires_new_export": false,
+      "risk": "alto",
+      "runtime_identity_contract": "legacy_alias_and_canonical_capture_must_reference_same_previous_binding",
+      "source": "_original_ensure_reference_policy = _WizInputController._ensure_reference_policy",
+      "source_candidate_id": "AP004E-054764be4586",
+      "source_line": 4976
+    },
+    {
+      "canonical_capture_name": "_captured_wiz_disable_references",
+      "captured_expression": "_wiz_disable_references",
+      "consumer_migration_policy": "migrate_internal_consumers_to_canonical_capture_name",
+      "direct_substitution_allowed": false,
+      "enclosure": [],
+      "later_bindings": [
+        {
+          "kind": "FunctionDef",
+          "line": 4996,
+          "source": "def _wiz_disable_references(text: str) -> str:"
+        }
+      ],
+      "legacy_alias": "_wiz_disable_references_original",
+      "legacy_alias_policy": "preserve_as_compatibility_alias",
+      "ordering_contract": "capture_after_previous_binding_and_before_redefinition",
+      "previous_bindings": [
+        {
+          "kind": "FunctionDef",
+          "line": 4376,
+          "source": "def _wiz_disable_references(text: str) -> str:"
+        }
+      ],
+      "reference_count": 1,
+      "reference_lines": [
+        4997
+      ],
+      "removal_allowed": false,
+      "requires_new_export": false,
+      "risk": "alto",
+      "runtime_identity_contract": "legacy_alias_and_canonical_capture_must_reference_same_previous_binding",
+      "source": "_wiz_disable_references_original = _wiz_disable_references",
+      "source_candidate_id": "AP004E-5fa6e68ff3fc",
+      "source_line": 4993
+    },
+    {
+      "canonical_capture_name": "_captured_render_toml",
+      "captured_expression": "render_toml",
+      "consumer_migration_policy": "migrate_internal_consumers_to_canonical_capture_name",
+      "direct_substitution_allowed": false,
+      "enclosure": [],
+      "later_bindings": [
+        {
+          "kind": "FunctionDef",
+          "line": 4961,
+          "source": "def render_toml(data: dict[str, Any]) -> str:"
+        }
+      ],
+      "legacy_alias": "_render_toml_original",
+      "legacy_alias_policy": "preserve_as_compatibility_alias",
+      "ordering_contract": "capture_after_previous_binding_and_before_redefinition",
+      "previous_bindings": [
+        {
+          "kind": "FunctionDef",
+          "line": 3642,
+          "source": "def render_toml(data: dict[str, Any]) -> str:"
+        }
+      ],
+      "reference_count": 1,
+      "reference_lines": [
+        4963
+      ],
+      "removal_allowed": false,
+      "requires_new_export": false,
+      "risk": "alto",
+      "runtime_identity_contract": "legacy_alias_and_canonical_capture_must_reference_same_previous_binding",
+      "source": "_render_toml_original = render_toml",
+      "source_candidate_id": "AP004E-936e788786e4",
+      "source_line": 4958
+    },
+    {
+      "canonical_capture_name": "_captured_collect_outputs_and_options",
+      "captured_expression": "collect_outputs_and_options",
+      "consumer_migration_policy": "migrate_internal_consumers_to_canonical_capture_name",
+      "direct_substitution_allowed": false,
+      "enclosure": [],
+      "later_bindings": [
+        {
+          "kind": "FunctionDef",
+          "line": 4910,
+          "source": "def collect_outputs_and_options(data: dict[str, Any]) -> None:"
+        }
+      ],
+      "legacy_alias": "_collect_outputs_and_options_original",
+      "legacy_alias_policy": "preserve_as_compatibility_alias",
+      "ordering_contract": "capture_after_previous_binding_and_before_redefinition",
+      "previous_bindings": [
+        {
+          "kind": "FunctionDef",
+          "line": 3361,
+          "source": "def collect_outputs_and_options(data: dict[str, Any]) -> None:"
+        }
+      ],
+      "reference_count": 3,
+      "reference_lines": [
+        4913,
+        4917,
+        4944
+      ],
+      "removal_allowed": false,
+      "requires_new_export": false,
+      "risk": "alto",
+      "runtime_identity_contract": "legacy_alias_and_canonical_capture_must_reference_same_previous_binding",
+      "source": "_collect_outputs_and_options_original = collect_outputs_and_options",
+      "source_candidate_id": "AP004E-c3f6df07093a",
+      "source_line": 4907
+    }
+  ],
+  "productive_module": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+  "productive_module_sha256": "7b3ff44794275df2a3470796e78a25c3c87ca2c44f93fac6ec18eee397c89beb",
+  "schema_version": "ap005c.toml-capture-alias-inventory.v1",
+  "source_plan": "docs/refactor/academic-pipeline/AP-005/ap005b_consumer_canonicalization_plan.json",
+  "source_plan_fingerprint": "e659a91460dd5058ba6e49942454c26650eb4455e42f1d6e2ce450125f6284c8",
+  "summary": {
+    "aliases": 4,
+    "direct_substitution_allowed": 0,
+    "later_redefinitions_confirmed": 4,
+    "previous_bindings_confirmed": 4,
+    "productive_references": 6,
+    "removal_allowed": 0
+  }
+}
