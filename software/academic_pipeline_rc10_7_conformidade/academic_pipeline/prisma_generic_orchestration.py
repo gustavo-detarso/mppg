@@ -2,7 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Mapping
 _MISSING = object()
-_PROTECTED_RUNTIME_NAMES = frozenset(('PrismaStageResult', '_MISSING', '_PROTECTED_RUNTIME_NAMES', '__all__', '_ap003e_body__json_or_none_1', '_ap003e_body__prisma_artigo_generico_get_arg_1', '_ap003e_body__prisma_artigo_generico_out_dir_1', '_ap003e_body__prisma_artigo_generico_run_export_1', '_ap003e_body__prisma_artigo_generico_run_freeze_1', '_ap003e_body__prisma_artigo_generico_strip_1', '_ap003e_body__prisma_curadoria_arg_1', '_ap003e_body__prisma_curadoria_build_cmd_1', '_ap003e_body__prisma_curadoria_config_from_args_1', '_ap003e_body__prisma_curadoria_default_config_1', '_ap003e_body__prisma_curadoria_default_out_dir_1', '_ap003e_body__prisma_curadoria_default_prompt_1', '_ap003e_body__prisma_curadoria_dispatch_1', '_ap003e_body__prisma_curadoria_fluxo_completo_1', '_ap003e_body__prisma_curadoria_importar_no_pipeline_1', '_ap003e_body__prisma_curadoria_input_from_args_1', '_ap003e_body__prisma_curadoria_menu_1', '_ap003e_body__prisma_curadoria_mostrar_caminhos_1', '_ap003e_body__prisma_curadoria_out_from_args_1', '_ap003e_body__prisma_curadoria_pipeline_supports_flag_1', '_ap003e_body__prisma_curadoria_prompt_from_args_1', '_ap003e_body__prisma_curadoria_reexportar_xlsx_1', '_ap003e_body__prisma_curadoria_run_command_1', '_ap003e_body__prisma_curadoria_run_ia_1', '_ap003e_body__prisma_curadoria_script_path_1', '_ap003e_body__section_1', '_ap003e_body_main_2', '_ap003e_body_make_client_1', '_ap003e_body_render_external_prisma_outputs_1', '_ap003e_body_research_output_paths_1', '_ap003e_body_stage_1', '_invoke_with_runtime', '_json_or_none_impl_001', '_prisma_artigo_generico_get_arg_impl_001', '_prisma_artigo_generico_out_dir_impl_001', '_prisma_artigo_generico_run_export_impl_001', '_prisma_artigo_generico_run_freeze_impl_001', '_prisma_artigo_generico_strip_impl_001', '_prisma_curadoria_arg_impl_001', '_prisma_curadoria_build_cmd_impl_001', '_prisma_curadoria_config_from_args_impl_001', '_prisma_curadoria_default_config_impl_001', '_prisma_curadoria_default_out_dir_impl_001', '_prisma_curadoria_default_prompt_impl_001', '_prisma_curadoria_dispatch_impl_001', '_prisma_curadoria_fluxo_completo_impl_001', '_prisma_curadoria_importar_no_pipeline_impl_001', '_prisma_curadoria_input_from_args_impl_001', '_prisma_curadoria_menu_impl_001', '_prisma_curadoria_mostrar_caminhos_impl_001', '_prisma_curadoria_out_from_args_impl_001', '_prisma_curadoria_pipeline_supports_flag_impl_001', '_prisma_curadoria_prompt_from_args_impl_001', '_prisma_curadoria_reexportar_xlsx_impl_001', '_prisma_curadoria_run_command_impl_001', '_prisma_curadoria_run_ia_impl_001', '_prisma_curadoria_script_path_impl_001', '_section_impl_001', 'make_client_impl_001', 'render_external_prisma_outputs_impl_001', 'research_output_paths_impl_001', 'run_prisma_generic_entrypoint', 'run_prisma_stage_001', 'run_prisma_stage_002', 'run_prisma_stage_003', 'run_prisma_stage_004', 'run_prisma_stage_005', 'run_prisma_stage_006', 'run_prisma_stage_007', 'run_prisma_stage_008', 'stage_impl_001'))
+_PROTECTED_RUNTIME_NAMES = frozenset(('PrismaStageResult', '_MISSING', '_PROTECTED_RUNTIME_NAMES', '__all__', '_ap003e_body__json_or_none_1', '_ap003e_body__prisma_artigo_generico_get_arg_1', '_ap003e_body__prisma_artigo_generico_out_dir_1', '_ap003e_body__prisma_artigo_generico_run_export_1', '_ap003e_body__prisma_artigo_generico_run_freeze_1', '_ap003e_body__prisma_artigo_generico_strip_1', '_ap003e_body__prisma_curadoria_arg_1', '_ap003e_body__prisma_curadoria_build_cmd_1', '_ap003e_body__prisma_curadoria_config_from_args_1', '_ap003e_body__prisma_curadoria_default_config_1', '_ap003e_body__prisma_curadoria_default_out_dir_1', '_ap003e_body__prisma_curadoria_default_prompt_1', '_ap003e_body__prisma_curadoria_dispatch_1', '_ap003e_body__prisma_curadoria_fluxo_completo_1', '_ap003e_body__prisma_curadoria_importar_no_pipeline_1', '_ap003e_body__prisma_curadoria_input_from_args_1', '_ap003e_body__prisma_curadoria_menu_1', '_ap003e_body__prisma_curadoria_mostrar_caminhos_1', '_ap003e_body__prisma_curadoria_out_from_args_1', '_ap003e_body__prisma_curadoria_pipeline_supports_flag_1', '_ap003e_body__prisma_curadoria_prompt_from_args_1', '_ap003e_body__prisma_curadoria_reexportar_xlsx_1', '_ap003e_body__prisma_curadoria_run_command_1', '_ap003e_body__prisma_curadoria_run_ia_1', '_ap003e_body__prisma_curadoria_script_path_1', '_ap003e_body__section_1', '_ap003e_body_main_2', '_ap003e_body_make_client_1', '_ap003e_body_render_external_prisma_outputs_1', '_ap003e_body_research_output_paths_1', '_ap003e_body_stage_1', '_invoke_with_runtime', '_json_or_none_impl_001', '_prisma_artigo_generico_get_arg_impl_001', '_prisma_artigo_generico_out_dir_impl_001', '_prisma_artigo_generico_run_export_impl_001', '_prisma_artigo_generico_run_freeze_impl_001', '_prisma_artigo_generico_strip_impl_001', '_prisma_curadoria_arg_impl_001', '_prisma_curadoria_build_cmd_impl_001', '_prisma_curadoria_config_from_args_impl_001', '_prisma_curadoria_default_config_impl_001', '_prisma_curadoria_default_out_dir_impl_001', '_prisma_curadoria_default_prompt_impl_001', '_prisma_curadoria_dispatch_impl_001', '_prisma_curadoria_fluxo_completo_impl_001', '_prisma_curadoria_importar_no_pipeline_impl_001', '_prisma_curadoria_input_from_args_impl_001', '_prisma_curadoria_menu_impl_001', '_prisma_curadoria_mostrar_caminhos_impl_001', '_prisma_curadoria_out_from_args_impl_001', '_prisma_curadoria_pipeline_supports_flag_impl_001', '_prisma_curadoria_prompt_from_args_impl_001', '_prisma_curadoria_reexportar_xlsx_impl_001', '_prisma_curadoria_run_command_impl_001', '_prisma_curadoria_run_ia_impl_001', '_prisma_curadoria_script_path_impl_001', '_section_impl_001', 'make_client_impl_001', 'render_external_prisma_outputs_impl_001', 'research_output_paths_impl_001', 'run_prisma_generic_entrypoint', 'run_prisma_stage_001', 'run_prisma_stage_002', 'run_prisma_stage_003', 'run_prisma_stage_004', 'run_prisma_stage_005', 'run_prisma_stage_006', 'run_prisma_stage_007', 'run_prisma_stage_008', 'stage_impl_001', 'stage_with_runtime', 'json_or_none_with_runtime', 'make_client_with_runtime', 'section_with_runtime', 'research_output_paths_with_runtime', 'render_external_prisma_outputs_with_runtime', 'prisma_curadoria_default_config_with_runtime', 'prisma_curadoria_default_out_dir_with_runtime', 'prisma_curadoria_default_prompt_with_runtime', 'prisma_curadoria_script_path_with_runtime', 'prisma_curadoria_arg_with_runtime', 'prisma_curadoria_config_from_args_with_runtime', 'prisma_curadoria_out_from_args_with_runtime', 'prisma_curadoria_prompt_from_args_with_runtime', 'prisma_curadoria_input_from_args_with_runtime', 'prisma_curadoria_run_command_with_runtime', 'prisma_curadoria_build_cmd_with_runtime', 'prisma_curadoria_run_ia_with_runtime', 'prisma_curadoria_reexportar_xlsx_with_runtime', 'prisma_curadoria_pipeline_supports_flag_with_runtime', 'prisma_curadoria_importar_no_pipeline_with_runtime', 'prisma_curadoria_fluxo_completo_with_runtime', 'prisma_curadoria_mostrar_caminhos_with_runtime', 'prisma_curadoria_menu_with_runtime', 'prisma_curadoria_dispatch_with_runtime', 'prisma_artigo_generico_get_arg_with_runtime', 'prisma_artigo_generico_strip_with_runtime', 'prisma_artigo_generico_out_dir_with_runtime', 'prisma_artigo_generico_run_export_with_runtime', 'prisma_artigo_generico_run_freeze_with_runtime', 'run_prisma_generic_with_runtime'))
 
 @dataclass(frozen=True, slots=True)
 class PrismaStageResult:
@@ -34,8 +34,11 @@ def _ap003e_body_stage_1(message):
     """Mostra etapas de execução em tempo real."""
     print(f'[ETAPA] {message}', flush=True)
 
-def stage_impl_001(runtime, /, message):
+def stage_with_runtime(runtime, /, message):
     return _invoke_with_runtime(_ap003e_body_stage_1, runtime, (message,), {})
+
+def stage_impl_001(runtime, /, message):
+    return stage_with_runtime(runtime, message)
 
 def _ap003e_body__json_or_none_1(value):
     if not value:
@@ -45,8 +48,11 @@ def _ap003e_body__json_or_none_1(value):
     except Exception:
         return value
 
-def _json_or_none_impl_001(runtime, /, value):
+def json_or_none_with_runtime(runtime, /, value):
     return _invoke_with_runtime(_ap003e_body__json_or_none_1, runtime, (value,), {})
+
+def _json_or_none_impl_001(runtime, /, value):
+    return json_or_none_with_runtime(runtime, value)
 
 def _ap003e_body_make_client_1(model_override):
     from openai import OpenAI
@@ -55,15 +61,21 @@ def _ap003e_body_make_client_1(model_override):
         raise RuntimeError('OPENAI_API_KEY não encontrado no ambiente/.env.')
     return (OpenAI(api_key=os.getenv('OPENAI_API_KEY')), model_override or os.getenv('OPENAI_MODEL') or DEFAULT_MODEL)
 
-def make_client_impl_001(runtime, /, model_override):
+def make_client_with_runtime(runtime, /, model_override):
     return _invoke_with_runtime(_ap003e_body_make_client_1, runtime, (model_override,), {})
+
+def make_client_impl_001(runtime, /, model_override):
+    return make_client_with_runtime(runtime, model_override)
 
 def _ap003e_body__section_1(cfg, name):
     sec = cfg.get(name, {})
     return sec if isinstance(sec, dict) else {}
 
-def _section_impl_001(runtime, /, cfg, name):
+def section_with_runtime(runtime, /, cfg, name):
     return _invoke_with_runtime(_ap003e_body__section_1, runtime, (cfg, name), {})
+
+def _section_impl_001(runtime, /, cfg, name):
+    return section_with_runtime(runtime, cfg, name)
 
 def _ap003e_body_research_output_paths_1(cfg):
     """Resolve a saída canônica da busca e consolidação PRISMA.
@@ -84,8 +96,11 @@ def _ap003e_body_research_output_paths_1(cfg):
     out_dir.mkdir(parents=True, exist_ok=True)
     return (out_dir, prefix)
 
-def research_output_paths_impl_001(runtime, /, cfg):
+def research_output_paths_with_runtime(runtime, /, cfg):
     return _invoke_with_runtime(_ap003e_body_research_output_paths_1, runtime, (cfg,), {})
+
+def research_output_paths_impl_001(runtime, /, cfg):
+    return research_output_paths_with_runtime(runtime, cfg)
 
 def _ap003e_body_render_external_prisma_outputs_1(cfg, out_dir, prefix, prisma_payload, *, phase):
     """Renderiza relatório PRISMA externo em ORG e, quando solicitado, em PDF.
@@ -120,56 +135,83 @@ def _ap003e_body_render_external_prisma_outputs_1(cfg, out_dir, prefix, prisma_p
         pdf_path = run_compile_sequence(org_path, academic_writing=academic_writing, latex_extra_path=latex_extra, pdf_engine=pdf_engine)
     return (org_path, pdf_path)
 
-def render_external_prisma_outputs_impl_001(runtime, /, cfg, out_dir, prefix, prisma_payload, *, phase):
+def render_external_prisma_outputs_with_runtime(runtime, /, cfg, out_dir, prefix, prisma_payload, *, phase):
     return _invoke_with_runtime(_ap003e_body_render_external_prisma_outputs_1, runtime, (cfg, out_dir, prefix, prisma_payload), {'phase': phase})
+
+def render_external_prisma_outputs_impl_001(runtime, /, cfg, out_dir, prefix, prisma_payload, *, phase):
+    return render_external_prisma_outputs_with_runtime(runtime, cfg, out_dir, prefix, prisma_payload, phase=phase)
 
 def _ap003e_body__prisma_curadoria_default_config_1():
     return 'app_bundle/projetos/prisma_fluxo_pmf/prisma_fluxo_pmf.toml'
 
-def _prisma_curadoria_default_config_impl_001(runtime, /):
+def prisma_curadoria_default_config_with_runtime(runtime, /):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_default_config_1, runtime, (), {})
+
+def _prisma_curadoria_default_config_impl_001(runtime, /):
+    return prisma_curadoria_default_config_with_runtime(runtime)
 
 def _ap003e_body__prisma_curadoria_default_out_dir_1():
     return 'app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf'
 
-def _prisma_curadoria_default_out_dir_impl_001(runtime, /):
+def prisma_curadoria_default_out_dir_with_runtime(runtime, /):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_default_out_dir_1, runtime, (), {})
+
+def _prisma_curadoria_default_out_dir_impl_001(runtime, /):
+    return prisma_curadoria_default_out_dir_with_runtime(runtime)
 
 def _ap003e_body__prisma_curadoria_default_prompt_1():
     return '/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/prompt_curadoria_atestmed_ia.yaml'
 
-def _prisma_curadoria_default_prompt_impl_001(runtime, /):
+def prisma_curadoria_default_prompt_with_runtime(runtime, /):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_default_prompt_1, runtime, (), {})
+
+def _prisma_curadoria_default_prompt_impl_001(runtime, /):
+    return prisma_curadoria_default_prompt_with_runtime(runtime)
 
 def _ap003e_body__prisma_curadoria_script_path_1():
     return 'app_bundle/scripts/pipeline/prisma_curadoria_ia_referencias.py'
 
-def _prisma_curadoria_script_path_impl_001(runtime, /):
+def prisma_curadoria_script_path_with_runtime(runtime, /):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_script_path_1, runtime, (), {})
+
+def _prisma_curadoria_script_path_impl_001(runtime, /):
+    return prisma_curadoria_script_path_with_runtime(runtime)
 
 def _ap003e_body__prisma_curadoria_arg_1(args, name, default):
     return getattr(args, name, default)
 
-def _prisma_curadoria_arg_impl_001(runtime, /, args, name, default):
+def prisma_curadoria_arg_with_runtime(runtime, /, args, name, default):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_arg_1, runtime, (args, name, default), {})
+
+def _prisma_curadoria_arg_impl_001(runtime, /, args, name, default):
+    return prisma_curadoria_arg_with_runtime(runtime, args, name, default)
 
 def _ap003e_body__prisma_curadoria_config_from_args_1(args):
     return _prisma_curadoria_arg(args, 'config', None) or _prisma_curadoria_arg(args, 'cfg', None) or _prisma_curadoria_default_config()
 
-def _prisma_curadoria_config_from_args_impl_001(runtime, /, args):
+def prisma_curadoria_config_from_args_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_config_from_args_1, runtime, (args,), {})
+
+def _prisma_curadoria_config_from_args_impl_001(runtime, /, args):
+    return prisma_curadoria_config_from_args_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_out_from_args_1(args):
     return _prisma_curadoria_arg(args, 'prisma_curadoria_out_dir', None) or _prisma_curadoria_default_out_dir()
 
-def _prisma_curadoria_out_from_args_impl_001(runtime, /, args):
+def prisma_curadoria_out_from_args_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_out_from_args_1, runtime, (args,), {})
+
+def _prisma_curadoria_out_from_args_impl_001(runtime, /, args):
+    return prisma_curadoria_out_from_args_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_prompt_from_args_1(args):
     return _prisma_curadoria_arg(args, 'prisma_curadoria_prompt', None) or _prisma_curadoria_default_prompt()
 
-def _prisma_curadoria_prompt_from_args_impl_001(runtime, /, args):
+def prisma_curadoria_prompt_from_args_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_prompt_from_args_1, runtime, (args,), {})
+
+def _prisma_curadoria_prompt_from_args_impl_001(runtime, /, args):
+    return prisma_curadoria_prompt_from_args_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_input_from_args_1(args, *, default_xlsx):
     explicit = _prisma_curadoria_arg(args, 'prisma_curadoria_input', None)
@@ -180,8 +222,11 @@ def _ap003e_body__prisma_curadoria_input_from_args_1(args, *, default_xlsx):
         return str(Path(_prisma_curadoria_out_from_args(args)) / 'relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_referencias.xlsx')
     return ''
 
-def _prisma_curadoria_input_from_args_impl_001(runtime, /, args, *, default_xlsx):
+def prisma_curadoria_input_from_args_with_runtime(runtime, /, args, *, default_xlsx):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_input_from_args_1, runtime, (args,), {'default_xlsx': default_xlsx})
+
+def _prisma_curadoria_input_from_args_impl_001(runtime, /, args, *, default_xlsx):
+    return prisma_curadoria_input_from_args_with_runtime(runtime, args, default_xlsx=default_xlsx)
 
 def _ap003e_body__prisma_curadoria_run_command_1(cmd):
     import subprocess
@@ -196,8 +241,11 @@ def _ap003e_body__prisma_curadoria_run_command_1(cmd):
         print(f'[ERRO] Etapa falhou com código {proc.returncode}.')
     return proc.returncode
 
-def _prisma_curadoria_run_command_impl_001(runtime, /, cmd):
+def prisma_curadoria_run_command_with_runtime(runtime, /, cmd):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_run_command_1, runtime, (cmd,), {})
+
+def _prisma_curadoria_run_command_impl_001(runtime, /, cmd):
+    return prisma_curadoria_run_command_with_runtime(runtime, cmd)
 
 def _ap003e_body__prisma_curadoria_build_cmd_1(args, *, usar_ia, reexportar_xlsx):
     import sys
@@ -229,22 +277,31 @@ def _ap003e_body__prisma_curadoria_build_cmd_1(args, *, usar_ia, reexportar_xlsx
         cmd += ['--limiar-minimo-inclusao', str(limiar)]
     return cmd
 
-def _prisma_curadoria_build_cmd_impl_001(runtime, /, args, *, usar_ia, reexportar_xlsx):
+def prisma_curadoria_build_cmd_with_runtime(runtime, /, args, *, usar_ia, reexportar_xlsx):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_build_cmd_1, runtime, (args,), {'usar_ia': usar_ia, 'reexportar_xlsx': reexportar_xlsx})
+
+def _prisma_curadoria_build_cmd_impl_001(runtime, /, args, *, usar_ia, reexportar_xlsx):
+    return prisma_curadoria_build_cmd_with_runtime(runtime, args, usar_ia=usar_ia, reexportar_xlsx=reexportar_xlsx)
 
 def _ap003e_body__prisma_curadoria_run_ia_1(args, *, usar_ia):
     cmd = _prisma_curadoria_build_cmd(args, usar_ia=usar_ia, reexportar_xlsx=False)
     return _prisma_curadoria_run_command(cmd)
 
-def _prisma_curadoria_run_ia_impl_001(runtime, /, args, *, usar_ia):
+def prisma_curadoria_run_ia_with_runtime(runtime, /, args, *, usar_ia):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_run_ia_1, runtime, (args,), {'usar_ia': usar_ia})
+
+def _prisma_curadoria_run_ia_impl_001(runtime, /, args, *, usar_ia):
+    return prisma_curadoria_run_ia_with_runtime(runtime, args, usar_ia=usar_ia)
 
 def _ap003e_body__prisma_curadoria_reexportar_xlsx_1(args):
     cmd = _prisma_curadoria_build_cmd(args, usar_ia=False, reexportar_xlsx=True)
     return _prisma_curadoria_run_command(cmd)
 
-def _prisma_curadoria_reexportar_xlsx_impl_001(runtime, /, args):
+def prisma_curadoria_reexportar_xlsx_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_reexportar_xlsx_1, runtime, (args,), {})
+
+def _prisma_curadoria_reexportar_xlsx_impl_001(runtime, /, args):
+    return prisma_curadoria_reexportar_xlsx_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_pipeline_supports_flag_1(flag):
     import subprocess
@@ -255,8 +312,11 @@ def _ap003e_body__prisma_curadoria_pipeline_supports_flag_1(flag):
         return False
     return flag in (proc.stdout or '')
 
-def _prisma_curadoria_pipeline_supports_flag_impl_001(runtime, /, flag):
+def prisma_curadoria_pipeline_supports_flag_with_runtime(runtime, /, flag):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_pipeline_supports_flag_1, runtime, (flag,), {})
+
+def _prisma_curadoria_pipeline_supports_flag_impl_001(runtime, /, flag):
+    return prisma_curadoria_pipeline_supports_flag_with_runtime(runtime, flag)
 
 def _ap003e_body__prisma_curadoria_importar_no_pipeline_1(args):
     import sys
@@ -276,8 +336,11 @@ def _ap003e_body__prisma_curadoria_importar_no_pipeline_1(args):
         cmd = [sys.executable, __file__, '--config', cfg]
     return _prisma_curadoria_run_command(cmd)
 
-def _prisma_curadoria_importar_no_pipeline_impl_001(runtime, /, args):
+def prisma_curadoria_importar_no_pipeline_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_importar_no_pipeline_1, runtime, (args,), {})
+
+def _prisma_curadoria_importar_no_pipeline_impl_001(runtime, /, args):
+    return prisma_curadoria_importar_no_pipeline_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_fluxo_completo_1(args):
     rc = _prisma_curadoria_run_ia(args, usar_ia=not bool(_prisma_curadoria_arg(args, 'prisma_curadoria_sem_ia', False)))
@@ -285,8 +348,11 @@ def _ap003e_body__prisma_curadoria_fluxo_completo_1(args):
         return rc
     return _prisma_curadoria_importar_no_pipeline(args)
 
-def _prisma_curadoria_fluxo_completo_impl_001(runtime, /, args):
+def prisma_curadoria_fluxo_completo_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_fluxo_completo_1, runtime, (args,), {})
+
+def _prisma_curadoria_fluxo_completo_impl_001(runtime, /, args):
+    return prisma_curadoria_fluxo_completo_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_mostrar_caminhos_1(args):
     from pathlib import Path
@@ -308,8 +374,11 @@ def _ap003e_body__prisma_curadoria_mostrar_caminhos_1(args):
     print(f"- {out_dir / 'relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_log.json'}")
     print()
 
-def _prisma_curadoria_mostrar_caminhos_impl_001(runtime, /, args):
+def prisma_curadoria_mostrar_caminhos_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_mostrar_caminhos_1, runtime, (args,), {})
+
+def _prisma_curadoria_mostrar_caminhos_impl_001(runtime, /, args):
+    return prisma_curadoria_mostrar_caminhos_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_menu_1(args):
     while True:
@@ -346,8 +415,11 @@ def _ap003e_body__prisma_curadoria_menu_1(args):
         if rc:
             return rc
 
-def _prisma_curadoria_menu_impl_001(runtime, /, args):
+def prisma_curadoria_menu_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_menu_1, runtime, (args,), {})
+
+def _prisma_curadoria_menu_impl_001(runtime, /, args):
+    return prisma_curadoria_menu_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_curadoria_dispatch_1(args):
     if _prisma_curadoria_arg(args, 'prisma_curadoria_menu', False):
@@ -363,8 +435,11 @@ def _ap003e_body__prisma_curadoria_dispatch_1(args):
         return _prisma_curadoria_run_ia(args, usar_ia=usar_ia)
     return 0
 
-def _prisma_curadoria_dispatch_impl_001(runtime, /, args):
+def prisma_curadoria_dispatch_with_runtime(runtime, /, args):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_dispatch_1, runtime, (args,), {})
+
+def _prisma_curadoria_dispatch_impl_001(runtime, /, args):
+    return prisma_curadoria_dispatch_with_runtime(runtime, args)
 
 def _ap003e_body__prisma_artigo_generico_get_arg_1(argv, name):
     for i, item in enumerate(argv):
@@ -374,8 +449,11 @@ def _ap003e_body__prisma_artigo_generico_get_arg_1(argv, name):
             return item.split('=', 1)[1]
     return None
 
-def _prisma_artigo_generico_get_arg_impl_001(runtime, /, argv, name):
+def prisma_artigo_generico_get_arg_with_runtime(runtime, /, argv, name):
     return _invoke_with_runtime(_ap003e_body__prisma_artigo_generico_get_arg_1, runtime, (argv, name), {})
+
+def _prisma_artigo_generico_get_arg_impl_001(runtime, /, argv, name):
+    return prisma_artigo_generico_get_arg_with_runtime(runtime, argv, name)
 
 def _ap003e_body__prisma_artigo_generico_strip_1(argv):
     bool_flags = {'--prisma-exportar-bib', '--prisma-congelar-artigo', '--prisma-gerar-toml-artigo', '--prisma-gerar-artigo-final'}
@@ -397,8 +475,11 @@ def _ap003e_body__prisma_artigo_generico_strip_1(argv):
         i += 1
     return result
 
-def _prisma_artigo_generico_strip_impl_001(runtime, /, argv):
+def prisma_artigo_generico_strip_with_runtime(runtime, /, argv):
     return _invoke_with_runtime(_ap003e_body__prisma_artigo_generico_strip_1, runtime, (argv,), {})
+
+def _prisma_artigo_generico_strip_impl_001(runtime, /, argv):
+    return prisma_artigo_generico_strip_with_runtime(runtime, argv)
 
 def _ap003e_body__prisma_artigo_generico_out_dir_1(argv):
     from pathlib import Path
@@ -412,8 +493,11 @@ def _ap003e_body__prisma_artigo_generico_out_dir_1(argv):
             return cfg_path.resolve().parent / 'output_pesquisa' / f'relatorio_prisma_{cfg_path.stem}'
     return Path('app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf')
 
-def _prisma_artigo_generico_out_dir_impl_001(runtime, /, argv):
+def prisma_artigo_generico_out_dir_with_runtime(runtime, /, argv):
     return _invoke_with_runtime(_ap003e_body__prisma_artigo_generico_out_dir_1, runtime, (argv,), {})
+
+def _prisma_artigo_generico_out_dir_impl_001(runtime, /, argv):
+    return prisma_artigo_generico_out_dir_with_runtime(runtime, argv)
 
 def _ap003e_body__prisma_artigo_generico_run_export_1(argv, silent):
     import subprocess, sys
@@ -441,8 +525,11 @@ def _ap003e_body__prisma_artigo_generico_run_export_1(argv, silent):
         print(f'[WARN] Exportação BibLaTeX PRISMA retornou código {proc.returncode}.')
     return proc.returncode
 
-def _prisma_artigo_generico_run_export_impl_001(runtime, /, argv, silent):
+def prisma_artigo_generico_run_export_with_runtime(runtime, /, argv, silent):
     return _invoke_with_runtime(_ap003e_body__prisma_artigo_generico_run_export_1, runtime, (argv, silent), {})
+
+def _prisma_artigo_generico_run_export_impl_001(runtime, /, argv, silent):
+    return prisma_artigo_generico_run_export_with_runtime(runtime, argv, silent)
 
 def _ap003e_body__prisma_artigo_generico_run_freeze_1(argv, silent):
     import subprocess, sys
@@ -476,8 +563,11 @@ def _ap003e_body__prisma_artigo_generico_run_freeze_1(argv, silent):
         print(f'[WARN] Congelamento/geração de artigo retornou código {proc.returncode}.')
     return proc.returncode
 
-def _prisma_artigo_generico_run_freeze_impl_001(runtime, /, argv, silent):
+def prisma_artigo_generico_run_freeze_with_runtime(runtime, /, argv, silent):
     return _invoke_with_runtime(_ap003e_body__prisma_artigo_generico_run_freeze_1, runtime, (argv, silent), {})
+
+def _prisma_artigo_generico_run_freeze_impl_001(runtime, /, argv, silent):
+    return prisma_artigo_generico_run_freeze_with_runtime(runtime, argv, silent)
 
 def run_prisma_stage_001(args, runtime):
     if '_prisma_curadoria_dispatch' in runtime:
@@ -710,6 +800,9 @@ def _ap003e_body_main_2(*args, **kwargs):
         _prisma_artigo_generico_run_freeze(original_argv, silent=False)
     return rc
 
-def run_prisma_generic_entrypoint(runtime, /, *args, **kwargs):
+def run_prisma_generic_with_runtime(runtime, /, *args, **kwargs):
     return _invoke_with_runtime(_ap003e_body_main_2, runtime, (*args,), {**kwargs})
-__all__ = ['PrismaStageResult', 'stage_impl_001', '_json_or_none_impl_001', 'make_client_impl_001', '_section_impl_001', 'research_output_paths_impl_001', 'render_external_prisma_outputs_impl_001', '_prisma_curadoria_default_config_impl_001', '_prisma_curadoria_default_out_dir_impl_001', '_prisma_curadoria_default_prompt_impl_001', '_prisma_curadoria_script_path_impl_001', '_prisma_curadoria_arg_impl_001', '_prisma_curadoria_config_from_args_impl_001', '_prisma_curadoria_out_from_args_impl_001', '_prisma_curadoria_prompt_from_args_impl_001', '_prisma_curadoria_input_from_args_impl_001', '_prisma_curadoria_run_command_impl_001', '_prisma_curadoria_build_cmd_impl_001', '_prisma_curadoria_run_ia_impl_001', '_prisma_curadoria_reexportar_xlsx_impl_001', '_prisma_curadoria_pipeline_supports_flag_impl_001', '_prisma_curadoria_importar_no_pipeline_impl_001', '_prisma_curadoria_fluxo_completo_impl_001', '_prisma_curadoria_mostrar_caminhos_impl_001', '_prisma_curadoria_menu_impl_001', '_prisma_curadoria_dispatch_impl_001', '_prisma_artigo_generico_get_arg_impl_001', '_prisma_artigo_generico_strip_impl_001', '_prisma_artigo_generico_out_dir_impl_001', '_prisma_artigo_generico_run_export_impl_001', '_prisma_artigo_generico_run_freeze_impl_001', 'run_prisma_stage_001', 'run_prisma_stage_002', 'run_prisma_stage_003', 'run_prisma_stage_004', 'run_prisma_stage_005', 'run_prisma_stage_006', 'run_prisma_stage_007', 'run_prisma_stage_008', 'run_prisma_generic_entrypoint']
+
+def run_prisma_generic_entrypoint(runtime, /, *args, **kwargs):
+    return run_prisma_generic_with_runtime(runtime, *args, **kwargs)
+__all__ = ['PrismaStageResult', 'stage_impl_001', '_json_or_none_impl_001', 'make_client_impl_001', '_section_impl_001', 'research_output_paths_impl_001', 'render_external_prisma_outputs_impl_001', '_prisma_curadoria_default_config_impl_001', '_prisma_curadoria_default_out_dir_impl_001', '_prisma_curadoria_default_prompt_impl_001', '_prisma_curadoria_script_path_impl_001', '_prisma_curadoria_arg_impl_001', '_prisma_curadoria_config_from_args_impl_001', '_prisma_curadoria_out_from_args_impl_001', '_prisma_curadoria_prompt_from_args_impl_001', '_prisma_curadoria_input_from_args_impl_001', '_prisma_curadoria_run_command_impl_001', '_prisma_curadoria_build_cmd_impl_001', '_prisma_curadoria_run_ia_impl_001', '_prisma_curadoria_reexportar_xlsx_impl_001', '_prisma_curadoria_pipeline_supports_flag_impl_001', '_prisma_curadoria_importar_no_pipeline_impl_001', '_prisma_curadoria_fluxo_completo_impl_001', '_prisma_curadoria_mostrar_caminhos_impl_001', '_prisma_curadoria_menu_impl_001', '_prisma_curadoria_dispatch_impl_001', '_prisma_artigo_generico_get_arg_impl_001', '_prisma_artigo_generico_strip_impl_001', '_prisma_artigo_generico_out_dir_impl_001', '_prisma_artigo_generico_run_export_impl_001', '_prisma_artigo_generico_run_freeze_impl_001', 'run_prisma_stage_001', 'run_prisma_stage_002', 'run_prisma_stage_003', 'run_prisma_stage_004', 'run_prisma_stage_005', 'run_prisma_stage_006', 'run_prisma_stage_007', 'run_prisma_stage_008', 'run_prisma_generic_entrypoint', 'stage_with_runtime', 'json_or_none_with_runtime', 'make_client_with_runtime', 'section_with_runtime', 'research_output_paths_with_runtime', 'render_external_prisma_outputs_with_runtime', 'prisma_curadoria_default_config_with_runtime', 'prisma_curadoria_default_out_dir_with_runtime', 'prisma_curadoria_default_prompt_with_runtime', 'prisma_curadoria_script_path_with_runtime', 'prisma_curadoria_arg_with_runtime', 'prisma_curadoria_config_from_args_with_runtime', 'prisma_curadoria_out_from_args_with_runtime', 'prisma_curadoria_prompt_from_args_with_runtime', 'prisma_curadoria_input_from_args_with_runtime', 'prisma_curadoria_run_command_with_runtime', 'prisma_curadoria_build_cmd_with_runtime', 'prisma_curadoria_run_ia_with_runtime', 'prisma_curadoria_reexportar_xlsx_with_runtime', 'prisma_curadoria_pipeline_supports_flag_with_runtime', 'prisma_curadoria_importar_no_pipeline_with_runtime', 'prisma_curadoria_fluxo_completo_with_runtime', 'prisma_curadoria_mostrar_caminhos_with_runtime', 'prisma_curadoria_menu_with_runtime', 'prisma_curadoria_dispatch_with_runtime', 'prisma_artigo_generico_get_arg_with_runtime', 'prisma_artigo_generico_strip_with_runtime', 'prisma_artigo_generico_out_dir_with_runtime', 'prisma_artigo_generico_run_export_with_runtime', 'prisma_artigo_generico_run_freeze_with_runtime', 'run_prisma_generic_with_runtime']

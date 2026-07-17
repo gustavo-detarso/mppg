@@ -1,0 +1,1828 @@
+{
+  "application_batches": [
+    {
+      "batch": "PRESERVAÇÃO",
+      "productive_files_expected": [],
+      "requires_new_canonical_exports": false,
+      "status": "preservados após rejeição controlada da aplicação AP-005B1",
+      "surface_count": 3,
+      "title": "Contratos públicos e wrappers extraídos"
+    },
+    {
+      "batch": "AP-005B2",
+      "productive_files_expected": [
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "requires_new_canonical_exports": true,
+      "status": "aguardando desenho nominal dos adapters e testes de equivalência",
+      "surface_count": 31,
+      "title": "Adapters canônicos da orquestração PRISMA"
+    },
+    {
+      "batch": "AP-005C",
+      "productive_files_expected": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+      ],
+      "requires_new_canonical_exports": false,
+      "status": "adiado; substituição direta é proibida",
+      "surface_count": 4,
+      "title": "Aliases de captura do gerador TOML"
+    }
+  ],
+  "baseline": {
+    "ap005a_contract_fingerprint": "ad563ca0c5c46d99b5d17e966e9db7eabfeb96bfdef3c09c4a5ffe39d7141309",
+    "ap005a_schema": "ap005a.consumer-dependency-inventory.v3",
+    "source_commit": "6ef568b250390e12dc2e86b86a8c530188604a28"
+  },
+  "contract_fingerprint": "e659a91460dd5058ba6e49942454c26650eb4455e42f1d6e2ce450125f6284c8",
+  "gate": {
+    "commit_allowed": false,
+    "message": "[BLOQUEIO] Este artefato apenas planeja a canonicalização da AP-005B.",
+    "productive_applicator_allowed": false,
+    "productive_changes_allowed": false,
+    "push_allowed": false,
+    "removal_allowed": false,
+    "staging_allowed": false
+  },
+  "items": [
+    {
+      "ap005b_disposition": "deferred_to_ap005c",
+      "application_batch": "AP-005C",
+      "canonical_target": {
+        "captured_expression": "_WizInputController._ensure_reference_policy",
+        "kind": "captured_previous_binding",
+        "requires_new_export": false
+      },
+      "characterization_required": [
+        "ordem de captura e redefinição permanece congelada",
+        "chamada ao alias não recursa para a implementação redefinida"
+      ],
+      "cluster": "toml_assignment_aliases",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "média",
+          "context": "_original_ensure_reference_policy",
+          "kind": "AST-NAME-LOCAL",
+          "line": 4983,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+      ],
+      "current_name": "_original_ensure_reference_policy",
+      "deferral_reason": "O alias captura a implementação anterior antes da redefinição. Substituí-lo pelo nome corrente produziria recursão ou alteraria a cadeia de patches.",
+      "internal_evidence_count": 1,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-054764be4586",
+      "source_line": 4976,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_arg_1",
+        "candidate_name": "prisma_curadoria_arg_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_arg_impl_001 as _ap003e_impl__prisma_curadoria_arg_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 423,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_arg_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 424,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_arg_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-0a600a9d1a44",
+      "source_line": 153,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__json_or_none_1",
+        "candidate_name": "json_or_none_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _json_or_none_impl_001 as _ap003e_impl__json_or_none_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 279,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__json_or_none_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 280,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_json_or_none_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-0d3fc308271c",
+      "source_line": 48,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_reexportar_xlsx_1",
+        "candidate_name": "prisma_curadoria_reexportar_xlsx_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_reexportar_xlsx_impl_001 as _ap003e_impl__prisma_curadoria_reexportar_xlsx_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 463,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_reexportar_xlsx_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 464,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_reexportar_xlsx_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-160e1b08feaf",
+      "source_line": 246,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_default_config_1",
+        "candidate_name": "prisma_curadoria_default_config_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_default_config_impl_001 as _ap003e_impl__prisma_curadoria_default_config_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 403,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_default_config_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 404,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_default_config_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-1847360516ee",
+      "source_line": 129,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_importar_no_pipeline_1",
+        "candidate_name": "prisma_curadoria_importar_no_pipeline_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_importar_no_pipeline_impl_001 as _ap003e_impl__prisma_curadoria_importar_no_pipeline_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 473,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_importar_no_pipeline_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 474,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_importar_no_pipeline_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-187e66036dd3",
+      "source_line": 279,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_default_prompt_1",
+        "candidate_name": "prisma_curadoria_default_prompt_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_default_prompt_impl_001 as _ap003e_impl__prisma_curadoria_default_prompt_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 413,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_default_prompt_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 414,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_default_prompt_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-1b290f50b5e3",
+      "source_line": 141,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_script_path_1",
+        "candidate_name": "prisma_curadoria_script_path_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_script_path_impl_001 as _ap003e_impl__prisma_curadoria_script_path_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 418,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_script_path_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 419,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_script_path_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-1ecfd96dfa69",
+      "source_line": 147,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body_main_2",
+        "candidate_name": "run_prisma_generic_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_entrypoint as _ap003e_entrypoint",
+          "kind": "AST-IMPORT-NAME",
+          "line": 1327,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_entrypoint",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 1328,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "run_prisma_generic_entrypoint",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-301f38a187b2",
+      "source_line": 713,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_artigo_generico_strip_1",
+        "candidate_name": "prisma_artigo_generico_strip_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_strip_impl_001 as _ap003e_impl__prisma_artigo_generico_strip_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 1310,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_artigo_generico_strip_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 1311,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_artigo_generico_strip_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-317f17a716c7",
+      "source_line": 400,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_out_from_args_1",
+        "candidate_name": "prisma_curadoria_out_from_args_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_out_from_args_impl_001 as _ap003e_impl__prisma_curadoria_out_from_args_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 433,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_out_from_args_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 434,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_out_from_args_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-34041cff6510",
+      "source_line": 165,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body_stage_1",
+        "candidate_name": "stage_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import stage_impl_001 as _ap003e_impl_stage_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 274,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl_stage_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 275,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "stage_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-36edca88a8f6",
+      "source_line": 37,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_artigo_generico_get_arg_1",
+        "candidate_name": "prisma_artigo_generico_get_arg_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_get_arg_impl_001 as _ap003e_impl__prisma_artigo_generico_get_arg_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 1306,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_artigo_generico_get_arg_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 1307,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_artigo_generico_get_arg_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-389bb46f68e6",
+      "source_line": 377,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_artigo_generico_run_freeze_1",
+        "candidate_name": "prisma_artigo_generico_run_freeze_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_run_freeze_impl_001 as _ap003e_impl__prisma_artigo_generico_run_freeze_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 1322,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_artigo_generico_run_freeze_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 1323,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_artigo_generico_run_freeze_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-3cddb3d56457",
+      "source_line": 479,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "preserved_existing_contract",
+      "application_batch": "PRESERVAÇÃO",
+      "canonical_target": {
+        "kind": "existing_compatibility_wrapper",
+        "qualified_name": "academic_pipeline.document_orchestration.load_config_impl",
+        "requires_new_export": false
+      },
+      "characterization_required": [
+        "o wrapper rc10 mantém a chamada ao símbolo extraído",
+        "o símbolo extraído permanece exportado e executável"
+      ],
+      "cluster": "document_orchestration",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.document_orchestration import load_config_impl as _impl_load_config",
+          "kind": "AST-IMPORT-NAME",
+          "line": 1265,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_impl_load_config",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 1266,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "load_config_impl",
+      "internal_evidence_count": 2,
+      "reclassification_reason": "Os contratos AP-003D e AP-004C exigem que as funções do rc10 permaneçam wrappers finos dos módulos extraídos.",
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-40f450199df1",
+      "source_line": 11,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/document_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "deferred_to_ap005c",
+      "application_batch": "AP-005C",
+      "canonical_target": {
+        "captured_expression": "_wiz_disable_references",
+        "kind": "captured_previous_binding",
+        "requires_new_export": false
+      },
+      "characterization_required": [
+        "ordem de captura e redefinição permanece congelada",
+        "chamada ao alias não recursa para a implementação redefinida"
+      ],
+      "cluster": "toml_assignment_aliases",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "média",
+          "context": "_wiz_disable_references_original",
+          "kind": "AST-NAME-LOCAL",
+          "line": 4997,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+      ],
+      "current_name": "_wiz_disable_references_original",
+      "deferral_reason": "O alias captura a implementação anterior antes da redefinição. Substituí-lo pelo nome corrente produziria recursão ou alteraria a cadeia de patches.",
+      "internal_evidence_count": 1,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-5fa6e68ff3fc",
+      "source_line": 4993,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_mostrar_caminhos_1",
+        "candidate_name": "prisma_curadoria_mostrar_caminhos_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_mostrar_caminhos_impl_001 as _ap003e_impl__prisma_curadoria_mostrar_caminhos_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 483,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_mostrar_caminhos_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 484,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_mostrar_caminhos_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-6151cb3f2843",
+      "source_line": 311,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_pipeline_supports_flag_1",
+        "candidate_name": "prisma_curadoria_pipeline_supports_flag_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_pipeline_supports_flag_impl_001 as _ap003e_impl__prisma_curadoria_pipeline_supports_flag_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 468,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_pipeline_supports_flag_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 469,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_pipeline_supports_flag_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-648d0683722c",
+      "source_line": 258,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_fluxo_completo_1",
+        "candidate_name": "prisma_curadoria_fluxo_completo_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_fluxo_completo_impl_001 as _ap003e_impl__prisma_curadoria_fluxo_completo_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 478,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_fluxo_completo_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 479,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_fluxo_completo_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-656eec3d1374",
+      "source_line": 288,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_run_command_1",
+        "candidate_name": "prisma_curadoria_run_command_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_run_command_impl_001 as _ap003e_impl__prisma_curadoria_run_command_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 448,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_run_command_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 449,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_run_command_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-760b7614a4e3",
+      "source_line": 199,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body_render_external_prisma_outputs_1",
+        "candidate_name": "render_external_prisma_outputs_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import render_external_prisma_outputs_impl_001 as _ap003e_impl_render_external_prisma_outputs_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 385,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl_render_external_prisma_outputs_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 386,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "render_external_prisma_outputs_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-7a1f70069b96",
+      "source_line": 123,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_run_ia_1",
+        "candidate_name": "prisma_curadoria_run_ia_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_run_ia_impl_001 as _ap003e_impl__prisma_curadoria_run_ia_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 458,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_run_ia_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 459,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_run_ia_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-9094555eaafc",
+      "source_line": 239,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_input_from_args_1",
+        "candidate_name": "prisma_curadoria_input_from_args_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_input_from_args_impl_001 as _ap003e_impl__prisma_curadoria_input_from_args_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 443,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_input_from_args_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 444,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_input_from_args_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-90e1169791e3",
+      "source_line": 183,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "deferred_to_ap005c",
+      "application_batch": "AP-005C",
+      "canonical_target": {
+        "captured_expression": "render_toml",
+        "kind": "captured_previous_binding",
+        "requires_new_export": false
+      },
+      "characterization_required": [
+        "ordem de captura e redefinição permanece congelada",
+        "chamada ao alias não recursa para a implementação redefinida"
+      ],
+      "cluster": "toml_assignment_aliases",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "média",
+          "context": "_render_toml_original",
+          "kind": "AST-NAME-LOCAL",
+          "line": 4963,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+      ],
+      "current_name": "_render_toml_original",
+      "deferral_reason": "O alias captura a implementação anterior antes da redefinição. Substituí-lo pelo nome corrente produziria recursão ou alteraria a cadeia de patches.",
+      "internal_evidence_count": 1,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-936e788786e4",
+      "source_line": 4958,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "preserved_existing_contract",
+      "application_batch": "PRESERVAÇÃO",
+      "canonical_target": {
+        "kind": "existing_compatibility_wrapper",
+        "qualified_name": "academic_pipeline.document_orchestration.load_existing_document_json_impl",
+        "requires_new_export": false
+      },
+      "characterization_required": [
+        "o wrapper rc10 mantém a chamada ao símbolo extraído",
+        "o símbolo extraído permanece exportado e executável"
+      ],
+      "cluster": "document_orchestration",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.document_orchestration import load_existing_document_json_impl as _impl_load_existing_document_json",
+          "kind": "AST-IMPORT-NAME",
+          "line": 344,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_impl_load_existing_document_json",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 345,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "load_existing_document_json_impl",
+      "internal_evidence_count": 2,
+      "reclassification_reason": "Os contratos AP-003D e AP-004C exigem que as funções do rc10 permaneçam wrappers finos dos módulos extraídos.",
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-a1f507c8ca1e",
+      "source_line": 59,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/document_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_build_cmd_1",
+        "candidate_name": "prisma_curadoria_build_cmd_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_build_cmd_impl_001 as _ap003e_impl__prisma_curadoria_build_cmd_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 453,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_build_cmd_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 454,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_build_cmd_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-b0edfe05c4e4",
+      "source_line": 232,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_artigo_generico_run_export_1",
+        "candidate_name": "prisma_artigo_generico_run_export_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_run_export_impl_001 as _ap003e_impl__prisma_artigo_generico_run_export_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 1318,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_artigo_generico_run_export_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 1319,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_artigo_generico_run_export_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-b81340a16e30",
+      "source_line": 444,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_artigo_generico_out_dir_1",
+        "candidate_name": "prisma_artigo_generico_out_dir_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_out_dir_impl_001 as _ap003e_impl__prisma_artigo_generico_out_dir_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 1314,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_artigo_generico_out_dir_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 1315,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_artigo_generico_out_dir_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-bba253a35116",
+      "source_line": 415,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "deferred_to_ap005c",
+      "application_batch": "AP-005C",
+      "canonical_target": {
+        "captured_expression": "collect_outputs_and_options",
+        "kind": "captured_previous_binding",
+        "requires_new_export": false
+      },
+      "characterization_required": [
+        "ordem de captura e redefinição permanece congelada",
+        "chamada ao alias não recursa para a implementação redefinida"
+      ],
+      "cluster": "toml_assignment_aliases",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "média",
+          "context": "_collect_outputs_and_options_original",
+          "kind": "AST-NAME-LOCAL",
+          "line": 4913,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "média",
+          "context": "_collect_outputs_and_options_original",
+          "kind": "AST-NAME-LOCAL",
+          "line": 4917,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "média",
+          "context": "_collect_outputs_and_options_original",
+          "kind": "AST-NAME-LOCAL",
+          "line": 4944,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+      ],
+      "current_name": "_collect_outputs_and_options_original",
+      "deferral_reason": "O alias captura a implementação anterior antes da redefinição. Substituí-lo pelo nome corrente produziria recursão ou alteraria a cadeia de patches.",
+      "internal_evidence_count": 3,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-c3f6df07093a",
+      "source_line": 4907,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_menu_1",
+        "candidate_name": "prisma_curadoria_menu_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_menu_impl_001 as _ap003e_impl__prisma_curadoria_menu_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 488,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_menu_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 489,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_menu_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-c9c406150ca6",
+      "source_line": 349,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__section_1",
+        "candidate_name": "section_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _section_impl_001 as _ap003e_impl__section_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 298,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__section_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 299,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_section_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-e0be0597d7fe",
+      "source_line": 65,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "preserved_existing_contract",
+      "application_batch": "PRESERVAÇÃO",
+      "canonical_target": {
+        "kind": "existing_public_facade",
+        "qualified_name": "academic_pipeline.cli.main",
+        "requires_new_export": false
+      },
+      "characterization_required": [
+        "academic_pipeline.main delega nominalmente a cli.main",
+        "python -m academic_pipeline preserva main e SystemExit"
+      ],
+      "cluster": "cli_entrypoints",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from .cli import main as cli_main",
+          "kind": "AST-IMPORT-NAME",
+          "line": 16,
+          "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__init__.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "cli_main",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 18,
+          "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__init__.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from .cli import main",
+          "kind": "AST-IMPORT-NAME",
+          "line": 5,
+          "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__main__.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "main",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 9,
+          "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__main__.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__init__.py",
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__main__.py"
+      ],
+      "current_name": "main",
+      "internal_evidence_count": 4,
+      "reclassification_reason": "A suíte canônica exige que academic_pipeline.main continue delegando à fachada cli.main e que python -m academic_pipeline continue chamando uma função denominada main.",
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-e72e9bb23f1e",
+      "source_line": 10,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/cli.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_prompt_from_args_1",
+        "candidate_name": "prisma_curadoria_prompt_from_args_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_prompt_from_args_impl_001 as _ap003e_impl__prisma_curadoria_prompt_from_args_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 438,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_prompt_from_args_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 439,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_prompt_from_args_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-ebc42e1d4c6c",
+      "source_line": 171,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_default_out_dir_1",
+        "candidate_name": "prisma_curadoria_default_out_dir_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_default_out_dir_impl_001 as _ap003e_impl__prisma_curadoria_default_out_dir_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 408,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_default_out_dir_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 409,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_default_out_dir_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-edc8203917be",
+      "source_line": 135,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_dispatch_1",
+        "candidate_name": "prisma_curadoria_dispatch_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_dispatch_impl_001 as _ap003e_impl__prisma_curadoria_dispatch_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 493,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_dispatch_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 494,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_dispatch_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-f04bcf304fe1",
+      "source_line": 366,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body_make_client_1",
+        "candidate_name": "make_client_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import make_client_impl_001 as _ap003e_impl_make_client_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 293,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl_make_client_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 294,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "make_client_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-f8594e08fa3d",
+      "source_line": 58,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body__prisma_curadoria_config_from_args_1",
+        "candidate_name": "prisma_curadoria_config_from_args_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_config_from_args_impl_001 as _ap003e_impl__prisma_curadoria_config_from_args_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 428,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl__prisma_curadoria_config_from_args_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 429,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "_prisma_curadoria_config_from_args_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-fe333ce8096a",
+      "source_line": 159,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    },
+    {
+      "ap005b_disposition": "requires_named_canonical_adapter",
+      "application_batch": "AP-005B2",
+      "canonical_target": {
+        "body_function": "_ap003e_body_research_output_paths_1",
+        "candidate_name": "research_output_paths_with_runtime",
+        "kind": "adapter_candidate",
+        "requires_new_export": true,
+        "runtime_invoker": "_invoke_with_runtime"
+      },
+      "characterization_required": [
+        "adapter nomeado e wrapper legado produzem o mesmo resultado",
+        "injeção e restauração do namespace global permanecem equivalentes",
+        "assinatura pública do wrapper legado permanece preservada"
+      ],
+      "cluster": "prisma_runtime_adapters",
+      "consumer_evidence": [
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "from academic_pipeline.prisma_generic_orchestration import research_output_paths_impl_001 as _ap003e_impl_research_output_paths_1",
+          "kind": "AST-IMPORT-NAME",
+          "line": 316,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        },
+        {
+          "category": "internal",
+          "confidence": "alta",
+          "context": "_ap003e_impl_research_output_paths_1",
+          "kind": "AST-NAME-IMPORTED",
+          "line": 317,
+          "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+        }
+      ],
+      "consumer_files": [
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      ],
+      "current_name": "research_output_paths_impl_001",
+      "internal_evidence_count": 2,
+      "removal_allowed": false,
+      "risk": "alto",
+      "source_candidate_id": "AP004E-ff473436589c",
+      "source_line": 87,
+      "source_path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "wrapper_preserved_during_ap005b": true
+    }
+  ],
+  "phase": "AP-005B",
+  "schema_version": "ap005b.consumer-canonicalization-plan.v2",
+  "scope": {
+    "allowed_outputs": [
+      "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+      "docs/refactor/academic-pipeline/AP-005/ap005b_consumer_canonicalization_plan.json",
+      "docs/refactor/academic-pipeline/AP-005/AP-005B_CONSUMER_CANONICALIZATION_PLAN.md",
+      "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b_consumer_canonicalization_plan_contract.py"
+    ],
+    "ap005b_executable_surfaces": 31,
+    "ap005c_deferred_aliases": 4,
+    "distinct_consumer_files": 4,
+    "inherited_migration_surfaces": 38,
+    "internal_evidence_count": 76,
+    "preserved_existing_contracts": 3
+  },
+  "summary": {
+    "ap005b2_adapter_surfaces": 31,
+    "ap005c_deferred_surfaces": 4,
+    "cluster_counts": {
+      "cli_entrypoints": 1,
+      "document_orchestration": 2,
+      "prisma_runtime_adapters": 31,
+      "toml_assignment_aliases": 4
+    },
+    "consumer_file_evidence_counts": {
+      "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__init__.py": 2,
+      "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__main__.py": 2,
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py": 66,
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py": 6
+    },
+    "cyclic_components_in_scope": 0,
+    "dynamic_consumers_in_scope": 0,
+    "evidence_kind_counts": {
+      "AST-IMPORT-NAME": 35,
+      "AST-NAME-IMPORTED": 35,
+      "AST-NAME-LOCAL": 6
+    },
+    "low_confidence_internal_evidence": 0,
+    "preserved_contract_surfaces": 3,
+    "productive_files_changed": 0,
+    "removal_candidates": 0
+  }
+}
