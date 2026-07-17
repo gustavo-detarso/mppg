@@ -271,12 +271,12 @@ DEFAULT_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.4")
 
 def stage(message: str) -> None:
     """Mostra etapas de execução em tempo real."""
-    from academic_pipeline.prisma_generic_orchestration import stage_impl_001 as _ap003e_impl_stage_1
+    from academic_pipeline.prisma_generic_orchestration import stage_with_runtime as _ap003e_impl_stage_1
     return _ap003e_impl_stage_1({**globals(), **locals()}, message)
 
 
 def _json_or_none(value: str | None) -> Any:
-    from academic_pipeline.prisma_generic_orchestration import _json_or_none_impl_001 as _ap003e_impl__json_or_none_1
+    from academic_pipeline.prisma_generic_orchestration import json_or_none_with_runtime as _ap003e_impl__json_or_none_1
     return _ap003e_impl__json_or_none_1({**globals(), **locals()}, value)
 
 
@@ -290,12 +290,12 @@ def load_config(path: Path) -> dict[str, Any]:
 
 
 def make_client(model_override: str | None=None) -> tuple[Any, str]:
-    from academic_pipeline.prisma_generic_orchestration import make_client_impl_001 as _ap003e_impl_make_client_1
+    from academic_pipeline.prisma_generic_orchestration import make_client_with_runtime as _ap003e_impl_make_client_1
     return _ap003e_impl_make_client_1({**globals(), **locals()}, model_override)
 
 
 def _section(cfg: dict[str, Any], name: str) -> dict[str, Any]:
-    from academic_pipeline.prisma_generic_orchestration import _section_impl_001 as _ap003e_impl__section_1
+    from academic_pipeline.prisma_generic_orchestration import section_with_runtime as _ap003e_impl__section_1
     return _ap003e_impl__section_1({**globals(), **locals()}, cfg, name)
 
 
@@ -313,7 +313,7 @@ def research_output_paths(cfg: dict[str, Any]) -> tuple[Path, str]:
     resolvidos em relação ao TOML; na ausência deles, usa-se uma pasta
     ``output_pesquisa`` dentro do próprio projeto.
     """
-    from academic_pipeline.prisma_generic_orchestration import research_output_paths_impl_001 as _ap003e_impl_research_output_paths_1
+    from academic_pipeline.prisma_generic_orchestration import research_output_paths_with_runtime as _ap003e_impl_research_output_paths_1
     return _ap003e_impl_research_output_paths_1({**globals(), **locals()}, cfg)
 
 
@@ -382,7 +382,7 @@ def render_external_prisma_outputs(cfg: dict[str, Any], out_dir: Path, prefix: s
     usa o relatório estruturado da busca/triagem e preserva o layout e a engine
     de LaTeX definidos no TOML, como os demais perfis que exportam PDF.
     """
-    from academic_pipeline.prisma_generic_orchestration import render_external_prisma_outputs_impl_001 as _ap003e_impl_render_external_prisma_outputs_1
+    from academic_pipeline.prisma_generic_orchestration import render_external_prisma_outputs_with_runtime as _ap003e_impl_render_external_prisma_outputs_1
     return _ap003e_impl_render_external_prisma_outputs_1({**globals(), **locals()}, cfg, out_dir, prefix, prisma_payload, phase=phase)
 
 
@@ -400,97 +400,97 @@ def render_additional_language_versions(*, client: Any, model: str, cfg: dict[st
 
 # >>> PATCH_PRISMA_CURADORIA_IA_MENU_PRINCIPAL_V1 >>>
 def _prisma_curadoria_default_config() -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_default_config_impl_001 as _ap003e_impl__prisma_curadoria_default_config_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_default_config_with_runtime as _ap003e_impl__prisma_curadoria_default_config_1
     return _ap003e_impl__prisma_curadoria_default_config_1({**globals(), **locals()})
 
 
 def _prisma_curadoria_default_out_dir() -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_default_out_dir_impl_001 as _ap003e_impl__prisma_curadoria_default_out_dir_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_default_out_dir_with_runtime as _ap003e_impl__prisma_curadoria_default_out_dir_1
     return _ap003e_impl__prisma_curadoria_default_out_dir_1({**globals(), **locals()})
 
 
 def _prisma_curadoria_default_prompt() -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_default_prompt_impl_001 as _ap003e_impl__prisma_curadoria_default_prompt_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_default_prompt_with_runtime as _ap003e_impl__prisma_curadoria_default_prompt_1
     return _ap003e_impl__prisma_curadoria_default_prompt_1({**globals(), **locals()})
 
 
 def _prisma_curadoria_script_path() -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_script_path_impl_001 as _ap003e_impl__prisma_curadoria_script_path_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_script_path_with_runtime as _ap003e_impl__prisma_curadoria_script_path_1
     return _ap003e_impl__prisma_curadoria_script_path_1({**globals(), **locals()})
 
 
 def _prisma_curadoria_arg(args, name: str, default=None):
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_arg_impl_001 as _ap003e_impl__prisma_curadoria_arg_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_arg_with_runtime as _ap003e_impl__prisma_curadoria_arg_1
     return _ap003e_impl__prisma_curadoria_arg_1({**globals(), **locals()}, args, name, default)
 
 
 def _prisma_curadoria_config_from_args(args) -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_config_from_args_impl_001 as _ap003e_impl__prisma_curadoria_config_from_args_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_config_from_args_with_runtime as _ap003e_impl__prisma_curadoria_config_from_args_1
     return _ap003e_impl__prisma_curadoria_config_from_args_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_out_from_args(args) -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_out_from_args_impl_001 as _ap003e_impl__prisma_curadoria_out_from_args_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_out_from_args_with_runtime as _ap003e_impl__prisma_curadoria_out_from_args_1
     return _ap003e_impl__prisma_curadoria_out_from_args_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_prompt_from_args(args) -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_prompt_from_args_impl_001 as _ap003e_impl__prisma_curadoria_prompt_from_args_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_prompt_from_args_with_runtime as _ap003e_impl__prisma_curadoria_prompt_from_args_1
     return _ap003e_impl__prisma_curadoria_prompt_from_args_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_input_from_args(args, *, default_xlsx: bool=False) -> str:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_input_from_args_impl_001 as _ap003e_impl__prisma_curadoria_input_from_args_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_input_from_args_with_runtime as _ap003e_impl__prisma_curadoria_input_from_args_1
     return _ap003e_impl__prisma_curadoria_input_from_args_1({**globals(), **locals()}, args, default_xlsx=default_xlsx)
 
 
 def _prisma_curadoria_run_command(cmd: list[str]) -> int:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_run_command_impl_001 as _ap003e_impl__prisma_curadoria_run_command_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_run_command_with_runtime as _ap003e_impl__prisma_curadoria_run_command_1
     return _ap003e_impl__prisma_curadoria_run_command_1({**globals(), **locals()}, cmd)
 
 
 def _prisma_curadoria_build_cmd(args, *, usar_ia: bool, reexportar_xlsx: bool=False) -> list[str]:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_build_cmd_impl_001 as _ap003e_impl__prisma_curadoria_build_cmd_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_build_cmd_with_runtime as _ap003e_impl__prisma_curadoria_build_cmd_1
     return _ap003e_impl__prisma_curadoria_build_cmd_1({**globals(), **locals()}, args, usar_ia=usar_ia, reexportar_xlsx=reexportar_xlsx)
 
 
 def _prisma_curadoria_run_ia(args, *, usar_ia: bool=True) -> int:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_run_ia_impl_001 as _ap003e_impl__prisma_curadoria_run_ia_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_run_ia_with_runtime as _ap003e_impl__prisma_curadoria_run_ia_1
     return _ap003e_impl__prisma_curadoria_run_ia_1({**globals(), **locals()}, args, usar_ia=usar_ia)
 
 
 def _prisma_curadoria_reexportar_xlsx(args) -> int:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_reexportar_xlsx_impl_001 as _ap003e_impl__prisma_curadoria_reexportar_xlsx_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_reexportar_xlsx_with_runtime as _ap003e_impl__prisma_curadoria_reexportar_xlsx_1
     return _ap003e_impl__prisma_curadoria_reexportar_xlsx_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_pipeline_supports_flag(flag: str) -> bool:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_pipeline_supports_flag_impl_001 as _ap003e_impl__prisma_curadoria_pipeline_supports_flag_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_pipeline_supports_flag_with_runtime as _ap003e_impl__prisma_curadoria_pipeline_supports_flag_1
     return _ap003e_impl__prisma_curadoria_pipeline_supports_flag_1({**globals(), **locals()}, flag)
 
 
 def _prisma_curadoria_importar_no_pipeline(args) -> int:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_importar_no_pipeline_impl_001 as _ap003e_impl__prisma_curadoria_importar_no_pipeline_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_importar_no_pipeline_with_runtime as _ap003e_impl__prisma_curadoria_importar_no_pipeline_1
     return _ap003e_impl__prisma_curadoria_importar_no_pipeline_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_fluxo_completo(args) -> int:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_fluxo_completo_impl_001 as _ap003e_impl__prisma_curadoria_fluxo_completo_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_fluxo_completo_with_runtime as _ap003e_impl__prisma_curadoria_fluxo_completo_1
     return _ap003e_impl__prisma_curadoria_fluxo_completo_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_mostrar_caminhos(args) -> None:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_mostrar_caminhos_impl_001 as _ap003e_impl__prisma_curadoria_mostrar_caminhos_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_mostrar_caminhos_with_runtime as _ap003e_impl__prisma_curadoria_mostrar_caminhos_1
     return _ap003e_impl__prisma_curadoria_mostrar_caminhos_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_menu(args) -> int:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_menu_impl_001 as _ap003e_impl__prisma_curadoria_menu_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_menu_with_runtime as _ap003e_impl__prisma_curadoria_menu_1
     return _ap003e_impl__prisma_curadoria_menu_1({**globals(), **locals()}, args)
 
 
 def _prisma_curadoria_dispatch(args) -> int:
-    from academic_pipeline.prisma_generic_orchestration import _prisma_curadoria_dispatch_impl_001 as _ap003e_impl__prisma_curadoria_dispatch_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_curadoria_dispatch_with_runtime as _ap003e_impl__prisma_curadoria_dispatch_1
     return _ap003e_impl__prisma_curadoria_dispatch_1({**globals(), **locals()}, args)
 # <<< PATCH_PRISMA_CURADORIA_IA_MENU_PRINCIPAL_V1 <<<
 
@@ -1303,28 +1303,28 @@ def render_org_latex(document: Any, org_path: Path, bib_filename: str, *, cfg: d
 
 # >>> PATCH_PRISMA_ARTIGO_GENERICO_WRAPPER_V1_5 >>>
 def _prisma_artigo_generico_get_arg(argv, name):
-    from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_get_arg_impl_001 as _ap003e_impl__prisma_artigo_generico_get_arg_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_artigo_generico_get_arg_with_runtime as _ap003e_impl__prisma_artigo_generico_get_arg_1
     return _ap003e_impl__prisma_artigo_generico_get_arg_1({**globals(), **locals()}, argv, name)
 
 def _prisma_artigo_generico_strip(argv):
-    from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_strip_impl_001 as _ap003e_impl__prisma_artigo_generico_strip_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_artigo_generico_strip_with_runtime as _ap003e_impl__prisma_artigo_generico_strip_1
     return _ap003e_impl__prisma_artigo_generico_strip_1({**globals(), **locals()}, argv)
 
 def _prisma_artigo_generico_out_dir(argv):
-    from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_out_dir_impl_001 as _ap003e_impl__prisma_artigo_generico_out_dir_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_artigo_generico_out_dir_with_runtime as _ap003e_impl__prisma_artigo_generico_out_dir_1
     return _ap003e_impl__prisma_artigo_generico_out_dir_1({**globals(), **locals()}, argv)
 
 def _prisma_artigo_generico_run_export(argv, silent=False):
-    from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_run_export_impl_001 as _ap003e_impl__prisma_artigo_generico_run_export_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_artigo_generico_run_export_with_runtime as _ap003e_impl__prisma_artigo_generico_run_export_1
     return _ap003e_impl__prisma_artigo_generico_run_export_1({**globals(), **locals()}, argv, silent)
 
 def _prisma_artigo_generico_run_freeze(argv, silent=False):
-    from academic_pipeline.prisma_generic_orchestration import _prisma_artigo_generico_run_freeze_impl_001 as _ap003e_impl__prisma_artigo_generico_run_freeze_1
+    from academic_pipeline.prisma_generic_orchestration import prisma_artigo_generico_run_freeze_with_runtime as _ap003e_impl__prisma_artigo_generico_run_freeze_1
     return _ap003e_impl__prisma_artigo_generico_run_freeze_1({**globals(), **locals()}, argv, silent)
 
 
 def main(*args, **kwargs):
-    from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_entrypoint as _ap003e_entrypoint
+    from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint
     return _ap003e_entrypoint({**globals(), **locals()}, *args, **kwargs)
 # <<< PATCH_PRISMA_ARTIGO_GENERICO_WRAPPER_V1_5 <<<
 
