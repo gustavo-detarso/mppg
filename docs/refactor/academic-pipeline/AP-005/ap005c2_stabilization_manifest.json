@@ -1,0 +1,116 @@
+{
+  "baseline_commit": "9372de8f621c9012a28d4c4a9a64e252a398bdf3",
+  "branch": "ap-refactor/04-consumer-canonicalization",
+  "candidate_file_count": 12,
+  "candidate_files": [
+    "docs/refactor/academic-pipeline/AP-005/AP-005C2_STABILIZATION_VALIDATION.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005C_TOML_CAPTURE_ALIAS_STRATEGY.md",
+    "docs/refactor/academic-pipeline/AP-005/ap005c2_stabilization_manifest.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005c_toml_capture_alias_inventory.json",
+    "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_inventory_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py",
+    "tools/refactor/ap005c1_apply_toml_capture_aliases.py",
+    "tools/refactor/ap005c2_validate_stabilization.py",
+    "tools/refactor/ap005c_inventory_toml_capture_aliases.py"
+  ],
+  "commit": 0,
+  "contract_fingerprint": "9cfc858992cdb30343d02d6526eb36ae6e8f2cc82fecf762f6849673022528f1",
+  "core_file_hashes": {
+    "docs/refactor/academic-pipeline/AP-005/AP-005C_TOML_CAPTURE_ALIAS_STRATEGY.md": "4e01b0596b7f55033074f775ababaff48f84fbef46312d490c4a05e5c7792e6c",
+    "docs/refactor/academic-pipeline/AP-005/ap005c_toml_capture_alias_inventory.json": "f97714602a8c0d076d54819ec429ad8c492768e1754ea2a326e4e3f71dfc5f63",
+    "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py": "9d627348fcdc3b9ec727abb3c2862eb26b11bbd1d1bc744958d892f9f4afa7f9",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py": "a17498273c482fa6e5855eb78cce2ed1adc595f7718299e6d2cb3419fca2c7e3",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_inventory_contract.py": "afbd6003479a49b9633f54f41032ddf2906a82147073728b675642e7c695c170",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py": "031a7f56feab2fca7d6729bb5ed117f92abe26a05f80866ca9218d4b539f4795",
+    "tools/refactor/ap005c1_apply_toml_capture_aliases.py": "4be0bc2bc9de73513f7743be8489a750006dc58c835c21e74cf0f231f07f4a68",
+    "tools/refactor/ap005c_inventory_toml_capture_aliases.py": "d3a59884d0a6262adb1e07593bb476f7c4fce05587e65742563f8911184a98f8"
+  },
+  "entries": [
+    {
+      "canonical_assignment_line": 4907,
+      "canonical_capture": "_captured_collect_outputs_and_options",
+      "canonical_load_lines": [
+        4908,
+        4914,
+        4918,
+        4945
+      ],
+      "captured_expression": "collect_outputs_and_options",
+      "legacy_alias": "_collect_outputs_and_options_original",
+      "legacy_assignment_line": 4908,
+      "legacy_load_lines": [],
+      "productive_consumer_count": 3,
+      "publicly_exported": false
+    },
+    {
+      "canonical_assignment_line": 4978,
+      "canonical_capture": "_captured_wiz_input_ensure_reference_policy",
+      "canonical_load_lines": [
+        4979,
+        4986
+      ],
+      "captured_expression": "_WizInputController._ensure_reference_policy",
+      "legacy_alias": "_original_ensure_reference_policy",
+      "legacy_assignment_line": 4979,
+      "legacy_load_lines": [],
+      "productive_consumer_count": 1,
+      "publicly_exported": false
+    },
+    {
+      "canonical_assignment_line": 4959,
+      "canonical_capture": "_captured_render_toml",
+      "canonical_load_lines": [
+        4960,
+        4965
+      ],
+      "captured_expression": "render_toml",
+      "legacy_alias": "_render_toml_original",
+      "legacy_assignment_line": 4960,
+      "legacy_load_lines": [],
+      "productive_consumer_count": 1,
+      "publicly_exported": false
+    },
+    {
+      "canonical_assignment_line": 4996,
+      "canonical_capture": "_captured_wiz_disable_references",
+      "canonical_load_lines": [
+        4997,
+        5001
+      ],
+      "captured_expression": "_wiz_disable_references",
+      "legacy_alias": "_wiz_disable_references_original",
+      "legacy_assignment_line": 4997,
+      "legacy_load_lines": [],
+      "productive_consumer_count": 1,
+      "publicly_exported": false
+    }
+  ],
+  "next_phase": "AP-005C.3 — encerramento formal, auditoria do manifesto, commit isolado e publicação",
+  "productive_diff": {
+    "deletions": 10,
+    "files": 1,
+    "insertions": 14,
+    "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+  },
+  "productive_module": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+  "push": 0,
+  "schema_version": "ap005c2.stabilization-manifest.v1",
+  "staging": 0,
+  "symbol_contract": {
+    "canonical_captures": 4,
+    "canonical_consumers": 6,
+    "legacy_aliases_preserved": 4,
+    "legacy_consumers_remaining": 0,
+    "new_public_exports": 0
+  },
+  "test_gates": {
+    "ap005c_tests": 24,
+    "canonical_suite_passed": 532,
+    "canonical_suite_xfailed": 3,
+    "focused_regression": 53,
+    "legacy_related_tests": 106
+  }
+}
