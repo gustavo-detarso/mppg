@@ -1038,24 +1038,58 @@ def check_files(
 def verify_git_baseline(
     root: pathlib.Path,
 ) -> None:
-    result = subprocess.run(
+    baseline = subprocess.run(
         [
             "git",
             "-C",
             str(root),
-            "rev-parse",
-            "HEAD",
+            "cat-file",
+            "-e",
+            f"{BASELINE_COMMIT}^{{commit}}",
         ],
-        check=True,
+        check=False,
         text=True,
         capture_output=True,
     )
 
-    head = result.stdout.strip()
-
-    if head != BASELINE_COMMIT:
+    if baseline.returncode != 0:
         raise SystemExit(
-            f"HEAD divergente: {head}"
+            "Commit de baseline inexistente: "
+            f"{BASELINE_COMMIT}"
+        )
+
+    ancestor = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(root),
+            "merge-base",
+            "--is-ancestor",
+            BASELINE_COMMIT,
+            "HEAD",
+        ],
+        check=False,
+        text=True,
+        capture_output=True,
+    )
+
+    if ancestor.returncode != 0:
+        head = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(root),
+                "rev-parse",
+                "HEAD",
+            ],
+            check=True,
+            text=True,
+            capture_output=True,
+        ).stdout.strip()
+
+        raise SystemExit(
+            "Baseline não é ancestral de HEAD: "
+            f"baseline={BASELINE_COMMIT}; HEAD={head}"
         )
 
 

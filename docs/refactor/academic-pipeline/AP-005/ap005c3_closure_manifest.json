@@ -21,26 +21,26 @@
     "tools/refactor/ap005c_inventory_toml_capture_aliases.py"
   ],
   "closure_artifact_hashes": {
-    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py": "68a9f206b616a222c996df73ed55e316c17702150ccd687c1619121969008011",
-    "tools/refactor/ap005c3_validate_closure.py": "2897d5ef2dc3e3c723ecdb82ce384e04b4a46d65a9b37d0fc0900be64fa0f5ca"
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py": "902b647429139482318bdd82ceb9f216836326ec51e8a669542440b2440dd180",
+    "tools/refactor/ap005c3_validate_closure.py": "93298cc37a9c8d247a99487a1bea7c0634fd3967a55a117679c18e8530c0090b"
   },
   "closure_decision": "ready_for_explicit_commit_and_publication_approval",
   "commit": 0,
-  "contract_fingerprint": "d37ac6d49f7482c4b0dcb7e4f78ddfed127458c40a699bd5e623008560177403",
+  "contract_fingerprint": "7853a10ac4af86fd1fd3f54673905a963b716fe2a4f5dfa6b4fb8c7f92c6a511",
   "next_step": "solicitar aprovação explícita para staging dos 16 arquivos, commit isolado e publicação",
   "pre_closure_file_hashes": {
-    "docs/refactor/academic-pipeline/AP-005/AP-005C2_STABILIZATION_VALIDATION.md": "f956ba70312eb7009d8f9e654f3623e2f5e57afcb0785a7bdd9021e30e75c27e",
+    "docs/refactor/academic-pipeline/AP-005/AP-005C2_STABILIZATION_VALIDATION.md": "5219ab5944f2f4867cd8cfe213367ae922de6451ba78d498309407e32e9779a0",
     "docs/refactor/academic-pipeline/AP-005/AP-005C_TOML_CAPTURE_ALIAS_STRATEGY.md": "4e01b0596b7f55033074f775ababaff48f84fbef46312d490c4a05e5c7792e6c",
-    "docs/refactor/academic-pipeline/AP-005/ap005c2_stabilization_manifest.json": "c4df6410dfc48b4f30e225710b060dab77fdd30fae4e1f389062b9aad662f4d3",
+    "docs/refactor/academic-pipeline/AP-005/ap005c2_stabilization_manifest.json": "9268485d1fab8f1f9245c46087f346a8978983d1c622df19cbf7ad3e9af8e12e",
     "docs/refactor/academic-pipeline/AP-005/ap005c_toml_capture_alias_inventory.json": "f97714602a8c0d076d54819ec429ad8c492768e1754ea2a326e4e3f71dfc5f63",
     "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py": "9d627348fcdc3b9ec727abb3c2862eb26b11bbd1d1bc744958d892f9f4afa7f9",
     "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py": "a17498273c482fa6e5855eb78cce2ed1adc595f7718299e6d2cb3419fca2c7e3",
-    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py": "39b23ccd2494660c14f35049b7c40a85f32e154b8942726e36b917f41d437846",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py": "9dd43237a090e16698924adf8618ec4c3166aefc4f831d807eb9bac8c8c30343",
     "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_inventory_contract.py": "afbd6003479a49b9633f54f41032ddf2906a82147073728b675642e7c695c170",
     "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py": "031a7f56feab2fca7d6729bb5ed117f92abe26a05f80866ca9218d4b539f4795",
     "tools/refactor/ap005c1_apply_toml_capture_aliases.py": "4be0bc2bc9de73513f7743be8489a750006dc58c835c21e74cf0f231f07f4a68",
-    "tools/refactor/ap005c2_validate_stabilization.py": "0eca7bf94cfada9fa2685db50df629e64811384c7b0dc0f1906c121c7667e443",
-    "tools/refactor/ap005c_inventory_toml_capture_aliases.py": "d3a59884d0a6262adb1e07593bb476f7c4fce05587e65742563f8911184a98f8"
+    "tools/refactor/ap005c2_validate_stabilization.py": "5e4a84d3c4048abdd2ffbd1ee78239a39423f150ff08af98e066c2df1d7a1238",
+    "tools/refactor/ap005c_inventory_toml_capture_aliases.py": "aed2b3859c124052b0ffa2d0b6a309f6485af3af18added6504c1d65c7fb8137"
   },
   "productive_diff": {
     "deletions": 10,
@@ -50,7 +50,7 @@
   },
   "push": 0,
   "schema_version": "ap005c3.closure-manifest.v1",
-  "source_stabilization_fingerprint": "9cfc858992cdb30343d02d6526eb36ae6e8f2cc82fecf762f6849673022528f1",
+  "source_stabilization_fingerprint": "2014d0ca0daa8d19918cd813370b1c19b5e9c5312b757a45514be4c04ed9110f",
   "source_stabilization_manifest": "docs/refactor/academic-pipeline/AP-005/ap005c2_stabilization_manifest.json",
   "staging": 0,
   "symbol_contract": {

@@ -4,8 +4,8 @@
 
 - Baseline: `9372de8f621c9012a28d4c4a9a64e252a398bdf3`
 - Branch: `ap-refactor/04-consumer-canonicalization`
-- Fingerprint de estabilização: `9cfc858992cdb30343d02d6526eb36ae6e8f2cc82fecf762f6849673022528f1`
-- Fingerprint de encerramento: `d37ac6d49f7482c4b0dcb7e4f78ddfed127458c40a699bd5e623008560177403`
+- Fingerprint de estabilização: `2014d0ca0daa8d19918cd813370b1c19b5e9c5312b757a45514be4c04ed9110f`
+- Fingerprint de encerramento: `7853a10ac4af86fd1fd3f54673905a963b716fe2a4f5dfa6b4fb8c7f92c6a511`
 
 ## Resultado funcional
 

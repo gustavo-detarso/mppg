@@ -4,7 +4,7 @@
 
 - Commit: `9372de8f621c9012a28d4c4a9a64e252a398bdf3`
 - Branch: `ap-refactor/04-consumer-canonicalization`
-- Fingerprint: `9cfc858992cdb30343d02d6526eb36ae6e8f2cc82fecf762f6849673022528f1`
+- Fingerprint: `2014d0ca0daa8d19918cd813370b1c19b5e9c5312b757a45514be4c04ed9110f`
 
 ## Resultado estrutural
 

@@ -56,8 +56,7 @@ def test_closure_schema_and_baseline() -> None:
     assert payload[
         "source_stabilization_fingerprint"
     ] == (
-        "9cfc858992cdb30343d02d6526eb36ae"
-        "6e8f2cc82fecf762f6849673022528f1"
+        '2014d0ca0daa8d19918cd813370b1c19b5e9c5312b757a45514be4c04ed9110f'
     )
 
 
