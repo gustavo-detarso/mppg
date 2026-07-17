@@ -1,0 +1,563 @@
+{
+  "ap004e_commit_contract": {
+    "commit": "b5f924ae2b55c961f251a8d65f3405eb3cea35b8",
+    "files": [
+      "docs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_STRATEGY.md",
+      "docs/refactor/academic-pipeline/AP-004/ap004e_compatibility_inventory.json",
+      "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004e_compatibility_inventory_contract.py",
+      "tools/refactor/ap004e_inventory_compatibility.py"
+    ],
+    "previous_commit": "389f0ae526d12327a58ce23937225cf05b032566",
+    "productive_code_changed": false
+  },
+  "ap004e_inventory_contract": {
+    "conclusion": "64 superfícies preservadas ou dependentes de migração prévia; nenhum candidato seguro à remoção; aplicador produtivo não necessário",
+    "contract_fingerprint": "cee4120c2602bb12e78fe7d41cf22fc261b8a64647c2c2b9d6e256903d5574e3",
+    "schema_version": "ap004e.compatibility-inventory.v6",
+    "summary": {
+      "blocked_items": 0,
+      "classification_counts": {
+        "alias canônico necessário": 4,
+        "bridge de importação necessária": 2,
+        "compatibilidade interna necessária": 40,
+        "compatibilidade ligada aos três xfail": 4,
+        "compatibilidade protegida por decisão da AP-004B": 5,
+        "compatibilidade pública durável": 6,
+        "entrypoint público preservado": 2,
+        "reexport necessário": 6,
+        "wrapper histórico congelado": 2
+      },
+      "consumer_reference_totals": {
+        "documentation": 35861,
+        "historical": 288,
+        "internal": 330,
+        "tests": 313
+      },
+      "decision_counts": {
+        "preservar": 22,
+        "preservar congelado": 2,
+        "preservar ou migrar consumidores antes": 38,
+        "preservar sem alteração": 2
+      },
+      "item_count": 64,
+      "manual_decision_items": 0,
+      "occurrence_type_counts": {
+        "AP-004B compatibility decision": 5,
+        "assignment alias": 5,
+        "entrypoint": 2,
+        "function wrapper": 34,
+        "getattr": 1,
+        "historical frozen file": 2,
+        "module facade": 2,
+        "protected symbol": 5,
+        "redirect import": 2,
+        "reexport": 6
+      },
+      "removal_candidates": 0,
+      "risk_counts": {
+        "alto": 53,
+        "crítico": 11
+      },
+      "syntax_errors": 0
+    }
+  },
+  "artifacts": {
+    "documental_sanitation": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004_NAMING_CONVENTION.md",
+    "generated": [
+      "docs/refactor/academic-pipeline/AP-004/AP-004F_FINAL_VALIDATION.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004F_CLOSURE_REPORT.md",
+      "docs/refactor/academic-pipeline/AP-004/AP-004F_INTEGRATION_DECISION.md",
+      "docs/refactor/academic-pipeline/AP-004/ap004f_closure_manifest.json",
+      "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004f_closure_contract.py"
+    ],
+    "generator": "tools/refactor/ap004f_generate_closure.py"
+  },
+  "baseline": {
+    "branch": "ap-refactor/03-orchestrator-decomposition",
+    "dirty_paths": [
+      {
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004_NAMING_CONVENTION.md",
+        "status": " M"
+      },
+      {
+        "path": "tools/refactor/ap004f_generate_closure.py",
+        "status": "??"
+      }
+    ],
+    "divergence": [
+      0,
+      0
+    ],
+    "expected_documental_fix": {
+      "bytes_removed": 1,
+      "change": "remoção de linha vazia excedente no EOF",
+      "head_bytes": 4590,
+      "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004_NAMING_CONVENTION.md",
+      "working_tree_bytes": 4589
+    },
+    "git_layout": {
+      "git_common_dir": "/home/gustavodetarso/Documentos/mppg/.git",
+      "git_dir": "/home/gustavodetarso/Documentos/mppg/.git/worktrees/mppg-refactor-academic-pipeline",
+      "worktree_format": "linked_worktree"
+    },
+    "head": "b5f924ae2b55c961f251a8d65f3405eb3cea35b8",
+    "head_subject": "refactor(academic-pipeline): consolidar compatibilidades da AP-004E",
+    "remote_head": "b5f924ae2b55c961f251a8d65f3405eb3cea35b8",
+    "remote_ref": "origin/ap-refactor/03-orchestrator-decomposition"
+  },
+  "closure_decision": {
+    "ap004_status": "technically_closed",
+    "integration_authorized": false,
+    "integration_recommended": true,
+    "next_required_action": "review_and_commit_ap004f_artifacts",
+    "productive_applicator_required": false,
+    "productive_changes_in_ap004f": false,
+    "remaining_manual_inventory_decisions": 0,
+    "residual_known_defects": 3,
+    "residual_known_defects_policy": "preserved_as_xfail",
+    "safe_removal_candidates": 0
+  },
+  "consolidated_diff": {
+    "binary_files": 0,
+    "deletions": 586,
+    "diff_check_clean": true,
+    "file_count": 53,
+    "files": [
+      {
+        "deletions": 0,
+        "insertions": 14822,
+        "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 44,
+        "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_STRATEGY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 128,
+        "path": "docs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_INVENTORY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 122,
+        "path": "docs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_STRATEGY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 364810,
+        "path": "docs/refactor/academic-pipeline/AP-004/ap004d_version_marker_inventory.json"
+      },
+      {
+        "deletions": 0,
+        "insertions": 9214,
+        "path": "docs/refactor/academic-pipeline/AP-004/ap004e_compatibility_inventory.json"
+      },
+      {
+        "deletions": 13,
+        "insertions": 13,
+        "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/document_orchestration.py"
+      },
+      {
+        "deletions": 1,
+        "insertions": 1,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_gui.py"
+      },
+      {
+        "deletions": 33,
+        "insertions": 33,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 95,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py"
+      },
+      {
+        "deletions": 33,
+        "insertions": 33,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+      },
+      {
+        "deletions": 91,
+        "insertions": 21,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py"
+      },
+      {
+        "deletions": 1,
+        "insertions": 1,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_tui.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 25,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/pipeline_orchestrator.py"
+      },
+      {
+        "deletions": 1,
+        "insertions": 1,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/prisma_congelar_artigo.py"
+      },
+      {
+        "deletions": 7,
+        "insertions": 7,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_rc10_configuration_characterization.py"
+      },
+      {
+        "deletions": 2,
+        "insertions": 2,
+        "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_rc10_smoke.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 124,
+        "path": "software/academic_pipeline_rc10_7_conformidade/configurar_pretriagem_ia_prisma.py"
+      },
+      {
+        "deletions": 120,
+        "insertions": 21,
+        "path": "software/academic_pipeline_rc10_7_conformidade/configurar_pretriagem_ia_prisma_v16.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 388,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004A_NAMING_INVENTORY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 63,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_APPLICATION.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 157,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_INVENTORY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 66,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_STRATEGY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 71,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_APPLICATION.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 185,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_INVENTORY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 61,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_STRATEGY.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 90,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004_NAMING_CONVENTION.md"
+      },
+      {
+        "deletions": 0,
+        "insertions": 109041,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004a_naming_inventory.json"
+      },
+      {
+        "deletions": 0,
+        "insertions": 327,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_application.json"
+      },
+      {
+        "deletions": 0,
+        "insertions": 15316,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json"
+      },
+      {
+        "deletions": 0,
+        "insertions": 345,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_application.json"
+      },
+      {
+        "deletions": 0,
+        "insertions": 13932,
+        "path": "software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_inventory.json"
+      },
+      {
+        "deletions": 0,
+        "insertions": 271,
+        "path": "software/academic_pipeline_rc10_7_conformidade/gerar_log_diagnostico_artigo.py"
+      },
+      {
+        "deletions": 270,
+        "insertions": 24,
+        "path": "software/academic_pipeline_rc10_7_conformidade/gerar_log_diagnostico_artigo_v1_18.py"
+      },
+      {
+        "deletions": 10,
+        "insertions": 7,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003d_document_contract.py"
+      },
+      {
+        "deletions": 1,
+        "insertions": 1,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003e_prisma_generic_contract.py"
+      },
+      {
+        "deletions": 1,
+        "insertions": 1,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003f_main_unification_contract.py"
+      },
+      {
+        "deletions": 2,
+        "insertions": 3,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003g_stabilization_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 299,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004a_naming_inventory_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 301,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004b_module_file_application_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 196,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004b_module_file_inventory_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 278,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004c_internal_symbol_application_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 322,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004c_internal_symbol_inventory_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 107,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004d_version_marker_inventory_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 92,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004e_compatibility_inventory_contract.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 3946,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004a_inventory_names.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 2056,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004b_apply_module_file_names.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 2654,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004b_inventory_modules.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 2467,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004c_apply_internal_symbols.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 2515,
+        "path": "software/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004c_inventory_internal_symbols.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 2739,
+        "path": "tools/refactor/ap004d_apply_version_markers.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 2225,
+        "path": "tools/refactor/ap004d_inventory_version_markers.py"
+      },
+      {
+        "deletions": 0,
+        "insertions": 2825,
+        "path": "tools/refactor/ap004e_inventory_compatibility.py"
+      }
+    ],
+    "insertions": 552888,
+    "name_status": [
+      "A\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
+      "A\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_STRATEGY.md",
+      "A\tdocs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_INVENTORY.md",
+      "A\tdocs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_STRATEGY.md",
+      "A\tdocs/refactor/academic-pipeline/AP-004/ap004d_version_marker_inventory.json",
+      "A\tdocs/refactor/academic-pipeline/AP-004/ap004e_compatibility_inventory.json",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/academic_pipeline/document_orchestration.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_gui.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_v0_3_1.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_tui.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/prisma_congelar_artigo.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_rc10_configuration_characterization.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_rc10_smoke.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/configurar_pretriagem_ia_prisma.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/configurar_pretriagem_ia_prisma_v16.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004A_NAMING_INVENTORY.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_APPLICATION.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_INVENTORY.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004B_MODULE_FILE_STRATEGY.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_APPLICATION.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_INVENTORY.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004C_INTERNAL_SYMBOL_STRATEGY.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/AP-004_NAMING_CONVENTION.md",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004a_naming_inventory.json",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_application.json",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_application.json",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004c_internal_symbol_inventory.json",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/gerar_log_diagnostico_artigo.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/gerar_log_diagnostico_artigo_v1_18.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003d_document_contract.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003e_prisma_generic_contract.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003f_main_unification_contract.py",
+      "M\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003g_stabilization_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004a_naming_inventory_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004b_module_file_application_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004c_internal_symbol_inventory_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004d_version_marker_inventory_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap004e_compatibility_inventory_contract.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004a_inventory_names.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004b_apply_module_file_names.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004b_inventory_modules.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004c_apply_internal_symbols.py",
+      "A\tsoftware/academic_pipeline_rc10_7_conformidade/tools/refactor/ap004c_inventory_internal_symbols.py",
+      "A\ttools/refactor/ap004d_apply_version_markers.py",
+      "A\ttools/refactor/ap004d_inventory_version_markers.py",
+      "A\ttools/refactor/ap004e_inventory_compatibility.py"
+    ]
+  },
+  "contract_fingerprint": "924865e01241083a03ddfb5d152a3eaa4972ecb2c514258a0ff99fdedd0684c0",
+  "gate": {
+    "cherry_pick_allowed": false,
+    "commit_allowed_before_review": false,
+    "integration_allowed_before_explicit_approval": false,
+    "integration_executed": false,
+    "merge_allowed": false,
+    "message": "[BLOQUEIO] Integração em refactor/academic-pipeline depende de revisão dos artefatos AP-004F e aprovação expressa.",
+    "productive_changes_allowed": false,
+    "push_allowed_before_review": false,
+    "rebase_allowed": false
+  },
+  "generated_at": "2026-07-17T01:26:43.890148+00:00",
+  "integration_assessment": {
+    "conflict_assessment": "not_applicable_fast_forward",
+    "decision": "ready_for_explicit_integration_approval",
+    "divergence": {
+      "source_only": 12,
+      "target_only": 0
+    },
+    "integration_executed": false,
+    "integration_mode": "fast-forward",
+    "merge_base": "56b33739518026f379e076bdfdf06e781268c358",
+    "merge_tree_clean": true,
+    "source_head": "b5f924ae2b55c961f251a8d65f3405eb3cea35b8",
+    "source_is_ancestor_of_target": false,
+    "target_head": "56b33739518026f379e076bdfdf06e781268c358",
+    "target_is_ancestor_of_source": true,
+    "target_ref": "origin/refactor/academic-pipeline",
+    "technically_ready": true
+  },
+  "phases": [
+    {
+      "ancestor_of_head": true,
+      "commit": "6de61fc9741035187836460d97da6d672708998a",
+      "committed_at": "2026-07-15T20:25:49-03:00",
+      "phase": "AP-004A",
+      "subject": "chore(academic-pipeline): consolidar inventário de nomes da AP-004A"
+    },
+    {
+      "ancestor_of_head": true,
+      "commit": "aa9829f09a5c1b9e69c634637c311b03f360b07e",
+      "committed_at": "2026-07-15T22:07:48-03:00",
+      "phase": "AP-004B",
+      "subject": "refactor(academic-pipeline): consolidar módulos e arquivos da AP-004B"
+    },
+    {
+      "ancestor_of_head": true,
+      "commit": "81293d79e86da8b4d0407b483fc3dedaf27768cb",
+      "committed_at": "2026-07-16T13:47:00-03:00",
+      "phase": "AP-004C",
+      "subject": "refactor(academic-pipeline): consolidar símbolos internos da AP-004C"
+    },
+    {
+      "ancestor_of_head": true,
+      "commit": "389f0ae526d12327a58ce23937225cf05b032566",
+      "committed_at": "2026-07-16T18:40:18-03:00",
+      "phase": "AP-004D",
+      "subject": "refactor(academic-pipeline): consolidar marcadores de versão da AP-004D"
+    },
+    {
+      "ancestor_of_head": true,
+      "commit": "b5f924ae2b55c961f251a8d65f3405eb3cea35b8",
+      "committed_at": "2026-07-16T22:03:05-03:00",
+      "phase": "AP-004E",
+      "subject": "refactor(academic-pipeline): consolidar compatibilidades da AP-004E"
+    }
+  ],
+  "schema_version": "ap004f.closure-manifest.v1",
+  "validation": {
+    "canonical_suite_before_ap004f_contract": {
+      "duration_seconds": 53.48,
+      "errors": 0,
+      "failed": 0,
+      "passed": 489,
+      "short_summary_lines": [
+        "XFAIL app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure - Defeito legado catalogado: refresh_from_files marca etapas posteriores como bloqueadas, mas WorkflowState.save/_normalize volta a etapa para pendente quando a dependência imediata está OK, ignorando falha anterior.",
+        "XFAIL app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract - Defeito legado catalogado: extract_org_abstracts inclui a linha Palavras-chave no abstract quando o ORG usa heading Resumo seguido de rótulo inline, sem heading próprio.",
+        "XFAIL app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations - Defeito legado catalogado: _refs_v6_strip_org usa o padrão 'para' em vez de 'paren' e ainda não remove \\parencite."
+      ],
+      "skipped": 0,
+      "xfailed": 3,
+      "xpassed": 0
+    },
+    "contract_tests": {
+      "duration_seconds": 0.73,
+      "errors": 0,
+      "failed": 0,
+      "passed": 7,
+      "short_summary_lines": [],
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "expected_xfails": [
+      "app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure",
+      "app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract",
+      "app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations"
+    ],
+    "py_compile": {
+      "module_count": 7,
+      "modules": [
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/cli_parser.py",
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/command_dispatch.py",
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/document_orchestration.py",
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+        "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__main__.py",
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+      ],
+      "status": "passed"
+    }
+  }
+}
