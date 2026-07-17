@@ -1,0 +1,1466 @@
+{
+  "schema": "ap005d.facade-inventory.v1",
+  "baseline_commit": "78f3be0fce0dd8f79e55729a7111a9359c9edb8d",
+  "head_policy": "baseline_commit_must_be_ancestor_of_head",
+  "source_manifest": "git ls-files",
+  "scope": {
+    "auditable_python_files": 145,
+    "excluded": [
+      "project backups/",
+      "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005d_facade_inventory_contract.py"
+    ]
+  },
+  "decision": {
+    "productive_changes_required": false,
+    "facades_to_preserve": [
+      "app_bundle.scripts.pipeline.article_workflow",
+      "academic_pipeline"
+    ],
+    "canonical_modules_not_facades": [
+      "academic_pipeline.cli_parser",
+      "academic_pipeline.command_dispatch",
+      "academic_pipeline.document_orchestration",
+      "academic_pipeline.prisma_generic_orchestration"
+    ],
+    "deferred_scope": "Any broad package-path migration belongs outside AP-005D."
+  },
+  "candidates": [
+    {
+      "module": "app_bundle.scripts.pipeline.article_workflow",
+      "path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/article_workflow/__init__.py",
+      "sha256": "110f39cd27f9c21baa7687a3ee9f601ab15a4fe7d20f574d73988cb3e9decf52",
+      "is_package_initializer": true,
+      "all_present": true,
+      "dynamic_all": false,
+      "all": [
+        "STAGES",
+        "StageRecord",
+        "WorkflowState",
+        "ArticleWorkflow",
+        "StageValidation"
+      ],
+      "local_exports": [],
+      "reexports": [
+        {
+          "exported_name": "STAGES",
+          "source": {
+            "kind": "from",
+            "module": "app_bundle.scripts.pipeline.article_workflow.state",
+            "name": "STAGES",
+            "asname": null,
+            "level": 1,
+            "lineno": 2
+          }
+        },
+        {
+          "exported_name": "StageRecord",
+          "source": {
+            "kind": "from",
+            "module": "app_bundle.scripts.pipeline.article_workflow.state",
+            "name": "StageRecord",
+            "asname": null,
+            "level": 1,
+            "lineno": 2
+          }
+        },
+        {
+          "exported_name": "WorkflowState",
+          "source": {
+            "kind": "from",
+            "module": "app_bundle.scripts.pipeline.article_workflow.state",
+            "name": "WorkflowState",
+            "asname": null,
+            "level": 1,
+            "lineno": 2
+          }
+        },
+        {
+          "exported_name": "ArticleWorkflow",
+          "source": {
+            "kind": "from",
+            "module": "app_bundle.scripts.pipeline.article_workflow.validators",
+            "name": "ArticleWorkflow",
+            "asname": null,
+            "level": 1,
+            "lineno": 3
+          }
+        },
+        {
+          "exported_name": "StageValidation",
+          "source": {
+            "kind": "from",
+            "module": "app_bundle.scripts.pipeline.article_workflow.validators",
+            "name": "StageValidation",
+            "asname": null,
+            "level": 1,
+            "lineno": 3
+          }
+        }
+      ],
+      "unresolved_exports": [],
+      "consumers": {
+        "ordinary": [],
+        "test": [],
+        "patch_backup": []
+      },
+      "classification": [
+        "facade_reexport_publico_verdadeiro",
+        "caminho_publico_preservado"
+      ],
+      "decision": "preserve_unchanged",
+      "false_positive_names": []
+    },
+    {
+      "module": "academic_pipeline",
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__init__.py",
+      "sha256": "4d08f2e264da8da506351ceaf4a5efd17fa4211bae7b44da458086618137413c",
+      "is_package_initializer": true,
+      "all_present": true,
+      "dynamic_all": false,
+      "all": [
+        "main"
+      ],
+      "local_exports": [
+        "main"
+      ],
+      "reexports": [],
+      "unresolved_exports": [],
+      "consumers": {
+        "ordinary": [],
+        "test": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_official_package_entrypoint.py",
+            "source_module": "app_bundle.tests.test_official_package_entrypoint",
+            "source_scope": "test",
+            "kind": "from",
+            "imported_name": "legacy",
+            "asname": null,
+            "level": 0,
+            "lineno": 99
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_official_package_entrypoint.py",
+            "source_module": "app_bundle.tests.test_official_package_entrypoint",
+            "source_scope": "test",
+            "kind": "from",
+            "imported_name": "legacy",
+            "asname": null,
+            "level": 0,
+            "lineno": 136
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_official_package_entrypoint.py",
+            "source_module": "app_bundle.tests.test_official_package_entrypoint",
+            "source_scope": "test",
+            "kind": "from",
+            "imported_name": "legacy",
+            "asname": null,
+            "level": 0,
+            "lineno": 161
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_official_package_entrypoint.py",
+            "source_module": "app_bundle.tests.test_official_package_entrypoint",
+            "source_scope": "test",
+            "kind": "from",
+            "imported_name": "legacy",
+            "asname": null,
+            "level": 0,
+            "lineno": 185
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_official_package_entrypoint.py",
+            "source_module": "app_bundle.tests.test_official_package_entrypoint",
+            "source_scope": "test",
+            "kind": "import",
+            "imported_name": null,
+            "asname": null,
+            "level": 0,
+            "lineno": 198
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_official_package_entrypoint.py",
+            "source_module": "app_bundle.tests.test_official_package_entrypoint",
+            "source_scope": "test",
+            "kind": "from",
+            "imported_name": "cli",
+            "asname": null,
+            "level": 0,
+            "lineno": 199
+          }
+        ],
+        "patch_backup": []
+      },
+      "classification": [
+        "superficie_compatibilidade_preservada",
+        "falso_positivo_do_inventario",
+        "caminho_publico_preservado"
+      ],
+      "decision": "preserve_unchanged",
+      "false_positive_names": [
+        "Sequence",
+        "annotations"
+      ]
+    },
+    {
+      "module": "academic_pipeline.cli_parser",
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/cli_parser.py",
+      "sha256": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+      "is_package_initializer": false,
+      "all_present": true,
+      "dynamic_all": false,
+      "all": [
+        "build_parser",
+        "parse_args"
+      ],
+      "local_exports": [
+        "build_parser",
+        "parse_args"
+      ],
+      "reexports": [],
+      "unresolved_exports": [],
+      "consumers": {
+        "ordinary": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "parse_args",
+            "asname": "parse_cli_args",
+            "level": 0,
+            "lineno": 499
+          }
+        ],
+        "test": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003b_parser_contract.py",
+            "source_module": "tests.characterization.test_ap003b_parser_contract",
+            "source_scope": "test",
+            "kind": "from",
+            "imported_name": "build_parser",
+            "asname": null,
+            "level": 0,
+            "lineno": 8
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003b_parser_contract.py",
+            "source_module": "tests.characterization.test_ap003b_parser_contract",
+            "source_scope": "test",
+            "kind": "from",
+            "imported_name": "parse_args",
+            "asname": null,
+            "level": 0,
+            "lineno": 8
+          }
+        ],
+        "patch_backup": []
+      },
+      "classification": [
+        "modulo_canonico_com_all_declarativo",
+        "nao_e_facade",
+        "consumidores_internos_preservados"
+      ],
+      "decision": "preserve_unchanged",
+      "false_positive_names": []
+    },
+    {
+      "module": "academic_pipeline.command_dispatch",
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/command_dispatch.py",
+      "sha256": "42299d4962c9eb97df27f9c5a4ca2f1230746353c2a3a4e777d9e70a623682d3",
+      "is_package_initializer": false,
+      "all_present": true,
+      "dynamic_all": false,
+      "all": [
+        "DispatchResult",
+        "dispatch_stage_001",
+        "dispatch_stage_002",
+        "dispatch_stage_003",
+        "dispatch_stage_004",
+        "dispatch_stage_005",
+        "dispatch_stage_006",
+        "dispatch_stage_007",
+        "dispatch_stage_008",
+        "dispatch_stage_009",
+        "dispatch_stage_010",
+        "dispatch_stage_011",
+        "dispatch_stage_012",
+        "dispatch_stage_013",
+        "dispatch_stage_014",
+        "dispatch_stage_015",
+        "dispatch_stage_016",
+        "dispatch_stage_017",
+        "dispatch_stage_018",
+        "dispatch_stage_019"
+      ],
+      "local_exports": [
+        "DispatchResult",
+        "dispatch_stage_001",
+        "dispatch_stage_002",
+        "dispatch_stage_003",
+        "dispatch_stage_004",
+        "dispatch_stage_005",
+        "dispatch_stage_006",
+        "dispatch_stage_007",
+        "dispatch_stage_008",
+        "dispatch_stage_009",
+        "dispatch_stage_010",
+        "dispatch_stage_011",
+        "dispatch_stage_012",
+        "dispatch_stage_013",
+        "dispatch_stage_014",
+        "dispatch_stage_015",
+        "dispatch_stage_016",
+        "dispatch_stage_017",
+        "dispatch_stage_018",
+        "dispatch_stage_019"
+      ],
+      "reexports": [],
+      "unresolved_exports": [],
+      "consumers": {
+        "ordinary": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_001",
+            "asname": "_ap003c_dispatch_001",
+            "level": 0,
+            "lineno": 515
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_002",
+            "asname": "_ap003c_dispatch_002",
+            "level": 0,
+            "lineno": 526
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_003",
+            "asname": "_ap003c_dispatch_003",
+            "level": 0,
+            "lineno": 537
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_004",
+            "asname": "_ap003c_dispatch_004",
+            "level": 0,
+            "lineno": 548
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_005",
+            "asname": "_ap003c_dispatch_005",
+            "level": 0,
+            "lineno": 559
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_006",
+            "asname": "_ap003c_dispatch_006",
+            "level": 0,
+            "lineno": 570
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_007",
+            "asname": "_ap003c_dispatch_007",
+            "level": 0,
+            "lineno": 581
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_008",
+            "asname": "_ap003c_dispatch_008",
+            "level": 0,
+            "lineno": 592
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_009",
+            "asname": "_ap003c_dispatch_009",
+            "level": 0,
+            "lineno": 603
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_010",
+            "asname": "_ap003c_dispatch_010",
+            "level": 0,
+            "lineno": 614
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_011",
+            "asname": "_ap003c_dispatch_011",
+            "level": 0,
+            "lineno": 625
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_012",
+            "asname": "_ap003c_dispatch_012",
+            "level": 0,
+            "lineno": 673
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_013",
+            "asname": "_ap003c_dispatch_013",
+            "level": 0,
+            "lineno": 683
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_014",
+            "asname": "_ap003c_dispatch_014",
+            "level": 0,
+            "lineno": 694
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_015",
+            "asname": "_ap003c_dispatch_015",
+            "level": 0,
+            "lineno": 705
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_016",
+            "asname": "_ap003c_dispatch_016",
+            "level": 0,
+            "lineno": 716
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_017",
+            "asname": "_ap003c_dispatch_017",
+            "level": 0,
+            "lineno": 727
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_018",
+            "asname": "_ap003c_dispatch_018",
+            "level": 0,
+            "lineno": 738
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "dispatch_stage_019",
+            "asname": "_ap003c_dispatch_019",
+            "level": 0,
+            "lineno": 752
+          }
+        ],
+        "test": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003c_dispatch_contract.py",
+            "source_module": "tests.characterization.test_ap003c_dispatch_contract",
+            "source_scope": "test",
+            "kind": "import",
+            "imported_name": null,
+            "asname": "command_dispatch",
+            "level": 0,
+            "lineno": 9
+          }
+        ],
+        "patch_backup": []
+      },
+      "classification": [
+        "modulo_canonico_com_all_declarativo",
+        "nao_e_facade",
+        "consumidores_internos_preservados"
+      ],
+      "decision": "preserve_unchanged",
+      "false_positive_names": []
+    },
+    {
+      "module": "academic_pipeline.document_orchestration",
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/document_orchestration.py",
+      "sha256": "c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06",
+      "is_package_initializer": false,
+      "all_present": true,
+      "dynamic_all": false,
+      "all": [
+        "DocumentStageResult",
+        "load_config_impl",
+        "output_paths_impl",
+        "apply_cli_path_overrides_impl",
+        "load_existing_document_json_impl",
+        "resolve_bib_for_existing_document_impl",
+        "_resolve_latex_paths_for_recompile_impl",
+        "run_recompile_impl",
+        "render_additional_language_versions_impl",
+        "_refs_disabled_impl",
+        "_refs_apply_runtime_policy_impl",
+        "build_bibliography_impl",
+        "_refs_clear_document_bibliography_impl",
+        "_refs_strip_org_impl",
+        "render_org_latex_impl",
+        "run_document_stage_001",
+        "run_document_stage_002",
+        "run_document_stage_003",
+        "run_document_stage_004",
+        "run_document_stage_005",
+        "run_document_stage_006",
+        "run_document_stage_007",
+        "run_document_stage_008",
+        "run_document_stage_009",
+        "run_document_stage_010",
+        "run_document_stage_011",
+        "run_document_stage_012"
+      ],
+      "local_exports": [
+        "DocumentStageResult",
+        "_refs_apply_runtime_policy_impl",
+        "_refs_clear_document_bibliography_impl",
+        "_refs_disabled_impl",
+        "_refs_strip_org_impl",
+        "_resolve_latex_paths_for_recompile_impl",
+        "apply_cli_path_overrides_impl",
+        "build_bibliography_impl",
+        "load_config_impl",
+        "load_existing_document_json_impl",
+        "output_paths_impl",
+        "render_additional_language_versions_impl",
+        "render_org_latex_impl",
+        "resolve_bib_for_existing_document_impl",
+        "run_document_stage_001",
+        "run_document_stage_002",
+        "run_document_stage_003",
+        "run_document_stage_004",
+        "run_document_stage_005",
+        "run_document_stage_006",
+        "run_document_stage_007",
+        "run_document_stage_008",
+        "run_document_stage_009",
+        "run_document_stage_010",
+        "run_document_stage_011",
+        "run_document_stage_012",
+        "run_recompile_impl"
+      ],
+      "reexports": [],
+      "unresolved_exports": [],
+      "consumers": {
+        "ordinary": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "output_paths_impl",
+            "asname": "_impl_output_paths",
+            "level": 0,
+            "lineno": 304
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "apply_cli_path_overrides_impl",
+            "asname": "_impl_apply_cli_path_overrides",
+            "level": 0,
+            "lineno": 339
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "load_existing_document_json_impl",
+            "asname": "_impl_load_existing_document_json",
+            "level": 0,
+            "lineno": 344
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "resolve_bib_for_existing_document_impl",
+            "asname": "_impl_resolve_bib_for_existing_document",
+            "level": 0,
+            "lineno": 350
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "_resolve_latex_paths_for_recompile_impl",
+            "asname": "_impl_resolve_latex_paths_for_recompile",
+            "level": 0,
+            "lineno": 368
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_recompile_impl",
+            "asname": "_impl_run_recompile",
+            "level": 0,
+            "lineno": 373
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "render_additional_language_versions_impl",
+            "asname": "_impl_render_additional_language_versions",
+            "level": 0,
+            "lineno": 396
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_001",
+            "asname": "_ap003d_stage_001",
+            "level": 0,
+            "lineno": 636
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_002",
+            "asname": "_ap003d_stage_002",
+            "level": 0,
+            "lineno": 781
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_003",
+            "asname": "_ap003d_stage_003",
+            "level": 0,
+            "lineno": 855
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_004",
+            "asname": "_ap003d_stage_004",
+            "level": 0,
+            "lineno": 1053
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_005",
+            "asname": "_ap003d_stage_005",
+            "level": 0,
+            "lineno": 1064
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_006",
+            "asname": "_ap003d_stage_006",
+            "level": 0,
+            "lineno": 1078
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_007",
+            "asname": "_ap003d_stage_007",
+            "level": 0,
+            "lineno": 1099
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_008",
+            "asname": "_ap003d_stage_008",
+            "level": 0,
+            "lineno": 1121
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_009",
+            "asname": "_ap003d_stage_009",
+            "level": 0,
+            "lineno": 1169
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_010",
+            "asname": "_ap003d_stage_010",
+            "level": 0,
+            "lineno": 1182
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_011",
+            "asname": "_ap003d_stage_011",
+            "level": 0,
+            "lineno": 1207
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_document_stage_012",
+            "asname": "_ap003d_stage_012",
+            "level": 0,
+            "lineno": 1223
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "_refs_disabled_impl",
+            "asname": "_impl_refs_disabled",
+            "level": 0,
+            "lineno": 1253
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "_refs_apply_runtime_policy_impl",
+            "asname": "_impl_refs_apply_runtime_policy",
+            "level": 0,
+            "lineno": 1258
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "load_config_impl",
+            "asname": "_impl_load_config",
+            "level": 0,
+            "lineno": 1265
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "build_bibliography_impl",
+            "asname": "_impl_build_bibliography",
+            "level": 0,
+            "lineno": 1273
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "_refs_clear_document_bibliography_impl",
+            "asname": "_impl_refs_clear_document_bibliography",
+            "level": 0,
+            "lineno": 1278
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "_refs_strip_org_impl",
+            "asname": "_ap003d_impl__refs_v6_strip_org",
+            "level": 0,
+            "lineno": 1283
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "render_org_latex_impl",
+            "asname": "_impl_render_org_latex",
+            "level": 0,
+            "lineno": 1291
+          }
+        ],
+        "test": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003d_document_contract.py",
+            "source_module": "tests.characterization.test_ap003d_document_contract",
+            "source_scope": "test",
+            "kind": "import",
+            "imported_name": null,
+            "asname": "document_orchestration",
+            "level": 0,
+            "lineno": 9
+          }
+        ],
+        "patch_backup": []
+      },
+      "classification": [
+        "modulo_canonico_com_all_declarativo",
+        "nao_e_facade",
+        "consumidores_internos_preservados"
+      ],
+      "decision": "preserve_unchanged",
+      "false_positive_names": []
+    },
+    {
+      "module": "academic_pipeline.prisma_generic_orchestration",
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "sha256": "ff037dff7e83f4a48f607ad65fb31d075cf9a38f96493e472ea46727832b135b",
+      "is_package_initializer": false,
+      "all_present": true,
+      "dynamic_all": false,
+      "all": [
+        "PrismaStageResult",
+        "stage_impl_001",
+        "_json_or_none_impl_001",
+        "make_client_impl_001",
+        "_section_impl_001",
+        "research_output_paths_impl_001",
+        "render_external_prisma_outputs_impl_001",
+        "_prisma_curadoria_default_config_impl_001",
+        "_prisma_curadoria_default_out_dir_impl_001",
+        "_prisma_curadoria_default_prompt_impl_001",
+        "_prisma_curadoria_script_path_impl_001",
+        "_prisma_curadoria_arg_impl_001",
+        "_prisma_curadoria_config_from_args_impl_001",
+        "_prisma_curadoria_out_from_args_impl_001",
+        "_prisma_curadoria_prompt_from_args_impl_001",
+        "_prisma_curadoria_input_from_args_impl_001",
+        "_prisma_curadoria_run_command_impl_001",
+        "_prisma_curadoria_build_cmd_impl_001",
+        "_prisma_curadoria_run_ia_impl_001",
+        "_prisma_curadoria_reexportar_xlsx_impl_001",
+        "_prisma_curadoria_pipeline_supports_flag_impl_001",
+        "_prisma_curadoria_importar_no_pipeline_impl_001",
+        "_prisma_curadoria_fluxo_completo_impl_001",
+        "_prisma_curadoria_mostrar_caminhos_impl_001",
+        "_prisma_curadoria_menu_impl_001",
+        "_prisma_curadoria_dispatch_impl_001",
+        "_prisma_artigo_generico_get_arg_impl_001",
+        "_prisma_artigo_generico_strip_impl_001",
+        "_prisma_artigo_generico_out_dir_impl_001",
+        "_prisma_artigo_generico_run_export_impl_001",
+        "_prisma_artigo_generico_run_freeze_impl_001",
+        "run_prisma_stage_001",
+        "run_prisma_stage_002",
+        "run_prisma_stage_003",
+        "run_prisma_stage_004",
+        "run_prisma_stage_005",
+        "run_prisma_stage_006",
+        "run_prisma_stage_007",
+        "run_prisma_stage_008",
+        "run_prisma_generic_entrypoint",
+        "stage_with_runtime",
+        "json_or_none_with_runtime",
+        "make_client_with_runtime",
+        "section_with_runtime",
+        "research_output_paths_with_runtime",
+        "render_external_prisma_outputs_with_runtime",
+        "prisma_curadoria_default_config_with_runtime",
+        "prisma_curadoria_default_out_dir_with_runtime",
+        "prisma_curadoria_default_prompt_with_runtime",
+        "prisma_curadoria_script_path_with_runtime",
+        "prisma_curadoria_arg_with_runtime",
+        "prisma_curadoria_config_from_args_with_runtime",
+        "prisma_curadoria_out_from_args_with_runtime",
+        "prisma_curadoria_prompt_from_args_with_runtime",
+        "prisma_curadoria_input_from_args_with_runtime",
+        "prisma_curadoria_run_command_with_runtime",
+        "prisma_curadoria_build_cmd_with_runtime",
+        "prisma_curadoria_run_ia_with_runtime",
+        "prisma_curadoria_reexportar_xlsx_with_runtime",
+        "prisma_curadoria_pipeline_supports_flag_with_runtime",
+        "prisma_curadoria_importar_no_pipeline_with_runtime",
+        "prisma_curadoria_fluxo_completo_with_runtime",
+        "prisma_curadoria_mostrar_caminhos_with_runtime",
+        "prisma_curadoria_menu_with_runtime",
+        "prisma_curadoria_dispatch_with_runtime",
+        "prisma_artigo_generico_get_arg_with_runtime",
+        "prisma_artigo_generico_strip_with_runtime",
+        "prisma_artigo_generico_out_dir_with_runtime",
+        "prisma_artigo_generico_run_export_with_runtime",
+        "prisma_artigo_generico_run_freeze_with_runtime",
+        "run_prisma_generic_with_runtime"
+      ],
+      "local_exports": [
+        "PrismaStageResult",
+        "_json_or_none_impl_001",
+        "_prisma_artigo_generico_get_arg_impl_001",
+        "_prisma_artigo_generico_out_dir_impl_001",
+        "_prisma_artigo_generico_run_export_impl_001",
+        "_prisma_artigo_generico_run_freeze_impl_001",
+        "_prisma_artigo_generico_strip_impl_001",
+        "_prisma_curadoria_arg_impl_001",
+        "_prisma_curadoria_build_cmd_impl_001",
+        "_prisma_curadoria_config_from_args_impl_001",
+        "_prisma_curadoria_default_config_impl_001",
+        "_prisma_curadoria_default_out_dir_impl_001",
+        "_prisma_curadoria_default_prompt_impl_001",
+        "_prisma_curadoria_dispatch_impl_001",
+        "_prisma_curadoria_fluxo_completo_impl_001",
+        "_prisma_curadoria_importar_no_pipeline_impl_001",
+        "_prisma_curadoria_input_from_args_impl_001",
+        "_prisma_curadoria_menu_impl_001",
+        "_prisma_curadoria_mostrar_caminhos_impl_001",
+        "_prisma_curadoria_out_from_args_impl_001",
+        "_prisma_curadoria_pipeline_supports_flag_impl_001",
+        "_prisma_curadoria_prompt_from_args_impl_001",
+        "_prisma_curadoria_reexportar_xlsx_impl_001",
+        "_prisma_curadoria_run_command_impl_001",
+        "_prisma_curadoria_run_ia_impl_001",
+        "_prisma_curadoria_script_path_impl_001",
+        "_section_impl_001",
+        "json_or_none_with_runtime",
+        "make_client_impl_001",
+        "make_client_with_runtime",
+        "prisma_artigo_generico_get_arg_with_runtime",
+        "prisma_artigo_generico_out_dir_with_runtime",
+        "prisma_artigo_generico_run_export_with_runtime",
+        "prisma_artigo_generico_run_freeze_with_runtime",
+        "prisma_artigo_generico_strip_with_runtime",
+        "prisma_curadoria_arg_with_runtime",
+        "prisma_curadoria_build_cmd_with_runtime",
+        "prisma_curadoria_config_from_args_with_runtime",
+        "prisma_curadoria_default_config_with_runtime",
+        "prisma_curadoria_default_out_dir_with_runtime",
+        "prisma_curadoria_default_prompt_with_runtime",
+        "prisma_curadoria_dispatch_with_runtime",
+        "prisma_curadoria_fluxo_completo_with_runtime",
+        "prisma_curadoria_importar_no_pipeline_with_runtime",
+        "prisma_curadoria_input_from_args_with_runtime",
+        "prisma_curadoria_menu_with_runtime",
+        "prisma_curadoria_mostrar_caminhos_with_runtime",
+        "prisma_curadoria_out_from_args_with_runtime",
+        "prisma_curadoria_pipeline_supports_flag_with_runtime",
+        "prisma_curadoria_prompt_from_args_with_runtime",
+        "prisma_curadoria_reexportar_xlsx_with_runtime",
+        "prisma_curadoria_run_command_with_runtime",
+        "prisma_curadoria_run_ia_with_runtime",
+        "prisma_curadoria_script_path_with_runtime",
+        "render_external_prisma_outputs_impl_001",
+        "render_external_prisma_outputs_with_runtime",
+        "research_output_paths_impl_001",
+        "research_output_paths_with_runtime",
+        "run_prisma_generic_entrypoint",
+        "run_prisma_generic_with_runtime",
+        "run_prisma_stage_001",
+        "run_prisma_stage_002",
+        "run_prisma_stage_003",
+        "run_prisma_stage_004",
+        "run_prisma_stage_005",
+        "run_prisma_stage_006",
+        "run_prisma_stage_007",
+        "run_prisma_stage_008",
+        "section_with_runtime",
+        "stage_impl_001",
+        "stage_with_runtime"
+      ],
+      "reexports": [],
+      "unresolved_exports": [],
+      "consumers": {
+        "ordinary": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "stage_with_runtime",
+            "asname": "_ap003e_impl_stage_1",
+            "level": 0,
+            "lineno": 274
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "json_or_none_with_runtime",
+            "asname": "_ap003e_impl__json_or_none_1",
+            "level": 0,
+            "lineno": 279
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "make_client_with_runtime",
+            "asname": "_ap003e_impl_make_client_1",
+            "level": 0,
+            "lineno": 293
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "section_with_runtime",
+            "asname": "_ap003e_impl__section_1",
+            "level": 0,
+            "lineno": 298
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "research_output_paths_with_runtime",
+            "asname": "_ap003e_impl_research_output_paths_1",
+            "level": 0,
+            "lineno": 316
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "render_external_prisma_outputs_with_runtime",
+            "asname": "_ap003e_impl_render_external_prisma_outputs_1",
+            "level": 0,
+            "lineno": 385
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_default_config_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_default_config_1",
+            "level": 0,
+            "lineno": 403
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_default_out_dir_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_default_out_dir_1",
+            "level": 0,
+            "lineno": 408
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_default_prompt_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_default_prompt_1",
+            "level": 0,
+            "lineno": 413
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_script_path_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_script_path_1",
+            "level": 0,
+            "lineno": 418
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_arg_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_arg_1",
+            "level": 0,
+            "lineno": 423
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_config_from_args_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_config_from_args_1",
+            "level": 0,
+            "lineno": 428
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_out_from_args_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_out_from_args_1",
+            "level": 0,
+            "lineno": 433
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_prompt_from_args_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_prompt_from_args_1",
+            "level": 0,
+            "lineno": 438
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_input_from_args_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_input_from_args_1",
+            "level": 0,
+            "lineno": 443
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_run_command_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_run_command_1",
+            "level": 0,
+            "lineno": 448
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_build_cmd_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_build_cmd_1",
+            "level": 0,
+            "lineno": 453
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_run_ia_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_run_ia_1",
+            "level": 0,
+            "lineno": 458
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_reexportar_xlsx_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_reexportar_xlsx_1",
+            "level": 0,
+            "lineno": 463
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_pipeline_supports_flag_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_pipeline_supports_flag_1",
+            "level": 0,
+            "lineno": 468
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_importar_no_pipeline_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_importar_no_pipeline_1",
+            "level": 0,
+            "lineno": 473
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_fluxo_completo_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_fluxo_completo_1",
+            "level": 0,
+            "lineno": 478
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_mostrar_caminhos_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_mostrar_caminhos_1",
+            "level": 0,
+            "lineno": 483
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_menu_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_menu_1",
+            "level": 0,
+            "lineno": 488
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_curadoria_dispatch_with_runtime",
+            "asname": "_ap003e_impl__prisma_curadoria_dispatch_1",
+            "level": 0,
+            "lineno": 493
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_001",
+            "asname": "_ap003e_stage_001",
+            "level": 0,
+            "lineno": 504
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_002",
+            "asname": "_ap003e_stage_002",
+            "level": 0,
+            "lineno": 764
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_003",
+            "asname": "_ap003e_stage_003",
+            "level": 0,
+            "lineno": 800
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_004",
+            "asname": "_ap003e_stage_004",
+            "level": 0,
+            "lineno": 818
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_005",
+            "asname": "_ap003e_stage_005",
+            "level": 0,
+            "lineno": 882
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_006",
+            "asname": "_ap003e_stage_006",
+            "level": 0,
+            "lineno": 1138
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_007",
+            "asname": "_ap003e_stage_007",
+            "level": 0,
+            "lineno": 1159
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_stage_008",
+            "asname": "_ap003e_stage_008",
+            "level": 0,
+            "lineno": 1197
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_artigo_generico_get_arg_with_runtime",
+            "asname": "_ap003e_impl__prisma_artigo_generico_get_arg_1",
+            "level": 0,
+            "lineno": 1306
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_artigo_generico_strip_with_runtime",
+            "asname": "_ap003e_impl__prisma_artigo_generico_strip_1",
+            "level": 0,
+            "lineno": 1310
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_artigo_generico_out_dir_with_runtime",
+            "asname": "_ap003e_impl__prisma_artigo_generico_out_dir_1",
+            "level": 0,
+            "lineno": 1314
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_artigo_generico_run_export_with_runtime",
+            "asname": "_ap003e_impl__prisma_artigo_generico_run_export_1",
+            "level": 0,
+            "lineno": 1318
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "prisma_artigo_generico_run_freeze_with_runtime",
+            "asname": "_ap003e_impl__prisma_artigo_generico_run_freeze_1",
+            "level": 0,
+            "lineno": 1322
+          },
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+            "source_module": "app_bundle.scripts.pipeline.academic_pipeline_rc10",
+            "source_scope": "ordinary",
+            "kind": "from",
+            "imported_name": "run_prisma_generic_with_runtime",
+            "asname": "_ap003e_entrypoint",
+            "level": 0,
+            "lineno": 1327
+          }
+        ],
+        "test": [
+          {
+            "source_file": "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap003e_prisma_generic_contract.py",
+            "source_module": "tests.characterization.test_ap003e_prisma_generic_contract",
+            "source_scope": "test",
+            "kind": "import",
+            "imported_name": null,
+            "asname": "prisma_generic",
+            "level": 0,
+            "lineno": 10
+          }
+        ],
+        "patch_backup": []
+      },
+      "classification": [
+        "modulo_canonico_com_all_declarativo",
+        "nao_e_facade",
+        "consumidores_internos_preservados"
+      ],
+      "decision": "preserve_unchanged",
+      "false_positive_names": []
+    }
+  ],
+  "summary": {
+    "candidate_count": 6,
+    "true_facade_count": 1,
+    "public_package_surface_count": 1,
+    "canonical_non_facade_count": 4,
+    "productive_changes_required": false
+  },
+  "fingerprint": "a99cc164b976146fd9452b56567bab43dcc28bf33eda80f6b3aa1c02abfd88ed"
+}
