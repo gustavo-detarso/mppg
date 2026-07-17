@@ -88,4 +88,3 @@
         Nenhuma renomeação será feita por substituição textual global. Aplicadores
         futuros deverão validar `HEAD`, hashes, AST, conjunto permitido de arquivos,
         escrita atômica e rollback integral.
-
