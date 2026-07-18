@@ -1,0 +1,43 @@
+{
+  "baseline_commit": "1b4c71c204a0314aa5bab6db5b49cc1ada86b234",
+  "deferred": {
+    "bridge_removal_decision": "AP-006F",
+    "consumer_migration": "AP-006D",
+    "distribution_stabilization": "AP-006E"
+  },
+  "move_fingerprint_sha256": "7d570f3786f18a2a07b150763cc5e6e1fdf4cc646b394951f85fef9ac3bffe45",
+  "phase": "AP-006C",
+  "physical_topology": {
+    "canonical_project_path": "software/academic_pipeline_mppg",
+    "compatibility_path": "software/academic_pipeline_rc10_7_conformidade",
+    "compatibility_type": "tracked_relative_symlink",
+    "ignored_residue_count_moved": 112,
+    "relative_symlink_target": "academic_pipeline_mppg",
+    "single_source_of_truth": "software/academic_pipeline_mppg",
+    "tracked_source_entry_count": 520
+  },
+  "public_surfaces_preserved": {
+    "console": "academic-pipeline",
+    "console_target": "academic_pipeline.cli:main",
+    "distribution": "academic-pipeline-mppg",
+    "imports": [
+      "academic_pipeline",
+      "app_bundle"
+    ]
+  },
+  "repository_resolver": {
+    "environment_variable": "ACADEMIC_PIPELINE_PROJECT_ROOT",
+    "escape_prevention": true,
+    "module": "academic_pipeline.repository_paths",
+    "packaged_resources_policy": "use_importlib_resources",
+    "required_markers": [
+      "pyproject.toml",
+      "academic_pipeline",
+      "app_bundle"
+    ],
+    "root_detection": "structural_markers_not_directory_name"
+  },
+  "schema_version": 1,
+  "source_tree_oid": "a95de261751e6274a8fa7fbf8010dc4d039507b3",
+  "status": "materialized_uncommitted"
+}
