@@ -56,6 +56,14 @@ class InitProjectResult:
     readme_path: Path
 
 
+def _packaged_app_bundle() -> Path:
+    here = Path(__file__).resolve()
+    for candidate in [here.parent, *here.parents]:
+        if candidate.name == "app_bundle":
+            return candidate
+    raise RuntimeError("Não consegui localizar o app_bundle instalado.")
+
+
 def _find_app_bundle(start: Path | None = None) -> Path:
     current = (start or Path.cwd()).resolve()
     candidates = [current, *current.parents]
@@ -64,12 +72,18 @@ def _find_app_bundle(start: Path | None = None) -> Path:
             return candidate
         if (candidate / "app_bundle").exists():
             return (candidate / "app_bundle").resolve()
-    # fallback: quando chamado de dentro de scripts/pipeline
-    here = Path(__file__).resolve()
-    for candidate in [here.parent, *here.parents]:
-        if candidate.name == "app_bundle":
-            return candidate
-    raise RuntimeError("Não consegui localizar app_bundle. Execute a partir da raiz do academic_pipeline ou informe --base-dir.")
+    return _packaged_app_bundle()
+
+
+def _destination_app_bundle(base_dir: Path | None, resource_app_bundle: Path) -> Path:
+    if base_dir is None:
+        return resource_app_bundle
+    base = Path(base_dir).expanduser().resolve()
+    if base.name == "app_bundle":
+        return base
+    if (base / "app_bundle").is_dir():
+        return (base / "app_bundle").resolve()
+    return base / "app_bundle"
 
 
 def _write_placeholder_zip(path: Path, readme_text: str) -> None:
@@ -124,7 +138,8 @@ def init_project(name: str, project_type: str = "paper", base_dir: Path | None =
     if not name or not name.strip():
         raise ValueError("Informe um nome de projeto.")
     project_slug = slugify(name)
-    app_bundle = _find_app_bundle(base_dir)
+    resource_app_bundle = _find_app_bundle()
+    app_bundle = _destination_app_bundle(base_dir, resource_app_bundle)
     project_dir = app_bundle / "projetos" / project_slug
     if project_dir.exists() and any(project_dir.iterdir()) and not overwrite:
         raise FileExistsError(f"Projeto já existe: {project_dir}. Use --overwrite-project para sobrescrever arquivos seguros.")
@@ -141,7 +156,7 @@ def init_project(name: str, project_type: str = "paper", base_dir: Path | None =
     if not doi_manifest.exists() or overwrite:
         write_text(doi_manifest, "arquivo,doi\n")
     if not config_path.exists() or overwrite:
-        write_text(config_path, _template_config(app_bundle, project_slug, project_type, institution=institution))
+        write_text(config_path, _template_config(resource_app_bundle, project_slug, project_type, institution=institution))
     if not readme_path.exists() or overwrite:
         write_text(readme_path, f"""# Projeto {project_slug}
 
@@ -161,23 +176,23 @@ Este projeto foi criado com o perfil institucional `{institution}`.
 ## Fluxo recomendado
 
 ```bash
-cd /home/gustavodetarso/Documentos/mppg/software/academic_pipeline
+cd /caminho/para/app_bundle/projetos/{project_slug}
 
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \\
-  --config app_bundle/projetos/{project_slug}/paper_config.toml \\
+academic-pipeline \\
+  --config paper_config.toml \\
   --check-config
 
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \\
-  --config app_bundle/projetos/{project_slug}/paper_config.toml
+academic-pipeline \\
+  --config paper_config.toml
 ```
 
 ## Gerar DOI manifest a partir do ZIP real
 
 ```bash
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \\
+academic-pipeline \\
   --make-doi-manifest \\
-  --input-zip app_bundle/projetos/{project_slug}/documentos-base.zip \\
-  --output app_bundle/projetos/{project_slug}/doi_manifest.csv
+  --input-zip documentos-base.zip \\
+  --output doi_manifest.csv
 ```
 """)
     return InitProjectResult(project_dir, config_path, doi_manifest, documentos_zip, orientacoes_zip, readme_path)

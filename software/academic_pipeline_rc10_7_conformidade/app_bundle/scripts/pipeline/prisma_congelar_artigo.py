@@ -7,7 +7,8 @@ try:
 except Exception:
     tomllib = None
 
-DEFAULT_ARTIGO_DIR = Path("/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo")
+PACKAGE_ROOT = Path(__file__).resolve().parents[3]
+DEFAULT_ARTIGO_DIR = Path.cwd() / "artigo"
 DEFAULT_AUTOR = "Gustavo M. Mendes de Tarso"
 DEFAULT_PROFESSOR = "Marcos Aurélio Pereira Valadão"
 
@@ -100,7 +101,7 @@ def render_template(template_path,repl):
     return s
 
 def generate_toml(args,dados_dir):
-    root=Path(args.root_dir).resolve() if args.root_dir else Path.cwd().resolve()
+    root=Path(args.root_dir).resolve() if args.root_dir else PACKAGE_ROOT
     artigo_dir=Path(args.artigo_dir).resolve()
     out_dir=artigo_dir/"output"
     csl=Path(args.csl_path).resolve() if args.csl_path else root/"app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
@@ -183,9 +184,13 @@ def freeze(args):
     print(f"[OK] Manifesto JSON: {dest/'MANIFESTO_ARTIGO.json'}")
     if args.gerar_artigo_final:
         if not toml_out: raise RuntimeError("TOML não gerado.")
-        pipeline=Path(args.pipeline_script).resolve() if args.pipeline_script else Path.cwd()/ "app_bundle/scripts/pipeline/pipeline_orchestrator.py"
         print(f"[ETAPA] Gerando artigo final com: {toml_out}")
-        proc=subprocess.run([sys.executable,str(pipeline),"--config",str(toml_out)])
+        if args.pipeline_script:
+            pipeline = Path(args.pipeline_script).resolve()
+            command = [sys.executable, str(pipeline), "--config", str(toml_out)]
+        else:
+            command = [sys.executable, "-m", "academic_pipeline", "--config", str(toml_out)]
+        proc=subprocess.run(command)
         if proc.returncode: raise SystemExit(proc.returncode)
 
 def main(argv=None):

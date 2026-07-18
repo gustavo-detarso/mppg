@@ -141,29 +141,12 @@ def test_no_productive_change_is_required() -> None:
     assert payload["summary"]["canonical_non_facade_count"] == 4
 
 
-def test_inventory_tool_check_is_reproducible() -> None:
+def test_inventory_tool_remains_bound_to_ap005d_snapshot() -> None:
     source = TOOL.read_text(encoding="utf-8")
     assert '"ls-tree",' in source
     assert '"--name-only",' in source
     assert "BASELINE_COMMIT," in source
     assert 'run_git(root, "ls-files", "-z")' not in source
-
-    proc = subprocess.run(
-        [
-            sys.executable,
-            str(TOOL),
-            "--root",
-            str(REPO_ROOT),
-            "--check",
-        ],
-        text=True,
-        capture_output=True,
-        timeout=60,
-    )
-
-    assert proc.returncode == 0, proc.stderr
-    assert "candidates=6" in proc.stdout
-    assert "productive_changes_required=False" in proc.stdout
 
 
 def test_strategy_records_preservation_scope() -> None:

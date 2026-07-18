@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import Iterable
 
-from article_workflow import ArticleWorkflow
+from app_bundle.scripts.pipeline.article_workflow import ArticleWorkflow
 
 
 def build_workflow(args: argparse.Namespace) -> ArticleWorkflow:

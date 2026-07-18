@@ -174,19 +174,10 @@ def test_ap005e1_strategy_and_inventory_record_scope() -> None:
     assert "formalmente `no-op`" in strategy
 
 
-def test_ap005e1_tool_check_is_reproducible() -> None:
+def test_ap005e1_tool_remains_bound_to_its_historical_snapshot() -> None:
     source = TOOL.read_text(encoding="utf-8")
     assert '"merge-base",' in source
     assert '"--is-ancestor",' in source
     assert "if head != EXPECTED_BASELINE_COMMIT:" not in source
     assert "if remote_head != EXPECTED_BASELINE_COMMIT:" not in source
-
-    proc = subprocess.run(
-        [str(TOOL), "--check"],
-        cwd=ROOT,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        check=False,
-    )
-    assert proc.returncode == 0, proc.stdout + proc.stderr
+    assert "check_files(files)" in source

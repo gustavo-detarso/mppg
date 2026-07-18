@@ -7,7 +7,14 @@ name = "academic-pipeline-mppg"
 version = "0.1.0"
 description = "Pipeline acadêmica modular para geração, validação e renderização de documentos."
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "openai>=1.0.0",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+    "pypdf>=4.0",
+    "python-docx>=1.1",
+    "openpyxl>=3.1",
+]
 
 [project.scripts]
 academic-pipeline = "academic_pipeline.cli:main"
@@ -20,3 +27,28 @@ where = ["."]
 include = ["academic_pipeline*", "app_bundle*"]
 exclude = ["app_bundle.tests*"]
 namespaces = false
+
+[tool.setuptools.package-data]
+"app_bundle" = [
+    "config/examples/*.toml",
+    "institutions/fgv/assets/*.png",
+    "institutions/fgv/docx/*.docx",
+    "institutions/fgv/*.toml",
+    "institutions/fgv/latex/*.sty",
+    "institutions/fgv/prompts/*.txt",
+    "institutions/fgv/templates/*.org",
+    "institutions/fgv/validators/*.toml",
+    "misc/*.el",
+    "misc/*.png",
+    "misc/fgv/*.sty",
+    "misc/fgv/*.toml",
+    "prompts/document/*.txt",
+    "prompts/global/*.txt",
+    "prompts/prisma/*.txt",
+    "prompts/research/*.txt",
+    "templates/*.docx",
+    "templates/*.org",
+    "templates/*.template",
+    "templates/csl/*.csl",
+    "templates/docx/*.docx",
+]

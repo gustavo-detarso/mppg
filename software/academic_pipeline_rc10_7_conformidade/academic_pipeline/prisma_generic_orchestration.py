@@ -160,7 +160,7 @@ def _prisma_curadoria_default_out_dir_impl_001(runtime, /):
     return prisma_curadoria_default_out_dir_with_runtime(runtime)
 
 def _ap003e_body__prisma_curadoria_default_prompt_1():
-    return '/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/prompt_curadoria_atestmed_ia.yaml'
+    return ''
 
 def prisma_curadoria_default_prompt_with_runtime(runtime, /):
     return _invoke_with_runtime(_ap003e_body__prisma_curadoria_default_prompt_1, runtime, (), {})
@@ -307,7 +307,7 @@ def _ap003e_body__prisma_curadoria_pipeline_supports_flag_1(flag):
     import subprocess
     import sys
     try:
-        proc = subprocess.run([sys.executable, __file__, '--help'], text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=30)
+        proc = subprocess.run([sys.executable, '-m', 'academic_pipeline', '--help'], text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=30)
     except Exception:
         return False
     return flag in (proc.stdout or '')
@@ -329,11 +329,11 @@ def _ap003e_body__prisma_curadoria_importar_no_pipeline_1(args):
         print('[INFO] Rode primeiro a curadoria IA ou a reexportação do XLSX.')
         return 1
     if _prisma_curadoria_pipeline_supports_flag('--prisma-importar-triagem'):
-        cmd = [sys.executable, __file__, '--config', cfg, '--prisma-importar-triagem', str(triagem)]
+        cmd = [sys.executable, '-m', 'academic_pipeline', '--config', cfg, '--prisma-importar-triagem', str(triagem)]
     else:
         print('[WARN] --prisma-importar-triagem não apareceu no --help.')
         print('[WARN] O CSV ficará no OUT e o pipeline será executado normalmente.')
-        cmd = [sys.executable, __file__, '--config', cfg]
+        cmd = [sys.executable, '-m', 'academic_pipeline', '--config', cfg]
     return _prisma_curadoria_run_command(cmd)
 
 def prisma_curadoria_importar_no_pipeline_with_runtime(runtime, /, args):
@@ -501,17 +501,9 @@ def _prisma_artigo_generico_out_dir_impl_001(runtime, /, argv):
 
 def _ap003e_body__prisma_artigo_generico_run_export_1(argv, silent):
     import subprocess, sys
-    from pathlib import Path
-    helper = Path(__file__).with_name('prisma_exportar_bib.py')
-    if not helper.exists():
-        msg = f'Helper de exportação BibLaTeX não encontrado: {helper}'
-        if silent:
-            print(f'[WARN] {msg}')
-            return 1
-        raise SystemExit(msg)
     out_dir = _prisma_artigo_generico_out_dir(argv)
     prefix = out_dir.name if out_dir.name.startswith('relatorio_prisma_') else 'relatorio_prisma_prisma_fluxo_pmf'
-    cmd = [sys.executable, str(helper), '--out-dir', str(out_dir), '--prefix', prefix]
+    cmd = [sys.executable, '-m', 'app_bundle.scripts.pipeline.prisma_exportar_bib', '--out-dir', str(out_dir), '--prefix', prefix]
     val = _prisma_artigo_generico_get_arg(argv, '--prisma-bib-input')
     if val:
         cmd += ['--input', val]
@@ -533,21 +525,12 @@ def _prisma_artigo_generico_run_export_impl_001(runtime, /, argv, silent):
 
 def _ap003e_body__prisma_artigo_generico_run_freeze_1(argv, silent):
     import subprocess, sys
-    from pathlib import Path
-    helper = Path(__file__).with_name('prisma_congelar_artigo.py')
-    if not helper.exists():
-        msg = f'Helper de congelamento de insumos não encontrado: {helper}'
-        if silent:
-            print(f'[WARN] {msg}')
-            return 1
-        raise SystemExit(msg)
     out_dir = _prisma_artigo_generico_out_dir(argv)
     prefix = out_dir.name if out_dir.name.startswith('relatorio_prisma_') else 'relatorio_prisma_prisma_fluxo_pmf'
-    cmd = [sys.executable, str(helper), '--out-dir', str(out_dir), '--prefix', prefix]
+    cmd = [sys.executable, '-m', 'app_bundle.scripts.pipeline.prisma_congelar_artigo', '--out-dir', str(out_dir), '--prefix', prefix]
     cfg = _prisma_artigo_generico_get_arg(argv, '--config')
     if cfg:
         cmd += ['--prisma-config', cfg]
-    cmd += ['--pipeline-script', str(Path(__file__).resolve())]
     for src, dst in [('--prisma-artigo-dir', '--artigo-dir'), ('--prisma-congelamento-dir', '--dest-dir'), ('--prisma-artigo-toml-output', '--toml-output'), ('--prisma-csl-path', '--csl-path'), ('--prisma-dados-pesquisa-path', '--dados-pesquisa-path'), ('--prisma-artigo-prefix', '--artigo-prefix'), ('--prisma-autor-artigo', '--autor'), ('--prisma-professor-artigo', '--professor'), ('--prisma-openai-model-artigo', '--openai-model')]:
         val = _prisma_artigo_generico_get_arg(argv, src)
         if val:
