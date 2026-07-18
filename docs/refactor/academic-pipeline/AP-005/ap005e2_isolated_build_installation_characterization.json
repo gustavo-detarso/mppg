@@ -1,0 +1,259 @@
+{
+  "ap005e3_scope": {
+    "conditional": [
+      "self-invocation by __file__ correction",
+      "requirements/Pipfile normalization beyond runtime essentials"
+    ],
+    "forbidden": [
+      "rename distribution",
+      "change version",
+      "remove legacy bridge",
+      "change public entrypoints",
+      "package app_bundle/projetos",
+      "package app_bundle/output",
+      "broad module reorganization"
+    ],
+    "required": [
+      "PEP 621 runtime dependencies",
+      "operational package-data allowlist",
+      "article_workflow import correction",
+      "PRISMA helper resolution correction",
+      "hardcoded prompt path correction",
+      "fresh-wheel regression gates"
+    ]
+  },
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "commit": "0d553c975ad7948762f74aa4fcff3903578712de",
+    "upstream": "origin/ap-refactor/04-consumer-canonicalization"
+  },
+  "decisions": {
+    "ap005e2_is_characterization_only": true,
+    "ap005e3_correction_required": true,
+    "ap005e3_may_be_noop": false,
+    "broad_package_reorganization_allowed": false,
+    "package_all_tracked_non_python_allowed": false,
+    "package_projects_outputs_or_historical_docs_allowed": false,
+    "preserve_console_script": true,
+    "preserve_distribution_name": true,
+    "preserve_distribution_version": true,
+    "preserve_module_entrypoint": true,
+    "preserve_public_main": true,
+    "productive_change_required_in_ap005e2": false
+  },
+  "dynamic_evidence": {
+    "build": {
+      "metadata": {
+        "console_script": "academic-pipeline = academic_pipeline.cli:main",
+        "name": "academic-pipeline-mppg",
+        "requires_dist": [],
+        "requires_python": ">=3.11",
+        "version": "0.1.0"
+      },
+      "reproducible_wheel_hash_observations": 3,
+      "sdist": {
+        "contains_pipfile": false,
+        "contains_pipfile_lock": false,
+        "contains_pyproject": true,
+        "contains_requirements": false,
+        "entry_count": 74,
+        "filename": "academic_pipeline_mppg-0.1.0.tar.gz",
+        "sha256": "527ce87fb2702ef6906e605e4bcbb93d33a06c56c53059cb5b1f2d1b8c316318",
+        "strong_residues": []
+      },
+      "wheel": {
+        "entry_count": 71,
+        "filename": "academic_pipeline_mppg-0.1.0-py3-none-any.whl",
+        "package_non_python_file_count": 0,
+        "python_file_count": 66,
+        "sha256": "cea15ade083c2a0a530693dc04cdabe192de049bc7a4078e2f769cb456ade85c",
+        "size_kib_approx": 358,
+        "strong_residues": []
+      }
+    },
+    "installed_operational_commands": {
+      "doctor": {
+        "classification": "environmental_diagnostic_not_packaging_gate",
+        "external_tool_failures": [
+          "lualatex",
+          "biber"
+        ],
+        "python_dependencies_detected": true,
+        "returncode": 2
+      },
+      "explain_profile_fgv": {
+        "error": "FileNotFoundError: Perfil institucional não encontrado: fgv. Disponíveis: nenhum",
+        "returncode": 1
+      },
+      "init_project_fgv": {
+        "error": "FileNotFoundError: Template TOML não encontrado: app_bundle/config/examples/atividade_rc10_exemplo.toml",
+        "returncode": 1
+      },
+      "list_institutions": {
+        "returncode": 0,
+        "stdout": "Nenhum perfil institucional encontrado."
+      },
+      "list_layouts_attempt": {
+        "classification": "invalid_probe_not_used_as_defect_evidence",
+        "reason": "--list-layouts exige --config caminho.toml",
+        "returncode": 1
+      }
+    },
+    "logs": [
+      "ap005e2_build_instalacao_isolada_20260718_075814.log",
+      "ap005e2_dependencias_package_data_v3_20260718_080928.log"
+    ],
+    "passive_module_imports": {
+      "failure": {
+        "error": "ModuleNotFoundError: No module named 'article_workflow'",
+        "module": "app_bundle.scripts.pipeline.artigo_prisma_workflow"
+      },
+      "pipfile_direct_dependencies": {
+        "failed": 1,
+        "passed": 64,
+        "total": 65
+      },
+      "requirements_only": {
+        "failed": 1,
+        "passed": 64,
+        "total": 65
+      }
+    },
+    "requirements_assisted_environment": {
+      "academic_pipeline_imported_from_temporary_venv": true,
+      "console_help_returncode": 0,
+      "help_stderr_equal": true,
+      "help_stdout_equal": true,
+      "legacy_runtime_imported": true,
+      "module_help_returncode": 0,
+      "requirements_install_returncode": 0
+    },
+    "wheel_only_environment": {
+      "academic_pipeline_imported_from_temporary_venv": true,
+      "console_help_returncode": 1,
+      "installation_succeeded": true,
+      "legacy_runtime_error": "ModuleNotFoundError: No module named 'dotenv'",
+      "legacy_runtime_imported": false,
+      "module_help_returncode": 1,
+      "pip_check_returncode": 0
+    }
+  },
+  "findings": [
+    {
+      "ap005e3_action": "Declarar dependências operacionais mínimas em project.dependencies e alinhar requirements/Pipfile.",
+      "classification": "confirmed_distribution_metadata_defect",
+      "evidence": "O wheel declara Requires-Dist vazio; instalação isolada é aceita por pip check, mas o entrypoint falha por ausência de dotenv.",
+      "id": "distribution-dependencies-empty",
+      "severity": "blocking"
+    },
+    {
+      "ap005e3_action": "Definir allowlist de dados operacionais; não empacotar indiscriminadamente projetos, outputs ou documentos históricos.",
+      "classification": "confirmed_package_data_defect",
+      "evidence": "O wheel contém zero arquivos não-Python; perfis FGV não são encontrados e --init-project não localiza seu template.",
+      "id": "operational-package-data-absent",
+      "severity": "blocking"
+    },
+    {
+      "ap005e3_action": "Converter para import relativo/canônico preservando a API pública article_workflow.",
+      "classification": "confirmed_installed_import_defect",
+      "evidence": "64 de 65 módulos passivos importam; artigo_prisma_workflow falha com import absoluto de article_workflow.",
+      "id": "article-workflow-absolute-import",
+      "severity": "blocking"
+    },
+    {
+      "ap005e3_action": "Resolver helpers por módulo canônico ou caminho derivado do pacote app_bundle.",
+      "classification": "confirmed_installed_layout_defect",
+      "evidence": "Os helpers existem em app_bundle.scripts.pipeline, mas o módulo instalado os procura como irmãos de academic_pipeline.",
+      "id": "prisma-helper-sibling-resolution",
+      "severity": "blocking"
+    },
+    {
+      "ap005e3_action": "Substituir por configuração explícita ou recurso relativo/ausência segura.",
+      "classification": "confirmed_portability_defect",
+      "evidence": "O código produtivo instalado contém caminho absoluto sob /home/gustavodetarso.",
+      "id": "hardcoded-personal-prompt-path",
+      "severity": "blocking"
+    },
+    {
+      "ap005e3_action": "Caracterizar e, se necessário, redirecionar para python -m academic_pipeline ou módulo canônico.",
+      "classification": "installed_layout_risk_not_fully_exercised",
+      "evidence": "Subprocessos invocam __file__ do módulo prisma_generic_orchestration.",
+      "id": "module-self-invocation-by-file",
+      "severity": "risk"
+    },
+    {
+      "ap005e3_action": "Não usar esse resultado como evidência de defeito.",
+      "classification": "invalid_probe_not_defect",
+      "evidence": "A tentativa sem --config falhou conforme o contrato atual.",
+      "id": "list-layouts-probe-invalid",
+      "severity": "excluded"
+    },
+    {
+      "ap005e3_action": "Não alterar metadata Python por esse resultado.",
+      "classification": "environmental_not_packaging_defect",
+      "evidence": "O doctor detectou dependências Python, mas retornou 2 por lualatex e biber ausentes no ambiente temporário.",
+      "id": "doctor-external-tool-errors",
+      "severity": "excluded"
+    }
+  ],
+  "fingerprint": "73d01999b82d425436e8440ce24eb1757c379fc8c228c8999c0fe116279d3364",
+  "phase": "AP-005E.2",
+  "schema_version": "ap005e2.isolated-build-installation-characterization.v1",
+  "source_snapshot": {
+    "packaged_python_source_count": 66,
+    "pipfile_direct_names": [
+      "matplotlib",
+      "openai",
+      "openpyxl",
+      "prompt-toolkit",
+      "pydantic",
+      "pypdf",
+      "python-docx",
+      "python-dotenv"
+    ],
+    "pyproject": {
+      "console_script": "academic_pipeline.cli:main",
+      "dependencies": [],
+      "include_package_data": true,
+      "name": "academic-pipeline-mppg",
+      "package_data": null,
+      "requires_python": ">=3.11",
+      "version": "0.1.0"
+    },
+    "requirements": [
+      "openai>=1.0.0",
+      "pydantic>=2.0",
+      "python-dotenv>=1.0",
+      "pypdf>=4.0",
+      "python-docx>=1.1",
+      "openpyxl>=3.1"
+    ],
+    "source_defects": {
+      "article_workflow_absolute_imports": [
+        {
+          "line": 11,
+          "module": "article_workflow",
+          "names": [
+            "ArticleWorkflow"
+          ]
+        }
+      ],
+      "hardcoded_user_prompt_path": true,
+      "helper_export_sibling_assumption": true,
+      "helper_freeze_sibling_assumption": true,
+      "init_project_config_example_path": true,
+      "self_invocation_via_dunder_file": true
+    },
+    "tracked_data_counts": {
+      "institutions": 18,
+      "misc": 6,
+      "projetos": 111,
+      "prompts": 9,
+      "templates": 9,
+      "tracked_non_python_total": 184
+    },
+    "tracked_python_outside_wheel": [
+      "app_bundle/templates/make_reference_fgv_docx.py"
+    ]
+  }
+}
