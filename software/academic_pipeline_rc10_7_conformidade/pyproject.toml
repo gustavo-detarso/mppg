@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "academic-pipeline-mppg"
 version = "0.1.0"
+readme = "README.md"
 description = "Pipeline acadêmica modular para geração, validação e renderização de documentos."
 requires-python = ">=3.11"
 dependencies = [
@@ -20,7 +21,7 @@ dependencies = [
 academic-pipeline = "academic_pipeline.cli:main"
 
 [tool.setuptools]
-include-package-data = true
+include-package-data = false
 
 [tool.setuptools.packages.find]
 where = ["."]
