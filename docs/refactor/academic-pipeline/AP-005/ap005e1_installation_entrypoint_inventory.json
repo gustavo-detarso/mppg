@@ -1,0 +1,423 @@
+{
+  "ap005e2_gates": [
+    "build wheel and sdist from a clean temporary descendant",
+    "inspect exact archive manifests and reject accidental residues",
+    "install wheel into a fresh temporary virtual environment",
+    "remove PYTHONPATH and run from outside the checkout",
+    "prepend the temporary environment bin directory to PATH",
+    "prove academic_pipeline.__file__ belongs to the temporary environment",
+    "prove academic-pipeline resolves to the temporary environment",
+    "compare academic-pipeline and python -m academic_pipeline help",
+    "exercise the legacy bridge without importing from the checkout",
+    "characterize package data required by operational commands",
+    "characterize hardcoded and sibling-helper layout risks"
+  ],
+  "audit_observations": {
+    "current_pipenv_distribution": {
+      "classification": "environment_observation_not_gate",
+      "cwd": "/tmp",
+      "distribution": "academic-pipeline-mppg",
+      "entrypoint": "academic_pipeline.cli:main",
+      "file_count": 141,
+      "import_origin": "site-packages/academic_pipeline/__init__.py",
+      "pythonpath_removed": true,
+      "version": "0.1.0"
+    },
+    "historical_python_universe": {
+      "auditable": 146,
+      "top_level_backups_relative_to_software": 119,
+      "tracked_total": 265
+    },
+    "raw_layout_reference_counts": {
+      "academic_pipeline": 12,
+      "app_bundle_scripts": 28,
+      "classification": "algorithmic_evidence_not_gate",
+      "tests": 154,
+      "total": 194
+    },
+    "read_only_audit_log": "ap005e1_inventario_metadata_entrypoints_20260718_063956.log",
+    "source_audit_fingerprint": "22827bef51dfc701824caf9bf60d37477af8dfdd939bfc7ef3110acee2a2c495"
+  },
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "commit": "ba28822c826c37022581bf88c6a1b488e2c618de",
+    "upstream": "origin/ap-refactor/04-consumer-canonicalization"
+  },
+  "decisions": {
+    "broad_package_reorganization_allowed": false,
+    "defer_corrections_until_ap005e2": true,
+    "isolated_installation_is_proven": false,
+    "preserve_console_script": true,
+    "preserve_distribution_name": true,
+    "preserve_distribution_version": true,
+    "preserve_legacy_entrypoint": true,
+    "preserve_legacy_path_bridge": true,
+    "preserve_module_entrypoint": true,
+    "preserve_public_main": true,
+    "productive_change_required_in_ap005e1": false,
+    "wheel_contents_are_proven": false
+  },
+  "entrypoints": {
+    "compatibility_chain": [
+      "academic-pipeline",
+      "academic_pipeline.cli:main",
+      "academic_pipeline.legacy:run_legacy",
+      "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+    ],
+    "console_script": {
+      "name": "academic-pipeline",
+      "target": "academic_pipeline.cli:main"
+    },
+    "files": [
+      {
+        "definitions": [
+          {
+            "kind": "FunctionDef",
+            "lineno": 14,
+            "name": "main"
+          }
+        ],
+        "imports": [
+          {
+            "kind": "from",
+            "level": 0,
+            "module": "__future__",
+            "names": [
+              {
+                "asname": null,
+                "name": "annotations"
+              }
+            ]
+          },
+          {
+            "kind": "from",
+            "level": 0,
+            "module": "collections.abc",
+            "names": [
+              {
+                "asname": null,
+                "name": "Sequence"
+              }
+            ]
+          }
+        ],
+        "main_guards": [],
+        "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__init__.py",
+        "sha256": "4d08f2e264da8da506351ceaf4a5efd17fa4211bae7b44da458086618137413c"
+      },
+      {
+        "definitions": [],
+        "imports": [
+          {
+            "kind": "from",
+            "level": 0,
+            "module": "__future__",
+            "names": [
+              {
+                "asname": null,
+                "name": "annotations"
+              }
+            ]
+          },
+          {
+            "kind": "from",
+            "level": 1,
+            "module": "cli",
+            "names": [
+              {
+                "asname": null,
+                "name": "main"
+              }
+            ]
+          }
+        ],
+        "main_guards": [
+          {
+            "condition": "__name__ == \"__main__\"",
+            "lineno": 8
+          }
+        ],
+        "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__main__.py",
+        "sha256": "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4"
+      },
+      {
+        "definitions": [
+          {
+            "kind": "FunctionDef",
+            "lineno": 10,
+            "name": "main"
+          }
+        ],
+        "imports": [
+          {
+            "kind": "from",
+            "level": 0,
+            "module": "__future__",
+            "names": [
+              {
+                "asname": null,
+                "name": "annotations"
+              }
+            ]
+          },
+          {
+            "kind": "from",
+            "level": 0,
+            "module": "collections.abc",
+            "names": [
+              {
+                "asname": null,
+                "name": "Sequence"
+              }
+            ]
+          },
+          {
+            "kind": "from",
+            "level": 1,
+            "module": "legacy",
+            "names": [
+              {
+                "asname": null,
+                "name": "run_legacy"
+              }
+            ]
+          }
+        ],
+        "main_guards": [],
+        "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/cli.py",
+        "sha256": "bbda5a88d1234f649bb6d171a14b75e51d03bf3d721d91656ad624912f26c2db"
+      }
+    ],
+    "module_entrypoint": {
+      "command": "python -m academic_pipeline",
+      "target": "academic_pipeline.cli:main"
+    },
+    "public_package_function": {
+      "all": [
+        "main"
+      ],
+      "symbol": "academic_pipeline.main",
+      "target": "academic_pipeline.cli:main"
+    }
+  },
+  "existing_contracts": {
+    "snapshots": [
+      "software/academic_pipeline_rc10_7_conformidade/tests/characterization/snapshots/ap003a/package_module_help.txt"
+    ],
+    "tests": [
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_entrypoints_orchestration_characterization.py",
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_official_package_entrypoint.py",
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_package_imports_document_core.py",
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_package_imports_entrypoints.py",
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_package_imports_prisma_core.py",
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_package_imports_rendering.py",
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_package_imports_support_services.py",
+      "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_packaging_metadata.py"
+    ]
+  },
+  "fingerprint": "ffa48ad5a11a2e9872a30c798fb094c4af5d710d44ec1985c51cf3b38268fe1d",
+  "metadata": {
+    "build_system": {
+      "build-backend": "setuptools.build_meta",
+      "requires": [
+        "setuptools>=68",
+        "wheel"
+      ]
+    },
+    "project": {
+      "dependencies": [],
+      "description": "Pipeline acadêmica modular para geração, validação e renderização de documentos.",
+      "name": "academic-pipeline-mppg",
+      "requires_python": ">=3.11",
+      "scripts": {
+        "academic-pipeline": "academic_pipeline.cli:main"
+      },
+      "version": "0.1.0"
+    },
+    "setuptools": {
+      "data_files": null,
+      "exclude_package_data": null,
+      "include_package_data": true,
+      "package_data": null,
+      "packages_find": {
+        "exclude": [
+          "app_bundle.tests*"
+        ],
+        "include": [
+          "academic_pipeline*",
+          "app_bundle*"
+        ],
+        "namespaces": false,
+        "where": [
+          "."
+        ]
+      }
+    }
+  },
+  "package_discovery": {
+    "configuration": {
+      "exclude": [
+        "app_bundle.tests*"
+      ],
+      "include": [
+        "academic_pipeline*",
+        "app_bundle*"
+      ],
+      "namespaces": false,
+      "where": [
+        "."
+      ]
+    },
+    "discovery": {
+      ".": {
+        "find_namespace_packages": [
+          "academic_pipeline",
+          "app_bundle",
+          "app_bundle.docs",
+          "app_bundle.examples",
+          "app_bundle.examples.doi",
+          "app_bundle.institutions",
+          "app_bundle.institutions.fgv",
+          "app_bundle.institutions.fgv.assets",
+          "app_bundle.institutions.fgv.docx",
+          "app_bundle.institutions.fgv.latex",
+          "app_bundle.institutions.fgv.manuals",
+          "app_bundle.institutions.fgv.prompts",
+          "app_bundle.institutions.fgv.templates",
+          "app_bundle.institutions.fgv.validators",
+          "app_bundle.misc",
+          "app_bundle.misc.fgv",
+          "app_bundle.output",
+          "app_bundle.output.tui_logs",
+          "app_bundle.projetos",
+          "app_bundle.projetos.atividade_3",
+          "app_bundle.projetos.atividade_4",
+          "app_bundle.projetos.atividade_case_einstein",
+          "app_bundle.projetos.atividade_case_einstein.fontes",
+          "app_bundle.projetos.atividade_case_einstein.output",
+          "app_bundle.projetos.atividade_case_einstein.output.atividade_case_einstein",
+          "app_bundle.projetos.atividade_case_einstein.src",
+          "app_bundle.projetos.atividade_wellhub",
+          "app_bundle.projetos.atividade_wellhub.fontes",
+          "app_bundle.projetos.atividade_wellhub.output",
+          "app_bundle.projetos.atividade_wellhub.output.atividade_wellhub",
+          "app_bundle.projetos.prisma_fluxo_pmf",
+          "app_bundle.projetos.prisma_fluxo_pmf.execucoes_anteriores",
+          "app_bundle.projetos.prisma_fluxo_pmf.execucoes_anteriores.fontes_instaveis_20260630_162614",
+          "app_bundle.projetos.prisma_fluxo_pmf.output_pesquisa",
+          "app_bundle.projetos.prisma_fluxo_pmf.output_pesquisa.relatorio_prisma_prisma_fluxo_pmf",
+          "app_bundle.projetos.resumo_artigos_encontro_1",
+          "app_bundle.projetos.resumo_artigos_encontro_2",
+          "app_bundle.projetos.resumo_artigos_encontro_3",
+          "app_bundle.projetos.resumo_artigos_encontro_4",
+          "app_bundle.prompts",
+          "app_bundle.prompts.document",
+          "app_bundle.prompts.global",
+          "app_bundle.prompts.prisma",
+          "app_bundle.prompts.research",
+          "app_bundle.scripts",
+          "app_bundle.scripts.pipeline",
+          "app_bundle.scripts.pipeline.article_workflow",
+          "app_bundle.templates",
+          "app_bundle.templates.csl",
+          "app_bundle.templates.docx"
+        ],
+        "find_packages": [
+          "academic_pipeline",
+          "app_bundle",
+          "app_bundle.scripts",
+          "app_bundle.scripts.pipeline",
+          "app_bundle.scripts.pipeline.article_workflow"
+        ],
+        "selected": [
+          "academic_pipeline",
+          "app_bundle",
+          "app_bundle.scripts",
+          "app_bundle.scripts.pipeline",
+          "app_bundle.scripts.pipeline.article_workflow"
+        ]
+      }
+    },
+    "selected_packages": [
+      "academic_pipeline",
+      "app_bundle",
+      "app_bundle.scripts",
+      "app_bundle.scripts.pipeline",
+      "app_bundle.scripts.pipeline.article_workflow"
+    ]
+  },
+  "phase": "AP-005E.1",
+  "risks": [
+    {
+      "classification": "unresolved_build_artifact_scope",
+      "decision": "characterize_in_ap005e2",
+      "evidence": "include-package-data=true sem package-data, MANIFEST.in ou data-files declarados; o censo de fontes não é isomórfico ao conteúdo instalado.",
+      "id": "package-data-coverage"
+    },
+    {
+      "classification": "distribution_metadata_gap_by_design",
+      "decision": "preserve_and_characterize_in_ap005e2",
+      "evidence": "project.dependencies é vazio e Pipfile/Pipfile.lock permanecem como autoridade de dependências.",
+      "id": "runtime-dependency-authority"
+    },
+    {
+      "classification": "intentional_compatibility_bridge",
+      "decision": "preserve",
+      "id": "legacy-relative-path-bridge",
+      "lines": [
+        17,
+        29,
+        61,
+        63,
+        66
+      ],
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/legacy.py",
+      "reason": "O entrypoint oficial localiza app_bundle/scripts/pipeline relativamente ao pacote instalado e normaliza sys.path."
+    },
+    {
+      "classification": "portability_risk",
+      "decision": "characterize_in_ap005e2",
+      "id": "hardcoded-user-prompt-default",
+      "lines": [
+        163
+      ],
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "reason": "O valor padrão contém caminho absoluto sob /home/gustavodetarso e não é portável para instalação isolada."
+    },
+    {
+      "classification": "installed_layout_risk",
+      "decision": "characterize_in_ap005e2",
+      "id": "module-self-invocation-by-file",
+      "lines": [
+        310,
+        332,
+        336,
+        550
+      ],
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "reason": "Chamadas subprocess usam __file__ como script; o comportamento deve ser validado após instalação do wheel."
+    },
+    {
+      "classification": "installed_layout_risk",
+      "decision": "characterize_in_ap005e2",
+      "id": "helper-sibling-assumption",
+      "lines": [
+        505,
+        537
+      ],
+      "path": "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/prisma_generic_orchestration.py",
+      "reason": "Helpers são procurados como irmãos do módulo academic_pipeline; a presença e o destino no artefato instalado precisam ser provados."
+    }
+  ],
+  "schema_version": "ap005e1.installation-entrypoint-inventory.v1",
+  "source_root_census": {
+    "excluded_test_python_files": 23,
+    "init_files": 5,
+    "non_python_files": 184,
+    "other_python_files": 2,
+    "python_files": 90,
+    "selected_package_non_python_files": 3,
+    "selected_package_python_files": 65,
+    "tracked_total": 274
+  }
+}
