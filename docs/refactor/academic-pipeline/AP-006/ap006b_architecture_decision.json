@@ -1,0 +1,77 @@
+{
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "commit": "9745f3727403c7ed7637faa12141cd16310f18c1",
+    "current_project_path": "software/academic_pipeline_rc10_7_conformidade",
+    "origin": "git@github.com:gustavo-detarso/mppg.git"
+  },
+  "candidate_assessment": [
+    {
+      "candidate": "software/academic_pipeline_mppg",
+      "collision": false,
+      "decision": "selected",
+      "score": 84,
+      "tracked_entry_count": 0
+    },
+    {
+      "candidate": "software/academic-pipeline",
+      "collision": false,
+      "decision": "not_selected",
+      "score": 67,
+      "tracked_entry_count": 0
+    },
+    {
+      "candidate": "software/academic_pipeline",
+      "collision": true,
+      "decision": "excluded",
+      "score": -80,
+      "tracked_entry_count": 63
+    }
+  ],
+  "confidence": "high",
+  "phase": "AP-006B",
+  "phase_gates": {
+    "AP-006C": "materialize_physical_target_bridge_and_resolver",
+    "AP-006D": "migrate_consumers_by_wave",
+    "AP-006E": "stabilize_distribution_and_compatibility",
+    "AP-006F": "decide_bridge_removal_and_close"
+  },
+  "public_contract": {
+    "console_script": {
+      "name": "academic-pipeline",
+      "target": "academic_pipeline.cli:main"
+    },
+    "distribution_name": "academic-pipeline-mppg",
+    "distribution_version": "0.1.0",
+    "python_import_surfaces": [
+      "academic_pipeline",
+      "app_bundle"
+    ]
+  },
+  "resource_resolution_contract": {
+    "environment_override": "explicit_and_documented_only",
+    "forbidden": [
+      "infer_repository_root_from_versioned_directory_name",
+      "duplicate_source_tree",
+      "bulk_rewrite_historical_evidence"
+    ],
+    "packaged_resources": "importlib.resources",
+    "repository_resources": "single_canonical_root_resolver"
+  },
+  "schema_version": 1,
+  "source_evidence": {
+    "audit_log": "ap006b_auditoria_arquitetura_alvo_v2_20260718_120729.log",
+    "audit_markdown": "ap006b_decisao_preliminar_20260718_120729.md",
+    "summary_fingerprint_sha256": "248523bda24d985e1b1d7a0aa7de3c4cafade6bd640860c93da79d79b08ffbc7"
+  },
+  "status": "materialized_uncommitted",
+  "target_architecture": {
+    "compatibility_bridge": "tracked_relative_symlink_plus_canonical_resource_resolver",
+    "direct_move_without_bridge": "rejected",
+    "duplicate_tree": "rejected",
+    "historical_bulk_rewrite": "rejected",
+    "old_physical_path": "software/academic_pipeline_rc10_7_conformidade",
+    "selected_physical_target": "software/academic_pipeline_mppg",
+    "symlink_supported": true
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "interpretation": {
+    "counts_are_upper_bounds": true,
+    "known_inflators": [
+      "historical inventories stored outside historical prefixes",
+      "generated or cached PRISMA matrices",
+      "multiple exact forms matched on the same line"
+    ],
+    "not_equal_to_required_edits": true,
+    "required_next_step": "AP-006C must inventory the exact productive move set; AP-006D must refine active consumers before editing."
+  },
+  "inventory_summary": {
+    "active_reference_file_count": 133,
+    "active_reference_match_line_count": 2232,
+    "exact_reference_file_count": 273,
+    "exact_reference_match_line_count": 5315,
+    "resolver_signal_line_count": 494
+  },
+  "phase": "AP-006B",
+  "resolver_signals": {
+    "cwd_dependency": {
+      "files": 163,
+      "lines": 375
+    },
+    "parent_chain": {
+      "files": 11,
+      "lines": 12
+    },
+    "parents_index": {
+      "files": 59,
+      "lines": 77
+    },
+    "path_file_resolve": {
+      "files": 82,
+      "lines": 95
+    }
+  },
+  "schema_version": 1,
+  "source_fingerprint_sha256": "248523bda24d985e1b1d7a0aa7de3c4cafade6bd640860c93da79d79b08ffbc7",
+  "status": "upper_bound_inventory",
+  "waves": [
+    {
+      "active_file_upper_bound": 24,
+      "owner_phase": "AP-006C",
+      "scope": "productive packages and app_bundle runtime/resources",
+      "wave": "wave_1_internal_runtime"
+    },
+    {
+      "active_file_upper_bound": 19,
+      "owner_phase": "AP-006C",
+      "scope": "pyproject, launchers, entrypoints and project-root surfaces",
+      "wave": "wave_1_packaging_and_entrypoints"
+    },
+    {
+      "active_file_upper_bound": 33,
+      "owner_phase": "AP-006D",
+      "scope": "tests, validators and refactor tools",
+      "wave": "wave_2_contracts_and_validators"
+    },
+    {
+      "active_file_upper_bound": 0,
+      "note": "Dedicated external audit remains mandatory despite zero classified files.",
+      "owner_phase": "AP-006D",
+      "scope": "external operational consumers",
+      "wave": "wave_3_external_operational"
+    },
+    {
+      "active_file_upper_bound": 42,
+      "owner_phase": "AP-006D",
+      "scope": "live documentation, reusable sources and regeneration",
+      "wave": "wave_4_sources_and_regeneration"
+    },
+    {
+      "active_file_upper_bound": 15,
+      "owner_phase": "AP-006D",
+      "scope": "ambiguous references requiring semantic review",
+      "wave": "manual_review"
+    }
+  ]
+}

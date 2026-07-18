@@ -1,0 +1,24 @@
+{
+  "baseline_commit": "9745f3727403c7ed7637faa12141cd16310f18c1",
+  "contract_file_sha256": {
+    "docs/refactor/academic-pipeline/AP-006/AP-006B_COMPATIBILITY_CONTRACT.md": "960d4fe7bf5901d6eefc66b24c0a64cc622d7840ef3d10630a2a6df9952d61df",
+    "docs/refactor/academic-pipeline/AP-006/AP-006B_TARGET_ARCHITECTURE.md": "86f9a2eba166859de8017af44ffb97acfb0cd5c037fcb78eba3b46d6a0344c97",
+    "docs/refactor/academic-pipeline/AP-006/ap006b_architecture_decision.json": "f4fc3d5da57ebcf83e084ac9cbe5fb392ee487515ff4c585ba6dd9e18ef6b185",
+    "docs/refactor/academic-pipeline/AP-006/ap006b_consumer_wave_manifest.json": "c36dbd8a7707a0e5e39a28987d8c439ad2575c060a2bb608cf73df2acc12f288",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap006b_architecture_contract.py": "4f5b4847d5e180746b5e1cd5f9cb3d64c0e9ced87d3f078c2d8f8331eb3f0db6",
+    "tools/refactor/ap006b_validate_architecture.py": "6cab8848000a31d767df144ff625f7596aedca2c77a0e6a32908777057e9b89a"
+  },
+  "materialized_files": [
+    "docs/refactor/academic-pipeline/AP-006/AP-006B_COMPATIBILITY_CONTRACT.md",
+    "docs/refactor/academic-pipeline/AP-006/AP-006B_TARGET_ARCHITECTURE.md",
+    "docs/refactor/academic-pipeline/AP-006/ap006b_architecture_decision.json",
+    "docs/refactor/academic-pipeline/AP-006/ap006b_consumer_wave_manifest.json",
+    "docs/refactor/academic-pipeline/AP-006/ap006b_materialization_manifest.json",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap006b_architecture_contract.py",
+    "tools/refactor/ap006b_validate_architecture.py"
+  ],
+  "phase": "AP-006B",
+  "schema_version": 1,
+  "source_fingerprint_sha256": "248523bda24d985e1b1d7a0aa7de3c4cafade6bd640860c93da79d79b08ffbc7",
+  "status": "materialized_uncommitted"
+}
