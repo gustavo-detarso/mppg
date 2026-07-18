@@ -28,7 +28,7 @@ else:
     import academic_pipeline_tui_widgets as ui
 
 try:
-    from article_workflow import ArticleWorkflow
+    from app_bundle.scripts.pipeline.article_workflow import ArticleWorkflow
 except Exception:  # pragma: no cover - fallback para instalações incompletas
     ArticleWorkflow = None  # type: ignore[assignment]
 

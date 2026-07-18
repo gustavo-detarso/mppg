@@ -76,12 +76,19 @@ def test_setuptools_discovers_only_project_packages() -> None:
     assert find["namespaces"] is False
 
 
-def test_pipfile_remains_runtime_dependency_authority() -> None:
+def test_pep621_is_distribution_dependency_authority() -> None:
     project = _metadata()["project"]
 
     assert (SOFTWARE_ROOT / "Pipfile").is_file()
     assert (SOFTWARE_ROOT / "Pipfile.lock").is_file()
-    assert project["dependencies"] == []
+    assert project["dependencies"] == [
+        "openai>=1.0.0",
+        "pydantic>=2.0",
+        "python-dotenv>=1.0",
+        "pypdf>=4.0",
+        "python-docx>=1.1",
+        "openpyxl>=3.1",
+    ]
 
 
 @pytest.mark.parametrize(

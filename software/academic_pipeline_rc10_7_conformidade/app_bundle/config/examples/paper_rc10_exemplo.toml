@@ -1,0 +1,64 @@
+# Modelo genérico de dados e diretrizes para o perfil paper_local_fgv.
+#
+# Este arquivo orienta a redação de um paper produzido a partir de um corpus
+# local (por exemplo, o ZIP com PDFs dos estudos incluídos na revisão PRISMA).
+# Ele não substitui o corpus: mantenha os artigos selecionados em
+# documentos-base.zip ou em uma pasta de documentos.
+#
+# Ao escolher “copiar e editar o modelo padrão na pasta do projeto”, o
+# assistente cria dados_paper.toml e grava nele os valores revisados. O arquivo
+# original dentro de app_bundle/misc/fgv nunca é alterado.
+
+[pesquisa]
+tema = ""
+recorte = ""
+objetivo = ""
+pergunta_pesquisa = ""
+hipotese = ""
+palavras_chave = []
+tipo_estudo = "paper acadêmico"
+
+[paper]
+# A tese é uma diretriz argumentativa; não autoriza extrapolar além do corpus.
+tese_central = ""
+# Use uma lista para ordenar as seções principais desejadas.
+estrutura_desejada = [
+  "Introdução",
+  "Referencial analítico",
+  "Análise e discussão",
+  "Conclusão"
+]
+# Pontos que obrigatoriamente precisam ser tratados no paper.
+argumentos_obrigatorios = []
+# Diretrizes de método, como comparação, análise documental ou estudo de caso.
+orientacoes_metodologicas = ""
+# Delimitações que o texto deve respeitar.
+limites_do_escopo = ""
+tom_de_redacao = "acadêmico analítico"
+instrucoes_adicionais = ""
+
+[metadados]
+# Opcional. Quando preenchido, substitui o título informado anteriormente no assistente.
+titulo_trabalho = ""
+subtitulo = ""
+
+[idiomas_saida]
+# Idioma da versão principal do paper.
+principal = "pt-BR"
+# Gera cópias integrais adicionais a partir do document.json canônico.
+gerar_traducao_ia = false
+idiomas_adicionais = []
+preservar_referencias_originais = true
+max_chars_por_lote = 12000
+
+[resumos_paper]
+# O resumo é sintetizado após a validação do document.json, sem nova análise do corpus.
+ativo = true
+principal = "pt-BR"
+gerar_resumo_principal = true
+# Permite Abstract/Keywords ou Resumen/Palabras clave no paper principal,
+# sem gerar uma cópia integral traduzida.
+gerar_resumo_adicional = false
+idiomas_adicionais = []
+gerar_palavras_chave_adicionais = true
+max_palavras = 250

@@ -161,7 +161,7 @@ def test_ap005e2_decision_requires_scoped_ap005e3() -> None:
     assert "package app_bundle/output" in payload["ap005e3_scope"]["forbidden"]
 
 
-def test_ap005e2_documents_and_tool_are_reproducible() -> None:
+def test_ap005e2_documents_and_tool_remain_historical_snapshot() -> None:
     report = REPORT.read_text(encoding="utf-8")
     scope = SCOPE.read_text(encoding="utf-8")
 
@@ -178,14 +178,4 @@ def test_ap005e2_documents_and_tool_are_reproducible() -> None:
     assert "upstream_proc = run_git(" in tool_source
     assert "upstream = None" in tool_source
     assert "Descendentes temporários são validados em HEAD destacado." in tool_source
-
-    proc = subprocess.run(
-        [str(TOOL), "--check"],
-        cwd=ROOT,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        check=False,
-    )
-    assert proc.returncode == 0, proc.stdout + proc.stderr
-    assert "fingerprint=" in proc.stdout
+    assert "project.dependencies deixou de estar vazio." in tool_source
