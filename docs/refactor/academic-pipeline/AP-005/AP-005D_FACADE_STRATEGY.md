@@ -8,12 +8,24 @@ A classificação foi realizada sobre a baseline:
 
 O inventário canônico possui fingerprint:
 
-    a99cc164b976146fd9452b56567bab43dcc28bf33eda80f6b3aa1c02abfd88ed
+    93727ee23a696b46f3fa8b0e08f8316903b958d574c4ad446b15936ddbede75f
 
 A evidência externa da AP-005D.1 foi preservada pelos identificadores:
 
     SHA-256: 45d0f51577e6d8cdf4f840b40546dd86878812e93c980f372d805efd0c301788
     fingerprint: 9a5ee044b249cd600e4af8c7d934073b979c899d6dd2ae6dbcaba7f86438b7ab
+
+## Fronteira temporal do universo
+
+O universo histórico de 145 arquivos Python é obtido da árvore Git do commit baseline:
+
+    78f3be0fce0dd8f79e55729a7111a9359c9edb8d
+
+O inventariador não usa o índice do `HEAD` descendente para definir novos caminhos.
+Assim, testes e ferramentas adicionados pela AP-005E ou por fases posteriores não
+alteram retrospectivamente o corpus da AP-005D. Os conteúdos dos caminhos que já
+existiam na baseline continuam sendo lidos no checkout atual, preservando a
+detecção de alterações ou remoções posteriores nas superfícies históricas.
 
 ## Decisão
 

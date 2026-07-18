@@ -2,7 +2,7 @@
   "schema": "ap005d.facade-inventory.v1",
   "baseline_commit": "78f3be0fce0dd8f79e55729a7111a9359c9edb8d",
   "head_policy": "baseline_commit_must_be_ancestor_of_head",
-  "source_manifest": "git ls-files",
+  "source_manifest": "git ls-tree -r -z --name-only 78f3be0fce0dd8f79e55729a7111a9359c9edb8d",
   "scope": {
     "auditable_python_files": 145,
     "excluded": [
@@ -1462,5 +1462,5 @@
     "canonical_non_facade_count": 4,
     "productive_changes_required": false
   },
-  "fingerprint": "a99cc164b976146fd9452b56567bab43dcc28bf33eda80f6b3aa1c02abfd88ed"
+  "fingerprint": "93727ee23a696b46f3fa8b0e08f8316903b958d574c4ad446b15936ddbede75f"
 }

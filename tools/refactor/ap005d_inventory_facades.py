@@ -145,7 +145,16 @@ def ensure_baseline_policy(root: Path) -> None:
 
 def tracked_python_files(root: Path) -> list[Path]:
     project_prefix = PurePosixPath(PROJECT_REL.as_posix())
-    result = run_git(root, "ls-files", "-z")
+    # O corpus AP-005D é histórico: caminhos acrescentados por fases
+    # posteriores não podem alterar retrospectivamente seu universo.
+    result = run_git(
+        root,
+        "ls-tree",
+        "-r",
+        "-z",
+        "--name-only",
+        BASELINE_COMMIT,
+    )
     files: list[Path] = []
 
     for raw in result.stdout.split(b"\0"):
@@ -535,7 +544,7 @@ def build_inventory(root: Path) -> dict[str, Any]:
         "schema": SCHEMA,
         "baseline_commit": BASELINE_COMMIT,
         "head_policy": "baseline_commit_must_be_ancestor_of_head",
-        "source_manifest": "git ls-files",
+        "source_manifest": f"git ls-tree -r -z --name-only {BASELINE_COMMIT}",
         "scope": {
             "auditable_python_files": len(paths),
             "excluded": [
