@@ -1,0 +1,153 @@
+{
+  "candidate_destinations": [
+    {
+      "candidate": "software/academic_pipeline",
+      "collision": true,
+      "filesystem_exists": true,
+      "tracked_entry_count": 63
+    },
+    {
+      "candidate": "software/academic_pipeline_mppg",
+      "collision": false,
+      "filesystem_exists": false,
+      "tracked_entry_count": 0
+    },
+    {
+      "candidate": "software/academic-pipeline",
+      "collision": false,
+      "filesystem_exists": false,
+      "tracked_entry_count": 0
+    }
+  ],
+  "files_by_lifecycle_class": {
+    "external_json_ambiguous": 4,
+    "external_live_documentation": 1,
+    "external_operational_consumer": 20,
+    "external_reusable_document_source": 8,
+    "generated_snapshot_or_report": 47,
+    "historical_refactor_evidence": 32,
+    "live_project_documentation": 11,
+    "productive_python": 96,
+    "project_resource_or_manual_review": 21,
+    "rendered_document_output": 8,
+    "reusable_generated_launcher": 10,
+    "test_or_historical_validator": 19,
+    "unclassified_textual_reference": 12
+  },
+  "files_by_proposed_action": {
+    "compatibility_or_regeneration_required": 10,
+    "compatibility_or_source_regeneration": 8,
+    "controlled_contract_migration": 19,
+    "external_consumer_migration_or_compatibility": 20,
+    "manual_review": 33,
+    "manual_review_or_regeneration": 4,
+    "preserve_or_regenerate_not_bulk_rewrite": 47,
+    "preserve_without_rewriting_history": 32,
+    "productive_migration_candidate": 96,
+    "regenerate_when_needed": 8,
+    "update_if_normative_otherwise_preserve": 1,
+    "update_live_documentation": 11
+  },
+  "layer_model": {
+    "closure_and_frozen_evidence": true,
+    "distribution_and_entrypoints": true,
+    "external_consumers": true,
+    "generated_and_document_sources": true,
+    "productive_physical_structure": true,
+    "tests_and_historical_validators": true
+  },
+  "match_lines_by_lifecycle_class": {
+    "external_json_ambiguous": 36,
+    "external_live_documentation": 1,
+    "external_operational_consumer": 85,
+    "external_reusable_document_source": 8,
+    "generated_snapshot_or_report": 610,
+    "historical_refactor_evidence": 37258,
+    "live_project_documentation": 14,
+    "productive_python": 279,
+    "project_resource_or_manual_review": 132,
+    "rendered_document_output": 8,
+    "reusable_generated_launcher": 16,
+    "test_or_historical_validator": 46,
+    "unclassified_textual_reference": 648
+  },
+  "match_lines_by_proposed_action": {
+    "compatibility_or_regeneration_required": 16,
+    "compatibility_or_source_regeneration": 8,
+    "controlled_contract_migration": 46,
+    "external_consumer_migration_or_compatibility": 85,
+    "manual_review": 780,
+    "manual_review_or_regeneration": 36,
+    "preserve_or_regenerate_not_bulk_rewrite": 610,
+    "preserve_without_rewriting_history": 37258,
+    "productive_migration_candidate": 279,
+    "regenerate_when_needed": 8,
+    "update_if_normative_otherwise_preserve": 1,
+    "update_live_documentation": 14
+  },
+  "phase": "AP-006A",
+  "provenance": {
+    "note": "Resumo compacto materializado a partir do log semântico revisado. Não depende da permanência do arquivo original em Downloads.",
+    "reviewed_log_name": "ap006a_classificacao_semantica_dependencias_20260718_111944.log",
+    "summary_fingerprint_sha256": "fe2e4262338815154f42b8eaca7d33c8d3d87bb9e1302c9bcc08fc2b5326a179",
+    "type": "reviewed_semantic_audit_log"
+  },
+  "pyproject_summary": {
+    "include_package_data": false,
+    "package_data_keys": [
+      "app_bundle"
+    ],
+    "packages_find": {
+      "exclude": [
+        "app_bundle.tests*"
+      ],
+      "include": [
+        "academic_pipeline*",
+        "app_bundle*"
+      ],
+      "namespaces": false,
+      "where": [
+        "."
+      ]
+    },
+    "parse_ok": true,
+    "path": "software/academic_pipeline_rc10_7_conformidade/pyproject.toml",
+    "present": true,
+    "project_name": "academic-pipeline-mppg",
+    "project_version": "0.1.0",
+    "scripts": {
+      "academic-pipeline": "academic_pipeline.cli:main"
+    }
+  },
+  "recommendation": {
+    "direct_rename_decision": "reject_without_compatibility_layer",
+    "preferred_strategy": "encapsulate_then_migrate_with_compatibility",
+    "recommended_sequence": [
+      "AP-006A auditoria e decisão de escopo",
+      "AP-006B arquitetura-alvo e contrato de compatibilidade",
+      "AP-006C materialização física controlada",
+      "AP-006D migração de consumidores e integrações",
+      "AP-006E estabilização distributiva e compatibilidade",
+      "AP-006F validação integrada e encerramento"
+    ],
+    "recommended_subphases": 6,
+    "subdivide": true,
+    "subdivision_confidence": "alta"
+  },
+  "schema_version": 1,
+  "summary": {
+    "academic_pipeline_import_file_count": 6,
+    "active_layer_count": 6,
+    "app_bundle_import_file_count": 5,
+    "contract_file_count": 19,
+    "exact_reference_file_count": 289,
+    "external_active_file_count": 38,
+    "historical_or_generated_file_count": 87,
+    "internal_productive_file_count": 96,
+    "package_surface_file_count": 91,
+    "runtime_blocking_file_count": 153,
+    "skipped_file_count": 319,
+    "tracked_file_count": 1283,
+    "unique_match_line_count": 39141
+  }
+}

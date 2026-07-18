@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "commit": "a9d0fa1e100af966329d48629ec234e32da6ded7",
+    "origin": "git@github.com:gustavo-detarso/mppg.git",
+    "project_relative_path": "software/academic_pipeline_rc10_7_conformidade"
+  },
+  "contract_file_sha256": {
+    "docs/refactor/academic-pipeline/AP-006/AP-006A_ARCHITECTURAL_DECISION.md": "09bd99c926da971025950c9ac87f818c64f5cea8bb72897428536312efdfe299",
+    "docs/refactor/academic-pipeline/AP-006/AP-006A_PHYSICAL_NAMING_IMPACT_AUDIT.md": "3fb8d9baa31828e78a0ef41c58b3951b3012dc5a1c92919498591e147c994fe6",
+    "docs/refactor/academic-pipeline/AP-006/ap006a_dependency_classification.json": "6433b89808bf527990c794a9f51c720fe7dae1d76b16e2175c86d7190adda7e9"
+  },
+  "decision": {
+    "deferred_candidate_destinations": [
+      "software/academic_pipeline_mppg",
+      "software/academic-pipeline"
+    ],
+    "direct_rename_decision": "reject_without_compatibility_layer",
+    "excluded_direct_destination": "software/academic_pipeline",
+    "preferred_strategy": "encapsulate_then_migrate_with_compatibility",
+    "recommended_subphases": 6,
+    "subdivide": true,
+    "subdivision_confidence": "alta"
+  },
+  "frozen_findings": {
+    "active_layer_count": 6,
+    "contract_file_count": 19,
+    "exact_reference_file_count": 289,
+    "external_active_file_count": 38,
+    "internal_productive_file_count": 96,
+    "package_surface_file_count": 91,
+    "runtime_blocking_file_count": 153,
+    "unique_match_line_count": 39141
+  },
+  "phase": "AP-006A",
+  "schema_version": 1,
+  "source_evidence": {
+    "note": "Resumo compacto materializado a partir do log semântico revisado. Não depende da permanência do arquivo original em Downloads.",
+    "reviewed_log_name": "ap006a_classificacao_semantica_dependencias_20260718_111944.log",
+    "summary_fingerprint_sha256": "fe2e4262338815154f42b8eaca7d33c8d3d87bb9e1302c9bcc08fc2b5326a179",
+    "type": "reviewed_semantic_audit_log"
+  },
+  "status": "materialized_uncommitted",
+  "subphases": [
+    "AP-006A",
+    "AP-006B",
+    "AP-006C",
+    "AP-006D",
+    "AP-006E",
+    "AP-006F"
+  ]
+}
