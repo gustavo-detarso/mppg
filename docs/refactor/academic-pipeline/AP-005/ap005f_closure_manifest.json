@@ -1,0 +1,150 @@
+{
+  "schema": "ap005f.closure-manifest.v1",
+  "phase": "AP-005F",
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "head": "e5e0d85178d8498c303ad2e8ccc9102f2c8222c8",
+    "upstream": "origin/ap-refactor/04-consumer-canonicalization",
+    "origin": "git@github.com:gustavo-detarso/mppg.git"
+  },
+  "scope": {
+    "purpose": "stabilization_and_closure",
+    "production_code_changes": 0,
+    "closure_artifact_count": 4
+  },
+  "phase_commits": [
+    {
+      "hash": "6ef568b250390e12dc2e86b86a8c530188604a28",
+      "subject": "refactor(academic-pipeline): inventariar consumidores da AP-005A"
+    },
+    {
+      "hash": "9372de8f621c9012a28d4c4a9a64e252a398bdf3",
+      "subject": "refactor(ap005): canonicalize PRISMA consumers"
+    },
+    {
+      "hash": "b8cb7ba3a3175ac79799b78a5d0678224076ef80",
+      "subject": "refactor(ap005): canonicalize TOML capture aliases"
+    },
+    {
+      "hash": "78f3be0fce0dd8f79e55729a7111a9359c9edb8d",
+      "subject": "fix(ap005): support post-commit validation of AP-005C"
+    },
+    {
+      "hash": "ba28822c826c37022581bf88c6a1b488e2c618de",
+      "subject": "docs(ap005): formalize AP-005D facade preservation"
+    },
+    {
+      "hash": "162df76eea94b3a5889ca217a907690f4d62c649",
+      "subject": "fix(academic-pipeline): congelar universo histórico da AP-005D"
+    },
+    {
+      "hash": "0d553c975ad7948762f74aa4fcff3903578712de",
+      "subject": "chore(academic-pipeline): materializar inventário da AP-005E.1"
+    },
+    {
+      "hash": "b16d1389486f220f829235e87adf88a191cefa87",
+      "subject": "test(academic-pipeline): caracterizar instalação isolada AP-005E.2"
+    },
+    {
+      "hash": "71b0c490463edfeb24d6c733ce0a6c698b970510",
+      "subject": "fix(academic-pipeline): corrigir instalação distribuída AP-005E.3"
+    },
+    {
+      "hash": "e5e0d85178d8498c303ad2e8ccc9102f2c8222c8",
+      "subject": "chore(academic-pipeline): estabilizar metadados de distribuição AP-005E.4"
+    }
+  ],
+  "tracked_documentation_before_closure": [
+    "docs/refactor/academic-pipeline/AP-005/AP-005A_CONSUMER_DEPENDENCY_INVENTORY.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005A_CONSUMER_MIGRATION_STRATEGY.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005B2_PRISMA_ADAPTER_BATCHES.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005B_CONSUMER_CANONICALIZATION_PLAN.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005C2_STABILIZATION_VALIDATION.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005C_CLOSURE_REPORT.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005C_TOML_CAPTURE_ALIAS_STRATEGY.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005D_FACADE_STRATEGY.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005E1_INSTALLATION_ENTRYPOINT_INVENTORY.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005E1_INSTALLATION_ENTRYPOINT_STRATEGY.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005E2_CORRECTION_SCOPE.md",
+    "docs/refactor/academic-pipeline/AP-005/AP-005E2_ISOLATED_BUILD_INSTALLATION_CHARACTERIZATION.md",
+    "docs/refactor/academic-pipeline/AP-005/ap005a_consumer_dependency_inventory.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005b2_prisma_adapter_batches.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005b_consumer_canonicalization_plan.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005c2_stabilization_manifest.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005c3_closure_manifest.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005c_toml_capture_alias_inventory.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005d_facade_inventory.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005e1_installation_entrypoint_inventory.json",
+    "docs/refactor/academic-pipeline/AP-005/ap005e2_isolated_build_installation_characterization.json"
+  ],
+  "characterization_contracts_before_closure": [
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005a_consumer_dependency_inventory_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b2_prisma_adapter_batches_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b2_prisma_adapter_equivalence_characterization.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b_consumer_canonicalization_plan_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b_consumer_contract_reclassification.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_inventory_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005d_facade_inventory_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005e1_installation_entrypoint_inventory_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005e2_isolated_build_installation_contract.py",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005e3_distribution_corrections_contract.py"
+  ],
+  "closure_artifacts": [
+    "docs/refactor/academic-pipeline/AP-005/AP-005F_CLOSURE_REPORT.md",
+    "docs/refactor/academic-pipeline/AP-005/ap005f_closure_manifest.json",
+    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005f_closure_contract.py",
+    "tools/refactor/ap005f_validate_closure.py"
+  ],
+  "validation": {
+    "canonical_suite": {
+      "passed": 573,
+      "xfailed": 3,
+      "returncode": 0
+    },
+    "distribution": {
+      "package_data_resources": 38,
+      "passive_modules": 65,
+      "description_content_type": "text/markdown",
+      "console_entrypoint": "academic-pipeline = academic_pipeline.cli:main",
+      "build_warnings_classified": 0
+    },
+    "isolated_installation": {
+      "pip_check": "passed",
+      "console_help": "passed",
+      "module_help": "passed",
+      "list_institutions": "passed",
+      "explain_profile_fgv": "passed",
+      "prisma_exportar_bib_help": "passed",
+      "prisma_congelar_artigo_help": "passed",
+      "passive_import_failures": 0
+    }
+  },
+  "build_evidence": {
+    "wheel_sha256": "2d97c03fa36475d3813497219867d51d58adbd89023d3fafbe82d1623af283c1",
+    "sdist_sha256": "85035062e279334c748cd38c85df4af887de3b2b4e25d594a935721c2052d1db"
+  },
+  "known_xfails": [
+    {
+      "test": "app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure",
+      "status": "legacy_defect_catalogued"
+    },
+    {
+      "test": "app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract",
+      "status": "legacy_defect_catalogued"
+    },
+    {
+      "test": "app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations",
+      "status": "legacy_defect_catalogued"
+    }
+  ],
+  "closure_decision": "ready_for_explicit_commit_and_publication_approval",
+  "next_phase": {
+    "id": "AP-006",
+    "reserved_scope": "physical package/directory naming and post-AP-005 evolution"
+  },
+  "fingerprint": "9dfc5c8de044b2bc22e57c02efa297a37659341268440f038500f4c7a2cd8c98"
+}
