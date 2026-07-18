@@ -50,6 +50,9 @@ def test_inventory_schema_fingerprint_and_baseline() -> None:
         "78f3be0fce0dd8f79e55729a7111a9359c9edb8d"
     )
     assert payload["scope"]["auditable_python_files"] == 145
+    assert payload["source_manifest"] == (
+        "git ls-tree -r -z --name-only 78f3be0fce0dd8f79e55729a7111a9359c9edb8d"
+    )
 
     canonical = dict(payload)
     expected = canonical.pop("fingerprint")
@@ -139,6 +142,12 @@ def test_no_productive_change_is_required() -> None:
 
 
 def test_inventory_tool_check_is_reproducible() -> None:
+    source = TOOL.read_text(encoding="utf-8")
+    assert '"ls-tree",' in source
+    assert '"--name-only",' in source
+    assert "BASELINE_COMMIT," in source
+    assert 'run_git(root, "ls-files", "-z")' not in source
+
     proc = subprocess.run(
         [
             sys.executable,
@@ -164,3 +173,5 @@ def test_strategy_records_preservation_scope() -> None:
     assert "app_bundle.scripts.pipeline.article_workflow" in text
     assert "`Sequence` e `annotations`" in text
     assert "não são facades" in text
+    assert "árvore Git do commit baseline" in text
+    assert "fases posteriores" in text
