@@ -31,7 +31,7 @@ def patch_renderer(path: Path) -> None:
     if not path.exists():
         raise SystemExit(
             f"ERRO: não encontrei {path}. Execute este aplicador na raiz do projeto "
-            "academic_pipeline_rc10_7_conformidade e confirme que o DOCX canônico já está instalado."
+            "academic_pipeline_mppg e confirme que o DOCX canônico já está instalado."
         )
 
     txt = path.read_text(encoding="utf-8", errors="ignore")
@@ -123,7 +123,7 @@ def patch_wrapper(path: Path) -> None:
 
 def main() -> int:
     if not (ROOT / "app_bundle").exists():
-        raise SystemExit("ERRO: execute este aplicador na raiz do projeto academic_pipeline_rc10_7_conformidade.")
+        raise SystemExit("ERRO: execute este aplicador na raiz do projeto academic_pipeline_mppg.")
     patch_renderer(MODULE_PATH)
     patch_wrapper(WRAPPER_PATH)
     print("[OK] Patch v14 aplicado: a disciplina passa a aparecer no bloco institucional superior da capa do DOCX.")

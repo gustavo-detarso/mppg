@@ -66,7 +66,7 @@ def patch_generator(path: Path) -> bool:
 
 def main() -> int:
     if not (ROOT / "app_bundle").exists():
-        raise SystemExit("ERRO: execute este aplicador na raiz do projeto academic_pipeline_rc10_7_conformidade.")
+        raise SystemExit("ERRO: execute este aplicador na raiz do projeto academic_pipeline_mppg.")
     write_file(MODULE_PATH, RENDERER_CODE, "docx_canonico_v11")
     write_file(WRAPPER_PATH, WRAPPER_CODE, "docx_canonico_v11")
     integrated = 0

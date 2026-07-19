@@ -184,7 +184,7 @@ def patch_wrapper(path: Path) -> None:
 
 def main() -> int:
     if not (ROOT / "app_bundle").exists():
-        raise SystemExit("ERRO: execute este aplicador na raiz do projeto academic_pipeline_rc10_7_conformidade.")
+        raise SystemExit("ERRO: execute este aplicador na raiz do projeto academic_pipeline_mppg.")
     patch_renderer(MODULE_PATH)
     patch_wrapper(WRAPPER_PATH)
     print("[OK] Patch v12 aplicado: títulos, subtítulos e corpo passam a ser renderizados em fonte preta.")
