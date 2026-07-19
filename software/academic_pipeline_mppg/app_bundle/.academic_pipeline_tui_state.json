@@ -1,8 +1,8 @@
 {
-  "active_config": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/prisma_fluxo_pmf.toml",
+  "active_config": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/projetos/prisma_fluxo_pmf/prisma_fluxo_pmf.toml",
   "known_configs": [
-    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/prisma_fluxo_pmf.toml",
-    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/novo_documento/relatorio_prisma_busca_orientada_config.toml",
-    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/novo_documento/atividade_config.toml"
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/projetos/prisma_fluxo_pmf/prisma_fluxo_pmf.toml",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/projetos/novo_documento/relatorio_prisma_busca_orientada_config.toml",
+    "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/projetos/novo_documento/atividade_config.toml"
   ]
 }

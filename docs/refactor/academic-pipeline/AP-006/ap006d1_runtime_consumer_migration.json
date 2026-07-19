@@ -1,0 +1,41 @@
+{
+  "baseline_commit": "7eddf9cf16f57b6433a325080fc992beab7a3184",
+  "baseline_tree": "394bcdd413f9c62de99eecb769ebd47651559e4e",
+  "compatibility_bridge": {
+    "must_remain": true,
+    "path": "software/academic_pipeline_rc10_7_conformidade",
+    "removal_phase": "AP-006F",
+    "target": "academic_pipeline_mppg"
+  },
+  "contracts": [
+    "docs/refactor/academic-pipeline/AP-006/AP-006D1_RUNTIME_CONSUMER_MIGRATION.md",
+    "docs/refactor/academic-pipeline/AP-006/ap006d1_runtime_consumer_migration.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap006d1_runtime_consumer_migration.py",
+    "tools/refactor/ap006d1_validate_runtime_consumer_migration.py"
+  ],
+  "embedded_decision_contract_sha256": "a0df2f72f770624a3afc9c7b883d694a23bf8b3fff05855ceb4c97107e488c30",
+  "migrated_files": [
+    "software/academic_pipeline_mppg/aplicar_docx_canonico_v11.py",
+    "software/academic_pipeline_mppg/aplicar_docx_canonico_v12.py",
+    "software/academic_pipeline_mppg/aplicar_docx_canonico_v13.py",
+    "software/academic_pipeline_mppg/aplicar_docx_capa_disciplina_v14.py",
+    "software/academic_pipeline_mppg/app_bundle/.academic_pipeline_tui_state.json",
+    "software/academic_pipeline_mppg/atualizar_academic_pipeline_bundle.py"
+  ],
+  "new_root": "software/academic_pipeline_mppg",
+  "old_root": "software/academic_pipeline_rc10_7_conformidade",
+  "phase": "AP-006D.1",
+  "preserved_historical_files": [
+    "software/academic_pipeline_mppg/app_bundle/clean_institutional_tree_report.json"
+  ],
+  "schema_version": 1,
+  "source_decision_fingerprint": "fa2d5ff4b5e37f70a123581b3b0497310e6aacee1ed241076a527646c51d96e7",
+  "status": "materialized_uncommitted",
+  "summary": {
+    "migrated_file_count": 6,
+    "migrated_reference_count": 10,
+    "new_contract_file_count": 4,
+    "preserved_historical_file_count": 1,
+    "preserved_historical_reference_count": 2
+  }
+}
