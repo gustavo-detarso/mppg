@@ -1,0 +1,60 @@
+{
+  "baseline_commit": "ee33dff7662f9867b7fb642361cf7bd0c89eb822",
+  "baseline_tree": "d9e2a4d9bb1c881c60c5421f61fe2bbaddb2d180",
+  "constraints": {
+    "bulk_replacement_used": false,
+    "commit_performed": false,
+    "compatibility_bridge_preserved": true,
+    "historical_records_preserved": true,
+    "push_performed": false,
+    "staging_performed": false
+  },
+  "decision": {
+    "bridge_removal_phase": "AP-006F",
+    "canonical_root": "academic_pipeline_mppg",
+    "legacy_fallback": "academic_pipeline_rc10_7_conformidade"
+  },
+  "materialized_sha256": {
+    "tools/refactor/ap004e_inventory_compatibility.py": "19d1c10a0c354cb7a5c91c9e6073ad92061789a7742a0d1c7fbd50a047345ccb",
+    "tools/refactor/ap004f_generate_closure.py": "cca90ade85a534c2943b727d8c2391ef5f81ebece3f079e9e46029e6ca8615b3",
+    "tools/refactor/ap005d_inventory_facades.py": "73caa34c4c7a17f56c7dd3d14793b4bf9139df112e815945af8e9394600ecb70",
+    "tools/refactor/ap005e1_inventory_installation_entrypoints.py": "b0a662779808f56dc8e9f71ec2226e54e97a0d80b0be939c3d0435a7c6d91f37",
+    "tools/refactor/ap005e2_characterize_isolated_build_installation.py": "0add535ef9435af30dd019810d95924a6457c7a64be01e934caa6865dc608e4a"
+  },
+  "new_name_counts_after": {
+    "tools/refactor/ap004e_inventory_compatibility.py": 3,
+    "tools/refactor/ap004f_generate_closure.py": 2,
+    "tools/refactor/ap005d_inventory_facades.py": 2,
+    "tools/refactor/ap005e1_inventory_installation_entrypoints.py": 13,
+    "tools/refactor/ap005e2_characterize_isolated_build_installation.py": 3
+  },
+  "old_name_counts_after": {
+    "tools/refactor/ap004e_inventory_compatibility.py": 2,
+    "tools/refactor/ap004f_generate_closure.py": 0,
+    "tools/refactor/ap005d_inventory_facades.py": 0,
+    "tools/refactor/ap005e1_inventory_installation_entrypoints.py": 4,
+    "tools/refactor/ap005e2_characterize_isolated_build_installation.py": 0
+  },
+  "phase": "AP-006D.2",
+  "preview_diff_sha256": "502ae8859c1632e86ae06221f1c0f04aad06f2f16bad30668cf95ffe662fa8d3",
+  "preview_fingerprint_sha256": "c44df8c8bb239b8a69e34c83637b57fcb8e5bd9d4f6ef474e0420463ff962735",
+  "schema_version": 1,
+  "source_sha256": {
+    "tools/refactor/ap004e_inventory_compatibility.py": "34cfebb20477367bf2c57f376273e1568f16251ee6779986ac2c977009803256",
+    "tools/refactor/ap004f_generate_closure.py": "5f2dbdf490fa9f7bab80ccf7cdb1e9a9f0543a436a88507a7b52217b05bcee04",
+    "tools/refactor/ap005d_inventory_facades.py": "3c34f56123d6146f9a34e609a0ca8363333d8abac60dd7a5b0ad12a7395d4348",
+    "tools/refactor/ap005e1_inventory_installation_entrypoints.py": "d15da304f37ff88120e123b164c7ac7552ded11c86d54db40208ba14845adeb1",
+    "tools/refactor/ap005e2_characterize_isolated_build_installation.py": "0d4d222b57bcaa10c7466e64b05247b0fa9cd662121b2750247d1692b39c8ecb"
+  },
+  "status": "materialized_uncommitted",
+  "summary": {
+    "added_contract_file_count": 4,
+    "contextual_resolution_count": 3,
+    "direct_migration_count": 19,
+    "historical_record_count": 4,
+    "legacy_fallback_literal_count": 2,
+    "modified_file_count": 5,
+    "new_name_count_in_modified_files": 23,
+    "remaining_old_name_count": 6
+  }
+}
