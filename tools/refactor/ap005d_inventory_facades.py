@@ -18,7 +18,7 @@ from typing import Any
 SCHEMA = "ap005d.facade-inventory.v1"
 BASELINE_COMMIT = "78f3be0fce0dd8f79e55729a7111a9359c9edb8d"
 
-PROJECT_REL = Path("software/academic_pipeline_rc10_7_conformidade")
+PROJECT_REL = Path("software/academic_pipeline_mppg")
 INVENTORY_REL = Path(
     "docs/refactor/academic-pipeline/AP-005/"
     "ap005d_facade_inventory.json"
@@ -26,7 +26,7 @@ INVENTORY_REL = Path(
 
 SELF_EXCLUDED = {
     (
-        "software/academic_pipeline_rc10_7_conformidade/"
+        "software/academic_pipeline_mppg/"
         "tests/characterization/"
         "test_ap005d_facade_inventory_contract.py"
     ),

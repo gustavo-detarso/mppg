@@ -16,7 +16,7 @@ from typing import Any
 from setuptools import find_namespace_packages, find_packages
 
 ROOT = Path(__file__).resolve().parents[2]
-SOFTWARE_REL = Path("software/academic_pipeline_rc10_7_conformidade")
+SOFTWARE_REL = Path("software/academic_pipeline_mppg")
 SOFTWARE_ROOT = ROOT / SOFTWARE_REL
 DOC_DIR = ROOT / "docs/refactor/academic-pipeline/AP-005"
 
@@ -56,35 +56,35 @@ EXPECTED_SOURCE_ROOT_CENSUS = {
 }
 
 EXPECTED_ENTRYPOINT_HASHES = {
-    "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__init__.py":
+    "software/academic_pipeline_mppg/academic_pipeline/__init__.py":
         "4d08f2e264da8da506351ceaf4a5efd17fa4211bae7b44da458086618137413c",
-    "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/__main__.py":
+    "software/academic_pipeline_mppg/academic_pipeline/__main__.py":
         "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4",
-    "software/academic_pipeline_rc10_7_conformidade/academic_pipeline/cli.py":
+    "software/academic_pipeline_mppg/academic_pipeline/cli.py":
         "bbda5a88d1234f649bb6d171a14b75e51d03bf3d721d91656ad624912f26c2db",
 }
 
 RELEVANT_TESTS = [
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_entrypoints_orchestration_characterization.py",
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_official_package_entrypoint.py",
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_package_imports_document_core.py",
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_package_imports_entrypoints.py",
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_package_imports_prisma_core.py",
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_package_imports_rendering.py",
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_package_imports_support_services.py",
-    "software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/"
+    "software/academic_pipeline_mppg/app_bundle/tests/"
     "test_packaging_metadata.py",
 ]
 
 SNAPSHOT_FILES = [
-    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/"
+    "software/academic_pipeline_mppg/tests/characterization/"
     "snapshots/ap003a/package_module_help.txt",
 ]
 

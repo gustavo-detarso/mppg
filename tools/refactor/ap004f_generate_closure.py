@@ -38,7 +38,7 @@ EXPECTED_HEAD_SUBJECT = (
 REMOTE_REF = "origin/ap-refactor/03-orchestrator-decomposition"
 INTEGRATION_REF = "origin/refactor/academic-pipeline"
 
-SOFTWARE_REL = Path("software/academic_pipeline_rc10_7_conformidade")
+SOFTWARE_REL = Path("software/academic_pipeline_mppg")
 TOP_AP004_DOCS_REL = Path("docs/refactor/academic-pipeline/AP-004")
 SOFTWARE_AP004_DOCS_REL = SOFTWARE_REL / "docs/refactor/academic-pipeline/AP-004"
 TOOL_REL = Path("tools/refactor/ap004f_generate_closure.py")
@@ -103,7 +103,7 @@ EXPECTED_AP004E_FILES = {
     "docs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_INVENTORY.md",
     "docs/refactor/academic-pipeline/AP-004/AP-004E_COMPATIBILITY_STRATEGY.md",
     "docs/refactor/academic-pipeline/AP-004/ap004e_compatibility_inventory.json",
-    "software/academic_pipeline_rc10_7_conformidade/tests/characterization/"
+    "software/academic_pipeline_mppg/tests/characterization/"
     "test_ap004e_compatibility_inventory_contract.py",
     "tools/refactor/ap004e_inventory_compatibility.py",
 }

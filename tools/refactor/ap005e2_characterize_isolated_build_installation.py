@@ -13,7 +13,7 @@ from pathlib import Path, PurePosixPath
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
-SOFTWARE_REL = Path("software/academic_pipeline_rc10_7_conformidade")
+SOFTWARE_REL = Path("software/academic_pipeline_mppg")
 SOFTWARE_ROOT = ROOT / SOFTWARE_REL
 DOC_DIR = ROOT / "docs/refactor/academic-pipeline/AP-005"
 

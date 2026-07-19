@@ -37,7 +37,7 @@ EXPECTED_BRANCH = "ap-refactor/03-orchestrator-decomposition"
 EXPECTED_HEAD = "389f0ae526d12327a58ce23937225cf05b032566"
 EXPECTED_SUBJECT = "refactor(academic-pipeline): consolidar marcadores de versão da AP-004D"
 REMOTE_REF = "origin/ap-refactor/03-orchestrator-decomposition"
-SOFTWARE_REL = Path("software/academic_pipeline_rc10_7_conformidade")
+SOFTWARE_REL = Path("software/academic_pipeline_mppg")
 AP004_DOCS_REL = Path("docs/refactor/academic-pipeline/AP-004")
 REFACTOR_TOOLS_REL = Path("tools/refactor")
 SCAN_ROOT_RELS = (SOFTWARE_REL, AP004_DOCS_REL, REFACTOR_TOOLS_REL)
@@ -836,9 +836,13 @@ def module_name_from_path(repo_root: Path, path: Path) -> str:
     parts = list(rel.with_suffix("").parts)
     if parts and parts[-1] in {"__init__", "__main__"}:
         parts.pop()
-    if "academic_pipeline_rc10_7_conformidade" in parts:
-        idx = parts.index("academic_pipeline_rc10_7_conformidade") + 1
-        parts = parts[idx:]
+    project_root_names = ("academic_pipeline_mppg", "academic_pipeline_rc10_7_conformidade")
+    project_root_index = next(
+        (parts.index(name) for name in project_root_names if name in parts),
+        None,
+    )
+    if project_root_index is not None:
+        parts = parts[project_root_index + 1:]
     elif "tools" in parts:
         idx = parts.index("tools")
         parts = parts[idx:]
@@ -1355,8 +1359,12 @@ def ref_to_class(ref: Reference) -> str:
 def candidate_module_hint(candidate: Candidate) -> str | None:
     """Deriva o módulo Python da origem para filtrar nomes genéricos."""
     path = candidate.path
-    marker = "software/academic_pipeline_rc10_7_conformidade/"
-    if marker not in path or not path.endswith((".py", ".pyi")):
+    markers = (
+        "software/academic_pipeline_mppg/",
+        "software/academic_pipeline_rc10_7_conformidade/",
+    )
+    marker = next((item for item in markers if item in path), None)
+    if marker is None or not path.endswith((".py", ".pyi")):
         return None
     rel = path.split(marker, 1)[1]
     module_path = Path(rel)
