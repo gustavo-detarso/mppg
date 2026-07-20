@@ -51,8 +51,8 @@ app_bundle/misc/fgv/fgv-dissertacao.sty
 
 ```bash
 cd /home/gustavodetarso/Documentos/mppg/software/academic_pipeline
-unzip /caminho/academic_pipeline_rc10_7_conformidade_bundle.zip -d /tmp/rc10_4
-bash /tmp/rc10_4/academic_pipeline_rc10_7_conformidade/install_rc10.sh
+unzip /caminho/academic_pipeline_mppg_bundle.zip -d /tmp/rc10_4
+bash /tmp/rc10_4/academic_pipeline_mppg/install_rc10.sh
 ```
 
 ## Exemplo de execução
@@ -181,7 +181,7 @@ A distribuição inclui `Pipfile`, `requirements.txt`, `.env.template` e `setup_
 Fluxo recomendado:
 
 ```bash
-cd /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade
+cd /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg
 bash setup_pipenv_env.sh
 pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --doctor
 ```

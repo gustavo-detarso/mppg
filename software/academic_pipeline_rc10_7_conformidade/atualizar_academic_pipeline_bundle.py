@@ -18,7 +18,7 @@ O script:
 Uso típico:
 python atualizar_academic_pipeline_bundle.py \
   --zip /home/gustavodetarso/Downloads/academic_pipeline_rc10_7_14.zip \
-  --dst /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade \
+  --dst /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg \
   --config app_bundle/projetos/resumo_artigos_encontro_4/resumo_artigos_config.toml \
   --document-json app_bundle/output/documento/resumo_artigos_encontro_4/resumo_artigos_encontro_4.document.json \
   --render \
