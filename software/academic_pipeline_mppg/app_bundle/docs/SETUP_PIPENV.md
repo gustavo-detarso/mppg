@@ -5,7 +5,7 @@ Este arquivo descreve o fluxo recomendado para criar um ambiente Pipenv isolado 
 ## 1. Entrar na pasta da rc10.4
 
 ```bash
-cd /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade
+cd /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg
 ```
 
 ## 2. Criar ambiente e instalar dependências
