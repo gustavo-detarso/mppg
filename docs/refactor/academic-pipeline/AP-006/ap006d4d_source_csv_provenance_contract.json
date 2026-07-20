@@ -1,0 +1,589 @@
+{
+  "bridge": {
+    "expected_symlink_target": "academic_pipeline_mppg",
+    "path": "software/academic_pipeline_rc10_7_conformidade",
+    "preserved": true
+  },
+  "constraints": {
+    "cache_regeneration_contract_from_ap006d4c_preserved": true,
+    "commit_performed": false,
+    "csv_modification_performed": false,
+    "productive_consumer_modification_performed": false,
+    "push_performed": false,
+    "rewrite_existing_csv_forbidden": true,
+    "runtime_path_resolver_forbidden_without_new_evidence": true,
+    "source_csv_must_remain_verbatim": true,
+    "source_csv_semantics": "historical_provenance"
+  },
+  "decision": "preserve_source_csv_verbatim_as_historical_provenance",
+  "fingerprint_sha256": "6ef99836e4b7019e4dfb7921c5cc390ff7dcd979003908d251809a21185d3ebf",
+  "master_baseline_commit": "6adc5e7c6ce510a49eba13266eabfa227fbeae31",
+  "pairs": [
+    {
+      "bytes_equal": true,
+      "cache_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/.academic_pipeline/cache/artigo_final_atestmed_abnt/relatorio_prisma_prisma_fluxo_pmf.matriz_prisma_fulltext_garantido.csv",
+      "delimiter": ",",
+      "disposition": "preserve_verbatim",
+      "nonempty_source_csv_count": 248,
+      "row_count": 248,
+      "sha256": "064b30eebd16fe9eae3219f6591b5be77564ed097cd3ed92b3ff14ccc898fcd8",
+      "size_bytes": 1407157,
+      "source_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/fulltext_garantido/relatorio_prisma_prisma_fluxo_pmf.matriz_prisma_fulltext_garantido.csv",
+      "unique_source_csv_values": [
+        "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv"
+      ]
+    },
+    {
+      "bytes_equal": true,
+      "cache_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/.academic_pipeline/cache/artigo_final_atestmed_abnt/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.csv",
+      "delimiter": ",",
+      "disposition": "preserve_verbatim",
+      "nonempty_source_csv_count": 20,
+      "row_count": 20,
+      "sha256": "1c6c3860187958d31af1b0eb232ba8abbfcba0616257da5bf226a07f228f0337",
+      "size_bytes": 178304,
+      "source_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas.csv",
+      "unique_source_csv_values": [
+        "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv"
+      ]
+    },
+    {
+      "bytes_equal": true,
+      "cache_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/.academic_pipeline/cache/artigo_final_atestmed_abnt/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas_fulltext_garantido.csv",
+      "delimiter": ",",
+      "disposition": "preserve_verbatim",
+      "nonempty_source_csv_count": 20,
+      "row_count": 20,
+      "sha256": "1c6c3860187958d31af1b0eb232ba8abbfcba0616257da5bf226a07f228f0337",
+      "size_bytes": 178304,
+      "source_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/fulltext_garantido/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas_fulltext_garantido.csv",
+      "unique_source_csv_values": [
+        "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv"
+      ]
+    },
+    {
+      "bytes_equal": true,
+      "cache_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/.academic_pipeline/cache/artigo_final_atestmed_abnt/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas_seminario.csv",
+      "delimiter": ",",
+      "disposition": "preserve_verbatim",
+      "nonempty_source_csv_count": 20,
+      "row_count": 20,
+      "sha256": "1c6c3860187958d31af1b0eb232ba8abbfcba0616257da5bf226a07f228f0337",
+      "size_bytes": 178304,
+      "source_path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/dados_prisma/relatorio_prisma_prisma_fluxo_pmf.referencias_incluidas_seminario.csv",
+      "unique_source_csv_values": [
+        "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv"
+      ]
+    }
+  ],
+  "phase": "AP-006D.4D",
+  "productive_contract": {
+    "call_count": 34,
+    "calls": [
+      {
+        "call": "included.sort",
+        "classification": "other",
+        "expression_sha256": "d3e71526cce3832c9354dbd43aab037a4734b49b1627801536e4bae4d71c8056",
+        "line": 1079,
+        "receiver": "included",
+        "tainted_arguments": []
+      },
+      {
+        "call": "enumerate",
+        "classification": "other",
+        "expression_sha256": "4734c67e2b6baa1b27924ba0a9bef15029449a1367ad344c828917eb59d05d96",
+        "line": 1089,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "write_csv",
+        "classification": "serialization_sink",
+        "expression_sha256": "876f066397ff4f8a27e342553dd64efd215a593164ca8cafbfbd9979de360dc9",
+        "line": 1105,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "write_csv",
+        "classification": "serialization_sink",
+        "expression_sha256": "240d449e4376e947354ef0db51bcf3d8e0df140cc8e22e8bbd4266151a374308",
+        "line": 1106,
+        "receiver": null,
+        "tainted_arguments": [
+          "matrix"
+        ]
+      },
+      {
+        "call": "write_csv",
+        "classification": "serialization_sink",
+        "expression_sha256": "dc1ce5ee0f81d77683a6697e00d11c4e63415f407a061d4b761f54a9b2b1c1b4",
+        "line": 1107,
+        "receiver": null,
+        "tainted_arguments": [
+          "exclusions"
+        ]
+      },
+      {
+        "call": "write_bib",
+        "classification": "other",
+        "expression_sha256": "711fc9114be652d1c66f4ed5dbb659568dcd4f3673a13562c57745b18db17043",
+        "line": 1108,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "counts_json.write_text",
+        "classification": "other",
+        "expression_sha256": "250b81c1fd17fb8a26f8ff0677857ccadde1f5fd6a5122f941cd2c161ef5617a",
+        "line": 1122,
+        "receiver": "counts_json",
+        "tainted_arguments": [
+          "counts"
+        ]
+      },
+      {
+        "call": "write_manual_pending",
+        "classification": "other",
+        "expression_sha256": "e085d95135e02b7a0967fd17acb42f383c1c89353e5b852c18ab8575411a4508",
+        "line": 1123,
+        "receiver": null,
+        "tainted_arguments": [
+          "exclusions",
+          "priority_missing"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1080,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1113,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "47128ca21289658e38c9bcf8fd9821157bfc5d19db67a585cbb907a7ed4205fd",
+        "line": 1114,
+        "receiver": null,
+        "tainted_arguments": [
+          "exclusions"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "b33f4f9dcbad5128aac05aacee945edb76d1ddd7bab167f9e7143167d1f436c6",
+        "line": 1115,
+        "receiver": null,
+        "tainted_arguments": [
+          "priority_missing"
+        ]
+      },
+      {
+        "call": "sum",
+        "classification": "other",
+        "expression_sha256": "e7a9c5a9b7e8cacd626d4b24754e51f7be006ce1a3467ffbd9c93f0f9ecf10bb",
+        "line": 1116,
+        "receiver": null,
+        "tainted_arguments": [
+          "matrix"
+        ]
+      },
+      {
+        "call": "json.dumps",
+        "classification": "serialization_sink",
+        "expression_sha256": "1715cb017c9ebc6a4fd45cf5fde7adadff07b0344027e7f34b4ab7da26fd0a4f",
+        "line": 1122,
+        "receiver": "json",
+        "tainted_arguments": [
+          "counts"
+        ]
+      },
+      {
+        "call": "counts.items",
+        "classification": "other",
+        "expression_sha256": "c5462a99fe245f198613c114b03301d04ccbf59b62e2c45e49f04394b54ad4b0",
+        "line": 1131,
+        "receiver": "counts",
+        "tainted_arguments": []
+      },
+      {
+        "call": "print",
+        "classification": "other",
+        "expression_sha256": "73a6025d1a9c1838d965133c3ac78ec05b73f6ad3819d6b4f297ad7f9a6dddc4",
+        "line": 1166,
+        "receiver": null,
+        "tainted_arguments": [
+          "priority_missing"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1170,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "print",
+        "classification": "other",
+        "expression_sha256": "60ede15af9287fbe78bdaf59c325d92394859524cb5d2325d164202f6d793ef4",
+        "line": 1171,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "matrix.append",
+        "classification": "container_propagation",
+        "expression_sha256": "994770828f1f54ff572d8e83cc9f2507ea328c59cfe83f1efbc538e55824917a",
+        "line": 1008,
+        "receiver": "matrix",
+        "tainted_arguments": []
+      },
+      {
+        "call": "dict",
+        "classification": "other",
+        "expression_sha256": "8831baf3e33f02527ddf757eef02e2df34b5da2444e6794ba5f3821b2511c4bd",
+        "line": 1057,
+        "receiver": null,
+        "tainted_arguments": [
+          "row_base"
+        ]
+      },
+      {
+        "call": "included.append",
+        "classification": "container_propagation",
+        "expression_sha256": "d52c6261188748e02d573ebab332b2e2f02b2596a5c7ca13f7589aebdb911457",
+        "line": 1061,
+        "receiver": "included",
+        "tainted_arguments": [
+          "row"
+        ]
+      },
+      {
+        "call": "matrix.append",
+        "classification": "container_propagation",
+        "expression_sha256": "a0fa1e179090b449c60c4f465f951044a298a2f5301fa2babbef863a4c28063d",
+        "line": 1062,
+        "receiver": "matrix",
+        "tainted_arguments": [
+          "row"
+        ]
+      },
+      {
+        "call": "print",
+        "classification": "other",
+        "expression_sha256": "27ab29d78dccd26b8992d9c029a575cc3d04b5002fd1a4f2d2ebcb7e35a0cfdb",
+        "line": 1064,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "dict",
+        "classification": "other",
+        "expression_sha256": "8831baf3e33f02527ddf757eef02e2df34b5da2444e6794ba5f3821b2511c4bd",
+        "line": 1066,
+        "receiver": null,
+        "tainted_arguments": [
+          "row_base"
+        ]
+      },
+      {
+        "call": "exclusions.append",
+        "classification": "container_propagation",
+        "expression_sha256": "46584dd2422a483b2b1fca0e094a4756e31bbaa6aed6973376f3b1b077a3ef74",
+        "line": 1070,
+        "receiver": "exclusions",
+        "tainted_arguments": [
+          "row"
+        ]
+      },
+      {
+        "call": "matrix.append",
+        "classification": "container_propagation",
+        "expression_sha256": "a0fa1e179090b449c60c4f465f951044a298a2f5301fa2babbef863a4c28063d",
+        "line": 1071,
+        "receiver": "matrix",
+        "tainted_arguments": [
+          "row"
+        ]
+      },
+      {
+        "call": "exclusions.append",
+        "classification": "container_propagation",
+        "expression_sha256": "b5cec6d1944dc1bcddca799067e8e94dd9e787b4170abfde9380608f5b232a32",
+        "line": 1087,
+        "receiver": "exclusions",
+        "tainted_arguments": []
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1117,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1007,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1060,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "priority_missing.append",
+        "classification": "container_propagation",
+        "expression_sha256": "7df7615872c51b931ad4d28489ae34b6f650db1911a931eb02902118541357a1",
+        "line": 1073,
+        "receiver": "priority_missing",
+        "tainted_arguments": [
+          "row"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "b33f4f9dcbad5128aac05aacee945edb76d1ddd7bab167f9e7143167d1f436c6",
+        "line": 1166,
+        "receiver": null,
+        "tainted_arguments": [
+          "priority_missing"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1171,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      },
+      {
+        "call": "len",
+        "classification": "other",
+        "expression_sha256": "eb720630c716e46bc7275a826e0d184e478bbab3a4d682eeb32d151c4e8dc378",
+        "line": 1064,
+        "receiver": null,
+        "tainted_arguments": [
+          "included"
+        ]
+      }
+    ],
+    "container_propagation_count": 7,
+    "existence_sink_count": 0,
+    "main_lines": [
+      936,
+      1177
+    ],
+    "module_path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/prisma_fulltext_garantido.py",
+    "module_sha256": "7e237c15b4940622671c0e854c269e9b06ac5071e539e9aa8aad96dbb1ab1d95",
+    "origin_count": 11,
+    "origins": [
+      {
+        "dependencies": [],
+        "direct": true,
+        "expression_sha256": "5884bd340852ad139e9cda60f476648281d285fdb4ceebf2d443995f9775d7c6",
+        "line": 1028,
+        "target": "row_base",
+        "type": "assignment"
+      },
+      {
+        "dependencies": [
+          "row_base"
+        ],
+        "direct": false,
+        "expression_sha256": "1581c3336b065300bf765cec802788eb5220c816db956d33a59e39a5b01712e4",
+        "line": 1057,
+        "target": "row",
+        "type": "assignment"
+      },
+      {
+        "dependencies": [
+          "row_base"
+        ],
+        "direct": false,
+        "expression_sha256": "1581c3336b065300bf765cec802788eb5220c816db956d33a59e39a5b01712e4",
+        "line": 1066,
+        "target": "row",
+        "type": "assignment"
+      },
+      {
+        "dependencies": [
+          "row"
+        ],
+        "expression_sha256": "d52c6261188748e02d573ebab332b2e2f02b2596a5c7ca13f7589aebdb911457",
+        "line": 1061,
+        "method": "append",
+        "target": "included",
+        "type": "container_mutation"
+      },
+      {
+        "dependencies": [
+          "row"
+        ],
+        "expression_sha256": "a0fa1e179090b449c60c4f465f951044a298a2f5301fa2babbef863a4c28063d",
+        "line": 1062,
+        "method": "append",
+        "target": "matrix",
+        "type": "container_mutation"
+      },
+      {
+        "dependencies": [
+          "row"
+        ],
+        "expression_sha256": "46584dd2422a483b2b1fca0e094a4756e31bbaa6aed6973376f3b1b077a3ef74",
+        "line": 1070,
+        "method": "append",
+        "target": "exclusions",
+        "type": "container_mutation"
+      },
+      {
+        "dependencies": [
+          "row"
+        ],
+        "expression_sha256": "a0fa1e179090b449c60c4f465f951044a298a2f5301fa2babbef863a4c28063d",
+        "line": 1071,
+        "method": "append",
+        "target": "matrix",
+        "type": "container_mutation"
+      },
+      {
+        "dependencies": [
+          "row"
+        ],
+        "expression_sha256": "7df7615872c51b931ad4d28489ae34b6f650db1911a931eb02902118541357a1",
+        "line": 1073,
+        "method": "append",
+        "target": "priority_missing",
+        "type": "container_mutation"
+      },
+      {
+        "dependencies": [
+          "exclusions",
+          "included",
+          "matrix",
+          "priority_missing"
+        ],
+        "direct": false,
+        "expression_sha256": "472701d90ba423c313446eb25424ba1ef5bd9e1e217f92a9532401ce37d53c0d",
+        "line": 1110,
+        "target": "counts",
+        "type": "assignment"
+      },
+      {
+        "dependencies": [
+          "included"
+        ],
+        "direct": false,
+        "expression_sha256": "5ae86c17f164ddf3cba28f4d3fc0b9f267600484b27efb9c49f7c6200ee0dd87",
+        "line": 1081,
+        "target": "overflow",
+        "type": "assignment"
+      },
+      {
+        "dependencies": [
+          "included"
+        ],
+        "direct": false,
+        "expression_sha256": "527640495babf284153f3ee1912a67b7a62bf6824efc617dde28774878fb7218",
+        "line": 1082,
+        "target": "included",
+        "type": "assignment"
+      }
+    ],
+    "read_sink_count": 0,
+    "serialization_sink_count": 4,
+    "tainted_containers": [
+      "exclusions",
+      "included",
+      "matrix",
+      "priority_missing"
+    ],
+    "tainted_scalars": [
+      "counts",
+      "included",
+      "overflow",
+      "row",
+      "row_base"
+    ]
+  },
+  "refactor_baseline_commit": "993f25adc435e70ed181d7f3c27454d4ea2941d1",
+  "schema_version": 1,
+  "source_csv_value": "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_humana.csv",
+  "status": "source_csv_provenance_preservation_materialized",
+  "summary": {
+    "cache_file_count": 4,
+    "existence_sink_count": 0,
+    "pair_count": 4,
+    "read_sink_count": 0,
+    "serialization_sink_count": 4,
+    "source_file_count": 4,
+    "total_row_count": 308,
+    "unique_source_csv_value_count": 1
+  },
+  "validated_audit": {
+    "artifact_hashes": {
+      "decision_markdown": "597cf9bbea34ac7cfd099445d4048a508296ab1e330e5e94c4748652bd89024c",
+      "serialization_json": "7010f3a62543d597a9067c9de5054473e5e3874d3b1007699ea2e8e338efe744",
+      "serialization_tsv": "4528362cf2aa09d7df5143d76ed467b0e344aa8b47b2c57fc0ed1e291e713fd9",
+      "source_excerpt": "fbdcdcd622c10f62727bd3c023b09e578e9884339970fd943182d7da69601d0c"
+    },
+    "existence_sink_count": 0,
+    "gate": "ready_for_source_csv_provenance_preservation_materialization",
+    "helper_serialization_evidence_count": 21,
+    "log": "ap006d4d_auditoria_serializacao_source_csv_20260720_155430.log",
+    "preserve_source_csv_verbatim": true,
+    "read_sink_count": 0,
+    "rewrite_existing_csv": false,
+    "runtime_resolver_required": false,
+    "semantics": "historical_provenance_serialized_without_runtime_dereference",
+    "serialization_sink_count": 4,
+    "total_row_count": 308,
+    "unique_source_csv_value_count": 1
+  }
+}
