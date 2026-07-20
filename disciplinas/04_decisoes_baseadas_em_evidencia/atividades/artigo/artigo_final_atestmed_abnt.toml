@@ -227,7 +227,7 @@ referencias_bib = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_decisoes_
 estilo_citacao = "abnt"
 latex_style = "abnt"
 latex_options = "backend=biber,style=abnt,sorting=nty,giveninits=true"
-docx_csl = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+docx_csl = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
 sistema_citacao = "autor-data"
 backend = "biber"
 gerar_arquivo_bib = true
@@ -253,7 +253,7 @@ pesquisa_dir_existente = "/home/gustavodetarso/Documentos/mppg/disciplinas/04_de
 ativo = true
 reference_docx = ""
 usar_pandoc = true
-csl_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
+csl_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl"
 falhar_se_pandoc_falhar = true
 incluir_capa = true
 incluir_referencias = true
@@ -261,16 +261,16 @@ incluir_mapa_mental = false
 
 [latex]
 pdf_engine = "lualatex"
-org_latex_class_init = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/academic-writing.el"
-latex_extra_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv"
-fgv_logo_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png"
+org_latex_class_init = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/academic-writing.el"
+latex_extra_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/fgv"
+fgv_logo_path = "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/fgv.png"
 
 [prompts]
 ativos = true
-global_paths = ["/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/global/orientacao_geral_execucao.txt"]
+global_paths = ["/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/prompts/global/orientacao_geral_execucao.txt"]
 institution_paths = ["profile://prompts/fgv_geral.txt"]
 research_paths = []
-paper_paths = ["/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/prompts/document/paper.txt"]
+paper_paths = ["/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/prompts/document/paper.txt"]
 atividade_paths = []
 resumo_artigos_paths = []
 dissertacao_paths = []

@@ -1,0 +1,110 @@
+{
+  "already_canonical_source": {
+    "new_count": 1,
+    "old_count": 0,
+    "path": "software/academic_pipeline_mppg/atualizar_academic_pipeline_bundle.py",
+    "sha256": "e88beede519bb492bd2537041cbb430ffdacd04b9fafedb86f0c461e6ec3d3e0"
+  },
+  "baseline_commit": "0367a1988ee494200e912538e638703cb73dc74e",
+  "baseline_tree": "1ba11ffaba1d2bae00fd4327e0db395c82e004b9",
+  "constraints": {
+    "commit_performed": false,
+    "compatibility_bridge_preserved": true,
+    "do_not_mix_worktrees": true,
+    "external_worktree_unmodified": true,
+    "nonoperational_setup_reference_preserved": true,
+    "push_performed": false,
+    "staging_performed": false
+  },
+  "external_regeneration": {
+    "branch": "master",
+    "entries": [
+      {
+        "external_path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/README_rc10.md",
+        "external_sha256_before": "a458b60d090979014a3f291d040dfe1fbed8cbee624fda9d58e09f55eae15aa0",
+        "source_path": "software/academic_pipeline_mppg/app_bundle/docs/README_rc10.md",
+        "strategy": "copy_source_to_external"
+      },
+      {
+        "external_path": "software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/SETUP_PIPENV.md",
+        "external_sha256_before": "deec9e4866ef239c9f7ad4ccb5f81c00709dcfdc172f463202841548ed2f37d6",
+        "preserve_nonoperational_legacy_reference": true,
+        "source_path": "software/academic_pipeline_mppg/app_bundle/docs/SETUP_PIPENV.md",
+        "strategy": "copy_source_to_external"
+      },
+      {
+        "external_path": "software/academic_pipeline_rc10_7_conformidade/atualizar_academic_pipeline_bundle.py",
+        "external_sha256_before": "feae6a3d32db1e48e5cb3bfc4b451c5097d5636f164be371178d4dd1adc66caa",
+        "source_already_canonical": true,
+        "source_path": "software/academic_pipeline_mppg/atualizar_academic_pipeline_bundle.py",
+        "strategy": "copy_source_to_external"
+      }
+    ],
+    "git_root": "/home/gustavodetarso/Documentos/mppg",
+    "head_at_audit": "ef9acfd739274139637fae934c0c5dca4416728e",
+    "phase": "AP-006D.4",
+    "separate_commit_required": true
+  },
+  "migrations": [
+    {
+      "materialized_sha256": "ee0bf48fee85302f2feb3e0b0aa22698cd7f14b01f8aba97c11b1255d1093d47",
+      "new_after": 3,
+      "new_before": 0,
+      "old_after": 0,
+      "old_before": 3,
+      "path": "software/academic_pipeline_mppg/app_bundle/docs/README_rc10.md",
+      "selected_line_count": 3,
+      "selected_lines": [
+        54,
+        55,
+        184
+      ],
+      "source_sha256": "a458b60d090979014a3f291d040dfe1fbed8cbee624fda9d58e09f55eae15aa0"
+    },
+    {
+      "materialized_sha256": "7ca24a42447b137b816cb681bdb6ad0612d160e467052871f5a2d3d21f94d06f",
+      "new_after": 1,
+      "new_before": 0,
+      "old_after": 1,
+      "old_before": 2,
+      "path": "software/academic_pipeline_mppg/app_bundle/docs/SETUP_PIPENV.md",
+      "selected_line_count": 1,
+      "selected_lines": [
+        8
+      ],
+      "source_sha256": "deec9e4866ef239c9f7ad4ccb5f81c00709dcfdc172f463202841548ed2f37d6"
+    },
+    {
+      "materialized_sha256": "0f14b3ec26cdfe82eded6834d3948791689e9d07f22757929d40ebe78ae45e1e",
+      "new_after": 7,
+      "new_before": 0,
+      "old_after": 0,
+      "old_before": 7,
+      "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+      "selected_line_count": 7,
+      "selected_lines": [
+        230,
+        256,
+        264,
+        265,
+        266,
+        270,
+        273
+      ],
+      "source_sha256": "351736476d88e048528f35602a4635ea0ff8c65e5a670100d84f05176e8edfbc"
+    }
+  ],
+  "phase": "AP-006D.3",
+  "schema_version": 1,
+  "status": "materialized_uncommitted",
+  "summary": {
+    "added_contract_file_count": 4,
+    "already_canonical_source_file_count": 1,
+    "external_regeneration_entry_count": 3,
+    "migrated_line_count": 11,
+    "modified_source_file_count": 3,
+    "readme_migrated_line_count": 3,
+    "setup_migrated_line_count": 1,
+    "toml_migrated_line_count": 7
+  }
+}
