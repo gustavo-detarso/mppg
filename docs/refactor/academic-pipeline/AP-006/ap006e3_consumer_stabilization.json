@@ -1,0 +1,82 @@
+{
+  "audit_source": {
+    "audit_fingerprint_sha256": "f919ba51fb9ce8f5b64cacc7c81750ed8a50635011be2a4fafa7138bcab69487",
+    "occurrence_count": 39149,
+    "referencing_path_count": 310,
+    "tracked_tree_path_count": 1335
+  },
+  "compatibility_bridge": {
+    "decision": "preserve_until_ap006f",
+    "path": "software/academic_pipeline_rc10_7_conformidade",
+    "target": "academic_pipeline_mppg"
+  },
+  "contract_owned_paths": [
+    "docs/refactor/academic-pipeline/AP-006/AP-006E3_CONSUMER_STABILIZATION.md",
+    "docs/refactor/academic-pipeline/AP-006/ap006e3_consumer_stabilization.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap006e3_consumer_stabilization.py",
+    "tools/refactor/ap006e3_validate_consumer_stabilization.py"
+  ],
+  "decision": "No active runtime consumer requires a source change in AP-006E.3.",
+  "fallback_decision": "preserve_until_ap006f",
+  "generated_manual_review_paths": [
+    "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1_export_pdf.el",
+    "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2_export_pdf.el",
+    "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3_export_pdf.el",
+    "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_4/resumo_artigos_encontro_4/resumo_artigos_encontro_4_v4.tex~",
+    "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_4/resumo_artigos_encontro_4/resumo_artigos_encontro_4_v4_export_pdf.el",
+    "software/academic_pipeline_mppg/app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar_export_pdf.el",
+    "software/academic_pipeline_mppg/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_final_export_pdf.el",
+    "software/academic_pipeline_mppg/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar_export_pdf.el"
+  ],
+  "historical_refactor_tools": [
+    {
+      "action": "preserve_for_reproducibility",
+      "classification": "historical_refactor_tool",
+      "legacy_reference_count": 6,
+      "path": "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+      "sha256": "9dc6e5a28de82a9ff4cb2019370132c032ce933dcd9062b3722136a92a8ac426"
+    },
+    {
+      "action": "preserve_for_reproducibility",
+      "classification": "historical_refactor_tool",
+      "legacy_reference_count": 4,
+      "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_apply_module_file_names.py",
+      "sha256": "a91408393d26fef76d54f7acf3f5a8f9464c2bc505a52633e0c7a3a9d120071a"
+    },
+    {
+      "action": "preserve_for_reproducibility",
+      "classification": "historical_refactor_tool",
+      "legacy_reference_count": 10,
+      "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+      "sha256": "a15a5f5998618a5bb58bc67a5f5b2161e759d0cfd6b55e257d4a4cc7af307fe8"
+    },
+    {
+      "action": "preserve_for_reproducibility",
+      "classification": "historical_refactor_tool",
+      "legacy_reference_count": 2,
+      "path": "software/academic_pipeline_mppg/tools/refactor/ap004c_apply_internal_symbols.py",
+      "sha256": "a31ba8f4082fe4687f4fe0b4c9d97f213bd1ab13995923724ca24b67d6dbb145"
+    },
+    {
+      "action": "preserve_for_reproducibility",
+      "classification": "historical_refactor_tool",
+      "legacy_reference_count": 2,
+      "path": "software/academic_pipeline_mppg/tools/refactor/ap004c_inventory_internal_symbols.py",
+      "sha256": "5220836c17d3e0b4d4b31a695ffa13e977d8a12606388eb66c15c838624881ea"
+    }
+  ],
+  "materialized_paths": [],
+  "phase": "AP-006E.3",
+  "productive_code_change_count": 0,
+  "rectification": {
+    "historical_validators_run_in_clean_clone": true,
+    "reason": "AP-006D.3 explicitly froze one nonoperational legacy SETUP reference.",
+    "remaining_tracked_change_count": 0,
+    "reverted_tracked_path_count": 1
+  },
+  "setup_documentation_decision": "preserve_ap006d3_nonoperational_compatibility_reference",
+  "setup_path": "software/academic_pipeline_mppg/app_bundle/docs/SETUP_PIPENV.md",
+  "source_commit": "aed79d72f6c26fabcdda00f25d058b32fdc3fd75",
+  "source_tree": "f4004337607e21e1ba89330928b4473ffd739dcd",
+  "status": "rectified"
+}

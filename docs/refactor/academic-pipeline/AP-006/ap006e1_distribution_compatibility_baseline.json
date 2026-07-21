@@ -1,0 +1,1885 @@
+{
+  "deterministic": {
+    "compatibility_bridge": {
+      "mode": "120000",
+      "oid": "86cd0f66cc97bd92284eaf7244ba5f771f78c696",
+      "path": "software/academic_pipeline_rc10_7_conformidade",
+      "removal_authorized": false,
+      "required_through_phase": "AP-006F",
+      "target": "academic_pipeline_mppg"
+    },
+    "contract_owned_paths": [
+      "docs/refactor/academic-pipeline/AP-006/AP-006E1_DISTRIBUTION_COMPATIBILITY_BASELINE.md",
+      "docs/refactor/academic-pipeline/AP-006/ap006e1_distribution_compatibility_baseline.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap006e1_distribution_compatibility_baseline.py",
+      "tools/refactor/ap006e1_validate_distribution_compatibility_baseline.py"
+    ],
+    "entrypoint_chain": {
+      "declared_chain": [
+        "academic-pipeline -> academic_pipeline.cli:main",
+        "python -m academic_pipeline -> academic_pipeline.cli:main",
+        "academic_pipeline.cli:main -> academic_pipeline.legacy:run_legacy (fallback preservado)"
+      ],
+      "files": {
+        "cli": {
+          "contains_cli_main_reference": false,
+          "contains_legacy_reference": true,
+          "functions": {
+            "main": {
+              "keyword_only": [],
+              "kwarg": null,
+              "positional": [
+                "argv"
+              ],
+              "vararg": null
+            }
+          },
+          "path": "software/academic_pipeline_mppg/academic_pipeline/cli.py",
+          "sha256": "bbda5a88d1234f649bb6d171a14b75e51d03bf3d721d91656ad624912f26c2db"
+        },
+        "legacy": {
+          "contains_cli_main_reference": false,
+          "contains_legacy_reference": true,
+          "functions": {
+            "_normalize_return_code": {
+              "keyword_only": [],
+              "kwarg": null,
+              "positional": [
+                "value"
+              ],
+              "vararg": null
+            },
+            "_same_path": {
+              "keyword_only": [],
+              "kwarg": null,
+              "positional": [
+                "entry",
+                "target"
+              ],
+              "vararg": null
+            },
+            "ensure_legacy_path": {
+              "keyword_only": [],
+              "kwarg": null,
+              "positional": [],
+              "vararg": null
+            },
+            "load_legacy_module": {
+              "keyword_only": [],
+              "kwarg": null,
+              "positional": [],
+              "vararg": null
+            },
+            "run_legacy": {
+              "keyword_only": [
+                "program_name"
+              ],
+              "kwarg": null,
+              "positional": [
+                "argv"
+              ],
+              "vararg": null
+            }
+          },
+          "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+          "sha256": "f11ddffc30f60ac0c5e0856e8bf00ffaae866a8df806fd3c2b99f1afaa09e6b9"
+        },
+        "module_entrypoint": {
+          "contains_cli_main_reference": true,
+          "contains_legacy_reference": false,
+          "functions": {},
+          "path": "software/academic_pipeline_mppg/academic_pipeline/__main__.py",
+          "sha256": "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4"
+        }
+      },
+      "inspection_method": "AST e blobs Git; sem importar o orquestrador completo"
+    },
+    "phase": "AP-006E.1",
+    "public_contract": {
+      "console_scripts": {
+        "academic-pipeline": "academic_pipeline.cli:main"
+      },
+      "distribution_name": "academic-pipeline-mppg",
+      "distribution_version": "0.1.0",
+      "include_package_data": false,
+      "package_data_keys": [
+        "app_bundle"
+      ],
+      "package_roots": {
+        "academic_pipeline": true,
+        "app_bundle": true
+      },
+      "pipfile_lock_python_version": "3.11",
+      "pipfile_python_version": "3.11",
+      "requires_python": ">=3.11",
+      "setuptools_package_find": {
+        "exclude": [
+          "app_bundle.tests*"
+        ],
+        "include": [
+          "academic_pipeline*",
+          "app_bundle*"
+        ],
+        "namespaces": false,
+        "where": [
+          "."
+        ]
+      }
+    },
+    "reference_partition": {
+      "active_record_count": 166,
+      "active_records": [
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_1/atividade_1.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}",
+          "text_sha256": "7c9472fd156ce16865a4edb4b4dbb1d300884370264d92643ce86ad7d3692c0c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_2/atividade_2.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}",
+          "text_sha256": "7c9472fd156ce16865a4edb4b4dbb1d300884370264d92643ce86ad7d3692c0c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}",
+          "text_sha256": "7c9472fd156ce16865a4edb4b4dbb1d300884370264d92643ce86ad7d3692c0c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}",
+          "text_sha256": "7c9472fd156ce16865a4edb4b4dbb1d300884370264d92643ce86ad7d3692c0c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}",
+          "text_sha256": "7c9472fd156ce16865a4edb4b4dbb1d300884370264d92643ce86ad7d3692c0c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_4/resumo_artigos_encontro_4/resumo_artigos_encontro_4_v4.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}}{}}",
+          "text_sha256": "5546082e709e32d1ba4703195c9195e709637572f4e165d729187c9dda121477",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "external_operational_source",
+          "line": 230,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+          "preview": "docx_csl = \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl\"",
+          "text_sha256": "99620dd61072146b20de71287c907efcc7707d88aa5feb63fb1ac2d8865dcbca",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "external_operational_source",
+          "line": 256,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+          "preview": "csl_path = \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/templates/csl/associacao-brasileira-de-normas-tecnicas.csl\"",
+          "text_sha256": "042e9fca277341e97b2b8205eddc816a5d81d47a99dacac049ce2ec8912a980a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "external_operational_source",
+          "line": 264,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+          "preview": "org_latex_class_init = \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/academic-writing.el\"",
+          "text_sha256": "a9a6d5255c529abb21dc2a1506d93b6c1f006b61a022f79fe94f70f13b103c72",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "external_operational_source",
+          "line": 265,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+          "preview": "latex_extra_path = \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/fgv\"",
+          "text_sha256": "fda13a415311b98e63443383bc62154675c6bee479d63502b73a4ae009ce9ff7",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "external_operational_source",
+          "line": 266,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+          "preview": "fgv_logo_path = \"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/fgv.png\"",
+          "text_sha256": "e7ee8c903119a577ab74b1e0c94e847680c6b7030022e660f18dce0494da788e",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "external_operational_source",
+          "line": 270,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+          "preview": "global_paths = [\"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/prompts/global/orientacao_geral_execucao.txt\"]",
+          "text_sha256": "dac58ddf59e5ef2c17c0f4c49b4f61b9741a7dc7f82cf83135292b737dbfa73d",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "external_operational_source",
+          "line": 273,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/artigo/artigo_final_atestmed_abnt.toml",
+          "preview": "paper_paths = [\"/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/prompts/document/paper.txt\"]",
+          "text_sha256": "9113bba31f884054f6e1f53f6f8c0d295c7c387abddb30a573ac63af6c90922b",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/atividade_1/atividade_1.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}",
+          "text_sha256": "7c9472fd156ce16865a4edb4b4dbb1d300884370264d92643ce86ad7d3692c0c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "external_document_source",
+          "line": 26,
+          "path": "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/atividade_2/atividade_2_cartao_reforma.org",
+          "preview": "#+LATEX_HEADER: \\newcommand{\\FGVHeaderLogoInclude}{\\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}{\\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/institutions/fgv/assets/fgv.png}}{}}",
+          "text_sha256": "7c9472fd156ce16865a4edb4b4dbb1d300884370264d92643ce86ad7d3692c0c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 69,
+          "path": "software/academic_pipeline_mppg/aplicar_docx_canonico_v11.py",
+          "preview": "        raise SystemExit(\"ERRO: execute este aplicador na raiz do projeto academic_pipeline_mppg.\")",
+          "text_sha256": "2c4eb38576e25c91b8ed73de51404af89eaba70d869a4f78c8bf787145b9aa89",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 187,
+          "path": "software/academic_pipeline_mppg/aplicar_docx_canonico_v12.py",
+          "preview": "        raise SystemExit(\"ERRO: execute este aplicador na raiz do projeto academic_pipeline_mppg.\")",
+          "text_sha256": "2c4eb38576e25c91b8ed73de51404af89eaba70d869a4f78c8bf787145b9aa89",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 105,
+          "path": "software/academic_pipeline_mppg/aplicar_docx_canonico_v13.py",
+          "preview": "        raise SystemExit(\"ERRO: execute este aplicador na raiz do projeto academic_pipeline_mppg.\")",
+          "text_sha256": "2c4eb38576e25c91b8ed73de51404af89eaba70d869a4f78c8bf787145b9aa89",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 34,
+          "path": "software/academic_pipeline_mppg/aplicar_docx_capa_disciplina_v14.py",
+          "preview": "            \"academic_pipeline_mppg e confirme que o DOCX canônico já está instalado.\"",
+          "text_sha256": "d1cd06d1f9ef903489f60890b43e5a41a961b11e28b4939ff5166b43cf6842f1",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 126,
+          "path": "software/academic_pipeline_mppg/aplicar_docx_capa_disciplina_v14.py",
+          "preview": "        raise SystemExit(\"ERRO: execute este aplicador na raiz do projeto academic_pipeline_mppg.\")",
+          "text_sha256": "2c4eb38576e25c91b8ed73de51404af89eaba70d869a4f78c8bf787145b9aa89",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 21,
+          "path": "software/academic_pipeline_mppg/atualizar_academic_pipeline_bundle.py",
+          "preview": "  --dst /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg \\",
+          "text_sha256": "645a1226926b0715d534982fb3010488ee93921fb139fc46fd622006b5d77a9e",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 54,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+          "preview": "    prefix = \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "40ffab103e58075796f41f23f18cbe0877c904faca7397a2c5da6f3af7938a1f",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 65,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+          "preview": "    prefix = \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "40ffab103e58075796f41f23f18cbe0877c904faca7397a2c5da6f3af7938a1f",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 175,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+          "preview": "    assert protected[\"physical_directory\"] == \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "daba7d1a40f081942a198233c119949f5c8d8bce8280c921480ed076180a02e5",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 24,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_application_contract.py",
+          "preview": "SOFTWARE_PREFIX = 'software/academic_pipeline_rc10_7_conformidade/'",
+          "text_sha256": "58949dcb28dfe20b59cefc712ffa8e04acd675aaeabaf12698073cf8084787a2",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 22,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+          "preview": "SOFTWARE_PREFIX = 'software/academic_pipeline_rc10_7_conformidade/'",
+          "text_sha256": "58949dcb28dfe20b59cefc712ffa8e04acd675aaeabaf12698073cf8084787a2",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 154,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+          "preview": "    assert data[\"protected\"][\"physical_directory\"] == \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "2cbc5b44c8d194ae9bc1598b6db2f7ad4a1ef15c3699a4eae1ccf821cff37714",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 25,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+          "preview": "SOFTWARE_PREFIX = 'software/academic_pipeline_rc10_7_conformidade/'",
+          "text_sha256": "58949dcb28dfe20b59cefc712ffa8e04acd675aaeabaf12698073cf8084787a2",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 25,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_inventory_contract.py",
+          "preview": "SOFTWARE_PREFIX = 'software/academic_pipeline_rc10_7_conformidade/'",
+          "text_sha256": "58949dcb28dfe20b59cefc712ffa8e04acd675aaeabaf12698073cf8084787a2",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 19,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap004e_compatibility_inventory_contract.py",
+          "preview": "EXPECTED_FROZEN_FILES = ['software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/executar_artigo_longo_fulltext_v1_13.py', 'software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/executar_artigo_longo_fulltext_v1_14.py']",
+          "text_sha256": "ee9272db6cceb617c005b13fe0f72ecdcf74a53e9b0b11922bee1030907a2308",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 2
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 47,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005a_consumer_dependency_inventory_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 38,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005b2_prisma_adapter_batches_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 43,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005b2_prisma_adapter_batches_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 42,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005b_consumer_canonicalization_plan_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 15,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py",
+          "preview": "    \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "96b6d7a1c10a69ba92b87a61fe195c5ee82b187572ca9d7caa9ec9f17188c2be",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 27,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 55,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 63,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 72,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 188,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+          "preview": "            \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "176b85c946e346d05404bc41d839fca99bdf844e58be58492dec49a097a4611c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 96,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c3_closure_contract.py",
+          "preview": "            \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "176b85c946e346d05404bc41d839fca99bdf844e58be58492dec49a097a4611c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 20,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py",
+          "preview": "    \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "96b6d7a1c10a69ba92b87a61fe195c5ee82b187572ca9d7caa9ec9f17188c2be",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 103,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap005f_closure_contract.py",
+          "preview": "            \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "176b85c946e346d05404bc41d839fca99bdf844e58be58492dec49a097a4611c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 36,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap006a_scope_contract.py",
+          "preview": "        \"software/academic_pipeline_mppg\",",
+          "text_sha256": "a4af8d1fe31cea16c0f94a0e8fa5448e84c0b91385f0c05dbf129c945215ff76",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 30,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap006b_architecture_contract.py",
+          "preview": "    assert architecture[\"selected_physical_target\"] == \"software/academic_pipeline_mppg\"",
+          "text_sha256": "ac4447539db2a8a76e7383e68c4f6f5dd479aede258d4648fef42b5d1306b86b",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 9,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap006c_physical_materialization.py",
+          "preview": "OLD_ROOT = REPO / \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "291f61465237753f04de0fcdbb3f111fd5962f542117863772a513c06d0fd6fe",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 10,
+          "path": "software/academic_pipeline_mppg/tests/characterization/test_ap006c_physical_materialization.py",
+          "preview": "NEW_ROOT = REPO / \"software/academic_pipeline_mppg\"",
+          "text_sha256": "e215d8c9bdf985832f9d07c337fe652df1f2ee90ef03dfd21a49814ecb798a3e",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 51,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 59,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+          "preview": "SOFTWARE_DIRNAME = \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "ef0118732f92ad32082d67a5b141e72f86a91751f6e2ff94ff6d7ac21078790c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 2959,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+          "preview": "                \"diretório físico academic_pipeline_rc10_7_conformidade\",",
+          "text_sha256": "1da1bf2faa4df63e64cbb49cc2cd822b1ecad7587e625b51deb05aa650c02f59",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 3153,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+          "preview": "        O diretório `academic_pipeline_rc10_7_conformidade`, os três xfails, a",
+          "text_sha256": "10c405258e375c7e2ba9b21d7fbd7143761e285eecbfd6c3f98246bb4e0881c9",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 3369,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+          "preview": "    prefix = \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "40ffab103e58075796f41f23f18cbe0877c904faca7397a2c5da6f3af7938a1f",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 3459,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+          "preview": "    assert protected[\"physical_directory\"] == \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "daba7d1a40f081942a198233c119949f5c8d8bce8280c921480ed076180a02e5",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 48,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_apply_module_file_names.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 59,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_apply_module_file_names.py",
+          "preview": "SOFTWARE_PREFIX = \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "c607dbf0ac21a17e70a7ce3efe9fd256e03b3a441ce08a736c4a13a0e6acd8b4",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 1203,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_apply_module_file_names.py",
+          "preview": "    assert data[\"protected\"][\"physical_directory\"] == \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "2cbc5b44c8d194ae9bc1598b6db2f7ad4a1ef15c3699a4eae1ccf821cff37714",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 1576,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_apply_module_file_names.py",
+          "preview": "            \"physical_directory\": \"academic_pipeline_rc10_7_conformidade\",",
+          "text_sha256": "50360b67b39c02d18cd0fdd11fcfacd5bf74a6931a623feea366c47fa2007d54",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 53,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 65,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "SOFTWARE_DIRNAME = \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "ef0118732f92ad32082d67a5b141e72f86a91751f6e2ff94ff6d7ac21078790c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 1076,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "    # academic_pipeline_rc10_7_conformidade.",
+          "text_sha256": "bc1f156d077e8ae9b8081a6aa14d5c353bd65678967c1d6394c74c549704b00c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 1905,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "  `academic_pipeline_rc10_7_conformidade`; pertence exclusivamente à AP-006.",
+          "text_sha256": "051b3dfdb112d16ef4fa8113d5e09db88e36751f114c0f306cc4c3ccaa879021",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 2050,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "        \"- Menções ao diretório `academic_pipeline_rc10_7_conformidade` pertencem à AP-006.\",",
+          "text_sha256": "e05ac7d7121cc82f8c924c99032defcdcfbdadefb211dfd179f55b6350c32e10",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 2102,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "    helper_replacement = helper_needle + '''def _software_relative(path: str) -> str:\\n    normalized = path.strip().strip('\"').replace(\"\\\\\\\\\", \"/\")\\n    prefix = \"software/academic_pipeline_rc10_7_conformidade/\"\\n    return normalized[len(prefix):] if normalized.startswith(prefix) else normalized\\n\\n\\ndef _commit_paths(commit: str) -> set[str]:\\n    output = _run(\"git\", \"diff-tree\", \"--no-commit-id\", \"--name-only\", \"-r\", commit)\\n    return {_software_relative(line) for line in output.splitline",
+          "text_sha256": "16adf87ab8135928263cef46a75cc3b71dcd218f48da7a6f9b6e3c3df90e7d28",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 2190,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "    prefix = \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "40ffab103e58075796f41f23f18cbe0877c904faca7397a2c5da6f3af7938a1f",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 2281,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "            assert \"academic_pipeline_rc10_7_conformidade\" not in excerpt",
+          "text_sha256": "f9d2e0f832ab9a240f8e9958d82e4be628b6436bf4f5d6f49d8c15d19fc76d0e",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 2340,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "    assert data[\"protected\"][\"physical_directory\"] == \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "2cbc5b44c8d194ae9bc1598b6db2f7ad4a1ef15c3699a4eae1ccf821cff37714",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 2378,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+          "preview": "        \" M software/academic_pipeline_rc10_7_conformidade/tests/example.py\"",
+          "text_sha256": "42553ea9fb10a3e9b4a0bba1ef26336db70f76f071f4ae8323ac5114aaa7c9ce",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 47,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004c_apply_internal_symbols.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 61,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004c_apply_internal_symbols.py",
+          "preview": "SOFTWARE_PREFIX = \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "c607dbf0ac21a17e70a7ce3efe9fd256e03b3a441ce08a736c4a13a0e6acd8b4",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 49,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004c_inventory_internal_symbols.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_runtime_or_config",
+          "line": 63,
+          "path": "software/academic_pipeline_mppg/tools/refactor/ap004c_inventory_internal_symbols.py",
+          "preview": "SOFTWARE_PREFIX = \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "c607dbf0ac21a17e70a7ce3efe9fd256e03b3a441ce08a736c4a13a0e6acd8b4",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 56,
+          "path": "tools/refactor/ap004d_apply_version_markers.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 38,
+          "path": "tools/refactor/ap004d_inventory_version_markers.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 40,
+          "path": "tools/refactor/ap004e_inventory_compatibility.py",
+          "preview": "SOFTWARE_REL = Path(\"software/academic_pipeline_mppg\")",
+          "text_sha256": "136f977a4e2809a4f263888fc79313a109f0593889283a198f87295750154204",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 839,
+          "path": "tools/refactor/ap004e_inventory_compatibility.py",
+          "preview": "    project_root_names = (\"academic_pipeline_mppg\", \"academic_pipeline_rc10_7_conformidade\")",
+          "text_sha256": "622536d839116c6b2e91bee621a7d3728a5dee6e50d7f3654f3cb238bfa987f2",
+          "tokens": {
+            "academic_pipeline_mppg": 1,
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 1363,
+          "path": "tools/refactor/ap004e_inventory_compatibility.py",
+          "preview": "        \"software/academic_pipeline_mppg/\",",
+          "text_sha256": "0b3ca9eb0327ad22e1ce070a3283ac1e943948aa4398b0449588620568df6d11",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 1364,
+          "path": "tools/refactor/ap004e_inventory_compatibility.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\",",
+          "text_sha256": "2e9dfcebd5baf4b5cf78f1c3f26834376e783b0888b1a08069435edfce6833f1",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 41,
+          "path": "tools/refactor/ap004f_generate_closure.py",
+          "preview": "SOFTWARE_REL = Path(\"software/academic_pipeline_mppg\")",
+          "text_sha256": "136f977a4e2809a4f263888fc79313a109f0593889283a198f87295750154204",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 106,
+          "path": "tools/refactor/ap004f_generate_closure.py",
+          "preview": "    \"software/academic_pipeline_mppg/tests/characterization/\"",
+          "text_sha256": "28f4f0bd10e88b6b5c520a1a320e3cc0723379d5b227652555c08174521943c8",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 26,
+          "path": "tools/refactor/ap005a_inventory_consumers.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 49,
+          "path": "tools/refactor/ap005a_inventory_consumers.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 31,
+          "path": "tools/refactor/ap005b21_apply_prisma_core_adapters.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 31,
+          "path": "tools/refactor/ap005b22_apply_prisma_configuration_adapters.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 31,
+          "path": "tools/refactor/ap005b23_apply_prisma_execution_adapters.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 31,
+          "path": "tools/refactor/ap005b24_apply_prisma_article_entrypoint_adapters.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 40,
+          "path": "tools/refactor/ap005b2_plan_prisma_adapter_batches.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 46,
+          "path": "tools/refactor/ap005b2_plan_prisma_adapter_batches.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 52,
+          "path": "tools/refactor/ap005b2_plan_prisma_adapter_batches.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 57,
+          "path": "tools/refactor/ap005b2_plan_prisma_adapter_batches.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 526,
+          "path": "tools/refactor/ap005b2_plan_prisma_adapter_batches.py",
+          "preview": "                    \"academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "6fc9064dcd69d3d9acb7c849cc77b15b907fe252985450406a8b58fdac20ca4a",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 532,
+          "path": "tools/refactor/ap005b2_plan_prisma_adapter_batches.py",
+          "preview": "                    \"academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "6fc9064dcd69d3d9acb7c849cc77b15b907fe252985450406a8b58fdac20ca4a",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 42,
+          "path": "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 75,
+          "path": "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 80,
+          "path": "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 85,
+          "path": "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 91,
+          "path": "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 577,
+          "path": "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+          "preview": "            \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "176b85c946e346d05404bc41d839fca99bdf844e58be58492dec49a097a4611c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 581,
+          "path": "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+          "preview": "            \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "176b85c946e346d05404bc41d839fca99bdf844e58be58492dec49a097a4611c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 21,
+          "path": "tools/refactor/ap005c1_apply_toml_capture_aliases.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 382,
+          "path": "tools/refactor/ap005c1_apply_toml_capture_aliases.py",
+          "preview": "    \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "96b6d7a1c10a69ba92b87a61fe195c5ee82b187572ca9d7caa9ec9f17188c2be",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 36,
+          "path": "tools/refactor/ap005c2_validate_stabilization.py",
+          "preview": "    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py',",
+          "text_sha256": "06afbd7fa8e25d6ee00fd5b27ce8b647afef3b39c1887dd18e2ae1e249c9f3c4",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 37,
+          "path": "tools/refactor/ap005c2_validate_stabilization.py",
+          "preview": "    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py',",
+          "text_sha256": "1d509c80d43edea10d69336a6b38ffb8a643b02175fe2c11cf7cf5817cec78e8",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 42,
+          "path": "tools/refactor/ap005c2_validate_stabilization.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 167,
+          "path": "tools/refactor/ap005c2_validate_stabilization.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 33,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py',",
+          "text_sha256": "06afbd7fa8e25d6ee00fd5b27ce8b647afef3b39c1887dd18e2ae1e249c9f3c4",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 34,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "    'software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py',",
+          "text_sha256": "1d509c80d43edea10d69336a6b38ffb8a643b02175fe2c11cf7cf5817cec78e8",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 39,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 106,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 114,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 122,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 129,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 137,
+          "path": "tools/refactor/ap005c3_validate_closure.py",
+          "preview": "        \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e7e6ccf88b07686d2af50eef9e8849b665f158263c88cc5fb9681274fb218eb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 32,
+          "path": "tools/refactor/ap005c_inventory_toml_capture_aliases.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "742801bb189fef7c2d80cf46824787c954e4a0a20a43674ee058b960d52ea7bd",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 21,
+          "path": "tools/refactor/ap005d_inventory_facades.py",
+          "preview": "PROJECT_REL = Path(\"software/academic_pipeline_mppg\")",
+          "text_sha256": "a17c9afad1acadcd1df678f07d54767130840056967086755281017f8dc33731",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 29,
+          "path": "tools/refactor/ap005d_inventory_facades.py",
+          "preview": "        \"software/academic_pipeline_mppg/\"",
+          "text_sha256": "c5abf5df7ecbcc0d17f396c8690354d508df3b6e58691c14a0dec8374de4f01f",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 19,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "SOFTWARE_REL = Path(\"software/academic_pipeline_mppg\")",
+          "text_sha256": "136f977a4e2809a4f263888fc79313a109f0593889283a198f87295750154204",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 59,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/academic_pipeline/__init__.py\":",
+          "text_sha256": "fd3df4769931392f9768f89d5526ed3aa2d8c0aa9df1a6c44e00d1c9b285b884",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 61,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/academic_pipeline/__main__.py\":",
+          "text_sha256": "0a84570fd17862b7f0c8515de20decb2c391663fefc2157352d86347fbbc2ed6",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 63,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/academic_pipeline/cli.py\":",
+          "text_sha256": "a9235237998cc9a90a09690f4f0b192d224ea7350e5647994b06c42b36f8bbfb",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 68,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 70,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 72,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 74,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 76,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 78,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 80,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 82,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/app_bundle/tests/\"",
+          "text_sha256": "9a5b78fd8df64d064ed36e1a6c5918d882bac8e19f0593de157b6f1e6ec72c1a",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 87,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "    \"software/academic_pipeline_mppg/tests/characterization/\"",
+          "text_sha256": "28f4f0bd10e88b6b5c520a1a320e3cc0723379d5b227652555c08174521943c8",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 94,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "        \"path\": \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "79c3085c7aca20742bd541f18448262c628e950c3839fddfbf5de4f10015ad38",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 106,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "        \"path\": \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "79c3085c7aca20742bd541f18448262c628e950c3839fddfbf5de4f10015ad38",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 118,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "        \"path\": \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "79c3085c7aca20742bd541f18448262c628e950c3839fddfbf5de4f10015ad38",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 130,
+          "path": "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+          "preview": "        \"path\": \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "79c3085c7aca20742bd541f18448262c628e950c3839fddfbf5de4f10015ad38",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 16,
+          "path": "tools/refactor/ap005e2_characterize_isolated_build_installation.py",
+          "preview": "SOFTWARE_REL = Path(\"software/academic_pipeline_mppg\")",
+          "text_sha256": "136f977a4e2809a4f263888fc79313a109f0593889283a198f87295750154204",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 65,
+          "path": "tools/refactor/ap005e2_characterize_isolated_build_installation.py",
+          "preview": "            \"filename\": \"academic_pipeline_mppg-0.1.0-py3-none-any.whl\",",
+          "text_sha256": "a15a6512ea4dda43ee5152ebd8ec8874a9edcda2909bb22953351c5cca7d879d",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 76,
+          "path": "tools/refactor/ap005e2_characterize_isolated_build_installation.py",
+          "preview": "            \"filename\": \"academic_pipeline_mppg-0.1.0.tar.gz\",",
+          "text_sha256": "0dccaa8eb211e80a1ed7145da0e014a6f614050d64a1686c3f2add7ddb872c10",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 28,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/\"",
+          "text_sha256": "e96f4f532244e30e29e396869f55fe95aaa010c6b6920830c7b760c47956f282",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 108,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005a_consumer_dependency_inventory_contract.py\",",
+          "text_sha256": "cd71ef3003c8e1c8fcd7cc3ee5e9ed1b5d5c98466e7bf51dbf0c828a0447f90c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 109,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b2_prisma_adapter_batches_contract.py\",",
+          "text_sha256": "03ba8c65dcde28602f0dd93ff74f3435b69b685a2934e16f4d6602ed75455dd5",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 110,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b2_prisma_adapter_equivalence_characterization.py\",",
+          "text_sha256": "37070a69e0c5310d4ec9ce5fe4d4d150a5d211fc3304ea83bd7708f4e95f5680",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 111,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b_consumer_canonicalization_plan_contract.py\",",
+          "text_sha256": "85c0962ccc46458815a7d970207eaf6cb3a4d66d80606441661975c433ee89f2",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 112,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005b_consumer_contract_reclassification.py\",",
+          "text_sha256": "462dc59dde7f7776b3bbaa8ef72fe11ad252c524cca3fb8be2234eafb0f64f2c",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 113,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py\",",
+          "text_sha256": "cb5b29aca4f40bf450aaf7375949456e5256e9758c4d5fa9b0f8cc0bd6f533c3",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 114,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c2_stabilization_contract.py\",",
+          "text_sha256": "7b099db748c8d1a4307a9bedf4e9b9d01f13d0c23ff9828de60d5413ce47bc96",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 115,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c3_closure_contract.py\",",
+          "text_sha256": "01b4fff560c865fc81eb38cdd40e01b2d5acd9e9805566a2671fbe1a64d687ee",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 116,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_inventory_contract.py\",",
+          "text_sha256": "6d11fa0169ea0fca0b1056131f89fa2a46d2e48608fd0b30c47d5397c16046c2",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 117,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py\",",
+          "text_sha256": "6c83a3e44a261e17c87214f164bcbad3f450edcd4cbe3670c2aca7e92a61ceb6",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 118,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005d_facade_inventory_contract.py\",",
+          "text_sha256": "7fdae2c752a36a4d30c6cad4c28459b8f2426b5dacd9495a0b4429033c7e8f22",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 119,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005e1_installation_entrypoint_inventory_contract.py\",",
+          "text_sha256": "1686042935a5dc2fea29ced4f7332a6ce1cbae1352a33ebcd941de60394403cc",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 120,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005e2_isolated_build_installation_contract.py\",",
+          "text_sha256": "0fa2cb1cab13cc1eeeff27617f533399bb0e7eedf8fc41c16e11bd6e66ae964e",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 121,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "    \"software/academic_pipeline_rc10_7_conformidade/tests/characterization/test_ap005e3_distribution_corrections_contract.py\",",
+          "text_sha256": "21a2a02ce80d424548eb9c12e06007b47489b791a30c9d650cb3d47caab1e309",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 334,
+          "path": "tools/refactor/ap005f_validate_closure.py",
+          "preview": "`software/academic_pipeline_rc10_7_conformidade`. Essa eventual mudança",
+          "text_sha256": "6677f5cf4370118adc78128a0ad9ed2cd53ba2cbfd7e0cb0f150c0601c0b705e",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 58,
+          "path": "tools/refactor/ap006a_validate_scope.py",
+          "preview": "    assert destinations[\"software/academic_pipeline_mppg\"][\"collision\"] is False",
+          "text_sha256": "b134bc0f1f7407dc42dc13d271da06506d627c26c469cbefed0d5cbcbcd8b4f2",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 26,
+          "path": "tools/refactor/ap006b_validate_architecture.py",
+          "preview": "    assert architecture[\"selected_physical_target\"] == \"software/academic_pipeline_mppg\"",
+          "text_sha256": "ac4447539db2a8a76e7383e68c4f6f5dd479aede258d4648fef42b5d1306b86b",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 63,
+          "path": "tools/refactor/ap006b_validate_architecture.py",
+          "preview": "    assert \"software/academic_pipeline_mppg\" in target_text",
+          "text_sha256": "7913ad65060d82171ff60297838458414607e65428ed8d4ec07808708ed6e377",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 13,
+          "path": "tools/refactor/ap006c_validate_physical_materialization.py",
+          "preview": "OLD_REL = Path(\"software/academic_pipeline_rc10_7_conformidade\")",
+          "text_sha256": "820cff4fd9a893de841a4fc9b2092395655593ea4b801b604d71ce81fa91979f",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 14,
+          "path": "tools/refactor/ap006c_validate_physical_materialization.py",
+          "preview": "NEW_REL = Path(\"software/academic_pipeline_mppg\")",
+          "text_sha256": "35bb3905af425ad25d5f674e71eabc7548c914c78bd7225795fb67173b3269fa",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 11,
+          "path": "tools/refactor/ap006d1_validate_runtime_consumer_migration.py",
+          "preview": "OLD_NAME = \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "7328f12a231f507b30f2b0d76185ff089dfebe96b222bee3441c75dc26c76cc9",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 12,
+          "path": "tools/refactor/ap006d1_validate_runtime_consumer_migration.py",
+          "preview": "NEW_NAME = \"academic_pipeline_mppg\"",
+          "text_sha256": "2d75954a4bd488a6aac3dff8adc8d3932786c1df6718075cba852d40bf380561",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 10,
+          "path": "tools/refactor/ap006d2_validate_contract_validator_migration.py",
+          "preview": "OLD_NAME = \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "7328f12a231f507b30f2b0d76185ff089dfebe96b222bee3441c75dc26c76cc9",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 11,
+          "path": "tools/refactor/ap006d2_validate_contract_validator_migration.py",
+          "preview": "NEW_NAME = \"academic_pipeline_mppg\"",
+          "text_sha256": "2d75954a4bd488a6aac3dff8adc8d3932786c1df6718075cba852d40bf380561",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 32,
+          "path": "tools/refactor/ap006d2_validate_contract_validator_migration.py",
+          "preview": "    \"software/academic_pipeline_mppg/tests/characterization/test_ap006d2_contract_validator_migration.py\",",
+          "text_sha256": "e86da27b22c8a5ffdd988828ce9e25288c53676f5326bddda2096472e46442ae",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 8,
+          "path": "tools/refactor/ap006d3_validate_operational_source_migration.py",
+          "preview": "OLD_NAME = \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "7328f12a231f507b30f2b0d76185ff089dfebe96b222bee3441c75dc26c76cc9",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 9,
+          "path": "tools/refactor/ap006d3_validate_operational_source_migration.py",
+          "preview": "NEW_NAME = \"academic_pipeline_mppg\"",
+          "text_sha256": "2d75954a4bd488a6aac3dff8adc8d3932786c1df6718075cba852d40bf380561",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 72,
+          "path": "tools/refactor/ap006d4_validate_closure.py",
+          "preview": "    bridge = repo / \"software/academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "0145a5fb6c44af9844d9b1376c9f106d7c4f8f46f22f6e140df529ea2d165056",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 74,
+          "path": "tools/refactor/ap006d4_validate_closure.py",
+          "preview": "    assert os.readlink(bridge) == \"academic_pipeline_mppg\"",
+          "text_sha256": "f4afb8f463f60c0afe87d1de699e4e71a11968c2389d803bd96cca93f0177778",
+          "tokens": {
+            "academic_pipeline_mppg": 1
+          }
+        },
+        {
+          "classification": "canonical_test_or_validator",
+          "line": 6,
+          "path": "tools/refactor/ap006d4c_validate_cache_regeneration.py",
+          "preview": "OLD_ROOT = \"academic_pipeline_rc10_7_conformidade\"",
+          "text_sha256": "8fdbcb481589efce6871086473855b0de6ef5fa60008b55bb855187f851b7471",
+          "tokens": {
+            "academic_pipeline_rc10_7_conformidade": 1
+          }
+        }
+      ],
+      "classification_counts": {
+        "canonical_runtime_or_config": 30,
+        "canonical_test_or_validator": 121,
+        "explicit_backup_archive_component": 156,
+        "external_document_source": 8,
+        "external_operational_source": 7,
+        "historical_evidence": 37877,
+        "other_tracked_reference": 1,
+        "pathological_recursive_backup_evidence": 273,
+        "scan_deferred_component": 942
+      },
+      "contract_owned_paths_excluded": true,
+      "coverage_assertion": "sum(classification_counts) == matched_line_count",
+      "groups_are_disjoint": true,
+      "matched_line_count": 39415,
+      "matched_occurrence_count": 40724,
+      "recorded_candidate_path_count": 50,
+      "recorded_candidate_paths": [
+        "disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_1/atividade_1.org",
+        "disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_2/atividade_2.org",
+        "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_1/resumo_artigos_encontro_1/resumo_artigos_encontro_1.org",
+        "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_2/resumo_artigos_encontro_2/resumo_artigos_encontro_2.org",
+        "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_3/resumo_artigos_encontro_3/resumo_artigos_encontro_3.org",
+        "disciplinas/03_politicas_publicas-teorias_e_analises/src/encontro_4/resumo_artigos_encontro_4/resumo_artigos_encontro_4_v4.org",
+        "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/atividade_1/atividade_1.org",
+        "disciplinas/04_decisoes_baseadas_em_evidencia/atividades/atividade_2/atividade_2_cartao_reforma.org",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004e_compatibility_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005a_consumer_dependency_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005b2_prisma_adapter_batches_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005b_consumer_canonicalization_plan_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c3_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c_toml_capture_alias_semantics_characterization.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005f_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006c_physical_materialization.py",
+        "software/academic_pipeline_mppg/tools/refactor/ap004a_inventory_names.py",
+        "software/academic_pipeline_mppg/tools/refactor/ap004b_apply_module_file_names.py",
+        "software/academic_pipeline_mppg/tools/refactor/ap004b_inventory_modules.py",
+        "software/academic_pipeline_mppg/tools/refactor/ap004c_apply_internal_symbols.py",
+        "software/academic_pipeline_mppg/tools/refactor/ap004c_inventory_internal_symbols.py",
+        "tools/refactor/ap004d_apply_version_markers.py",
+        "tools/refactor/ap004d_inventory_version_markers.py",
+        "tools/refactor/ap004e_inventory_compatibility.py",
+        "tools/refactor/ap005a_inventory_consumers.py",
+        "tools/refactor/ap005b21_apply_prisma_core_adapters.py",
+        "tools/refactor/ap005b22_apply_prisma_configuration_adapters.py",
+        "tools/refactor/ap005b23_apply_prisma_execution_adapters.py",
+        "tools/refactor/ap005b24_apply_prisma_article_entrypoint_adapters.py",
+        "tools/refactor/ap005b2_plan_prisma_adapter_batches.py",
+        "tools/refactor/ap005b_plan_consumer_canonicalization.py",
+        "tools/refactor/ap005c1_apply_toml_capture_aliases.py",
+        "tools/refactor/ap005c2_validate_stabilization.py",
+        "tools/refactor/ap005c3_validate_closure.py",
+        "tools/refactor/ap005c_inventory_toml_capture_aliases.py",
+        "tools/refactor/ap005e1_inventory_installation_entrypoints.py",
+        "tools/refactor/ap005f_validate_closure.py",
+        "tools/refactor/ap006c_validate_physical_materialization.py",
+        "tools/refactor/ap006d1_validate_runtime_consumer_migration.py",
+        "tools/refactor/ap006d2_validate_contract_validator_migration.py",
+        "tools/refactor/ap006d3_validate_operational_source_migration.py",
+        "tools/refactor/ap006d4_validate_closure.py",
+        "tools/refactor/ap006d4c_validate_cache_regeneration.py"
+      ],
+      "token_occurrence_counts": {
+        "academic_pipeline_mppg": 271,
+        "academic_pipeline_rc10_7_conformidade": 40453
+      }
+    },
+    "scope_decision": {
+      "contract_artifact_count": 4,
+      "fallback_removal_phase": "AP-006F",
+      "neutral_uninstalled_import_failure": "expected_environment_observation_not_source_regression",
+      "next_gate": "isolated_build_install_console_and_subprocess_validation",
+      "persistent_installation_allowed": false,
+      "persistent_pth_allowed": false,
+      "productive_files_changed_in_ap006e1": 0
+    },
+    "source_commit": "aed79d72f6c26fabcdda00f25d058b32fdc3fd75",
+    "source_tree": "f4004337607e21e1ba89330928b4473ffd739dcd"
+  },
+  "inventory_fingerprint_sha256": "36be68ba900b7afe83f952290b5978816f62f3ef7bbdbce6c44faeea27068c9f",
+  "phase": "AP-006E.1",
+  "schema_version": 1,
+  "source_commit_date": "2026-07-20T21:56:15-03:00",
+  "status": "distribution_compatibility_baseline_materialized"
+}
