@@ -1,0 +1,71 @@
+{
+  "candidate_path_count": 12,
+  "candidate_paths": [
+    "docs/refactor/academic-pipeline/AP-006/AP-006E1_DISTRIBUTION_COMPATIBILITY_BASELINE.md",
+    "docs/refactor/academic-pipeline/AP-006/AP-006E3_CONSUMER_STABILIZATION.md",
+    "docs/refactor/academic-pipeline/AP-006/AP-006E5_CLOSURE_REPORT.md",
+    "docs/refactor/academic-pipeline/AP-006/ap006e1_distribution_compatibility_baseline.json",
+    "docs/refactor/academic-pipeline/AP-006/ap006e3_consumer_stabilization.json",
+    "docs/refactor/academic-pipeline/AP-006/ap006e5_closure.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap006e1_distribution_compatibility_baseline.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap006e3_consumer_stabilization.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap006e5_closure_contract.py",
+    "tools/refactor/ap006e1_validate_distribution_compatibility_baseline.py",
+    "tools/refactor/ap006e3_validate_consumer_stabilization.py",
+    "tools/refactor/ap006e5_validate_closure.py"
+  ],
+  "closure_artifact_count": 4,
+  "compatibility_bridge": {
+    "decision": "preserve_until_ap006f",
+    "path": "software/academic_pipeline_rc10_7_conformidade",
+    "target": "academic_pipeline_mppg"
+  },
+  "decision": "AP-006E is functionally and distributionally closed with no productive source change.",
+  "distribution_contract": {
+    "console": "academic-pipeline = academic_pipeline.cli:main",
+    "legacy_fallback": "academic_pipeline.legacy:run_legacy",
+    "name": "academic-pipeline-mppg",
+    "packages": [
+      "academic_pipeline",
+      "app_bundle"
+    ],
+    "python_requires": ">=3.11",
+    "version": "0.1.0"
+  },
+  "fallback_decision": "preserve_until_ap006f",
+  "next_phase": "AP-006F",
+  "phase": "AP-006E.5",
+  "predecessor_artifact_count": 8,
+  "productive_code_change_count": 0,
+  "publication_policy": {
+    "explicit_authorization_required": true,
+    "isolated_commit_required": true,
+    "validator_modes": [
+      "auto",
+      "precommit",
+      "postcommit"
+    ]
+  },
+  "source_commit": "aed79d72f6c26fabcdda00f25d058b32fdc3fd75",
+  "source_tree": "f4004337607e21e1ba89330928b4473ffd739dcd",
+  "status": "closed",
+  "validation": {
+    "baseline_passed": 626,
+    "baseline_xfailed": 3,
+    "candidate_main_passed": 628,
+    "candidate_total_passed": 631,
+    "candidate_xfailed": 3,
+    "console_help_rc": 0,
+    "delta_passed": 5,
+    "e4_log_path": "/home/gustavodetarso/Downloads/mppg-logs/ap006e4_validacao_integrada_comparativa_v8_20260721_002816.log",
+    "e4_log_sha256": "c0a66dce7182e0962b79bd5b01d64348395fd46a53d47898f37c660992fbe1a0",
+    "historical_isolated_passed": 3,
+    "legacy_physical_path_count": 0,
+    "master_parallel_path_count": 22,
+    "module_help_rc": 0,
+    "non_record_changed_member_count": 0,
+    "persistent_pth_created": 0,
+    "regression_count": 0,
+    "wheel_member_count": 110
+  }
+}
