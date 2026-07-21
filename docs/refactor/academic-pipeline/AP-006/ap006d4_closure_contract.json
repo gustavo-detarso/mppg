@@ -1,0 +1,147 @@
+{
+  "audit_evidence": {
+    "audit_log": "ap006d4_auditoria_encerramento_consolidado_20260720_171419.log",
+    "closure_fingerprint_sha256": "01c8d9cb717b7dae54608438c06a0a98591f65643e0a0b430c4dd9e6d7ef3dd8",
+    "commit_chain_fingerprint_sha256": "756c619b3c514ff62c5e24ff109350e4d407ca94bd46b22b23509fa3bf53f959"
+  },
+  "baseline": {
+    "master_head": "6adc5e7c6ce510a49eba13266eabfa227fbeae31",
+    "master_tree": "6822a3347ce2ddc771b2b8a965e8a1b9eb416b74",
+    "refactor_head": "22607eb7977ba3ea87efccbbbde350f3d24d12d6",
+    "refactor_tree": "01ed550415b66961cff4d6d08ce03dd4016e6855"
+  },
+  "constraints": {
+    "all_contract_validators_required": true,
+    "all_wave_commits_published": true,
+    "closure_is_declarative_only": true,
+    "commit_performed": false,
+    "compatibility_bridge_preserved": true,
+    "five_waves_required": true,
+    "integrated_suite_required": true,
+    "productive_code_modification_performed": false,
+    "push_performed": false
+  },
+  "decision": "close_ap006d4_after_five_verified_waves",
+  "fingerprint_sha256": "1449c5c8cdc01ec3c714cd1b30f8e3fba7d0b1fda2be482529e7882188b407c0",
+  "focused_contract_tests": {
+    "failed": 0,
+    "passed": 9
+  },
+  "integrated_suite": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 624,
+    "xfailed": 3,
+    "xpassed": 0
+  },
+  "next_gate": "ready_for_ap006d4_integrated_validation",
+  "phase": "AP-006D.4",
+  "schema_version": 1,
+  "status": "closure_materialized",
+  "validators": [
+    {
+      "key_assertions": {
+        "artifact_count": 7
+      },
+      "path": "tools/refactor/ap006d4b_validate_generated_el_preservation.py",
+      "status": "ok",
+      "wave": "AP-006D.4B"
+    },
+    {
+      "key_assertions": {
+        "exact_match_count": 4,
+        "pair_count": 4
+      },
+      "path": "tools/refactor/ap006d4c_validate_cache_regeneration.py",
+      "status": "ok",
+      "wave": "AP-006D.4C"
+    },
+    {
+      "key_assertions": {
+        "existence_sink_count": 0,
+        "pair_count": 4,
+        "read_sink_count": 0,
+        "serialization_sink_count": 4,
+        "total_row_count": 308
+      },
+      "path": "tools/refactor/ap006d4d_validate_source_csv_provenance.py",
+      "status": "ok",
+      "wave": "AP-006D.4D"
+    },
+    {
+      "key_assertions": {
+        "candidate_count": 177,
+        "productive_reference_count": 0
+      },
+      "path": "tools/refactor/ap006d4e_validate_backup_evidence_preservation.py",
+      "status": "ok",
+      "wave": "AP-006D.4E"
+    }
+  ],
+  "waves": [
+    {
+      "commit": "6adc5e7c6ce510a49eba13266eabfa227fbeae31",
+      "parent": "ef9acfd739274139637fae934c0c5dca4416728e",
+      "paths": {
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/README_rc10.md": "M",
+        "software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/SETUP_PIPENV.md": "M",
+        "software/academic_pipeline_rc10_7_conformidade/atualizar_academic_pipeline_bundle.py": "M"
+      },
+      "subject": "refactor(academic-pipeline): regenerar consumidores externos da AP-006D.4A",
+      "tree": "6822a3347ce2ddc771b2b8a965e8a1b9eb416b74",
+      "wave": "AP-006D.4A"
+    },
+    {
+      "commit": "1faa1fa6177be76987cdde5c78981ffbba624817",
+      "parent": "807bed567ea5e3dafcaa67026ad37dab6f74b1e2",
+      "paths": {
+        "docs/refactor/academic-pipeline/AP-006/AP-006D4B_GENERATED_EL_PRESERVATION.md": "A",
+        "docs/refactor/academic-pipeline/AP-006/ap006d4b_generated_el_preservation.json": "A",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d4b_generated_el_preservation.py": "A",
+        "tools/refactor/ap006d4b_validate_generated_el_preservation.py": "A"
+      },
+      "subject": "refactor(academic-pipeline): preservar artefatos gerados da AP-006D.4B",
+      "tree": "663565984ab3e96331c40c38774d2bed090ab417",
+      "wave": "AP-006D.4B"
+    },
+    {
+      "commit": "993f25adc435e70ed181d7f3c27454d4ea2941d1",
+      "parent": "1faa1fa6177be76987cdde5c78981ffbba624817",
+      "paths": {
+        "docs/refactor/academic-pipeline/AP-006/AP-006D4C_CACHE_REGENERATION_CONTRACT.md": "A",
+        "docs/refactor/academic-pipeline/AP-006/ap006d4c_cache_regeneration_contract.json": "A",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d4c_cache_regeneration_contract.py": "A",
+        "tools/refactor/ap006d4c_validate_cache_regeneration.py": "A"
+      },
+      "subject": "refactor(academic-pipeline): formalizar regeneração dos caches da AP-006D.4C",
+      "tree": "592dd79c3b186b7988741eb81451b748af493b07",
+      "wave": "AP-006D.4C"
+    },
+    {
+      "commit": "adfc6a617c71c818a6d69b70a4fa3e9dd2fdfa36",
+      "parent": "993f25adc435e70ed181d7f3c27454d4ea2941d1",
+      "paths": {
+        "docs/refactor/academic-pipeline/AP-006/AP-006D4D_SOURCE_CSV_PROVENANCE_CONTRACT.md": "A",
+        "docs/refactor/academic-pipeline/AP-006/ap006d4d_source_csv_provenance_contract.json": "A",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d4d_source_csv_provenance_contract.py": "A",
+        "tools/refactor/ap006d4d_validate_source_csv_provenance.py": "A"
+      },
+      "subject": "refactor(academic-pipeline): preservar proveniência source_csv na AP-006D.4D",
+      "tree": "9bf7e362fb63c7551a28bb10f8fce749d98e544c",
+      "wave": "AP-006D.4D"
+    },
+    {
+      "commit": "22607eb7977ba3ea87efccbbbde350f3d24d12d6",
+      "parent": "adfc6a617c71c818a6d69b70a4fa3e9dd2fdfa36",
+      "paths": {
+        "docs/refactor/academic-pipeline/AP-006/AP-006D4E_BACKUP_EVIDENCE_PRESERVATION_CONTRACT.md": "A",
+        "docs/refactor/academic-pipeline/AP-006/ap006d4e_backup_evidence_preservation_contract.json": "A",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py": "A",
+        "tools/refactor/ap006d4e_validate_backup_evidence_preservation.py": "A"
+      },
+      "subject": "refactor(academic-pipeline): preservar backups históricos na AP-006D.4E",
+      "tree": "01ed550415b66961cff4d6d08ce03dd4016e6855",
+      "wave": "AP-006D.4E"
+    }
+  ]
+}
