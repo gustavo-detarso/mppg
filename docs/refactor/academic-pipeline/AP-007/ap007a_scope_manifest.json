@@ -1,0 +1,95 @@
+{
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "canonical_root": "software/academic_pipeline_mppg",
+    "commit": "09ddc2a9a7b15a97a5d3f313a852dc47e78db2d5",
+    "origin": "git@github.com:gustavo-detarso/mppg.git",
+    "tree": "d032d5f652b5822110cab45f43fdf20fae6c0c6b"
+  },
+  "canonical_findings": {
+    "canonical_unique_pattern_lines": 47,
+    "migration_relevant_unique_lines": 21,
+    "operational_coupling_unique_lines": 20,
+    "productive_surfaces": 7,
+    "public_top_level_options": 63,
+    "raw_active_high_risk_occurrences": 94,
+    "raw_references_total": 7506
+  },
+  "decision": {
+    "closure_criteria": [
+      "cli.main não depende de run_legacy no caminho público normal",
+      "parser e handlers recebem argv explicitamente",
+      "nenhum dispatch público altera sys.argv",
+      "nenhum dispatch público insere caminho em sys.path",
+      "nenhum dispatch público importa academic_pipeline_rc10",
+      "globals()/locals() não são usados como container de dependências do runtime público",
+      "console instalado e python -m academic_pipeline apresentam paridade funcional",
+      "wheel funciona fora do checkout e sem PYTHONPATH herdado",
+      "comandos gerados pelo wizard usam o entrypoint público",
+      "scripts auxiliares não reentram pelo monólito histórico",
+      "run_legacy é removido ou reduzido a fallback residual explicitamente enumerado"
+    ],
+    "run_legacy_removal": "deferred_until_command_family_equivalence",
+    "runtime_context_rule": "RuntimeContext deve conter dependências explícitas e mínimas; não pode ser uma cópia tipada de globals()/locals().",
+    "status": "accepted_for_materialized_planning",
+    "strategy": "native_runtime_with_explicit_argv_and_enumerated_legacy_fallback",
+    "subphases": [
+      "AP-007A — inventário, depuração semântica e decisão arquitetural",
+      "AP-007B — contrato do runtime e do entrypoint nativo",
+      "AP-007C — comandos públicos de inspeção e configuração",
+      "AP-007D — fluxos operacionais em ondas internas pequenas",
+      "AP-007E — distribuição, isolamento e compatibilidade",
+      "AP-007F — decisão final sobre run_legacy, encerramento e publicação"
+    ]
+  },
+  "git_write_operations_authorized": [
+    "working_tree_materialization_only"
+  ],
+  "git_write_operations_not_authorized": [
+    "staging",
+    "commit",
+    "amend",
+    "tag",
+    "push"
+  ],
+  "materialized_paths": [
+    "docs/refactor/academic-pipeline/AP-007/AP-007A_ARCHITECTURAL_DECISION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007A_RUNTIME_LEGACY_CANONICAL_AUDIT.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007A_RUNTIME_LEGACY_RAW_EVIDENCE.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_canonical.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_canonical.tsv",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_scope_manifest.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007a_runtime_legacy_inventory_contract.py",
+    "tools/refactor/ap007a_validate_runtime_legacy_inventory.py"
+  ],
+  "phase": "AP-007A",
+  "primary_artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007A_ARCHITECTURAL_DECISION.md": "c76a1eb783b0687b7ffb0efed2e95f2cdba1dab4a6e9a4832a2a513113ad7ca4",
+    "docs/refactor/academic-pipeline/AP-007/AP-007A_RUNTIME_LEGACY_CANONICAL_AUDIT.md": "e02b7ddec2b78106bac661e2720408d0cd11a9607aa32c2b2c10bca4278bd98e",
+    "docs/refactor/academic-pipeline/AP-007/AP-007A_RUNTIME_LEGACY_RAW_EVIDENCE.md": "7878a953bf1c6e6b2d4b169d0ba25da70b763c8391458afd55f5d79268164923",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_canonical.json": "6956ddcaa1c480d6b06444477621b7abb449e0a0026fc2faa6846429b3d2fc4e",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json": "b2612edfad7bf38be62d498e942350c17a71a2f7cfe023503c2db320d927536e",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_canonical.tsv": "ed786e46eae532347188976b4df635572120d31d23a10b3e5141c25281668db1",
+    "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv": "3d58b0fdcdec0435b5bcef703eb50a8bde0d85a8a06e425160b4066ff94e5c30"
+  },
+  "raw_evidence_sha256": {
+    "json": "b2612edfad7bf38be62d498e942350c17a71a2f7cfe023503c2db320d927536e",
+    "markdown": "7878a953bf1c6e6b2d4b169d0ba25da70b763c8391458afd55f5d79268164923",
+    "tsv": "3d58b0fdcdec0435b5bcef703eb50a8bde0d85a8a06e425160b4066ff94e5c30"
+  },
+  "runtime_baseline_sha256_observed_not_frozen_for_descendants": {
+    "software/academic_pipeline_mppg/academic_pipeline/cli.py": "bbda5a88d1234f649bb6d171a14b75e51d03bf3d721d91656ad624912f26c2db",
+    "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py": "9255c4b924fd61b7120b8c5e02684d338f6788de42ae7c352b049a488a308afe",
+    "software/academic_pipeline_mppg/academic_pipeline/legacy.py": "f11ddffc30f60ac0c5e0856e8bf00ffaae866a8df806fd3c2b99f1afaa09e6b9",
+    "software/academic_pipeline_mppg/academic_pipeline/prisma_generic_orchestration.py": "56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py": "f385b32fed0445dde90a596440903a7c174e42eac2e1675251ddbd0ce516288f",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py": "9d627348fcdc3b9ec727abb3c2862eb26b11bbd1d1bc744958d892f9f4afa7f9",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/gerar_artigo_final_unificado.py": "3998f07129f915c72331f845c3ffe743661404ffbf6b5216a9fa9ff5d10150a9",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/pipeline_orchestrator.py": "ffe2780bac2b57acd8129829c63bd0cdb21297d28daf4f8b6e4f074a72d8552c"
+  },
+  "runtime_productive_files_modified": [],
+  "schema": "ap007a-scope-manifest-v1",
+  "status": "materialized_uncommitted"
+}
