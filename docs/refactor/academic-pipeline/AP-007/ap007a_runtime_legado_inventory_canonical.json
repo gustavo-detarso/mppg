@@ -1,0 +1,761 @@
+{
+  "architectural_decision": {
+    "closure_criteria": [
+      "cli.main não depende de run_legacy no caminho público normal",
+      "parser e handlers recebem argv explicitamente",
+      "nenhum dispatch público altera sys.argv",
+      "nenhum dispatch público insere caminho em sys.path",
+      "nenhum dispatch público importa academic_pipeline_rc10",
+      "globals()/locals() não são usados como container de dependências do runtime público",
+      "console instalado e python -m academic_pipeline apresentam paridade funcional",
+      "wheel funciona fora do checkout e sem PYTHONPATH herdado",
+      "comandos gerados pelo wizard usam o entrypoint público",
+      "scripts auxiliares não reentram pelo monólito histórico",
+      "run_legacy é removido ou reduzido a fallback residual explicitamente enumerado"
+    ],
+    "run_legacy_removal": "deferred_until_command_family_equivalence",
+    "runtime_context_rule": "RuntimeContext deve conter dependências explícitas e mínimas; não pode ser uma cópia tipada de globals()/locals().",
+    "status": "accepted_for_materialized_planning",
+    "strategy": "native_runtime_with_explicit_argv_and_enumerated_legacy_fallback",
+    "subphases": [
+      "AP-007A — inventário, depuração semântica e decisão arquitetural",
+      "AP-007B — contrato do runtime e do entrypoint nativo",
+      "AP-007C — comandos públicos de inspeção e configuração",
+      "AP-007D — fluxos operacionais em ondas internas pequenas",
+      "AP-007E — distribuição, isolamento e compatibilidade",
+      "AP-007F — decisão final sobre run_legacy, encerramento e publicação"
+    ]
+  },
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "canonical_root": "software/academic_pipeline_mppg",
+    "commit": "09ddc2a9a7b15a97a5d3f313a852dc47e78db2d5",
+    "origin": "git@github.com:gustavo-detarso/mppg.git",
+    "tree": "d032d5f652b5822110cab45f43fdf20fae6c0c6b"
+  },
+  "canonical_references": [
+    {
+      "column": 21,
+      "excerpt": "from .legacy import run_legacy",
+      "line": 7,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/cli.py",
+      "pattern": "run_legacy",
+      "raw_classification": "pública",
+      "reviewed_category": "public_entrypoint_bridge",
+      "reviewed_decision": "Migrar em AP-007B para coordenador nativo, preservando main(argv) -> int."
+    },
+    {
+      "column": 12,
+      "excerpt": "return run_legacy(argv)",
+      "line": 12,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/cli.py",
+      "pattern": "run_legacy",
+      "raw_classification": "pública",
+      "reviewed_category": "public_entrypoint_bridge",
+      "reviewed_decision": "Migrar em AP-007B para coordenador nativo, preservando main(argv) -> int."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:914-920",
+      "line": 22,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:922-928",
+      "line": 36,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:930-937",
+      "line": 50,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:939-946",
+      "line": 65,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:948-950",
+      "line": 80,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:952-967",
+      "line": 91,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:969-971",
+      "line": 115,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:973-978",
+      "line": 126,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:980-990",
+      "line": 140,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:992-1009",
+      "line": 159,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1011-1017",
+      "line": 184,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1045-1046",
+      "line": 199,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1047-1048",
+      "line": 209,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1050-1060",
+      "line": 219,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1062-1074",
+      "line": 238,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1076-1082",
+      "line": 259,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1084-1091",
+      "line": 274,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1093-1094",
+      "line": 290,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 43,
+      "excerpt": "# Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:1099-1139",
+      "line": 300,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Preservar como proveniência; não representa import ou dispatch legado."
+    },
+    {
+      "column": 23,
+      "excerpt": "LEGACY_MODULE_NAME = \"academic_pipeline_rc10\"",
+      "line": 20,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "active_compatibility_bridge",
+      "reviewed_decision": "Preservar como fallback enumerado até equivalência dos fluxos migrados."
+    },
+    {
+      "column": 14,
+      "excerpt": "module = importlib.import_module(LEGACY_MODULE_NAME)",
+      "line": 74,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "dynamic_import",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "active_compatibility_bridge",
+      "reviewed_decision": "Preservar como fallback enumerado até equivalência dos fluxos migrados."
+    },
+    {
+      "column": 5,
+      "excerpt": "def run_legacy(",
+      "line": 97,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "run_legacy",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "active_compatibility_bridge",
+      "reviewed_decision": "Preservar como fallback enumerado até equivalência dos fluxos migrados."
+    },
+    {
+      "column": 62,
+      "excerpt": "\"\"\"Executa o ``main`` legado preservando e restaurando ``sys.argv``.",
+      "line": 102,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "sys.argv",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "documentation_provenance",
+      "reviewed_decision": "Docstring da ponte; não é uma operação runtime autônoma."
+    },
+    {
+      "column": 21,
+      "excerpt": "original_argv = sys.argv[:]",
+      "line": 108,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "sys.argv",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "active_compatibility_bridge",
+      "reviewed_decision": "Preservar como fallback enumerado até equivalência dos fluxos migrados."
+    },
+    {
+      "column": 5,
+      "excerpt": "sys.argv = [program_name, *forwarded]",
+      "line": 112,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "sys.argv",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "active_compatibility_bridge",
+      "reviewed_decision": "Preservar como fallback enumerado até equivalência dos fluxos migrados."
+    },
+    {
+      "column": 18,
+      "excerpt": "result = module.main()",
+      "line": 115,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "module.main",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "active_compatibility_bridge",
+      "reviewed_decision": "Preservar como fallback enumerado até equivalência dos fluxos migrados."
+    },
+    {
+      "column": 9,
+      "excerpt": "sys.argv = original_argv",
+      "line": 117,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "pattern": "sys.argv",
+      "raw_classification": "compatibilidade ativa",
+      "reviewed_category": "active_compatibility_bridge",
+      "reviewed_decision": "Preservar como fallback enumerado até equivalência dos fluxos migrados."
+    },
+    {
+      "column": 26,
+      "excerpt": "original_argv = list(sys.argv[1:])",
+      "line": 760,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/prisma_generic_orchestration.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_sys_argv_reentry",
+      "reviewed_decision": "Substituir reentrada por argv explícito na onda PRISMA."
+    },
+    {
+      "column": 20,
+      "excerpt": "old_argv = sys.argv[:]",
+      "line": 772,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/prisma_generic_orchestration.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_sys_argv_reentry",
+      "reviewed_decision": "Substituir reentrada por argv explícito na onda PRISMA."
+    },
+    {
+      "column": 9,
+      "excerpt": "sys.argv = [sys.argv[0]] + _prisma_artigo_generico_strip(original_argv)",
+      "line": 773,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/prisma_generic_orchestration.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_sys_argv_reentry",
+      "reviewed_decision": "Substituir reentrada por argv explícito na onda PRISMA."
+    },
+    {
+      "column": 13,
+      "excerpt": "sys.argv = old_argv",
+      "line": 777,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/academic_pipeline/prisma_generic_orchestration.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_sys_argv_reentry",
+      "reviewed_decision": "Substituir reentrada por argv explícito na onda PRISMA."
+    },
+    {
+      "column": 3,
+      "excerpt": "``academic_pipeline_rc10.py --gui``. A interface é uma GUI nativa em Tkinter:",
+      "line": 6,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_gui.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "documentation_provenance",
+      "reviewed_decision": "Atualizar documentação somente quando o shell histórico deixar de ser suportado."
+    },
+    {
+      "column": 31,
+      "excerpt": "lines.append(f\"# Uso: academic_pipeline_rc10.py --config {data['config_path']} --somente-renderizar --document-json {data.get('document_json', '')}\")",
+      "line": 3671,
+      "migration_relevant": true,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "generated_legacy_usage",
+      "reviewed_decision": "Atualizar instrução gerada após definição do entrypoint nativo."
+    },
+    {
+      "column": 78,
+      "excerpt": "command_lines.append(f\"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --somente-renderizar --document-json {doc_json}\")",
+      "line": 4220,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "generated_legacy_command",
+      "reviewed_decision": "Migrar comando gerado para academic-pipeline ou python -m academic_pipeline."
+    },
+    {
+      "column": 78,
+      "excerpt": "command_lines.append(f\"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli}\")",
+      "line": 4222,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "generated_legacy_command",
+      "reviewed_decision": "Migrar comando gerado para academic-pipeline ou python -m academic_pipeline."
+    },
+    {
+      "column": 7,
+      "excerpt": "``academic_pipeline_rc10.py --init-toml`` importa e chama",
+      "line": 4775,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "documentation_provenance",
+      "reviewed_decision": "Comentário ou docstring; sem acoplamento operacional direto."
+    },
+    {
+      "column": 26,
+      "excerpt": "# necessariamente em sys.argv do módulo do wizard.",
+      "line": 4785,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "documentation_provenance",
+      "reviewed_decision": "Comentário ou docstring; sem acoplamento operacional direto."
+    },
+    {
+      "column": 19,
+      "excerpt": "# Importação pelo academic_pipeline_rc10.py passa a receber esta função.",
+      "line": 4844,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "documentation_provenance",
+      "reviewed_decision": "Comentário ou docstring; sem acoplamento operacional direto."
+    },
+    {
+      "column": 13,
+      "excerpt": "__import__(\"dotenv\" if mod == \"dotenv\" else mod)",
+      "line": 158,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/diagnostics.py",
+      "pattern": "dynamic_import",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "unrelated_dependency_probe",
+      "reviewed_decision": "Import dinâmico deliberado para diagnóstico de dependências; fora do débito legado."
+    },
+    {
+      "column": 16,
+      "excerpt": "old_argv = sys.argv[:]",
+      "line": 61,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/gerar_artigo_final_unificado.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_dynamic_reentry",
+      "reviewed_decision": "Migrar adaptador auxiliar para chamada nativa com argv explícito."
+    },
+    {
+      "column": 9,
+      "excerpt": "sys.argv = [module_name.rsplit(\".\", 1)[-1] + \".py\"] + argv",
+      "line": 64,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/gerar_artigo_final_unificado.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_dynamic_reentry",
+      "reviewed_decision": "Migrar adaptador auxiliar para chamada nativa com argv explícito."
+    },
+    {
+      "column": 19,
+      "excerpt": "mod = importlib.import_module(module_name)",
+      "line": 68,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/gerar_artigo_final_unificado.py",
+      "pattern": "dynamic_import",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_dynamic_reentry",
+      "reviewed_decision": "Migrar adaptador auxiliar para chamada nativa com argv explícito."
+    },
+    {
+      "column": 9,
+      "excerpt": "sys.argv = old_argv",
+      "line": 81,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/gerar_artigo_final_unificado.py",
+      "pattern": "sys.argv",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "internal_dynamic_reentry",
+      "reviewed_decision": "Migrar adaptador auxiliar para chamada nativa com argv explícito."
+    },
+    {
+      "column": 31,
+      "excerpt": "# Alias canônico AP-004B para academic_pipeline_rc10.py.",
+      "line": 2,
+      "migration_relevant": false,
+      "operational_coupling": false,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "provenance_comment",
+      "reviewed_decision": "Comentário de proveniência do alias."
+    },
+    {
+      "column": 6,
+      "excerpt": "'academic_pipeline_rc10.py'",
+      "line": 10,
+      "migration_relevant": true,
+      "operational_coupling": true,
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "pattern": "academic_pipeline_rc10",
+      "raw_classification": "produtiva interna",
+      "reviewed_category": "legacy_alias_consumer",
+      "reviewed_decision": "Inverter o alias para o runtime nativo ou remover após migração dos consumidores."
+    }
+  ],
+  "implicit_context_evidence": {
+    "ast_import_entries": 231,
+    "decision": "O débito central não é apenas legacy.py; o orquestrador histórico ainda funciona como container implícito de dependências.",
+    "functions_declared": 50,
+    "globals_calls_in_pipeline_core": 39,
+    "globals_calls_total": 84,
+    "locals_calls_in_pipeline_core": 39,
+    "locals_calls_total": 84,
+    "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+  },
+  "materialization_scope": {
+    "allowed_artifact_classes": [
+      "raw_evidence_copy",
+      "canonical_reviewed_inventory",
+      "architectural_decision",
+      "scope_manifest",
+      "characterization_contract",
+      "read_only_validator"
+    ],
+    "runtime_productive_files_modified": []
+  },
+  "phase": "AP-007A",
+  "productive_surfaces": [
+    {
+      "current_role": "entrypoint público delega integralmente a run_legacy",
+      "id": "public_entrypoint_bridge",
+      "path": "software/academic_pipeline_mppg/academic_pipeline/cli.py",
+      "target_phase": "AP-007B"
+    },
+    {
+      "current_role": "sys.path + import dinâmico + sys.argv + module.main",
+      "id": "compatibility_adapter",
+      "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+      "target_phase": "AP-007B/AP-007F"
+    },
+    {
+      "current_role": "container implícito de dependências por globals()/locals()",
+      "id": "implicit_runtime_context_container",
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py",
+      "target_phase": "AP-007B/AP-007D"
+    },
+    {
+      "current_role": "reentrada PRISMA por mutação temporária de sys.argv",
+      "id": "prisma_sys_argv_reentry",
+      "path": "software/academic_pipeline_mppg/academic_pipeline/prisma_generic_orchestration.py",
+      "target_phase": "AP-007D.3"
+    },
+    {
+      "current_role": "gera comandos que apontam ao script histórico",
+      "id": "generated_legacy_commands",
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+      "target_phase": "AP-007D.4"
+    },
+    {
+      "current_role": "import dinâmico e mutação de sys.argv em adaptador auxiliar",
+      "id": "unified_script_dynamic_reentry",
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/gerar_artigo_final_unificado.py",
+      "target_phase": "AP-007D.4"
+    },
+    {
+      "current_role": "alias aponta diretamente ao arquivo histórico",
+      "id": "legacy_alias",
+      "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/pipeline_orchestrator.py",
+      "target_phase": "AP-007D.4/AP-007F"
+    }
+  ],
+  "provenance": {
+    "raw_files": {
+      "inventory_json": {
+        "name": "ap007a_runtime_legado_inventory_raw.json",
+        "sha256": "b2612edfad7bf38be62d498e942350c17a71a2f7cfe023503c2db320d927536e"
+      },
+      "preliminary_markdown": {
+        "name": "AP-007A_RUNTIME_LEGACY_RAW_EVIDENCE.md",
+        "sha256": "7878a953bf1c6e6b2d4b169d0ba25da70b763c8391458afd55f5d79268164923"
+      },
+      "references_tsv": {
+        "name": "ap007a_runtime_legado_references_raw.tsv",
+        "sha256": "3d58b0fdcdec0435b5bcef703eb50a8bde0d85a8a06e425160b4066ff94e5c30"
+      }
+    },
+    "raw_schema": "ap007a-runtime-legacy-inventory-v1",
+    "review_type": "human_semantic_correction_over_preserved_raw_inventory"
+  },
+  "public_cli_contract": {
+    "all_options_discovered_across_parsers": 138,
+    "auxiliary_or_internal_options": 75,
+    "excluded_false_public_candidate": "--list-profiles",
+    "first_native_migration_wave": [
+      "--help",
+      "--list-toml-profiles",
+      "--list-institutions",
+      "--list-layouts",
+      "--explain-profile"
+    ],
+    "implicit_argparse_help_options": 1,
+    "top_level_explicit_options": 62,
+    "top_level_public_options_total": 63
+  },
+  "raw_summary": {
+    "by_classification": {
+      "compatibilidade ativa": 8,
+      "histórica": 7255,
+      "produtiva interna": 84,
+      "pública": 2,
+      "teste/contrato": 157
+    },
+    "by_pattern": {
+      "academic_pipeline.legacy": 49,
+      "academic_pipeline_rc10": 7189,
+      "dynamic_import": 93,
+      "module.main": 3,
+      "run_legacy": 79,
+      "sys.argv": 93
+    },
+    "by_risk": {
+      "alto": 94,
+      "baixo": 7412
+    },
+    "commands_discovered": 138,
+    "entrypoint_related": 61,
+    "parse_errors": 0,
+    "python_files_parsed": 137,
+    "read_skipped": 1,
+    "references_active": 94,
+    "references_total": 7506
+  },
+  "runtime_baseline_sha256": {
+    "software/academic_pipeline_mppg/academic_pipeline/cli.py": "bbda5a88d1234f649bb6d171a14b75e51d03bf3d721d91656ad624912f26c2db",
+    "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py": "9255c4b924fd61b7120b8c5e02684d338f6788de42ae7c352b049a488a308afe",
+    "software/academic_pipeline_mppg/academic_pipeline/legacy.py": "f11ddffc30f60ac0c5e0856e8bf00ffaae866a8df806fd3c2b99f1afaa09e6b9",
+    "software/academic_pipeline_mppg/academic_pipeline/prisma_generic_orchestration.py": "56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py": "f385b32fed0445dde90a596440903a7c174e42eac2e1675251ddbd0ce516288f",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py": "9d627348fcdc3b9ec727abb3c2862eb26b11bbd1d1bc744958d892f9f4afa7f9",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/gerar_artigo_final_unificado.py": "3998f07129f915c72331f845c3ffe743661404ffbf6b5216a9fa9ff5d10150a9",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/pipeline_orchestrator.py": "ffe2780bac2b57acd8129829c63bd0cdb21297d28daf4f8b6e4f074a72d8552c"
+  },
+  "schema": "ap007a-runtime-legacy-canonical-inventory-v1",
+  "semantic_partition": {
+    "canonical_tree_raw_occurrences": 48,
+    "canonical_tree_unique_pattern_lines": 47,
+    "category_unique_line_counts": {
+      "active_compatibility_bridge": 7,
+      "documentation_provenance": 5,
+      "generated_legacy_command": 2,
+      "generated_legacy_usage": 1,
+      "internal_dynamic_reentry": 4,
+      "internal_sys_argv_reentry": 4,
+      "legacy_alias_consumer": 1,
+      "provenance_comment": 20,
+      "public_entrypoint_bridge": 2,
+      "unrelated_dependency_probe": 1
+    },
+    "excluded_backup_or_patch_backup_occurrences": 37,
+    "excluded_old_parallel_tree_occurrences": 9,
+    "migration_relevant_unique_lines": 21,
+    "operational_coupling_unique_lines": 20,
+    "raw_active_high_risk_occurrences": 94
+  }
+}
