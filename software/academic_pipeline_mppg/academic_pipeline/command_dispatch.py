@@ -22,10 +22,10 @@ def dispatch_stage_001(
     # Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:914-920
     if args.gui:
         if __package__:
-            from .academic_pipeline_gui import run_gui
+            from app_bundle.scripts.pipeline.academic_pipeline_gui import run_gui
         else:
-            from academic_pipeline_gui import run_gui
-        return DispatchResult(True, runtime['run_gui']())
+            from app_bundle.scripts.pipeline.academic_pipeline_gui import run_gui
+        return DispatchResult(True, run_gui())
     return _not_handled()
 
 
@@ -36,10 +36,10 @@ def dispatch_stage_002(
     # Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:922-928
     if args.tui:
         if __package__:
-            from .academic_pipeline_tui import run_tui
+            from app_bundle.scripts.pipeline.academic_pipeline_tui import run_tui
         else:
-            from academic_pipeline_tui import run_tui
-        return DispatchResult(True, runtime['run_tui'](no_clear=bool(args.no_clear)))
+            from app_bundle.scripts.pipeline.academic_pipeline_tui import run_tui
+        return DispatchResult(True, run_tui(no_clear=bool(args.no_clear)))
     return _not_handled()
 
 
@@ -50,10 +50,10 @@ def dispatch_stage_003(
     # Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:930-937
     if args.list_toml_profiles:
         if __package__:
-            from .academic_pipeline_toml_generator_interativo import print_profiles
+            from app_bundle.scripts.pipeline.academic_pipeline_toml_generator_interativo import print_profiles
         else:
-            from academic_pipeline_toml_generator_interativo import print_profiles
-        runtime['print_profiles']()
+            from app_bundle.scripts.pipeline.academic_pipeline_toml_generator_interativo import print_profiles
+        print_profiles()
         return DispatchResult(True, 0)
     return _not_handled()
 
@@ -65,10 +65,10 @@ def dispatch_stage_004(
     # Origem: app_bundle/scripts/pipeline/academic_pipeline_rc10.py:939-946
     if args.init_toml:
         if __package__:
-            from .academic_pipeline_toml_generator_interativo import generate_interactive
+            from app_bundle.scripts.pipeline.academic_pipeline_toml_generator_interativo import generate_interactive
         else:
-            from academic_pipeline_toml_generator_interativo import generate_interactive
-        runtime['generate_interactive'](non_interactive_profile=args.toml_profile or None, no_clear=bool(args.no_clear))
+            from app_bundle.scripts.pipeline.academic_pipeline_toml_generator_interativo import generate_interactive
+        generate_interactive(non_interactive_profile=args.toml_profile or None, no_clear=bool(args.no_clear))
         return DispatchResult(True, 0)
     return _not_handled()
 
