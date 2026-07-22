@@ -1,0 +1,247 @@
+{
+  "schema": "ap006f1-dependency-decision-matrix-v1",
+  "phase": "AP-006F.1",
+  "generated_at": "2026-07-21T14:17:41.094427+00:00",
+  "baseline": {
+    "commit": "4db60736cfb4d2be53af32babdcdbfed84c3e6b4",
+    "tree": "6f87372df000f07ea23cb6dfc3250989eef849cb",
+    "branch": "ap-refactor/04-consumer-canonicalization"
+  },
+  "ap006f0_evidence": {
+    "gate": "PASS",
+    "schema": "ap006f0-final-dependency-audit-v1",
+    "fingerprints": {
+      "json": {
+        "name": "ap006f0_auditoria_final_dependencias_20260721_111633.json",
+        "sha256": "677b1dd3e4d858b066a40254034aa5b7fab82410796bba3a8d10efffa85f30f6",
+        "size": 38310334
+      },
+      "report": {
+        "name": "ap006f0_auditoria_final_dependencias_20260721_111633.md",
+        "sha256": "5738973ba0bf48d8e8f79e3ed0d425415f00dbbaa441e2e96f5e44144265dbf3",
+        "size": 3973
+      },
+      "log": {
+        "name": "ap006f0_auditoria_final_dependencias_20260721_111633.log",
+        "sha256": "7a36b34aaa1a551ea05c570291b313819eabd1cf3486623e07a2197461f2dca4",
+        "size": 19678999
+      }
+    },
+    "occurrence_summary": {
+      "total": 61549,
+      "by_class": {
+        "compatibility_contract": 1,
+        "explicit_backup_archive_component": 681,
+        "generated_output_or_snapshot": 287,
+        "historical_documentation": 58945,
+        "historical_refactor_tool": 257,
+        "manual_review_required": 887,
+        "productive_runtime_consumer": 309,
+        "test_or_validator_contract": 182
+      },
+      "by_pattern": {
+        "legacy_callable": 53,
+        "legacy_main_wrapper": 9801,
+        "legacy_module": 38,
+        "legacy_physical_name": 39399,
+        "legacy_toml_wrapper": 775,
+        "physical_script_path": 11483
+      },
+      "by_dependency": {
+        "direct_wrapper_or_physical_script": 22059,
+        "python_fallback_contract": 91,
+        "textual_legacy_path": 39399
+      }
+    },
+    "review": {
+      "active_occurrence_count": 310,
+      "active_unique_path_count": 44,
+      "active_by_pattern": {
+        "legacy_callable": 3,
+        "legacy_main_wrapper": 59,
+        "legacy_physical_name": 176,
+        "legacy_toml_wrapper": 15,
+        "physical_script_path": 57
+      },
+      "active_by_class": {
+        "compatibility_contract": 1,
+        "productive_runtime_consumer": 309
+      },
+      "wheel_reproducibility": {
+        "published_ap006e_sha256": "fafbdd3d473220cf6d89e25a5e4cd077c78174293dbf097a7edac064ff9245ba",
+        "ap006f0_sha256": "1ae2ad753dc3426ddad603dba6759873b198dde02139ea0704fb55ff9570db46",
+        "published_size": 641807,
+        "ap006f0_size": 641807,
+        "raw_hash_matches": false,
+        "interpretation": "raw wheel hash differs while size and member count remain stable; compare normalized member payloads before inferring a semantic difference"
+      },
+      "f0_warning_disposition": {
+        "count": 1,
+        "backup_ast_warning_count": 1,
+        "decision": "non_blocking_explicit_backup_archive_evidence",
+        "rationale": "o arquivo com AST inválida está sob backups/ e não integra o runtime produtivo"
+      }
+    },
+    "wheel": {
+      "filename": "academic_pipeline_mppg-0.1.0-py3-none-any.whl",
+      "size": 641807,
+      "sha256": "1ae2ad753dc3426ddad603dba6759873b198dde02139ea0704fb55ff9570db46",
+      "published_ap006e_sha256": "fafbdd3d473220cf6d89e25a5e4cd077c78174293dbf097a7edac064ff9245ba",
+      "raw_hash_matches_published": false,
+      "members": 110,
+      "legacy_members": [],
+      "pth_found": []
+    }
+  },
+  "active_runtime_chain": {
+    "console": "academic-pipeline",
+    "entrypoint": "academic_pipeline.cli:main",
+    "cli_imports": [
+      "__future__:annotations",
+      "collections.abc:Sequence",
+      "legacy:run_legacy"
+    ],
+    "cli_calls": [
+      "run_legacy"
+    ],
+    "legacy_functions": [
+      "_same_path(entry, target)",
+      "ensure_legacy_path()",
+      "load_legacy_module()",
+      "_normalize_return_code(value)",
+      "run_legacy(argv)"
+    ],
+    "module_entrypoint_imports": [
+      "__future__:annotations",
+      "cli:main"
+    ],
+    "conclusion": "run_legacy_is_active_adapter_not_dead_fallback"
+  },
+  "decisions": [
+    {
+      "surface": "bridge_symlink",
+      "decision": "preserve_pending_ap006f2_no_bridge_trial",
+      "finality": "provisional",
+      "reason": "há 176 referências textuais ativas classificadas pela AP-006F.0; a independência da árvore-fonte ainda não foi provada",
+      "ap006f2_requirement": "remover somente a ponte em árvore descartável e comparar source tree, recursos, TOML, PRISMA, wrappers e suíte distributiva"
+    },
+    {
+      "surface": "academic_pipeline.legacy:run_legacy",
+      "decision": "preserve_as_active_runtime_adapter_pending_replacement_trial",
+      "finality": "provisional",
+      "reason": "o console público aponta para academic_pipeline.cli:main e cli.main importa e chama run_legacy",
+      "ap006f2_requirement": "não testar mera exclusão; testar uma implementação canônica substituta que preserve console, python -m, argumentos e códigos de saída"
+    },
+    {
+      "surface": "legacy_internal_helpers",
+      "decision": "decide_with_run_legacy_implementation",
+      "finality": "provisional",
+      "reason": "ensure_legacy_path e load_legacy_module são detalhes internos do adaptador ativo e não constituem contrato público independente",
+      "ap006f2_requirement": "comparar comportamento do adaptador atual com a implementação canônica candidata"
+    },
+    {
+      "surface": "console_entrypoint",
+      "decision": "retain_public_contract_academic_pipeline_cli_main",
+      "finality": "final_public_contract",
+      "reason": "o nome do console e o alvo público estão estabilizados pelo pyproject e pelo wheel",
+      "ap006f2_requirement": "validar o console instalado em todas as variantes sem alterar o nome público"
+    },
+    {
+      "surface": "python_module_entrypoint",
+      "decision": "retain_python_m_academic_pipeline_contract",
+      "finality": "final_public_contract",
+      "reason": "__main__.py delega ao mesmo main público e deve permanecer funcional",
+      "ap006f2_requirement": "executar --help e fluxo representativo em ambiente instalado"
+    },
+    {
+      "surface": "historical_wrappers",
+      "decision": "classify_individually_no_bulk_removal",
+      "finality": "provisional",
+      "reason": "o inventário contém mistura de wrappers executáveis, contratos históricos, ferramentas e saídas geradas",
+      "ap006f2_requirement": "testar diretamente apenas wrappers operacionais e preservar artefatos históricos deliberados"
+    },
+    {
+      "surface": "public_packages",
+      "decision": "retain_academic_pipeline_and_app_bundle",
+      "finality": "final_public_contract",
+      "reason": "ambos os pacotes estão presentes no wheel e compõem a superfície distributiva publicada",
+      "ap006f2_requirement": "confirmar imports vindos do purelib sem .pth"
+    },
+    {
+      "surface": "resource_resolution",
+      "decision": "defer_bridge_decision_until_targeted_trial",
+      "finality": "provisional",
+      "reason": "a AP-006F.0 identificou consumidores de resolução de recursos que exigem ensaio dirigido",
+      "ap006f2_requirement": "verificar instituições, templates, prompts, misc e recursos empacotados"
+    },
+    {
+      "surface": "toml_projects",
+      "decision": "defer_until_representative_project_trials",
+      "finality": "provisional",
+      "reason": "projetos TOML podem conter caminhos físicos e wrappers históricos",
+      "ap006f2_requirement": "executar amostra representativa em baseline e variantes descartáveis"
+    },
+    {
+      "surface": "prisma_flows",
+      "decision": "defer_until_representative_prisma_trial",
+      "finality": "provisional",
+      "reason": "fluxos PRISMA possuem dependências de recursos, projetos e scripts que não podem ser decididas apenas por busca textual",
+      "ap006f2_requirement": "executar fluxo PRISMA representativo sem rede e com dados locais controlados"
+    },
+    {
+      "surface": "wheel_build",
+      "decision": "wheel_independent_of_bridge_but_not_sufficient_for_source_decision",
+      "finality": "final_evidence_interpretation",
+      "reason": "o wheel possui 110 membros, zero caminhos físicos legados e nenhum .pth; o hash bruto da AP-006F.0 difere do hash publicado na AP-006E apesar do mesmo tamanho, o que exige comparação normalizada antes de inferir diferença semântica",
+      "ap006f2_requirement": "reconstruir em árvore separada e comparar manifesto normalizado de membros e SHA-256 por arquivo, sem usar apenas o hash bruto do ZIP"
+    }
+  ],
+  "ap006f2_trial_plan": [
+    {
+      "variant": "V0_baseline",
+      "bridge": "present",
+      "runtime_adapter": "current_run_legacy",
+      "purpose": "controle positivo e captura de resultados de referência"
+    },
+    {
+      "variant": "V1_no_bridge",
+      "bridge": "removed_in_disposable_tree_only",
+      "runtime_adapter": "current_run_legacy",
+      "purpose": "decidir a ponte isoladamente sem misturar alteração do fallback"
+    },
+    {
+      "variant": "V2_canonical_runtime_adapter",
+      "bridge": "present",
+      "runtime_adapter": "canonical_candidate_without_academic_pipeline.legacy_public_dependency",
+      "purpose": "decidir a substituição do adaptador separadamente da ponte"
+    },
+    {
+      "variant": "V3_no_bridge_plus_canonical_adapter",
+      "bridge": "removed_in_disposable_tree_only",
+      "runtime_adapter": "canonical_candidate",
+      "purpose": "comprovar a topologia terminal combinada somente após V1 e V2"
+    }
+  ],
+  "gates": {
+    "ap006f2": "PASS",
+    "conditions": [
+      "AP-006F.0 gate is PASS",
+      "bridge and runtime adapter remain unmodified in AP-006F.1",
+      "four AP-006F.1 contract artifacts validate",
+      "master 22 parallel paths remain byte-identical",
+      "real staging remains empty"
+    ],
+    "prohibitions": [
+      "no bridge removal in AP-006F.1",
+      "no fallback deletion in AP-006F.1",
+      "no productive code modification in AP-006F.1",
+      "no staging, commit, amend or push"
+    ]
+  },
+  "artifact_paths": [
+    "docs/refactor/academic-pipeline/AP-006/AP-006F1_DEPENDENCY_DECISION_MATRIX.md",
+    "docs/refactor/academic-pipeline/AP-006/ap006f1_dependency_decision_matrix.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap006f1_dependency_decision_matrix_contract.py",
+    "tools/refactor/ap006f1_validate_dependency_decision_matrix.py"
+  ]
+}

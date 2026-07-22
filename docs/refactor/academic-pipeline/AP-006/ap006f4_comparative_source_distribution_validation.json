@@ -1,0 +1,94 @@
+{
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "head": "4db60736cfb4d2be53af32babdcdbfed84c3e6b4",
+    "origin": "git@github.com:gustavo-detarso/mppg.git",
+    "tree": "6f87372df000f07ea23cb6dfc3250989eef849cb",
+    "upstream": "origin/ap-refactor/04-consumer-canonicalization"
+  },
+  "constraints": {
+    "commit_without_authorization": false,
+    "publish_without_authorization": false,
+    "run_legacy_preserved": true,
+    "stage_without_authorization": false
+  },
+  "decision": "approve_source_distribution_parity_after_bridge_removal_and_dispatch_repair",
+  "evidence": {
+    "v5": {
+      "file": "ap006f4_revalidacao_integrada_comparativa_v5_20260721_185935.log",
+      "scope": "wheel_member_parity_functional_comparison_and_current_suite",
+      "sha256": "1a16d9a5528d70adc8f879a1d65471cc380aa99bf03eec65c5fbe0d5650aa335"
+    },
+    "v6": {
+      "file": "ap006f4_conclusao_historica_python_canonico_v6_20260721_191039.log",
+      "scope": "canonical_python_historical_contract_completion",
+      "sha256": "091e67b58d9fe5d88c55066723afc9cb34ead840d94df4aafe56fd851bee7661"
+    }
+  },
+  "functional_comparison": {
+    "config_resource_class": "packaged_example",
+    "cwd_import_semantics": "native",
+    "operations": [
+      "list_institutions",
+      "list_layouts",
+      "list_toml_profiles"
+    ],
+    "sanitized_subprocess": "pass",
+    "status": "source_equals_installed_wheel"
+  },
+  "gate_ap006f5": "PASS",
+  "historical_contract_policy": {
+    "environment": {
+      "consistent": true,
+      "distribution_metadata_present": false,
+      "neutral_import": false
+    },
+    "model": "clean_head_with_canonical_python",
+    "snapshot": "clean_head_with_bridge"
+  },
+  "integrity": {
+    "errors": 0,
+    "master_parallel_paths": 22,
+    "master_snapshot_sha256": "f12b966a7c3e33ea3d1274219529cdb4db58454769fe8448bf1b6c820f318449",
+    "persistent_pth": "unchanged",
+    "staging": "empty"
+  },
+  "materialized_state": {
+    "bridge": "removed",
+    "canonical_root": "software/academic_pipeline_mppg",
+    "command_dispatch_sha256": "9255c4b924fd61b7120b8c5e02684d338f6788de42ae7c352b049a488a308afe",
+    "dispatch_import_repair_sites": 8,
+    "dispatch_runtime_call_repair_sites": 4,
+    "fallback": "preserved_active_run_legacy"
+  },
+  "phase": "AP-006F.4",
+  "status": "comparative_source_distribution_validation_complete",
+  "test_results": {
+    "current_nonhistorical": {
+      "passed": 603,
+      "xfailed": 3
+    },
+    "focused": {
+      "passed": 95,
+      "xfailed": 1
+    },
+    "historical": {
+      "passed": 33
+    },
+    "logical": {
+      "passed": 636,
+      "xfailed": 3
+    }
+  },
+  "wheel_comparison": {
+    "authorized_changed_members": [
+      "academic_pipeline/command_dispatch.py",
+      "academic_pipeline_mppg-0.1.0.dist-info/RECORD",
+      "academic_pipeline_mppg-0.1.0.dist-info/WHEEL (optional backend metadata)"
+    ],
+    "baseline": "rebuilt_from_head_canonical",
+    "candidate": "same_head_with_command_dispatch_overlay",
+    "member_count": 110,
+    "status": "approved"
+  }
+}

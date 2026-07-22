@@ -1,0 +1,201 @@
+{
+  "baseline": {
+    "master_branch": "master",
+    "master_divergence": "0\t0",
+    "master_head": "6adc5e7c6ce510a49eba13266eabfa227fbeae31",
+    "master_origin": "git@github.com:gustavo-detarso/mppg.git",
+    "master_tree": "6822a3347ce2ddc771b2b8a965e8a1b9eb416b74",
+    "master_upstream": "origin/master",
+    "repo_branch": "ap-refactor/04-consumer-canonicalization",
+    "repo_divergence": "0\t0",
+    "repo_head": "4db60736cfb4d2be53af32babdcdbfed84c3e6b4",
+    "repo_origin": "git@github.com:gustavo-detarso/mppg.git",
+    "repo_tree": "6f87372df000f07ea23cb6dfc3250989eef849cb",
+    "repo_upstream": "origin/ap-refactor/04-consumer-canonicalization"
+  },
+  "contract_repairs": [
+    {
+      "historical_matrix_changed": false,
+      "id": "ap006f3-f1-descendant-aware-validator-v2",
+      "new_validator_sha256": "22b66ff5f7512756264b365b840a45842067e9bade96e949e13d26c2dd57660d",
+      "old_validator_sha256": "b0985078907962f54c32476b91b0d537b0440eaca9f34df1d23a6f608ff3420f",
+      "reason": "Validador F1 estrito ao pré-commit passou a distinguir F1, F3 e descendentes.",
+      "status": "applied",
+      "target": "tools/refactor/ap006f1_validate_dependency_decision_matrix.py"
+    }
+  ],
+  "decisions": {
+    "bridge": "removed",
+    "fallback": "preserved_active_run_legacy"
+  },
+  "duration_seconds_before_contract_tests": 27.866,
+  "errors": [],
+  "f2_evidence": {
+    "bridge_decision": "remove_bridge_in_ap006f3",
+    "fallback_decision": "preserve_active_run_legacy",
+    "gate_ap006f3": "PASS",
+    "path": "/home/gustavodetarso/Downloads/mppg-logs/ap006f2_ensaio_destrutivo_ponte_fallback_v4_20260721_123202.json",
+    "sha256": "ae2c812bbc9e6c93f61fb1463a4337a705c0aecb337a7ef13d76ab5230fd9e28",
+    "size": 176707
+  },
+  "fallback_contract": {
+    "path": "software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+    "preserved_byte_for_byte": true,
+    "sha256_after": "f11ddffc30f60ac0c5e0856e8bf00ffaae866a8df806fd3c2b99f1afaa09e6b9",
+    "sha256_before": "f11ddffc30f60ac0c5e0856e8bf00ffaae866a8df806fd3c2b99f1afaa09e6b9"
+  },
+  "gate_ap006f4": "PASS",
+  "integrity": {
+    "master_parallel_count": 22,
+    "master_snapshot_sha256": "c4ba1e619f210d9aadf897f8dcf66179520cdf46a939f2d1250e6b04cf07d1f6",
+    "master_unchanged": true,
+    "pth_unchanged": true,
+    "staging_empty": true
+  },
+  "materialized_changes": {
+    "artifact_paths": [
+      "docs/refactor/academic-pipeline/AP-006/AP-006F3_MINIMAL_MATERIALIZATION.md",
+      "docs/refactor/academic-pipeline/AP-006/ap006f3_minimal_materialization.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap006f3_minimal_materialization_contract.py",
+      "tools/refactor/ap006f3_validate_minimal_materialization.py"
+    ],
+    "productive_python_changes": [],
+    "tracked_deletions": [
+      "software/academic_pipeline_rc10_7_conformidade"
+    ]
+  },
+  "phase": "AP-006F.3",
+  "status": "ok",
+  "validations": {
+    "real_source": {
+      "checks": [
+        {
+          "label": "public_imports",
+          "output_tail": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py\n/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/__init__.py",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "module_help",
+          "output_tail": "                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "legacy_main_wrapper_help",
+          "output_tail": "                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "legacy_toml_wrapper_help",
+          "output_tail": "usage: academic_pipeline_toml_generator_interativo.py [-h] [--list-profiles]\n                                                      [--profile PROFILE]\n                                                      [--project-name PROJECT_NAME]\n                                                      [--project-dir PROJECT_DIR]\n                                                      [--no-clear]\n                                                      [--tui-theme {,fgv}]\n\nGerador interativo completo de TOML para academic_pipeline rc10.7.42\n\noptions:\n  -h, --help            show this help message and exit\n  --list-profiles       Lista presets disponíveis e encerra\n  --profile PROFILE     Inicia diretamente em um preset, ex.:\n                        atividade_local_fgv\n  --project-name PROJECT_NAME\n                        Reservado para automações futuras\n  --project-dir PROJECT_DIR\n                        Diretório que receberá o TOML do projeto; se omitido,\n                        o wizard pergunta\n  --no-clear            Não limpa a tela entre as etapas do wizard\n  --tui-theme {,fgv}    Usa diálogos visuais prompt_toolkit com paleta FGV",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "resources_and_toml",
+          "output_tail": "profile=/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/institutions/fgv/institution_profile.toml\ntoml_count=9",
+          "passed": true,
+          "returncode": 0
+        }
+      ],
+      "passed": true,
+      "scenario": "materialized_real"
+    },
+    "trial_installed": {
+      "all_commands_succeeded": true,
+      "all_pth": [],
+      "bootstrap_dir": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/ap006f2_bootstrap",
+      "checks": [
+        {
+          "label": "installed_imports",
+          "mentions_run_legacy_failure": false,
+          "output_tail": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/lib/python3.11/site-packages/academic_pipeline/__init__.py\n/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/lib/python3.11/site-packages/app_bundle/__init__.py\nexecutable=/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/bin/python-ap006f2\nprefix=/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA\nbase_prefix=/home/gustavodetarso/.pyenv/versions/3.11.13",
+          "returncode": 0,
+          "success": true
+        },
+        {
+          "label": "installed_console_help",
+          "mentions_run_legacy_failure": false,
+          "output_tail": "                        Inspeciona arquivo .bib e gera relatório .md/.json\n  --quality-report      Gera quality_report.md a partir de --document-json e\n                        opcionalmente --org\n  --bib BIB             Arquivo .bib opcional para --quality-report ou\n                        --check-institution-compliance\n  --docx DOCX           Arquivo .docx opcional para --check-institution-\n                        compliance\n  --pdf PDF             Arquivo .pdf opcional para --check-institution-\n                        compliance\n  --prisma-curadoria-menu\n                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.",
+          "returncode": 0,
+          "success": true
+        },
+        {
+          "label": "installed_module_help",
+          "mentions_run_legacy_failure": false,
+          "output_tail": "                        Inspeciona arquivo .bib e gera relatório .md/.json\n  --quality-report      Gera quality_report.md a partir de --document-json e\n                        opcionalmente --org\n  --bib BIB             Arquivo .bib opcional para --quality-report ou\n                        --check-institution-compliance\n  --docx DOCX           Arquivo .docx opcional para --check-institution-\n                        compliance\n  --pdf PDF             Arquivo .pdf opcional para --check-institution-\n                        compliance\n  --prisma-curadoria-menu\n                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.",
+          "returncode": 0,
+          "success": true
+        }
+      ],
+      "console_launcher": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/bin/academic-pipeline",
+      "expect_success": true,
+      "expectation_met": true,
+      "label": "no_bridge_revalidation",
+      "python_launcher": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/bin/python-ap006f2",
+      "relevant_pth": [],
+      "sitecustomize": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/ap006f2_bootstrap/sitecustomize.py",
+      "source_suite": {
+        "execution_model": "pytest e dependências vêm do Pipenv canônico; a fonte do cenário ocupa a primeira posição do PYTHONPATH; sitecustomize mantém sys.executable apontando para o launcher; subprocessos que removem PYTHONPATH recompõem bootstrap e wheel do cenário",
+        "output_tail": "............................................................x........... [ 75%]\n........................                                                 [100%]\n95 passed, 1 xfailed in 20.01s",
+        "passed": true,
+        "returncode": 0
+      },
+      "target_site": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/prefix_no_bridge_revalidation/lib/python3.11/site-packages"
+    },
+    "trial_source": {
+      "checks": [
+        {
+          "label": "public_imports",
+          "output_tail": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/candidate/software/academic_pipeline_mppg/academic_pipeline/__init__.py\n/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/candidate/software/academic_pipeline_mppg/app_bundle/__init__.py",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "module_help",
+          "output_tail": "                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "legacy_main_wrapper_help",
+          "output_tail": "                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "legacy_toml_wrapper_help",
+          "output_tail": "usage: academic_pipeline_toml_generator_interativo.py [-h] [--list-profiles]\n                                                      [--profile PROFILE]\n                                                      [--project-name PROJECT_NAME]\n                                                      [--project-dir PROJECT_DIR]\n                                                      [--no-clear]\n                                                      [--tui-theme {,fgv}]\n\nGerador interativo completo de TOML para academic_pipeline rc10.7.42\n\noptions:\n  -h, --help            show this help message and exit\n  --list-profiles       Lista presets disponíveis e encerra\n  --profile PROFILE     Inicia diretamente em um preset, ex.:\n                        atividade_local_fgv\n  --project-name PROJECT_NAME\n                        Reservado para automações futuras\n  --project-dir PROJECT_DIR\n                        Diretório que receberá o TOML do projeto; se omitido,\n                        o wizard pergunta\n  --no-clear            Não limpa a tela entre as etapas do wizard\n  --tui-theme {,fgv}    Usa diálogos visuais prompt_toolkit com paleta FGV",
+          "passed": true,
+          "returncode": 0
+        },
+        {
+          "label": "resources_and_toml",
+          "output_tail": "profile=/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/candidate/software/academic_pipeline_mppg/app_bundle/institutions/fgv/institution_profile.toml\ntoml_count=9",
+          "passed": true,
+          "returncode": 0
+        }
+      ],
+      "passed": true,
+      "scenario": "no_bridge_revalidation"
+    }
+  },
+  "warnings": [],
+  "wheel": {
+    "entry_points": "[console_scripts]\nacademic-pipeline = academic_pipeline.cli:main\n",
+    "legacy_physical_members": [],
+    "member_count": 110,
+    "path": "/home/gustavodetarso/.tmp/pipenv_temp/ap006f3.dBlV6381/dist_no_bridge_revalidation/academic_pipeline_mppg-0.1.0-py3-none-any.whl",
+    "pth_members": [],
+    "sha256": "5552cacadd58cdc8903d900f7e6fee4367279fa166efda2934b050590b8e6c77",
+    "size": 641807
+  },
+  "wheel_comparison": {
+    "changed": [],
+    "identical": true,
+    "only_baseline": [],
+    "only_no_bridge": []
+  }
+}
