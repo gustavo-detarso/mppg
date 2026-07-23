@@ -1,0 +1,52 @@
+{
+  "artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007C2_DOCTOR_NATIVE_ADAPTER.md": "b557bca29301673171d933277be8551277472c674a1bbb0df279b7847b8c869e",
+    "software/academic_pipeline_mppg/academic_pipeline/doctor_runtime.py": "2944cb78c2b1959acaf2f0f4192b09964e3cf721885aafac7c88164c1b287ec9",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c2_doctor_native_adapter_contract.py": "082b703feb78205d75e2023b29d9623dcc34818f88d6c0f8485e8b9c83c05c3b",
+    "tools/refactor/ap007c2_validate_doctor_native_adapter.py": "eae70a4b2c0ae2884d04f69136dcb3857ab029340df0f0c69cd92886ee663731"
+  },
+  "audit_evidence": {
+    "path": "/home/gustavodetarso/Downloads/mppg-logs/ap007c1_reparo_residuo_e_reauditoria_v3_20260723_070414/ap007c1_doctor_check_config_semantic_audit_v2.json",
+    "sha256": "927645b63cc833cad65a1b4466d39ffbe5630428ab8ceadac916480e68f5db17"
+  },
+  "baseline": {
+    "head": "8f30abdcb6bf811f869e09c1fb49ec2d15e0579b",
+    "tree": "2820c464f71bebf4695221dad34c44d6c1a2892c"
+  },
+  "candidate_paths": [
+    "software/academic_pipeline_mppg/academic_pipeline/doctor_runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C2_DOCTOR_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c2_doctor_native_adapter.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c2_doctor_native_adapter_contract.py",
+    "tools/refactor/ap007c2_validate_doctor_native_adapter.py"
+  ],
+  "constraints": {
+    "globals_locals_container": false,
+    "legacy_monolith_import": false,
+    "staging_commit_tag_push_authorized": false,
+    "sys_path_mutation": false
+  },
+  "doctor_dependencies": [
+    "cfg",
+    "external_search_enabled",
+    "output_paths",
+    "print_doctor_report",
+    "research_output_paths",
+    "run_doctor",
+    "write_json"
+  ],
+  "doctor_stage": "dispatch_stage_016",
+  "next_wave": "--check-config",
+  "phase": "AP-007C.2",
+  "public_route": {
+    "check_config": "legacy_fallback",
+    "doctor": "legacy_fallback",
+    "integration_phase": "AP-007C.3"
+  },
+  "schema": "ap007c2-doctor-native-adapter-v1",
+  "semantic_exit_codes": [
+    0,
+    2
+  ],
+  "status": "doctor_adapter_materialized_not_integrated"
+}
