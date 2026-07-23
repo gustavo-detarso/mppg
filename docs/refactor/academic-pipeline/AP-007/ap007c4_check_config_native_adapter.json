@@ -1,0 +1,59 @@
+{
+  "artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007C4_CHECK_CONFIG_NATIVE_ADAPTER.md": "846d43abfbaf35089dedf0567e1ba7918c1cb2317816300e0e06db69cf82c987",
+    "software/academic_pipeline_mppg/academic_pipeline/check_config_runtime.py": "4459286e415f3f2fd240c0bfc15c538b1a5e03146ac323500951aaf51895b56b",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c4_check_config_native_adapter_contract.py": "eef5cc8ad54b63ecb7e4ee0206c8a82d8fb2bc8468f19a2d59e9b0805e8169b8",
+    "tools/refactor/ap007c4_validate_check_config_native_adapter.py": "1e479ad9bba4ce99ed676a815c4c5a63ff1914e496ee8691c935143149d2a8a9"
+  },
+  "baseline": {
+    "head": "8f30abdcb6bf811f869e09c1fb49ec2d15e0579b",
+    "tree": "2820c464f71bebf4695221dad34c44d6c1a2892c"
+  },
+  "candidate_paths": [
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/doctor_runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C2_DOCTOR_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c2_doctor_native_adapter.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c2_doctor_native_adapter_contract.py",
+    "tools/refactor/ap007c2_validate_doctor_native_adapter.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C3_DOCTOR_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c3_doctor_public_integration.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c3_doctor_public_integration_contract.py",
+    "tools/refactor/ap007c3_validate_doctor_public_integration.py",
+    "software/academic_pipeline_mppg/academic_pipeline/check_config_runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C4_CHECK_CONFIG_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c4_check_config_native_adapter.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c4_check_config_native_adapter_contract.py",
+    "tools/refactor/ap007c4_validate_check_config_native_adapter.py"
+  ],
+  "check_config_dependencies": [
+    "cfg",
+    "check_config",
+    "external_search_enabled",
+    "output_paths",
+    "print_check_config_report",
+    "research_output_paths",
+    "write_json"
+  ],
+  "check_config_stage": "dispatch_stage_017",
+  "constraints": {
+    "dispatcher_logic_duplicated": false,
+    "globals_locals_container": false,
+    "legacy_monolith_import": false,
+    "process_state_mutation": false,
+    "staging_commit_tag_push_authorized": false
+  },
+  "implementation_strategy": "explicit context plus canonical dispatch_stage_017",
+  "phase": "AP-007C.4",
+  "public_route": {
+    "check_config": "legacy_fallback",
+    "doctor": "native_doctor",
+    "integration_phase": "AP-007C.5"
+  },
+  "schema": "ap007c4-check-config-native-adapter-v1",
+  "semantic_exit_codes": [
+    0,
+    2
+  ],
+  "status": "check_config_adapter_materialized_not_integrated"
+}

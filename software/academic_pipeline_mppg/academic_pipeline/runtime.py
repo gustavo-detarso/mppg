@@ -37,7 +37,59 @@ FIRST_WAVE_OPTIONS = frozenset(
         "--explain-profile",
     }
 )
-NATIVE_TRIGGER_OPTIONS = FIRST_WAVE_OPTIONS | {"-h"}
+DOCTOR_OPTIONS = frozenset({"--doctor"})
+DOCTOR_PRECEDING_TRIGGER_DESTS = frozenset(
+    {
+        'check_institution_compliance',
+        'explain_profile',
+        'forcar_regeneracao_mapa_mental',
+        'gui',
+        'init_project',
+        'init_toml',
+        'inspect_bib',
+        'list_institutions',
+        'list_layouts',
+        'list_toml_profiles',
+        'make_doi_manifest',
+        'output',
+        'reusar_mapa_mental',
+        'show_prompts',
+        'somente_mapa_mental',
+        'somente_renderizar',
+        'tui',
+        'write_prompt_lock',
+    }
+)
+CHECK_CONFIG_OPTIONS = frozenset({"--check-config"})
+CHECK_CONFIG_PRECEDING_TRIGGER_DESTS = frozenset(
+    {
+        'check_institution_compliance',
+        'doctor',
+        'explain_profile',
+        'forcar_regeneracao_mapa_mental',
+        'gui',
+        'init_project',
+        'init_toml',
+        'inspect_bib',
+        'list_institutions',
+        'list_layouts',
+        'list_toml_profiles',
+        'make_doi_manifest',
+        'output',
+        'reusar_mapa_mental',
+        'show_prompts',
+        'somente_mapa_mental',
+        'somente_renderizar',
+        'tui',
+        'write_prompt_lock',
+    }
+)
+NATIVE_TRIGGER_OPTIONS = (
+    FIRST_WAVE_OPTIONS
+    | DOCTOR_OPTIONS
+    | CHECK_CONFIG_OPTIONS
+    | {"-h"}
+)
 PARSER_BUILDER_NAME = 'build_parser'
 
 LegacyRunner = Callable[[Sequence[str] | None], int]
@@ -47,6 +99,8 @@ class RuntimeRoute(str, Enum):
     """Rotas deliberadas do entrypoint durante a transição."""
 
     NATIVE_FIRST_WAVE = "native_first_wave"
+    NATIVE_DOCTOR = "native_doctor"
+    NATIVE_CHECK_CONFIG = "native_check_config"
     LEGACY_FALLBACK = "legacy_fallback"
 
 
@@ -138,15 +192,58 @@ def _matches_option(token: str, option: str) -> bool:
     return token == option or token.startswith(f"{option}=")
 
 
+def _namespace_has_preceding_trigger(
+    argv: Sequence[str],
+) -> bool:
+    args = _build_parser().parse_args(list(argv))
+    return any(
+        bool(getattr(args, dest, None))
+        for dest in DOCTOR_PRECEDING_TRIGGER_DESTS
+    )
+
+
+def _namespace_has_check_config_preceding_trigger(
+    argv: Sequence[str],
+) -> bool:
+    args = _build_parser().parse_args(list(argv))
+    return any(
+        bool(getattr(args, dest, None))
+        for dest in CHECK_CONFIG_PRECEDING_TRIGGER_DESTS
+    )
+
+
 def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
-    """Seleciona a rota sem interpretar comandos operacionais legados."""
+    """Seleciona rota nativa preservando a precedência dos dispatchers."""
 
     for token in argv:
         if any(
             _matches_option(token, option)
-            for option in NATIVE_TRIGGER_OPTIONS
+            for option in FIRST_WAVE_OPTIONS | {"-h"}
         ):
             return RuntimeRoute.NATIVE_FIRST_WAVE
+
+    doctor_selected = any(
+        _matches_option(token, option)
+        for token in argv
+        for option in DOCTOR_OPTIONS
+    )
+    if doctor_selected:
+        if _namespace_has_preceding_trigger(argv):
+            return RuntimeRoute.LEGACY_FALLBACK
+        return RuntimeRoute.NATIVE_DOCTOR
+
+    check_config_selected = any(
+        _matches_option(token, option)
+        for token in argv
+        for option in CHECK_CONFIG_OPTIONS
+    )
+    if check_config_selected:
+        if _namespace_has_check_config_preceding_trigger(
+            argv
+        ):
+            return RuntimeRoute.LEGACY_FALLBACK
+        return RuntimeRoute.NATIVE_CHECK_CONFIG
+
     return RuntimeRoute.LEGACY_FALLBACK
 
 
@@ -200,6 +297,22 @@ def _run_native_first_wave(
     )
 
 
+def _run_native_doctor(argv: Sequence[str]) -> int:
+    from .doctor_runtime import run_doctor_command
+
+    return int(run_doctor_command(argv))
+
+
+def _run_native_check_config(
+    argv: Sequence[str],
+) -> int:
+    from .check_config_runtime import (
+        run_check_config_command,
+    )
+
+    return int(run_check_config_command(argv))
+
+
 def run(
     argv: Sequence[str] | None = None,
     *,
@@ -214,10 +327,20 @@ def run(
     if route is RuntimeRoute.NATIVE_FIRST_WAVE:
         return _run_native_first_wave(forwarded, context=context)
 
+    if route is RuntimeRoute.NATIVE_DOCTOR:
+        return _run_native_doctor(forwarded)
+
+    if route is RuntimeRoute.NATIVE_CHECK_CONFIG:
+        return _run_native_check_config(forwarded)
+
     return int(legacy_runner(forwarded))
 
 
 __all__ = [
+    "CHECK_CONFIG_OPTIONS",
+    "CHECK_CONFIG_PRECEDING_TRIGGER_DESTS",
+    "DOCTOR_OPTIONS",
+    "DOCTOR_PRECEDING_TRIGGER_DESTS",
     "FIRST_WAVE_OPTIONS",
     "NATIVE_TRIGGER_OPTIONS",
     "NativeRuntimeError",

@@ -1,0 +1,153 @@
+{
+  "artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007C2_DOCTOR_NATIVE_ADAPTER.md": "b557bca29301673171d933277be8551277472c674a1bbb0df279b7847b8c869e",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C3_DOCTOR_PUBLIC_INTEGRATION.md": "452ffa5c22bb661b97b132af653ab11f725c203e386e53c0e0ed0c57c80b8c38",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C4_CHECK_CONFIG_NATIVE_ADAPTER.md": "846d43abfbaf35089dedf0567e1ba7918c1cb2317816300e0e06db69cf82c987",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C5_CHECK_CONFIG_PUBLIC_INTEGRATION.md": "46a3072b733eded1f1a62ab0532fd9525f74d3718f9a237078b83e3d215f130d",
+    "docs/refactor/academic-pipeline/AP-007/ap007c2_doctor_native_adapter.json": "e3a41a5130d79b3191788915e41d81f6658bd6fc75534fb246c113d9025ab584",
+    "docs/refactor/academic-pipeline/AP-007/ap007c3_doctor_public_integration.json": "876b92b81ca6d65821774f35b8ca3ec4c89b1d6d6e5e04a7eeb8b24346e73fda",
+    "docs/refactor/academic-pipeline/AP-007/ap007c4_check_config_native_adapter.json": "eb45efdffe9255c1a6e099a7cd8462159d5d8d694e86a05ff11c5d09c64fed26",
+    "software/academic_pipeline_mppg/academic_pipeline/check_config_runtime.py": "4459286e415f3f2fd240c0bfc15c538b1a5e03146ac323500951aaf51895b56b",
+    "software/academic_pipeline_mppg/academic_pipeline/doctor_runtime.py": "2944cb78c2b1959acaf2f0f4192b09964e3cf721885aafac7c88164c1b287ec9",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py": "7a2fd63ae060c74fe3f06e2eaf7457f176dc5059c0ac7aa95fc23805e810b1e6",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c2_doctor_native_adapter_contract.py": "082b703feb78205d75e2023b29d9623dcc34818f88d6c0f8485e8b9c83c05c3b",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c3_doctor_public_integration_contract.py": "3640a83f1925c87dd9713b18cdbf4c8bac5c9292cff7695295b6dc75c740b4c1",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c4_check_config_native_adapter_contract.py": "eef5cc8ad54b63ecb7e4ee0206c8a82d8fb2bc8468f19a2d59e9b0805e8169b8",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c5_check_config_public_integration_contract.py": "544a23c2118d1941e4f8403a4cab29befbeaef2ad6dba7d131055dcdc0477d4e",
+    "tools/refactor/ap007c2_validate_doctor_native_adapter.py": "eae70a4b2c0ae2884d04f69136dcb3857ab029340df0f0c69cd92886ee663731",
+    "tools/refactor/ap007c3_validate_doctor_public_integration.py": "04a0d9a6d3a3d6c0d3c767e768f0f1fbba4cffecbf75fb3046d8f967c800adc5",
+    "tools/refactor/ap007c4_validate_check_config_native_adapter.py": "1e479ad9bba4ce99ed676a815c4c5a63ff1914e496ee8691c935143149d2a8a9",
+    "tools/refactor/ap007c5_validate_check_config_public_integration.py": "8920215c59fa2fbaa718048747ed45498136bcc1f5d0527e86205a18d2ee8c3c"
+  },
+  "baseline": {
+    "head": "8f30abdcb6bf811f869e09c1fb49ec2d15e0579b",
+    "tree": "2820c464f71bebf4695221dad34c44d6c1a2892c"
+  },
+  "candidate_paths": [
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/doctor_runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C2_DOCTOR_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c2_doctor_native_adapter.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c2_doctor_native_adapter_contract.py",
+    "tools/refactor/ap007c2_validate_doctor_native_adapter.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C3_DOCTOR_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c3_doctor_public_integration.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c3_doctor_public_integration_contract.py",
+    "tools/refactor/ap007c3_validate_doctor_public_integration.py",
+    "software/academic_pipeline_mppg/academic_pipeline/check_config_runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C4_CHECK_CONFIG_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c4_check_config_native_adapter.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c4_check_config_native_adapter_contract.py",
+    "tools/refactor/ap007c4_validate_check_config_native_adapter.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007C5_CHECK_CONFIG_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007c5_check_config_public_integration.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007c5_check_config_public_integration_contract.py",
+    "tools/refactor/ap007c5_validate_check_config_public_integration.py"
+  ],
+  "check_config_preceding_trigger_dests": [
+    "check_institution_compliance",
+    "doctor",
+    "explain_profile",
+    "forcar_regeneracao_mapa_mental",
+    "gui",
+    "init_project",
+    "init_toml",
+    "inspect_bib",
+    "list_institutions",
+    "list_layouts",
+    "list_toml_profiles",
+    "make_doi_manifest",
+    "output",
+    "reusar_mapa_mental",
+    "show_prompts",
+    "somente_mapa_mental",
+    "somente_renderizar",
+    "tui",
+    "write_prompt_lock"
+  ],
+  "check_config_preceding_trigger_options": {
+    "check_institution_compliance": [
+      "--check-institution-compliance"
+    ],
+    "doctor": [
+      "--doctor"
+    ],
+    "explain_profile": [
+      "--explain-profile"
+    ],
+    "forcar_regeneracao_mapa_mental": [
+      "--forcar-regeneracao-mapa-mental"
+    ],
+    "gui": [
+      "--gui"
+    ],
+    "init_project": [
+      "--init-project"
+    ],
+    "init_toml": [
+      "--init-toml"
+    ],
+    "inspect_bib": [
+      "--inspect-bib"
+    ],
+    "list_institutions": [
+      "--list-institutions"
+    ],
+    "list_layouts": [
+      "--list-layouts"
+    ],
+    "list_toml_profiles": [
+      "--list-toml-profiles"
+    ],
+    "make_doi_manifest": [
+      "--make-doi-manifest"
+    ],
+    "output": [
+      "--output"
+    ],
+    "reusar_mapa_mental": [
+      "--reusar-mapa-mental"
+    ],
+    "show_prompts": [
+      "--show-prompts"
+    ],
+    "somente_mapa_mental": [
+      "--somente-mapa-mental"
+    ],
+    "somente_renderizar": [
+      "--somente-renderizar"
+    ],
+    "tui": [
+      "--tui"
+    ],
+    "write_prompt_lock": [
+      "--write-prompt-lock"
+    ]
+  },
+  "check_config_stage": "dispatch_stage_017",
+  "constraints": {
+    "doctor_precedence_preserved": true,
+    "earlier_legacy_stage_precedence_preserved": true,
+    "first_wave_precedence_preserved": true,
+    "legacy_bridge_added": false,
+    "staging_commit_tag_push_authorized": false
+  },
+  "doctor_stage": "dispatch_stage_016",
+  "phase": "AP-007C.5",
+  "precedence_probe_argv": [
+    "--check-institution-compliance",
+    "--check-config"
+  ],
+  "process_exit_codes": {
+    "missing_config": 1,
+    "report_not_ok": 2,
+    "report_ok": 0
+  },
+  "public_route": {
+    "check_config": "native_check_config",
+    "doctor": "native_doctor"
+  },
+  "schema": "ap007c5-check-config-public-integration-v1",
+  "status": "check_config_publicly_integrated",
+  "supersedes_phase_local_route": "AP-007C.4"
+}
