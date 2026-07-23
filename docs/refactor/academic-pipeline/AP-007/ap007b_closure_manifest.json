@@ -1,0 +1,81 @@
+{
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "head": "17725a5505eb2f9c0b1a6cfd5899e38d70031f80"
+  },
+  "closure_artifacts": [
+    "docs/refactor/academic-pipeline/AP-007/AP-007B_CLOSURE_REPORT.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007b_closure_manifest.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007b_closure_contract.py",
+    "tools/refactor/ap007b_validate_closure.py"
+  ],
+  "commit_readiness": {
+    "candidate_path_count": 10,
+    "candidate_paths": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007B_CLOSURE_REPORT.md",
+      "docs/refactor/academic-pipeline/AP-007/AP-007B_NATIVE_RUNTIME_CONTRACT.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007b_closure_manifest.json",
+      "docs/refactor/academic-pipeline/AP-007/ap007b_native_runtime_contract.json",
+      "software/academic_pipeline_mppg/academic_pipeline/cli.py",
+      "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007b_closure_contract.py",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py",
+      "tools/refactor/ap007b_validate_closure.py",
+      "tools/refactor/ap007b_validate_native_runtime_contract.py"
+    ],
+    "explicit_authorization_required": true,
+    "gate": "PASS",
+    "staging_expected_empty": true,
+    "tag_authorized": false
+  },
+  "decision": "close_ap007b_native_runtime_first_wave",
+  "deferred_to_ap007e": {
+    "isolated_direct_script_tests": 4,
+    "reason": "distribution_and_installation_contract"
+  },
+  "existing_artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007B_NATIVE_RUNTIME_CONTRACT.md": "d58152be4514960593a519717b104507b97c753c485b8b15918f56488bba3363",
+    "docs/refactor/academic-pipeline/AP-007/ap007b_native_runtime_contract.json": "f5a4f6f8978ed8e82d3a333606950fafcf334991fea8b3288569f703078e1bfb",
+    "software/academic_pipeline_mppg/academic_pipeline/cli.py": "79b8b7f58397645b6378bbe29566180850da41a4bd5e1beabcdbcf498c196b19",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py": "2c83a7628160b6287e48c97e836f71f5d609cb2402ce1f86d6f5ee181ec6c4f2",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py": "b90f3440d3735a5eb2e425c0dc11af4467bc904ecd50ddba61cd588165307f61",
+    "tools/refactor/ap007b_validate_native_runtime_contract.py": "d32b69211cee460a8ac42e90bf95d084196e02e5160c9691903d057e26a474fe"
+  },
+  "first_wave": [
+    "--help",
+    "--list-toml-profiles",
+    "--list-institutions",
+    "--list-layouts",
+    "--explain-profile"
+  ],
+  "formal_evidence": {
+    "file": "ap007b2_validacao_integrada_comparativa_v1_20260722_215803.log",
+    "sha256": "6e0c24d61054bcb9f111f354e9ce8d13fcf48f49091a17b18032bac85b127c20"
+  },
+  "gate_ap007b_commit": "PASS",
+  "phase": "AP-007B.3",
+  "status": "closure_materialized_precommit",
+  "topology": {
+    "legacy_fallback": "explicit_injected",
+    "native_first_wave_count": 5,
+    "native_runtime": "academic_pipeline.runtime:run",
+    "normal_first_wave_legacy_calls": 0,
+    "public_entrypoint": "academic_pipeline.cli:main"
+  },
+  "validation": {
+    "contract": {
+      "passed": 20
+    },
+    "help_text_option_tokens": 66,
+    "process_state_preserved": true,
+    "registered_long_options": 63,
+    "source_tree_regressions": {
+      "deselected": 4,
+      "passed": 24
+    },
+    "triple_surface_equivalence": {
+      "status": "PASS",
+      "surfaces": 5
+    }
+  }
+}

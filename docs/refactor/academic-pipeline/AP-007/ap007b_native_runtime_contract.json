@@ -1,0 +1,132 @@
+{
+  "artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007B_NATIVE_RUNTIME_CONTRACT.md": "d58152be4514960593a519717b104507b97c753c485b8b15918f56488bba3363",
+    "software/academic_pipeline_mppg/academic_pipeline/cli.py": "79b8b7f58397645b6378bbe29566180850da41a4bd5e1beabcdbcf498c196b19",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py": "2c83a7628160b6287e48c97e836f71f5d609cb2402ce1f86d6f5ee181ec6c4f2",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py": "b90f3440d3735a5eb2e425c0dc11af4467bc904ecd50ddba61cd588165307f61",
+    "tools/refactor/ap007b_validate_native_runtime_contract.py": "d32b69211cee460a8ac42e90bf95d084196e02e5160c9691903d057e26a474fe"
+  },
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "head": "17725a5505eb2f9c0b1a6cfd5899e38d70031f80",
+    "tree": "86d8129b0073d4a4cdceab570b320b8898021bd0"
+  },
+  "constraints": [
+    "run_legacy_preserved",
+    "operational_flows_not_migrated",
+    "generated_commands_not_rewritten",
+    "no_globals_or_locals_container",
+    "no_native_sys_path_mutation",
+    "no_staging_commit_tag_push"
+  ],
+  "dependency_signatures": {
+    "Path": "(*args, **kwargs)",
+    "available_layouts": "(cfg: 'dict[str, Any]') -> 'dict[str, dict[str, Any]]'",
+    "describe_institution_profiles": "(app_bundle: 'Path | None' = None) -> 'str'",
+    "explain_profile": "(profile_name: 'str' = 'fgv', app_bundle: 'Path | None' = None) -> 'str'",
+    "load_config": "(path: Path) -> profiled dict[str, Any]",
+    "resolve_layout_spec": "(cfg: 'dict[str, Any]', doc: 'Any | None' = None) -> 'LayoutSpec'"
+  },
+  "dispatch_result_fields": [
+    "handled",
+    "value"
+  ],
+  "dispatch_result_semantics": {
+    "handled_field": "handled",
+    "handled_zero": {
+      "handled": true,
+      "value": 0
+    },
+    "not_handled": {
+      "handled": false,
+      "value": null
+    },
+    "value_field": "value"
+  },
+  "dispatch_runtime_key_count": 6,
+  "dispatch_runtime_keys": [
+    "Path",
+    "available_layouts",
+    "describe_institution_profiles",
+    "explain_profile",
+    "load_config",
+    "resolve_layout_spec"
+  ],
+  "dispatch_stages": [
+    "dispatch_stage_003",
+    "dispatch_stage_005",
+    "dispatch_stage_006",
+    "dispatch_stage_007"
+  ],
+  "first_wave": [
+    "--help",
+    "--list-toml-profiles",
+    "--list-institutions",
+    "--list-layouts",
+    "--explain-profile"
+  ],
+  "materialized_paths": [
+    "software/academic_pipeline_mppg/academic_pipeline/cli.py",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007B_NATIVE_RUNTIME_CONTRACT.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007b_native_runtime_contract.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py",
+    "tools/refactor/ap007b_validate_native_runtime_contract.py"
+  ],
+  "native_trigger_options": [
+    "-h",
+    "--help",
+    "--list-toml-profiles",
+    "--list-institutions",
+    "--list-layouts",
+    "--explain-profile"
+  ],
+  "parser": {
+    "builder": "build_parser",
+    "builder_signature": "(*, pipeline_version: 'str') -> 'argparse.ArgumentParser'",
+    "cli_parser_modified": false,
+    "entrypoint_signature": "(argv: 'Sequence[str] | None' = None, *, pipeline_version: 'str') -> 'argparse.Namespace'",
+    "help_text_option_token_count": 66,
+    "pipeline_version": "rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit",
+    "pipeline_version_source": "app_bundle.scripts.pipeline.diagnostics:PIPELINE_VERSION",
+    "public_program_name": "academic-pipeline",
+    "registered_long_option_count": 63,
+    "registered_options_are_in_help": true
+  },
+  "phase": "AP-007B.1",
+  "preserved_sha256": {
+    "software/academic_pipeline_mppg/academic_pipeline/__main__.py": "31840fb9a79716886a21e2026f9255e4df5bdf897531cecf63399692ada047f4",
+    "software/academic_pipeline_mppg/academic_pipeline/cli_parser.py": "f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8",
+    "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py": "9255c4b924fd61b7120b8c5e02684d338f6788de42ae7c352b049a488a308afe",
+    "software/academic_pipeline_mppg/academic_pipeline/legacy.py": "f11ddffc30f60ac0c5e0856e8bf00ffaae866a8df806fd3c2b99f1afaa09e6b9",
+    "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py": "f385b32fed0445dde90a596440903a7c174e42eac2e1675251ddbd0ce516288f",
+    "software/academic_pipeline_mppg/pyproject.toml": "0c5225e5e9bc8f94ae0964e84b180444908af5d1de5fd7929574686951384d80"
+  },
+  "repair": {
+    "dirty_path_parser": "preserve leading porcelain status bytes",
+    "legacy_fallback_argv_type": "list[str]",
+    "source_tree_validation": {
+      "first_wave_probe_count": 5,
+      "isolated_direct_script_deferred_to": "AP-007E",
+      "package_root_explicit": true
+    },
+    "version": 10
+  },
+  "runtime_context_fields": [
+    "path_type",
+    "load_config",
+    "describe_institution_profiles",
+    "available_layouts",
+    "resolve_layout_spec",
+    "explain_profile"
+  ],
+  "schema": "ap007b-native-runtime-contract-v1",
+  "status": "repaired_precommit",
+  "topology": {
+    "entrypoint": "academic_pipeline.cli:main",
+    "fallback": "explicit_legacy_fallback",
+    "native_route": "native_first_wave",
+    "normal_first_wave_legacy_calls": 0,
+    "runtime": "academic_pipeline.runtime:run"
+  }
+}
