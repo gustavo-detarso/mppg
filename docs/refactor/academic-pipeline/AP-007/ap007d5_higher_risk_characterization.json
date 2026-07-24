@@ -1,0 +1,385 @@
+{
+  "artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007D0_OPERATIONAL_COMMAND_INVENTORY.md": "3bb5e6b34cbb575a5e906d1af96ad8dae95c0c66b25be80917b3a7d788747790",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md": "294be8052bdbfbe62b4acc0db532f923f31fd1d3a0a39c8d99da13f2805ba624",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md": "30318ed08de1938e23b8143ef7c17041694f1d6974d8c6413b588bf91d5bced8",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D3_LIST_PROFILES_PUBLIC_INTEGRATION.md": "fae7b7138d995dd35aa2126e6db73dee8de62a60b08480b5f4c2a7c44709c3b8",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_NATIVE_ADAPTER.md": "e48a1eb734f1afd645bb42219f6d70842984280ed7285802559d84cc4db5a3ce",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_PUBLIC_INTEGRATION.md": "3ae68879865da26e6e7e98318c1acd6506acde8ea4a693db5486120cb7ee1554",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_SECOND_WAVE_CHARACTERIZATION.md": "aff4550f0041f6eedb81b2c081b4d59bd14da8e1359a125701cdf412db0a0715",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_HIGHER_RISK_CHARACTERIZATION.md": "995f61ae09f1b498b80d825c5809c37963ba307dad2c880a1567bef1eefd9df1",
+    "docs/refactor/academic-pipeline/AP-007/ap007d0_operational_command_inventory.json": "2c5f26554987d93744917529ad88acdb185aaa99d3873341917889d4d22d6ac9",
+    "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json": "90b08a82d8967f8e51672303b8cc3d546fb18c6aed5106b854b4ca733558f9b8",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json": "1674dc343a35b45ffe54952a3f1375bb770ec9e74036a9f451cff1bd2d1a71d8",
+    "docs/refactor/academic-pipeline/AP-007/ap007d3_list_profiles_public_integration.json": "e14fea8995c6b2f77209595f63d0d9ede146902f4f06eb3ef0e30492e14b269a",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_native_adapter.json": "bdef37ab8184709e4065857c400ab7643b62302e1bb02cccff3b561129e1c869",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_public_integration.json": "2667988cd22d25fcb7a164dc108c6a6ab11565e4d0da2af11539867811dfae41",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_second_wave_characterization.json": "5c6ac55dec3ed45481fa8290c9b59f39cc19a7419020176223082a3e6fe3554a",
+    "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py": "41b323120b03a64a317ef6288df3cecbdbc042532d7b739c0485ee04b3e94117",
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py": "9a6bbbd980c0111067af17613b97a30b4bc9c333852cc30279c33999653e333d",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py": "b54d7b47b7eca7c02af5d4e0f004e9243b3e9ec386c736d0edf06d17bbc07061",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d0_operational_inventory_contract.py": "b6ac876970cf7741f9720cf734dff83f91d06c003f25c4b44738f9d342dc1a5a",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py": "1b8561b33552feeed6d84d638621516e4eacd17126661edd4c040bc30a676744",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py": "649ff57f42c8ef0d14ce58022e2b2cc66cc40d79d5949299728dfbe9b1c4faeb",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py": "9bd4cbb3c5303e5bb03cc3e7ce3211a92780b4d4ba2b80df574dc1c3e3d152ad",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py": "4915311161d7ec77d002a43b066835c8254584a266ac7b6d00f0f9dc1b60a492",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py": "c330e903db84c07f5ab0cf3e051283d4841f21bc078d97a6d9615a31a1ee8974",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_second_wave_characterization_contract.py": "3c0b8a879f242bb407588769bd8e9b88dd438e0509292b8a0d9844e2de62bf63",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_higher_risk_characterization_contract.py": "89dcfdcc3247b5fc3e3916f8a44b8b9ea20540227baffd9266fa8eb5effc09f3",
+    "tools/refactor/ap007d0_validate_operational_inventory.py": "cc6a0a4065b1847f409f7ca82403e2491e3446d719f1ab8036cc32403b5e28e9",
+    "tools/refactor/ap007d1_validate_first_operational_wave.py": "0527a2c16c3132d31c835af0060ef8aff4a5dc713395d9b8bf6f08ed3a33722b",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py": "fe1a83dd8df78371c18ca7fa61b220a7ccd9e123d5e3aa4d4228eda49e135eb2",
+    "tools/refactor/ap007d3_validate_list_profiles_public_integration.py": "6c8034c74a5167ee0b55e4ff277b1adf456c9ed2e69f375482e8512405d0dc97",
+    "tools/refactor/ap007d4_validate_institution_compliance_native_adapter.py": "e99f3d20acab37f104f1aef7aaf39830493bbdda9141c865d29319fb0629a6fd",
+    "tools/refactor/ap007d4_validate_institution_compliance_public_integration.py": "1237b6ce10cf7a45e64313483d3accbc35506c0260c4cc80d588d0f054fb1197",
+    "tools/refactor/ap007d4_validate_second_wave_characterization.py": "e99caadc60a2f53db97de5c9b7f06f5206b12f48f9fc07c1bde599b4be05e8a3",
+    "tools/refactor/ap007d5_validate_higher_risk_characterization.py": "e19cc204e32999487ef398e2368710439ccdcf7d01718a156d795b1feefe4a64"
+  },
+  "baseline": {
+    "d4_candidate_path_count": 31,
+    "d4_public_route": "native_institution_compliance",
+    "head": "ab066e68947ac5f33f1c12c9a7db5086d0f93790",
+    "runtime_sha256": "b54d7b47b7eca7c02af5d4e0f004e9243b3e9ec386c736d0edf06d17bbc07061",
+    "tree": "e8bebd0b88a719a765ba6cc78150b01e024de9dd"
+  },
+  "candidate_path_count": 35,
+  "candidate_paths": [
+    "docs/refactor/academic-pipeline/AP-007/AP-007D0_OPERATIONAL_COMMAND_INVENTORY.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D3_LIST_PROFILES_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_SECOND_WAVE_CHARACTERIZATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_HIGHER_RISK_CHARACTERIZATION.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007d0_operational_command_inventory.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d3_list_profiles_public_integration.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_native_adapter.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_public_integration.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_second_wave_characterization.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d5_higher_risk_characterization.json",
+    "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d0_operational_inventory_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_second_wave_characterization_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_higher_risk_characterization_contract.py",
+    "tools/refactor/ap007d0_validate_operational_inventory.py",
+    "tools/refactor/ap007d1_validate_first_operational_wave.py",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py",
+    "tools/refactor/ap007d3_validate_list_profiles_public_integration.py",
+    "tools/refactor/ap007d4_validate_institution_compliance_native_adapter.py",
+    "tools/refactor/ap007d4_validate_institution_compliance_public_integration.py",
+    "tools/refactor/ap007d4_validate_second_wave_characterization.py",
+    "tools/refactor/ap007d5_validate_higher_risk_characterization.py"
+  ],
+  "canonical_surface": {
+    "canonical_resolution": {
+      "ast_confirmed": true,
+      "closure_names": [
+        "Any",
+        "Path",
+        "SUPPORTED_SOURCE_SUFFIXES",
+        "_iter_dir_sources",
+        "_iter_zip_sources",
+        "csv",
+        "make_doi_manifest",
+        "zipfile"
+      ],
+      "closure_node_count": 8,
+      "closure_sha256": "49c7c7f146865d77a89df62830d12e32b09d3bdb1c8d451654140e6d6e357a54",
+      "end_line": 246,
+      "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/project_tools.py",
+      "function": "make_doi_manifest",
+      "historical_closure_contains_canonical": false,
+      "historical_seed_handlers": [
+        "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_010.branch@160:160"
+      ],
+      "historical_seed_resolution_methods": [
+        "synthetic_branch_body"
+      ],
+      "line": 229,
+      "relative_imports": [],
+      "selected_imports": [
+        {
+          "kind": "ImportFrom",
+          "line": 19,
+          "module": "typing"
+        },
+        {
+          "kind": "ImportFrom",
+          "line": 18,
+          "module": "pathlib"
+        },
+        {
+          "kind": "Import",
+          "line": 12,
+          "module": "csv"
+        },
+        {
+          "kind": "Import",
+          "line": 16,
+          "module": "zipfile"
+        }
+      ],
+      "sha256": "747cf6fa7d8deaaa2573401020babd4427fa403671c0b0125674088ee1918c38",
+      "strategy": "minimal_same_module_ast_closure",
+      "tracked": true,
+      "unresolved_names": []
+    },
+    "dynamic_surface": [],
+    "functions": {
+      "_iter_dir_sources": {
+        "end_line": 226,
+        "line": 215,
+        "sha256": "e7849c8005b5755e5a171d85314f72ef289132a3b69a6cac8c69310f461bd792"
+      },
+      "_iter_zip_sources": {
+        "end_line": 212,
+        "line": 201,
+        "sha256": "de5c0344374f2674900ad2130ec6579b05e09003c3bd3233bf301ff26d281ecc"
+      },
+      "make_doi_manifest": {
+        "end_line": 246,
+        "line": 229,
+        "sha256": "747cf6fa7d8deaaa2573401020babd4427fa403671c0b0125674088ee1918c38"
+      }
+    },
+    "network_surface": [],
+    "parser_actions": {
+      "--input-dir": 43,
+      "--input-zip": 42,
+      "--make-doi-manifest": 41,
+      "--output": 44
+    },
+    "project_tools_path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/project_tools.py",
+    "project_tools_sha256": "4efd7d574890343cdaa6650a66797cb08d58c356ee69f1f13cabea87f1f11487",
+    "read_surface": [
+      "_iter_dir_sources:216:input_dir.exists",
+      "_iter_dir_sources:216:input_dir.is_dir",
+      "_iter_dir_sources:218:input_dir.glob",
+      "_iter_dir_sources:218:input_dir.rglob",
+      "_iter_dir_sources:221:path.is_file",
+      "_iter_zip_sources:202:input_zip.exists",
+      "_iter_zip_sources:206:zf.namelist",
+      "make_doi_manifest:238:output.exists"
+    ],
+    "subprocess_surface": [],
+    "write_surface": [
+      "make_doi_manifest:240:output.parent.mkdir",
+      "make_doi_manifest:241:output.open"
+    ]
+  },
+  "command": "--make-doi-manifest",
+  "commit_authorized": false,
+  "decision": {
+    "adapter_may_be_materialized": true,
+    "next_step": "AP-007D.5 isolated DOI adapter using the verified minimal AST closure",
+    "public_route_may_change": false,
+    "required_controls": [
+      "temporary sandbox",
+      "input and output snapshots",
+      "raw and normalized SHA-256 comparison",
+      "network block",
+      "explicit 30-second timeout",
+      "rollback of generated output on failure",
+      "no dependency on detected legacy bootstrap module: dotenv"
+    ]
+  },
+  "historical_characterization": {
+    "hard_exclusions": [
+      "mutating_or_generating_command_semantics"
+    ],
+    "historical_closure_contains_canonical": false,
+    "maximum": 33,
+    "resolved_seed_handlers": [
+      "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_010.branch@160:160"
+    ],
+    "risk": "moderate",
+    "score": 26,
+    "seed_resolution_evidence": [
+      {
+        "handler": {
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "line": 160,
+          "qualname": "dispatch_stage_010.branch@160"
+        },
+        "method": "synthetic_branch_body",
+        "resolved_key": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_010.branch@160:160"
+      }
+    ],
+    "transitive_function_count": 1
+  },
+  "integrity": {
+    "payload_sha256": "bb7cf63340657a4bf0c0f0d25b4bf9c239780ebdd107029069b5bd95fece48e4"
+  },
+  "phase": "AP-007D.5",
+  "public_state": {
+    "baseline_defect": {
+      "class": "unrelated_legacy_bootstrap_dependency_coupling",
+      "closure_import_roots": [
+        "csv",
+        "pathlib",
+        "typing",
+        "zipfile"
+      ],
+      "consistent_across_scenarios": true,
+      "first_missing_module": "dotenv",
+      "legacy_bootstrap_observed": true,
+      "legacy_loader_observed": true,
+      "scenarios": {
+        "public_dir": {
+          "failure_class": "missing_legacy_bootstrap_dependency",
+          "legacy_bootstrap_observed": true,
+          "legacy_loader_observed": true,
+          "missing_module": "dotenv",
+          "missing_module_root": "dotenv",
+          "returncode": 1,
+          "stderr_sha256": "251788de505389ddccee710ff6ceb8aae0ed7d67148e85ac7539cd23c8769fc1",
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "traceback_files": [
+            "<frozen runpy>",
+            "<frozen runpy>",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/importlib/__init__.py",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap_external>",
+            "<frozen importlib._bootstrap>",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+          ]
+        },
+        "public_zip": {
+          "failure_class": "missing_legacy_bootstrap_dependency",
+          "legacy_bootstrap_observed": true,
+          "legacy_loader_observed": true,
+          "missing_module": "dotenv",
+          "missing_module_root": "dotenv",
+          "returncode": 1,
+          "stderr_sha256": "251788de505389ddccee710ff6ceb8aae0ed7d67148e85ac7539cd23c8769fc1",
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "traceback_files": [
+            "<frozen runpy>",
+            "<frozen runpy>",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/legacy.py",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/importlib/__init__.py",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap>",
+            "<frozen importlib._bootstrap_external>",
+            "<frozen importlib._bootstrap>",
+            "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+          ]
+        }
+      }
+    },
+    "direct_and_public_outputs_equivalent": false,
+    "executable_under_canonical_python": false,
+    "public_route_changed": false,
+    "route": "legacy_fallback"
+  },
+  "sandbox_contract": {
+    "direct_comparisons": {
+      "directory": {
+        "normalized_sha256": "10ad99261b8fa3601e32b38148d7733b094a004a76b36379ec8bacad9a559788",
+        "raw_sha256": "4ccdbf815cf94f743038195eb6e9f83aedabeb8ae07a2e49f8b35e1c1d7d77d8",
+        "rows": [
+          [
+            "arquivo",
+            "doi"
+          ],
+          [
+            "beta.docx",
+            ""
+          ],
+          [
+            "nested/alpha.pdf",
+            ""
+          ]
+        ]
+      },
+      "zip": {
+        "normalized_sha256": "10ad99261b8fa3601e32b38148d7733b094a004a76b36379ec8bacad9a559788",
+        "raw_sha256": "4ccdbf815cf94f743038195eb6e9f83aedabeb8ae07a2e49f8b35e1c1d7d77d8",
+        "rows": [
+          [
+            "arquivo",
+            "doi"
+          ],
+          [
+            "beta.docx",
+            ""
+          ],
+          [
+            "nested/alpha.pdf",
+            ""
+          ]
+        ]
+      }
+    },
+    "expected_generated_files": [
+      "direct_dir.csv",
+      "direct_zip.csv"
+    ],
+    "network_attempts": 0,
+    "network_policy": "blocked_by_sitecustomize",
+    "repository_status_unchanged": true,
+    "runtime_unchanged": true,
+    "sandbox_root_is_temporary": true,
+    "scenarios": {
+      "direct_dir": {
+        "duration_seconds": 0.3087,
+        "returncode": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "4ba29174b4dc68075e021232f327b3ee1b7c03e52fecf42346c46222a59e0607",
+        "timed_out": false
+      },
+      "direct_zip": {
+        "duration_seconds": 0.3179,
+        "returncode": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "9510725c70f02d00a00512b707bb20ee387352881b56cc653ce1d1bfecf5daf1",
+        "timed_out": false
+      },
+      "public_dir": {
+        "duration_seconds": 0.4415,
+        "returncode": 1,
+        "stderr_sha256": "251788de505389ddccee710ff6ceb8aae0ed7d67148e85ac7539cd23c8769fc1",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": false
+      },
+      "public_zip": {
+        "duration_seconds": 0.4329,
+        "returncode": 1,
+        "stderr_sha256": "251788de505389ddccee710ff6ceb8aae0ed7d67148e85ac7539cd23c8769fc1",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": false
+      }
+    },
+    "source_files_unchanged": true,
+    "timeout_seconds": 30,
+    "unexpected_generated_files": []
+  },
+  "schema": "ap007d5-higher-risk-characterization/v3",
+  "status": "selected_for_isolated_dependency_decoupling_adapter"
+}

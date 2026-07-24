@@ -1,0 +1,74 @@
+{
+  "adapter": {
+    "context": "InstitutionComplianceRuntimeContext",
+    "entrypoint": "run_institution_compliance_command",
+    "path": "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py",
+    "sha256": "41b323120b03a64a317ef6288df3cecbdbc042532d7b739c0485ee04b3e94117"
+  },
+  "candidate_path_count": 27,
+  "candidate_paths": [
+    "docs/refactor/academic-pipeline/AP-007/AP-007D0_OPERATIONAL_COMMAND_INVENTORY.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D3_LIST_PROFILES_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_SECOND_WAVE_CHARACTERIZATION.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007d0_operational_command_inventory.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d3_list_profiles_public_integration.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_native_adapter.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_second_wave_characterization.json",
+    "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d0_operational_inventory_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_second_wave_characterization_contract.py",
+    "tools/refactor/ap007d0_validate_operational_inventory.py",
+    "tools/refactor/ap007d1_validate_first_operational_wave.py",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py",
+    "tools/refactor/ap007d3_validate_list_profiles_public_integration.py",
+    "tools/refactor/ap007d4_validate_institution_compliance_native_adapter.py",
+    "tools/refactor/ap007d4_validate_second_wave_characterization.py"
+  ],
+  "characterization_payload_sha256": "a077f9a82c3200562138db0596118a2b8ac20bcf4b04eebc6dd7d4ffc2ef62b4",
+  "command": "--check-institution-compliance",
+  "commit_authorized": false,
+  "exit_contract": {
+    "ok_false": 2,
+    "ok_true": 0
+  },
+  "integrity": {
+    "payload_sha256": "58bd34c1c9fc37a06c0196b6faf0b56295aadac30e8d9d7c48084d9c37d67f69"
+  },
+  "next_step": "AP-007D.4 public integration decision",
+  "outputs": [
+    "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_native_adapter.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py",
+    "tools/refactor/ap007d4_validate_institution_compliance_native_adapter.py"
+  ],
+  "phase": "AP-007D.4",
+  "public_route_changed": false,
+  "runtime_sha256_preserved": "98f84244f3e447c108f627b9af55ab4782ed20347952b73c63f19e44a2b5371d",
+  "schema": "ap007d4-institution-compliance-native-adapter/v1",
+  "source_stage": {
+    "branch_line": 239,
+    "name": "dispatch_stage_015",
+    "path": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+    "runtime_keys": [
+      "Path",
+      "cfg",
+      "output_paths",
+      "render_compliance_markdown",
+      "run_institution_compliance",
+      "write_compliance_reports"
+    ]
+  },
+  "status": "materialized_route_still_legacy"
+}

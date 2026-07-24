@@ -84,12 +84,42 @@ CHECK_CONFIG_PRECEDING_TRIGGER_DESTS = frozenset(
         'write_prompt_lock',
     }
 )
+LIST_PROFILES_OPTIONS = frozenset({"--list-profiles"})
+INSTITUTION_COMPLIANCE_OPTIONS = frozenset({"--check-institution-compliance"})
+INSTITUTION_COMPLIANCE_VALUE_OPTIONS = frozenset({
+    "--config",
+    "--org",
+    "--academic-writing",
+    "--latex-extra-path",
+    "--pdf-engine",
+    "--bib",
+    "--docx",
+    "--pdf",
+    "--output",
+    "--output-dir",
+    "--work-dir",
+    "--cache-dir",
+    "--research-output-dir",
+    "--output-prefix",
+})
+DOI_MANIFEST_OPTIONS = frozenset({"--make-doi-manifest"})
+DOI_MANIFEST_VALUE_OPTIONS = frozenset({
+    "--input-dir",
+    "--input-zip",
+    "--output",
+})
 NATIVE_TRIGGER_OPTIONS = (
     FIRST_WAVE_OPTIONS
     | DOCTOR_OPTIONS
     | CHECK_CONFIG_OPTIONS
+    | LIST_PROFILES_OPTIONS
+    | INSTITUTION_COMPLIANCE_OPTIONS
+    | DOI_MANIFEST_OPTIONS
     | {"-h"}
 )
+
+
+
 PARSER_BUILDER_NAME = 'build_parser'
 
 LegacyRunner = Callable[[Sequence[str] | None], int]
@@ -101,6 +131,9 @@ class RuntimeRoute(str, Enum):
     NATIVE_FIRST_WAVE = "native_first_wave"
     NATIVE_DOCTOR = "native_doctor"
     NATIVE_CHECK_CONFIG = "native_check_config"
+    NATIVE_LIST_PROFILES = "native_list_profiles"
+    NATIVE_INSTITUTION_COMPLIANCE = "native_institution_compliance"
+    NATIVE_DOI_MANIFEST = "native_doi_manifest"
     LEGACY_FALLBACK = "legacy_fallback"
 
 
@@ -212,15 +245,101 @@ def _namespace_has_check_config_preceding_trigger(
     )
 
 
-def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
-    """Seleciona rota nativa preservando a precedência dos dispatchers."""
+def _is_exact_institution_compliance_invocation(
+    argv: Sequence[str],
+) -> bool:
+    seen_command = False
+    index = 0
+    while index < len(argv):
+        token = str(argv[index])
+        if token in INSTITUTION_COMPLIANCE_OPTIONS:
+            if seen_command:
+                return False
+            seen_command = True
+            index += 1
+            continue
 
+        matched_value_option = False
+        for option in INSTITUTION_COMPLIANCE_VALUE_OPTIONS:
+            if token == option:
+                if index + 1 >= len(argv):
+                    return False
+                index += 2
+                matched_value_option = True
+                break
+            if token.startswith(option + "="):
+                index += 1
+                matched_value_option = True
+                break
+        if matched_value_option:
+            continue
+        return False
+    return seen_command
+
+
+def _is_exact_doi_manifest_invocation(
+    argv: Sequence[str],
+) -> bool:
+    seen_command = False
+    index = 0
+    while index < len(argv):
+        token = str(argv[index])
+        if token in DOI_MANIFEST_OPTIONS:
+            if seen_command:
+                return False
+            seen_command = True
+            index += 1
+            continue
+
+        matched_value_option = False
+        for option in DOI_MANIFEST_VALUE_OPTIONS:
+            if token == option:
+                if index + 1 >= len(argv):
+                    return False
+                index += 2
+                matched_value_option = True
+                break
+            if token.startswith(option + "="):
+                if token == option + "=":
+                    return False
+                index += 1
+                matched_value_option = True
+                break
+        if matched_value_option:
+            continue
+        return False
+    return seen_command
+
+
+def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
+    # Precedência conservadora: informativos; estágio 015; doctor; check-config;
+    # primeira onda operacional; fallback legado.
     for token in argv:
         if any(
             _matches_option(token, option)
             for option in FIRST_WAVE_OPTIONS | {"-h"}
         ):
             return RuntimeRoute.NATIVE_FIRST_WAVE
+
+    institution_selected = any(
+        _matches_option(token, option)
+        for token in argv
+        for option in INSTITUTION_COMPLIANCE_OPTIONS
+    )
+    if institution_selected:
+        if _is_exact_institution_compliance_invocation(argv):
+            return RuntimeRoute.NATIVE_INSTITUTION_COMPLIANCE
+        return RuntimeRoute.LEGACY_FALLBACK
+
+    doi_manifest_selected = any(
+        _matches_option(token, option)
+        for token in argv
+        for option in DOI_MANIFEST_OPTIONS
+    )
+    if doi_manifest_selected:
+        if _is_exact_doi_manifest_invocation(argv):
+            return RuntimeRoute.NATIVE_DOI_MANIFEST
+        return RuntimeRoute.LEGACY_FALLBACK
 
     doctor_selected = any(
         _matches_option(token, option)
@@ -238,13 +357,31 @@ def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
         for option in CHECK_CONFIG_OPTIONS
     )
     if check_config_selected:
-        if _namespace_has_check_config_preceding_trigger(
-            argv
-        ):
+        if _namespace_has_check_config_preceding_trigger(argv):
             return RuntimeRoute.LEGACY_FALLBACK
         return RuntimeRoute.NATIVE_CHECK_CONFIG
 
+    list_profiles_selected = any(
+        _matches_option(token, option)
+        for token in argv
+        for option in LIST_PROFILES_OPTIONS
+    )
+    if list_profiles_selected:
+        unrelated_tokens = [
+            token
+            for token in argv
+            if not any(
+                _matches_option(token, option)
+                for option in LIST_PROFILES_OPTIONS
+            )
+        ]
+        if unrelated_tokens:
+            return RuntimeRoute.LEGACY_FALLBACK
+        return RuntimeRoute.NATIVE_LIST_PROFILES
+
     return RuntimeRoute.LEGACY_FALLBACK
+
+
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -255,6 +392,11 @@ def _build_parser() -> argparse.ArgumentParser:
         )
 
     parser.prog = OFFICIAL_PROGRAM_NAME
+    parser.add_argument(
+        "--list-profiles",
+        action="store_true",
+        help="Lista os perfis TOML disponíveis.",
+    )
     return parser
 
 
@@ -313,6 +455,50 @@ def _run_native_check_config(
     return int(run_check_config_command(argv))
 
 
+def _run_native_list_profiles(
+    argv: Sequence[str],
+) -> int:
+    from .list_profiles_runtime import (
+        run_list_profiles_command,
+    )
+
+    return int(run_list_profiles_command(argv))
+
+
+def _run_native_institution_compliance(
+    argv: Sequence[str],
+) -> int:
+    import sys as _sys
+
+    from .institution_compliance_runtime import (
+        InstitutionComplianceRuntimeError,
+        run_institution_compliance_command,
+    )
+
+    try:
+        return int(run_institution_compliance_command(argv))
+    except InstitutionComplianceRuntimeError as exc:
+        print(str(exc), file=_sys.stderr)
+        return 1
+
+
+def _run_native_doi_manifest(
+    argv: Sequence[str],
+) -> int:
+    import sys as _sys
+
+    from .doi_manifest_runtime import (
+        DoiManifestRuntimeError,
+        run_make_doi_manifest_command,
+    )
+
+    try:
+        return int(run_make_doi_manifest_command(argv))
+    except DoiManifestRuntimeError as exc:
+        print(str(exc), file=_sys.stderr)
+        return 1
+
+
 def run(
     argv: Sequence[str] | None = None,
     *,
@@ -333,6 +519,15 @@ def run(
     if route is RuntimeRoute.NATIVE_CHECK_CONFIG:
         return _run_native_check_config(forwarded)
 
+    if route is RuntimeRoute.NATIVE_LIST_PROFILES:
+        return _run_native_list_profiles(forwarded)
+
+    if route is RuntimeRoute.NATIVE_INSTITUTION_COMPLIANCE:
+        return _run_native_institution_compliance(forwarded)
+
+    if route is RuntimeRoute.NATIVE_DOI_MANIFEST:
+        return _run_native_doi_manifest(forwarded)
+
     return int(legacy_runner(forwarded))
 
 
@@ -342,6 +537,11 @@ __all__ = [
     "DOCTOR_OPTIONS",
     "DOCTOR_PRECEDING_TRIGGER_DESTS",
     "FIRST_WAVE_OPTIONS",
+    "LIST_PROFILES_OPTIONS",
+    "INSTITUTION_COMPLIANCE_OPTIONS",
+    "INSTITUTION_COMPLIANCE_VALUE_OPTIONS",
+    "DOI_MANIFEST_OPTIONS",
+    "DOI_MANIFEST_VALUE_OPTIONS",
     "NATIVE_TRIGGER_OPTIONS",
     "NativeRuntimeError",
     "RuntimeContext",

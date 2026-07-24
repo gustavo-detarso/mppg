@@ -1,0 +1,60 @@
+{
+  "adapter": {
+    "assignments": [
+      {
+        "kind": "AnnAssign",
+        "line": 1697,
+        "sha256": "e5b789dec2637fe21e4a9c13b64406ee23dbaa547386c8bb3c9d8c6c9e87073b"
+      }
+    ],
+    "classes": [
+      {
+        "kind": "ClassDef",
+        "line": 1684,
+        "name": "Preset",
+        "sha256": "c61e1b10b671f74e828285930d903c2e801af1142b21428cafcab8f79dc0f91f"
+      }
+    ],
+    "dependency_strategy": "ast_transitive_top_level_closure_with_safe_classes",
+    "helpers": [
+      {
+        "kind": "FunctionDef",
+        "line": 4233,
+        "name": "print_profiles",
+        "sha256": "1f4f278c9f2ce62a41986438a8c5a02885d570db410d89e1424bc5c4674fb138"
+      }
+    ],
+    "imports": [
+      "import textwrap",
+      "from dataclasses import dataclass"
+    ],
+    "path": "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "sha256": "9a6bbbd980c0111067af17613b97a30b4bc9c333852cc30279c33999653e333d"
+  },
+  "command": "--list-profiles",
+  "contracts": {
+    "explicit_argv": true,
+    "legacy_fallback_preserved": true,
+    "no_dynamic_import": true,
+    "no_globals_locals": true,
+    "public_route_changed": false
+  },
+  "integrity": {
+    "adapter_payload_sha256": "91c2343593a758c2984e27a7ec97f9aa745290eaf601cd850054a3a375191752"
+  },
+  "outputs": [
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py"
+  ],
+  "phase": "AP-007D.2",
+  "schema": "ap007d2-list-profiles-native-adapter/v1",
+  "source": {
+    "branch_line": 4250,
+    "function": "main",
+    "path": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py"
+  },
+  "status": "materialized_route_still_legacy"
+}

@@ -1,0 +1,297 @@
+{
+  "adapter_paths": [
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/doi_manifest_runtime.py"
+  ],
+  "artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007D0_OPERATIONAL_COMMAND_INVENTORY.md": "3bb5e6b34cbb575a5e906d1af96ad8dae95c0c66b25be80917b3a7d788747790",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md": "294be8052bdbfbe62b4acc0db532f923f31fd1d3a0a39c8d99da13f2805ba624",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md": "30318ed08de1938e23b8143ef7c17041694f1d6974d8c6413b588bf91d5bced8",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D3_LIST_PROFILES_PUBLIC_INTEGRATION.md": "fae7b7138d995dd35aa2126e6db73dee8de62a60b08480b5f4c2a7c44709c3b8",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_NATIVE_ADAPTER.md": "e48a1eb734f1afd645bb42219f6d70842984280ed7285802559d84cc4db5a3ce",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_PUBLIC_INTEGRATION.md": "3ae68879865da26e6e7e98318c1acd6506acde8ea4a693db5486120cb7ee1554",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_SECOND_WAVE_CHARACTERIZATION.md": "aff4550f0041f6eedb81b2c081b4d59bd14da8e1359a125701cdf412db0a0715",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_DOI_MANIFEST_NATIVE_ADAPTER.md": "8ef44a090a100e70ba6dcda8d4e4c56c4d3e1acf0a44790b9cb056d6702134a3",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_DOI_MANIFEST_PUBLIC_INTEGRATION.md": "8e8a819816beaedefd85bbfb1b3996fe51afd5c401889d5756bf1e3dd940cd30",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_HIGHER_RISK_CHARACTERIZATION.md": "995f61ae09f1b498b80d825c5809c37963ba307dad2c880a1567bef1eefd9df1",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D6_CLOSURE_REPORT.md": "6ed7d5124c52cb0ff9a0910b95513a40665cadeb1d5bc32c221af88337002f3f",
+    "docs/refactor/academic-pipeline/AP-007/ap007d0_operational_command_inventory.json": "2c5f26554987d93744917529ad88acdb185aaa99d3873341917889d4d22d6ac9",
+    "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json": "90b08a82d8967f8e51672303b8cc3d546fb18c6aed5106b854b4ca733558f9b8",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json": "1674dc343a35b45ffe54952a3f1375bb770ec9e74036a9f451cff1bd2d1a71d8",
+    "docs/refactor/academic-pipeline/AP-007/ap007d3_list_profiles_public_integration.json": "e14fea8995c6b2f77209595f63d0d9ede146902f4f06eb3ef0e30492e14b269a",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_native_adapter.json": "bdef37ab8184709e4065857c400ab7643b62302e1bb02cccff3b561129e1c869",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_public_integration.json": "2667988cd22d25fcb7a164dc108c6a6ab11565e4d0da2af11539867811dfae41",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_second_wave_characterization.json": "5c6ac55dec3ed45481fa8290c9b59f39cc19a7419020176223082a3e6fe3554a",
+    "docs/refactor/academic-pipeline/AP-007/ap007d5_doi_manifest_native_adapter.json": "8d0380bbccea2fabe697d31f3df4c39e8e98beefd8c42f442803a147e653c383",
+    "docs/refactor/academic-pipeline/AP-007/ap007d5_doi_manifest_public_integration.json": "bbec1a79b355fce9dd4a0bae33614c600ae5cb456332b4e9ef458a2c50b27611",
+    "docs/refactor/academic-pipeline/AP-007/ap007d5_higher_risk_characterization.json": "877880479c34cebb9f752d4c74b177cfd7ca1b9c16e35b768bca2b1f4e981e03",
+    "software/academic_pipeline_mppg/academic_pipeline/doi_manifest_runtime.py": "583f6dfa1f8a4fff84408f6f96b7f53fbd382b6072932849c69adda753c98aef",
+    "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py": "41b323120b03a64a317ef6288df3cecbdbc042532d7b739c0485ee04b3e94117",
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py": "9a6bbbd980c0111067af17613b97a30b4bc9c333852cc30279c33999653e333d",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py": "b3ef27fb472985634e6b678158a607bcbda3d01d942b767a139048d25369388c",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d0_operational_inventory_contract.py": "b6ac876970cf7741f9720cf734dff83f91d06c003f25c4b44738f9d342dc1a5a",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py": "1b8561b33552feeed6d84d638621516e4eacd17126661edd4c040bc30a676744",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py": "649ff57f42c8ef0d14ce58022e2b2cc66cc40d79d5949299728dfbe9b1c4faeb",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py": "9bd4cbb3c5303e5bb03cc3e7ce3211a92780b4d4ba2b80df574dc1c3e3d152ad",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py": "4915311161d7ec77d002a43b066835c8254584a266ac7b6d00f0f9dc1b60a492",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py": "c330e903db84c07f5ab0cf3e051283d4841f21bc078d97a6d9615a31a1ee8974",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_second_wave_characterization_contract.py": "3c0b8a879f242bb407588769bd8e9b88dd438e0509292b8a0d9844e2de62bf63",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_doi_manifest_native_adapter_contract.py": "f76378bb8dcb31628558da505dba3d723b6e81c4d1a89baefd19c80205a6c8c4",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_doi_manifest_public_integration_contract.py": "159ce57e3c33c9e83f39627c8fee9bab5bf5e29c17086e8fc51ab256a718ff6e",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_higher_risk_characterization_contract.py": "89dcfdcc3247b5fc3e3916f8a44b8b9ea20540227baffd9266fa8eb5effc09f3",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d6_closure_contract.py": "c611fd114072d19709098c6c99f3e35ee33247210cc6986162311c43b98150c1",
+    "tools/refactor/ap007d0_validate_operational_inventory.py": "cc6a0a4065b1847f409f7ca82403e2491e3446d719f1ab8036cc32403b5e28e9",
+    "tools/refactor/ap007d1_validate_first_operational_wave.py": "0527a2c16c3132d31c835af0060ef8aff4a5dc713395d9b8bf6f08ed3a33722b",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py": "fe1a83dd8df78371c18ca7fa61b220a7ccd9e123d5e3aa4d4228eda49e135eb2",
+    "tools/refactor/ap007d3_validate_list_profiles_public_integration.py": "6c8034c74a5167ee0b55e4ff277b1adf456c9ed2e69f375482e8512405d0dc97",
+    "tools/refactor/ap007d4_validate_institution_compliance_native_adapter.py": "e99f3d20acab37f104f1aef7aaf39830493bbdda9141c865d29319fb0629a6fd",
+    "tools/refactor/ap007d4_validate_institution_compliance_public_integration.py": "1237b6ce10cf7a45e64313483d3accbc35506c0260c4cc80d588d0f054fb1197",
+    "tools/refactor/ap007d4_validate_second_wave_characterization.py": "e99caadc60a2f53db97de5c9b7f06f5206b12f48f9fc07c1bde599b4be05e8a3",
+    "tools/refactor/ap007d5_validate_doi_manifest_native_adapter.py": "38e95a75aa377c599d7f3e658e0c605d63a2e01ba438fdb6be7cd78a10972c4d",
+    "tools/refactor/ap007d5_validate_doi_manifest_public_integration.py": "8a9b9348e17eecbaf398357ea15841a926a5015e0dab2bce3cf35b4c26a15dec",
+    "tools/refactor/ap007d5_validate_higher_risk_characterization.py": "e19cc204e32999487ef398e2368710439ccdcf7d01718a156d795b1feefe4a64",
+    "tools/refactor/ap007d6_validate_closure.py": "2380cacdc4bae195ad5192d70ad4a2e584756cc15e0499d6fdc59014f4e1a3a5"
+  },
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "head": "ab066e68947ac5f33f1c12c9a7db5086d0f93790",
+    "tree": "e8bebd0b88a719a765ba6cc78150b01e024de9dd",
+    "upstream": "origin/ap-refactor/04-consumer-canonicalization"
+  },
+  "candidate_path_count": 48,
+  "candidate_paths": [
+    "docs/refactor/academic-pipeline/AP-007/AP-007D0_OPERATIONAL_COMMAND_INVENTORY.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D3_LIST_PROFILES_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_INSTITUTION_COMPLIANCE_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D4_SECOND_WAVE_CHARACTERIZATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_DOI_MANIFEST_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_DOI_MANIFEST_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D5_HIGHER_RISK_CHARACTERIZATION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D6_CLOSURE_REPORT.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007d0_operational_command_inventory.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d3_list_profiles_public_integration.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_native_adapter.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_institution_compliance_public_integration.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d4_second_wave_characterization.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d5_doi_manifest_native_adapter.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d5_doi_manifest_public_integration.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d5_higher_risk_characterization.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d6_closure_manifest.json",
+    "software/academic_pipeline_mppg/academic_pipeline/doi_manifest_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/institution_compliance_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d0_operational_inventory_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d4_second_wave_characterization_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_doi_manifest_native_adapter_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_doi_manifest_public_integration_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d5_higher_risk_characterization_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d6_closure_contract.py",
+    "tools/refactor/ap007d0_validate_operational_inventory.py",
+    "tools/refactor/ap007d1_validate_first_operational_wave.py",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py",
+    "tools/refactor/ap007d3_validate_list_profiles_public_integration.py",
+    "tools/refactor/ap007d4_validate_institution_compliance_native_adapter.py",
+    "tools/refactor/ap007d4_validate_institution_compliance_public_integration.py",
+    "tools/refactor/ap007d4_validate_second_wave_characterization.py",
+    "tools/refactor/ap007d5_validate_doi_manifest_native_adapter.py",
+    "tools/refactor/ap007d5_validate_doi_manifest_public_integration.py",
+    "tools/refactor/ap007d5_validate_higher_risk_characterization.py",
+    "tools/refactor/ap007d6_validate_closure.py"
+  ],
+  "commit_authorized": false,
+  "errors_and_resolutions": [
+    {
+      "error": "worktree Git tratado como diretório .git",
+      "resolution": "aceitar arquivo .git de linked worktree e validar por git rev-parse"
+    },
+    {
+      "error": "comandos já nativos classificados como legados",
+      "resolution": "reclassificação por rotas públicas e AST antes da seleção"
+    },
+    {
+      "error": "confusão entre SHA bruto e SHA canônico",
+      "resolution": "registrar e validar nominalmente cada representação"
+    },
+    {
+      "error": "travessia de backup patológico",
+      "resolution": "usar git ls-files e rejeitar backups antes de stat ou leitura"
+    },
+    {
+      "error": "handlers indiretos não resolvidos",
+      "resolution": "resolver aliases, qualnames e evidência transitiva estrutural"
+    },
+    {
+      "error": "self-test encontrou a própria string proibida",
+      "resolution": "varrer somente shell executável após neutralizar heredocs"
+    },
+    {
+      "error": "estrutura JSON presumida incorretamente",
+      "resolution": "validar schema real antes de acessar campos"
+    },
+    {
+      "error": "helper e classe ausentes na closure",
+      "resolution": "fechamento transitivo AST de funções, classes, constantes e imports"
+    },
+    {
+      "error": "fonte selecionada em .patch_backups",
+      "resolution": "exigir fonte canônica rastreada e caminho sem segmentos de backup"
+    },
+    {
+      "error": "patch AST concatenou tokens de topo",
+      "resolution": "preservar limites de linha e reparsear antes de gravar"
+    },
+    {
+      "error": "flag integrada sem registro no parser",
+      "resolution": "registrar a opção no parser construído pelo runtime e testar parse real"
+    },
+    {
+      "error": "linha em branco adicional no EOF",
+      "resolution": "normalizar para exatamente uma quebra final e executar git diff --check"
+    },
+    {
+      "error": "branch procurado apenas no arquivo do parser",
+      "resolution": "partir do inventário e resolver o handler no dispatcher real"
+    },
+    {
+      "error": "re.sub, unicodedata.combining e resolve classificados como não resolvidos",
+      "resolution": "reclassificação semântica com evidência AST nominal"
+    },
+    {
+      "error": "manifesto de caracterização presumido com chave outputs",
+      "resolution": "combinar caminhos canônicos conhecidos com o manifesto anterior"
+    },
+    {
+      "error": "validador de fase anterior exigia escopo exato antigo",
+      "resolution": "supersessão nominal e revalidação incremental de hashes, rotas e contratos"
+    },
+    {
+      "error": "escrita parcial do runtime não formalizada",
+      "resolution": "reversão estrutural exata ao hash anterior antes da reconciliação"
+    },
+    {
+      "error": "artefatos formais residuais",
+      "resolution": "backup e reconciliação transacional com restauração integral no rollback"
+    },
+    {
+      "error": "teste antigo exigia hash anterior do runtime",
+      "resolution": "deseleção nominal somente do contrato fase-local supersedido"
+    },
+    {
+      "error": "make_doi_manifest ausente da closure da primeira onda",
+      "resolution": "resolução direta AST no módulo project_tools rastreado"
+    },
+    {
+      "error": "importação ampla exigiu pydantic",
+      "resolution": "closure mínima da lógica DOI sem bootstrap bibliográfico"
+    },
+    {
+      "error": "bootstrap legado falhou antes em dotenv",
+      "resolution": "diagnosticar dinamicamente a primeira dependência ausente consistente"
+    },
+    {
+      "error": "schema divergente entre manifesto, teste e validador",
+      "resolution": "schema único v3 validado antes da materialização"
+    },
+    {
+      "error": "gate público confundiu menção textual a dotenv ou pydantic com importação do legado",
+      "resolution": "bloquear o módulo legado por import hook e registrar evidência por processo, sem busca cega por substring"
+    }
+  ],
+  "exit_contracts": {
+    "check_institution_compliance": {
+      "not_ok": 2,
+      "ok": 0,
+      "usage_error": 1
+    },
+    "list_profiles": {
+      "success": 0
+    },
+    "make_doi_manifest": {
+      "success": 0,
+      "usage_error": 1
+    }
+  },
+  "integrity": {
+    "payload_sha256": "c1160a92a867f8d58358c9e213e0d888647dfe7a48b61e80a1684c8fc406e247"
+  },
+  "legacy_fallback": {
+    "argv_forwarded_as_list": true,
+    "competing_commands_remain_legacy": true,
+    "explicit": true,
+    "implicit_monolith_bridge": false
+  },
+  "native_public_command_count": 10,
+  "native_public_commands": [
+    {
+      "command": "--help",
+      "route": "native_first_wave"
+    },
+    {
+      "command": "--list-toml-profiles",
+      "route": "native_first_wave"
+    },
+    {
+      "command": "--list-institutions",
+      "route": "native_first_wave"
+    },
+    {
+      "command": "--list-layouts",
+      "route": "native_first_wave"
+    },
+    {
+      "command": "--explain-profile",
+      "route": "native_first_wave"
+    },
+    {
+      "command": "--doctor",
+      "route": "native_doctor"
+    },
+    {
+      "command": "--check-config",
+      "route": "native_check_config"
+    },
+    {
+      "command": "--list-profiles",
+      "route": "native_list_profiles"
+    },
+    {
+      "command": "--check-institution-compliance",
+      "route": "native_institution_compliance"
+    },
+    {
+      "command": "--make-doi-manifest",
+      "route": "native_doi_manifest"
+    }
+  ],
+  "next_step": "human decision on isolated commit and publication",
+  "phase": "AP-007D.6",
+  "push_authorized": false,
+  "runtime": {
+    "path": "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "sha256": "b3ef27fb472985634e6b678158a607bcbda3d01d942b767a139048d25369388c"
+  },
+  "schema": "ap007d6-closure/v1",
+  "status": "ready_for_isolated_commit_decision",
+  "superseded_phase_local_contracts": [
+    "AP-007D.2 route_still_legacy",
+    "AP-007D.3 exact runtime hash and 18-path scope",
+    "AP-007D.4 adapter route_still_legacy and exact 27-path scope",
+    "AP-007D.4 integration runtime hash and exact 31-path scope",
+    "AP-007D.5 characterization exact 35-path scope",
+    "AP-007D.5 adapter route_still_legacy and exact 40-path scope",
+    "AP-007D.5 integration exact 44-path scope"
+  ],
+  "tag_authorized": false
+}

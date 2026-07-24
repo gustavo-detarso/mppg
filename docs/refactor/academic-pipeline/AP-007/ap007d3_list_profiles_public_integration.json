@@ -1,0 +1,79 @@
+{
+  "adapter": {
+    "path": "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "sha256": "9a6bbbd980c0111067af17613b97a30b4bc9c333852cc30279c33999653e333d"
+  },
+  "artifact_sha256": {
+    "docs/refactor/academic-pipeline/AP-007/AP-007D0_OPERATIONAL_COMMAND_INVENTORY.md": "3bb5e6b34cbb575a5e906d1af96ad8dae95c0c66b25be80917b3a7d788747790",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md": "294be8052bdbfbe62b4acc0db532f923f31fd1d3a0a39c8d99da13f2805ba624",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md": "30318ed08de1938e23b8143ef7c17041694f1d6974d8c6413b588bf91d5bced8",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D3_LIST_PROFILES_PUBLIC_INTEGRATION.md": "fae7b7138d995dd35aa2126e6db73dee8de62a60b08480b5f4c2a7c44709c3b8",
+    "docs/refactor/academic-pipeline/AP-007/ap007d0_operational_command_inventory.json": "2c5f26554987d93744917529ad88acdb185aaa99d3873341917889d4d22d6ac9",
+    "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json": "90b08a82d8967f8e51672303b8cc3d546fb18c6aed5106b854b4ca733558f9b8",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json": "1674dc343a35b45ffe54952a3f1375bb770ec9e74036a9f451cff1bd2d1a71d8",
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py": "9a6bbbd980c0111067af17613b97a30b4bc9c333852cc30279c33999653e333d",
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py": "98f84244f3e447c108f627b9af55ab4782ed20347952b73c63f19e44a2b5371d",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d0_operational_inventory_contract.py": "b6ac876970cf7741f9720cf734dff83f91d06c003f25c4b44738f9d342dc1a5a",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py": "1b8561b33552feeed6d84d638621516e4eacd17126661edd4c040bc30a676744",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py": "649ff57f42c8ef0d14ce58022e2b2cc66cc40d79d5949299728dfbe9b1c4faeb",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py": "9bd4cbb3c5303e5bb03cc3e7ce3211a92780b4d4ba2b80df574dc1c3e3d152ad",
+    "tools/refactor/ap007d0_validate_operational_inventory.py": "cc6a0a4065b1847f409f7ca82403e2491e3446d719f1ab8036cc32403b5e28e9",
+    "tools/refactor/ap007d1_validate_first_operational_wave.py": "0527a2c16c3132d31c835af0060ef8aff4a5dc713395d9b8bf6f08ed3a33722b",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py": "fe1a83dd8df78371c18ca7fa61b220a7ccd9e123d5e3aa4d4228eda49e135eb2",
+    "tools/refactor/ap007d3_validate_list_profiles_public_integration.py": "6c8034c74a5167ee0b55e4ff277b1adf456c9ed2e69f375482e8512405d0dc97"
+  },
+  "baseline": {
+    "head": "ab066e68947ac5f33f1c12c9a7db5086d0f93790",
+    "runtime_sha256_before": "7a2fd63ae060c74fe3f06e2eaf7457f176dc5059c0ac7aa95fc23805e810b1e6",
+    "tree": "e8bebd0b88a719a765ba6cc78150b01e024de9dd"
+  },
+  "candidate_path_count": 18,
+  "candidate_paths": [
+    "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D0_OPERATIONAL_COMMAND_INVENTORY.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D2_LIST_PROFILES_NATIVE_ADAPTER.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007d0_operational_command_inventory.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json",
+    "docs/refactor/academic-pipeline/AP-007/ap007d2_list_profiles_native_adapter.json",
+    "software/academic_pipeline_mppg/academic_pipeline/list_profiles_runtime.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d0_operational_inventory_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d2_list_profiles_native_adapter_contract.py",
+    "tools/refactor/ap007d0_validate_operational_inventory.py",
+    "tools/refactor/ap007d1_validate_first_operational_wave.py",
+    "tools/refactor/ap007d2_validate_list_profiles_native_adapter.py",
+    "docs/refactor/academic-pipeline/AP-007/AP-007D3_LIST_PROFILES_PUBLIC_INTEGRATION.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007d3_list_profiles_public_integration.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py",
+    "tools/refactor/ap007d3_validate_list_profiles_public_integration.py"
+  ],
+  "commit_authorized": false,
+  "next_phase": "AP-007D.4",
+  "phase": "AP-007D.3",
+  "phase_local_contracts_not_reexecuted": [
+    "AP-007C.5 artifact hash/scope baseline",
+    "AP-007C.6 closure hash/scope baseline"
+  ],
+  "precedence": [
+    "native_first_wave",
+    "native_doctor",
+    "native_check_config",
+    "native_list_profiles",
+    "legacy_fallback"
+  ],
+  "public_route": {
+    "--list-profiles": "native_list_profiles",
+    "exact_command_native": true,
+    "parser_registration": {
+      "action": "store_true",
+      "cli_parser_module_modified": false,
+      "owner": "academic_pipeline.runtime._build_parser"
+    },
+    "unrelated_combinations_remain_legacy": true
+  },
+  "runtime_sha256_after": "98f84244f3e447c108f627b9af55ab4782ed20347952b73c63f19e44a2b5371d",
+  "schema": "ap007d3-list-profiles-public-integration/v1",
+  "status": "list_profiles_publicly_integrated",
+  "supersedes_phase_local_contract": "AP-007D.2 route_still_legacy"
+}
