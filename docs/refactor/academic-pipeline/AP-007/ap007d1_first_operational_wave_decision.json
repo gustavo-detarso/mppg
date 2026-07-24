@@ -1,0 +1,1201 @@
+{
+  "candidate_input_flags": [
+    "--check-institution-compliance",
+    "--list-profiles",
+    "--make-doi-manifest"
+  ],
+  "candidates": [
+    {
+      "call_graph_truncated": false,
+      "dest": "list_profiles",
+      "direct_handlers": [
+        {
+          "arg_refs": [],
+          "calls": [
+            "print_profiles"
+          ],
+          "effects": {
+            "credential_markers": [],
+            "destructive_calls": [],
+            "has_chdir": false,
+            "has_global": false,
+            "has_input": false,
+            "loops": 0,
+            "mutates_sys_argv": false,
+            "mutates_sys_path": false,
+            "network_markers": [],
+            "output_extensions": [],
+            "prints": 0,
+            "raises": 0,
+            "return_codes": [
+              0
+            ],
+            "subprocess_markers": [],
+            "ui_markers": [],
+            "volatile_markers": [],
+            "write_calls": []
+          },
+          "end_line": 4252,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "imports": [],
+          "line": 4250,
+          "name": "main",
+          "qualname": "main.branch@4250",
+          "string_flags": []
+        }
+      ],
+      "first_wave_eligible": true,
+      "flag": "--list-profiles",
+      "hard_exclusions": [],
+      "historical_stages": [
+        {
+          "arg_dests": [
+            "list_profiles"
+          ],
+          "branch_index": 1,
+          "condition": "args.list_profiles",
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "flags": [],
+          "function": "main",
+          "line": 4250
+        }
+      ],
+      "parser_contract": {
+        "action": "store_true",
+        "aliases": [
+          "--list-profiles"
+        ],
+        "choices": null,
+        "default": null,
+        "defined_at": {
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "function": "main",
+          "line": 4242
+        },
+        "nargs": null,
+        "required": null
+      },
+      "resolved_seed_handlers": [
+        "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py:main.branch@4250:4250"
+      ],
+      "risk_level": "low",
+      "runtime_dependencies": [],
+      "score_total": 32,
+      "scores": {
+        "absence_of_hard_exclusions": 3,
+        "informational_semantics": 3,
+        "no_network": 3,
+        "no_subprocess": 3,
+        "no_ui": 3,
+        "no_writes": 3,
+        "precedence_evidence": 3,
+        "process_state_safety": 3,
+        "resolved_call_graph": 2,
+        "small_transitive_surface": 3,
+        "test_evidence": 3
+      },
+      "seed_resolution_evidence": [
+        {
+          "handler": {
+            "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+            "line": 4250,
+            "qualname": "main.branch@4250"
+          },
+          "method": "synthetic_branch_body",
+          "resolved_key": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py:main.branch@4250:4250"
+        }
+      ],
+      "tests": [
+        "software/academic_pipeline_mppg/app_bundle/tests/test_entrypoints_orchestration_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_official_package_entrypoint.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_document_core.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_entrypoints.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_prisma_core.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_rendering.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_support_services.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_packaging_metadata.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_paper_abstracts_layouts_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_rc10_smoke.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003a_orchestrator_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003b_parser_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003c_dispatch_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003d_document_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003e_prisma_generic_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003f_main_unification_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003g_stabilization_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004f_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005b_consumer_canonicalization_plan_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005b_consumer_contract_reclassification.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c3_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005d_facade_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005e1_installation_entrypoint_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005e2_isolated_build_installation_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006c_physical_materialization.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d1_runtime_consumer_migration.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d2_contract_validator_migration.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d3_operational_source_migration.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d4d_source_csv_provenance_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006e3_consumer_stabilization.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006e5_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006f4_comparative_source_distribution_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006f5_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c3_doctor_public_integration_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c5_check_config_public_integration_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c6_closure_contract.py"
+      ],
+      "transitive_effects": {
+        "credential_markers": [],
+        "destructive_calls": [],
+        "dynamic_markers": [],
+        "has_chdir": false,
+        "has_global": false,
+        "has_input": false,
+        "loops": 1,
+        "mutates_sys_argv": false,
+        "mutates_sys_path": false,
+        "network_markers": [],
+        "output_extensions": [],
+        "prints": 3,
+        "raises": 0,
+        "return_codes": [
+          0
+        ],
+        "subprocess_markers": [],
+        "ui_markers": [],
+        "volatile_markers": [],
+        "write_calls": []
+      },
+      "transitive_function_count": 2,
+      "transitive_functions": [
+        {
+          "end_line": 4237,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "line": 4233,
+          "qualname": "print_profiles"
+        },
+        {
+          "end_line": 4252,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "line": 4250,
+          "qualname": "main.branch@4250"
+        }
+      ],
+      "unresolved_project_calls": [
+        "textwrap.fill"
+      ]
+    },
+    {
+      "call_graph_truncated": false,
+      "dest": "check_institution_compliance",
+      "direct_handlers": [
+        {
+          "arg_refs": [
+            "bib",
+            "docx",
+            "org",
+            "pdf"
+          ],
+          "calls": [
+            "dispatchresult",
+            "print",
+            "report.get",
+            "runtime",
+            "runtime.expanduser",
+            "runtime.expanduser.resolve",
+            "runtimeerror"
+          ],
+          "effects": {
+            "credential_markers": [],
+            "destructive_calls": [],
+            "has_chdir": false,
+            "has_global": false,
+            "has_input": false,
+            "loops": 0,
+            "mutates_sys_argv": false,
+            "mutates_sys_path": false,
+            "network_markers": [],
+            "output_extensions": [
+              ".bib",
+              ".docx",
+              ".org",
+              ".pdf",
+              ".toml"
+            ],
+            "prints": 2,
+            "raises": 1,
+            "return_codes": [],
+            "subprocess_markers": [],
+            "ui_markers": [],
+            "volatile_markers": [],
+            "write_calls": []
+          },
+          "end_line": 251,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "imports": [
+            "collections.abc",
+            "typing"
+          ],
+          "line": 239,
+          "name": "dispatch_stage_015",
+          "qualname": "dispatch_stage_015.branch@239",
+          "string_flags": [
+            "--check-institution-compliance exige --config caminho.toml"
+          ]
+        }
+      ],
+      "first_wave_eligible": true,
+      "flag": "--check-institution-compliance",
+      "hard_exclusions": [],
+      "historical_stages": [
+        {
+          "arg_dests": [
+            "check_institution_compliance"
+          ],
+          "branch_index": 1,
+          "condition": "args.check_institution_compliance",
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "flags": [],
+          "function": "dispatch_stage_015",
+          "line": 239
+        }
+      ],
+      "parser_contract": {
+        "action": "store_true",
+        "aliases": [
+          "--check-institution-compliance"
+        ],
+        "choices": null,
+        "default": null,
+        "defined_at": {
+          "file": "software/academic_pipeline_mppg/academic_pipeline/cli_parser.py",
+          "function": "build_parser",
+          "line": 21
+        },
+        "nargs": null,
+        "required": null
+      },
+      "resolved_seed_handlers": [
+        "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_015.branch@239:239"
+      ],
+      "risk_level": "low",
+      "runtime_dependencies": [
+        "collections.abc",
+        "typing"
+      ],
+      "score_total": 31,
+      "scores": {
+        "absence_of_hard_exclusions": 3,
+        "informational_semantics": 2,
+        "no_network": 3,
+        "no_subprocess": 3,
+        "no_ui": 3,
+        "no_writes": 3,
+        "precedence_evidence": 3,
+        "process_state_safety": 3,
+        "resolved_call_graph": 2,
+        "small_transitive_surface": 3,
+        "test_evidence": 3
+      },
+      "seed_resolution_evidence": [
+        {
+          "handler": {
+            "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+            "line": 239,
+            "qualname": "dispatch_stage_015.branch@239"
+          },
+          "method": "synthetic_branch_body",
+          "resolved_key": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_015.branch@239:239"
+        }
+      ],
+      "tests": [
+        "software/academic_pipeline_mppg/app_bundle/tests/test_article_workflow_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_bibliography_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_canonical_docx_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_document_core_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_document_model_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_docx_artifacts_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_official_package_entrypoint.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_support_services.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_prisma_integrations_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_translation_mindmap_characterization.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003a_orchestrator_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003b_parser_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003c_dispatch_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003f_main_unification_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004d_version_marker_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004e_compatibility_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c6_closure_contract.py"
+      ],
+      "transitive_effects": {
+        "credential_markers": [],
+        "destructive_calls": [],
+        "dynamic_markers": [],
+        "has_chdir": false,
+        "has_global": false,
+        "has_input": false,
+        "loops": 2,
+        "mutates_sys_argv": false,
+        "mutates_sys_path": false,
+        "network_markers": [],
+        "output_extensions": [
+          ".bib",
+          ".docx",
+          ".org",
+          ".pdf",
+          ".toml"
+        ],
+        "prints": 2,
+        "raises": 1,
+        "return_codes": [],
+        "subprocess_markers": [],
+        "ui_markers": [],
+        "volatile_markers": [],
+        "write_calls": []
+      },
+      "transitive_function_count": 4,
+      "transitive_functions": [
+        {
+          "end_line": 251,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "line": 239,
+          "qualname": "dispatch_stage_015.branch@239"
+        },
+        {
+          "end_line": 11,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/prisma_exportar_bib.py",
+          "line": 8,
+          "qualname": "norm"
+        },
+        {
+          "end_line": 18,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/prisma_exportar_bib.py",
+          "line": 13,
+          "qualname": "get"
+        },
+        {
+          "end_line": 328,
+          "file": "software/academic_pipeline_mppg/tools/refactor/ap003a_inventory_orchestrator.py",
+          "line": 319,
+          "qualname": "normalize"
+        }
+      ],
+      "unresolved_project_calls": [
+        "re.sub",
+        "resolve",
+        "unicodedata.combining"
+      ]
+    },
+    {
+      "call_graph_truncated": false,
+      "dest": "make_doi_manifest",
+      "direct_handlers": [
+        {
+          "arg_refs": [
+            "input_dir",
+            "input_zip",
+            "output"
+          ],
+          "calls": [
+            "dispatchresult",
+            "print",
+            "runtime",
+            "runtime.expanduser",
+            "runtime.expanduser.resolve",
+            "runtimeerror"
+          ],
+          "effects": {
+            "credential_markers": [],
+            "destructive_calls": [],
+            "has_chdir": false,
+            "has_global": false,
+            "has_input": false,
+            "loops": 0,
+            "mutates_sys_argv": false,
+            "mutates_sys_path": false,
+            "network_markers": [],
+            "output_extensions": [
+              ".csv"
+            ],
+            "prints": 4,
+            "raises": 1,
+            "return_codes": [],
+            "subprocess_markers": [],
+            "ui_markers": [],
+            "volatile_markers": [],
+            "write_calls": []
+          },
+          "end_line": 176,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "imports": [
+            "collections.abc",
+            "typing"
+          ],
+          "line": 160,
+          "name": "dispatch_stage_010",
+          "qualname": "dispatch_stage_010.branch@160",
+          "string_flags": [
+            "- Arquivos listados: ",
+            "- Fonte: ",
+            "- Saída: "
+          ]
+        }
+      ],
+      "first_wave_eligible": false,
+      "flag": "--make-doi-manifest",
+      "hard_exclusions": [
+        "mutating_or_generating_command_semantics"
+      ],
+      "historical_stages": [
+        {
+          "arg_dests": [
+            "make_doi_manifest"
+          ],
+          "branch_index": 1,
+          "condition": "args.make_doi_manifest",
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "flags": [],
+          "function": "dispatch_stage_010",
+          "line": 160
+        }
+      ],
+      "parser_contract": {
+        "action": "store_true",
+        "aliases": [
+          "--make-doi-manifest"
+        ],
+        "choices": null,
+        "default": null,
+        "defined_at": {
+          "file": "software/academic_pipeline_mppg/academic_pipeline/cli_parser.py",
+          "function": "build_parser",
+          "line": 41
+        },
+        "nargs": null,
+        "required": null
+      },
+      "resolved_seed_handlers": [
+        "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_010.branch@160:160"
+      ],
+      "risk_level": "moderate",
+      "runtime_dependencies": [
+        "collections.abc",
+        "typing"
+      ],
+      "score_total": 26,
+      "scores": {
+        "absence_of_hard_exclusions": 0,
+        "informational_semantics": 0,
+        "no_network": 3,
+        "no_subprocess": 3,
+        "no_ui": 3,
+        "no_writes": 3,
+        "precedence_evidence": 3,
+        "process_state_safety": 3,
+        "resolved_call_graph": 2,
+        "small_transitive_surface": 3,
+        "test_evidence": 3
+      },
+      "seed_resolution_evidence": [
+        {
+          "handler": {
+            "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+            "line": 160,
+            "qualname": "dispatch_stage_010.branch@160"
+          },
+          "method": "synthetic_branch_body",
+          "resolved_key": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_010.branch@160:160"
+        }
+      ],
+      "tests": [
+        "software/academic_pipeline_mppg/app_bundle/tests/test_project_reports_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_rc10_smoke.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003c_dispatch_contract.py"
+      ],
+      "transitive_effects": {
+        "credential_markers": [],
+        "destructive_calls": [],
+        "dynamic_markers": [],
+        "has_chdir": false,
+        "has_global": false,
+        "has_input": false,
+        "loops": 0,
+        "mutates_sys_argv": false,
+        "mutates_sys_path": false,
+        "network_markers": [],
+        "output_extensions": [
+          ".csv"
+        ],
+        "prints": 4,
+        "raises": 1,
+        "return_codes": [],
+        "subprocess_markers": [],
+        "ui_markers": [],
+        "volatile_markers": [],
+        "write_calls": []
+      },
+      "transitive_function_count": 1,
+      "transitive_functions": [
+        {
+          "end_line": 176,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "line": 160,
+          "qualname": "dispatch_stage_010.branch@160"
+        }
+      ],
+      "unresolved_project_calls": [
+        "resolve"
+      ]
+    }
+  ],
+  "candidates_by_input_order": [
+    {
+      "call_graph_truncated": false,
+      "dest": "check_institution_compliance",
+      "direct_handlers": [
+        {
+          "arg_refs": [
+            "bib",
+            "docx",
+            "org",
+            "pdf"
+          ],
+          "calls": [
+            "dispatchresult",
+            "print",
+            "report.get",
+            "runtime",
+            "runtime.expanduser",
+            "runtime.expanduser.resolve",
+            "runtimeerror"
+          ],
+          "effects": {
+            "credential_markers": [],
+            "destructive_calls": [],
+            "has_chdir": false,
+            "has_global": false,
+            "has_input": false,
+            "loops": 0,
+            "mutates_sys_argv": false,
+            "mutates_sys_path": false,
+            "network_markers": [],
+            "output_extensions": [
+              ".bib",
+              ".docx",
+              ".org",
+              ".pdf",
+              ".toml"
+            ],
+            "prints": 2,
+            "raises": 1,
+            "return_codes": [],
+            "subprocess_markers": [],
+            "ui_markers": [],
+            "volatile_markers": [],
+            "write_calls": []
+          },
+          "end_line": 251,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "imports": [
+            "collections.abc",
+            "typing"
+          ],
+          "line": 239,
+          "name": "dispatch_stage_015",
+          "qualname": "dispatch_stage_015.branch@239",
+          "string_flags": [
+            "--check-institution-compliance exige --config caminho.toml"
+          ]
+        }
+      ],
+      "first_wave_eligible": true,
+      "flag": "--check-institution-compliance",
+      "hard_exclusions": [],
+      "historical_stages": [
+        {
+          "arg_dests": [
+            "check_institution_compliance"
+          ],
+          "branch_index": 1,
+          "condition": "args.check_institution_compliance",
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "flags": [],
+          "function": "dispatch_stage_015",
+          "line": 239
+        }
+      ],
+      "parser_contract": {
+        "action": "store_true",
+        "aliases": [
+          "--check-institution-compliance"
+        ],
+        "choices": null,
+        "default": null,
+        "defined_at": {
+          "file": "software/academic_pipeline_mppg/academic_pipeline/cli_parser.py",
+          "function": "build_parser",
+          "line": 21
+        },
+        "nargs": null,
+        "required": null
+      },
+      "resolved_seed_handlers": [
+        "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_015.branch@239:239"
+      ],
+      "risk_level": "low",
+      "runtime_dependencies": [
+        "collections.abc",
+        "typing"
+      ],
+      "score_total": 31,
+      "scores": {
+        "absence_of_hard_exclusions": 3,
+        "informational_semantics": 2,
+        "no_network": 3,
+        "no_subprocess": 3,
+        "no_ui": 3,
+        "no_writes": 3,
+        "precedence_evidence": 3,
+        "process_state_safety": 3,
+        "resolved_call_graph": 2,
+        "small_transitive_surface": 3,
+        "test_evidence": 3
+      },
+      "seed_resolution_evidence": [
+        {
+          "handler": {
+            "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+            "line": 239,
+            "qualname": "dispatch_stage_015.branch@239"
+          },
+          "method": "synthetic_branch_body",
+          "resolved_key": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_015.branch@239:239"
+        }
+      ],
+      "tests": [
+        "software/academic_pipeline_mppg/app_bundle/tests/test_article_workflow_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_bibliography_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_canonical_docx_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_document_core_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_document_model_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_docx_artifacts_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_official_package_entrypoint.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_support_services.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_prisma_integrations_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_translation_mindmap_characterization.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003a_orchestrator_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003b_parser_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003c_dispatch_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003f_main_unification_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004d_version_marker_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004e_compatibility_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c6_closure_contract.py"
+      ],
+      "transitive_effects": {
+        "credential_markers": [],
+        "destructive_calls": [],
+        "dynamic_markers": [],
+        "has_chdir": false,
+        "has_global": false,
+        "has_input": false,
+        "loops": 2,
+        "mutates_sys_argv": false,
+        "mutates_sys_path": false,
+        "network_markers": [],
+        "output_extensions": [
+          ".bib",
+          ".docx",
+          ".org",
+          ".pdf",
+          ".toml"
+        ],
+        "prints": 2,
+        "raises": 1,
+        "return_codes": [],
+        "subprocess_markers": [],
+        "ui_markers": [],
+        "volatile_markers": [],
+        "write_calls": []
+      },
+      "transitive_function_count": 4,
+      "transitive_functions": [
+        {
+          "end_line": 251,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "line": 239,
+          "qualname": "dispatch_stage_015.branch@239"
+        },
+        {
+          "end_line": 11,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/prisma_exportar_bib.py",
+          "line": 8,
+          "qualname": "norm"
+        },
+        {
+          "end_line": 18,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/prisma_exportar_bib.py",
+          "line": 13,
+          "qualname": "get"
+        },
+        {
+          "end_line": 328,
+          "file": "software/academic_pipeline_mppg/tools/refactor/ap003a_inventory_orchestrator.py",
+          "line": 319,
+          "qualname": "normalize"
+        }
+      ],
+      "unresolved_project_calls": [
+        "re.sub",
+        "resolve",
+        "unicodedata.combining"
+      ]
+    },
+    {
+      "call_graph_truncated": false,
+      "dest": "list_profiles",
+      "direct_handlers": [
+        {
+          "arg_refs": [],
+          "calls": [
+            "print_profiles"
+          ],
+          "effects": {
+            "credential_markers": [],
+            "destructive_calls": [],
+            "has_chdir": false,
+            "has_global": false,
+            "has_input": false,
+            "loops": 0,
+            "mutates_sys_argv": false,
+            "mutates_sys_path": false,
+            "network_markers": [],
+            "output_extensions": [],
+            "prints": 0,
+            "raises": 0,
+            "return_codes": [
+              0
+            ],
+            "subprocess_markers": [],
+            "ui_markers": [],
+            "volatile_markers": [],
+            "write_calls": []
+          },
+          "end_line": 4252,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "imports": [],
+          "line": 4250,
+          "name": "main",
+          "qualname": "main.branch@4250",
+          "string_flags": []
+        }
+      ],
+      "first_wave_eligible": true,
+      "flag": "--list-profiles",
+      "hard_exclusions": [],
+      "historical_stages": [
+        {
+          "arg_dests": [
+            "list_profiles"
+          ],
+          "branch_index": 1,
+          "condition": "args.list_profiles",
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "flags": [],
+          "function": "main",
+          "line": 4250
+        }
+      ],
+      "parser_contract": {
+        "action": "store_true",
+        "aliases": [
+          "--list-profiles"
+        ],
+        "choices": null,
+        "default": null,
+        "defined_at": {
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "function": "main",
+          "line": 4242
+        },
+        "nargs": null,
+        "required": null
+      },
+      "resolved_seed_handlers": [
+        "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py:main.branch@4250:4250"
+      ],
+      "risk_level": "low",
+      "runtime_dependencies": [],
+      "score_total": 32,
+      "scores": {
+        "absence_of_hard_exclusions": 3,
+        "informational_semantics": 3,
+        "no_network": 3,
+        "no_subprocess": 3,
+        "no_ui": 3,
+        "no_writes": 3,
+        "precedence_evidence": 3,
+        "process_state_safety": 3,
+        "resolved_call_graph": 2,
+        "small_transitive_surface": 3,
+        "test_evidence": 3
+      },
+      "seed_resolution_evidence": [
+        {
+          "handler": {
+            "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+            "line": 4250,
+            "qualname": "main.branch@4250"
+          },
+          "method": "synthetic_branch_body",
+          "resolved_key": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py:main.branch@4250:4250"
+        }
+      ],
+      "tests": [
+        "software/academic_pipeline_mppg/app_bundle/tests/test_entrypoints_orchestration_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_official_package_entrypoint.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_document_core.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_entrypoints.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_prisma_core.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_rendering.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_package_imports_support_services.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_packaging_metadata.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_paper_abstracts_layouts_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_rc10_smoke.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003a_orchestrator_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003b_parser_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003c_dispatch_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003d_document_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003e_prisma_generic_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003f_main_unification_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003g_stabilization_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004a_naming_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004b_module_file_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004c_internal_symbol_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap004f_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005b_consumer_canonicalization_plan_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005b_consumer_contract_reclassification.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c2_stabilization_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005c3_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005d_facade_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005e1_installation_entrypoint_inventory_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap005e2_isolated_build_installation_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006c_physical_materialization.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d1_runtime_consumer_migration.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d2_contract_validator_migration.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d3_operational_source_migration.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006d4d_source_csv_provenance_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006e3_consumer_stabilization.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006e5_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006f4_comparative_source_distribution_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap006f5_closure_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007b_native_runtime_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c3_doctor_public_integration_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c5_check_config_public_integration_contract.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap007c6_closure_contract.py"
+      ],
+      "transitive_effects": {
+        "credential_markers": [],
+        "destructive_calls": [],
+        "dynamic_markers": [],
+        "has_chdir": false,
+        "has_global": false,
+        "has_input": false,
+        "loops": 1,
+        "mutates_sys_argv": false,
+        "mutates_sys_path": false,
+        "network_markers": [],
+        "output_extensions": [],
+        "prints": 3,
+        "raises": 0,
+        "return_codes": [
+          0
+        ],
+        "subprocess_markers": [],
+        "ui_markers": [],
+        "volatile_markers": [],
+        "write_calls": []
+      },
+      "transitive_function_count": 2,
+      "transitive_functions": [
+        {
+          "end_line": 4237,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "line": 4233,
+          "qualname": "print_profiles"
+        },
+        {
+          "end_line": 4252,
+          "file": "software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_toml_generator_interativo.py",
+          "line": 4250,
+          "qualname": "main.branch@4250"
+        }
+      ],
+      "unresolved_project_calls": [
+        "textwrap.fill"
+      ]
+    },
+    {
+      "call_graph_truncated": false,
+      "dest": "make_doi_manifest",
+      "direct_handlers": [
+        {
+          "arg_refs": [
+            "input_dir",
+            "input_zip",
+            "output"
+          ],
+          "calls": [
+            "dispatchresult",
+            "print",
+            "runtime",
+            "runtime.expanduser",
+            "runtime.expanduser.resolve",
+            "runtimeerror"
+          ],
+          "effects": {
+            "credential_markers": [],
+            "destructive_calls": [],
+            "has_chdir": false,
+            "has_global": false,
+            "has_input": false,
+            "loops": 0,
+            "mutates_sys_argv": false,
+            "mutates_sys_path": false,
+            "network_markers": [],
+            "output_extensions": [
+              ".csv"
+            ],
+            "prints": 4,
+            "raises": 1,
+            "return_codes": [],
+            "subprocess_markers": [],
+            "ui_markers": [],
+            "volatile_markers": [],
+            "write_calls": []
+          },
+          "end_line": 176,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "imports": [
+            "collections.abc",
+            "typing"
+          ],
+          "line": 160,
+          "name": "dispatch_stage_010",
+          "qualname": "dispatch_stage_010.branch@160",
+          "string_flags": [
+            "- Arquivos listados: ",
+            "- Fonte: ",
+            "- Saída: "
+          ]
+        }
+      ],
+      "first_wave_eligible": false,
+      "flag": "--make-doi-manifest",
+      "hard_exclusions": [
+        "mutating_or_generating_command_semantics"
+      ],
+      "historical_stages": [
+        {
+          "arg_dests": [
+            "make_doi_manifest"
+          ],
+          "branch_index": 1,
+          "condition": "args.make_doi_manifest",
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "flags": [],
+          "function": "dispatch_stage_010",
+          "line": 160
+        }
+      ],
+      "parser_contract": {
+        "action": "store_true",
+        "aliases": [
+          "--make-doi-manifest"
+        ],
+        "choices": null,
+        "default": null,
+        "defined_at": {
+          "file": "software/academic_pipeline_mppg/academic_pipeline/cli_parser.py",
+          "function": "build_parser",
+          "line": 41
+        },
+        "nargs": null,
+        "required": null
+      },
+      "resolved_seed_handlers": [
+        "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_010.branch@160:160"
+      ],
+      "risk_level": "moderate",
+      "runtime_dependencies": [
+        "collections.abc",
+        "typing"
+      ],
+      "score_total": 26,
+      "scores": {
+        "absence_of_hard_exclusions": 0,
+        "informational_semantics": 0,
+        "no_network": 3,
+        "no_subprocess": 3,
+        "no_ui": 3,
+        "no_writes": 3,
+        "precedence_evidence": 3,
+        "process_state_safety": 3,
+        "resolved_call_graph": 2,
+        "small_transitive_surface": 3,
+        "test_evidence": 3
+      },
+      "seed_resolution_evidence": [
+        {
+          "handler": {
+            "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+            "line": 160,
+            "qualname": "dispatch_stage_010.branch@160"
+          },
+          "method": "synthetic_branch_body",
+          "resolved_key": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py:dispatch_stage_010.branch@160:160"
+        }
+      ],
+      "tests": [
+        "software/academic_pipeline_mppg/app_bundle/tests/test_project_reports_characterization.py",
+        "software/academic_pipeline_mppg/app_bundle/tests/test_rc10_smoke.py",
+        "software/academic_pipeline_mppg/tests/characterization/test_ap003c_dispatch_contract.py"
+      ],
+      "transitive_effects": {
+        "credential_markers": [],
+        "destructive_calls": [],
+        "dynamic_markers": [],
+        "has_chdir": false,
+        "has_global": false,
+        "has_input": false,
+        "loops": 0,
+        "mutates_sys_argv": false,
+        "mutates_sys_path": false,
+        "network_markers": [],
+        "output_extensions": [
+          ".csv"
+        ],
+        "prints": 4,
+        "raises": 1,
+        "return_codes": [],
+        "subprocess_markers": [],
+        "ui_markers": [],
+        "volatile_markers": [],
+        "write_calls": []
+      },
+      "transitive_function_count": 1,
+      "transitive_functions": [
+        {
+          "end_line": 176,
+          "file": "software/academic_pipeline_mppg/academic_pipeline/command_dispatch.py",
+          "line": 160,
+          "qualname": "dispatch_stage_010.branch@160"
+        }
+      ],
+      "unresolved_project_calls": [
+        "resolve"
+      ]
+    }
+  ],
+  "decision": {
+    "justification": "Foi selecionado apenas o candidato elegível de maior pontuação, preservando uma primeira onda mínima. A elegibilidade exige ausência de exclusões duras após resolução transitiva dirigida.",
+    "next_phase": "AP-007D.2-native-adapter-isolated",
+    "rejected_flags": [
+      "--check-institution-compliance",
+      "--make-doi-manifest"
+    ],
+    "selected_flags": [
+      "--list-profiles"
+    ],
+    "selection_limit": 1,
+    "status": "selected"
+  },
+  "generated_at_utc": "2026-07-23T17:33:00.756841+00:00",
+  "integrity": {
+    "decision_payload_sha256": "4bd30fc7d28e4bc5feb8db57ee46d77dbd26b0d3f0f5fa7d58d5f5633dc02cfb"
+  },
+  "method": {
+    "call_graph_max_depth": 5,
+    "call_graph_max_nodes_per_candidate": 80,
+    "commands_executed_for_behavior": [],
+    "excluded_path_components": [
+      ".mypy_cache",
+      ".nox",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".tox",
+      ".venv",
+      "__pycache__",
+      "backup",
+      "backups",
+      "build",
+      "dist",
+      "node_modules",
+      "site-packages",
+      "venv"
+    ],
+    "full_home_traversal": false,
+    "max_tracked_relative_path_bytes": 1024,
+    "name": "directed-transitive-ast-characterization-v3-branch-seed-resolution",
+    "parse_failures_outside_selected_surface": [],
+    "path_filter_applied_before_filesystem_stat": true,
+    "policy": "fail-closed-low-risk-single-command",
+    "selection_limit": 1,
+    "synthetic_branch_handlers_resolved_from_ast": true,
+    "tracked_python_files_only": true
+  },
+  "observed_state": {
+    "d0_inventory_payload_sha256": "097fef67ea1242fdc0be89ce934330f45cede8df1165dbd45fb78a9f06269044",
+    "head": "ab066e68947ac5f33f1c12c9a7db5086d0f93790",
+    "runtime_sha256": "7a2fd63ae060c74fe3f06e2eaf7457f176dc5059c0ac7aa95fc23805e810b1e6",
+    "tree": "e8bebd0b88a719a765ba6cc78150b01e024de9dd"
+  },
+  "precedence_contract": {
+    "must_test_before_public_integration": [
+      "--help",
+      "--doctor",
+      "--check-config",
+      "prior_historical_stage",
+      "unmigrated_legacy_command"
+    ],
+    "public_route_change_in_this_phase": false
+  },
+  "risks": [
+    "A resolução transitiva é estática e dirigida; despacho dinâmico pode exigir prova adicional na AP-007D.2.",
+    "Os comandos não foram executados nesta fase; a equivalência observável deverá ser medida no adaptador isolado.",
+    "Branches sintéticos do inventário AP-007D.0 são resolvidos pelo arquivo, função proprietária e linha AST antes da análise transitiva.",
+    "Chamadas externas não resolvidas são registradas e podem bloquear a elegibilidade quando excedem o limite conservador.",
+    "A primeira onda foi limitada deliberadamente a um comando."
+  ],
+  "schema": "ap007d1-first-operational-wave-decision/v2",
+  "scope": {
+    "git_mutations": [],
+    "produced_files": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007D1_FIRST_OPERATIONAL_WAVE_DECISION.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007d1_first_operational_wave_decision.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007d1_first_operational_wave_contract.py",
+      "tools/refactor/ap007d1_validate_first_operational_wave.py"
+    ],
+    "production_files_modified": [],
+    "public_routes_changed": []
+  }
+}
