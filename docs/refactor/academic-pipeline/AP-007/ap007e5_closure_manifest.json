@@ -1,0 +1,1512 @@
+{
+  "approved_corrections": [
+    {
+      "code": "POST_COMMIT_PHASE_LOCAL_VALIDATORS_NOT_REPLAYED",
+      "resolution": "revalidate immutable hashes, schemas and stable exact node IDs instead of replaying precommit scope gates"
+    },
+    {
+      "code": "VENV_LAUNCHER_PRESERVED_WITH_REAL_EXECUTABLE_SEPARATE",
+      "resolution": "execute the canonical virtualenv launcher while recording its resolved base interpreter independently"
+    },
+    {
+      "code": "HISTORICAL_TESTS_EXECUTED_INDIVIDUALLY",
+      "resolution": "classify each exact node ID without maxfail or batch masking"
+    },
+    {
+      "code": "DIRECT_PEP517_BACKEND_HOOKS_NO_FRONTEND_INSTALL",
+      "resolution": "use the declared setuptools.build_meta hooks when the optional build frontend is absent"
+    },
+    {
+      "code": "TRACKED_RESIDUAL_ARCHIVE_MEMBERS_FILTERED_BEFORE_EXTRACTION",
+      "resolution": "classify git-archive member names before destination path construction or filesystem extraction"
+    },
+    {
+      "code": "METADATA_HEADER_NORMALIZED_TO_JSON_NATIVE_TYPES",
+      "resolution": "parse email metadata with the default policy and recursively reject non-native JSON values"
+    },
+    {
+      "code": "STABLE_POST_PHASE_CONTRACTS_SELECTED_BY_EXACT_NODEID",
+      "resolution": "exclude only nominal phase-local validator execution tests from later expanded scopes"
+    },
+    {
+      "code": "MINIMAL_DEPENDENCY_SYMMETRY_FOR_SOURCE_WHEEL_SDIST",
+      "resolution": "compare source, wheel and sdist in equivalent dependency-minimal disposable environments"
+    },
+    {
+      "code": "NOMINAL_VOLATILE_NORMALIZATION_ONLY",
+      "resolution": "normalize only documented paths and traceback framing while preserving semantic stdout and stderr"
+    },
+    {
+      "code": "JSON_NATIVE_PREFLIGHT_BEFORE_MANIFEST_WRITE",
+      "resolution": "validate the complete manifest recursively before atomic serialization"
+    },
+    {
+      "code": "INTEGRATED_CENSUS_SPLIT_FROM_CURRENT_PRODUCTIVE_REGRESSION",
+      "resolution": "freeze and classify the exact historical/phase-local failure set before rerunning only the current operational suite"
+    }
+  ],
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "commit": "766956710435f1c338d2e0332d24e55106b981b7",
+    "origin": "git@github.com:gustavo-detarso/mppg.git",
+    "python_launcher": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python",
+    "runtime_sha256": "b3ef27fb472985634e6b678158a607bcbda3d01d942b767a139048d25369388c",
+    "script_revision": "v4-complete-seventy-debt-census-formal-closure",
+    "tree": "1d673e7c324b74f1fef033578aa995e836da1014",
+    "upstream": "origin/ap-refactor/04-consumer-canonicalization"
+  },
+  "canonical_environment": {
+    "after": {
+      "package_count": 42,
+      "packages_sha256": "f0fdccfee13529ae0ba01fd3bd8b3656c6c6fd8de7407e0b8d7642c60a91d49e",
+      "python_launcher": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python",
+      "python_real": "/home/gustavodetarso/.pyenv/versions/3.11.13/bin/python3.11"
+    },
+    "before": {
+      "package_count": 42,
+      "packages_sha256": "f0fdccfee13529ae0ba01fd3bd8b3656c6c6fd8de7407e0b8d7642c60a91d49e",
+      "python_launcher": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python",
+      "python_real": "/home/gustavodetarso/.pyenv/versions/3.11.13/bin/python3.11"
+    },
+    "preserved": true
+  },
+  "commit_decision": {
+    "candidate_path_count": 24,
+    "candidate_paths": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007E0_DISTRIBUTION_ISOLATION_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e0_distribution_isolation_inventory.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py",
+      "tools/refactor/ap007e0_validate_distribution_isolation_inventory.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E1_SOURCE_EXECUTION_MATRIX.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e1_source_execution_matrix.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e1_source_execution_matrix_contract.py",
+      "tools/refactor/ap007e1_validate_source_execution_matrix.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E2_CONTROLLED_BUILD_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e2_controlled_build_inventory.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e2_controlled_build_inventory_contract.py",
+      "tools/refactor/ap007e2_validate_controlled_build_inventory.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E3_ISOLATED_INSTALLATION_MATRIX.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e3_isolated_installation_matrix.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e3_isolated_installation_matrix_contract.py",
+      "tools/refactor/ap007e3_validate_isolated_installation_matrix.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E4_SOURCE_DISTRIBUTION_EQUIVALENCE.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e4_source_distribution_equivalence.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e4_source_distribution_equivalence_contract.py",
+      "tools/refactor/ap007e4_validate_source_distribution_equivalence.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E5_CLOSURE_REPORT.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e5_closure_manifest.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e5_closure_contract.py",
+      "tools/refactor/ap007e5_validate_closure.py"
+    ],
+    "commit_performed": false,
+    "decision": "ready_for_isolated_commit_decision",
+    "push_performed": false,
+    "ready": true,
+    "recommended_subject": "refactor(academic-pipeline): close AP-007E distribution compatibility",
+    "requires_explicit_user_authorization": true,
+    "staging_performed": false,
+    "tag_performed": false
+  },
+  "findings": [
+    {
+      "blocking": false,
+      "code": "TRACKED_RESIDUAL_SOURCE_MEMBERS_EXCLUDED_BEFORE_EXTRACTION",
+      "count": 435,
+      "detail": "tracked backup/cache/build residue was classified from archive member names and excluded before destination path construction or extraction",
+      "excluded_members_sha256": "a4452f3dd6413190c33047a5eeb5fa9821bc1abe6105c85dcc46cee7c69313c8",
+      "severity": "warning",
+      "source_phase": "AP-007E.2",
+      "target_phase": "AP-007F"
+    },
+    {
+      "blocking": false,
+      "code": "SDIST_RAW_ARCHIVE_HASH_DIFFERS_NORMALIZED_EQUAL",
+      "detail": "raw sdist bytes differ while normalized member manifests are equal",
+      "severity": "info",
+      "source_phase": "AP-007E.2"
+    },
+    {
+      "blocking": false,
+      "code": "PACKAGE_DATA_CANDIDATES_NOT_PRESENT_IN_WHEEL",
+      "count": 121,
+      "detail": "E0 candidates require classification in AP-007E.3/E.4; not all non-Python source files are necessarily distributable package data",
+      "paths": [
+        "app_bundle/.academic_pipeline_tui_state.json",
+        "app_bundle/clean_institutional_tree_report.json",
+        "app_bundle/docs/CHANGELOG_rc10_1.md",
+        "app_bundle/docs/CHANGELOG_rc10_2.md",
+        "app_bundle/docs/CHANGELOG_rc10_3.md",
+        "app_bundle/docs/CHANGELOG_rc10_4.md",
+        "app_bundle/docs/CHANGELOG_rc10_5.md",
+        "app_bundle/docs/CHANGELOG_rc10_6.md",
+        "app_bundle/docs/CHANGELOG_rc10_7.md",
+        "app_bundle/docs/CHANGELOG_rc10_7_1.md",
+        "app_bundle/docs/CHANGELOG_rc10_7_10.md",
+        "app_bundle/docs/CHANGELOG_rc10_7_2.md",
+        "app_bundle/docs/CHANGELOG_rc10_7_4.md",
+        "app_bundle/docs/CHANGELOG_rc10_7_8.md",
+        "app_bundle/docs/CHANGELOG_rc10_7_9.md",
+        "app_bundle/docs/CONFORMIDADE_INSTITUCIONAL.md",
+        "app_bundle/docs/DEPENDENCIAS.md",
+        "app_bundle/docs/DIAGNOSTICO_VALIDACAO_RASTREABILIDADE.md",
+        "app_bundle/docs/README_rc10.md",
+        "app_bundle/docs/SETUP_PIPENV.md",
+        "app_bundle/docs/TOML_GENERATOR_RC10_7.md",
+        "app_bundle/examples/doi/doi_manifest_template.csv",
+        "app_bundle/examples/doi/doi_manifest_template_com_exemplos.csv",
+        "app_bundle/institutions/README_INSTITUTIONS.md",
+        "app_bundle/institutions/fgv/assets/README.md",
+        "app_bundle/institutions/fgv/manuals/README.md",
+        "app_bundle/projetos/atividade_3/atividade_config.toml",
+        "app_bundle/projetos/atividade_4/atividade_config.toml",
+        "app_bundle/projetos/atividade_case_einstein/.academic_pipeline/cache/atividade_case_einstein/case_einstein_quarta_revolucao_industrial.txt",
+        "app_bundle/projetos/atividade_case_einstein/atividade_case_einstein.toml",
+        "app_bundle/projetos/atividade_case_einstein/fontes/case_einstein_quarta_revolucao_industrial.txt",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.bib",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.check_config_report.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.compliance_report.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.compliance_report.md",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.document.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.org",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.outputs.txt",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.prompt_lock.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.prompt_lock.md",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.quality_report.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.quality_report.md",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.rc10_report.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.run_report.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein.tex",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein_bibliografia_diagnostico.json",
+        "app_bundle/projetos/atividade_case_einstein/output/atividade_case_einstein/atividade_case_einstein_export_pdf.el",
+        "app_bundle/projetos/atividade_case_einstein/src/case_einstein_quarta_revolucao_industrial.txt",
+        "app_bundle/projetos/atividade_wellhub/.academic_pipeline/cache/atividade_wellhub/wellhub.txt",
+        "app_bundle/projetos/atividade_wellhub/atividade_wellhub.toml",
+        "app_bundle/projetos/atividade_wellhub/fontes/wellhub.txt",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.bib",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.check_config_report.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.compliance_report.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.compliance_report.md",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.document.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.org",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.outputs.txt",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.prompt_lock.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.prompt_lock.md",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.quality_report.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.quality_report.md",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.rc10_report.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.run_report.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub.tex",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub_bibliografia_diagnostico.json",
+        "app_bundle/projetos/atividade_wellhub/output/atividade_wellhub/atividade_wellhub_export_pdf.el",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.busca_prisma_log.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.candidatos_brutos.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.candidatos_deduplicados.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.check_config_report.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.outputs.txt",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.pre_triagem_ia.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.prisma_report.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.prompt_lock.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.prompt_lock.md",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.protocolo_busca_prisma.md",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.rc10_report.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar.org",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar.tex",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.relatorio_prisma_preliminar_export_pdf.el",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.run_report.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/execucoes_anteriores/fontes_instaveis_20260630_162614/relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.csv",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.busca_prisma_log.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.candidatos_brutos.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.candidatos_deduplicados.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.check_config_report.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_log.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.curadoria_ia_resumo.txt",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma.png",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.diagrama_prisma_contagens.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.matriz_estudos_incluidos.csv",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.outputs.txt",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.pre_triagem_ia.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.prisma_report.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.prisma_report_final.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.prompt_lock.json",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.prompt_lock.md",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.protocolo_busca_prisma.md",
+        "app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.rc10_report.json"
+      ],
+      "severity": "warning",
+      "source_phase": "AP-007E.2"
+    },
+    {
+      "blocking": false,
+      "code": "DECLARED_RUNTIME_DEPENDENCIES_NOT_INSTALLED_BY_POLICY",
+      "declared_dependency_count": 6,
+      "detail": "artifact installed with --no-deps and --no-index by phase policy",
+      "environment": "wheel-origin",
+      "pip_check_line_count": 6,
+      "pip_check_lines": [
+        "academic-pipeline-mppg 0.1.0 requires openai, which is not installed.",
+        "academic-pipeline-mppg 0.1.0 requires openpyxl, which is not installed.",
+        "academic-pipeline-mppg 0.1.0 requires pydantic, which is not installed.",
+        "academic-pipeline-mppg 0.1.0 requires pypdf, which is not installed.",
+        "academic-pipeline-mppg 0.1.0 requires python-docx, which is not installed.",
+        "academic-pipeline-mppg 0.1.0 requires python-dotenv, which is not installed."
+      ],
+      "severity": "info",
+      "source_phase": "AP-007E.3"
+    },
+    {
+      "blocking": false,
+      "code": "RECONSTRUCTED_SDIST_RAW_HASH_DIFFERS_NORMALIZED_EQUAL",
+      "severity": "info",
+      "source_phase": "AP-007E.3"
+    },
+    {
+      "blocking": false,
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT_CARRIED_FORWARD",
+      "count": 4,
+      "severity": "warning",
+      "source_phase": "AP-007E.4",
+      "target_phase": "AP-007F"
+    },
+    {
+      "blocking": false,
+      "code": "DECLARED_RUNTIME_DEPENDENCIES_ABSENT_BY_SYMMETRIC_MINIMAL_ENV_POLICY",
+      "count": 6,
+      "dependencies": [
+        "openai",
+        "openpyxl",
+        "pydantic",
+        "pypdf",
+        "python-docx",
+        "python-dotenv"
+      ],
+      "severity": "info",
+      "source_phase": "AP-007E.4"
+    },
+    {
+      "blocking": false,
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "count": 4,
+      "severity": "warning",
+      "source_phase": "AP-007E.5",
+      "target_phase": "AP-007F"
+    },
+    {
+      "blocking": false,
+      "classification_counts": {
+        "frozen_early_phase_snapshot_or_hash_contract": 13,
+        "historical_candidate_inventory_expanded": 2,
+        "historical_root_or_closure_contract": 13,
+        "legacy_entrypoint_or_delegation_contract_superseded": 12,
+        "phase_local_precommit_scope_contract": 5,
+        "removed_compatibility_bridge_contract": 12,
+        "superseded_incremental_native_route_or_hash_contract": 13
+      },
+      "code": "INTEGRATED_HISTORICAL_PHASE_CONTRACT_DEBT",
+      "count": 70,
+      "severity": "warning",
+      "source_phase": "AP-007E.5",
+      "target_phase": "AP-007F"
+    }
+  ],
+  "historical_compatibility": {
+    "blocking_failure_count": 0,
+    "classified_failure_count": 4,
+    "decision": "classifications_preserved_for_ap007f",
+    "execution_mode": "individual_exact_nodeid",
+    "passed_count": 0,
+    "tests": [
+      {
+        "blocking": false,
+        "classification": "legacy_direct_source_bridge_absent",
+        "no_timeout": true,
+        "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+        "return_code": 1,
+        "status": "classified_failure",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "d0a9c36a7e3dae42054eddfd721106473d476ee02c90e2a2506dc24106e696c6",
+        "target_phase": "AP-007F",
+        "terminal_output": [
+          "",
+          "    def test_legacy_script_help_remains_supported() -> None:",
+          "        proc = _run_python(str(LEGACY_SCRIPT), \"--help\")",
+          "    ",
+          ">       assert proc.returncode == 0, proc.stderr",
+          "E       AssertionError: Traceback (most recent call last):",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>",
+          "E             raise SystemExit(main())",
+          "E                              ^^^^^^",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main",
+          "E             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint",
+          "E         ModuleNotFoundError: No module named 'academic_pipeline'",
+          "E         ",
+          "E       assert 1 == 0",
+          "E        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode",
+          "",
+          "app_bundle/tests/test_official_package_entrypoint.py:73: AssertionError",
+          "=========================== short test summary info ============================",
+          "FAILED app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+          "1 failed in 0.63s"
+        ]
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_direct_source_bridge_absent",
+        "no_timeout": true,
+        "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+        "return_code": 1,
+        "status": "classified_failure",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "38ff1e6232e1c7b40a13d74b2d218de6ef4860dae0b915b0fe700d8b12fe00b5",
+        "target_phase": "AP-007F",
+        "terminal_output": [
+          "        official = _run_python(\"-m\", \"academic_pipeline\", \"--help\")",
+          "        legacy = _run_python(str(LEGACY_SCRIPT), \"--help\")",
+          "    ",
+          "        assert official.returncode == 0, official.stderr",
+          ">       assert legacy.returncode == 0, legacy.stderr",
+          "E       AssertionError: Traceback (most recent call last):",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>",
+          "E             raise SystemExit(main())",
+          "E                              ^^^^^^",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main",
+          "E             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint",
+          "E         ModuleNotFoundError: No module named 'academic_pipeline'",
+          "E         ",
+          "E       assert 1 == 0",
+          "E        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode",
+          "",
+          "app_bundle/tests/test_official_package_entrypoint.py:83: AssertionError",
+          "=========================== short test summary info ============================",
+          "FAILED app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+          "1 failed in 0.70s"
+        ]
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_direct_source_bridge_absent",
+        "no_timeout": true,
+        "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+        "return_code": 1,
+        "status": "classified_failure",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "a0c6e4222616c21326bacf5e3b2c6e56c1a416b8d1f022f952d8d9d08d731e01",
+        "target_phase": "AP-007F",
+        "terminal_output": [
+          "        official = _run_python(\"-m\", \"academic_pipeline\", \"--list-institutions\")",
+          "        legacy = _run_python(str(LEGACY_SCRIPT), \"--list-institutions\")",
+          "    ",
+          "        assert official.returncode == 0, official.stderr",
+          ">       assert legacy.returncode == 0, legacy.stderr",
+          "E       AssertionError: Traceback (most recent call last):",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>",
+          "E             raise SystemExit(main())",
+          "E                              ^^^^^^",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main",
+          "E             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint",
+          "E         ModuleNotFoundError: No module named 'academic_pipeline'",
+          "E         ",
+          "E       assert 1 == 0",
+          "E        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode",
+          "",
+          "app_bundle/tests/test_official_package_entrypoint.py:92: AssertionError",
+          "=========================== short test summary info ============================",
+          "FAILED app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+          "1 failed in 0.71s"
+        ]
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_direct_source_bridge_absent",
+        "no_timeout": true,
+        "nodeid": "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+        "return_code": 1,
+        "status": "classified_failure",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "a931b0cf2e455d0ff6c0a61be4b22cad248cdc255b588c88b46dd1fb823ca3a7",
+        "target_phase": "AP-007F",
+        "terminal_output": [
+          "            \"--list-institutions\",",
+          "        )",
+          "    ",
+          "        assert target.returncode == 0, target.stderr",
+          ">       assert legacy.returncode == 0, legacy.stderr",
+          "E       AssertionError: Traceback (most recent call last):",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>",
+          "E             raise SystemExit(main())",
+          "E                              ^^^^^^",
+          "E           File \"/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main",
+          "E             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint",
+          "E         ModuleNotFoundError: No module named 'academic_pipeline'",
+          "E         ",
+          "E       assert 1 == 0",
+          "E        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode",
+          "",
+          "app_bundle/tests/test_packaging_metadata.py:161: AssertionError",
+          "=========================== short test summary info ============================",
+          "FAILED app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+          "1 failed in 0.70s"
+        ]
+      }
+    ]
+  },
+  "integrated_regression_census": {
+    "blocking": false,
+    "classification_counts": {
+      "frozen_early_phase_snapshot_or_hash_contract": 13,
+      "historical_candidate_inventory_expanded": 2,
+      "historical_root_or_closure_contract": 13,
+      "legacy_entrypoint_or_delegation_contract_superseded": 12,
+      "phase_local_precommit_scope_contract": 5,
+      "removed_compatibility_bridge_contract": 12,
+      "superseded_incremental_native_route_or_hash_contract": 13
+    },
+    "classifications": [
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[academic_pipeline_rc10.py-document_model can\\xf4nico]",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[artigo_prisma_workflow.py-Estado e valida\\xe7\\xe3o]",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_public_main_delegates_to_cli",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_package_imports_entrypoints.py::test_historical_entrypoints_keep_direct_script_help[academic_pipeline_rc10-document_model can\\xf4nico]",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_package_imports_entrypoints.py::test_rc10_official_package_and_legacy_commands_match",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_package_imports_prisma_core.py::test_official_and_legacy_entrypoints_remain_equivalent",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_package_imports_rendering.py::test_official_and_legacy_entrypoints_remain_equivalent",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "legacy_entrypoint_or_delegation_contract_superseded",
+        "nodeid": "app_bundle/tests/test_package_imports_support_services.py::test_official_and_legacy_entrypoints_remain_equivalent",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003a_orchestrator_contract.py::test_ap003a_cli_help_contract[official-package-module]",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003b_parser_contract.py::test_direct_script_help_snapshot_is_unchanged",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003b_parser_contract.py::test_package_module_help_snapshot_is_unchanged",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003c_dispatch_contract.py::test_help_surfaces_are_semantically_identical",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003d_document_contract.py::test_parser_and_dispatch_are_byte_identical",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003d_document_contract.py::test_help_surfaces_remain_semantically_identical",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003e_prisma_generic_contract.py::test_previous_phase_modules_are_byte_identical",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003e_prisma_generic_contract.py::test_help_surfaces_remain_semantically_identical",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003f_main_unification_contract.py::test_previous_phase_files_except_prisma_are_byte_identical",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003f_main_unification_contract.py::test_help_surfaces_remain_semantically_identical",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003g_stabilization_contract.py::test_structural_modules_compile_and_match_frozen_hashes",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap003g_stabilization_contract.py::test_three_help_surfaces_remain_equivalent",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "frozen_early_phase_snapshot_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap004b_module_file_application_contract.py::test_ap004b_historical_and_canonical_orchestrator_help_match",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_hash_matches_postimage",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_canonical_capture_assignments_exist",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_internal_consumers_use_canonical_names",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_six_productive_consumers_were_migrated",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_legacy_aliases_remain_compatibility_bindings",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_no_new_public_export_was_added",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_compiles",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_core_hashes_match",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_validator_check_mode",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005c3_closure_contract.py::test_closure_validator_check_mode",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_preclosure_inventory_is_preserved",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_closure_artifact_manifest_is_exact",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_root_or_closure_contract",
+        "nodeid": "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_validator_check_mode",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_physical_topology_contract",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_resolver_uses_structural_markers",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_ap006d1_validator_accepts_materialized_tree",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_compatibility_bridge_remains_relative",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_validator_accepts_materialized_tree",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_bridge_remains_relative",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_validator_accepts_materialized_tree",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_bridge_remains_relative",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d4_closure_contract.py::test_closure_validator_confirms_chain_and_contract",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d4b_generated_el_preservation.py::test_validator_confirms_hashes_bridge_and_generator_role",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d4c_cache_regeneration_contract.py::test_validator_confirms_pairs_and_productive_primitive",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "removed_compatibility_bridge_contract",
+        "nodeid": "tests/characterization/test_ap006d4d_source_csv_provenance_contract.py::test_validator_confirms_no_runtime_dereference",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_candidate_inventory_expanded",
+        "nodeid": "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_validator_confirms_candidate_blobs_and_paths",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "historical_candidate_inventory_expanded",
+        "nodeid": "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_contract_artifacts_do_not_expand_candidate_set",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "phase_local_precommit_scope_contract",
+        "nodeid": "tests/characterization/test_ap006e1_distribution_compatibility_baseline.py::test_ap006e1_distribution_compatibility_baseline",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "phase_local_precommit_scope_contract",
+        "nodeid": "tests/characterization/test_ap006e3_consumer_stabilization.py::test_ap006e3_validator_accepts_current_repository_state",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "phase_local_precommit_scope_contract",
+        "nodeid": "tests/characterization/test_ap006e5_closure_contract.py::test_ap006e5_validator_accepts_current_repository_state",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "phase_local_precommit_scope_contract",
+        "nodeid": "tests/characterization/test_ap006f1_dependency_decision_matrix_contract.py::test_ap006f1_dependency_decision_matrix_contract",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "phase_local_precommit_scope_contract",
+        "nodeid": "tests/characterization/test_ap006f5_closure_contract.py::test_ap006f5_validator_accepts_precommit_closure",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007b_closure_contract.py::test_ap007b3_validator_accepts_state",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007b_native_runtime_contract.py::test_route_selection_is_explicit",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007b_native_runtime_contract.py::test_cli_main_routes_non_native_command_to_injected_fallback",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007b_native_runtime_contract.py::test_explicit_argv_does_not_read_process_arguments",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007b_native_runtime_contract.py::test_public_module_matches_historical_first_wave[help-argv0]",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007c2_doctor_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_routes",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_check_config_remains_list_fallback",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007c4_check_config_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py::test_runtime_and_adapter_hashes_match_manifest",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py::test_hashes_match_manifest",
+        "target_phase": "AP-007F"
+      },
+      {
+        "blocking": false,
+        "classification": "superseded_incremental_native_route_or_hash_contract",
+        "nodeid": "tests/characterization/test_ap007d5_doi_manifest_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase",
+        "target_phase": "AP-007F"
+      }
+    ],
+    "command": [
+      "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-ra",
+      "app_bundle/tests",
+      "tests",
+      "--deselect",
+      "tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py::test_ap007e0_validator_executes_successfully"
+    ],
+    "expected_classification_counts": {
+      "frozen_early_phase_snapshot_or_hash_contract": 13,
+      "historical_candidate_inventory_expanded": 2,
+      "historical_root_or_closure_contract": 13,
+      "legacy_entrypoint_or_delegation_contract_superseded": 12,
+      "phase_local_precommit_scope_contract": 5,
+      "removed_compatibility_bridge_contract": 12,
+      "superseded_incremental_native_route_or_hash_contract": 13
+    },
+    "expected_failed_nodeids": [
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[academic_pipeline_rc10.py-document_model can\\xf4nico]",
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[artigo_prisma_workflow.py-Estado e valida\\xe7\\xe3o]",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_public_main_delegates_to_cli",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_historical_entrypoints_keep_direct_script_help[academic_pipeline_rc10-document_model can\\xf4nico]",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_rc10_official_package_and_legacy_commands_match",
+      "app_bundle/tests/test_package_imports_prisma_core.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_package_imports_rendering.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_package_imports_support_services.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+      "tests/characterization/test_ap003a_orchestrator_contract.py::test_ap003a_cli_help_contract[official-package-module]",
+      "tests/characterization/test_ap003b_parser_contract.py::test_direct_script_help_snapshot_is_unchanged",
+      "tests/characterization/test_ap003b_parser_contract.py::test_package_module_help_snapshot_is_unchanged",
+      "tests/characterization/test_ap003c_dispatch_contract.py::test_help_surfaces_are_semantically_identical",
+      "tests/characterization/test_ap003d_document_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003d_document_contract.py::test_parser_and_dispatch_are_byte_identical",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_previous_phase_modules_are_byte_identical",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_previous_phase_files_except_prisma_are_byte_identical",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_structural_modules_compile_and_match_frozen_hashes",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_three_help_surfaces_remain_equivalent",
+      "tests/characterization/test_ap004b_module_file_application_contract.py::test_ap004b_historical_and_canonical_orchestrator_help_match",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_canonical_capture_assignments_exist",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_internal_consumers_use_canonical_names",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_legacy_aliases_remain_compatibility_bindings",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_no_new_public_export_was_added",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_compiles",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_hash_matches_postimage",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_six_productive_consumers_were_migrated",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_core_hashes_match",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_validator_check_mode",
+      "tests/characterization/test_ap005c3_closure_contract.py::test_closure_validator_check_mode",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_closure_artifact_manifest_is_exact",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_preclosure_inventory_is_preserved",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_validator_check_mode",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_physical_topology_contract",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_resolver_uses_structural_markers",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_ap006d1_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_compatibility_bridge_remains_relative",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_bridge_remains_relative",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_bridge_remains_relative",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d4_closure_contract.py::test_closure_validator_confirms_chain_and_contract",
+      "tests/characterization/test_ap006d4b_generated_el_preservation.py::test_validator_confirms_hashes_bridge_and_generator_role",
+      "tests/characterization/test_ap006d4c_cache_regeneration_contract.py::test_validator_confirms_pairs_and_productive_primitive",
+      "tests/characterization/test_ap006d4d_source_csv_provenance_contract.py::test_validator_confirms_no_runtime_dereference",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_contract_artifacts_do_not_expand_candidate_set",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_validator_confirms_candidate_blobs_and_paths",
+      "tests/characterization/test_ap006e1_distribution_compatibility_baseline.py::test_ap006e1_distribution_compatibility_baseline",
+      "tests/characterization/test_ap006e3_consumer_stabilization.py::test_ap006e3_validator_accepts_current_repository_state",
+      "tests/characterization/test_ap006e5_closure_contract.py::test_ap006e5_validator_accepts_current_repository_state",
+      "tests/characterization/test_ap006f1_dependency_decision_matrix_contract.py::test_ap006f1_dependency_decision_matrix_contract",
+      "tests/characterization/test_ap006f5_closure_contract.py::test_ap006f5_validator_accepts_precommit_closure",
+      "tests/characterization/test_ap007b_closure_contract.py::test_ap007b3_validator_accepts_state",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_cli_main_routes_non_native_command_to_injected_fallback",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_explicit_argv_does_not_read_process_arguments",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_public_module_matches_historical_first_wave[help-argv0]",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_route_selection_is_explicit",
+      "tests/characterization/test_ap007c2_doctor_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_check_config_remains_list_fallback",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_routes",
+      "tests/characterization/test_ap007c4_check_config_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py::test_runtime_and_adapter_hashes_match_manifest",
+      "tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase",
+      "tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py::test_hashes_match_manifest",
+      "tests/characterization/test_ap007d5_doi_manifest_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase"
+    ],
+    "expected_xfail_nodeids": [
+      "app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure",
+      "app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract",
+      "app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations"
+    ],
+    "failed_nodeids": [
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[academic_pipeline_rc10.py-document_model can\\xf4nico]",
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[artigo_prisma_workflow.py-Estado e valida\\xe7\\xe3o]",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_public_main_delegates_to_cli",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_historical_entrypoints_keep_direct_script_help[academic_pipeline_rc10-document_model can\\xf4nico]",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_rc10_official_package_and_legacy_commands_match",
+      "app_bundle/tests/test_package_imports_prisma_core.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_package_imports_rendering.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_package_imports_support_services.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+      "tests/characterization/test_ap003a_orchestrator_contract.py::test_ap003a_cli_help_contract[official-package-module]",
+      "tests/characterization/test_ap003b_parser_contract.py::test_direct_script_help_snapshot_is_unchanged",
+      "tests/characterization/test_ap003b_parser_contract.py::test_package_module_help_snapshot_is_unchanged",
+      "tests/characterization/test_ap003c_dispatch_contract.py::test_help_surfaces_are_semantically_identical",
+      "tests/characterization/test_ap003d_document_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003d_document_contract.py::test_parser_and_dispatch_are_byte_identical",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_previous_phase_modules_are_byte_identical",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_previous_phase_files_except_prisma_are_byte_identical",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_structural_modules_compile_and_match_frozen_hashes",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_three_help_surfaces_remain_equivalent",
+      "tests/characterization/test_ap004b_module_file_application_contract.py::test_ap004b_historical_and_canonical_orchestrator_help_match",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_canonical_capture_assignments_exist",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_internal_consumers_use_canonical_names",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_legacy_aliases_remain_compatibility_bindings",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_no_new_public_export_was_added",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_compiles",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_hash_matches_postimage",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_six_productive_consumers_were_migrated",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_core_hashes_match",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_validator_check_mode",
+      "tests/characterization/test_ap005c3_closure_contract.py::test_closure_validator_check_mode",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_closure_artifact_manifest_is_exact",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_preclosure_inventory_is_preserved",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_validator_check_mode",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_physical_topology_contract",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_resolver_uses_structural_markers",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_ap006d1_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_compatibility_bridge_remains_relative",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_bridge_remains_relative",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_bridge_remains_relative",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d4_closure_contract.py::test_closure_validator_confirms_chain_and_contract",
+      "tests/characterization/test_ap006d4b_generated_el_preservation.py::test_validator_confirms_hashes_bridge_and_generator_role",
+      "tests/characterization/test_ap006d4c_cache_regeneration_contract.py::test_validator_confirms_pairs_and_productive_primitive",
+      "tests/characterization/test_ap006d4d_source_csv_provenance_contract.py::test_validator_confirms_no_runtime_dereference",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_contract_artifacts_do_not_expand_candidate_set",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_validator_confirms_candidate_blobs_and_paths",
+      "tests/characterization/test_ap006e1_distribution_compatibility_baseline.py::test_ap006e1_distribution_compatibility_baseline",
+      "tests/characterization/test_ap006e3_consumer_stabilization.py::test_ap006e3_validator_accepts_current_repository_state",
+      "tests/characterization/test_ap006e5_closure_contract.py::test_ap006e5_validator_accepts_current_repository_state",
+      "tests/characterization/test_ap006f1_dependency_decision_matrix_contract.py::test_ap006f1_dependency_decision_matrix_contract",
+      "tests/characterization/test_ap006f5_closure_contract.py::test_ap006f5_validator_accepts_precommit_closure",
+      "tests/characterization/test_ap007b_closure_contract.py::test_ap007b3_validator_accepts_state",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_cli_main_routes_non_native_command_to_injected_fallback",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_explicit_argv_does_not_read_process_arguments",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_public_module_matches_historical_first_wave[help-argv0]",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_route_selection_is_explicit",
+      "tests/characterization/test_ap007c2_doctor_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_check_config_remains_list_fallback",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_routes",
+      "tests/characterization/test_ap007c4_check_config_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py::test_runtime_and_adapter_hashes_match_manifest",
+      "tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase",
+      "tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py::test_hashes_match_manifest",
+      "tests/characterization/test_ap007d5_doi_manifest_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase"
+    ],
+    "failure_count": 70,
+    "missing_required_output_markers": [],
+    "no_timeout": true,
+    "required_output_markers": [
+      "ModuleNotFoundError: No module named 'academic_pipeline'",
+      "No module named \\'app_bundle\\'",
+      "FileNotFoundError",
+      "academic_pipeline_rc10_7_conformidade",
+      "is_symlink()",
+      "não rastreados F5 divergentes",
+      "observed_candidate_paths == recorded_paths",
+      "RuntimeRoute.LEGACY_FALLBACK",
+      "9255c4b924fd61b7120b8c5e02684d338f6788de42ae7c352b049a488a308afe"
+    ],
+    "return_code": 1,
+    "status": "exact_historical_phase_debt_confirmed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "4be99ae60d7fd9b6cc44dd9c025eca5c5facc47eabd86f19afb0ea49764c4dbd",
+    "summary": {
+      "deselected": 1,
+      "errors": 0,
+      "failed": 70,
+      "passed": 748,
+      "skipped": 0,
+      "warnings": 0,
+      "xfailed": 3,
+      "xpassed": 0
+    },
+    "target_phase": "AP-007F",
+    "xfail_nodeids": [
+      "app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure",
+      "app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract",
+      "app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations"
+    ]
+  },
+  "next_phase": {
+    "constraints": [
+      "do not remove run_legacy by aesthetics",
+      "preserve explicitly approved compatibility",
+      "use AP-007E evidence as immutable baseline",
+      "publish only after a later explicit authorization"
+    ],
+    "objective": "audit residual run_legacy consumers, remaining fallback commands and published legacy wrappers before any directed reduction",
+    "phase": "AP-007F.0"
+  },
+  "phase": "AP-007E.5",
+  "phase_local_baselines": {
+    "excluded_nodeids": [
+      "tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py::test_ap007e0_validator_executes_successfully"
+    ],
+    "reason": "phase-local validator execution asserts the original exact untracked scope and is superseded by immutable hash/schema plus stable-contract revalidation",
+    "replayed": false
+  },
+  "previous_phases": {
+    "AP-007E.0": {
+      "baseline_commit": "766956710435f1c338d2e0332d24e55106b981b7",
+      "schema": "ap007e0_distribution_isolation_inventory.v1",
+      "status": "materialized_uncommitted"
+    },
+    "AP-007E.1": {
+      "baseline_commit": "766956710435f1c338d2e0332d24e55106b981b7",
+      "schema": "ap007e1_source_execution_matrix.v1",
+      "status": "matrix_approved_with_classified_historical_debt"
+    },
+    "AP-007E.2": {
+      "baseline_commit": "766956710435f1c338d2e0332d24e55106b981b7",
+      "schema": "ap007e2_controlled_build_inventory.v1",
+      "status": "build_approved_with_classified_findings"
+    },
+    "AP-007E.3": {
+      "baseline_commit": "766956710435f1c338d2e0332d24e55106b981b7",
+      "schema": "ap007e3_isolated_installation_matrix.v1",
+      "status": "installation_approved_with_classified_findings"
+    },
+    "AP-007E.4": {
+      "baseline_commit": "766956710435f1c338d2e0332d24e55106b981b7",
+      "schema": "ap007e4_source_distribution_equivalence.v1",
+      "status": "equivalence_approved_with_classified_findings"
+    }
+  },
+  "productive_regression": {
+    "command": [
+      "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-ra",
+      "app_bundle/tests",
+      "tests",
+      "--deselect",
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[academic_pipeline_rc10.py-document_model can\\xf4nico]",
+      "--deselect",
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[artigo_prisma_workflow.py-Estado e valida\\xe7\\xe3o]",
+      "--deselect",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "--deselect",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "--deselect",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "--deselect",
+      "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+      "--deselect",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_public_main_delegates_to_cli",
+      "--deselect",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_historical_entrypoints_keep_direct_script_help[academic_pipeline_rc10-document_model can\\xf4nico]",
+      "--deselect",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_rc10_official_package_and_legacy_commands_match",
+      "--deselect",
+      "app_bundle/tests/test_package_imports_prisma_core.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "--deselect",
+      "app_bundle/tests/test_package_imports_rendering.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "--deselect",
+      "app_bundle/tests/test_package_imports_support_services.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "--deselect",
+      "tests/characterization/test_ap003a_orchestrator_contract.py::test_ap003a_cli_help_contract[official-package-module]",
+      "--deselect",
+      "tests/characterization/test_ap003b_parser_contract.py::test_direct_script_help_snapshot_is_unchanged",
+      "--deselect",
+      "tests/characterization/test_ap003b_parser_contract.py::test_package_module_help_snapshot_is_unchanged",
+      "--deselect",
+      "tests/characterization/test_ap003c_dispatch_contract.py::test_help_surfaces_are_semantically_identical",
+      "--deselect",
+      "tests/characterization/test_ap003d_document_contract.py::test_parser_and_dispatch_are_byte_identical",
+      "--deselect",
+      "tests/characterization/test_ap003d_document_contract.py::test_help_surfaces_remain_semantically_identical",
+      "--deselect",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_previous_phase_modules_are_byte_identical",
+      "--deselect",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_help_surfaces_remain_semantically_identical",
+      "--deselect",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_previous_phase_files_except_prisma_are_byte_identical",
+      "--deselect",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_help_surfaces_remain_semantically_identical",
+      "--deselect",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_structural_modules_compile_and_match_frozen_hashes",
+      "--deselect",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_three_help_surfaces_remain_equivalent",
+      "--deselect",
+      "tests/characterization/test_ap004b_module_file_application_contract.py::test_ap004b_historical_and_canonical_orchestrator_help_match",
+      "--deselect",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_hash_matches_postimage",
+      "--deselect",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_canonical_capture_assignments_exist",
+      "--deselect",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_internal_consumers_use_canonical_names",
+      "--deselect",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_six_productive_consumers_were_migrated",
+      "--deselect",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_legacy_aliases_remain_compatibility_bindings",
+      "--deselect",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_no_new_public_export_was_added",
+      "--deselect",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_compiles",
+      "--deselect",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_core_hashes_match",
+      "--deselect",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_validator_check_mode",
+      "--deselect",
+      "tests/characterization/test_ap005c3_closure_contract.py::test_closure_validator_check_mode",
+      "--deselect",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_preclosure_inventory_is_preserved",
+      "--deselect",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_closure_artifact_manifest_is_exact",
+      "--deselect",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_validator_check_mode",
+      "--deselect",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_physical_topology_contract",
+      "--deselect",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_resolver_uses_structural_markers",
+      "--deselect",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_ap006d1_validator_accepts_materialized_tree",
+      "--deselect",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_compatibility_bridge_remains_relative",
+      "--deselect",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_validator_accepts_materialized_tree",
+      "--deselect",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_bridge_remains_relative",
+      "--deselect",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_validator_accepts_materialized_tree",
+      "--deselect",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_bridge_remains_relative",
+      "--deselect",
+      "tests/characterization/test_ap006d4_closure_contract.py::test_closure_validator_confirms_chain_and_contract",
+      "--deselect",
+      "tests/characterization/test_ap006d4b_generated_el_preservation.py::test_validator_confirms_hashes_bridge_and_generator_role",
+      "--deselect",
+      "tests/characterization/test_ap006d4c_cache_regeneration_contract.py::test_validator_confirms_pairs_and_productive_primitive",
+      "--deselect",
+      "tests/characterization/test_ap006d4d_source_csv_provenance_contract.py::test_validator_confirms_no_runtime_dereference",
+      "--deselect",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_validator_confirms_candidate_blobs_and_paths",
+      "--deselect",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_contract_artifacts_do_not_expand_candidate_set",
+      "--deselect",
+      "tests/characterization/test_ap006e1_distribution_compatibility_baseline.py::test_ap006e1_distribution_compatibility_baseline",
+      "--deselect",
+      "tests/characterization/test_ap006e3_consumer_stabilization.py::test_ap006e3_validator_accepts_current_repository_state",
+      "--deselect",
+      "tests/characterization/test_ap006e5_closure_contract.py::test_ap006e5_validator_accepts_current_repository_state",
+      "--deselect",
+      "tests/characterization/test_ap006f1_dependency_decision_matrix_contract.py::test_ap006f1_dependency_decision_matrix_contract",
+      "--deselect",
+      "tests/characterization/test_ap006f5_closure_contract.py::test_ap006f5_validator_accepts_precommit_closure",
+      "--deselect",
+      "tests/characterization/test_ap007b_closure_contract.py::test_ap007b3_validator_accepts_state",
+      "--deselect",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_route_selection_is_explicit",
+      "--deselect",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_cli_main_routes_non_native_command_to_injected_fallback",
+      "--deselect",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_explicit_argv_does_not_read_process_arguments",
+      "--deselect",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_public_module_matches_historical_first_wave[help-argv0]",
+      "--deselect",
+      "tests/characterization/test_ap007c2_doctor_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "--deselect",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_routes",
+      "--deselect",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_check_config_remains_list_fallback",
+      "--deselect",
+      "tests/characterization/test_ap007c4_check_config_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "--deselect",
+      "tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py::test_runtime_and_adapter_hashes_match_manifest",
+      "--deselect",
+      "tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase",
+      "--deselect",
+      "tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py::test_hashes_match_manifest",
+      "--deselect",
+      "tests/characterization/test_ap007d5_doi_manifest_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase",
+      "--deselect",
+      "tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py::test_ap007e0_validator_executes_successfully"
+    ],
+    "deselected_historical_nodeids": [
+      "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target"
+    ],
+    "deselected_integrated_historical_phase_nodeids": [
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[academic_pipeline_rc10.py-document_model can\\xf4nico]",
+      "app_bundle/tests/test_entrypoints_orchestration_characterization.py::test_entrypoint_help_is_offline_and_successful[artigo_prisma_workflow.py-Estado e valida\\xe7\\xe3o]",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+      "app_bundle/tests/test_official_package_entrypoint.py::test_public_main_delegates_to_cli",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_historical_entrypoints_keep_direct_script_help[academic_pipeline_rc10-document_model can\\xf4nico]",
+      "app_bundle/tests/test_package_imports_entrypoints.py::test_rc10_official_package_and_legacy_commands_match",
+      "app_bundle/tests/test_package_imports_prisma_core.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_package_imports_rendering.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "app_bundle/tests/test_package_imports_support_services.py::test_official_and_legacy_entrypoints_remain_equivalent",
+      "tests/characterization/test_ap003a_orchestrator_contract.py::test_ap003a_cli_help_contract[official-package-module]",
+      "tests/characterization/test_ap003b_parser_contract.py::test_direct_script_help_snapshot_is_unchanged",
+      "tests/characterization/test_ap003b_parser_contract.py::test_package_module_help_snapshot_is_unchanged",
+      "tests/characterization/test_ap003c_dispatch_contract.py::test_help_surfaces_are_semantically_identical",
+      "tests/characterization/test_ap003d_document_contract.py::test_parser_and_dispatch_are_byte_identical",
+      "tests/characterization/test_ap003d_document_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_previous_phase_modules_are_byte_identical",
+      "tests/characterization/test_ap003e_prisma_generic_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_previous_phase_files_except_prisma_are_byte_identical",
+      "tests/characterization/test_ap003f_main_unification_contract.py::test_help_surfaces_remain_semantically_identical",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_structural_modules_compile_and_match_frozen_hashes",
+      "tests/characterization/test_ap003g_stabilization_contract.py::test_three_help_surfaces_remain_equivalent",
+      "tests/characterization/test_ap004b_module_file_application_contract.py::test_ap004b_historical_and_canonical_orchestrator_help_match",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_hash_matches_postimage",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_canonical_capture_assignments_exist",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_internal_consumers_use_canonical_names",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_six_productive_consumers_were_migrated",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_legacy_aliases_remain_compatibility_bindings",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_no_new_public_export_was_added",
+      "tests/characterization/test_ap005c1_toml_capture_alias_application_contract.py::test_productive_module_compiles",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_core_hashes_match",
+      "tests/characterization/test_ap005c2_stabilization_contract.py::test_stabilization_validator_check_mode",
+      "tests/characterization/test_ap005c3_closure_contract.py::test_closure_validator_check_mode",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_preclosure_inventory_is_preserved",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_closure_artifact_manifest_is_exact",
+      "tests/characterization/test_ap005f_closure_contract.py::test_ap005f_validator_check_mode",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_physical_topology_contract",
+      "tests/characterization/test_ap006c_physical_materialization.py::test_ap006c_resolver_uses_structural_markers",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_ap006d1_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d1_runtime_consumer_migration.py::test_compatibility_bridge_remains_relative",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d2_contract_validator_migration.py::test_ap006d2_bridge_remains_relative",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_validator_accepts_materialized_tree",
+      "tests/characterization/test_ap006d3_operational_source_migration.py::test_ap006d3_bridge_remains_relative",
+      "tests/characterization/test_ap006d4_closure_contract.py::test_closure_validator_confirms_chain_and_contract",
+      "tests/characterization/test_ap006d4b_generated_el_preservation.py::test_validator_confirms_hashes_bridge_and_generator_role",
+      "tests/characterization/test_ap006d4c_cache_regeneration_contract.py::test_validator_confirms_pairs_and_productive_primitive",
+      "tests/characterization/test_ap006d4d_source_csv_provenance_contract.py::test_validator_confirms_no_runtime_dereference",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_validator_confirms_candidate_blobs_and_paths",
+      "tests/characterization/test_ap006d4e_backup_evidence_preservation_contract.py::test_contract_artifacts_do_not_expand_candidate_set",
+      "tests/characterization/test_ap006e1_distribution_compatibility_baseline.py::test_ap006e1_distribution_compatibility_baseline",
+      "tests/characterization/test_ap006e3_consumer_stabilization.py::test_ap006e3_validator_accepts_current_repository_state",
+      "tests/characterization/test_ap006e5_closure_contract.py::test_ap006e5_validator_accepts_current_repository_state",
+      "tests/characterization/test_ap006f1_dependency_decision_matrix_contract.py::test_ap006f1_dependency_decision_matrix_contract",
+      "tests/characterization/test_ap006f5_closure_contract.py::test_ap006f5_validator_accepts_precommit_closure",
+      "tests/characterization/test_ap007b_closure_contract.py::test_ap007b3_validator_accepts_state",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_route_selection_is_explicit",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_cli_main_routes_non_native_command_to_injected_fallback",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_explicit_argv_does_not_read_process_arguments",
+      "tests/characterization/test_ap007b_native_runtime_contract.py::test_public_module_matches_historical_first_wave[help-argv0]",
+      "tests/characterization/test_ap007c2_doctor_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_routes",
+      "tests/characterization/test_ap007c3_doctor_public_integration_contract.py::test_check_config_remains_list_fallback",
+      "tests/characterization/test_ap007c4_check_config_native_adapter_contract.py::test_public_route_is_intentionally_deferred",
+      "tests/characterization/test_ap007d3_list_profiles_public_integration_contract.py::test_runtime_and_adapter_hashes_match_manifest",
+      "tests/characterization/test_ap007d4_institution_compliance_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase",
+      "tests/characterization/test_ap007d4_institution_compliance_public_integration_contract.py::test_hashes_match_manifest",
+      "tests/characterization/test_ap007d5_doi_manifest_native_adapter_contract.py::test_route_remains_legacy_in_adapter_phase"
+    ],
+    "deselected_phase_local_nodeids": [
+      "tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py::test_ap007e0_validator_executes_successfully"
+    ],
+    "expected_xfail_nodeids": [
+      "app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure",
+      "app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract",
+      "app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations"
+    ],
+    "no_timeout": true,
+    "return_code": 0,
+    "status": "passed_after_exact_historical_phase_debt_deselection",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "73cc9377f61bf34ea57ac5fa13ce67a91cafc9aebf718dea218b73f96b1ecd02",
+    "summary": {
+      "deselected": 71,
+      "errors": 0,
+      "failed": 0,
+      "passed": 748,
+      "skipped": 0,
+      "warnings": 0,
+      "xfailed": 3,
+      "xpassed": 0
+    },
+    "xfail_nodeids": [
+      "app_bundle/tests/test_article_workflow_characterization.py::test_refresh_from_files_should_keep_downstream_stages_blocked_after_first_failure",
+      "app_bundle/tests/test_canonical_docx_characterization.py::test_extract_resumos_should_separate_inline_keywords_from_heading_abstract",
+      "app_bundle/tests/test_rc10_configuration_characterization.py::test_reference_strip_should_remove_parenthetical_citations"
+    ]
+  },
+  "schema": "ap007e5_closure.v1",
+  "scope": {
+    "candidate_path_count": 24,
+    "candidate_paths": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007E0_DISTRIBUTION_ISOLATION_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e0_distribution_isolation_inventory.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py",
+      "tools/refactor/ap007e0_validate_distribution_isolation_inventory.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E1_SOURCE_EXECUTION_MATRIX.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e1_source_execution_matrix.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e1_source_execution_matrix_contract.py",
+      "tools/refactor/ap007e1_validate_source_execution_matrix.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E2_CONTROLLED_BUILD_INVENTORY.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e2_controlled_build_inventory.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e2_controlled_build_inventory_contract.py",
+      "tools/refactor/ap007e2_validate_controlled_build_inventory.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E3_ISOLATED_INSTALLATION_MATRIX.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e3_isolated_installation_matrix.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e3_isolated_installation_matrix_contract.py",
+      "tools/refactor/ap007e3_validate_isolated_installation_matrix.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E4_SOURCE_DISTRIBUTION_EQUIVALENCE.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e4_source_distribution_equivalence.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e4_source_distribution_equivalence_contract.py",
+      "tools/refactor/ap007e4_validate_source_distribution_equivalence.py",
+      "docs/refactor/academic-pipeline/AP-007/AP-007E5_CLOSURE_REPORT.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e5_closure_manifest.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e5_closure_contract.py",
+      "tools/refactor/ap007e5_validate_closure.py"
+    ],
+    "canonical_environment_modified": false,
+    "commit_executed": false,
+    "dependency_installation_executed": false,
+    "git_write_executed": false,
+    "materialized_path_count": 4,
+    "materialized_paths": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007E5_CLOSURE_REPORT.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e5_closure_manifest.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e5_closure_contract.py",
+      "tools/refactor/ap007e5_validate_closure.py"
+    ],
+    "network_required": false,
+    "productive_modules_modified": [],
+    "push_executed": false,
+    "staging_executed": false,
+    "tag_executed": false
+  },
+  "source_distribution_evidence": {
+    "critical_resource_hash_parity": true,
+    "equivalent_comparison_count": 24,
+    "functional_cases": [
+      "help",
+      "list_institutions",
+      "list_profiles",
+      "check_config_without_config",
+      "check_institution_compliance_without_config",
+      "make_doi_manifest_without_input"
+    ],
+    "functional_surfaces": [
+      "source_python_m",
+      "wheel_python_m",
+      "wheel_console",
+      "sdist_python_m",
+      "sdist_console"
+    ],
+    "module_hash_parity": true,
+    "non_equivalent_comparison_count": 0,
+    "runtime_comparison_count": 24,
+    "runtime_execution_count": 30,
+    "source_phase": "AP-007E.4"
+  },
+  "stable_contracts": {
+    "count": 16,
+    "no_timeout": true,
+    "nodeids": [
+      "tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py::test_ap007e0_inventory_contract_exact_scope_and_baseline",
+      "tests/characterization/test_ap007e0_distribution_isolation_inventory_contract.py::test_ap007e0_inventory_contract_distribution_and_matrix",
+      "tests/characterization/test_ap007e1_source_execution_matrix_contract.py::test_ap007e1_source_matrix_core_equivalence",
+      "tests/characterization/test_ap007e1_source_execution_matrix_contract.py::test_ap007e1_process_isolation_contract",
+      "tests/characterization/test_ap007e1_source_execution_matrix_contract.py::test_ap007e1_historical_compatibility_and_scope",
+      "tests/characterization/test_ap007e2_controlled_build_inventory_contract.py::test_ap007e2_scope_and_isolation_contract",
+      "tests/characterization/test_ap007e2_controlled_build_inventory_contract.py::test_ap007e2_artifacts_and_metadata_contract",
+      "tests/characterization/test_ap007e2_controlled_build_inventory_contract.py::test_ap007e2_reproducibility_contract",
+      "tests/characterization/test_ap007e3_isolated_installation_matrix_contract.py::test_ap007e3_scope_and_canonical_environment_contract",
+      "tests/characterization/test_ap007e3_isolated_installation_matrix_contract.py::test_ap007e3_artifact_provenance_contract",
+      "tests/characterization/test_ap007e3_isolated_installation_matrix_contract.py::test_ap007e3_installation_isolation_contract",
+      "tests/characterization/test_ap007e3_isolated_installation_matrix_contract.py::test_ap007e3_resource_and_dependency_classification_contract",
+      "tests/characterization/test_ap007e4_source_distribution_equivalence_contract.py::test_ap007e4_scope_and_baseline_contract",
+      "tests/characterization/test_ap007e4_source_distribution_equivalence_contract.py::test_ap007e4_runtime_matrix_equivalence_contract",
+      "tests/characterization/test_ap007e4_source_distribution_equivalence_contract.py::test_ap007e4_isolation_and_origin_contract",
+      "tests/characterization/test_ap007e4_source_distribution_equivalence_contract.py::test_ap007e4_resource_and_module_parity_contract"
+    ],
+    "policy": "previous_phase_stable_contracts_only",
+    "return_code": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "3cba0581d1f0f4530c829f261d51cca62ac4b957992b569e2dfc49ca6eb90162"
+  },
+  "status": "ready_for_isolated_commit_decision",
+  "summary": {
+    "blocking_finding_count": 0,
+    "candidate_path_count": 24,
+    "canonical_environment_preserved": true,
+    "finding_count": 9,
+    "historical_blocking_failure_count": 0,
+    "historical_test_count": 4,
+    "integrated_census_blocking_failure_count": 0,
+    "integrated_census_classified_failure_count": 70,
+    "integrated_census_passed": 748,
+    "integrated_census_return_code": 1,
+    "previous_phase_count": 5,
+    "productive_suite_failed": 0,
+    "productive_suite_passed": 748,
+    "productive_suite_return_code": 0,
+    "productive_suite_xfailed": 3,
+    "ready_for_isolated_commit_decision": true,
+    "runtime_comparison_count": 24,
+    "runtime_divergence_count": 0,
+    "runtime_execution_count": 30,
+    "stable_contract_count": 16
+  }
+}

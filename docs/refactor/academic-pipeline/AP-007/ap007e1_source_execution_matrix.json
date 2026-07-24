@@ -1,0 +1,3550 @@
+{
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "canonical_venv_launcher_preserved": true,
+    "commit": "766956710435f1c338d2e0332d24e55106b981b7",
+    "origin": "git@github.com:gustavo-detarso/mppg.git",
+    "package_dir": "software/academic_pipeline_mppg/academic_pipeline",
+    "python": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python",
+    "python_real": "/home/gustavodetarso/.pyenv/versions/3.11.13/bin/python3.11",
+    "runtime_sha256": "b3ef27fb472985634e6b678158a607bcbda3d01d942b767a139048d25369388c",
+    "source_root": "software/academic_pipeline_mppg",
+    "tree": "1d673e7c324b74f1fef033578aa995e836da1014",
+    "upstream": "origin/ap-refactor/04-consumer-canonicalization"
+  },
+  "commands": [
+    {
+      "argv": [
+        "--help"
+      ],
+      "expected_rc": [
+        0
+      ],
+      "id": "help",
+      "semantic": "success"
+    },
+    {
+      "argv": [
+        "--list-institutions"
+      ],
+      "expected_rc": [
+        0
+      ],
+      "id": "list_institutions",
+      "semantic": "success"
+    },
+    {
+      "argv": [
+        "--list-profiles"
+      ],
+      "expected_rc": [
+        0
+      ],
+      "id": "list_profiles",
+      "semantic": "success"
+    },
+    {
+      "argv": [
+        "--check-config"
+      ],
+      "expected_rc": [
+        1
+      ],
+      "id": "check_config_missing_config",
+      "semantic": "documented_usage_error"
+    },
+    {
+      "argv": [
+        "--check-institution-compliance"
+      ],
+      "expected_rc": [
+        1
+      ],
+      "id": "institution_compliance_missing_config",
+      "semantic": "documented_usage_error"
+    },
+    {
+      "argv": [
+        "--make-doi-manifest"
+      ],
+      "expected_rc": [
+        1
+      ],
+      "id": "doi_manifest_missing_input",
+      "semantic": "documented_usage_error"
+    }
+  ],
+  "core_equivalence": [
+    {
+      "case": "help",
+      "equivalent": true,
+      "expected_return_code": [
+        0
+      ],
+      "expected_return_code_ok": true,
+      "no_timeout": true,
+      "signatures": [
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "e2d7adc0d76210cef1397a3f3ea86853f10b2c2e9ad1db670273eab3c05b9240",
+          "surface": "direct_import_call_source_root"
+        },
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "e2d7adc0d76210cef1397a3f3ea86853f10b2c2e9ad1db670273eab3c05b9240",
+          "surface": "python_minus_m_source_root"
+        },
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "e2d7adc0d76210cef1397a3f3ea86853f10b2c2e9ad1db670273eab3c05b9240",
+          "surface": "official_target_source_root"
+        }
+      ],
+      "surfaces": [
+        "direct_import_call_source_root",
+        "python_minus_m_source_root",
+        "official_target_source_root"
+      ]
+    },
+    {
+      "case": "list_institutions",
+      "equivalent": true,
+      "expected_return_code": [
+        0
+      ],
+      "expected_return_code_ok": true,
+      "no_timeout": true,
+      "signatures": [
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67",
+          "surface": "direct_import_call_source_root"
+        },
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67",
+          "surface": "python_minus_m_source_root"
+        },
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67",
+          "surface": "official_target_source_root"
+        }
+      ],
+      "surfaces": [
+        "direct_import_call_source_root",
+        "python_minus_m_source_root",
+        "official_target_source_root"
+      ]
+    },
+    {
+      "case": "list_profiles",
+      "equivalent": true,
+      "expected_return_code": [
+        0
+      ],
+      "expected_return_code_ok": true,
+      "no_timeout": true,
+      "signatures": [
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "aaee5dbec167eb5a558db3fec8a4a06c54bb89a5ba8484a12cb2bb7e15c98ada",
+          "surface": "direct_import_call_source_root"
+        },
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "aaee5dbec167eb5a558db3fec8a4a06c54bb89a5ba8484a12cb2bb7e15c98ada",
+          "surface": "python_minus_m_source_root"
+        },
+        {
+          "return_code": 0,
+          "stderr_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_normalized_sha256": "aaee5dbec167eb5a558db3fec8a4a06c54bb89a5ba8484a12cb2bb7e15c98ada",
+          "surface": "official_target_source_root"
+        }
+      ],
+      "surfaces": [
+        "direct_import_call_source_root",
+        "python_minus_m_source_root",
+        "official_target_source_root"
+      ]
+    },
+    {
+      "case": "check_config_missing_config",
+      "equivalent": true,
+      "expected_return_code": [
+        1
+      ],
+      "expected_return_code_ok": true,
+      "no_timeout": true,
+      "signatures": [
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "1e41f39c8271134277942719d8d3caf74574f839c27fee7c03aa5332ccb5d634",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "direct_import_call_source_root"
+        },
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "1e41f39c8271134277942719d8d3caf74574f839c27fee7c03aa5332ccb5d634",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "python_minus_m_source_root"
+        },
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "1e41f39c8271134277942719d8d3caf74574f839c27fee7c03aa5332ccb5d634",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "official_target_source_root"
+        }
+      ],
+      "surfaces": [
+        "direct_import_call_source_root",
+        "python_minus_m_source_root",
+        "official_target_source_root"
+      ]
+    },
+    {
+      "case": "institution_compliance_missing_config",
+      "equivalent": true,
+      "expected_return_code": [
+        1
+      ],
+      "expected_return_code_ok": true,
+      "no_timeout": true,
+      "signatures": [
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "69fb17ffb08554fdacdb05950504491e0b3b7358f39417fd7e8d10c0801061b8",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "direct_import_call_source_root"
+        },
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "69fb17ffb08554fdacdb05950504491e0b3b7358f39417fd7e8d10c0801061b8",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "python_minus_m_source_root"
+        },
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "69fb17ffb08554fdacdb05950504491e0b3b7358f39417fd7e8d10c0801061b8",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "official_target_source_root"
+        }
+      ],
+      "surfaces": [
+        "direct_import_call_source_root",
+        "python_minus_m_source_root",
+        "official_target_source_root"
+      ]
+    },
+    {
+      "case": "doi_manifest_missing_input",
+      "equivalent": true,
+      "expected_return_code": [
+        1
+      ],
+      "expected_return_code_ok": true,
+      "no_timeout": true,
+      "signatures": [
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "direct_import_call_source_root"
+        },
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "python_minus_m_source_root"
+        },
+        {
+          "return_code": 1,
+          "stderr_normalized_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8",
+          "stdout_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "surface": "official_target_source_root"
+        }
+      ],
+      "surfaces": [
+        "direct_import_call_source_root",
+        "python_minus_m_source_root",
+        "official_target_source_root"
+      ]
+    }
+  ],
+  "entrypoint": {
+    "group": "project.scripts",
+    "name": "academic-pipeline",
+    "source": "software/academic_pipeline_mppg/pyproject.toml",
+    "target": "academic_pipeline.cli:main"
+  },
+  "failures": [],
+  "gate": "[GATE] AP-007E.1: MATRIZ DE EXECUÇÃO PELA FONTE APROVADA; DEPENDÊNCIAS DE CWD/PYTHONPATH E DÍVIDAS HISTÓRICAS CLASSIFICADAS NOMINALMENTE; NENHUM BUILD, INSTALAÇÃO, MODIFICAÇÃO PRODUTIVA, STAGING, COMMIT, TAG OU PUSH.",
+  "historical_compatibility_tests": [
+    {
+      "blocking": false,
+      "classification": "legacy_direct_source_bridge_absent",
+      "execution_mode": "individual_exact_nodeid",
+      "name": "test_legacy_script_help_remains_supported",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "path": "software/academic_pipeline_mppg/app_bundle/tests/test_official_package_entrypoint.py",
+      "return_code": 1,
+      "status": "classified_failure",
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n__________________ test_legacy_script_help_remains_supported ___________________\n\n    def test_legacy_script_help_remains_supported() -> None:\n        proc = _run_python(str(LEGACY_SCRIPT), \"--help\")\n\n>       assert proc.returncode == 0, proc.stderr\nE       AssertionError: Traceback (most recent call last):\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>\nE             raise SystemExit(main())\nE                              ^^^^^^\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main\nE             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint\nE         ModuleNotFoundError: No module named 'academic_pipeline'\nE\nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode\n\napp_bundle/tests/test_official_package_entrypoint.py:73: AssertionError\n=========================== short test summary info ============================\nFAILED app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported\n1 failed in 1.06s\n",
+      "stdout_sha256": "2bf84dbd7f042abc3b6b69a8d469edcb18593533e824af65ea346d6146802da6",
+      "target_phase": "AP-007F"
+    },
+    {
+      "blocking": false,
+      "classification": "legacy_direct_source_bridge_absent",
+      "execution_mode": "individual_exact_nodeid",
+      "name": "test_official_and_legacy_help_expose_same_options",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "path": "software/academic_pipeline_mppg/app_bundle/tests/test_official_package_entrypoint.py",
+      "return_code": 1,
+      "status": "classified_failure",
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n______________ test_official_and_legacy_help_expose_same_options _______________\n\n    def test_official_and_legacy_help_expose_same_options() -> None:\n        official = _run_python(\"-m\", \"academic_pipeline\", \"--help\")\n        legacy = _run_python(str(LEGACY_SCRIPT), \"--help\")\n\n        assert official.returncode == 0, official.stderr\n>       assert legacy.returncode == 0, legacy.stderr\nE       AssertionError: Traceback (most recent call last):\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>\nE             raise SystemExit(main())\nE                              ^^^^^^\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main\nE             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint\nE         ModuleNotFoundError: No module named 'academic_pipeline'\nE\nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode\n\napp_bundle/tests/test_official_package_entrypoint.py:83: AssertionError\n=========================== short test summary info ============================\nFAILED app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options\n1 failed in 0.72s\n",
+      "stdout_sha256": "b769ee3b741b63188bb76a01a3ac16fbbb400364299c996ab9de11466a91a75c",
+      "target_phase": "AP-007F"
+    },
+    {
+      "blocking": false,
+      "classification": "legacy_direct_source_bridge_absent",
+      "execution_mode": "individual_exact_nodeid",
+      "name": "test_official_and_legacy_list_institutions_match",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "path": "software/academic_pipeline_mppg/app_bundle/tests/test_official_package_entrypoint.py",
+      "return_code": 1,
+      "status": "classified_failure",
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n_______________ test_official_and_legacy_list_institutions_match _______________\n\n    def test_official_and_legacy_list_institutions_match() -> None:\n        official = _run_python(\"-m\", \"academic_pipeline\", \"--list-institutions\")\n        legacy = _run_python(str(LEGACY_SCRIPT), \"--list-institutions\")\n\n        assert official.returncode == 0, official.stderr\n>       assert legacy.returncode == 0, legacy.stderr\nE       AssertionError: Traceback (most recent call last):\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>\nE             raise SystemExit(main())\nE                              ^^^^^^\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main\nE             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint\nE         ModuleNotFoundError: No module named 'academic_pipeline'\nE\nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode\n\napp_bundle/tests/test_official_package_entrypoint.py:92: AssertionError\n=========================== short test summary info ============================\nFAILED app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match\n1 failed in 0.72s\n",
+      "stdout_sha256": "bf331cc7b96a24792dd0dbc278fd8c414c28790f5a0ec314004bf2d35b1da263",
+      "target_phase": "AP-007F"
+    },
+    {
+      "blocking": false,
+      "classification": "legacy_direct_source_bridge_absent",
+      "execution_mode": "individual_exact_nodeid",
+      "name": "test_legacy_entrypoint_still_matches_console_target",
+      "nodeid": "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+      "path": "software/academic_pipeline_mppg/app_bundle/tests/test_packaging_metadata.py",
+      "return_code": 1,
+      "status": "classified_failure",
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n_____________ test_legacy_entrypoint_still_matches_console_target ______________\n\n    def test_legacy_entrypoint_still_matches_console_target() -> None:\n        target = _run_python(\n            \"-c\",\n            (\n                \"from academic_pipeline.cli import main; \"\n                \"raise SystemExit(main(['--list-institutions']))\"\n            ),\n        )\n        legacy = _run_python(\n            str(PIPELINE_DIR / \"academic_pipeline_rc10.py\"),\n            \"--list-institutions\",\n        )\n\n        assert target.returncode == 0, target.stderr\n>       assert legacy.returncode == 0, legacy.stderr\nE       AssertionError: Traceback (most recent call last):\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1333, in <module>\nE             raise SystemExit(main())\nE                              ^^^^^^\nE           File \"<SOURCE_ROOT>/app_bundle/scripts/pipeline/academic_pipeline_rc10.py\", line 1327, in main\nE             from academic_pipeline.prisma_generic_orchestration import run_prisma_generic_with_runtime as _ap003e_entrypoint\nE         ModuleNotFoundError: No module named 'academic_pipeline'\nE\nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/b...t run_prisma_generic_with_runtime as _ap003e_entrypoint\\nModuleNotFoundError: No module named \\'academic_pipeline\\'\\n').returncode\n\napp_bundle/tests/test_packaging_metadata.py:161: AssertionError\n=========================== short test summary info ============================\nFAILED app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target\n1 failed in 0.71s\n",
+      "stdout_sha256": "970421323c94026387239e307c7e3e97dc74336c7be6e0deffeb25af4638c662",
+      "target_phase": "AP-007F"
+    }
+  ],
+  "historical_debt": [
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_legacy_script_help_remains_supported"
+    },
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_official_and_legacy_help_expose_same_options"
+    },
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_official_and_legacy_list_institutions_match"
+    },
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_legacy_entrypoint_still_matches_console_target"
+    }
+  ],
+  "inherited_inventory": {
+    "path": "docs/refactor/academic-pipeline/AP-007/ap007e0_distribution_isolation_inventory.json",
+    "risk_codes": [
+      "TRACKED_RESIDUAL_PATHS_EXCLUDED_BEFORE_IO",
+      "AP007D6_VALIDATOR_PHASE_LOCAL_POSTCOMMIT",
+      "PATH_OR_CWD_COUPLING_CANDIDATES"
+    ],
+    "sha256": "d42a602977a87e9ff141069dea997c50d915f9e1fe4ebe054da508e62a91b797",
+    "tracked_paths_audited": 1311,
+    "tracked_paths_total": 1450,
+    "tracked_residual_paths_excluded_count": 139
+  },
+  "isolation": {
+    "PYTHONPATH_REMOVED": true,
+    "fresh_subprocess_per_case": true,
+    "network_proxy_fail_closed": true,
+    "neutral_cwd_outside_repository": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+    "source_import_probes": [
+      {
+        "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+        "id": "source_root_import",
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "pythonpath_present": false,
+        "return_code": 0,
+        "stderr": "",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "{\"module_file\": \"<PACKAGE_DIR>/__init__.py\"}\n",
+        "stdout_sha256": "8ac9a017777f24cdd0be84e646a88293d72efd55f62a29f9e8e4bacb3ef71117"
+      },
+      {
+        "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+        "id": "worktree_root_import",
+        "module_file": null,
+        "pythonpath_present": false,
+        "return_code": 1,
+        "stderr": "PYTHON_EXCEPTION: ModuleNotFoundError: No module named 'academic_pipeline'\n",
+        "stderr_sha256": "3030e61272e4312994415bbfdfbade01970444ee762f5eb82cb9bcf098995c04",
+        "stdout": "",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+        "id": "neutral_cwd_import",
+        "module_file": null,
+        "pythonpath_present": false,
+        "return_code": 1,
+        "stderr": "PYTHON_EXCEPTION: ModuleNotFoundError: No module named 'academic_pipeline'\n",
+        "stderr_sha256": "3030e61272e4312994415bbfdfbade01970444ee762f5eb82cb9bcf098995c04",
+        "stdout": "",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "source_modules_preloaded": false
+  },
+  "non_core_surface_classification": [
+    {
+      "classification": "cwd_or_direct_file_dependency_characterized",
+      "return_codes": [
+        1
+      ],
+      "surface": "python_minus_m_worktree_root"
+    },
+    {
+      "classification": "cwd_or_direct_file_dependency_characterized",
+      "return_codes": [
+        1
+      ],
+      "surface": "python_minus_m_neutral_cwd"
+    },
+    {
+      "classification": "cwd_or_direct_file_dependency_characterized",
+      "return_codes": [
+        1
+      ],
+      "surface": "absolute_main_neutral_cwd"
+    }
+  ],
+  "normalization_manifest": [
+    "replace absolute worktree path with <REPO>",
+    "replace source root with <SOURCE_ROOT>",
+    "replace run sandbox with <RUN_ROOT>",
+    "replace canonical Python path with <PYTHON>",
+    "normalize argparse usage program token to <PROG>",
+    "normalize argparse error program prefix to <PROG>",
+    "normalize CRLF to LF and remove trailing horizontal whitespace",
+    "normalize Python traceback frames to the terminal exception line only"
+  ],
+  "phase": "AP-007E.1",
+  "process_contracts": [
+    {
+      "argv_preserved": true,
+      "case": "help",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "direct_import_call_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "list_institutions",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "direct_import_call_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "list_profiles",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "direct_import_call_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "check_config_missing_config",
+      "cwd_preserved": true,
+      "exception_type": "RuntimeError",
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "direct_import_call_source_root",
+      "suspicious_import_attempts": [
+        {
+          "fullname": "dotenv",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.main",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.parser",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.variables",
+          "matched": [
+            "dotenv"
+          ]
+        }
+      ],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "institution_compliance_missing_config",
+      "cwd_preserved": true,
+      "exception_type": "RuntimeError",
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "direct_import_call_source_root",
+      "suspicious_import_attempts": [
+        {
+          "fullname": "app_bundle.scripts.pipeline.bibliography_manager",
+          "matched": [
+            "bibliography_manager"
+          ]
+        },
+        {
+          "fullname": "pydantic",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._migration",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.warnings",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.version",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.errors",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._repr",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._typing_extra",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._namespace_utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.main",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._config",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.aliases",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._internal_dataclass",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.config",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._decorators",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._core_utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._import_utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._fields",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._generics",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._forward_ref",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._docs_extraction",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._mock_val_ser",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.plugin",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.plugin._schema_validator",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._model_construction",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._generate_schema",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.annotated_handlers",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.functional_validators",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.json_schema",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._core_metadata",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._schema_generation_shared",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._discriminated_union",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._known_annotated_metadata",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._schema_gather",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._signature",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.fields",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._validators",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.types",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.plugin._loader",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "dotenv",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.main",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.parser",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.variables",
+          "matched": [
+            "dotenv"
+          ]
+        }
+      ],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "doi_manifest_missing_input",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "direct_import_call_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "help",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "official_target_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "list_institutions",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "official_target_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "list_profiles",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "official_target_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "check_config_missing_config",
+      "cwd_preserved": true,
+      "exception_type": "RuntimeError",
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "official_target_source_root",
+      "suspicious_import_attempts": [
+        {
+          "fullname": "dotenv",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.main",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.parser",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.variables",
+          "matched": [
+            "dotenv"
+          ]
+        }
+      ],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "institution_compliance_missing_config",
+      "cwd_preserved": true,
+      "exception_type": "RuntimeError",
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "official_target_source_root",
+      "suspicious_import_attempts": [
+        {
+          "fullname": "app_bundle.scripts.pipeline.bibliography_manager",
+          "matched": [
+            "bibliography_manager"
+          ]
+        },
+        {
+          "fullname": "pydantic",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._migration",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.warnings",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.version",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.errors",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._repr",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._typing_extra",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._namespace_utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.main",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._config",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.aliases",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._internal_dataclass",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.config",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._decorators",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._core_utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._import_utils",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._fields",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._generics",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._forward_ref",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._docs_extraction",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._mock_val_ser",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.plugin",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.plugin._schema_validator",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._model_construction",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._generate_schema",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.annotated_handlers",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.functional_validators",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.json_schema",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._core_metadata",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._schema_generation_shared",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._discriminated_union",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._known_annotated_metadata",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._schema_gather",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._signature",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.fields",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic._internal._validators",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.types",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "pydantic.plugin._loader",
+          "matched": [
+            "pydantic"
+          ]
+        },
+        {
+          "fullname": "dotenv",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.main",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.parser",
+          "matched": [
+            "dotenv"
+          ]
+        },
+        {
+          "fullname": "dotenv.variables",
+          "matched": [
+            "dotenv"
+          ]
+        }
+      ],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    },
+    {
+      "argv_preserved": true,
+      "case": "doi_manifest_missing_input",
+      "cwd_preserved": true,
+      "exception_type": null,
+      "legacy_import_attempts": [],
+      "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+      "module_in_source_tree": true,
+      "surface": "official_target_source_root",
+      "suspicious_import_attempts": [],
+      "sys_path_preserved": true,
+      "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+    }
+  ],
+  "results": [
+    {
+      "argv": [
+        "--help"
+      ],
+      "case": "help",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --help",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.394751,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/direct_import_call_source_root/help/process_meta.json",
+          "sha256": "54c73185e9b812fe00c1c23b1c83c430b8d691d8a7d7fae289f6905af2de09a8",
+          "size": 1707,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--help"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--help"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 0,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 10180,
+        "normalized": "usage: <PROG> [-h] [--config CONFIG] [--tui] [--gui] [--init-toml]\n                         [--toml-profile TOML_PROFILE] [--no-clear]\n                         [--list-toml-profiles] [--list-institutions]\n                         [--list-layouts]\n                         [--explain-profile [EXPLAIN_PROFILE]]\n                         [--show-prompts] [--write-prompt-lock]\n                         [--check-institution-compliance] [--doctor]\n                         [--check-config] [--recompile] [--org ORG]\n                         [--academic-writing ACADEMIC_WRITING]\n                         [--latex-extra-path LATEX_EXTRA_PATH]\n                         [--pdf-engine PDF_ENGINE] [--no-clean]\n                         [--somente-renderizar] [--somente-mapa-mental]\n                         [--reusar-mapa-mental]\n                         [--forcar-regeneracao-mapa-mental]\n                         [--document-json DOCUMENT_JSON]\n                         [--prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM]\n                         [--init-project INIT_PROJECT]\n                         [--project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}]\n                         [--institution INSTITUTION] [--base-dir BASE_DIR]\n                         [--overwrite-project] [--make-doi-manifest]\n                         [--input-zip INPUT_ZIP] [--input-dir INPUT_DIR]\n                         [--output OUTPUT] [--output-dir OUTPUT_DIR]\n                         [--work-dir WORK_DIR] [--cache-dir CACHE_DIR]\n                         [--research-output-dir RESEARCH_OUTPUT_DIR]\n                         [--output-prefix OUTPUT_PREFIX] [--layout LAYOUT]\n                         [--tipo-conteudo TIPO_CONTEUDO]\n                         [--genero-academico GENERO_ACADEMICO]\n                         [--no-output-subdir] [--inspect-bib INSPECT_BIB]\n                         [--quality-report] [--bib BIB] [--docx DOCX]\n                         [--pdf PDF] [--prisma-curadoria-menu]\n                         [--prisma-curadoria-ia] [--prisma-curadoria-sem-ia]\n                         [--prisma-curadoria-reexportar-xlsx]\n                         [--prisma-curadoria-importar]\n                         [--prisma-curadoria-fluxo-completo]\n                         [--prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT]\n                         [--prisma-curadoria-input PRISMA_CURADORIA_INPUT]\n                         [--prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR]\n                         [--prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR]\n                         [--prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS]\n                         [--prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO]\n                         [--list-profiles]\n\nacademic_pipeline rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit —\ndocument_model canônico\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG       Arquivo TOML\n  --tui                 Abre a Central Operacional FGV em terminal\n                        (prompt_toolkit)\n  --gui                 Abre a interface gráfica FGV de atividades acadêmicas\n  --init-toml           Abre o gerador interativo completo de TOML\n  --toml-profile TOML_PROFILE\n                        Preset inicial para --init-toml, ex.:\n                        atividade_local_fgv\n  --no-clear            Não limpa a tela entre etapas do --init-toml\n  --list-toml-profiles  Lista presets do gerador de TOML\n  --list-institutions   Lista perfis institucionais disponíveis\n  --list-layouts        Lista layouts disponíveis do perfil institucional\n                        informado no TOML\n  --explain-profile [EXPLAIN_PROFILE]\n                        Explica um perfil institucional, ex.: --explain-\n                        profile fgv\n  --show-prompts        Mostra os prompts/diretivas ativos para o TOML\n                        informado\n  --write-prompt-lock   Gera prompt_lock.json/md para o TOML e encerra\n  --check-institution-compliance\n                        Valida conformidade institucional de artefatos já\n                        gerados\n  --doctor              Diagnostica ambiente, ferramentas, arquivos FGV e\n                        estilo bibliográfico\n  --check-config        Valida preventivamente o TOML e encerra\n  --recompile           Recompila um .org existente sem chamar IA\n  --org ORG             Arquivo .org para --recompile\n  --academic-writing ACADEMIC_WRITING\n                        Override do academic-writing.el para --recompile\n  --latex-extra-path LATEX_EXTRA_PATH\n                        Override do latex_extra_path para --recompile\n  --pdf-engine PDF_ENGINE\n                        Override do pdf_engine para --recompile\n  --no-clean            Não remove auxiliares no --recompile\n  --somente-renderizar  Usa document.json existente e só renderiza saídas\n  --somente-mapa-mental\n                        Usa document.json existente e gera/renderiza apenas o\n                        mapa mental\n  --reusar-mapa-mental  Reaproveita imagem de mapa mental existente quando\n                        disponível, sem chamar IA/PlantUML\n  --forcar-regeneracao-mapa-mental\n                        Remove mapa mental existente e recria PlantUML/imagem\n                        quando a etapa de mapa mental for executada\n  --document-json DOCUMENT_JSON\n                        Caminho de document.json existente\n  --prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM\n                        Importa CSV de triagem humana do perfil\n                        relatorio_prisma_busca_orientada_fgv e consolida\n                        matriz/relatório PRISMA\n  --init-project INIT_PROJECT\n                        Cria app_bundle/projetos/<nome> com TOML, ZIPs\n                        placeholder e doi_manifest.csv\n  --project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}\n                        Tipo de projeto para --init-project\n  --institution INSTITUTION\n                        Perfil institucional usado por --init-project, ex.:\n                        fgv\n  --base-dir BASE_DIR   Raiz do academic_pipeline ou app_bundle para --init-\n                        project\n  --overwrite-project   Permite sobrescrever arquivos seguros criados por\n                        --init-project\n  --make-doi-manifest   Gera doi_manifest.csv a partir de --input-zip ou\n                        --input-dir\n  --input-zip INPUT_ZIP\n                        ZIP de documentos para --make-doi-manifest\n  --input-dir INPUT_DIR\n                        Pasta de documentos para --make-doi-manifest\n  --output OUTPUT       Arquivo de saída para --make-doi-manifest\n  --output-dir OUTPUT_DIR\n                        Override de [paths].document_output_dir para a\n                        geração/renderização do documento\n  --work-dir WORK_DIR   Override de [paths].work_dir para extrações\n                        temporárias\n  --cache-dir CACHE_DIR\n                        Override de [paths].cache_dir para fulltext_cache\n  --research-output-dir RESEARCH_OUTPUT_DIR\n                        Override de [paths].research_output_dir para relatório\n                        PRISMA\n  --output-prefix OUTPUT_PREFIX\n                        Override de [paths].document_prefix\n  --layout LAYOUT       Override de [documento].layout, ex.: atividade_fgv\n  --tipo-conteudo TIPO_CONTEUDO\n                        Override de [documento].tipo_conteudo, ex.:\n                        resumo_artigos\n  --genero-academico GENERO_ACADEMICO\n                        Override de [documento].genero_academico, ex.:\n                        atividade\n  --no-output-subdir    Não cria subdiretório com document_prefix dentro de\n                        --output-dir/[paths].document_output_dir\n  --inspect-bib INSPECT_BIB\n                        Inspeciona arquivo .bib e gera relatório .md/.json\n  --quality-report      Gera quality_report.md a partir de --document-json e\n                        opcionalmente --org\n  --bib BIB             Arquivo .bib opcional para --quality-report ou\n                        --check-institution-compliance\n  --docx DOCX           Arquivo .docx opcional para --check-institution-\n                        compliance\n  --pdf PDF             Arquivo .pdf opcional para --check-institution-\n                        compliance\n  --prisma-curadoria-menu\n                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.\n  --list-profiles       Lista os perfis TOML disponíveis.\n",
+        "normalized_sha256": "e2d7adc0d76210cef1397a3f3ea86853f10b2c2e9ad1db670273eab3c05b9240",
+        "raw_sha256": "e163f8874374cd2a57caa5367a4d38b8f1d0204e404351131d9073ed33000d73"
+      },
+      "surface": "direct_import_call_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--list-institutions"
+      ],
+      "case": "list_institutions",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --list-institutions",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.087974,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/direct_import_call_source_root/list_institutions/process_meta.json",
+          "sha256": "b71e5e6edc024cbe8bd0dec6883a2f686efe552100018a6f017b6ee2f3b4f02f",
+          "size": 1733,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--list-institutions"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--list-institutions"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 0,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 128,
+        "normalized": "Perfis institucionais disponíveis:\n- fgv: Fundação Getulio Vargas (Manual da FGV de Normalização de Trabalhos Acadêmicos)\n",
+        "normalized_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67",
+        "raw_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67"
+      },
+      "surface": "direct_import_call_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--list-profiles"
+      ],
+      "case": "list_profiles",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --list-profiles",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.077972,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/direct_import_call_source_root/list_profiles/process_meta.json",
+          "sha256": "5ac49d6fbcc2ecf715a13f7add30d0e382fae3e995d6722882b1ef965ad32040",
+          "size": 1725,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--list-profiles"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--list-profiles"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 0,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1923,
+        "normalized": "atividade_local_fgv: Atividade local FGV\n  Gera atividade acadêmica com Ficha Técnica FGV a partir de corpus local. Não faz busca\n  externa nem relatório PRISMA.\n\nresumo_artigos_local_fgv: Resumo analítico de artigos locais FGV\n  Gera documento FGV com Ficha Técnica, introdução, resumos individuais, comparação, síntese\n  analítica, considerações finais, referências e mapa mental opcional a partir de corpus\n  local. Não faz busca externa nem relatório PRISMA.\n\npaper_local_fgv: Paper local FGV\n  Gera paper acadêmico FGV a partir de PDFs/DOCX/TXT locais, com ORG/PDF/DOCX, conformidade\n  e qualidade.\n\npaper_prisma_fgv: Paper + relatório PRISMA FGV\n  Gera paper e saída própria de relatório PRISMA. O relatório usa corpus local,\n  prisma_report.json ou diretório de pesquisa/triagem existente.\n\ndissertacao_local_fgv: Dissertação local FGV\n  Gera dissertação FGV a partir de corpus local, com campos de orientador, área, linha e\n  pré-textuais básicos.\n\ndissertacao_prisma_fgv: Dissertação + relatório PRISMA FGV\n  Gera dissertação e relatório PRISMA auditável a partir de corpus local ou dados de\n  pesquisa existentes.\n\nrelatorio_prisma_fgv: Relatório PRISMA autônomo FGV\n  Gera apenas o relatório de pesquisa/PRISMA. Observação: a versão atual ainda exige corpus\n  local, prisma_report.json ou diretório de pesquisa existente como insumo.\n\nrelatorio_prisma_busca_orientada_fgv: Relatório PRISMA com busca orientada FGV\n  Executa busca bibliográfica externa rastreável nas fontes configuráveis, deduplica\n  registros, gera triagem humana e produz relatório PRISMA preliminar/final em ORG e PDF no\n  layout institucional escolhido. O fluxo começa pela descoberta externa e não exige corpus\n  local.\n\nsomente_renderizar_fgv: Somente renderizar document.json FGV\n  Cria TOML para renderizar um document.json existente em ORG/PDF/DOCX, sem recriar conteúdo\n  pela IA.\n",
+        "normalized_sha256": "aaee5dbec167eb5a558db3fec8a4a06c54bb89a5ba8484a12cb2bb7e15c98ada",
+        "raw_sha256": "39cfe49282f80fef7f96a3fede9c5d3ba9db6eb383489432a728b5072abb37eb"
+      },
+      "surface": "direct_import_call_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--check-config"
+      ],
+      "case": "check_config_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --check-config",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.257495,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/direct_import_call_source_root/check_config_missing_config/process_meta.json",
+          "sha256": "576af9bc9ffefcd2c1095ae386634d7fea780e607074b9a7debca715f69b9998",
+          "size": 2137,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--check-config"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--check-config"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": "--check-config exige --config caminho.toml",
+        "exception_type": "RuntimeError",
+        "exit_code": 1,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [
+          {
+            "fullname": "dotenv",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.main",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.parser",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.variables",
+            "matched": [
+              "dotenv"
+            ]
+          }
+        ],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 1413,
+        "normalized": "PYTHON_EXCEPTION: RuntimeError: --check-config exige --config caminho.toml\n",
+        "normalized_sha256": "1e41f39c8271134277942719d8d3caf74574f839c27fee7c03aa5332ccb5d634",
+        "raw_sha256": "c8deb384f35141f116aa834b833214970c1d5af7086547a67207cf32679c00c4"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "direct_import_call_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--check-institution-compliance"
+      ],
+      "case": "institution_compliance_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --check-institution-compliance",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 1.023935,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/direct_import_call_source_root/institution_compliance_missing_config/process_meta.json",
+          "sha256": "c35ca0f05e2c63452339750f8369a9f66ceec229b5544e37952c9f52b26bdfb9",
+          "size": 6629,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--check-institution-compliance"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--check-institution-compliance"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": "--check-institution-compliance exige --config caminho.toml",
+        "exception_type": "RuntimeError",
+        "exit_code": 1,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [
+          {
+            "fullname": "app_bundle.scripts.pipeline.bibliography_manager",
+            "matched": [
+              "bibliography_manager"
+            ]
+          },
+          {
+            "fullname": "pydantic",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._migration",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.warnings",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.version",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.errors",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._repr",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._typing_extra",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._namespace_utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.main",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._config",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.aliases",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._internal_dataclass",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.config",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._decorators",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._core_utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._import_utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._fields",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._generics",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._forward_ref",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._docs_extraction",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._mock_val_ser",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.plugin",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.plugin._schema_validator",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._model_construction",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._generate_schema",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.annotated_handlers",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.functional_validators",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.json_schema",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._core_metadata",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._schema_generation_shared",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._discriminated_union",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._known_annotated_metadata",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._schema_gather",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._signature",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.fields",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._validators",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.types",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.plugin._loader",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "dotenv",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.main",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.parser",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.variables",
+            "matched": [
+              "dotenv"
+            ]
+          }
+        ],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 1515,
+        "normalized": "PYTHON_EXCEPTION: RuntimeError: --check-institution-compliance exige --config caminho.toml\n",
+        "normalized_sha256": "69fb17ffb08554fdacdb05950504491e0b3b7358f39417fd7e8d10c0801061b8",
+        "raw_sha256": "a5786c725760a8631f607a1210c4a96fad1e870e5eca51e19b007552fa91f72b"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "direct_import_call_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--make-doi-manifest"
+      ],
+      "case": "doi_manifest_missing_input",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --make-doi-manifest",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.082418,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/direct_import_call_source_root/doi_manifest_missing_input/process_meta.json",
+          "sha256": "d93116fdf2fa9e8010ac5cdb472821c783e7fe4e3e5bfccdfc5a0e8e633f90e6",
+          "size": 1733,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--make-doi-manifest"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--make-doi-manifest"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 1,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 58,
+        "normalized": "informe exatamente uma origem: --input-zip ou --input-dir\n",
+        "normalized_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8",
+        "raw_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "direct_import_call_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--help"
+      ],
+      "case": "help",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --help",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.074919,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 10180,
+        "normalized": "usage: <PROG> [-h] [--config CONFIG] [--tui] [--gui] [--init-toml]\n                         [--toml-profile TOML_PROFILE] [--no-clear]\n                         [--list-toml-profiles] [--list-institutions]\n                         [--list-layouts]\n                         [--explain-profile [EXPLAIN_PROFILE]]\n                         [--show-prompts] [--write-prompt-lock]\n                         [--check-institution-compliance] [--doctor]\n                         [--check-config] [--recompile] [--org ORG]\n                         [--academic-writing ACADEMIC_WRITING]\n                         [--latex-extra-path LATEX_EXTRA_PATH]\n                         [--pdf-engine PDF_ENGINE] [--no-clean]\n                         [--somente-renderizar] [--somente-mapa-mental]\n                         [--reusar-mapa-mental]\n                         [--forcar-regeneracao-mapa-mental]\n                         [--document-json DOCUMENT_JSON]\n                         [--prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM]\n                         [--init-project INIT_PROJECT]\n                         [--project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}]\n                         [--institution INSTITUTION] [--base-dir BASE_DIR]\n                         [--overwrite-project] [--make-doi-manifest]\n                         [--input-zip INPUT_ZIP] [--input-dir INPUT_DIR]\n                         [--output OUTPUT] [--output-dir OUTPUT_DIR]\n                         [--work-dir WORK_DIR] [--cache-dir CACHE_DIR]\n                         [--research-output-dir RESEARCH_OUTPUT_DIR]\n                         [--output-prefix OUTPUT_PREFIX] [--layout LAYOUT]\n                         [--tipo-conteudo TIPO_CONTEUDO]\n                         [--genero-academico GENERO_ACADEMICO]\n                         [--no-output-subdir] [--inspect-bib INSPECT_BIB]\n                         [--quality-report] [--bib BIB] [--docx DOCX]\n                         [--pdf PDF] [--prisma-curadoria-menu]\n                         [--prisma-curadoria-ia] [--prisma-curadoria-sem-ia]\n                         [--prisma-curadoria-reexportar-xlsx]\n                         [--prisma-curadoria-importar]\n                         [--prisma-curadoria-fluxo-completo]\n                         [--prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT]\n                         [--prisma-curadoria-input PRISMA_CURADORIA_INPUT]\n                         [--prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR]\n                         [--prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR]\n                         [--prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS]\n                         [--prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO]\n                         [--list-profiles]\n\nacademic_pipeline rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit —\ndocument_model canônico\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG       Arquivo TOML\n  --tui                 Abre a Central Operacional FGV em terminal\n                        (prompt_toolkit)\n  --gui                 Abre a interface gráfica FGV de atividades acadêmicas\n  --init-toml           Abre o gerador interativo completo de TOML\n  --toml-profile TOML_PROFILE\n                        Preset inicial para --init-toml, ex.:\n                        atividade_local_fgv\n  --no-clear            Não limpa a tela entre etapas do --init-toml\n  --list-toml-profiles  Lista presets do gerador de TOML\n  --list-institutions   Lista perfis institucionais disponíveis\n  --list-layouts        Lista layouts disponíveis do perfil institucional\n                        informado no TOML\n  --explain-profile [EXPLAIN_PROFILE]\n                        Explica um perfil institucional, ex.: --explain-\n                        profile fgv\n  --show-prompts        Mostra os prompts/diretivas ativos para o TOML\n                        informado\n  --write-prompt-lock   Gera prompt_lock.json/md para o TOML e encerra\n  --check-institution-compliance\n                        Valida conformidade institucional de artefatos já\n                        gerados\n  --doctor              Diagnostica ambiente, ferramentas, arquivos FGV e\n                        estilo bibliográfico\n  --check-config        Valida preventivamente o TOML e encerra\n  --recompile           Recompila um .org existente sem chamar IA\n  --org ORG             Arquivo .org para --recompile\n  --academic-writing ACADEMIC_WRITING\n                        Override do academic-writing.el para --recompile\n  --latex-extra-path LATEX_EXTRA_PATH\n                        Override do latex_extra_path para --recompile\n  --pdf-engine PDF_ENGINE\n                        Override do pdf_engine para --recompile\n  --no-clean            Não remove auxiliares no --recompile\n  --somente-renderizar  Usa document.json existente e só renderiza saídas\n  --somente-mapa-mental\n                        Usa document.json existente e gera/renderiza apenas o\n                        mapa mental\n  --reusar-mapa-mental  Reaproveita imagem de mapa mental existente quando\n                        disponível, sem chamar IA/PlantUML\n  --forcar-regeneracao-mapa-mental\n                        Remove mapa mental existente e recria PlantUML/imagem\n                        quando a etapa de mapa mental for executada\n  --document-json DOCUMENT_JSON\n                        Caminho de document.json existente\n  --prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM\n                        Importa CSV de triagem humana do perfil\n                        relatorio_prisma_busca_orientada_fgv e consolida\n                        matriz/relatório PRISMA\n  --init-project INIT_PROJECT\n                        Cria app_bundle/projetos/<nome> com TOML, ZIPs\n                        placeholder e doi_manifest.csv\n  --project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}\n                        Tipo de projeto para --init-project\n  --institution INSTITUTION\n                        Perfil institucional usado por --init-project, ex.:\n                        fgv\n  --base-dir BASE_DIR   Raiz do academic_pipeline ou app_bundle para --init-\n                        project\n  --overwrite-project   Permite sobrescrever arquivos seguros criados por\n                        --init-project\n  --make-doi-manifest   Gera doi_manifest.csv a partir de --input-zip ou\n                        --input-dir\n  --input-zip INPUT_ZIP\n                        ZIP de documentos para --make-doi-manifest\n  --input-dir INPUT_DIR\n                        Pasta de documentos para --make-doi-manifest\n  --output OUTPUT       Arquivo de saída para --make-doi-manifest\n  --output-dir OUTPUT_DIR\n                        Override de [paths].document_output_dir para a\n                        geração/renderização do documento\n  --work-dir WORK_DIR   Override de [paths].work_dir para extrações\n                        temporárias\n  --cache-dir CACHE_DIR\n                        Override de [paths].cache_dir para fulltext_cache\n  --research-output-dir RESEARCH_OUTPUT_DIR\n                        Override de [paths].research_output_dir para relatório\n                        PRISMA\n  --output-prefix OUTPUT_PREFIX\n                        Override de [paths].document_prefix\n  --layout LAYOUT       Override de [documento].layout, ex.: atividade_fgv\n  --tipo-conteudo TIPO_CONTEUDO\n                        Override de [documento].tipo_conteudo, ex.:\n                        resumo_artigos\n  --genero-academico GENERO_ACADEMICO\n                        Override de [documento].genero_academico, ex.:\n                        atividade\n  --no-output-subdir    Não cria subdiretório com document_prefix dentro de\n                        --output-dir/[paths].document_output_dir\n  --inspect-bib INSPECT_BIB\n                        Inspeciona arquivo .bib e gera relatório .md/.json\n  --quality-report      Gera quality_report.md a partir de --document-json e\n                        opcionalmente --org\n  --bib BIB             Arquivo .bib opcional para --quality-report ou\n                        --check-institution-compliance\n  --docx DOCX           Arquivo .docx opcional para --check-institution-\n                        compliance\n  --pdf PDF             Arquivo .pdf opcional para --check-institution-\n                        compliance\n  --prisma-curadoria-menu\n                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.\n  --list-profiles       Lista os perfis TOML disponíveis.\n",
+        "normalized_sha256": "e2d7adc0d76210cef1397a3f3ea86853f10b2c2e9ad1db670273eab3c05b9240",
+        "raw_sha256": "e163f8874374cd2a57caa5367a4d38b8f1d0204e404351131d9073ed33000d73"
+      },
+      "surface": "python_minus_m_source_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-institutions"
+      ],
+      "case": "list_institutions",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --list-institutions",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.076284,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 128,
+        "normalized": "Perfis institucionais disponíveis:\n- fgv: Fundação Getulio Vargas (Manual da FGV de Normalização de Trabalhos Acadêmicos)\n",
+        "normalized_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67",
+        "raw_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67"
+      },
+      "surface": "python_minus_m_source_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-profiles"
+      ],
+      "case": "list_profiles",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --list-profiles",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.069804,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1923,
+        "normalized": "atividade_local_fgv: Atividade local FGV\n  Gera atividade acadêmica com Ficha Técnica FGV a partir de corpus local. Não faz busca\n  externa nem relatório PRISMA.\n\nresumo_artigos_local_fgv: Resumo analítico de artigos locais FGV\n  Gera documento FGV com Ficha Técnica, introdução, resumos individuais, comparação, síntese\n  analítica, considerações finais, referências e mapa mental opcional a partir de corpus\n  local. Não faz busca externa nem relatório PRISMA.\n\npaper_local_fgv: Paper local FGV\n  Gera paper acadêmico FGV a partir de PDFs/DOCX/TXT locais, com ORG/PDF/DOCX, conformidade\n  e qualidade.\n\npaper_prisma_fgv: Paper + relatório PRISMA FGV\n  Gera paper e saída própria de relatório PRISMA. O relatório usa corpus local,\n  prisma_report.json ou diretório de pesquisa/triagem existente.\n\ndissertacao_local_fgv: Dissertação local FGV\n  Gera dissertação FGV a partir de corpus local, com campos de orientador, área, linha e\n  pré-textuais básicos.\n\ndissertacao_prisma_fgv: Dissertação + relatório PRISMA FGV\n  Gera dissertação e relatório PRISMA auditável a partir de corpus local ou dados de\n  pesquisa existentes.\n\nrelatorio_prisma_fgv: Relatório PRISMA autônomo FGV\n  Gera apenas o relatório de pesquisa/PRISMA. Observação: a versão atual ainda exige corpus\n  local, prisma_report.json ou diretório de pesquisa existente como insumo.\n\nrelatorio_prisma_busca_orientada_fgv: Relatório PRISMA com busca orientada FGV\n  Executa busca bibliográfica externa rastreável nas fontes configuráveis, deduplica\n  registros, gera triagem humana e produz relatório PRISMA preliminar/final em ORG e PDF no\n  layout institucional escolhido. O fluxo começa pela descoberta externa e não exige corpus\n  local.\n\nsomente_renderizar_fgv: Somente renderizar document.json FGV\n  Cria TOML para renderizar um document.json existente em ORG/PDF/DOCX, sem recriar conteúdo\n  pela IA.\n",
+        "normalized_sha256": "aaee5dbec167eb5a558db3fec8a4a06c54bb89a5ba8484a12cb2bb7e15c98ada",
+        "raw_sha256": "39cfe49282f80fef7f96a3fede9c5d3ba9db6eb383489432a728b5072abb37eb"
+      },
+      "surface": "python_minus_m_source_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-config"
+      ],
+      "case": "check_config_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --check-config",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.123371,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 1697,
+        "normalized": "PYTHON_EXCEPTION: RuntimeError: --check-config exige --config caminho.toml\n",
+        "normalized_sha256": "1e41f39c8271134277942719d8d3caf74574f839c27fee7c03aa5332ccb5d634",
+        "raw_sha256": "68e2a441bdb3574cd71b1d92701a2bfedd0729e78230d2ade4f6b1a41a1423ea"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_source_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-institution-compliance"
+      ],
+      "case": "institution_compliance_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --check-institution-compliance",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.384542,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 1799,
+        "normalized": "PYTHON_EXCEPTION: RuntimeError: --check-institution-compliance exige --config caminho.toml\n",
+        "normalized_sha256": "69fb17ffb08554fdacdb05950504491e0b3b7358f39417fd7e8d10c0801061b8",
+        "raw_sha256": "2d5338c7c40d8ff79e122715a8cfc92672d912307875f11fb5b7887f5ef7aadc"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_source_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--make-doi-manifest"
+      ],
+      "case": "doi_manifest_missing_input",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --make-doi-manifest",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.075863,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 58,
+        "normalized": "informe exatamente uma origem: --input-zip ou --input-dir\n",
+        "normalized_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8",
+        "raw_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_source_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--help"
+      ],
+      "case": "help",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --help",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.085666,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/official_target_source_root/help/process_meta.json",
+          "sha256": "54c73185e9b812fe00c1c23b1c83c430b8d691d8a7d7fae289f6905af2de09a8",
+          "size": 1707,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--help"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--help"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 0,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 10180,
+        "normalized": "usage: <PROG> [-h] [--config CONFIG] [--tui] [--gui] [--init-toml]\n                         [--toml-profile TOML_PROFILE] [--no-clear]\n                         [--list-toml-profiles] [--list-institutions]\n                         [--list-layouts]\n                         [--explain-profile [EXPLAIN_PROFILE]]\n                         [--show-prompts] [--write-prompt-lock]\n                         [--check-institution-compliance] [--doctor]\n                         [--check-config] [--recompile] [--org ORG]\n                         [--academic-writing ACADEMIC_WRITING]\n                         [--latex-extra-path LATEX_EXTRA_PATH]\n                         [--pdf-engine PDF_ENGINE] [--no-clean]\n                         [--somente-renderizar] [--somente-mapa-mental]\n                         [--reusar-mapa-mental]\n                         [--forcar-regeneracao-mapa-mental]\n                         [--document-json DOCUMENT_JSON]\n                         [--prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM]\n                         [--init-project INIT_PROJECT]\n                         [--project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}]\n                         [--institution INSTITUTION] [--base-dir BASE_DIR]\n                         [--overwrite-project] [--make-doi-manifest]\n                         [--input-zip INPUT_ZIP] [--input-dir INPUT_DIR]\n                         [--output OUTPUT] [--output-dir OUTPUT_DIR]\n                         [--work-dir WORK_DIR] [--cache-dir CACHE_DIR]\n                         [--research-output-dir RESEARCH_OUTPUT_DIR]\n                         [--output-prefix OUTPUT_PREFIX] [--layout LAYOUT]\n                         [--tipo-conteudo TIPO_CONTEUDO]\n                         [--genero-academico GENERO_ACADEMICO]\n                         [--no-output-subdir] [--inspect-bib INSPECT_BIB]\n                         [--quality-report] [--bib BIB] [--docx DOCX]\n                         [--pdf PDF] [--prisma-curadoria-menu]\n                         [--prisma-curadoria-ia] [--prisma-curadoria-sem-ia]\n                         [--prisma-curadoria-reexportar-xlsx]\n                         [--prisma-curadoria-importar]\n                         [--prisma-curadoria-fluxo-completo]\n                         [--prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT]\n                         [--prisma-curadoria-input PRISMA_CURADORIA_INPUT]\n                         [--prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR]\n                         [--prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR]\n                         [--prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS]\n                         [--prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO]\n                         [--list-profiles]\n\nacademic_pipeline rc10.7.45-prisma-ai-pretriage-and-s2-rate-limit —\ndocument_model canônico\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG       Arquivo TOML\n  --tui                 Abre a Central Operacional FGV em terminal\n                        (prompt_toolkit)\n  --gui                 Abre a interface gráfica FGV de atividades acadêmicas\n  --init-toml           Abre o gerador interativo completo de TOML\n  --toml-profile TOML_PROFILE\n                        Preset inicial para --init-toml, ex.:\n                        atividade_local_fgv\n  --no-clear            Não limpa a tela entre etapas do --init-toml\n  --list-toml-profiles  Lista presets do gerador de TOML\n  --list-institutions   Lista perfis institucionais disponíveis\n  --list-layouts        Lista layouts disponíveis do perfil institucional\n                        informado no TOML\n  --explain-profile [EXPLAIN_PROFILE]\n                        Explica um perfil institucional, ex.: --explain-\n                        profile fgv\n  --show-prompts        Mostra os prompts/diretivas ativos para o TOML\n                        informado\n  --write-prompt-lock   Gera prompt_lock.json/md para o TOML e encerra\n  --check-institution-compliance\n                        Valida conformidade institucional de artefatos já\n                        gerados\n  --doctor              Diagnostica ambiente, ferramentas, arquivos FGV e\n                        estilo bibliográfico\n  --check-config        Valida preventivamente o TOML e encerra\n  --recompile           Recompila um .org existente sem chamar IA\n  --org ORG             Arquivo .org para --recompile\n  --academic-writing ACADEMIC_WRITING\n                        Override do academic-writing.el para --recompile\n  --latex-extra-path LATEX_EXTRA_PATH\n                        Override do latex_extra_path para --recompile\n  --pdf-engine PDF_ENGINE\n                        Override do pdf_engine para --recompile\n  --no-clean            Não remove auxiliares no --recompile\n  --somente-renderizar  Usa document.json existente e só renderiza saídas\n  --somente-mapa-mental\n                        Usa document.json existente e gera/renderiza apenas o\n                        mapa mental\n  --reusar-mapa-mental  Reaproveita imagem de mapa mental existente quando\n                        disponível, sem chamar IA/PlantUML\n  --forcar-regeneracao-mapa-mental\n                        Remove mapa mental existente e recria PlantUML/imagem\n                        quando a etapa de mapa mental for executada\n  --document-json DOCUMENT_JSON\n                        Caminho de document.json existente\n  --prisma-importar-triagem PRISMA_IMPORTAR_TRIAGEM\n                        Importa CSV de triagem humana do perfil\n                        relatorio_prisma_busca_orientada_fgv e consolida\n                        matriz/relatório PRISMA\n  --init-project INIT_PROJECT\n                        Cria app_bundle/projetos/<nome> com TOML, ZIPs\n                        placeholder e doi_manifest.csv\n  --project-type {paper,atividade,prisma,atividade_prisma,paper_prisma}\n                        Tipo de projeto para --init-project\n  --institution INSTITUTION\n                        Perfil institucional usado por --init-project, ex.:\n                        fgv\n  --base-dir BASE_DIR   Raiz do academic_pipeline ou app_bundle para --init-\n                        project\n  --overwrite-project   Permite sobrescrever arquivos seguros criados por\n                        --init-project\n  --make-doi-manifest   Gera doi_manifest.csv a partir de --input-zip ou\n                        --input-dir\n  --input-zip INPUT_ZIP\n                        ZIP de documentos para --make-doi-manifest\n  --input-dir INPUT_DIR\n                        Pasta de documentos para --make-doi-manifest\n  --output OUTPUT       Arquivo de saída para --make-doi-manifest\n  --output-dir OUTPUT_DIR\n                        Override de [paths].document_output_dir para a\n                        geração/renderização do documento\n  --work-dir WORK_DIR   Override de [paths].work_dir para extrações\n                        temporárias\n  --cache-dir CACHE_DIR\n                        Override de [paths].cache_dir para fulltext_cache\n  --research-output-dir RESEARCH_OUTPUT_DIR\n                        Override de [paths].research_output_dir para relatório\n                        PRISMA\n  --output-prefix OUTPUT_PREFIX\n                        Override de [paths].document_prefix\n  --layout LAYOUT       Override de [documento].layout, ex.: atividade_fgv\n  --tipo-conteudo TIPO_CONTEUDO\n                        Override de [documento].tipo_conteudo, ex.:\n                        resumo_artigos\n  --genero-academico GENERO_ACADEMICO\n                        Override de [documento].genero_academico, ex.:\n                        atividade\n  --no-output-subdir    Não cria subdiretório com document_prefix dentro de\n                        --output-dir/[paths].document_output_dir\n  --inspect-bib INSPECT_BIB\n                        Inspeciona arquivo .bib e gera relatório .md/.json\n  --quality-report      Gera quality_report.md a partir de --document-json e\n                        opcionalmente --org\n  --bib BIB             Arquivo .bib opcional para --quality-report ou\n                        --check-institution-compliance\n  --docx DOCX           Arquivo .docx opcional para --check-institution-\n                        compliance\n  --pdf PDF             Arquivo .pdf opcional para --check-institution-\n                        compliance\n  --prisma-curadoria-menu\n                        Abre o sub-menu PRISMA de curadoria IA de referências.\n  --prisma-curadoria-ia\n                        Executa a curadoria IA v2 de referências e gera\n                        XLSX/CSV para o PRISMA.\n  --prisma-curadoria-sem-ia\n                        Usa a etapa de curadoria sem chamada à IA, apenas com\n                        heurística local.\n  --prisma-curadoria-reexportar-xlsx\n                        Reexporta o XLSX de curadoria revisado para\n                        triagem_humana.csv.\n  --prisma-curadoria-importar\n                        Importa triagem_humana.csv e executa a geração final\n                        do PRISMA.\n  --prisma-curadoria-fluxo-completo\n                        Executa curadoria IA e depois importa a triagem para\n                        gerar o PRISMA final.\n  --prisma-curadoria-prompt PRISMA_CURADORIA_PROMPT\n                        Caminho do YAML de prompt estruturado da curadoria.\n  --prisma-curadoria-input PRISMA_CURADORIA_INPUT\n                        Entrada específica para a curadoria: XLSX/CSV de\n                        triagem ou XLSX revisado.\n  --prisma-curadoria-out-dir PRISMA_CURADORIA_OUT_DIR\n                        Diretório de saída do relatório PRISMA.\n  --prisma-curadoria-max-incluir PRISMA_CURADORIA_MAX_INCLUIR\n                        Número máximo de referências incluídas pela curadoria.\n  --prisma-curadoria-top-n-candidatos PRISMA_CURADORIA_TOP_N_CANDIDATOS\n                        Número de candidatos enviados/avaliados pela curadoria\n                        IA.\n  --prisma-curadoria-limiar-minimo PRISMA_CURADORIA_LIMIAR_MINIMO\n                        Limiar mínimo de inclusão da curadoria v2.\n  --list-profiles       Lista os perfis TOML disponíveis.\n",
+        "normalized_sha256": "e2d7adc0d76210cef1397a3f3ea86853f10b2c2e9ad1db670273eab3c05b9240",
+        "raw_sha256": "e163f8874374cd2a57caa5367a4d38b8f1d0204e404351131d9073ed33000d73"
+      },
+      "surface": "official_target_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--list-institutions"
+      ],
+      "case": "list_institutions",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --list-institutions",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.081328,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/official_target_source_root/list_institutions/process_meta.json",
+          "sha256": "b71e5e6edc024cbe8bd0dec6883a2f686efe552100018a6f017b6ee2f3b4f02f",
+          "size": 1733,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--list-institutions"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--list-institutions"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 0,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 128,
+        "normalized": "Perfis institucionais disponíveis:\n- fgv: Fundação Getulio Vargas (Manual da FGV de Normalização de Trabalhos Acadêmicos)\n",
+        "normalized_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67",
+        "raw_sha256": "91580719633b696e73dc214e5cbde4a0c322e4319d311bbc1a5b673ad95afc67"
+      },
+      "surface": "official_target_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--list-profiles"
+      ],
+      "case": "list_profiles",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --list-profiles",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.078096,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/official_target_source_root/list_profiles/process_meta.json",
+          "sha256": "5ac49d6fbcc2ecf715a13f7add30d0e382fae3e995d6722882b1ef965ad32040",
+          "size": 1725,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--list-profiles"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--list-profiles"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 0,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1923,
+        "normalized": "atividade_local_fgv: Atividade local FGV\n  Gera atividade acadêmica com Ficha Técnica FGV a partir de corpus local. Não faz busca\n  externa nem relatório PRISMA.\n\nresumo_artigos_local_fgv: Resumo analítico de artigos locais FGV\n  Gera documento FGV com Ficha Técnica, introdução, resumos individuais, comparação, síntese\n  analítica, considerações finais, referências e mapa mental opcional a partir de corpus\n  local. Não faz busca externa nem relatório PRISMA.\n\npaper_local_fgv: Paper local FGV\n  Gera paper acadêmico FGV a partir de PDFs/DOCX/TXT locais, com ORG/PDF/DOCX, conformidade\n  e qualidade.\n\npaper_prisma_fgv: Paper + relatório PRISMA FGV\n  Gera paper e saída própria de relatório PRISMA. O relatório usa corpus local,\n  prisma_report.json ou diretório de pesquisa/triagem existente.\n\ndissertacao_local_fgv: Dissertação local FGV\n  Gera dissertação FGV a partir de corpus local, com campos de orientador, área, linha e\n  pré-textuais básicos.\n\ndissertacao_prisma_fgv: Dissertação + relatório PRISMA FGV\n  Gera dissertação e relatório PRISMA auditável a partir de corpus local ou dados de\n  pesquisa existentes.\n\nrelatorio_prisma_fgv: Relatório PRISMA autônomo FGV\n  Gera apenas o relatório de pesquisa/PRISMA. Observação: a versão atual ainda exige corpus\n  local, prisma_report.json ou diretório de pesquisa existente como insumo.\n\nrelatorio_prisma_busca_orientada_fgv: Relatório PRISMA com busca orientada FGV\n  Executa busca bibliográfica externa rastreável nas fontes configuráveis, deduplica\n  registros, gera triagem humana e produz relatório PRISMA preliminar/final em ORG e PDF no\n  layout institucional escolhido. O fluxo começa pela descoberta externa e não exige corpus\n  local.\n\nsomente_renderizar_fgv: Somente renderizar document.json FGV\n  Cria TOML para renderizar um document.json existente em ORG/PDF/DOCX, sem recriar conteúdo\n  pela IA.\n",
+        "normalized_sha256": "aaee5dbec167eb5a558db3fec8a4a06c54bb89a5ba8484a12cb2bb7e15c98ada",
+        "raw_sha256": "39cfe49282f80fef7f96a3fede9c5d3ba9db6eb383489432a728b5072abb37eb"
+      },
+      "surface": "official_target_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--check-config"
+      ],
+      "case": "check_config_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --check-config",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.120114,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/official_target_source_root/check_config_missing_config/process_meta.json",
+          "sha256": "576af9bc9ffefcd2c1095ae386634d7fea780e607074b9a7debca715f69b9998",
+          "size": 2137,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--check-config"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--check-config"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": "--check-config exige --config caminho.toml",
+        "exception_type": "RuntimeError",
+        "exit_code": 1,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [
+          {
+            "fullname": "dotenv",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.main",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.parser",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.variables",
+            "matched": [
+              "dotenv"
+            ]
+          }
+        ],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 1413,
+        "normalized": "PYTHON_EXCEPTION: RuntimeError: --check-config exige --config caminho.toml\n",
+        "normalized_sha256": "1e41f39c8271134277942719d8d3caf74574f839c27fee7c03aa5332ccb5d634",
+        "raw_sha256": "c8deb384f35141f116aa834b833214970c1d5af7086547a67207cf32679c00c4"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "official_target_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--check-institution-compliance"
+      ],
+      "case": "institution_compliance_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --check-institution-compliance",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.385623,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/official_target_source_root/institution_compliance_missing_config/process_meta.json",
+          "sha256": "c35ca0f05e2c63452339750f8369a9f66ceec229b5544e37952c9f52b26bdfb9",
+          "size": 6629,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--check-institution-compliance"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--check-institution-compliance"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": "--check-institution-compliance exige --config caminho.toml",
+        "exception_type": "RuntimeError",
+        "exit_code": 1,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [
+          {
+            "fullname": "app_bundle.scripts.pipeline.bibliography_manager",
+            "matched": [
+              "bibliography_manager"
+            ]
+          },
+          {
+            "fullname": "pydantic",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._migration",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.warnings",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.version",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.errors",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._repr",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._typing_extra",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._namespace_utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.main",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._config",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.aliases",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._internal_dataclass",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.config",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._decorators",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._core_utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._import_utils",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._fields",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._generics",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._forward_ref",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._docs_extraction",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._mock_val_ser",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.plugin",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.plugin._schema_validator",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._model_construction",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._generate_schema",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.annotated_handlers",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.functional_validators",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.json_schema",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._core_metadata",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._schema_generation_shared",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._discriminated_union",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._known_annotated_metadata",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._schema_gather",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._signature",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.fields",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic._internal._validators",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.types",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "pydantic.plugin._loader",
+            "matched": [
+              "pydantic"
+            ]
+          },
+          {
+            "fullname": "dotenv",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.main",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.parser",
+            "matched": [
+              "dotenv"
+            ]
+          },
+          {
+            "fullname": "dotenv.variables",
+            "matched": [
+              "dotenv"
+            ]
+          }
+        ],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 1515,
+        "normalized": "PYTHON_EXCEPTION: RuntimeError: --check-institution-compliance exige --config caminho.toml\n",
+        "normalized_sha256": "69fb17ffb08554fdacdb05950504491e0b3b7358f39417fd7e8d10c0801061b8",
+        "raw_sha256": "a5786c725760a8631f607a1210c4a96fad1e870e5eca51e19b007552fa91f72b"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "official_target_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--make-doi-manifest"
+      ],
+      "case": "doi_manifest_missing_input",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -c '<AP007E1_WRAPPER>' --make-doi-manifest",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "duration_seconds": 0.082899,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [
+        {
+          "path": "captures/official_target_source_root/doi_manifest_missing_input/process_meta.json",
+          "sha256": "d93116fdf2fa9e8010ac5cdb472821c783e7fe4e3e5bfccdfc5a0e8e633f90e6",
+          "size": 1733,
+          "type": "file"
+        }
+      ],
+      "process_meta": {
+        "after": {
+          "argv": [
+            "-c",
+            "--make-doi-manifest"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "argv_preserved": true,
+        "before": {
+          "argv": [
+            "-c",
+            "--make-doi-manifest"
+          ],
+          "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+          "sys_path": [
+            "",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python311.zip",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11",
+            "/home/gustavodetarso/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+            "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/lib/python3.11/site-packages"
+          ]
+        },
+        "cwd_preserved": true,
+        "exception_text": null,
+        "exception_type": null,
+        "exit_code": 1,
+        "legacy_import_attempts": [],
+        "module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__init__.py",
+        "suspicious_import_attempts": [],
+        "sys_path_preserved": true,
+        "target": "academic_pipeline.cli:main",
+        "target_module_file": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/cli.py"
+      },
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 58,
+        "normalized": "informe exatamente uma origem: --input-zip ou --input-dir\n",
+        "normalized_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8",
+        "raw_sha256": "00c7a563eae621fa2d23067ef2ee26d98c9c213fea084a29f256336bce015ac8"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "official_target_source_root",
+      "timed_out": false,
+      "wrapper_sha256": "a0eed0dd9d90052e4eab600b80177190c25c26d2a00fe8aef3aec655c6b24035"
+    },
+    {
+      "argv": [
+        "--help"
+      ],
+      "case": "help",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --help",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+      "duration_seconds": 0.018958,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_worktree_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-institutions"
+      ],
+      "case": "list_institutions",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --list-institutions",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+      "duration_seconds": 0.021548,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_worktree_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-profiles"
+      ],
+      "case": "list_profiles",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --list-profiles",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+      "duration_seconds": 0.022756,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_worktree_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-config"
+      ],
+      "case": "check_config_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --check-config",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+      "duration_seconds": 0.019981,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_worktree_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-institution-compliance"
+      ],
+      "case": "institution_compliance_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --check-institution-compliance",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+      "duration_seconds": 0.022246,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_worktree_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--make-doi-manifest"
+      ],
+      "case": "doi_manifest_missing_input",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --make-doi-manifest",
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+      "duration_seconds": 0.023662,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_worktree_root",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--help"
+      ],
+      "case": "help",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --help",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.019578,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-institutions"
+      ],
+      "case": "list_institutions",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --list-institutions",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.020292,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-profiles"
+      ],
+      "case": "list_profiles",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --list-profiles",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.022791,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-config"
+      ],
+      "case": "check_config_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --check-config",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.01863,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-institution-compliance"
+      ],
+      "case": "institution_compliance_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --check-institution-compliance",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.020013,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--make-doi-manifest"
+      ],
+      "case": "doi_manifest_missing_input",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python -m academic_pipeline --make-doi-manifest",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.020557,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 139,
+        "normalized": "<PYTHON>: No module named academic_pipeline\n",
+        "normalized_sha256": "c8c0836ca9c3c1ff264fe11cdd5ade4093c19daaf321ac79160e1ecfb9129217",
+        "raw_sha256": "bb6d340968a0dfedd2b263345f486b37a5524042c78022dadb16038db35a9198"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "python_minus_m_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--help"
+      ],
+      "case": "help",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py --help",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.013607,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 291,
+        "normalized": "PYTHON_EXCEPTION: ImportError: attempted relative import with no known parent package\n",
+        "normalized_sha256": "fe9f8c00c15bc09cd2b49748ded991bce9dd2869edabe2595761c35650c20058",
+        "raw_sha256": "9f25dd40b630a4ca69eb2bf7ca288e2dd6f9165cc725729b1614fa7f02884697"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "absolute_main_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-institutions"
+      ],
+      "case": "list_institutions",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py --list-institutions",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.01543,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 291,
+        "normalized": "PYTHON_EXCEPTION: ImportError: attempted relative import with no known parent package\n",
+        "normalized_sha256": "fe9f8c00c15bc09cd2b49748ded991bce9dd2869edabe2595761c35650c20058",
+        "raw_sha256": "9f25dd40b630a4ca69eb2bf7ca288e2dd6f9165cc725729b1614fa7f02884697"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "absolute_main_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--list-profiles"
+      ],
+      "case": "list_profiles",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py --list-profiles",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.013518,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 291,
+        "normalized": "PYTHON_EXCEPTION: ImportError: attempted relative import with no known parent package\n",
+        "normalized_sha256": "fe9f8c00c15bc09cd2b49748ded991bce9dd2869edabe2595761c35650c20058",
+        "raw_sha256": "9f25dd40b630a4ca69eb2bf7ca288e2dd6f9165cc725729b1614fa7f02884697"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "absolute_main_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-config"
+      ],
+      "case": "check_config_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py --check-config",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.01733,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 291,
+        "normalized": "PYTHON_EXCEPTION: ImportError: attempted relative import with no known parent package\n",
+        "normalized_sha256": "fe9f8c00c15bc09cd2b49748ded991bce9dd2869edabe2595761c35650c20058",
+        "raw_sha256": "9f25dd40b630a4ca69eb2bf7ca288e2dd6f9165cc725729b1614fa7f02884697"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "absolute_main_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--check-institution-compliance"
+      ],
+      "case": "institution_compliance_missing_config",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py --check-institution-compliance",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.013448,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 291,
+        "normalized": "PYTHON_EXCEPTION: ImportError: attempted relative import with no known parent package\n",
+        "normalized_sha256": "fe9f8c00c15bc09cd2b49748ded991bce9dd2869edabe2595761c35650c20058",
+        "raw_sha256": "9f25dd40b630a4ca69eb2bf7ca288e2dd6f9165cc725729b1614fa7f02884697"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "absolute_main_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    },
+    {
+      "argv": [
+        "--make-doi-manifest"
+      ],
+      "case": "doi_manifest_missing_input",
+      "command": "/home/gustavodetarso/.local/share/virtualenvs/academic_pipeline_rc10_7_conformidade-D8fBLuIA/bin/python /home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg/academic_pipeline/__main__.py --make-doi-manifest",
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "duration_seconds": 0.015569,
+      "fresh_subprocess_per_case": true,
+      "generated_sandbox_files": [],
+      "process_meta": null,
+      "pythonpath_present": false,
+      "return_code": 1,
+      "stderr": {
+        "bytes": 291,
+        "normalized": "PYTHON_EXCEPTION: ImportError: attempted relative import with no known parent package\n",
+        "normalized_sha256": "fe9f8c00c15bc09cd2b49748ded991bce9dd2869edabe2595761c35650c20058",
+        "raw_sha256": "9f25dd40b630a4ca69eb2bf7ca288e2dd6f9165cc725729b1614fa7f02884697"
+      },
+      "stdout": {
+        "bytes": 0,
+        "normalized": "",
+        "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "surface": "absolute_main_neutral_cwd",
+      "timed_out": false,
+      "wrapper_sha256": null
+    }
+  ],
+  "schema": "ap007e1_source_execution_matrix.v1",
+  "scope": {
+    "build_executed": false,
+    "dependency_install_executed": false,
+    "git_write_executed": false,
+    "installation_executed": false,
+    "materialized_paths": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007E1_SOURCE_EXECUTION_MATRIX.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007e1_source_execution_matrix.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007e1_source_execution_matrix_contract.py",
+      "tools/refactor/ap007e1_validate_source_execution_matrix.py"
+    ],
+    "productive_modules_modified": []
+  },
+  "status": "matrix_approved_with_classified_historical_debt",
+  "surfaces": [
+    {
+      "core_equivalence": true,
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "description": "direct import + main(argv) from source root",
+      "id": "direct_import_call_source_root",
+      "kind": "wrapper",
+      "target": "academic_pipeline.cli:main"
+    },
+    {
+      "core_equivalence": true,
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "description": "python -m academic_pipeline from source root",
+      "id": "python_minus_m_source_root",
+      "kind": "python_m"
+    },
+    {
+      "core_equivalence": true,
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005/software/academic_pipeline_mppg",
+      "description": "declared console target called from source root",
+      "id": "official_target_source_root",
+      "kind": "wrapper",
+      "target": "academic_pipeline.cli:main"
+    },
+    {
+      "core_equivalence": false,
+      "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+      "description": "python -m from worktree root without PYTHONPATH",
+      "id": "python_minus_m_worktree_root",
+      "kind": "python_m"
+    },
+    {
+      "core_equivalence": false,
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "description": "python -m from neutral cwd outside repository",
+      "id": "python_minus_m_neutral_cwd",
+      "kind": "python_m"
+    },
+    {
+      "core_equivalence": false,
+      "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+      "description": "absolute __main__.py execution from neutral cwd",
+      "id": "absolute_main_neutral_cwd",
+      "kind": "absolute_main"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "CWD_DEPENDENCY_CHARACTERIZED",
+      "evidence": {
+        "cwd": "/home/gustavodetarso/Documentos/mppg-refactor-academic-pipeline-ap005",
+        "id": "worktree_root_import",
+        "module_file": null,
+        "pythonpath_present": false,
+        "return_code": 1,
+        "stderr": "PYTHON_EXCEPTION: ModuleNotFoundError: No module named 'academic_pipeline'\n",
+        "stderr_sha256": "3030e61272e4312994415bbfdfbade01970444ee762f5eb82cb9bcf098995c04",
+        "stdout": "",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "code": "CWD_DEPENDENCY_CHARACTERIZED",
+      "evidence": {
+        "cwd": "/home/gustavodetarso/Downloads/mppg-logs/.ap007e1_20260724_112709_1911310/matrix/neutral_cwd_outside_repository",
+        "id": "neutral_cwd_import",
+        "module_file": null,
+        "pythonpath_present": false,
+        "return_code": 1,
+        "stderr": "PYTHON_EXCEPTION: ModuleNotFoundError: No module named 'academic_pipeline'\n",
+        "stderr_sha256": "3030e61272e4312994415bbfdfbade01970444ee762f5eb82cb9bcf098995c04",
+        "stdout": "",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_legacy_script_help_remains_supported"
+    },
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_official_and_legacy_help_expose_same_options"
+    },
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_official_and_legacy_list_institutions_match"
+    },
+    {
+      "classification": "legacy_direct_source_bridge_absent",
+      "code": "HISTORICAL_LEGACY_SOURCE_BRIDGE_DEBT",
+      "nodeid": "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target",
+      "return_code": 1,
+      "target_phase": "AP-007F",
+      "test": "test_legacy_entrypoint_still_matches_console_target"
+    }
+  ]
+}
