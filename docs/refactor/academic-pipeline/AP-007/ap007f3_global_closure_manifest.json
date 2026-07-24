@@ -1,0 +1,106 @@
+{
+  "ap007_tracked_evidence_index": {
+    "nul_sha256": "cf382eb5bbaac874798219dd4be5e7d59170144b5b1c89fd7a16f0cddb6a4147",
+    "path_count": 56
+  },
+  "baseline": {
+    "branch": "ap-refactor/04-consumer-canonicalization",
+    "head": "ba43b7d606378501d6faafa62ad8c8a6697665e5",
+    "master_head": "6adc5e7c6ce510a49eba13266eabfa227fbeae31",
+    "master_tree": "6822a3347ce2ddc771b2b8a965e8a1b9eb416b74",
+    "master_untracked_nul_sha256": "b9ed392d49c6ab8ee19739a0e5249d34ae9bb651a25912a4d85903e0755af367",
+    "runtime_path": "software/academic_pipeline_mppg/academic_pipeline/runtime.py",
+    "runtime_sha256": "b3ef27fb472985634e6b678158a607bcbda3d01d942b767a139048d25369388c",
+    "tree": "078326090dd64572fb12a026e8d92968bf106d0f"
+  },
+  "closure_evidence": {
+    "final_scope_count": 16,
+    "final_untracked_paths": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007F0_RESIDUAL_LEGACY_AUDIT.md",
+      "docs/refactor/academic-pipeline/AP-007/AP-007F1_RESIDUAL_FALLBACK_DECISION.md",
+      "docs/refactor/academic-pipeline/AP-007/AP-007F2_FINAL_INTEGRATED_VALIDATION.md",
+      "docs/refactor/academic-pipeline/AP-007/AP-007F3_GLOBAL_CLOSURE.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007f0_residual_legacy_inventory.json",
+      "docs/refactor/academic-pipeline/AP-007/ap007f1_residual_fallback_decision.json",
+      "docs/refactor/academic-pipeline/AP-007/ap007f2_final_integrated_validation.json",
+      "docs/refactor/academic-pipeline/AP-007/ap007f3_global_closure_manifest.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f0_residual_legacy_audit_contract.py",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f1_residual_fallback_decision_contract.py",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f2_final_integrated_validation_contract.py",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f3_global_closure_contract.py",
+      "tools/refactor/ap007f0_validate_residual_legacy_audit.py",
+      "tools/refactor/ap007f1_validate_residual_fallback_decision.py",
+      "tools/refactor/ap007f2_validate_final_integrated_validation.py",
+      "tools/refactor/ap007f3_validate_global_closure.py"
+    ],
+    "materialized_f3_paths": [
+      "docs/refactor/academic-pipeline/AP-007/AP-007F3_GLOBAL_CLOSURE.md",
+      "docs/refactor/academic-pipeline/AP-007/ap007f3_global_closure_manifest.json",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f3_global_closure_contract.py",
+      "tools/refactor/ap007f3_validate_global_closure.py"
+    ],
+    "preexisting_path_count": 12,
+    "preexisting_sha256": {
+      "docs/refactor/academic-pipeline/AP-007/AP-007F0_RESIDUAL_LEGACY_AUDIT.md": "8bd7f7bb9dbfcc4eaa7fe9de18bb23c357bee00bfca480e54d7cfacfe8fe35bd",
+      "docs/refactor/academic-pipeline/AP-007/AP-007F1_RESIDUAL_FALLBACK_DECISION.md": "086aa55ffb340790dea582ad7ea5d7127eed4bba2b02d9be9cd577957e4ebb18",
+      "docs/refactor/academic-pipeline/AP-007/AP-007F2_FINAL_INTEGRATED_VALIDATION.md": "d4b1bdc131dfc1256f4246c603441961db560d59b4518f38f732c3f4538c7449",
+      "docs/refactor/academic-pipeline/AP-007/ap007f0_residual_legacy_inventory.json": "57df60daafde46c06ec6f6cc3deb3784087b456f136c8e6383a65fd015dd9037",
+      "docs/refactor/academic-pipeline/AP-007/ap007f1_residual_fallback_decision.json": "d38ae1920e36fe46b6a81498a26590678a6e00106a23dd2d7cd0e13ca39ef103",
+      "docs/refactor/academic-pipeline/AP-007/ap007f2_final_integrated_validation.json": "c97de57c3877256522b140485ca7802a5d655a9aa86f4d78bfce1193e52eed31",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f0_residual_legacy_audit_contract.py": "320d72650b715289d438561346c4262cfbb662b8cf8a3d57f81f9d1e91f85512",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f1_residual_fallback_decision_contract.py": "8c74d034d8953b60064cedbedd41c664fdfff92f4b77c003e27699914493b585",
+      "software/academic_pipeline_mppg/tests/characterization/test_ap007f2_final_integrated_validation_contract.py": "d5d74d3d0d124273b5fffb8184aac71b8774d6ed50308075f6640d7955169aa0",
+      "tools/refactor/ap007f0_validate_residual_legacy_audit.py": "f85234db452a259d93291fb5052b5f69196357beeed6f4ab1448b07fb5faedc5",
+      "tools/refactor/ap007f1_validate_residual_fallback_decision.py": "81b49ed1ce673f064d2d620d5bad4f657beb5b5425fdb08f000a4cf1341347c2",
+      "tools/refactor/ap007f2_validate_final_integrated_validation.py": "69a051a39b1538a20b32f82b4ff18fbf773009c992619251e2aa5e7e7d28c724"
+    }
+  },
+  "commit_decision": {
+    "authorization_required": true,
+    "authorized": false,
+    "proposed_commit_message": "refactor(academic-pipeline): close AP-007 compatibility boundary",
+    "proposed_scope_count": 16,
+    "publication_must_be_isolated": true
+  },
+  "final_integrated_validation": {
+    "canonical_environment_preserved": true,
+    "comparisons": 24,
+    "critical_resource_hash_parity": true,
+    "deselected": 72,
+    "divergences": 0,
+    "errors": 0,
+    "executions": 30,
+    "failed": 0,
+    "historical_debt_count": 70,
+    "module_hash_parity": true,
+    "passed": 759,
+    "phase_local_contract_count": 2,
+    "source_surface_cases": 6,
+    "surfaces": 5,
+    "xfailed": 3,
+    "xpassed": 0
+  },
+  "gate": "explicit_commit_authorization_required",
+  "mutation_control": {
+    "commit": false,
+    "dependency_installation": false,
+    "productive_module_edited": false,
+    "push": false,
+    "staging": false,
+    "tag": false
+  },
+  "phase": "AP-007F.3",
+  "project_state": {
+    "ap007_committed": false,
+    "ap007_formally_closed": true,
+    "next_action": "await_explicit_authorization_for_isolated_commit_and_publication"
+  },
+  "residual_compatibility_decision": {
+    "direct_source_contract_count": 4,
+    "direct_source_contracts": "supersede_test_contract_only",
+    "legacy_fallback_return_count": 6,
+    "run_legacy": "preserve_published_compatibility"
+  },
+  "schema_version": "ap007f3-global-closure-v1",
+  "status": "ap007_global_closure_ready_for_authorized_commit"
+}

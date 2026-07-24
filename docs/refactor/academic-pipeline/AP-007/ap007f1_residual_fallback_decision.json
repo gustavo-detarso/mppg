@@ -1,0 +1,451 @@
+{
+  "ap007f2_gate": [
+    "source_python_m_console_subprocess_equivalence",
+    "neutral_cwd_without_pythonpath_or_pythonhome",
+    "wheel_and_wheel_from_sdist_equivalence",
+    "six_actual_fallback_returns_preserved",
+    "legacy_runner_called_only_on_legacy_fallback",
+    "four_direct_source_contracts_formally_superseded",
+    "productive_suite_no_new_failure_or_xpass",
+    "integrated_census_no_uncatalogued_failure",
+    "sys_argv_sys_path_cwd_restored"
+  ],
+  "baseline": {
+    "head": "ba43b7d606378501d6faafa62ad8c8a6697665e5",
+    "master_head": "6adc5e7c6ce510a49eba13266eabfa227fbeae31",
+    "master_tree": "6822a3347ce2ddc771b2b8a965e8a1b9eb416b74",
+    "master_untracked_nul_sha256": "b9ed392d49c6ab8ee19739a0e5249d34ae9bb651a25912a4d85903e0755af367",
+    "runtime_sha256": "b3ef27fb472985634e6b678158a607bcbda3d01d942b767a139048d25369388c",
+    "tree": "078326090dd64572fb12a026e8d92968bf106d0f"
+  },
+  "decisions": {
+    "direct_source_execution": {
+      "decision": "supersede_test_contract_only",
+      "do_not": [
+        "recreate_bridge",
+        "inject_PYTHONPATH",
+        "install_pth",
+        "delete_historical_script"
+      ],
+      "nodeids": [
+        "app_bundle/tests/test_official_package_entrypoint.py::test_legacy_script_help_remains_supported",
+        "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_help_expose_same_options",
+        "app_bundle/tests/test_official_package_entrypoint.py::test_official_and_legacy_list_institutions_match",
+        "app_bundle/tests/test_packaging_metadata.py::test_legacy_entrypoint_still_matches_console_target"
+      ],
+      "reason": "O script histórico não é entrypoint publicado; sua execução direta a partir de CWD arbitrário foi aposentada com a remoção da ponte física. O arquivo permanece como alvo interno do adaptador legado."
+    },
+    "fallback_returns": {
+      "decision": "preserve_published_compatibility",
+      "reason": "Os seis retornos reais cobrem guardas de invocação exata, precedência de dispatchers, mistura de namespaces e fallback final para comandos ainda não migrados; removê-los alteraria a superfície pública."
+    },
+    "legacy_module": {
+      "decision": "preserve_published_compatibility",
+      "reason": "legacy.py é adaptador/carregador sem lógica de negócio, mas continua necessário para comandos não migrados e combinações cuja precedência ainda pertence ao orquestrador histórico."
+    },
+    "run_legacy": {
+      "decision": "preserve_published_compatibility",
+      "reason": "cli.main injeta run_legacy como legacy_runner e runtime.run o chama exatamente quando select_runtime_route retorna LEGACY_FALLBACK."
+    }
+  },
+  "dependency_installation": false,
+  "gate": "residual_fallback_decision_complete",
+  "git_write_operations": false,
+  "materialized_paths": [
+    "docs/refactor/academic-pipeline/AP-007/AP-007F1_RESIDUAL_FALLBACK_DECISION.md",
+    "docs/refactor/academic-pipeline/AP-007/ap007f1_residual_fallback_decision.json",
+    "software/academic_pipeline_mppg/tests/characterization/test_ap007f1_residual_fallback_decision_contract.py",
+    "tools/refactor/ap007f1_validate_residual_fallback_decision.py"
+  ],
+  "productive_edit": false,
+  "runtime_analysis": {
+    "actual_fallback_return_count": 6,
+    "actual_fallback_returns": [
+      {
+        "column": 8,
+        "line": 332,
+        "source": "return RuntimeRoute.LEGACY_FALLBACK"
+      },
+      {
+        "column": 8,
+        "line": 342,
+        "source": "return RuntimeRoute.LEGACY_FALLBACK"
+      },
+      {
+        "column": 12,
+        "line": 351,
+        "source": "return RuntimeRoute.LEGACY_FALLBACK"
+      },
+      {
+        "column": 12,
+        "line": 361,
+        "source": "return RuntimeRoute.LEGACY_FALLBACK"
+      },
+      {
+        "column": 12,
+        "line": 379,
+        "source": "return RuntimeRoute.LEGACY_FALLBACK"
+      },
+      {
+        "column": 4,
+        "line": 382,
+        "source": "return RuntimeRoute.LEGACY_FALLBACK"
+      }
+    ],
+    "ap007f0_ancestor_condition_records": 8,
+    "cli_injection_count": 1,
+    "dynamic_matrix": {
+      "dispatch_cases": [
+        {
+          "argv": [
+            "--help"
+          ],
+          "dispatch": "_run_native_first_wave",
+          "name": "help",
+          "result": 21,
+          "route": "native_first_wave"
+        },
+        {
+          "argv": [
+            "--check-institution-compliance"
+          ],
+          "dispatch": "_run_native_institution_compliance",
+          "name": "institution_exact",
+          "result": 25,
+          "route": "native_institution_compliance"
+        },
+        {
+          "argv": [
+            "--config",
+            "x.toml",
+            "--check-institution-compliance"
+          ],
+          "dispatch": "_run_native_institution_compliance",
+          "name": "institution_with_config",
+          "result": 25,
+          "route": "native_institution_compliance"
+        },
+        {
+          "argv": [
+            "--doctor",
+            "--check-institution-compliance"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "institution_mixed_doctor",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--check-config",
+            "--check-institution-compliance"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "institution_mixed_check",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--list-profiles",
+            "--check-institution-compliance"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "institution_mixed_profiles",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--make-doi-manifest",
+            "--input-dir",
+            "in",
+            "--output",
+            "out.csv"
+          ],
+          "dispatch": "_run_native_doi_manifest",
+          "name": "doi_exact",
+          "result": 26,
+          "route": "native_doi_manifest"
+        },
+        {
+          "argv": [
+            "--doctor",
+            "--make-doi-manifest"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "doi_mixed_doctor",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--check-config",
+            "--make-doi-manifest"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "doi_mixed_check",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--list-profiles",
+            "--make-doi-manifest"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "doi_mixed_profiles",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--doctor"
+          ],
+          "dispatch": "_run_native_doctor",
+          "name": "doctor_exact",
+          "result": 22,
+          "route": "native_doctor"
+        },
+        {
+          "argv": [
+            "--check-institution-compliance",
+            "--doctor"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "doctor_preceding_guard",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--check-config"
+          ],
+          "dispatch": "_run_native_check_config",
+          "name": "check_exact",
+          "result": 23,
+          "route": "native_check_config"
+        },
+        {
+          "argv": [
+            "--check-institution-compliance",
+            "--check-config"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "check_preceding_guard",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--list-profiles"
+          ],
+          "dispatch": "_run_native_list_profiles",
+          "name": "profiles_exact",
+          "result": 24,
+          "route": "native_list_profiles"
+        },
+        {
+          "argv": [
+            "--list-profiles",
+            "--config=x.toml"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "profiles_unrelated_guard",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [],
+          "dispatch": "legacy_runner",
+          "name": "empty_default",
+          "result": 77,
+          "route": "legacy_fallback"
+        },
+        {
+          "argv": [
+            "--ap007f-unmigrated-command"
+          ],
+          "dispatch": "legacy_runner",
+          "name": "unknown_default",
+          "result": 77,
+          "route": "legacy_fallback"
+        }
+      ],
+      "options": {
+        "check_config": "--check-config",
+        "check_config_preceding_trigger": "--check-institution-compliance",
+        "doctor": "--doctor",
+        "doctor_preceding_trigger": "--check-institution-compliance",
+        "doi": "--make-doi-manifest",
+        "institution": "--check-institution-compliance",
+        "list_profiles": "--list-profiles"
+      },
+      "route_cases": [
+        {
+          "actual": "native_first_wave",
+          "argv": [
+            "--help"
+          ],
+          "expected": "native_first_wave",
+          "name": "help"
+        },
+        {
+          "actual": "native_institution_compliance",
+          "argv": [
+            "--check-institution-compliance"
+          ],
+          "expected": "native_institution_compliance",
+          "name": "institution_exact"
+        },
+        {
+          "actual": "native_institution_compliance",
+          "argv": [
+            "--config",
+            "x.toml",
+            "--check-institution-compliance"
+          ],
+          "expected": "native_institution_compliance",
+          "name": "institution_with_config"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--doctor",
+            "--check-institution-compliance"
+          ],
+          "expected": "legacy_fallback",
+          "name": "institution_mixed_doctor"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--check-config",
+            "--check-institution-compliance"
+          ],
+          "expected": "legacy_fallback",
+          "name": "institution_mixed_check"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--list-profiles",
+            "--check-institution-compliance"
+          ],
+          "expected": "legacy_fallback",
+          "name": "institution_mixed_profiles"
+        },
+        {
+          "actual": "native_doi_manifest",
+          "argv": [
+            "--make-doi-manifest",
+            "--input-dir",
+            "in",
+            "--output",
+            "out.csv"
+          ],
+          "expected": "native_doi_manifest",
+          "name": "doi_exact"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--doctor",
+            "--make-doi-manifest"
+          ],
+          "expected": "legacy_fallback",
+          "name": "doi_mixed_doctor"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--check-config",
+            "--make-doi-manifest"
+          ],
+          "expected": "legacy_fallback",
+          "name": "doi_mixed_check"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--list-profiles",
+            "--make-doi-manifest"
+          ],
+          "expected": "legacy_fallback",
+          "name": "doi_mixed_profiles"
+        },
+        {
+          "actual": "native_doctor",
+          "argv": [
+            "--doctor"
+          ],
+          "expected": "native_doctor",
+          "name": "doctor_exact"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--check-institution-compliance",
+            "--doctor"
+          ],
+          "expected": "legacy_fallback",
+          "name": "doctor_preceding_guard"
+        },
+        {
+          "actual": "native_check_config",
+          "argv": [
+            "--check-config"
+          ],
+          "expected": "native_check_config",
+          "name": "check_exact"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--check-institution-compliance",
+            "--check-config"
+          ],
+          "expected": "legacy_fallback",
+          "name": "check_preceding_guard"
+        },
+        {
+          "actual": "native_list_profiles",
+          "argv": [
+            "--list-profiles"
+          ],
+          "expected": "native_list_profiles",
+          "name": "profiles_exact"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--list-profiles",
+            "--config=x.toml"
+          ],
+          "expected": "legacy_fallback",
+          "name": "profiles_unrelated_guard"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [],
+          "expected": "legacy_fallback",
+          "name": "empty_default"
+        },
+        {
+          "actual": "legacy_fallback",
+          "argv": [
+            "--ap007f-unmigrated-command"
+          ],
+          "expected": "legacy_fallback",
+          "name": "unknown_default"
+        }
+      ]
+    },
+    "run_legacy_line": 97,
+    "run_legacy_runner_call_count": 1,
+    "run_legacy_signature": "argv: Sequence[str] | None=None, *, program_name: str=OFFICIAL_PROGRAM_NAME",
+    "runtime_line": 314
+  },
+  "schema_version": "ap007f1-residual-fallback-decision-v1",
+  "status": "residual_fallback_preserved_no_productive_edit"
+}
