@@ -93,6 +93,10 @@ CHECK_CONFIG_COMBINATION_ERROR = (
     "de configuração e não pode ser combinado com outros comandos."
 )
 LIST_PROFILES_OPTIONS = frozenset({"--list-profiles"})
+LIST_PROFILES_COMBINATION_ERROR = (
+    "Erro de uso: --list-profiles não aceita argumentos adicionais "
+    "nem pode ser combinado com outros comandos."
+)
 INSTITUTION_COMPLIANCE_OPTIONS = frozenset({"--check-institution-compliance"})
 INSTITUTION_COMPLIANCE_VALUE_OPTIONS = frozenset({
     "--config",
@@ -147,6 +151,7 @@ class RuntimeRoute(str, Enum):
     NATIVE_CHECK_CONFIG = "native_check_config"
     CHECK_CONFIG_COMBINATION_ERROR = "check_config_combination_error"
     NATIVE_LIST_PROFILES = "native_list_profiles"
+    LIST_PROFILES_COMBINATION_ERROR = "list_profiles_combination_error"
     NATIVE_INSTITUTION_COMPLIANCE = "native_institution_compliance"
     NATIVE_DOI_MANIFEST = "native_doi_manifest"
     INSTITUTION_COMPLIANCE_ERROR = "institution_compliance_error"
@@ -258,6 +263,15 @@ def _namespace_has_check_config_preceding_trigger(
     return any(
         bool(getattr(args, dest, None))
         for dest in CHECK_CONFIG_PRECEDING_TRIGGER_DESTS
+    )
+
+
+def _is_exact_list_profiles_invocation(
+    argv: Sequence[str],
+) -> bool:
+    return bool(argv) and all(
+        str(token) in LIST_PROFILES_OPTIONS
+        for token in argv
     )
 
 
@@ -381,16 +395,8 @@ def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
         for option in LIST_PROFILES_OPTIONS
     )
     if list_profiles_selected:
-        unrelated_tokens = [
-            token
-            for token in argv
-            if not any(
-                _matches_option(token, option)
-                for option in LIST_PROFILES_OPTIONS
-            )
-        ]
-        if unrelated_tokens:
-            return RuntimeRoute.LEGACY_FALLBACK
+        if not _is_exact_list_profiles_invocation(argv):
+            return RuntimeRoute.LIST_PROFILES_COMBINATION_ERROR
         return RuntimeRoute.NATIVE_LIST_PROFILES
 
     return RuntimeRoute.LEGACY_FALLBACK
@@ -473,6 +479,13 @@ def _run_check_config_combination_error() -> int:
     import sys as _sys
 
     print(CHECK_CONFIG_COMBINATION_ERROR, file=_sys.stderr)
+    return 1
+
+
+def _run_list_profiles_combination_error() -> int:
+    import sys as _sys
+
+    print(LIST_PROFILES_COMBINATION_ERROR, file=_sys.stderr)
     return 1
 
 
@@ -563,6 +576,9 @@ def run(
     if route is RuntimeRoute.NATIVE_LIST_PROFILES:
         return _run_native_list_profiles(forwarded)
 
+    if route is RuntimeRoute.LIST_PROFILES_COMBINATION_ERROR:
+        return _run_list_profiles_combination_error()
+
     if route is RuntimeRoute.NATIVE_INSTITUTION_COMPLIANCE:
         return _run_native_institution_compliance(forwarded)
 
@@ -584,6 +600,7 @@ __all__ = [
     "DOCTOR_COMBINATION_ERROR",
     "FIRST_WAVE_OPTIONS",
     "LIST_PROFILES_OPTIONS",
+    "LIST_PROFILES_COMBINATION_ERROR",
     "INSTITUTION_COMPLIANCE_OPTIONS",
     "INSTITUTION_COMPLIANCE_VALUE_OPTIONS",
     "DOI_MANIFEST_OPTIONS",
