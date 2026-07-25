@@ -79,8 +79,9 @@ def _build_parser() -> argparse.ArgumentParser:
 
 
 def _validate_option_surface(argv: Sequence[str]) -> None:
-    value_options = {"--input-dir", "--input-zip", "--output"}
+    value_options = ("--input-dir", "--input-zip", "--output")
     seen_command = False
+    seen_value_options: set[str] = set()
     index = 0
     while index < len(argv):
         token = str(argv[index])
@@ -90,23 +91,41 @@ def _validate_option_surface(argv: Sequence[str]) -> None:
             seen_command = True
             index += 1
             continue
+
         matched = False
         for option in value_options:
             if token == option:
-                if index + 1 >= len(argv):
-                    raise DoiManifestRuntimeError(f"valor ausente para {option}")
+                if option in seen_value_options:
+                    raise DoiManifestRuntimeError(f"{option} duplicado")
+                if (
+                    index + 1 >= len(argv)
+                    or str(argv[index + 1]).startswith("--")
+                ):
+                    raise DoiManifestRuntimeError(
+                        f"valor ausente para {option}"
+                    )
+                seen_value_options.add(option)
                 index += 2
                 matched = True
                 break
+
             if token.startswith(option + "="):
+                if option in seen_value_options:
+                    raise DoiManifestRuntimeError(f"{option} duplicado")
                 if token == option + "=":
-                    raise DoiManifestRuntimeError(f"valor ausente para {option}")
+                    raise DoiManifestRuntimeError(
+                        f"valor ausente para {option}"
+                    )
+                seen_value_options.add(option)
                 index += 1
                 matched = True
                 break
+
         if matched:
             continue
-        raise DoiManifestRuntimeError(f"argumento não suportado: {token}")
+        raise DoiManifestRuntimeError(
+            f"argumento não suportado: {token}"
+        )
 
 
 def _request_paths(args: argparse.Namespace) -> tuple[Path | None, Path | None, Path]:
