@@ -343,9 +343,7 @@ def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
         for option in DOI_MANIFEST_OPTIONS
     )
     if doi_manifest_selected:
-        if _is_exact_doi_manifest_invocation(argv):
-            return RuntimeRoute.NATIVE_DOI_MANIFEST
-        return RuntimeRoute.LEGACY_FALLBACK
+        return RuntimeRoute.NATIVE_DOI_MANIFEST
 
     doctor_selected = any(
         _matches_option(token, option)
