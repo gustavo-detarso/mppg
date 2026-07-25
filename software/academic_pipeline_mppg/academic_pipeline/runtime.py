@@ -60,6 +60,10 @@ DOCTOR_PRECEDING_TRIGGER_DESTS = frozenset(
         'write_prompt_lock',
     }
 )
+DOCTOR_COMBINATION_ERROR = (
+    "Erro de uso: --doctor aceita apenas opções de diagnóstico "
+    "e não pode ser combinado com outros comandos."
+)
 CHECK_CONFIG_OPTIONS = frozenset({"--check-config"})
 CHECK_CONFIG_PRECEDING_TRIGGER_DESTS = frozenset(
     {
@@ -135,6 +139,7 @@ class RuntimeRoute(str, Enum):
 
     NATIVE_FIRST_WAVE = "native_first_wave"
     NATIVE_DOCTOR = "native_doctor"
+    DOCTOR_COMBINATION_ERROR = "doctor_combination_error"
     NATIVE_CHECK_CONFIG = "native_check_config"
     NATIVE_LIST_PROFILES = "native_list_profiles"
     NATIVE_INSTITUTION_COMPLIANCE = "native_institution_compliance"
@@ -352,7 +357,7 @@ def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
     )
     if doctor_selected:
         if _namespace_has_preceding_trigger(argv):
-            return RuntimeRoute.LEGACY_FALLBACK
+            return RuntimeRoute.DOCTOR_COMBINATION_ERROR
         return RuntimeRoute.NATIVE_DOCTOR
 
     check_config_selected = any(
@@ -503,6 +508,13 @@ def _run_native_doi_manifest(
         return 1
 
 
+def _run_doctor_combination_error() -> int:
+    import sys as _sys
+
+    print(DOCTOR_COMBINATION_ERROR, file=_sys.stderr)
+    return 1
+
+
 def _run_institution_compliance_error() -> int:
     import sys as _sys
 
@@ -527,6 +539,9 @@ def run(
     if route is RuntimeRoute.NATIVE_DOCTOR:
         return _run_native_doctor(forwarded)
 
+    if route is RuntimeRoute.DOCTOR_COMBINATION_ERROR:
+        return _run_doctor_combination_error()
+
     if route is RuntimeRoute.NATIVE_CHECK_CONFIG:
         return _run_native_check_config(forwarded)
 
@@ -550,6 +565,7 @@ __all__ = [
     "CHECK_CONFIG_PRECEDING_TRIGGER_DESTS",
     "DOCTOR_OPTIONS",
     "DOCTOR_PRECEDING_TRIGGER_DESTS",
+    "DOCTOR_COMBINATION_ERROR",
     "FIRST_WAVE_OPTIONS",
     "LIST_PROFILES_OPTIONS",
     "INSTITUTION_COMPLIANCE_OPTIONS",
