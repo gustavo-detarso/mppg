@@ -102,6 +102,11 @@ INSTITUTION_COMPLIANCE_VALUE_OPTIONS = frozenset({
     "--research-output-dir",
     "--output-prefix",
 })
+
+INSTITUTION_COMPLIANCE_COMBINATION_ERROR = (
+    "Erro de uso: --check-institution-compliance aceita somente opções "
+    "de conformidade institucional e não pode ser combinado com outros comandos."
+)
 DOI_MANIFEST_OPTIONS = frozenset({"--make-doi-manifest"})
 DOI_MANIFEST_VALUE_OPTIONS = frozenset({
     "--input-dir",
@@ -134,6 +139,7 @@ class RuntimeRoute(str, Enum):
     NATIVE_LIST_PROFILES = "native_list_profiles"
     NATIVE_INSTITUTION_COMPLIANCE = "native_institution_compliance"
     NATIVE_DOI_MANIFEST = "native_doi_manifest"
+    INSTITUTION_COMPLIANCE_ERROR = "institution_compliance_error"
     LEGACY_FALLBACK = "legacy_fallback"
 
 
@@ -329,7 +335,7 @@ def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
     if institution_selected:
         if _is_exact_institution_compliance_invocation(argv):
             return RuntimeRoute.NATIVE_INSTITUTION_COMPLIANCE
-        return RuntimeRoute.LEGACY_FALLBACK
+        return RuntimeRoute.INSTITUTION_COMPLIANCE_ERROR
 
     doi_manifest_selected = any(
         _matches_option(token, option)
@@ -499,6 +505,13 @@ def _run_native_doi_manifest(
         return 1
 
 
+def _run_institution_compliance_error() -> int:
+    import sys as _sys
+
+    print(INSTITUTION_COMPLIANCE_COMBINATION_ERROR, file=_sys.stderr)
+    return 1
+
+
 def run(
     argv: Sequence[str] | None = None,
     *,
@@ -528,6 +541,9 @@ def run(
     if route is RuntimeRoute.NATIVE_DOI_MANIFEST:
         return _run_native_doi_manifest(forwarded)
 
+    if route is RuntimeRoute.INSTITUTION_COMPLIANCE_ERROR:
+        return _run_institution_compliance_error()
+
     return int(legacy_runner(forwarded))
 
 
@@ -542,6 +558,7 @@ __all__ = [
     "INSTITUTION_COMPLIANCE_VALUE_OPTIONS",
     "DOI_MANIFEST_OPTIONS",
     "DOI_MANIFEST_VALUE_OPTIONS",
+    "INSTITUTION_COMPLIANCE_COMBINATION_ERROR",
     "NATIVE_TRIGGER_OPTIONS",
     "NativeRuntimeError",
     "RuntimeContext",
