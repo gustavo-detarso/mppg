@@ -88,6 +88,10 @@ CHECK_CONFIG_PRECEDING_TRIGGER_DESTS = frozenset(
         'write_prompt_lock',
     }
 )
+CHECK_CONFIG_COMBINATION_ERROR = (
+    "Erro de uso: --check-config aceita apenas opções de validação "
+    "de configuração e não pode ser combinado com outros comandos."
+)
 LIST_PROFILES_OPTIONS = frozenset({"--list-profiles"})
 INSTITUTION_COMPLIANCE_OPTIONS = frozenset({"--check-institution-compliance"})
 INSTITUTION_COMPLIANCE_VALUE_OPTIONS = frozenset({
@@ -141,6 +145,7 @@ class RuntimeRoute(str, Enum):
     NATIVE_DOCTOR = "native_doctor"
     DOCTOR_COMBINATION_ERROR = "doctor_combination_error"
     NATIVE_CHECK_CONFIG = "native_check_config"
+    CHECK_CONFIG_COMBINATION_ERROR = "check_config_combination_error"
     NATIVE_LIST_PROFILES = "native_list_profiles"
     NATIVE_INSTITUTION_COMPLIANCE = "native_institution_compliance"
     NATIVE_DOI_MANIFEST = "native_doi_manifest"
@@ -367,7 +372,7 @@ def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
     )
     if check_config_selected:
         if _namespace_has_check_config_preceding_trigger(argv):
-            return RuntimeRoute.LEGACY_FALLBACK
+            return RuntimeRoute.CHECK_CONFIG_COMBINATION_ERROR
         return RuntimeRoute.NATIVE_CHECK_CONFIG
 
     list_profiles_selected = any(
@@ -464,6 +469,13 @@ def _run_native_check_config(
     return int(run_check_config_command(argv))
 
 
+def _run_check_config_combination_error() -> int:
+    import sys as _sys
+
+    print(CHECK_CONFIG_COMBINATION_ERROR, file=_sys.stderr)
+    return 1
+
+
 def _run_native_list_profiles(
     argv: Sequence[str],
 ) -> int:
@@ -545,6 +557,9 @@ def run(
     if route is RuntimeRoute.NATIVE_CHECK_CONFIG:
         return _run_native_check_config(forwarded)
 
+    if route is RuntimeRoute.CHECK_CONFIG_COMBINATION_ERROR:
+        return _run_check_config_combination_error()
+
     if route is RuntimeRoute.NATIVE_LIST_PROFILES:
         return _run_native_list_profiles(forwarded)
 
@@ -563,6 +578,7 @@ def run(
 __all__ = [
     "CHECK_CONFIG_OPTIONS",
     "CHECK_CONFIG_PRECEDING_TRIGGER_DESTS",
+    "CHECK_CONFIG_COMBINATION_ERROR",
     "DOCTOR_OPTIONS",
     "DOCTOR_PRECEDING_TRIGGER_DESTS",
     "DOCTOR_COMBINATION_ERROR",
