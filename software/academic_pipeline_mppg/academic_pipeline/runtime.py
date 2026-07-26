@@ -579,7 +579,7 @@ def _run_institution_compliance_error() -> int:
 def run(
     argv: Sequence[str] | None = None,
     *,
-    legacy_runner: LegacyRunner,
+    legacy_runner: LegacyRunner | None = None,
     context: RuntimeContext | None = None,
 ) -> int:
     """Executa todas as rotas por superfícies canônicas nativas."""
