@@ -1,8 +1,8 @@
-"""Runtime oficial do Academic Pipeline com primeira onda nativa.
+"""Runtime oficial do Academic Pipeline com execução canônica nativa.
 
-Os comandos ainda não migrados seguem para o adaptador legado por uma decisão
-de rota explícita. Os comandos da primeira onda não importam nem executam o
-monólito histórico e não modificam o caminho de importação do processo.
+As rotas especializadas preservam precedências históricas já caracterizadas.
+O fluxo padrão é executado por ``academic_pipeline.default_runtime`` e nenhuma
+invocação produtiva alcança o adaptador legado.
 """
 
 from __future__ import annotations
@@ -120,6 +120,14 @@ INSTITUTION_COMPLIANCE_COMBINATION_ERROR = (
     "de conformidade institucional e não pode ser combinado com outros comandos."
 )
 DOI_MANIFEST_OPTIONS = frozenset({"--make-doi-manifest"})
+PRISMA_GENERIC_WRAPPER_OPTIONS = frozenset(
+    {
+        "--prisma-exportar-bib",
+        "--prisma-congelar-artigo",
+        "--prisma-gerar-toml-artigo",
+        "--prisma-gerar-artigo-final",
+    }
+)
 DOI_MANIFEST_VALUE_OPTIONS = frozenset({
     "--input-dir",
     "--input-zip",
@@ -155,7 +163,7 @@ class RuntimeRoute(str, Enum):
     NATIVE_INSTITUTION_COMPLIANCE = "native_institution_compliance"
     NATIVE_DOI_MANIFEST = "native_doi_manifest"
     INSTITUTION_COMPLIANCE_ERROR = "institution_compliance_error"
-    LEGACY_FALLBACK = "legacy_fallback"
+    NATIVE_DEFAULT = "native_default"
 
 
 @dataclass(frozen=True, slots=True)
@@ -341,9 +349,17 @@ def _is_exact_doi_manifest_invocation(
     return seen_command
 
 
+def _has_prisma_generic_wrapper_trigger(argv: Sequence[str]) -> bool:
+    return any(
+        _matches_option(token, option)
+        for token in argv
+        for option in PRISMA_GENERIC_WRAPPER_OPTIONS
+    )
+
+
 def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
     # Precedência conservadora: informativos; estágio 015; doctor; check-config;
-    # primeira onda operacional; fallback legado.
+    # primeira onda operacional; fluxo padrão nativo.
     for token in argv:
         if any(
             _matches_option(token, option)
@@ -399,8 +415,10 @@ def select_runtime_route(argv: Sequence[str]) -> RuntimeRoute:
             return RuntimeRoute.LIST_PROFILES_COMBINATION_ERROR
         return RuntimeRoute.NATIVE_LIST_PROFILES
 
-    return RuntimeRoute.LEGACY_FALLBACK
+    if not _has_prisma_generic_wrapper_trigger(argv):
+        _build_parser().parse_args(list(argv))
 
+    return RuntimeRoute.NATIVE_DEFAULT
 
 
 
@@ -533,6 +551,17 @@ def _run_native_doi_manifest(
         return 1
 
 
+def _run_native_default(argv: Sequence[str]) -> int:
+    if not _has_prisma_generic_wrapper_trigger(argv):
+        args = _build_parser().parse_args(list(argv))
+        if bool(getattr(args, "list_profiles", False)):
+            return _run_native_list_profiles(["--list-profiles"])
+
+    from .default_runtime import run_default
+
+    return int(run_default(argv))
+
+
 def _run_doctor_combination_error() -> int:
     import sys as _sys
 
@@ -553,7 +582,7 @@ def run(
     legacy_runner: LegacyRunner,
     context: RuntimeContext | None = None,
 ) -> int:
-    """Executa a primeira onda nativamente ou usa fallback enumerado."""
+    """Executa todas as rotas por superfícies canônicas nativas."""
 
     forwarded = _normalize_argv(argv)
     route = select_runtime_route(forwarded)
@@ -588,7 +617,10 @@ def run(
     if route is RuntimeRoute.INSTITUTION_COMPLIANCE_ERROR:
         return _run_institution_compliance_error()
 
-    return int(legacy_runner(forwarded))
+    if route is RuntimeRoute.NATIVE_DEFAULT:
+        return _run_native_default(forwarded)
+
+    raise NativeRuntimeError(f"Rota não tratada: {route!r}")
 
 
 __all__ = [
@@ -607,6 +639,7 @@ __all__ = [
     "DOI_MANIFEST_VALUE_OPTIONS",
     "INSTITUTION_COMPLIANCE_COMBINATION_ERROR",
     "NATIVE_TRIGGER_OPTIONS",
+    "PRISMA_GENERIC_WRAPPER_OPTIONS",
     "NativeRuntimeError",
     "RuntimeContext",
     "RuntimeRoute",
