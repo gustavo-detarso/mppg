@@ -157,9 +157,9 @@ Arquivos candidatos inventariados: **203**. Declarações de metadata: **3**.
 | software/academic_pipeline_mppg/README.md | 473 | 984fda247df88884f2b17a846c41fb458e858acb2c53966c7996445ae4e0d98f |
 | software/academic_pipeline_mppg/app_bundle/.academic_pipeline_tui_state.json | 602 | 77a6a94188b2c392c95e0d99e24b43de24ca869a4b023a17fc048bfc03a1eb06 |
 | software/academic_pipeline_mppg/app_bundle/clean_institutional_tree_report.json | 2721 | ff74319182214db0f16eae43313e3f8cd1dc488315b46379af5d3870396a4902 |
-| software/academic_pipeline_mppg/app_bundle/config/examples/atividade_rc10_exemplo.toml | 2145 | 97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06 |
-| software/academic_pipeline_mppg/app_bundle/config/examples/paper_rc10_exemplo.toml | 2145 | 97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06 |
-| software/academic_pipeline_mppg/app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml | 1716 | 5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a |
+| software/academic_pipeline_mppg/app_bundle/config/examples/atividade_exemplo.toml | 2145 | 97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06 |
+| software/academic_pipeline_mppg/app_bundle/config/examples/paper_exemplo.toml | 2145 | 97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06 |
+| software/academic_pipeline_mppg/app_bundle/config/examples/relatorio_prisma_exemplo.toml | 1716 | 5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a |
 | software/academic_pipeline_mppg/app_bundle/docs/CHANGELOG_rc10_1.md | 1137 | aa54f6f69d86349072b2981c11c2c1e4db7cdc6c08417a128d04923e323f1e6a |
 | software/academic_pipeline_mppg/app_bundle/docs/CHANGELOG_rc10_2.md | 1190 | 0c5de353bb61e4954354b30673181138b9c18db0ad8c0de19c312501ce62bd7c |
 | software/academic_pipeline_mppg/app_bundle/docs/CHANGELOG_rc10_3.md | 2123 | 38bd8aa4a5b973fd877dc97ab7551629186dc2677e8e8fd5c15bd801c7fd2c74 |

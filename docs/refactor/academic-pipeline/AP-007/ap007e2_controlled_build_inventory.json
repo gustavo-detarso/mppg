@@ -245,21 +245,21 @@
           },
           {
             "mode": 436,
-            "path": "app_bundle/config/examples/atividade_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/atividade_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145,
             "type": "file"
           },
           {
             "mode": 436,
-            "path": "app_bundle/config/examples/paper_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/paper_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145,
             "type": "file"
           },
           {
             "mode": 436,
-            "path": "app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/relatorio_prisma_exemplo.toml",
             "sha256": "5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a",
             "size": 1716,
             "type": "file"
@@ -1103,9 +1103,9 @@
           "academic_pipeline_mppg-0.1.0.dist-info/entry_points.txt",
           "academic_pipeline_mppg-0.1.0.dist-info/top_level.txt",
           "app_bundle/__init__.py",
-          "app_bundle/config/examples/atividade_rc10_exemplo.toml",
-          "app_bundle/config/examples/paper_rc10_exemplo.toml",
-          "app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+          "app_bundle/config/examples/atividade_exemplo.toml",
+          "app_bundle/config/examples/paper_exemplo.toml",
+          "app_bundle/config/examples/relatorio_prisma_exemplo.toml",
           "app_bundle/institutions/fgv/assets/fgv.png",
           "app_bundle/institutions/fgv/docx/reference_fgv.docx",
           "app_bundle/institutions/fgv/institution_profile.toml",
@@ -1350,21 +1350,21 @@
           {
             "compressed_size": 1102,
             "mode": 33204,
-            "path": "app_bundle/config/examples/atividade_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/atividade_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145
           },
           {
             "compressed_size": 1102,
             "mode": 33204,
-            "path": "app_bundle/config/examples/paper_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/paper_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145
           },
           {
             "compressed_size": 888,
             "mode": 33204,
-            "path": "app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/relatorio_prisma_exemplo.toml",
             "sha256": "5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a",
             "size": 1716
           },
@@ -2262,21 +2262,21 @@
           },
           {
             "mode": 436,
-            "path": "app_bundle/config/examples/atividade_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/atividade_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145,
             "type": "file"
           },
           {
             "mode": 436,
-            "path": "app_bundle/config/examples/paper_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/paper_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145,
             "type": "file"
           },
           {
             "mode": 436,
-            "path": "app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/relatorio_prisma_exemplo.toml",
             "sha256": "5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a",
             "size": 1716,
             "type": "file"
@@ -3120,9 +3120,9 @@
           "academic_pipeline_mppg-0.1.0.dist-info/entry_points.txt",
           "academic_pipeline_mppg-0.1.0.dist-info/top_level.txt",
           "app_bundle/__init__.py",
-          "app_bundle/config/examples/atividade_rc10_exemplo.toml",
-          "app_bundle/config/examples/paper_rc10_exemplo.toml",
-          "app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+          "app_bundle/config/examples/atividade_exemplo.toml",
+          "app_bundle/config/examples/paper_exemplo.toml",
+          "app_bundle/config/examples/relatorio_prisma_exemplo.toml",
           "app_bundle/institutions/fgv/assets/fgv.png",
           "app_bundle/institutions/fgv/docx/reference_fgv.docx",
           "app_bundle/institutions/fgv/institution_profile.toml",
@@ -3367,21 +3367,21 @@
           {
             "compressed_size": 1102,
             "mode": 33204,
-            "path": "app_bundle/config/examples/atividade_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/atividade_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145
           },
           {
             "compressed_size": 1102,
             "mode": 33204,
-            "path": "app_bundle/config/examples/paper_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/paper_exemplo.toml",
             "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
             "size": 2145
           },
           {
             "compressed_size": 888,
             "mode": 33204,
-            "path": "app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+            "path": "app_bundle/config/examples/relatorio_prisma_exemplo.toml",
             "sha256": "5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a",
             "size": 1716
           },
@@ -4246,21 +4246,21 @@
       },
       {
         "present_in_wheel": true,
-        "source_path": "software/academic_pipeline_mppg/app_bundle/config/examples/atividade_rc10_exemplo.toml",
+        "source_path": "software/academic_pipeline_mppg/app_bundle/config/examples/atividade_exemplo.toml",
         "source_sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
-        "wheel_path": "app_bundle/config/examples/atividade_rc10_exemplo.toml"
+        "wheel_path": "app_bundle/config/examples/atividade_exemplo.toml"
       },
       {
         "present_in_wheel": true,
-        "source_path": "software/academic_pipeline_mppg/app_bundle/config/examples/paper_rc10_exemplo.toml",
+        "source_path": "software/academic_pipeline_mppg/app_bundle/config/examples/paper_exemplo.toml",
         "source_sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
-        "wheel_path": "app_bundle/config/examples/paper_rc10_exemplo.toml"
+        "wheel_path": "app_bundle/config/examples/paper_exemplo.toml"
       },
       {
         "present_in_wheel": true,
-        "source_path": "software/academic_pipeline_mppg/app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+        "source_path": "software/academic_pipeline_mppg/app_bundle/config/examples/relatorio_prisma_exemplo.toml",
         "source_sha256": "5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a",
-        "wheel_path": "app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml"
+        "wheel_path": "app_bundle/config/examples/relatorio_prisma_exemplo.toml"
       },
       {
         "present_in_wheel": false,

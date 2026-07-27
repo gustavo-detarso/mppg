@@ -86,7 +86,7 @@
         "returncode": 1
       },
       "init_project_fgv": {
-        "error": "FileNotFoundError: Template TOML não encontrado: app_bundle/config/examples/atividade_rc10_exemplo.toml",
+        "error": "FileNotFoundError: Template TOML não encontrado: app_bundle/config/examples/atividade_exemplo.toml",
         "returncode": 1
       },
       "list_institutions": {

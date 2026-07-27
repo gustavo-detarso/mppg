@@ -3721,7 +3721,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"paper_rc10_exemplo.toml\"",
+      "context": "\"paper_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -3743,7 +3743,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"atividade_rc10_exemplo.toml\"",
+      "context": "\"atividade_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -3765,7 +3765,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"relatorio_prisma_rc10_exemplo.toml\"",
+      "context": "\"relatorio_prisma_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -3787,7 +3787,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"paper_rc10_exemplo.toml\"",
+      "context": "\"paper_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -5063,7 +5063,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"atividade_rc10_exemplo.toml\"",
+      "context": "\"atividade_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -5085,7 +5085,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"relatorio_prisma_rc10_exemplo.toml\"",
+      "context": "\"relatorio_prisma_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -5107,7 +5107,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"paper_rc10_exemplo.toml\"",
+      "context": "\"paper_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -5525,7 +5525,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"paper_rc10_exemplo.toml\"",
+      "context": "\"paper_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -5547,7 +5547,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"atividade_rc10_exemplo.toml\"",
+      "context": "\"atividade_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -5569,7 +5569,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"relatorio_prisma_rc10_exemplo.toml\"",
+      "context": "\"relatorio_prisma_exemplo.toml\"",
       "contracts": [],
       "current": "rc10",
       "decision": "revisao_manual",
@@ -264947,7 +264947,7 @@
       "compatibility_required": true,
       "consumer_count": 0,
       "consumers": [],
-      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n'",
+      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n'",
       "contracts": [
         "string operacional"
       ],
@@ -264971,7 +264971,7 @@
       "compatibility_required": true,
       "consumer_count": 0,
       "consumers": [],
-      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n'",
+      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n'",
       "contracts": [
         "string operacional"
       ],
@@ -264995,7 +264995,7 @@
       "compatibility_required": true,
       "consumer_count": 0,
       "consumers": [],
-      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n'",
+      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n'",
       "contracts": [
         "string operacional"
       ],
@@ -265019,7 +265019,7 @@
       "compatibility_required": true,
       "consumer_count": 0,
       "consumers": [],
-      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n'",
+      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n'",
       "contracts": [
         "string operacional"
       ],
@@ -265043,7 +265043,7 @@
       "compatibility_required": true,
       "consumer_count": 0,
       "consumers": [],
-      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n'",
+      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n'",
       "contracts": [
         "string operacional"
       ],
@@ -265067,7 +265067,7 @@
       "compatibility_required": true,
       "consumer_count": 0,
       "consumers": [],
-      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n'",
+      "context": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n'",
       "contracts": [
         "string operacional"
       ],
@@ -269075,7 +269075,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "--config app_bundle/config/examples/paper_rc10_exemplo.toml",
+      "context": "--config app_bundle/config/examples/paper_exemplo.toml",
       "contracts": [
         "documentação"
       ],
@@ -269123,7 +269123,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "--config app_bundle/config/examples/paper_rc10_exemplo.toml \\",
+      "context": "--config app_bundle/config/examples/paper_exemplo.toml \\",
       "contracts": [
         "documentação"
       ],
@@ -298763,7 +298763,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -298787,7 +298787,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -298859,7 +298859,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -298883,7 +298883,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -298955,7 +298955,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -298979,7 +298979,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -318995,7 +318995,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -319019,7 +319019,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -319091,7 +319091,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -319115,7 +319115,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -319187,7 +319187,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\",",
       "contracts": [
         "documentação"
       ],
@@ -319211,7 +319211,7 @@
       "compatibility_required": false,
       "consumer_count": 0,
       "consumers": [],
-      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\",",
+      "context": "\"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\",",
       "contracts": [
         "documentação"
       ],

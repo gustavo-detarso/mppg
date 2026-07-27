@@ -34,12 +34,12 @@ def _write_example_templates(app_bundle: Path) -> None:
         '[documentos_locais]\n'
         'input_zip = "../../projetos/paper_nome_do_tema/documentos-base.zip"\n'
     )
-    (examples / "paper_rc10_exemplo.toml").write_text(base, encoding="utf-8")
-    (examples / "atividade_rc10_exemplo.toml").write_text(
+    (examples / "paper_exemplo.toml").write_text(base, encoding="utf-8")
+    (examples / "atividade_exemplo.toml").write_text(
         base.replace("paper_nome_do_tema", "atividade_aula_2"),
         encoding="utf-8",
     )
-    (examples / "relatorio_prisma_rc10_exemplo.toml").write_text(
+    (examples / "relatorio_prisma_exemplo.toml").write_text(
         base.replace("paper_nome_do_tema", "relatorio_prisma_atividade_aula_2"),
         encoding="utf-8",
     )

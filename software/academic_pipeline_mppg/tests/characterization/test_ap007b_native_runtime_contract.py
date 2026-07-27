@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 LEGACY_SCRIPT = (
     ROOT / "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
 )
-CONFIG = ROOT / "app_bundle/config/examples/atividade_rc10_exemplo.toml"
+CONFIG = ROOT / "app_bundle/config/examples/atividade_exemplo.toml"
 
 FIRST_WAVE_CASES = (
     ("help", ("--help",)),

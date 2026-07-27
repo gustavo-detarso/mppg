@@ -20,13 +20,13 @@ EXAMPLES = ROOT / "config/examples"
 
 def source_for_profile(profile: str) -> Path:
     if profile == "paper":
-        return EXAMPLES / "paper_rc10_exemplo.toml"
+        return EXAMPLES / "paper_exemplo.toml"
     if profile == "atividade":
-        return EXAMPLES / "atividade_rc10_exemplo.toml"
+        return EXAMPLES / "atividade_exemplo.toml"
     if profile in {"prisma", "atividade_prisma"}:
-        return EXAMPLES / "relatorio_prisma_rc10_exemplo.toml"
+        return EXAMPLES / "relatorio_prisma_exemplo.toml"
     if profile == "paper_prisma":
-        base = EXAMPLES / "paper_rc10_exemplo.toml"
+        base = EXAMPLES / "paper_exemplo.toml"
         if base.exists():
             return base
     raise ValueError(f"Perfil desconhecido: {profile}")

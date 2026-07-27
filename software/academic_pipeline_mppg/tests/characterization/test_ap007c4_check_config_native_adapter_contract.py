@@ -238,7 +238,7 @@ def test_real_adapter_matches_historical_with_config(
 ) -> None:
     config = (
         SOFTWARE_ROOT
-        / "app_bundle/config/examples/paper_rc10_exemplo.toml"
+        / "app_bundle/config/examples/paper_exemplo.toml"
     )
     if not config.is_file():
         pytest.skip("configuração de exemplo ausente")
