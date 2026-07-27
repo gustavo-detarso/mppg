@@ -690,17 +690,17 @@
         "size": 2721
       },
       {
-        "path": "software/academic_pipeline_mppg/app_bundle/config/examples/atividade_rc10_exemplo.toml",
+        "path": "software/academic_pipeline_mppg/app_bundle/config/examples/atividade_exemplo.toml",
         "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
         "size": 2145
       },
       {
-        "path": "software/academic_pipeline_mppg/app_bundle/config/examples/paper_rc10_exemplo.toml",
+        "path": "software/academic_pipeline_mppg/app_bundle/config/examples/paper_exemplo.toml",
         "sha256": "97f8a824c95a2a4c56e06c3009cf767008dc6a51feedaae2e633e0c842b0eb06",
         "size": 2145
       },
       {
-        "path": "software/academic_pipeline_mppg/app_bundle/config/examples/relatorio_prisma_rc10_exemplo.toml",
+        "path": "software/academic_pipeline_mppg/app_bundle/config/examples/relatorio_prisma_exemplo.toml",
         "sha256": "5c9f387077f9fab6d7a50fab1e906e8322544e7cf43a03cf46c74f50ad9bf99a",
         "size": 1716
       },

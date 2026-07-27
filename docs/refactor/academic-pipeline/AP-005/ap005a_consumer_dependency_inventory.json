@@ -1114,7 +1114,7 @@
         {
           "category": "internal",
           "confidence": "média",
-          "context": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py: printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n'",
+          "context": "app_bundle/scripts/pipeline/academic_pipeline_rc10.py: printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n'",
           "kind": "TEXT-EXACT",
           "line": 35,
           "path": "software/academic_pipeline_rc10_7_conformidade/install_rc10.sh"
@@ -4368,7 +4368,7 @@
         {
           "category": "internal",
           "confidence": "baixa",
-          "context": "academic_pipeline_rc10.py: printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n'",
+          "context": "academic_pipeline_rc10.py: printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n'",
           "kind": "TEXT-EXACT",
           "line": 35,
           "path": "software/academic_pipeline_rc10_7_conformidade/install_rc10.sh"
@@ -5767,7 +5767,7 @@
         {
           "category": "internal",
           "confidence": "baixa",
-          "context": "academic_pipeline_rc10.py: printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n'",
+          "context": "academic_pipeline_rc10.py: printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n'",
           "kind": "TEXT-EXACT",
           "line": 35,
           "path": "software/academic_pipeline_rc10_7_conformidade/install_rc10.sh"

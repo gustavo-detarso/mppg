@@ -143,7 +143,7 @@ DYNAMIC_EVIDENCE = {
             "returncode": 1,
             "error": (
                 "FileNotFoundError: Template TOML não encontrado: "
-                "app_bundle/config/examples/atividade_rc10_exemplo.toml"
+                "app_bundle/config/examples/atividade_exemplo.toml"
             ),
         },
         "doctor": {

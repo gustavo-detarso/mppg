@@ -97,11 +97,11 @@ def _write_placeholder_zip(path: Path, readme_text: str) -> None:
 def _template_config(app_bundle: Path, project_slug: str, project_type: str, institution: str = "fgv") -> str:
     examples_dir = app_bundle / "config" / "examples"
     if project_type == "atividade":
-        source = examples_dir / "atividade_rc10_exemplo.toml"
+        source = examples_dir / "atividade_exemplo.toml"
     elif project_type in {"prisma", "atividade_prisma", "paper_prisma"}:
-        source = examples_dir / "relatorio_prisma_rc10_exemplo.toml"
+        source = examples_dir / "relatorio_prisma_exemplo.toml"
     else:
-        source = examples_dir / "paper_rc10_exemplo.toml"
+        source = examples_dir / "paper_exemplo.toml"
     if not source.exists():
         raise FileNotFoundError(f"Template TOML não encontrado: {source}")
     text = source.read_text(encoding="utf-8")

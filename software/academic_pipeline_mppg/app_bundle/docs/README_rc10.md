@@ -60,14 +60,14 @@ bash /tmp/rc10_4/academic_pipeline_mppg/install_rc10.sh
 ```bash
 cd /home/gustavodetarso/Documentos/mppg/software/academic_pipeline
 pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \
-  --config app_bundle/config/examples/paper_rc10_exemplo.toml
+  --config app_bundle/config/examples/paper_exemplo.toml
 ```
 
 ## Apenas renderizar um document.json existente
 
 ```bash
 pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \
-  --config app_bundle/config/examples/paper_rc10_exemplo.toml \
+  --config app_bundle/config/examples/paper_exemplo.toml \
   --somente-renderizar \
   --document-json app_bundle/output/documento/paper_nome_do_tema/paper_nome_do_tema.document.json
 ```

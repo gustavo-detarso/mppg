@@ -37,9 +37,9 @@ def test_pep621_dependencies_and_package_data_are_explicit() -> None:
 
 def test_examples_exist_and_are_valid_toml() -> None:
     expected = {
-        "atividade_rc10_exemplo.toml",
-        "paper_rc10_exemplo.toml",
-        "relatorio_prisma_rc10_exemplo.toml",
+        "atividade_exemplo.toml",
+        "paper_exemplo.toml",
+        "relatorio_prisma_exemplo.toml",
     }
     assert {path.name for path in EXAMPLES.glob("*.toml")} == expected
     for name in expected:

@@ -3514,7 +3514,7 @@
           "matched_tokens": [
             "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
           ],
-          "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n'",
+          "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n'",
           "semantic_category": "protected_operational",
           "action_policy": "excluir do aplicador e do manifesto produtivo"
         },
@@ -3526,7 +3526,7 @@
           "matched_tokens": [
             "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
           ],
-          "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n'",
+          "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n'",
           "semantic_category": "protected_operational",
           "action_policy": "excluir do aplicador e do manifesto produtivo"
         },
@@ -3538,7 +3538,7 @@
           "matched_tokens": [
             "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
           ],
-          "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n'",
+          "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n'",
           "semantic_category": "protected_operational",
           "action_policy": "excluir do aplicador e do manifesto produtivo"
         },
@@ -8698,7 +8698,7 @@
       "matched_tokens": [
         "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
       ],
-      "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n'",
+      "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n'",
       "semantic_category": "protected_operational",
       "action_policy": "excluir do aplicador e do manifesto produtivo"
     },
@@ -8710,7 +8710,7 @@
       "matched_tokens": [
         "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
       ],
-      "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n'",
+      "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n'",
       "semantic_category": "protected_operational",
       "action_policy": "excluir do aplicador e do manifesto produtivo"
     },
@@ -8722,7 +8722,7 @@
       "matched_tokens": [
         "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
       ],
-      "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n'",
+      "excerpt": "printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n'",
       "semantic_category": "protected_operational",
       "action_policy": "excluir do aplicador e do manifesto produtivo"
     },

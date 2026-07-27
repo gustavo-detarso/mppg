@@ -22359,7 +22359,7 @@
       ],
       "style_issues": [],
       "evidence": [
-        "--config app_bundle/config/examples/paper_rc10_exemplo.toml"
+        "--config app_bundle/config/examples/paper_exemplo.toml"
       ],
       "disposition": "evidence-only"
     },
@@ -22399,7 +22399,7 @@
       ],
       "style_issues": [],
       "evidence": [
-        "--config app_bundle/config/examples/paper_rc10_exemplo.toml \\"
+        "--config app_bundle/config/examples/paper_exemplo.toml \\"
       ],
       "disposition": "evidence-only"
     },
@@ -32659,7 +32659,7 @@
       ],
       "style_issues": [],
       "evidence": [
-        "(examples / \"paper_rc10_exemplo.toml\").write_text(base, encoding=\"utf-8\")"
+        "(examples / \"paper_exemplo.toml\").write_text(base, encoding=\"utf-8\")"
       ],
       "disposition": "evidence-only"
     },
@@ -32679,7 +32679,7 @@
       ],
       "style_issues": [],
       "evidence": [
-        "(examples / \"atividade_rc10_exemplo.toml\").write_text("
+        "(examples / \"atividade_exemplo.toml\").write_text("
       ],
       "disposition": "evidence-only"
     },
@@ -32699,7 +32699,7 @@
       ],
       "style_issues": [],
       "evidence": [
-        "(examples / \"relatorio_prisma_rc10_exemplo.toml\").write_text("
+        "(examples / \"relatorio_prisma_exemplo.toml\").write_text("
       ],
       "disposition": "evidence-only"
     },
@@ -79176,7 +79176,7 @@
               "end": 48
             }
           ],
-          "excerpt": "--config app_bundle/config/examples/paper_rc10_exemplo.toml"
+          "excerpt": "--config app_bundle/config/examples/paper_exemplo.toml"
         },
         {
           "line": 69,
@@ -79200,7 +79200,7 @@
               "end": 48
             }
           ],
-          "excerpt": "--config app_bundle/config/examples/paper_rc10_exemplo.toml \\"
+          "excerpt": "--config app_bundle/config/examples/paper_exemplo.toml \\"
         },
         {
           "line": 110,
@@ -82635,7 +82635,7 @@
               "end": 27
             }
           ],
-          "excerpt": "(examples / \"paper_rc10_exemplo.toml\").write_text(base, encoding=\"utf-8\")"
+          "excerpt": "(examples / \"paper_exemplo.toml\").write_text(base, encoding=\"utf-8\")"
         },
         {
           "line": 38,
@@ -82647,7 +82647,7 @@
               "end": 31
             }
           ],
-          "excerpt": "(examples / \"atividade_rc10_exemplo.toml\").write_text("
+          "excerpt": "(examples / \"atividade_exemplo.toml\").write_text("
         },
         {
           "line": 42,
@@ -82659,7 +82659,7 @@
               "end": 38
             }
           ],
-          "excerpt": "(examples / \"relatorio_prisma_rc10_exemplo.toml\").write_text("
+          "excerpt": "(examples / \"relatorio_prisma_exemplo.toml\").write_text("
         }
       ],
       "role": "consumer-or-historical-evidence"

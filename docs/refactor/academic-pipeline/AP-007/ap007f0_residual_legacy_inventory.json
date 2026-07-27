@@ -104695,22 +104695,22 @@
       {
         "line": 232,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| d486fcbeb8bff434cdf3 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:23:33` | `python_string` | `—` | `não` | — | \"paper_rc10_exemplo.toml\" |"
+        "text": "| d486fcbeb8bff434cdf3 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:23:33` | `python_string` | `—` | `não` | — | \"paper_exemplo.toml\" |"
       },
       {
         "line": 233,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 283c36992e945d99f9c8 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:25:37` | `python_string` | `—` | `não` | — | \"atividade_rc10_exemplo.toml\" |"
+        "text": "| 283c36992e945d99f9c8 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:25:37` | `python_string` | `—` | `não` | — | \"atividade_exemplo.toml\" |"
       },
       {
         "line": 234,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 586a803957fcd2de9500 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:27:44` | `python_string` | `—` | `não` | — | \"relatorio_prisma_rc10_exemplo.toml\" |"
+        "text": "| 586a803957fcd2de9500 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:27:44` | `python_string` | `—` | `não` | — | \"relatorio_prisma_exemplo.toml\" |"
       },
       {
         "line": 235,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 57ee9e82e06364853664 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:29:33` | `python_string` | `—` | `não` | — | \"paper_rc10_exemplo.toml\" |"
+        "text": "| 57ee9e82e06364853664 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/academic_pipeline_toml_generator.py:29:33` | `python_string` | `—` | `não` | — | \"paper_exemplo.toml\" |"
       },
       {
         "line": 236,
@@ -105000,17 +105000,17 @@
       {
         "line": 293,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| ba4d5dffe6e47493226a | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/project_tools.py:86:43` | `python_string` | `—` | `não` | — | \"atividade_rc10_exemplo.toml\" |"
+        "text": "| ba4d5dffe6e47493226a | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/project_tools.py:86:43` | `python_string` | `—` | `não` | — | \"atividade_exemplo.toml\" |"
       },
       {
         "line": 294,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| f6152c0d2178fbd354f4 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/project_tools.py:88:50` | `python_string` | `—` | `não` | — | \"relatorio_prisma_rc10_exemplo.toml\" |"
+        "text": "| f6152c0d2178fbd354f4 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/project_tools.py:88:50` | `python_string` | `—` | `não` | — | \"relatorio_prisma_exemplo.toml\" |"
       },
       {
         "line": 295,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 6983d2717d055dfb6af6 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/project_tools.py:90:39` | `python_string` | `—` | `não` | — | \"paper_rc10_exemplo.toml\" |"
+        "text": "| 6983d2717d055dfb6af6 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/scripts/pipeline/project_tools.py:90:39` | `python_string` | `—` | `não` | — | \"paper_exemplo.toml\" |"
       },
       {
         "line": 296,
@@ -105105,17 +105105,17 @@
       {
         "line": 314,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 4e0112fdbe756ff9e8c8 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_project_reports_characterization.py:37:23` | `python_string` | `—` | `não` | — | \"paper_rc10_exemplo.toml\" |"
+        "text": "| 4e0112fdbe756ff9e8c8 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_project_reports_characterization.py:37:23` | `python_string` | `—` | `não` | — | \"paper_exemplo.toml\" |"
       },
       {
         "line": 315,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 931a74b4ad89d3090b0f | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_project_reports_characterization.py:38:27` | `python_string` | `—` | `não` | — | \"atividade_rc10_exemplo.toml\" |"
+        "text": "| 931a74b4ad89d3090b0f | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_project_reports_characterization.py:38:27` | `python_string` | `—` | `não` | — | \"atividade_exemplo.toml\" |"
       },
       {
         "line": 316,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 6fbf97be30f100043336 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_project_reports_characterization.py:42:34` | `python_string` | `—` | `não` | — | \"relatorio_prisma_rc10_exemplo.toml\" |"
+        "text": "| 6fbf97be30f100043336 | `marcador_ambiguo_decisao_manual` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/tests/test_project_reports_characterization.py:42:34` | `python_string` | `—` | `não` | — | \"relatorio_prisma_exemplo.toml\" |"
       },
       {
         "line": 317,
@@ -156815,32 +156815,32 @@
       {
         "line": 10656,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| e68986a3580b4531e558 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n' |"
+        "text": "| e68986a3580b4531e558 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n' |"
       },
       {
         "line": 10657,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 3c985e5e3c00b8264249 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n' |"
+        "text": "| 3c985e5e3c00b8264249 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n' |"
       },
       {
         "line": 10658,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| eab339b43645e2f249d8 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n' |"
+        "text": "| eab339b43645e2f249d8 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n' |"
       },
       {
         "line": 10659,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| c736ffb0c5d8f307eb80 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n' |"
+        "text": "| c736ffb0c5d8f307eb80 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n' |"
       },
       {
         "line": 10660,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 535b1faa4b69899b757c | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n' |"
+        "text": "| 535b1faa4b69899b757c | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n' |"
       },
       {
         "line": 10661,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| ebc68d9211ce09373039 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n' |"
+        "text": "| ebc68d9211ce09373039 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n' |"
       },
       {
         "line": 10662,
@@ -157675,7 +157675,7 @@
       {
         "line": 10828,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| f028fc9cb6cfaaac64a3 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/README_rc10.md:63:44` | `text` | `—` | `não` | documentação | --config app_bundle/config/examples/paper_rc10_exemplo.toml |"
+        "text": "| f028fc9cb6cfaaac64a3 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/README_rc10.md:63:44` | `text` | `—` | `não` | documentação | --config app_bundle/config/examples/paper_exemplo.toml |"
       },
       {
         "line": 10829,
@@ -157685,7 +157685,7 @@
       {
         "line": 10830,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 917044061a7af09f6b3d | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/README_rc10.md:70:44` | `text` | `—` | `não` | documentação | --config app_bundle/config/examples/paper_rc10_exemplo.toml \\ |"
+        "text": "| 917044061a7af09f6b3d | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/app_bundle/docs/README_rc10.md:70:44` | `text` | `—` | `não` | documentação | --config app_bundle/config/examples/paper_exemplo.toml \\ |"
       },
       {
         "line": 10831,
@@ -163860,12 +163860,12 @@
       {
         "line": 12065,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| cb9bfe84a540db4d5059 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:94` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\", |"
+        "text": "| cb9bfe84a540db4d5059 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:94` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\", |"
       },
       {
         "line": 12066,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 07f6cc2df85d3809c2d1 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:144` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\", |"
+        "text": "| 07f6cc2df85d3809c2d1 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:144` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\", |"
       },
       {
         "line": 12067,
@@ -163880,12 +163880,12 @@
       {
         "line": 12069,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 2063a44993a9cd0b5944 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:94` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\", |"
+        "text": "| 2063a44993a9cd0b5944 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:94` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\", |"
       },
       {
         "line": 12070,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 3e76081ba3bb672c36b8 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:144` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\", |"
+        "text": "| 3e76081ba3bb672c36b8 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:144` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\", |"
       },
       {
         "line": 12071,
@@ -163900,12 +163900,12 @@
       {
         "line": 12073,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| c0e91309d36b2f1b10c7 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:94` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\", |"
+        "text": "| c0e91309d36b2f1b10c7 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:94` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\", |"
       },
       {
         "line": 12074,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| d1b7d3c431179654de85 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:144` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\", |"
+        "text": "| d1b7d3c431179654de85 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:144` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\", |"
       },
       {
         "line": 12075,
@@ -168075,12 +168075,12 @@
       {
         "line": 12908,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 622661097e1fc2d44f35 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:90` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\", |"
+        "text": "| 622661097e1fc2d44f35 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:90` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\", |"
       },
       {
         "line": 12909,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 6e474863f3409f626671 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:140` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\", |"
+        "text": "| 6e474863f3409f626671 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:140` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\", |"
       },
       {
         "line": 12910,
@@ -168095,12 +168095,12 @@
       {
         "line": 12912,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| db9977d671086b05a449 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:90` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\", |"
+        "text": "| db9977d671086b05a449 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:90` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\", |"
       },
       {
         "line": 12913,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| ab6921203938424a9140 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:140` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\", |"
+        "text": "| ab6921203938424a9140 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:140` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\", |"
       },
       {
         "line": 12914,
@@ -168115,12 +168115,12 @@
       {
         "line": 12916,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 75a81712413d1b2ae970 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:90` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\", |"
+        "text": "| 75a81712413d1b2ae970 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:90` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\", |"
       },
       {
         "line": 12917,
         "path": "docs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md",
-        "text": "| 77700d740aa7d63cae6c | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:140` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\", |"
+        "text": "| 77700d740aa7d63cae6c | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:140` | `text` | `—` | `não` | documentação | \"excerpt\": \"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\", |"
       },
       {
         "line": 12918,
@@ -292155,32 +292155,32 @@
       {
         "line": 18965,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| e68986a3580b4531e558 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n' |\","
+        "text": "      \"excerpt\": \"| e68986a3580b4531e558 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n' |\","
       },
       {
         "line": 18978,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 3c985e5e3c00b8264249 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n' |\","
+        "text": "      \"excerpt\": \"| 3c985e5e3c00b8264249 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n' |\","
       },
       {
         "line": 18991,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| eab339b43645e2f249d8 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n' |\","
+        "text": "      \"excerpt\": \"| eab339b43645e2f249d8 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n' |\","
       },
       {
         "line": 19004,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| c736ffb0c5d8f307eb80 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n' |\","
+        "text": "      \"excerpt\": \"| c736ffb0c5d8f307eb80 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n' |\","
       },
       {
         "line": 19017,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 535b1faa4b69899b757c | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n' |\","
+        "text": "      \"excerpt\": \"| 535b1faa4b69899b757c | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n' |\","
       },
       {
         "line": 19030,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| ebc68d9211ce09373039 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n' |\","
+        "text": "      \"excerpt\": \"| ebc68d9211ce09373039 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n' |\","
       },
       {
         "line": 19043,
@@ -296490,12 +296490,12 @@
       {
         "line": 30236,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| cb9bfe84a540db4d5059 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:94` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| cb9bfe84a540db4d5059 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:94` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
       },
       {
         "line": 30249,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 07f6cc2df85d3809c2d1 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:144` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| 07f6cc2df85d3809c2d1 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:144` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
       },
       {
         "line": 30262,
@@ -296505,12 +296505,12 @@
       {
         "line": 30275,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 2063a44993a9cd0b5944 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:94` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| 2063a44993a9cd0b5944 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:94` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
       },
       {
         "line": 30288,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 3e76081ba3bb672c36b8 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:144` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| 3e76081ba3bb672c36b8 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:144` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
       },
       {
         "line": 30301,
@@ -296520,12 +296520,12 @@
       {
         "line": 30314,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| c0e91309d36b2f1b10c7 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:94` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| c0e91309d36b2f1b10c7 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:94` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\\\\\n'\\\", |\","
       },
       {
         "line": 30327,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| d1b7d3c431179654de85 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:144` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| d1b7d3c431179654de85 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:144` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\\\\\n'\\\", |\","
       },
       {
         "line": 30340,
@@ -299735,12 +299735,12 @@
       {
         "line": 38673,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 622661097e1fc2d44f35 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:90` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| 622661097e1fc2d44f35 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:90` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
       },
       {
         "line": 38686,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 6e474863f3409f626671 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:140` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| 6e474863f3409f626671 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:140` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\\\\\n'\\\", |\","
       },
       {
         "line": 38699,
@@ -299750,12 +299750,12 @@
       {
         "line": 38712,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| db9977d671086b05a449 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:90` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| db9977d671086b05a449 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:90` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
       },
       {
         "line": 38725,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| ab6921203938424a9140 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:140` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| ab6921203938424a9140 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:140` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\\\\\n'\\\", |\","
       },
       {
         "line": 38738,
@@ -299765,12 +299765,12 @@
       {
         "line": 38751,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 75a81712413d1b2ae970 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:90` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| 75a81712413d1b2ae970 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:90` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\\\\\n'\\\", |\","
       },
       {
         "line": 38764,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_inventory_raw.json",
-        "text": "      \"excerpt\": \"| 77700d740aa7d63cae6c | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:140` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\\\\\n'\\\", |\","
+        "text": "      \"excerpt\": \"| 77700d740aa7d63cae6c | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:140` | `text` | `—` | `não` | documentação | \\\"excerpt\\\": \\\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\\\\\n'\\\", |\","
       },
       {
         "line": 38777,
@@ -309420,32 +309420,32 @@
       {
         "line": 1069,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10656\t263\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| e68986a3580b4531e558 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n' |"
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10656\t263\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| e68986a3580b4531e558 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n' |"
       },
       {
         "line": 1070,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10657\t264\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| 3c985e5e3c00b8264249 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\n' |"
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10657\t264\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| 3c985e5e3c00b8264249 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:35:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\n' |"
       },
       {
         "line": 1071,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10658\t263\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| eab339b43645e2f249d8 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n' |"
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10658\t263\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| eab339b43645e2f249d8 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n' |"
       },
       {
         "line": 1072,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10659\t264\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| c736ffb0c5d8f307eb80 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\n' |"
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10659\t264\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| c736ffb0c5d8f307eb80 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:36:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\n' |"
       },
       {
         "line": 1073,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10660\t263\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| 535b1faa4b69899b757c | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n' |"
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10660\t263\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| 535b1faa4b69899b757c | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:72` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n' |"
       },
       {
         "line": 1074,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10661\t264\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| ebc68d9211ce09373039 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\n' |"
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t10661\t264\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t| ebc68d9211ce09373039 | `marcador_string_operacional` | `revisao_manual` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/install_rc10.sh:37:122` | `text` | `—` | `sim` | string operacional | printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\n' |"
       },
       {
         "line": 1075,
@@ -313755,12 +313755,12 @@
       {
         "line": 1936,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12065\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| cb9bfe84a540db4d5059 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:94` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12065\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| cb9bfe84a540db4d5059 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:94` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\"\", |\""
       },
       {
         "line": 1937,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12066\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 07f6cc2df85d3809c2d1 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:144` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12066\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 07f6cc2df85d3809c2d1 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3517:144` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\"\", |\""
       },
       {
         "line": 1938,
@@ -313770,12 +313770,12 @@
       {
         "line": 1939,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12069\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 2063a44993a9cd0b5944 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:94` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12069\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 2063a44993a9cd0b5944 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:94` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
       },
       {
         "line": 1940,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12070\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 3e76081ba3bb672c36b8 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:144` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12070\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 3e76081ba3bb672c36b8 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3529:144` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
       },
       {
         "line": 1941,
@@ -313785,12 +313785,12 @@
       {
         "line": 1942,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12073\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| c0e91309d36b2f1b10c7 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:94` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12073\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| c0e91309d36b2f1b10c7 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:94` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\"\", |\""
       },
       {
         "line": 1943,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12074\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| d1b7d3c431179654de85 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:144` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12074\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| d1b7d3c431179654de85 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:3541:144` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\"\", |\""
       },
       {
         "line": 1944,
@@ -317000,12 +317000,12 @@
       {
         "line": 2585,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12908\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 622661097e1fc2d44f35 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:90` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12908\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 622661097e1fc2d44f35 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:90` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\"\", |\""
       },
       {
         "line": 2586,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12909\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 6e474863f3409f626671 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:140` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12909\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 6e474863f3409f626671 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8701:140` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-config\\\\n'\"\", |\""
       },
       {
         "line": 2587,
@@ -317015,12 +317015,12 @@
       {
         "line": 2588,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12912\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| db9977d671086b05a449 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:90` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12912\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| db9977d671086b05a449 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:90` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
       },
       {
         "line": 2589,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12913\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| ab6921203938424a9140 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:140` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12913\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| ab6921203938424a9140 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8713:140` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml --check-institution-compliance\\\\n'\"\", |\""
       },
       {
         "line": 2590,
@@ -317030,12 +317030,12 @@
       {
         "line": 2591,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12916\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 75a81712413d1b2ae970 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:90` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12916\t320\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 75a81712413d1b2ae970 | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:90` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\"\", |\""
       },
       {
         "line": 2592,
         "path": "docs/refactor/academic-pipeline/AP-007/ap007a_runtime_legado_references_raw.tsv",
-        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12917\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 77700d740aa7d63cae6c | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:140` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\\\\n'\"\", |\""
+        "text": "academic_pipeline_rc10\tdocs/refactor/academic-pipeline/AP-004/AP-004D_VERSION_MARKER_INVENTORY.md\t12917\t321\thistórica\tfalse\tbaixa\tcongelada/auxiliar\tbaixo\tfalse\t\"| 77700d740aa7d63cae6c | `ocorrencia_apenas_documental` | `adiar` | `rc10` | `—` | `software/academic_pipeline_rc10_7_conformidade/docs/refactor/academic-pipeline/AP-004/ap004b_module_file_inventory.json:8725:140` | `text` | `—` | `não` | documentação | \"\"excerpt\"\": \"\"printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_exemplo.toml\\\\n'\"\", |\""
       },
       {
         "line": 2593,
