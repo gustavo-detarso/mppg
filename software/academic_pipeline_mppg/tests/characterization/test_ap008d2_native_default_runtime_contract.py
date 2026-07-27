@@ -12,9 +12,6 @@ from academic_pipeline import default_runtime, runtime
 from academic_pipeline import prisma_generic_orchestration
 
 
-def forbidden_legacy(argv):
-    raise AssertionError(f"legacy_runner alcançado: {argv!r}")
-
 
 @pytest.mark.parametrize(
     "argv, token",
@@ -29,7 +26,7 @@ def forbidden_legacy(argv):
 def test_unknown_inputs_use_argparse_without_legacy(argv, token):
     stderr = io.StringIO()
     with contextlib.redirect_stderr(stderr), pytest.raises(SystemExit) as exc:
-        runtime.run(argv, legacy_runner=forbidden_legacy)
+        runtime.run(argv)
     assert exc.value.code == 2
     assert token in stderr.getvalue()
 
@@ -52,7 +49,7 @@ def test_parse_valid_default_inputs_use_native_default(monkeypatch, argv):
         return 37
 
     monkeypatch.setattr(default_runtime, "run_default", fake_run_default)
-    assert runtime.run(argv, legacy_runner=forbidden_legacy) == 37
+    assert runtime.run(argv) == 37
     assert calls == [argv]
 
 
@@ -64,7 +61,7 @@ def test_list_profile_argparse_abbreviation_uses_native_list_profiles(monkeypatc
         return 41
 
     monkeypatch.setattr(runtime, "_run_native_list_profiles", fake_list_profiles)
-    assert runtime.run(["--list-profile"], legacy_runner=forbidden_legacy) == 41
+    assert runtime.run(["--list-profile"]) == 41
     assert calls == [["--list-profiles"]]
 
 
@@ -85,7 +82,7 @@ def test_prisma_wrapper_options_bypass_base_parser(monkeypatch, option):
         return 43
 
     monkeypatch.setattr(default_runtime, "run_default", fake_run_default)
-    assert runtime.run([option], legacy_runner=forbidden_legacy) == 43
+    assert runtime.run([option]) == 43
     assert calls == [[option]]
 
 

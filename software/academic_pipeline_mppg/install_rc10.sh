@@ -30,8 +30,8 @@ fi
 
 printf '\nComandos recomendados após instalar:\n'
 printf 'cd %s\n' "$BASE"
-printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --doctor\n'
-printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --explain-profile fgv\n'
-printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\n'
-printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\n'
-printf 'pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config app_bundle/config/examples/paper_rc10_exemplo.toml\n'
+printf 'pipenv run python -m academic_pipeline --doctor\n'
+printf 'pipenv run python -m academic_pipeline --explain-profile fgv\n'
+printf 'pipenv run python -m academic_pipeline --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-config\n'
+printf 'pipenv run python -m academic_pipeline --config app_bundle/config/examples/paper_rc10_exemplo.toml --check-institution-compliance\n'
+printf 'pipenv run python -m academic_pipeline --config app_bundle/config/examples/paper_rc10_exemplo.toml\n'

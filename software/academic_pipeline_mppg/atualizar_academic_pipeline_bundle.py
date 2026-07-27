@@ -41,6 +41,7 @@ from typing import Iterable
 
 
 DEFAULT_COPY_PREFIXES = [
+    "academic_pipeline/",
     "app_bundle/scripts/",
     "app_bundle/prompts/",
     "app_bundle/institutions/",
@@ -55,6 +56,7 @@ DEFAULT_ROOT_FILES = [
     "Pipfile",
     "Pipfile.lock",
     "requirements.txt",
+    "pyproject.toml",
 ]
 
 EXCLUDED_DIR_NAMES = {
@@ -104,11 +106,15 @@ def find_src_root(extract_dir: Path) -> Path:
     log("[ETAPA] Localizando app_bundle no ZIP extraído")
     candidates = []
     for p in extract_dir.rglob("app_bundle"):
-        if p.is_dir() and (p / "scripts" / "pipeline" / "academic_pipeline_rc10.py").exists():
+        if (
+            p.is_dir()
+            and (p.parent / "academic_pipeline" / "__main__.py").is_file()
+            and (p.parent / "pyproject.toml").is_file()
+        ):
             candidates.append(p)
 
     if not candidates:
-        fail("Não encontrei app_bundle/scripts/pipeline/academic_pipeline_rc10.py dentro do ZIP.")
+        fail("Não encontrei academic_pipeline/__main__.py e pyproject.toml junto de app_bundle no ZIP.")
 
     candidates.sort(key=lambda p: len(p.parts))
     app_bundle = candidates[0]
@@ -295,28 +301,28 @@ def run_tests(
     if py_files:
         run_cmd(["pipenv", "run", "python", "-m", "py_compile", *py_files], cwd=dst_root, log_file=log_file)
 
-    main_script = "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
+    canonical_entrypoint = ["pipenv", "run", "python", "-m", "academic_pipeline"]
 
     run_cmd(
-        ["pipenv", "run", "python", main_script, "--list-toml-profiles"],
+        [*canonical_entrypoint, "--list-toml-profiles"],
         cwd=dst_root,
         log_file=log_file,
     )
 
     if config:
         run_cmd(
-            ["pipenv", "run", "python", main_script, "--config", config, "--doctor"],
+            [*canonical_entrypoint, "--config", config, "--doctor"],
             cwd=dst_root,
             log_file=log_file,
         )
         run_cmd(
-            ["pipenv", "run", "python", main_script, "--config", config, "--check-config"],
+            [*canonical_entrypoint, "--config", config, "--check-config"],
             cwd=dst_root,
             log_file=log_file,
         )
         if do_show_prompts:
             run_cmd(
-                ["pipenv", "run", "python", main_script, "--config", config, "--show-prompts"],
+                [*canonical_entrypoint, "--config", config, "--show-prompts"],
                 cwd=dst_root,
                 log_file=log_file,
             )
@@ -328,7 +334,7 @@ def run_tests(
             raise RuntimeError("--render exige --document-json.")
         run_cmd(
             [
-                "pipenv", "run", "python", main_script,
+                *canonical_entrypoint,
                 "--config", config,
                 "--somente-renderizar",
                 "--document-json", document_json,
@@ -392,8 +398,10 @@ def main() -> int:
         fail(f"ZIP não encontrado: {zip_path}")
     if not dst_root.exists():
         fail(f"Diretório destino não encontrado: {dst_root}")
-    if not (dst_root / "app_bundle" / "scripts" / "pipeline" / "academic_pipeline_rc10.py").exists():
-        fail(f"O destino não parece ser um bundle academic_pipeline válido: {dst_root}")
+    canonical_package = dst_root / "academic_pipeline" / "__main__.py"
+    canonical_metadata = dst_root / "pyproject.toml"
+    if not canonical_package.is_file() or not canonical_metadata.is_file():
+        fail(f"O destino não parece expor o pacote canônico academic_pipeline: {dst_root}")
 
     version_label = zip_path.stem.replace(".", "_").replace("-", "_")
     timestamp = _dt.datetime.now().strftime("%Y%m%d_%H%M%S")

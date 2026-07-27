@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
-# Alias canônico AP-004B para academic_pipeline_rc10.py.
-# O orquestrador histórico permanece congelado byte a byte pela AP-003G.
+"""Launcher fino para a CLI canônica do Academic Pipeline.
+
+A AP-008F.2C desconecta este alias do script físico RC10. O arquivo permanece
+como superfície de compatibilidade de nome, mas toda execução é delegada a
+``academic_pipeline.cli:main``.
+"""
 
 from __future__ import annotations
 
-import pathlib as _ap004b_alias_pathlib
+import sys as _ap008f2c_sys
+from pathlib import Path as _AP008F2CPath
 
-_ap004b_alias_historical = _ap004b_alias_pathlib.Path(__file__).with_name(
-    'academic_pipeline_rc10.py'
-)
-_ap004b_alias_source = _ap004b_alias_historical.read_bytes()
-exec(
-    compile(
-        _ap004b_alias_source,
-        str(_ap004b_alias_historical),
-        "exec",
-    ),
-    globals(),
-    globals(),
-)
+_ap008f2c_source_root = _AP008F2CPath(__file__).resolve().parents[3]
+if str(_ap008f2c_source_root) not in _ap008f2c_sys.path:
+    _ap008f2c_sys.path.insert(0, str(_ap008f2c_source_root))
 
-del _ap004b_alias_source
-del _ap004b_alias_historical
-del _ap004b_alias_pathlib
+from academic_pipeline.cli import main as _ap008f2c_canonical_main
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Executa a superfície pública canônica preservando argumentos da CLI."""
+    return int(_ap008f2c_canonical_main(argv))
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

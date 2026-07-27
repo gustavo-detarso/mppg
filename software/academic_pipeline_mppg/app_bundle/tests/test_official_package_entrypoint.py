@@ -1,11 +1,12 @@
 from __future__ import annotations
 
+import importlib
+import importlib.util
 import os
 import re
 import subprocess
 import sys
 from pathlib import Path
-from types import SimpleNamespace
 
 import pytest
 
@@ -43,7 +44,7 @@ def test_official_package_files_exist() -> None:
     assert (PACKAGE_DIR / "__init__.py").is_file()
     assert (PACKAGE_DIR / "__main__.py").is_file()
     assert (PACKAGE_DIR / "cli.py").is_file()
-    assert (PACKAGE_DIR / "legacy.py").is_file()
+    assert not (PACKAGE_DIR / "legacy.py").exists()
 
 
 def test_importing_official_package_is_lazy() -> None:
@@ -93,105 +94,25 @@ def test_official_and_legacy_list_institutions_match() -> None:
     assert official.stdout == legacy.stdout
 
 
-def test_ensure_legacy_path_normalizes_preexisting_duplicates(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    from academic_pipeline import legacy
-
-    target = str(legacy.LEGACY_PIPELINE_DIR.resolve())
-    original_path = sys.path[:]
-
-    monkeypatch.setattr(
-        sys,
-        "path",
-        [
-            target,
-            str(legacy.LEGACY_PIPELINE_DIR / "."),
-            *original_path,
-            target,
-        ],
-    )
-
-    path = legacy.ensure_legacy_path()
-    legacy.ensure_legacy_path()
-
-    assert path == legacy.LEGACY_PIPELINE_DIR.resolve()
-    assert path.is_dir()
-    assert sys.path[0] == target
-    assert sys.path.count(target) == 1
+def test_academic_pipeline_legacy_is_physically_absent() -> None:
+    assert not (PACKAGE_DIR / "legacy.py").exists()
 
 
-def test_load_legacy_module_exposes_main() -> None:
-    from academic_pipeline.legacy import LEGACY_PIPELINE_DIR, load_legacy_module
-
-    module = load_legacy_module()
-
-    assert callable(module.main)
-    assert Path(module.__file__).resolve().parent == LEGACY_PIPELINE_DIR.resolve()
+def test_academic_pipeline_legacy_is_not_importable() -> None:
+    assert importlib.util.find_spec("academic_pipeline.legacy") is None
+    with pytest.raises(ModuleNotFoundError) as captured:
+        importlib.import_module("academic_pipeline.legacy")
+    assert captured.value.name == "academic_pipeline.legacy"
 
 
-def test_run_legacy_forwards_arguments_and_return_code(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    from academic_pipeline import legacy
+def test_run_legacy_is_not_exported() -> None:
+    import academic_pipeline
+    from academic_pipeline import cli, runtime
 
-    captured: dict[str, list[str]] = {}
+    assert not hasattr(academic_pipeline, "run_legacy")
+    assert not hasattr(cli, "run_legacy")
+    assert not hasattr(runtime, "run_legacy")
 
-    def fake_main() -> int:
-        captured["argv"] = sys.argv[:]
-        return 7
-
-    monkeypatch.setattr(
-        legacy,
-        "load_legacy_module",
-        lambda: SimpleNamespace(main=fake_main),
-    )
-
-    original = sys.argv[:]
-    result = legacy.run_legacy(["--doctor"], program_name="academic-pipeline-test")
-
-    assert result == 7
-    assert captured["argv"] == ["academic-pipeline-test", "--doctor"]
-    assert sys.argv == original
-
-
-def test_run_legacy_restores_argv_after_exception(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    from academic_pipeline import legacy
-
-    class ExpectedError(RuntimeError):
-        pass
-
-    def fake_main() -> int:
-        raise ExpectedError("falha simulada")
-
-    monkeypatch.setattr(
-        legacy,
-        "load_legacy_module",
-        lambda: SimpleNamespace(main=fake_main),
-    )
-
-    original = sys.argv[:]
-    with pytest.raises(ExpectedError, match="falha simulada"):
-        legacy.run_legacy(["--doctor"])
-
-    assert sys.argv == original
-
-
-def test_run_legacy_rejects_invalid_return_code(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    from academic_pipeline import legacy
-
-    monkeypatch.setattr(
-        legacy,
-        "load_legacy_module",
-        lambda: SimpleNamespace(main=lambda: "invalido"),
-    )
-
-    with pytest.raises(legacy.LegacyRuntimeError, match="código de saída inválido"):
-        legacy.run_legacy([])
 
 
 def test_public_main_delegates_to_cli(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -200,11 +121,10 @@ def test_public_main_delegates_to_cli(monkeypatch: pytest.MonkeyPatch) -> None:
 
     captured: dict[str, object] = {}
 
-    def fake_run(argv):
+    def fake_main(argv):
         captured["argv"] = argv
         return 9
 
-    monkeypatch.setattr(cli, "run_legacy", fake_run)
-
+    monkeypatch.setattr(cli, "main", fake_main)
     assert academic_pipeline.main(["--doctor"]) == 9
     assert captured["argv"] == ["--doctor"]
