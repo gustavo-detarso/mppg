@@ -52,25 +52,27 @@ def test_cli_main_delegates_to_runtime_without_legacy_runner(monkeypatch) -> Non
     assert observed == {"argv": argv}
 
 
-def test_runtime_preserves_optional_keyword_only_legacy_runner_parameter() -> None:
-    parameter = inspect.signature(runtime.run).parameters["legacy_runner"]
+def test_runtime_signature_has_no_legacy_runner_or_legacy_runner_type() -> None:
+    parameters = inspect.signature(runtime.run).parameters
 
-    assert parameter.kind is inspect.Parameter.KEYWORD_ONLY
-    assert parameter.default is None
+    assert "legacy_runner" not in parameters
+    assert not hasattr(runtime, "LegacyRunner")
 
 
-def test_runtime_signature_accepts_explicit_legacy_runner_injection() -> None:
+
+def test_runtime_signature_rejects_explicit_legacy_runner_injection() -> None:
     def injected(argv):
         return 99
 
-    bound = inspect.signature(runtime.run).bind(
-        ["--help"],
-        legacy_runner=injected,
-    )
-
-    assert bound.arguments["legacy_runner"] is injected
-
-
+    try:
+        inspect.signature(runtime.run).bind(
+            ["--help"],
+            legacy_runner=injected,
+        )
+    except TypeError:
+        pass
+    else:
+        raise AssertionError("runtime.run ainda aceita legacy_runner")
 def test_importing_cli_does_not_import_academic_pipeline_legacy() -> None:
     sentinel = object()
     previous_cli_module = sys.modules.pop("academic_pipeline.cli", sentinel)
@@ -101,9 +103,13 @@ def test_importing_cli_does_not_import_academic_pipeline_legacy() -> None:
             setattr(academic_pipeline, "cli", previous_cli_attribute)
 
 
-def test_legacy_module_remains_physically_available_for_later_retirement() -> None:
+def test_legacy_module_is_not_importable_after_physical_retirement() -> None:
     spec = importlib.util.find_spec("academic_pipeline.legacy")
 
-    assert spec is not None
-    assert spec.origin is not None
-    assert Path(spec.origin).name == "legacy.py"
+    assert spec is None
+    try:
+        importlib.import_module("academic_pipeline.legacy")
+    except ModuleNotFoundError as exc:
+        assert exc.name == "academic_pipeline.legacy"
+    else:
+        raise AssertionError("academic_pipeline.legacy ainda é importável")

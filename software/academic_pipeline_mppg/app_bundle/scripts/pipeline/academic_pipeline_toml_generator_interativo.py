@@ -3668,7 +3668,7 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append(f"# Preset: {preset.key} — {preset.label}")
     lines.append(f"# Descrição: {preset.description}")
     if preset.render_only:
-        lines.append(f"# Uso: academic_pipeline_rc10.py --config {data['config_path']} --somente-renderizar --document-json {data.get('document_json', '')}")
+        lines.append(f"# Uso: python -m academic_pipeline --config {data['config_path']} --somente-renderizar --document-json {data.get('document_json', '')}")
     lines.append("")
 
     lines.append("[projeto]")
@@ -4217,9 +4217,9 @@ def generate_interactive(non_interactive_profile: str | None = None, project_nam
     ]
     if preset.render_only:
         doc_json = data.get("document_json") or "CAMINHO/document.document.json"
-        command_lines.append(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli} --somente-renderizar --document-json {doc_json}")
+        command_lines.append(f"pipenv run python -m academic_pipeline --config {config_for_cli} --somente-renderizar --document-json {doc_json}")
     else:
-        command_lines.append(f"pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --config {config_for_cli}")
+        command_lines.append(f"pipenv run python -m academic_pipeline --config {config_for_cli}")
         if preset.key == "relatorio_prisma_busca_orientada_fgv":
             command_lines.append("# A busca, triagem e consolidação PRISMA serão gravadas em [paths].research_output_dir.")
         else:
