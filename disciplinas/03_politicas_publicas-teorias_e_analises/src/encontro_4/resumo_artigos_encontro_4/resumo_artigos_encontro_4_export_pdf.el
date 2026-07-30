@@ -9,5 +9,5 @@
 (setq org-cite-export-processors '((latex biblatex) (t basic)))
 (setq org-confirm-babel-evaluate nil)
 (setq org-latex-pdf-process '("lualatex -interaction nonstopmode -shell-escape -output-directory %o %f" "biber %b" "lualatex -interaction nonstopmode -shell-escape -output-directory %o %f" "lualatex -interaction nonstopmode -shell-escape -output-directory %o %f"))
-(find-file "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4_v4.org")
+(find-file "/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/output/documento/resumo_artigos_encontro_4_v4/resumo_artigos_encontro_4.org")
 (org-latex-export-to-pdf)
