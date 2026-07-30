@@ -1,59 +1,52 @@
-% Created 2026-05-12 ter 16:40
-% Intended LaTeX compiler: lualatex
-\documentclass[12pt,a4paper]{article}
-\usepackage{fgv-paper}
-% Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
-\usepackage[backend=biber,sorting=nty,giveninits=true]{biblatex}
+#+TITLE: Resumo analítico dos textos
+#+AUTHOR: Gustavo M. Mendes de Tarso
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LATEX_HEADER: % Bibliografia controlada pelo TOML; os estilos FGV não carregam biblatex.
+#+LATEX_HEADER: \usepackage[backend=biber,style=abnt,sorting=nty,giveninits=true]{biblatex}
+#+LATEX_HEADER: \addbibresource{resumo_artigos_encontro_4.bib}
+#+LATEX_HEADER: \geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+#+LATEX_HEADER: \setlength{\headheight}{58pt}
+#+LATEX_HEADER: \setlength{\headsep}{18pt}
+#+LATEX_HEADER: \newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}}{}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+#+LATEX_HEADER: \fancypagestyle{fgvreportstyle}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{plain}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+#+LATEX_HEADER: \institution{Fundação Getulio Vargas}
+#+LATEX_HEADER: \programname{}
+#+LATEX_HEADER: \coursename{Mestrado Acadêmico em Políticas Públicas e Governo}
+#+LATEX_HEADER: \disciplinename{Políticas Públicas: Teoria e Análise}
+#+LATEX_HEADER: \professorname{Lizandro Lui}
+#+LATEX_HEADER: \cityname{Brasília}
 
-\addbibresource{resumo_artigos_encontro_4_v4.bib}
-\geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
-\usepackage{float}
-\usepackage{tikz}
-\usepackage{tcolorbox}
-\usepackage{tabularray}
-\usepackage{ltablex}
-\keepXColumns
-\setlength{\emergencystretch}{3em}
-\sloppy
-\definecolor{FGVHeaderBlueDark}{HTML}{003B71}
-\definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
-\definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
-\setlength{\headheight}{58pt}
-\setlength{\headsep}{18pt}
-\newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}}{}}
-\newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
-\newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
-\fancypagestyle{fgvreportstyle}{%
-\fancyhf{}%
-\fancyhead[L]{\FGVHeaderBlock}%
-\renewcommand{\headrulewidth}{0pt}%
-\fancyfoot[C]{\thepage}%
-}
-\fancypagestyle{plain}{%
-\fancyhf{}%
-\fancyhead[L]{\FGVHeaderBlock}%
-\renewcommand{\headrulewidth}{0pt}%
-\fancyfoot[C]{\thepage}%
-}
-\AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
-\institution{Fundação Getulio Vargas}
-\programname{}
-\coursename{Mestrado Acadêmico em Políticas Públicas e Governo}
-\disciplinename{Políticas Públicas: Teoria e Análise}
-\professorname{Lizandro Lui}
-\cityname{Brasília}
-\author{Gustavo M. Mendes de Tarso}
-\date{\today}
-\title{Resumo analítico dos textos}
-\hypersetup{
- pdfauthor={Gustavo M. Mendes de Tarso},
- pdftitle={Resumo analítico dos textos},
- pdfkeywords={},
- pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
- pdflang={Pt_Br}}
-\begin{document}
-
+#+begin_export latex
 \begingroup
 \linespread{1}\selectfont
 \begin{tcolorbox}[title=Ficha Técnica,
@@ -70,11 +63,11 @@
 \end{tblr}
 \end{tcolorbox}
 \endgroup
+#+end_export
 
-\clearpage
+#+LATEX: \clearpage
 
-\section{Introdução}
-\label{sec:orge54a02c}
+* Introdução
 
 O corpus reunido neste documento é composto por quatro textos que, embora incidam sobre objetos empíricos e escalas analíticas distintas, convergem em torno de uma questão disciplinar comum: como compreender o desenho de políticas públicas a partir das relações entre problemas, objetivos, instrumentos e efeitos. O conjunto inclui um estudo longitudinal sobre planejamento de infraestrutura de transportes na Holanda, um artigo de mapeamento da literatura sobre análise do desenho de políticas públicas, uma comparação das microdimensões de instrumentos de transformação digital nos estados brasileiros e uma intervenção conceitual sobre design, non-design e anti-design a partir da regulação de cigarros eletrônicos na Indonésia \parencite{geet2019_policy_design,lima2021_conectando_problemas,lui2026_micro_dimensions,newman2020_policy_design}.
 
@@ -86,13 +79,11 @@ O caminho analítico adotado acompanha essa própria heterogeneidade do corpus. 
 
 
 
-\section{Resumo individual dos textos}
-\label{sec:orgea2db5e}
+* Resumo individual dos textos
 
 
 
-\subsection{Policy design dynamics: fitting goals and instruments in transport infrastructure planning in the Netherlands}
-\label{sec:orgfd25f3e}
+** Policy design dynamics: fitting goals and instruments in transport infrastructure planning in the Netherlands
 
 O problema central do artigo é a dificuldade de manter ajuste interno em desenhos de política que se transformam ao longo do tempo. Em vez de tratar o desenho de políticas como arranjo estático entre fins e meios, o texto parte do diagnóstico de que metas e instrumentos se acumulam, são reinterpretados, entram em atrito e, por isso, podem perder capacidade de orientar resultados de forma eficaz. A questão substantiva, portanto, não é apenas quais metas e instrumentos existem, mas como sua relação evolui historicamente e como essa evolução afeta a qualidade do desenho. O foco empírico em planejamento de infraestrutura de transportes na Holanda permite observar essa dificuldade em um campo no qual mudanças de orientação estratégica tendem a conviver com legados institucionais robustos e instrumentos sedimentados. \parencite{geet2019_policy_design}
 
@@ -116,8 +107,7 @@ No diálogo com o restante do corpus, este artigo ocupa posição de base analí
 
 
 
-\subsection{Conectando problemas, soluções e expectativas: mapeando a literatura sobre análise do desenho de políticas públicas}
-\label{sec:orgb01d27c}
+** Conectando problemas, soluções e expectativas: mapeando a literatura sobre análise do desenho de políticas públicas
 
 O artigo toma como problema central a relativa dispersão conceitual e analítica do campo de estudos sobre desenho de políticas públicas e, em paralelo, a baixa consolidação dessa agenda na produção brasileira. Seu ponto de partida é que a literatura internacional sobre desenho avançou de modo expressivo, sobretudo ao deslocar o foco do processo decisório em sentido amplo para os componentes substantivos das políticas, mas esse avanço ainda aparece de forma fragmentada, com usos conceituais variados e ênfases desiguais entre problemas, instrumentos, públicos-alvo, arranjos de governança, racionalidades e construções sociais. A questão que organiza o texto, portanto, não é apenas “o que já se produziu” sobre desenho, mas como esse campo foi estruturado intelectualmente, quais categorias o organizam e quais oportunidades de pesquisa essa cartografia abre para o contexto brasileiro \parencite{lima2021_conectando_problemas}
 
@@ -145,8 +135,7 @@ O contraste com o estudo sobre design, non-design e anti-design é igualmente in
 
 
 
-\subsection{Micro-Dimensions of Digital Policy Design Instruments: A Comparative Analysis Across Brazilian States}
-\label{sec:orgb8a2711}
+** Micro-Dimensions of Digital Policy Design Instruments: A Comparative Analysis Across Brazilian States
 
 O artigo toma como problema central uma lacuna específica da literatura de policy design: a predominância de análises voltadas aos níveis macro e meso, em detrimento da observação fina de como os instrumentos são calibrados, combinados e operacionalizados no nível micro do desenho. A agenda de transformação digital nos estados brasileiros funciona, no texto, como terreno empírico privilegiado para enfrentar essa lacuna, porque envolve simultaneamente coordenação interorganizacional, padronização tecnológica, regulação, oferta de serviços e interação com usuários. O ponto de partida é que não basta identificar quais instrumentos existem; é necessário compreender sua composição concreta, sua natureza substantiva ou procedimental e os efeitos dessa arquitetura sobre o estilo de implementação. Esse deslocamento analítico é explicitamente apresentado como contribuição ao debate recente sobre microdimensões do desenho de políticas, em continuidade e também em refinamento de discussões mais amplas sobre objetivos, instrumentos e mixes de políticas\parencite{lui2026_micro_dimensions}em diálogo com\parencite{lima2021_conectando_problemas}e com a atenção a configurações instrumentais em\parencite{newman2020_policy_design}
 
@@ -172,8 +161,7 @@ No diálogo com o restante do corpus, este texto ocupa uma posição intermediá
 
 
 
-\subsection{Policy design, non-design, and anti-design: the regulation of e-cigarettes in Indonesia}
-\label{sec:orgbfceb90}
+** Policy design, non-design, and anti-design: the regulation of e-cigarettes in Indonesia
 
 O problema central do artigo é menos a regulação de cigarros eletrônicos em si do que uma insuficiência conceitual da literatura de policy design: o campo definiu com relativo refinamento o que conta como desenho de políticas, mas tratou de modo impreciso aquilo que fica fora dele. Os autores partem da percepção de que boa parte do debate opõe “design” e “política”, como se a alternativa ao desenho fosse sempre a captura por interesses, barganhas ou contingências partidárias. Contra essa polarização, o texto sustenta que o ponto decisivo não é a presença de política no processo, mas o grau de conexão efetiva entre problema, objetivo, intervenção e resultado. Essa reformulação desloca o foco da normatividade abstrata para uma questão analítica mais operacional: em vez de perguntar se uma política foi mais ou menos política, importa averiguar se houve ou não articulação minimamente inteligível entre diagnóstico, instrumentos e efeitos esperados, segundo\parencite{newman2020_policy_design}
 
@@ -199,9 +187,9 @@ A comparação com o estudo sobre dinâmica do design em infraestrutura de trans
 
 
 
-\section{Comparação entre os textos}
-\label{sec:orge6ef0de}
+* Comparação entre os textos
 
+#+begin_export latex
 \begin{landscape}
 \begingroup
 \scriptsize
@@ -224,6 +212,7 @@ Design, non-design e anti-design na regulação de cigarros eletrônicos na Indo
 \end{longtblr}
 \endgroup
 \end{landscape}
+#+end_export
 
 Tomados em conjunto, os quatro textos convergem menos em torno de um mesmo objeto substantivo do que em torno de uma preocupação comum com a inteligibilidade do desenho de políticas públicas. Em todos eles, a pergunta decisiva recai sobre a relação entre problemas, objetivos, instrumentos e efeitos, ainda que essa relação seja tratada em registros bastante distintos: como ajuste dinâmico de um mix de políticas em um setor específico \parencite{geet2019_policy_design}; como cartografia conceitual de um subcampo e de suas categorias organizadoras \parencite{lima2021_conectando_problemas}; como calibragem fina de instrumentos em políticas digitais subnacionais \parencite{lui2026_micro_dimensions}; e como problematização do próprio limite do conceito de desenho, quando as conexões entre fins e meios são frágeis ou virtualmente inexistentes \parencite{newman2020_policy_design}. A convergência real, portanto, não está em uma unidade temática artificial, mas na centralidade analítica da arquitetura interna das políticas. O corpus, nesse sentido, é coeso no plano da pergunta disciplinar e heterogêneo no plano dos objetos empíricos, dos níveis de abstração e dos métodos.
 
@@ -251,8 +240,7 @@ Em síntese, a comparação transversal revela um corpus intelectualmente articu
 
 
 
-\section{Síntese analítica}
-\label{sec:orge6924b8}
+* Síntese analítica
 
 Uma leitura de conjunto do corpus sugere que seu principal ganho não está em oferecer uma definição única de desenho de políticas, mas em mostrar que o conceito só se torna analiticamente fértil quando tratado como problema relacional. Em todos os textos, o núcleo da questão não é a mera presença de objetivos ou instrumentos, e sim a qualidade dos nexos que os unem. Essa percepção aparece sob formas diferentes: como ajuste entre metas e instrumentos em um policy mix setorial \parencite{geet2019_policy_design}; como gramática que conecta problemas, soluções e expectativas \parencite{lima2021_conectando_problemas}; como composição de microdimensões instrumentais que orienta estilos de implementação \parencite{lui2026_micro_dimensions}; e como distinção entre desenho e formas de desconexão, inclusive anti-design \parencite{newman2020_policy_design}.
 
@@ -270,8 +258,7 @@ Por isso, a principal contribuição interpretativa do corpus talvez seja recolo
 
 
 
-\section{Considerações finais}
-\label{sec:org495914b}
+* Considerações finais
 
 As análises reunidas permitem concluir que o maior ganho deste documento está em transformar um corpus heterogêneo em um problema analítico comum sem apagar suas diferenças. Em vez de impor unidade temática artificial, a leitura evidenciou que os textos se articulam por compartilharem uma preocupação com a inteligibilidade interna das políticas: a conexão entre problemas, objetivos, instrumentos e efeitos, bem como os modos pelos quais essa conexão se organiza, se ajusta ou se rompe \parencite{geet2019_policy_design,lima2021_conectando_problemas,lui2026_micro_dimensions,newman2020_policy_design}.
 
@@ -279,11 +266,12 @@ Do ponto de vista analítico, o corpus contribui para a disciplina em pelo menos
 
 Para a disciplina, a contribuição mais relevante talvez seja metodológica e epistemológica ao mesmo tempo: estudar desenho de políticas exige combinar comparação cuidadosa, precisão conceitual e atenção ao contexto institucional, evitando tanto generalizações apressadas quanto idealizações normativas excessivas. O corpus mostra que políticas públicas podem ser melhor compreendidas quando o analista investiga seus encaixes internos, suas tensões e suas trajetórias, e não apenas seus resultados declarados ou seus conflitos mais visíveis. Com isso, o documento consolida uma leitura útil para o campo ao sugerir que a força analítica do policy design reside justamente em sua capacidade de tornar observáveis relações que, sem essa lente, permaneceriam dispersas entre formulação, instrumentos, implementação e mudança institucional.
 
-\printbibliography
+#+LATEX: \printbibliography
 
-\clearpage
-\section{Mapa mental dos textos analisados}
-\label{sec:org1d505a5}
+# MINDMAP_AUTO_START: mapa_mental
+#+LATEX: \clearpage
+* Mapa mental dos textos analisados
+#+begin_export latex
 \vspace{0.8em}
 \begingroup
 \centering
@@ -291,4 +279,5 @@ Para a disciplina, a contribuição mais relevante talvez seja metodológica e e
 \par
 \endgroup
 \clearpage
-\end{document}
+#+end_export
+# MINDMAP_AUTO_END: mapa_mental
