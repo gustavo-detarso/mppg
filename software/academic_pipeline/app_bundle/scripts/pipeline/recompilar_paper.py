@@ -56,7 +56,7 @@ def main():
 
     parser.add_argument("--base", default=str(base_default), help="Diretório base do academic_pipeline.")
     parser.add_argument("--org", default="", help="Caminho do arquivo .org a recompilar.")
-    parser.add_argument("--script", default="", help="Caminho do script academic_pipeline_rc7.py.")
+    parser.add_argument("--script", default="", help="Caminho do script academic_pipeline.py.")
     parser.add_argument("--academic-writing", default="", help="Caminho do academic-writing.el.")
     parser.add_argument("--fgv-path", default="", help="Caminho da pasta misc/fgv.")
     parser.add_argument("--no-clean", action="store_true", help="Não remove arquivos auxiliares antes de recompilar.")
@@ -68,7 +68,7 @@ def main():
     app = base / "app_bundle"
 
     org_default = app / "output/documento/paper_politica_brasileira_contemporanea/paper_politica_brasileira_contemporanea.org"
-    script_default = app / "scripts/pipeline/academic_pipeline_rc7.py"
+    script_default = app / "scripts/pipeline/academic_pipeline.py"
     academic_default = app / "misc/academic-writing.el"
     fgv_default = app / "misc/fgv"
 
