@@ -33,7 +33,7 @@ def import_pipeline(script_path: Path):
     sys.path.insert(0, str(script_path.parent))
     sys.path.insert(0, str(script_path.parent.parent.parent))
 
-    spec = importlib.util.spec_from_file_location("academic_pipeline_rc7", script_path)
+    spec = importlib.util.spec_from_file_location("academic_pipeline", script_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Não foi possível carregar o módulo: {script_path}")
 
