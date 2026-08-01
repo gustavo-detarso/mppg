@@ -403,7 +403,7 @@ def section_saida(values: dict[str, Any] | None = None) -> str:
     criar_subdiretorio = {toml_bool(v.get('criar_subdiretorio', True))}
 
     # Orientações gerais da pesquisa/documento. Pode ser lista de arquivos, pastas ou ZIPs.
-    # ZIPs são extraídos pelo academic_pipeline_rc.py e todos os .pdf/.docx/.txt/.md/.org internos são usados.
+    # ZIPs são extraídos pelo academic_pipeline.py e todos os .pdf/.docx/.txt/.md/.org internos são usados.
     orientacoes_paths = {toml_array(v.get('orientacoes_paths', []))}
     orientacao_inline = {toml_quote(v.get('orientacao_inline', ''))}
     """).strip() + "\n\n"
