@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(os.environ["AP009D1_CANDIDATE_ROOT"])
 PIPELINE_DIR = ROOT / "software/academic_pipeline/app_bundle/scripts/pipeline"
 CONSUMER = PIPELINE_DIR / "recompilar_paper.py"
-RC9 = PIPELINE_DIR / "academic_pipeline_rc9.py"
+RC9 = PIPELINE_DIR / "academic_pipeline.py"
 CANONICAL = PIPELINE_DIR / "academic_pipeline.py"
 
 def semantic_ast(path: Path) -> str:
