@@ -669,7 +669,7 @@ def section_atividade_excelencia(values: dict[str, Any] | None = None) -> str:
     professor = v.get('professor', 'Bernardo Buta')
     aluno = v.get('aluno', 'Gustavo M. Mendes de Tarso')
     data = v.get('data', '2026')
-    # Mantém campos no topo para o academic_pipeline_rc.py e também a subtable metadados
+    # Mantém campos no topo para o academic_pipeline.py e também a subtable metadados
     # usada por TOMLs antigos da etapa de pesquisa.
     return textwrap.dedent(f"""
     [atividade]
