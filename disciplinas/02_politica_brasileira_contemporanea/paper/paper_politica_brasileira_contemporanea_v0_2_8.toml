@@ -3,7 +3,7 @@
 # Perfil: paper / documentos_locais / metadados enriquecidos
 #
 # Versão esperada do pipeline:
-# - academic_pipeline_rc8.py
+# - academic_pipeline.py
 #
 # Objetivo deste TOML:
 # - usar documentos-base.zip como corpus principal;
