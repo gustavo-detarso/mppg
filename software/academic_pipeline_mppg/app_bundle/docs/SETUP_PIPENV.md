@@ -67,17 +67,17 @@ app_bundle/misc/fgv/fgv-dissertacao.sty
 ## 5. Diagnóstico
 
 ```bash
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py --doctor
+pipenv run python -m academic_pipeline --doctor
 ```
 
 ## 6. Projeto de teste
 
 ```bash
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \
+pipenv run python -m academic_pipeline \
   --init-project teste_paper_rc10 \
   --project-type paper
 
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \
+pipenv run python -m academic_pipeline \
   --config app_bundle/projetos/teste_paper_rc10/paper_config.toml \
   --check-config
 ```
@@ -93,14 +93,14 @@ app_bundle/projetos/teste_paper_rc10/doi_manifest.csv
 ## 7. Execução
 
 ```bash
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \
+pipenv run python -m academic_pipeline \
   --config app_bundle/projetos/teste_paper_rc10/paper_config.toml
 ```
 
 ## 8. Recompilação sem IA
 
 ```bash
-pipenv run python app_bundle/scripts/pipeline/academic_pipeline_rc10.py \
+pipenv run python -m academic_pipeline \
   --config app_bundle/projetos/teste_paper_rc10/paper_config.toml \
   --recompile \
   --org app_bundle/output/documento/teste_paper_rc10/teste_paper_rc10.org
