@@ -17,7 +17,7 @@ O script:
 
 Uso típico:
 python atualizar_academic_pipeline_bundle.py \
-  --zip /home/gustavodetarso/Downloads/academic_pipeline_rc10_7_14.zip \
+  --zip /home/gustavodetarso/Downloads/academic_pipeline_bundle.zip \
   --dst /home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg \
   --config app_bundle/projetos/resumo_artigos_encontro_4/resumo_artigos_config.toml \
   --document-json app_bundle/output/documento/resumo_artigos_encontro_4/resumo_artigos_encontro_4.document.json \
@@ -350,7 +350,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Atualiza com segurança um bundle academic_pipeline a partir de um ZIP corrigido."
     )
-    parser.add_argument("--zip", required=True, help="Caminho do ZIP corrigido, ex.: academic_pipeline_rc10_7_14.zip")
+    parser.add_argument("--zip", required=True, help="Caminho do ZIP corrigido, ex.: academic_pipeline_bundle.zip")
     parser.add_argument("--dst", required=True, help="Diretório do bundle local já existente.")
     parser.add_argument(
         "--config",
