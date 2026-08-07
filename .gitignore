@@ -6,3 +6,14 @@ __pycache__/
 *.tar.bz2
 *.bak
 *.bak*
+
+# >>> MPPG POST-ADJUDICATION LOCAL IGNORE BEGIN >>>
+# MPPG pós-adjudicação — resíduos locais não publicáveis
+/software/academic_pipeline_rc10_7_conformidade/
+/disciplinas/*/src.zip
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src.backup_*/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/bbl-indicada/fontes/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/bbl-indicada/dados/*.zip
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/bbl-indicada/documentos/*.docx
+/disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_final/output/atividade_atestmed_matriz_decisoria/
+# <<< MPPG POST-ADJUDICATION LOCAL IGNORE END <<<
