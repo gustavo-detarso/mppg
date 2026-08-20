@@ -9,7 +9,6 @@ __pycache__/
 
 # >>> MPPG POST-ADJUDICATION LOCAL IGNORE BEGIN >>>
 # MPPG pós-adjudicação — resíduos locais não publicáveis
-/software/academic_pipeline_rc10_7_conformidade/
 /disciplinas/*/src.zip
 /disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src.backup_*/
 /disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/bbl-indicada/fontes/

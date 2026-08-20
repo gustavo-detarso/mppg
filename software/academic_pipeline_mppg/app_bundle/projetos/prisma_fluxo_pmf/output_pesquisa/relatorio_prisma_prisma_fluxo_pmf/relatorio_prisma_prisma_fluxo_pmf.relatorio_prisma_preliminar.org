@@ -104,7 +104,7 @@ A figura apresenta o funil de seleção da revisão. As contagens finais de tria
 A busca foi concluída, mas a inclusão e a exclusão de estudos permanecem pendentes de decisão humana na planilha de triagem.
 - A planilha foi ordenada por pré-triagem assistida por IA antes do limite inicial de registros.
 - A recomendação e a justificativa da IA servem apenas para priorização; elas não substituem a decisão humana.
-- Planilha de triagem: =/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.xlsx=
+- Planilha de triagem: =/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/projetos/prisma_fluxo_pmf/output_pesquisa/relatorio_prisma_prisma_fluxo_pmf/relatorio_prisma_prisma_fluxo_pmf.triagem_titulo_resumo.xlsx=
 - Após preencher a planilha, importe-a com =--prisma-importar-triagem=. O pipeline então produzirá a versão final deste relatório no mesmo layout e com a mesma engine PDF configurada no TOML.
 
 * Nota metodológica

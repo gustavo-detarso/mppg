@@ -22,7 +22,7 @@
 #+LATEX_HEADER: \definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
 #+LATEX_HEADER: \setlength{\headheight}{58pt}
 #+LATEX_HEADER: \setlength{\headsep}{18pt}
-#+LATEX_HEADER: \newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_rc10_7_conformidade/app_bundle/misc/fgv.png}}{}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderLogoInclude}{\IfFileExists{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/fgv.png}{\includegraphics[height=1.05cm]{/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/app_bundle/misc/fgv.png}}{}}
 #+LATEX_HEADER: \newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
 #+LATEX_HEADER: \newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
 #+LATEX_HEADER: \fancypagestyle{fgvreportstyle}{%
