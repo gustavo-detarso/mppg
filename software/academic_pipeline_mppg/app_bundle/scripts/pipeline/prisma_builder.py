@@ -313,7 +313,7 @@ def load_records_from_research_dir(path: Path | None) -> tuple[list[StudyRecord]
     sources: list[str] = []
     for json_path in sorted(path.rglob("*.json")):
         # evita reprocessar relatórios canônicos já gerados
-        if "prisma_report" in json_path.name or "rc10_report" in json_path.name:
+        if "prisma_report" in json_path.name:
             continue
         try:
             data = json.loads(json_path.read_text(encoding="utf-8", errors="ignore"))

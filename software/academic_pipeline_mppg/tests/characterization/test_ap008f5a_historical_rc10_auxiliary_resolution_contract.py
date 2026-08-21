@@ -16,13 +16,13 @@ def _read(path: Path) -> str:
 
 
 def test_ap008f5a_auxiliary_scope_is_exact() -> None:
-    targets = {UPDATER, INSTALL, SETUP}
+    targets = {UPDATER, SETUP}
     assert all(path.is_file() for path in targets)
-    assert len(targets) == 3
+    assert len(targets) == 2
 
 
 def test_ap008f5a_no_auxiliary_references_physical_rc10_entrypoint() -> None:
-    for path in (UPDATER, INSTALL, SETUP):
+    for path in (UPDATER, SETUP):
         assert PHYSICAL_RC10 not in _read(path), path
 
 
@@ -53,13 +53,11 @@ def test_ap008f5a_bundle_updater_executes_canonical_module() -> None:
 
 
 def test_ap008f5a_shell_helpers_recommend_canonical_module() -> None:
-    install_source = _read(INSTALL)
     setup_source = _read(SETUP)
-    assert install_source.count("pipenv run python -m academic_pipeline") == 5
     assert "pipenv run python -m academic_pipeline --doctor" in setup_source
-    assert PHYSICAL_RC10 not in install_source
     assert PHYSICAL_RC10 not in setup_source
 
 
 def test_ap008f5a_historical_rc10_is_absent_after_ap008f5b() -> None:
+    assert not INSTALL.exists()
     assert not HISTORICAL_RC10.exists()

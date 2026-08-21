@@ -1467,13 +1467,13 @@ Esses arquivos excluídos são listados explicitamente na seção 42.4.
 | `academic_pipeline.cli` | core runtime | 13 | 0 | 1 | `570375a810136f385074638b226db9db24f16100a5ff47b4005affd9a8824231` |
 | `academic_pipeline.cli_parser` | core runtime | 133 | 0 | 2 | `f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8` |
 | `academic_pipeline.command_dispatch` | core runtime | 325 | 1 | 20 | `9255c4b924fd61b7120b8c5e02684d338f6788de42ae7c352b049a488a308afe` |
-| `academic_pipeline.default_runtime` | core runtime | 1334 | 0 | 51 | `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7` |
+| `academic_pipeline.default_runtime` | core runtime | 1332 | 0 | 51 | `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0` |
 | `academic_pipeline.doctor_runtime` | core runtime | 211 | 2 | 8 | `2944cb78c2b1959acaf2f0f4192b09964e3cf721885aafac7c88164c1b287ec9` |
 | `academic_pipeline.document_orchestration` | core runtime | 437 | 1 | 26 | `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2` |
 | `academic_pipeline.doi_manifest_runtime` | core runtime | 170 | 1 | 8 | `9d4dc1a4a9cee30a69effc31424ccc3ead1cf041bf3fbd09a679659e34fe015b` |
 | `academic_pipeline.institution_compliance_runtime` | core runtime | 155 | 2 | 6 | `41b323120b03a64a317ef6288df3cecbdbc042532d7b739c0485ee04b3e94117` |
 | `academic_pipeline.list_profiles_runtime` | core runtime | 38 | 1 | 2 | `9a6bbbd980c0111067af17613b97a30b4bc9c333852cc30279c33999653e333d` |
-| `academic_pipeline.prisma_generic_orchestration` | core runtime | 791 | 1 | 102 | `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf` |
+| `academic_pipeline.prisma_generic_orchestration` | core runtime | 790 | 1 | 102 | `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4` |
 | `academic_pipeline.repository_paths` | core runtime | 74 | 1 | 4 | `f762fec50168d8a56ea53e1d58a35bfe293d4175f2ae42b9c15b26c04ee3278f` |
 | `academic_pipeline.runtime` | core runtime | 645 | 3 | 26 | `3e2192ea4522be375e0a2ea2fb22a0654fc4107ec581712372ccae3068dfb8f9` |
 | `app_bundle.scripts.pipeline` | pipeline operacional | 0 | 0 | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
@@ -1507,7 +1507,7 @@ Esses arquivos excluídos são listados explicitamente na seção 42.4.
 | `app_bundle.scripts.pipeline.pipeline_orchestrator` | pipeline operacional | 27 | 0 | 1 | `b2cece847fdac97db991c8667c97c53d52146f57875e19ddcb93f995781613bd` |
 | `app_bundle.scripts.pipeline.preparar_artigo_longo_fulltext` | pipeline operacional | 389 | 0 | 19 | `6e846516c6c057aa2958fe53cc8c055ca185177d9a2aee450fa99329c86c6f11` |
 | `app_bundle.scripts.pipeline.prisma_baixar_fulltext_artigos` | pipeline operacional | 528 | 0 | 30 | `9a4b0a12218a3c728bcc57182549973d066035d1a0324522a8d9be5d6758bc62` |
-| `app_bundle.scripts.pipeline.prisma_builder` | pipeline operacional | 437 | 0 | 15 | `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748` |
+| `app_bundle.scripts.pipeline.prisma_builder` | pipeline operacional | 437 | 0 | 15 | `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c` |
 | `app_bundle.scripts.pipeline.prisma_busca_externa` | pipeline operacional | 2336 | 1 | 101 | `6cdd0f91681e862fc42bfa38f842a17b9d8e7606e437d5e919e4d2b20592a2ec` |
 | `app_bundle.scripts.pipeline.prisma_congelar_artigo` | pipeline operacional | 204 | 0 | 18 | `b17f589816d0fa9aabc471546bc1ae79a30ecb505fd5ee57d771136263d49526` |
 | `app_bundle.scripts.pipeline.prisma_curadoria_ia_referencias` | pipeline operacional | 997 | 0 | 36 | `73f3e311e2c2d6ab169c77e63d632206aa2a22c74dd8a7f1973887aab01d3006` |
@@ -5097,8 +5097,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_json_or_none`
@@ -5167,8 +5167,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:load_config @ L260`
@@ -5241,8 +5241,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:make_client`
@@ -5312,8 +5312,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_section`
@@ -5383,8 +5383,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:output_paths`
@@ -5454,8 +5454,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:research_output_paths`
@@ -5525,8 +5525,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:work_cache_paths`
@@ -5604,8 +5604,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:apply_cli_path_overrides`
@@ -5678,8 +5678,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:load_existing_document_json`
@@ -5748,8 +5748,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:resolve_bib_for_existing_document`
@@ -5821,8 +5821,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_openai_model_from_cfg`
@@ -5894,8 +5894,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_load_optional_config`
@@ -5967,8 +5967,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_resolve_latex_paths_for_recompile`
@@ -6038,8 +6038,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:run_recompile`
@@ -6109,8 +6109,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:render_external_prisma_outputs`
@@ -6183,8 +6183,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:render_additional_language_versions`
@@ -6264,8 +6264,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_default_config`
@@ -6332,8 +6332,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_default_out_dir`
@@ -6400,8 +6400,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_default_prompt`
@@ -6468,8 +6468,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_script_path`
@@ -6537,8 +6537,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_arg`
@@ -6615,8 +6615,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_config_from_args`
@@ -6687,8 +6687,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_out_from_args`
@@ -6760,8 +6760,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_prompt_from_args`
@@ -6831,8 +6831,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_input_from_args`
@@ -6902,8 +6902,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_run_command`
@@ -6974,8 +6974,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_build_cmd`
@@ -7047,8 +7047,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_run_ia`
@@ -7120,8 +7120,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_reexportar_xlsx`
@@ -7191,8 +7191,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_pipeline_supports_flag`
@@ -7261,8 +7261,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_importar_no_pipeline`
@@ -7333,8 +7333,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_fluxo_completo`
@@ -7404,8 +7404,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_mostrar_caminhos`
@@ -7474,8 +7474,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_menu`
@@ -7544,8 +7544,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_curadoria_dispatch`
@@ -7614,8 +7614,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_ap003f_pipeline_core`
@@ -7706,7 +7706,6 @@ Anotação declarada: `int`. Retornos observados estaticamente incluem: `_ap003e
 - `.prompt_lock.json`
 - `.prompt_lock.md`
 - `.run_report.json`
-- `.rc10_report.json`
 - `.outputs.txt`
 - `Gerando document.json canônico com IA em etapas`
 - `Gerando document.json canônico com IA`
@@ -7723,8 +7722,8 @@ comprehensions: 3
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_refs_disabled`
@@ -7793,8 +7792,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_refs_apply_runtime_policy`
@@ -7863,8 +7862,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:load_config @ L1241`
@@ -7934,8 +7933,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:build_bibliography`
@@ -8009,8 +8008,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_refs_clear_document_bibliography`
@@ -8079,8 +8078,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_refs_strip_org`
@@ -8149,8 +8148,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:render_org_latex`
@@ -8223,8 +8222,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_artigo_generico_get_arg`
@@ -8296,8 +8295,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_artigo_generico_strip`
@@ -8366,8 +8365,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_artigo_generico_out_dir`
@@ -8437,8 +8436,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_artigo_generico_run_export`
@@ -8508,8 +8507,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_prisma_artigo_generico_run_freeze`
@@ -8579,8 +8578,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:_normalize_exit_code`
@@ -8649,8 +8648,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.default_runtime:run_default`
@@ -8722,8 +8721,8 @@ comprehensions: 1
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
-**LOC do arquivo-fonte:** 1334
+**SHA-256 do arquivo-fonte:** `76c061bf5fa3ef613da87d6bafb1d7bb118b8611c7244b2037fff590f1ff44c0`
+**LOC do arquivo-fonte:** 1332
 
 
 ### `academic_pipeline.doctor_runtime:_section`
@@ -12613,8 +12612,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body_stage_1`
@@ -12681,8 +12680,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:stage_with_runtime`
@@ -12750,8 +12749,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:stage_impl_001`
@@ -12819,8 +12818,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__json_or_none_1`
@@ -12887,8 +12886,8 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:json_or_none_with_runtime`
@@ -12956,8 +12955,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_json_or_none_impl_001`
@@ -13025,8 +13024,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body_make_client_1`
@@ -13097,8 +13096,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:make_client_with_runtime`
@@ -13166,8 +13165,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:make_client_impl_001`
@@ -13235,8 +13234,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__section_1`
@@ -13305,8 +13304,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:section_with_runtime`
@@ -13375,8 +13374,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_section_impl_001`
@@ -13445,8 +13444,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body_research_output_paths_1`
@@ -13525,8 +13524,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:research_output_paths_with_runtime`
@@ -13594,8 +13593,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:research_output_paths_impl_001`
@@ -13663,8 +13662,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body_render_external_prisma_outputs_1`
@@ -13749,8 +13748,8 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:render_external_prisma_outputs_with_runtime`
@@ -13822,8 +13821,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:render_external_prisma_outputs_impl_001`
@@ -13895,8 +13894,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_default_config_1`
@@ -13961,8 +13960,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_default_config_with_runtime`
@@ -14029,8 +14028,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_default_config_impl_001`
@@ -14097,8 +14096,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_default_out_dir_1`
@@ -14163,8 +14162,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_default_out_dir_with_runtime`
@@ -14231,8 +14230,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_default_out_dir_impl_001`
@@ -14299,8 +14298,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_default_prompt_1`
@@ -14365,8 +14364,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_default_prompt_with_runtime`
@@ -14433,8 +14432,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_default_prompt_impl_001`
@@ -14501,8 +14500,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_script_path_1`
@@ -14567,8 +14566,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_script_path_with_runtime`
@@ -14635,8 +14634,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_script_path_impl_001`
@@ -14703,8 +14702,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_arg_1`
@@ -14773,8 +14772,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_arg_with_runtime`
@@ -14844,8 +14843,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_arg_impl_001`
@@ -14915,8 +14914,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_config_from_args_1`
@@ -14984,8 +14983,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_config_from_args_with_runtime`
@@ -15053,8 +15052,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_config_from_args_impl_001`
@@ -15122,8 +15121,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_out_from_args_1`
@@ -15191,8 +15190,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_out_from_args_with_runtime`
@@ -15260,8 +15259,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_out_from_args_impl_001`
@@ -15329,8 +15328,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_prompt_from_args_1`
@@ -15398,8 +15397,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_prompt_from_args_with_runtime`
@@ -15467,8 +15466,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_prompt_from_args_impl_001`
@@ -15536,8 +15535,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_input_from_args_1`
@@ -15608,8 +15607,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_input_from_args_with_runtime`
@@ -15678,8 +15677,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_input_from_args_impl_001`
@@ -15748,8 +15747,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_run_command_1`
@@ -15819,8 +15818,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_run_command_with_runtime`
@@ -15888,8 +15887,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_run_command_impl_001`
@@ -15957,8 +15956,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_build_cmd_1`
@@ -16044,8 +16043,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_build_cmd_with_runtime`
@@ -16115,8 +16114,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_build_cmd_impl_001`
@@ -16186,8 +16185,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_run_ia_1`
@@ -16256,8 +16255,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_run_ia_with_runtime`
@@ -16326,8 +16325,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_run_ia_impl_001`
@@ -16396,8 +16395,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_reexportar_xlsx_1`
@@ -16465,8 +16464,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_reexportar_xlsx_with_runtime`
@@ -16534,8 +16533,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_reexportar_xlsx_impl_001`
@@ -16603,8 +16602,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_pipeline_supports_flag_1`
@@ -16671,8 +16670,8 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_pipeline_supports_flag_with_runtime`
@@ -16740,8 +16739,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_pipeline_supports_flag_impl_001`
@@ -16809,8 +16808,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_importar_no_pipeline_1`
@@ -16885,8 +16884,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_importar_no_pipeline_with_runtime`
@@ -16954,8 +16953,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_importar_no_pipeline_impl_001`
@@ -17023,8 +17022,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_fluxo_completo_1`
@@ -17094,8 +17093,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_fluxo_completo_with_runtime`
@@ -17163,8 +17162,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_fluxo_completo_impl_001`
@@ -17232,8 +17231,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_mostrar_caminhos_1`
@@ -17310,8 +17309,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_mostrar_caminhos_with_runtime`
@@ -17379,8 +17378,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_mostrar_caminhos_impl_001`
@@ -17448,8 +17447,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_menu_1`
@@ -17524,8 +17523,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_menu_with_runtime`
@@ -17593,8 +17592,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_menu_impl_001`
@@ -17662,8 +17661,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_curadoria_dispatch_1`
@@ -17736,8 +17735,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_curadoria_dispatch_with_runtime`
@@ -17805,8 +17804,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_curadoria_dispatch_impl_001`
@@ -17874,8 +17873,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_artigo_generico_get_arg_1`
@@ -17946,8 +17945,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_artigo_generico_get_arg_with_runtime`
@@ -18016,8 +18015,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_artigo_generico_get_arg_impl_001`
@@ -18086,8 +18085,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_artigo_generico_strip_1`
@@ -18171,8 +18170,8 @@ comprehensions: 1
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_artigo_generico_strip_with_runtime`
@@ -18240,8 +18239,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_artigo_generico_strip_impl_001`
@@ -18309,8 +18308,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_artigo_generico_out_dir_1`
@@ -18382,8 +18381,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_artigo_generico_out_dir_with_runtime`
@@ -18451,8 +18450,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_artigo_generico_out_dir_impl_001`
@@ -18520,8 +18519,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_artigo_generico_run_export_1`
@@ -18601,8 +18600,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_artigo_generico_run_export_with_runtime`
@@ -18671,8 +18670,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_artigo_generico_run_export_impl_001`
@@ -18741,8 +18740,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body__prisma_artigo_generico_run_freeze_1`
@@ -18843,8 +18842,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:prisma_artigo_generico_run_freeze_with_runtime`
@@ -18913,8 +18912,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_prisma_artigo_generico_run_freeze_impl_001`
@@ -18983,8 +18982,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_001`
@@ -19055,8 +19054,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_002`
@@ -19128,8 +19127,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_003`
@@ -19199,8 +19198,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_004`
@@ -19282,7 +19281,6 @@ Nenhum identificado pela análise estática.
 - `.prompt_lock.json`
 - `.prompt_lock.md`
 - `.run_report.json`
-- `.rc10_report.json`
 - `.outputs.txt`
 
 #### Complexidade estrutural observada
@@ -19294,8 +19292,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_005`
@@ -19364,8 +19362,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_006`
@@ -19437,8 +19435,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_007`
@@ -19508,8 +19506,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_stage_008`
@@ -19579,8 +19577,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:_ap003e_body_main_2`
@@ -19657,8 +19655,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_generic_with_runtime`
@@ -19727,8 +19725,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.prisma_generic_orchestration:run_prisma_generic_entrypoint`
@@ -19797,8 +19795,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `56ab317554994e86c5ca4f4636e4ca26b88d5955f7c1e5ae38fec88393f5cfaf`
-**LOC do arquivo-fonte:** 791
+**SHA-256 do arquivo-fonte:** `46096b64f84bc33a08232a2326d483b8d40abf73cba405e319f92daa6b887bc4`
+**LOC do arquivo-fonte:** 790
 
 
 ### `academic_pipeline.repository_paths:_is_project_root`
@@ -75715,7 +75713,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -75787,7 +75785,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -75860,7 +75858,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -75935,7 +75933,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76008,7 +76006,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76084,7 +76082,7 @@ comprehensions: 1
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76160,7 +76158,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76246,7 +76244,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76319,7 +76317,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76401,7 +76399,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76487,7 +76485,7 @@ comprehensions: 3
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76564,7 +76562,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76646,7 +76644,7 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76717,7 +76715,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 
@@ -76814,7 +76812,7 @@ comprehensions: 4
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `2eeb6c00bcccfae737e9d0bd33e9d5cde4c6f194174425891c202658fb212748`
+**SHA-256 do arquivo-fonte:** `a4ad333b1b98465a27bddc03a81648e052b7016e85b009759da5874031ce336c`
 **LOC do arquivo-fonte:** 437
 
 

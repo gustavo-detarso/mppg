@@ -966,7 +966,6 @@ def _ap003f_pipeline_core() -> int:
                 extra={"mode": "research_only", "source_info": source_info, "work_dir": str(work_dir), "cache_dir": str(cache_dir)},
             )
             write_json(out_dir / f"{prefix}.run_report.json", report)
-            write_json(out_dir / f"{prefix}.rc10_report.json", outputs)  # compatibilidade
             write_outputs_manifest(out_dir / f"{prefix}.outputs.txt", outputs)
             print_outputs(outputs, title=f"academic_pipeline {PIPELINE_VERSION} concluído sem documento acadêmico")
             return 0
@@ -1210,7 +1209,6 @@ def _ap003f_pipeline_core() -> int:
     if 'report' in _ap003d_result_012.values:
         report = _ap003d_result_012.values['report']
     write_json(out_dir / f"{prefix}.run_report.json", report)
-    write_json(out_dir / f"{prefix}.rc10_report.json", outputs)  # compatibilidade com scripts antigos
     write_outputs_manifest(out_dir / f"{prefix}.outputs.txt", outputs)
     print_outputs(outputs, title=f"academic_pipeline {PIPELINE_VERSION} concluído")
     if warnings:
