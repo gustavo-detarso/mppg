@@ -6,10 +6,10 @@ import pytest
 
 from pathlib import Path
 
-from academic_pipeline_rc10 import (
+from academic_pipeline.default_runtime import (
     _refs_apply_runtime_policy,
     _refs_disabled,
-    _refs_v6_strip_org,
+    _refs_strip_org,
     apply_cli_path_overrides,
     output_paths,
     research_output_paths,
@@ -200,7 +200,7 @@ def test_reference_strip_removes_directives_and_reference_section() -> None:
         "\\printbibliography\n"
     )
 
-    cleaned = _refs_v6_strip_org(org)
+    cleaned = _refs_strip_org(org)
 
     assert "addbibresource" not in cleaned
     assert "Referências" not in cleaned
@@ -214,12 +214,12 @@ def test_reference_strip_removes_directives_and_reference_section() -> None:
 @pytest.mark.xfail(
     strict=True,
     reason=(
-        "Defeito legado catalogado: _refs_v6_strip_org usa o padrão 'para' "
+        "Defeito catalogado: _refs_strip_org usa o padrão 'para' "
         "em vez de 'paren' e ainda não remove \\parencite."
     ),
 )
 def test_reference_strip_should_remove_parenthetical_citations() -> None:
-    cleaned = _refs_v6_strip_org(
+    cleaned = _refs_strip_org(
         "* Introdução\nTexto com \\parencite{silva2020}.\n"
     )
 

@@ -17,8 +17,6 @@ CANONICAL_MAIN = SOURCE_ROOT / "academic_pipeline/__main__.py"
 
 AUXILIARIES = (
     SOURCE_ROOT / "atualizar_academic_pipeline_bundle.py",
-    SOURCE_ROOT / "executar_artigo_longo_fulltext_v1_13.py",
-    SOURCE_ROOT / "executar_artigo_longo_fulltext_v1_14.py",
     SOURCE_ROOT / "install_rc10.sh",
     SOURCE_ROOT / "setup_pipenv_env.sh",
 )

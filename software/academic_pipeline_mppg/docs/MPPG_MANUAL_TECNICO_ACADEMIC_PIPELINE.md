@@ -1467,9 +1467,9 @@ Esses arquivos excluídos são listados explicitamente na seção 42.4.
 | `academic_pipeline.cli` | core runtime | 13 | 0 | 1 | `570375a810136f385074638b226db9db24f16100a5ff47b4005affd9a8824231` |
 | `academic_pipeline.cli_parser` | core runtime | 133 | 0 | 2 | `f6fd1b98c489e1adf5d8ab61419cab6d78db348b93958ff6d93199df0e5cfbb8` |
 | `academic_pipeline.command_dispatch` | core runtime | 325 | 1 | 20 | `9255c4b924fd61b7120b8c5e02684d338f6788de42ae7c352b049a488a308afe` |
-| `academic_pipeline.default_runtime` | core runtime | 1334 | 0 | 51 | `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a` |
+| `academic_pipeline.default_runtime` | core runtime | 1334 | 0 | 51 | `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7` |
 | `academic_pipeline.doctor_runtime` | core runtime | 211 | 2 | 8 | `2944cb78c2b1959acaf2f0f4192b09964e3cf721885aafac7c88164c1b287ec9` |
-| `academic_pipeline.document_orchestration` | core runtime | 437 | 1 | 26 | `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06` |
+| `academic_pipeline.document_orchestration` | core runtime | 437 | 1 | 26 | `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2` |
 | `academic_pipeline.doi_manifest_runtime` | core runtime | 170 | 1 | 8 | `9d4dc1a4a9cee30a69effc31424ccc3ead1cf041bf3fbd09a679659e34fe015b` |
 | `academic_pipeline.institution_compliance_runtime` | core runtime | 155 | 2 | 6 | `41b323120b03a64a317ef6288df3cecbdbc042532d7b739c0485ee04b3e94117` |
 | `academic_pipeline.list_profiles_runtime` | core runtime | 38 | 1 | 2 | `9a6bbbd980c0111067af17613b97a30b4bc9c333852cc30279c33999653e333d` |
@@ -1488,7 +1488,7 @@ Esses arquivos excluídos são listados explicitamente na seção 42.4.
 | `app_bundle.scripts.pipeline.artigo_prisma_workflow` | pipeline operacional | 51 | 0 | 2 | `62578a918b0064c7812c2425e90d8652d16d1682379fdf1e1fda0f0a5e49baee` |
 | `app_bundle.scripts.pipeline.bibliography_manager` | pipeline operacional | 632 | 2 | 31 | `ccf7efa67c51a306a53f604b4bc98e3f43d9434a01f09147138a9c19f7236d16` |
 | `app_bundle.scripts.pipeline.citation_renderer` | pipeline operacional | 68 | 0 | 4 | `e543ed12787cbaf014b18d112c287d0848da20d17815caa24679959efeea4229` |
-| `app_bundle.scripts.pipeline.clean_bundle` | pipeline operacional | 288 | 1 | 11 | `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593` |
+| `app_bundle.scripts.pipeline.clean_bundle` | pipeline operacional | 288 | 1 | 11 | `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301` |
 | `app_bundle.scripts.pipeline.corpus_manager` | pipeline operacional | 279 | 2 | 11 | `b240573df7e930283e26d91a8808eff81280b3da854faf75bc5ce33d12679712` |
 | `app_bundle.scripts.pipeline.diagnostics` | pipeline operacional | 526 | 0 | 23 | `347f7137c96e87af21470088a621cd14fc9b66a5b7389bc273a39a69d48fc173` |
 | `app_bundle.scripts.pipeline.document_builder` | pipeline operacional | 715 | 1 | 26 | `4342a2454736eb84a52335af282120bbd31d58630f6b0b487a3beb2ffcf83c0d` |
@@ -5097,7 +5097,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5167,7 +5167,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5241,7 +5241,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5312,7 +5312,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5383,7 +5383,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5454,7 +5454,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5525,7 +5525,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5604,7 +5604,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5678,7 +5678,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5748,7 +5748,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5821,7 +5821,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5894,7 +5894,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -5967,7 +5967,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6038,7 +6038,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6109,7 +6109,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6183,7 +6183,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6264,7 +6264,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6332,7 +6332,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6400,7 +6400,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6468,7 +6468,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6537,7 +6537,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6615,7 +6615,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6687,7 +6687,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6760,7 +6760,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6831,7 +6831,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6902,7 +6902,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -6974,7 +6974,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7047,7 +7047,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7120,7 +7120,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7191,7 +7191,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7261,7 +7261,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7333,7 +7333,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7404,7 +7404,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7474,7 +7474,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7544,7 +7544,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7614,7 +7614,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7723,7 +7723,7 @@ comprehensions: 3
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7793,7 +7793,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7863,7 +7863,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -7934,7 +7934,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8009,7 +8009,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8079,15 +8079,15 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
-### `academic_pipeline.default_runtime:_refs_v6_strip_org`
+### `academic_pipeline.default_runtime:_refs_strip_org`
 
 **Assinatura:**
 ```python
-def _refs_v6_strip_org(text: str) -> str
+def _refs_strip_org(text: str) -> str
 ```
 
 **Arquivo:** `academic_pipeline/default_runtime.py`
@@ -8098,7 +8098,7 @@ def _refs_v6_strip_org(text: str) -> str
 **Decoradores:** nenhum
 **Base da explicação:** inferência conservadora por nome + AST
 
-**Finalidade:** Implementa a rotina `_refs_v6_strip_org` conforme as regras e chamadas presentes no corpo.
+**Finalidade:** Implementa a rotina `_refs_strip_org` conforme as regras e chamadas presentes no corpo.
 
 **Docstring:** ausente; a descrição acima é conservadora e deriva do nome, assinatura e corpo AST.
 
@@ -8110,7 +8110,7 @@ def _refs_v6_strip_org(text: str) -> str
 
 #### Retorno
 
-Anotação declarada: `str`. Retornos observados estaticamente incluem: `_ap003d_impl__refs_v6_strip_org({**globals(), **locals()}, text)`.
+Anotação declarada: `str`. Retornos observados estaticamente incluem: `_ap003d_impl__refs_strip_org({**globals(), **locals()}, text)`.
 
 #### Efeitos colaterais e fronteiras externas
 
@@ -8118,7 +8118,7 @@ Anotação declarada: `str`. Retornos observados estaticamente incluem: `_ap003d
 
 #### Chamadas realizadas pelo corpo direto
 
-- `_ap003d_impl__refs_v6_strip_org`
+- `_ap003d_impl__refs_strip_org`
 - `globals`
 - `locals`
 
@@ -8149,7 +8149,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8223,7 +8223,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8296,7 +8296,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8366,7 +8366,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8437,7 +8437,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8508,7 +8508,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8579,7 +8579,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8649,7 +8649,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -8722,7 +8722,7 @@ comprehensions: 1
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `18f57dfacc92ca398df8e460d1bcb5f5a965726eb5d64edeafa486faee024e4a`
+**SHA-256 do arquivo-fonte:** `2c7b35980cceb6c0c09263edf3c7ba575b618201376918f39f098fe317f763f7`
 **LOC do arquivo-fonte:** 1334
 
 
@@ -9373,7 +9373,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -9453,7 +9453,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -9525,7 +9525,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -9595,7 +9595,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -9690,7 +9690,7 @@ comprehensions: 2
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -9767,7 +9767,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -9858,7 +9858,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -9965,7 +9965,7 @@ comprehensions: 2
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10039,7 +10039,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10114,7 +10114,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10191,7 +10191,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10260,7 +10260,7 @@ comprehensions: 0
 exception_handlers: 2
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10330,7 +10330,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10379,7 +10379,7 @@ Sem anotação de retorno explícita. Retornos observados estaticamente incluem:
 - `runtime['_refs_clear_document_bibliography']`
 - `runtime['_refs_disabled']`
 - `runtime['_refs_original_render_org_latex']`
-- `runtime['_refs_v6_strip_org']`
+- `runtime['_refs_strip_org']`
 
 #### Chamadores inferidos no escopo auditado
 
@@ -10408,7 +10408,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10499,7 +10499,7 @@ comprehensions: 1
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10571,7 +10571,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10669,7 +10669,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10740,7 +10740,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10816,7 +10816,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10893,7 +10893,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -10976,7 +10976,7 @@ comprehensions: 1
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -11050,7 +11050,7 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -11121,7 +11121,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -11192,7 +11192,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -11263,7 +11263,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -11337,7 +11337,7 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `c28a6201fcbd40339240fc3eac897c6924b9989810d8107038f445dde78e2c06`
+**SHA-256 do arquivo-fonte:** `62a8eeb2caa7a0170c83618112e432eec1512fc0e7bd6502f857b93be7bb8ae2`
 **LOC do arquivo-fonte:** 437
 
 
@@ -53716,8 +53716,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:_rel`
@@ -53789,8 +53789,8 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:_add_create`
@@ -53862,8 +53862,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:_add_delete`
@@ -53935,8 +53935,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:_add_move`
@@ -54009,15 +54009,15 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:build_clean_plan`
 
 **Assinatura:**
 ```python
-def build_clean_plan(app_bundle: Path, *, remove_outputs: bool = False, remove_projects: bool = False, remove_backups: bool = True, remove_legacy_generator: bool = True, remove_legacy_examples: bool = True) -> list[CleanAction]
+def build_clean_plan(app_bundle: Path, *, remove_outputs: bool = False, remove_projects: bool = False, remove_backups: bool = True, remove_legacy_examples: bool = True) -> list[CleanAction]
 ```
 
 **Arquivo:** `app_bundle/scripts/pipeline/clean_bundle.py`
@@ -54040,7 +54040,6 @@ def build_clean_plan(app_bundle: Path, *, remove_outputs: bool = False, remove_p
 | `remove_outputs` | keyword-only | `bool` | `False` | Parâmetro `remove_outputs` recebido pela função; não há descrição individual explícita no código. |
 | `remove_projects` | keyword-only | `bool` | `False` | Parâmetro `remove_projects` recebido pela função; não há descrição individual explícita no código. |
 | `remove_backups` | keyword-only | `bool` | `True` | Parâmetro `remove_backups` recebido pela função; não há descrição individual explícita no código. |
-| `remove_legacy_generator` | keyword-only | `bool` | `True` | Parâmetro `remove_legacy_generator` recebido pela função; não há descrição individual explícita no código. |
 | `remove_legacy_examples` | keyword-only | `bool` | `True` | Parâmetro `remove_legacy_examples` recebido pela função; não há descrição individual explícita no código. |
 
 #### Retorno
@@ -54106,8 +54105,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:_rm_empty_dir`
@@ -54174,8 +54173,8 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:apply_clean_plan`
@@ -54261,8 +54260,8 @@ comprehensions: 0
 exception_handlers: 1
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:apply_clean_plan.resolve_action_path`
@@ -54330,8 +54329,8 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:render_clean_report`
@@ -54400,15 +54399,15 @@ comprehensions: 0
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.clean_bundle:clean_institutional_tree`
 
 **Assinatura:**
 ```python
-def clean_institutional_tree(*, base_dir: Path | None = None, apply: bool = False, remove_outputs: bool = False, remove_projects: bool = False, remove_backups: bool = True, remove_legacy_generator: bool = True, remove_legacy_examples: bool = True, write_report: bool = True) -> dict[str, Any]
+def clean_institutional_tree(*, base_dir: Path | None = None, apply: bool = False, remove_outputs: bool = False, remove_projects: bool = False, remove_backups: bool = True, remove_legacy_examples: bool = True, write_report: bool = True) -> dict[str, Any]
 ```
 
 **Arquivo:** `app_bundle/scripts/pipeline/clean_bundle.py`
@@ -54432,7 +54431,6 @@ def clean_institutional_tree(*, base_dir: Path | None = None, apply: bool = Fals
 | `remove_outputs` | keyword-only | `bool` | `False` | Parâmetro `remove_outputs` recebido pela função; não há descrição individual explícita no código. |
 | `remove_projects` | keyword-only | `bool` | `False` | Parâmetro `remove_projects` recebido pela função; não há descrição individual explícita no código. |
 | `remove_backups` | keyword-only | `bool` | `True` | Parâmetro `remove_backups` recebido pela função; não há descrição individual explícita no código. |
-| `remove_legacy_generator` | keyword-only | `bool` | `True` | Parâmetro `remove_legacy_generator` recebido pela função; não há descrição individual explícita no código. |
 | `remove_legacy_examples` | keyword-only | `bool` | `True` | Parâmetro `remove_legacy_examples` recebido pela função; não há descrição individual explícita no código. |
 | `write_report` | keyword-only | `bool` | `True` | Parâmetro `write_report` recebido pela função; não há descrição individual explícita no código. |
 
@@ -54482,8 +54480,8 @@ comprehensions: 1
 exception_handlers: 0
 ```
 
-**SHA-256 do arquivo-fonte:** `4b97e1bfb27b56d03b3d716821a5df5c2ecac0770f6d41a380f79340ce18d593`
-**LOC do arquivo-fonte:** 288
+**SHA-256 do arquivo-fonte:** `b30cc9df1eb311edf90a16279c9f33fed3beddfeffed79199212d688db87d301`
+**LOC do arquivo-fonte:** 280
 
 
 ### `app_bundle.scripts.pipeline.corpus_manager:safe_extract_zip`

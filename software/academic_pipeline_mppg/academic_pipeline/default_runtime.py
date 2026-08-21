@@ -1256,9 +1256,9 @@ def _refs_clear_document_bibliography(document: Any) -> Any:
     return _impl_refs_clear_document_bibliography({**globals(), **locals()}, document)
 
 
-def _refs_v6_strip_org(text: str) -> str:
-    from academic_pipeline.document_orchestration import _refs_strip_org_impl as _ap003d_impl__refs_v6_strip_org
-    return _ap003d_impl__refs_v6_strip_org({**globals(), **locals()}, text)
+def _refs_strip_org(text: str) -> str:
+    from academic_pipeline.document_orchestration import _refs_strip_org_impl as _ap003d_impl__refs_strip_org
+    return _ap003d_impl__refs_strip_org({**globals(), **locals()}, text)
 
 
 # Garante que PDF/ORG não exibam citações ou referências mesmo se um artefato

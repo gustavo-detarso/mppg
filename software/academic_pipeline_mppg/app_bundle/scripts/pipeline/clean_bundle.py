@@ -73,7 +73,6 @@ def build_clean_plan(
     remove_outputs: bool = False,
     remove_projects: bool = False,
     remove_backups: bool = True,
-    remove_legacy_generator: bool = True,
     remove_legacy_examples: bool = True,
 ) -> list[CleanAction]:
     """Gera plano de limpeza/normalização.
@@ -124,11 +123,6 @@ def build_clean_plan(
     ]:
         if p.exists():
             _add_delete(actions, app, p, "duplicata global; usar institutions/fgv")
-
-    if remove_legacy_generator:
-        p = app / "scripts" / "pipeline" / "academic_pipeline_toml_generator_v0_3_1.py"
-        if p.exists():
-            _add_delete(actions, app, p, "gerador TOML legado substituído pelo gerador interativo")
 
     # Resíduos de execução.
     for pycache in app.rglob("__pycache__"):
@@ -238,7 +232,6 @@ def clean_institutional_tree(
     remove_outputs: bool = False,
     remove_projects: bool = False,
     remove_backups: bool = True,
-    remove_legacy_generator: bool = True,
     remove_legacy_examples: bool = True,
     write_report: bool = True,
 ) -> dict[str, Any]:
@@ -248,7 +241,6 @@ def clean_institutional_tree(
         remove_outputs=remove_outputs,
         remove_projects=remove_projects,
         remove_backups=remove_backups,
-        remove_legacy_generator=remove_legacy_generator,
         remove_legacy_examples=remove_legacy_examples,
     )
     result_actions = apply_clean_plan(app, plan, dry_run=not apply)
