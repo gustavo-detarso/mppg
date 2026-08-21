@@ -685,7 +685,6 @@ def run_prisma_stage_004(args, runtime):
         outputs = {'output_dir': str(out_dir), 'work_dir': str(work_dir), 'cache_dir': str(cache_dir), 'document_json': None, 'org': str(org_path) if org_path else None, 'bib': None, 'pdf': str(pdf_path) if pdf_path else None, 'docx': None, 'relatorio_pesquisa': prisma_outputs, 'prompt_lock': str(prompt_lock_path)}
         report = make_run_report(cfg=cfg, config_path=Path(str(cfg.get('__config_path__'))), out_dir=out_dir, prefix=prefix, model=None, outputs=outputs, warnings=warnings, extra={'mode': 'prisma_busca_externa', 'precheck': precheck})
         write_json(out_dir / f'{prefix}.run_report.json', report)
-        write_json(out_dir / f'{prefix}.rc10_report.json', outputs)
         write_outputs_manifest(out_dir / f'{prefix}.outputs.txt', outputs)
         print_outputs(outputs, title=f'academic_pipeline {PIPELINE_VERSION} — busca PRISMA concluída; aguarda triagem humana')
         return PrismaStageResult(True, 0, {})

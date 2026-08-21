@@ -14,10 +14,10 @@ LEGACY_MODULE = SOURCE_ROOT / "academic_pipeline/legacy.py"
 RUNTIME = SOURCE_ROOT / "academic_pipeline/runtime.py"
 PYPROJECT = SOURCE_ROOT / "pyproject.toml"
 CANONICAL_MAIN = SOURCE_ROOT / "academic_pipeline/__main__.py"
+RETIRED_INSTALL = SOURCE_ROOT / "install_rc10.sh"
 
 AUXILIARIES = (
     SOURCE_ROOT / "atualizar_academic_pipeline_bundle.py",
-    SOURCE_ROOT / "install_rc10.sh",
     SOURCE_ROOT / "setup_pipenv_env.sh",
 )
 PHYSICAL_RC10 = "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
@@ -26,6 +26,7 @@ PHYSICAL_RC10 = "app_bundle/scripts/pipeline/academic_pipeline_rc10.py"
 def test_ap008f5b_physical_rc10_and_legacy_module_are_absent() -> None:
     assert not HISTORICAL_RC10.exists()
     assert not LEGACY_MODULE.exists()
+    assert not RETIRED_INSTALL.exists()
     assert CANONICAL_MAIN.is_file()
 
 
