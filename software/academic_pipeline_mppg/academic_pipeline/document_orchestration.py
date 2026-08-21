@@ -250,7 +250,7 @@ def render_org_latex_impl(runtime, document, org_path, bib_filename, *, cfg, bib
         return runtime['_refs_original_render_org_latex'](document, org_path, bib_filename, cfg=cfg, bib_keys=bib_keys)
     document = runtime['_refs_clear_document_bibliography'](document)
     rendered = runtime['_refs_original_render_org_latex'](document, org_path, bib_filename, cfg=cfg, bib_keys=[])
-    clean = runtime['_refs_v6_strip_org'](rendered)
+    clean = runtime['_refs_strip_org'](rendered)
     runtime['Path'](org_path).write_text(clean, encoding='utf-8')
     return clean
 
