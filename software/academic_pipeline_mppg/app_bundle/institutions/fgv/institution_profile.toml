@@ -135,6 +135,18 @@ default_layout = "atividade_fgv"
 prompt = "app://prompts/document/resumo_artigos.txt"
 description = "Resumo analítico-comparativo de artigos do corpus local."
 
+[document_content_types.fichamento.documento]
+tipo_conteudo = "fichamento"
+genero_academico = "atividade"
+layout = "atividade_fgv"
+papertype = "Fichamento de leitura"
+perfil_redacao = "academico_critico_reflexivo"
+
+[document_content_types.fichamento]
+default_layout = "atividade_fgv"
+prompt = "app://prompts/document/fichamento.txt"
+description = "Fichamento acadêmico estruturado conforme roteiro de orientação, com análise crítica e reflexão pessoal baseada no corpus."
+
 [bibliografia]
 estilo_citacao = "abnt"
 latex_style = "abnt"
