@@ -50,6 +50,55 @@ def _is_resumo_artigos_profile(cfg: dict[str, Any]) -> bool:
     return bool(resumo.get("ativo")) or str(projeto.get("preset") or "").strip() == "resumo_artigos_local_fgv"
 
 
+FICHAMENTO_SECTION_TITLES: tuple[str, ...] = (
+    "REFERÊNCIAS BIBLIOGRÁFICAS",
+    "SÍNTESE DOS TEXTOS",
+    "PRINCIPAIS CONCEITOS E ARGUMENTOS",
+    "ANÁLISE CRÍTICA E REFLEXÕES PESSOAIS",
+    "CONEXÕES E DIÁLOGOS ENTRE OS TEXTOS",
+    "APLICAÇÕES EM POLÍTICAS PÚBLICAS E GOVERNO",
+    "QUESTÕES PARA APROFUNDAMENTO",
+)
+
+
+def _is_fichamento_profile(cfg: dict[str, Any]) -> bool:
+    projeto = cfg.get("projeto", {}) if isinstance(cfg.get("projeto"), dict) else {}
+    documento = cfg.get("documento", {}) if isinstance(cfg.get("documento"), dict) else {}
+    fichamento = cfg.get("fichamento", {}) if isinstance(cfg.get("fichamento"), dict) else {}
+    return bool(fichamento.get("ativo")) or str(projeto.get("preset") or "").strip() == "fichamento_fgv" or str(documento.get("tipo_conteudo") or "").strip() == "fichamento"
+
+
+def _fichamento_minimum(cfg: dict[str, Any]) -> int:
+    selection = cfg.get("selecao_corpus", {}) if isinstance(cfg.get("selecao_corpus"), dict) else {}
+    try:
+        value = int(selection.get("quantidade_minima_textos", 3))
+    except (TypeError, ValueError) as exc:
+        raise RuntimeError("[selecao_corpus].quantidade_minima_textos deve ser inteiro.") from exc
+    if value < 3:
+        raise RuntimeError("O perfil fichamento_fgv exige quantidade_minima_textos >= 3.")
+    return value
+
+
+def _validate_fichamento_corpus_contract(cfg: dict[str, Any], docs: list[SourceDoc]) -> None:
+    if not _is_fichamento_profile(cfg):
+        return
+    minimum = _fichamento_minimum(cfg)
+    usable = [d for d in docs if str(getattr(d, "extracted_text", "") or "").strip() and not str(getattr(d, "kind", "") or "").endswith("_erro")]
+    if len(usable) < minimum:
+        raise RuntimeError(f"O fichamento exige ao menos {minimum} textos substantivos utilizáveis; foram admitidos {len(usable)}.")
+
+
+def _normalize_fichamento_title(value: Any) -> str:
+    return " ".join(str(value or "").strip().casefold().split())
+
+
+def _validate_fichamento_document_contract(document: AcademicDocument) -> None:
+    titles = [_normalize_fichamento_title(getattr(section, "title", "")) for section in document.sections]
+    expected = [_normalize_fichamento_title(title) for title in FICHAMENTO_SECTION_TITLES]
+    if titles != expected:
+        raise RuntimeError("O document.json de fichamento não respeitou as sete seções canônicas em ordem. " + f"Esperado={list(FICHAMENTO_SECTION_TITLES)!r}; observado={[getattr(section, 'title', '') for section in document.sections]!r}")
+
+
 def _safe_int(value: Any, default: int, minimum: int = 0, maximum: int | None = None) -> int:
     try:
         parsed = int(str(value).strip())
@@ -679,6 +728,7 @@ def build_document_model(
     checkpoint_dir: Path | None = None,
     prefix: str = "documento",
 ) -> AcademicDocument:
+    _validate_fichamento_corpus_contract(cfg, docs)
     resumo_cfg = cfg.get("resumo_artigos", {}) if isinstance(cfg.get("resumo_artigos"), dict) else {}
     if _is_resumo_artigos_profile(cfg) and bool(resumo_cfg.get("geracao_em_etapas", True)):
         return _build_resumo_artigos_document_model_staged(
@@ -712,4 +762,6 @@ def build_document_model(
     doc.bibliography.bib_path = bib_path.name
     doc.bibliography.entries_used = sorted(set(doc.bibliography.entries_used or []))
     doc.diagnostics.prompts_json = json.dumps({"document": prompt_bundle.report()}, ensure_ascii=False)
+    if _is_fichamento_profile(cfg):
+        _validate_fichamento_document_contract(doc)
     return doc

@@ -40,6 +40,7 @@ if __package__:
     from app_bundle.scripts.pipeline.document_builder import build_document_model
 else:
     from document_builder import build_document_model
+from academic_pipeline.external_corpus_orchestration import resolve_document_corpus
 # Compatibilidade temporária entre pacote e script direto.
 if __package__:
     from app_bundle.scripts.pipeline.document_model import AcademicDocument
@@ -921,8 +922,14 @@ def _ap003f_pipeline_core() -> int:
         executar_documento = bool(pipeline_cfg.get("executar_documento", True))
         stage("Inicializando cliente OpenAI")
         client, model = make_client(model)
-        stage("Descobrindo e extraindo documentos locais")
-        docs, source_info = discover_local_documents(cfg, work_dir)
+        stage("Resolvendo corpus documental")
+        docs, source_info = resolve_document_corpus(
+            cfg,
+            work_dir,
+            stage=stage,
+            client=client,
+            model=model,
+        )
         clean_cache = bool((cfg.get("documentos_locais", {}) if isinstance(cfg.get("documentos_locais"), dict) else {}).get("limpar_cache_anterior", True))
         stage("Copiando documentos para fulltext_cache")
         copy_documents_to_fulltext_cache(docs, cache_dir, clean=clean_cache)

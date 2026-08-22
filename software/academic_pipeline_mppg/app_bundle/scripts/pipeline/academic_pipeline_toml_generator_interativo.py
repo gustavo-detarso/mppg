@@ -1720,6 +1720,20 @@ PRESETS: list[Preset] = [
         default_toml="resumo_artigos_config.toml",
     ),
     Preset(
+        key="fichamento_fgv",
+        label="Fichamento analítico FGV",
+        description=(
+            "Gera fichamento acadêmico FGV conforme modelo/roteiro de orientação. "
+            "O corpus pode ser local, externo com full text efetivamente baixado e validado, ou híbrido."
+        ),
+        document_type="atividade",
+        local_corpus=False,
+        prisma_report=False,
+        executar_documento=True,
+        executar_pesquisa=False,
+        default_toml="fichamento_config.toml",
+    ),
+    Preset(
         key="paper_local_fgv",
         label="Paper local FGV",
         description="Gera paper acadêmico FGV a partir de PDFs/DOCX/TXT locais, com ORG/PDF/DOCX, conformidade e qualidade.",
@@ -2994,8 +3008,100 @@ def collect_paper_local_research(data: dict[str, Any]) -> None:
     data["idiomas"] = ask_list("Idiomas do corpus", ["português", "inglês", "espanhol"])
 
 
+def _collect_fichamento_research(data: dict[str, Any]) -> None:
+    print("\nContrato do fichamento e origem do corpus")
+    mode = ask_choice("Como deseja fornecer o corpus substantivo do fichamento", ["local", "search", "hybrid"], "local")
+    data["fichamento_corpus_mode"] = mode
+    data["tipo_conteudo"] = "fichamento"
+    data["genero_academico"] = "atividade"
+    data["fichamento_escrita_natural"] = True
+    if mode in {"search", "hybrid"}:
+        data["tema"] = ask_required("Tema da busca bibliográfica", "")
+        data["recorte"] = ask_required("Recorte da busca bibliográfica", "")
+        data["objetivo"] = ask("Objetivo do fichamento", "")
+        data["pergunta_pesquisa"] = ask("Pergunta orientadora", "")
+        data["hipotese"] = ask("Hipótese/tese orientadora (opcional)", "")
+        data["palavras_chave"] = ask_list("Palavras-chave", [])
+        data["gerar_palavras_chave_ia"] = False
+        data["idiomas"] = ask_list("Idiomas", PRISMA_BUSCA_DEFAULT_LANGUAGES)
+        data["tipo_estudo"] = "fichamento analítico"
+        statuses = provider_statuses()
+        print("Credenciais detectadas no .env (sem exibir valores):")
+        for provider in [key for key, _label in provider_selection_choices() if key != "todas"]:
+            item = statuses[provider]
+            print(f"- {item['label']}: {item['status']}")
+        data["bases_busca"] = ask_many_choice("Selecione as fontes de descoberta bibliográfica", provider_selection_choices(), ["crossref", "openalex", "semantic_scholar"])
+        _collect_prisma_strategy_and_criteria(data, primary_path="")
+        data["limite_triagem_inicial"] = ask_positive_int("Máximo de registros enviados para a planilha de triagem", 100, minimum=10, maximum=1000)
+        data["pre_triagem_ia"] = ask_bool("Executar pré-triagem assistida por IA apenas para priorizar a revisão humana?", False)
+        data["pre_triagem_ia_modelo"] = ""
+        data["pre_triagem_ia_lote"] = 20
+        data["pre_triagem_ia_max_registros"] = 1500
+        data["pre_triagem_ia_reserva_incertos"] = 40
+        data["pre_triagem_ia_min_confianca"] = 55
+        data["pre_triagem_ia_max_chars_resumo"] = 700
+        data["ano_inicio"] = ask("Ano inicial de publicação (vazio para não limitar)", "")
+        data["ano_fim"] = ask("Ano final de publicação (vazio para não limitar)", "")
+        data["email_contato_busca"] = ask("E-mail de contato alternativo para APIs (vazio para usar .env)", "")
+        data["enriquecer_unpaywall"] = False
+        data["limite_unpaywall"] = 0
+        data["busca_externa_ativa"] = True
+    else:
+        data["tema"] = ask("Tema/foco do fichamento (opcional; pode ser inferido do roteiro e corpus)", "")
+        data["recorte"] = ask("Recorte/foco do fichamento (opcional)", "")
+        data["objetivo"] = ask("Objetivo do fichamento (opcional)", "")
+        data["pergunta_pesquisa"] = ask("Pergunta orientadora (opcional)", "")
+        data["hipotese"] = ""
+        data["palavras_chave"] = []
+        data["gerar_palavras_chave_ia"] = True
+        data["idiomas"] = ask_list("Idiomas do corpus", ["português"])
+        data["tipo_estudo"] = "fichamento analítico"
+        data["bases_busca"] = []
+        data["busca_externa_ativa"] = False
+    minimum = ask_positive_int("Quantidade mínima de textos do corpus final", 3, minimum=3, maximum=500)
+    target = ask_positive_int("Quantidade alvo de textos do corpus final", minimum, minimum=minimum, maximum=500)
+    maximum = ask_positive_int("Quantidade máxima de textos do corpus final", target, minimum=target, maximum=500)
+    data["quantidade_minima_textos"] = minimum
+    data["quantidade_alvo_textos"] = target
+    data["quantidade_maxima_textos"] = maximum
+    data["exigir_fulltext"] = True
+    data["exigir_download_local"] = True
+    data["validar_arquivo_baixado"] = True
+    data["permitir_abstract_only"] = False
+    data["deduplicar_corpus"] = True
+    data["revisao_humana"] = ask_bool("Exigir revisão humana da seleção bibliográfica antes do download final?", True) if mode in {"search", "hybrid"} else False
+    data["meta_estudos_incluidos"] = maximum
+
+
+def _collect_fichamento_sources(data: dict[str, Any]) -> None:
+    config_dir: Path = data["config_dir"]
+    mode = str(data.get("fichamento_corpus_mode") or "local")
+    data["documentos_input_zip"] = ""
+    data["documentos_input_dir"] = ""
+    if mode in {"local", "hybrid"}:
+        input_mode = ask_choice("Formato do corpus local", ["zip", "dir"], "zip")
+        if input_mode == "zip":
+            data["documentos_input_zip"] = rel_for_toml(ask_required("Caminho do documentos-base.zip", ""), config_dir)
+        else:
+            data["documentos_input_dir"] = rel_for_toml(ask_required("Caminho da pasta de documentos", ""), config_dir)
+    print("\nModelo/roteiro do fichamento")
+    model_path = ask_required("Arquivo/pasta/ZIP com o modelo, roteiro ou orientações do fichamento", "")
+    orient_paths = [rel_for_toml(model_path, config_dir)]
+    data["orientacao_geral_modo"] = "arquivo"
+    data["orientacao_geral_inline"] = ""
+    if ask_bool("Adicionar orientações complementares além do modelo?", False):
+        orient_paths.append(rel_for_toml(ask_required("Arquivo/pasta/ZIP com orientações complementares", ""), config_dir))
+    data["orientacoes_paths"] = list(dict.fromkeys(p for p in orient_paths if p))
+    data["doi_manifest_path"] = ""
+    data["prompt_extra_paths"] = []
+
+
 def collect_research(data: dict[str, Any]) -> None:
     preset: Preset = data["preset"]
+
+    if preset.key == "fichamento_fgv":
+        _collect_fichamento_research(data)
+        return
 
     if preset.key == "relatorio_prisma_busca_orientada_fgv":
         collect_prisma_busca_orientada(data)
@@ -3145,6 +3251,9 @@ def collect_sources(data: dict[str, Any]) -> None:
     preset: Preset = data["preset"]
     project_dir: Path = data["project_dir"]
     config_dir: Path = data["config_dir"]
+    if preset.key == "fichamento_fgv":
+        _collect_fichamento_sources(data)
+        return
     if preset.key == "relatorio_prisma_busca_orientada_fgv":
         # O fluxo especializado não pede corpus local, DOI manifest ou
         # orientações de documento antes da busca. PDFs selecionados podem ser
@@ -3643,7 +3752,7 @@ def render_toml(data: dict[str, Any]) -> str:
     preset: Preset = data["preset"]
     project_slug = data["project_slug"]
     tipo = preset.document_type if preset.document_type != "relatorio_prisma" else "paper"
-    logical_tipo = "resumo_artigos" if preset.key == "resumo_artigos_local_fgv" else tipo
+    logical_tipo = ("resumo_artigos" if preset.key == "resumo_artigos_local_fgv" else "fichamento" if preset.key == "fichamento_fgv" else tipo)
     doc_prefix = project_slug
     rel_prefix = f"relatorio_prisma_{project_slug}" if preset.prisma_report else ""
     prompt_groups = prompt_paths_for_type(data)
@@ -3686,7 +3795,14 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append("")
 
     lines.append("[pipeline]")
-    pipeline_mode = "somente_renderizar" if preset.render_only else ("busca_externa" if preset.key == "relatorio_prisma_busca_orientada_fgv" else "documentos_locais")
+    if preset.render_only:
+        pipeline_mode = "somente_renderizar"
+    elif preset.key == "relatorio_prisma_busca_orientada_fgv":
+        pipeline_mode = "busca_externa"
+    elif preset.key == "fichamento_fgv":
+        pipeline_mode = {"local": "documentos_locais", "search": "corpus_externo", "hybrid": "corpus_hibrido"}.get(str(data.get("fichamento_corpus_mode") or "local"), "documentos_locais")
+    else:
+        pipeline_mode = "documentos_locais"
     lines.append(f"modo_entrada = {tstr(pipeline_mode)}")
     lines.append(f"executar_pesquisa = {tbool(executar_pesquisa)}")
     lines.append(f"executar_documento = {tbool(executar_documento)}")
@@ -3717,7 +3833,10 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append("")
 
     lines.append("[documentos_locais]")
-    lines.append(f"ativos = {tbool(preset.local_corpus and not preset.render_only)}")
+    local_docs_active = preset.local_corpus and not preset.render_only
+    if preset.key == "fichamento_fgv":
+        local_docs_active = str(data.get("fichamento_corpus_mode") or "local") in {"local", "hybrid"}
+    lines.append(f"ativos = {tbool(local_docs_active)}")
     lines.append("modo_entrada = \"documentos_locais\"")
     lines.append(f"input_zip = {tstr(data.get('documentos_input_zip', ''))}")
     lines.append(f"input_dir = {tstr(data.get('documentos_input_dir', ''))}")
@@ -3750,7 +3869,8 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append(f"hipotese = {tstr(data.get('hipotese', ''))}")
     lines.append(f"palavras_chave = {tlist(data.get('palavras_chave', []))}")
     lines.append(f"gerar_palavras_chave_ia = {tbool(bool(data.get('gerar_palavras_chave_ia', False)))}")
-    default_idiomas = PRISMA_BUSCA_DEFAULT_LANGUAGES if preset.key == "relatorio_prisma_busca_orientada_fgv" else ["português"]
+    external_fichamento = preset.key == "fichamento_fgv" and str(data.get("fichamento_corpus_mode") or "local") in {"search", "hybrid"}
+    default_idiomas = PRISMA_BUSCA_DEFAULT_LANGUAGES if preset.key == "relatorio_prisma_busca_orientada_fgv" or external_fichamento else ["português"]
     lines.append(f"idiomas = {tlist(data.get('idiomas', default_idiomas))}")
     lines.append(f"tipo_estudo = {tstr(data.get('tipo_estudo', document_type_name(logical_tipo)))}")
     if preset.key == "relatorio_prisma_busca_orientada_fgv":
@@ -3769,7 +3889,7 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append(f"bases = {tlist([str(item) for item in bases_default])}")
     lines.append("")
 
-    if preset.key == "relatorio_prisma_busca_orientada_fgv":
+    if preset.key == "relatorio_prisma_busca_orientada_fgv" or external_fichamento:
         lines.append("[busca_prisma]")
         lines.append("ativo = true")
         lines.append("modo = \"busca_externa\"")
@@ -3868,6 +3988,25 @@ def render_toml(data: dict[str, Any]) -> str:
         lines.append('eixos_analise = ["problema/questão central", "objetivo e escopo", "argumento/tese principal", "conceitos/categorias", "método/evidências", "achados/contribuições", "limites/tensões", "diálogo com o corpus"]')
     lines.append("")
 
+    if preset.key == "fichamento_fgv":
+        lines.append("[fichamento]")
+        lines.append("ativo = true")
+        lines.append("escrita_natural = true")
+        lines.append("estrutura = \"sete_secoes_modelo_atr\"")
+        lines.append("")
+        lines.append("[selecao_corpus]")
+        lines.append(f"quantidade_minima_textos = {int(data.get('quantidade_minima_textos', 3))}")
+        lines.append(f"quantidade_alvo_textos = {int(data.get('quantidade_alvo_textos', 3))}")
+        lines.append(f"quantidade_maxima_textos = {int(data.get('quantidade_maxima_textos', 3))}")
+        lines.append(f"exigir_fulltext = {tbool(bool(data.get('exigir_fulltext', True)))}")
+        lines.append(f"exigir_download_local = {tbool(bool(data.get('exigir_download_local', True)))}")
+        lines.append(f"validar_arquivo_baixado = {tbool(bool(data.get('validar_arquivo_baixado', True)))}")
+        lines.append(f"permitir_abstract_only = {tbool(bool(data.get('permitir_abstract_only', False)))}")
+        lines.append(f"deduplicar = {tbool(bool(data.get('deduplicar_corpus', True)))}")
+        lines.append(f"revisao_humana = {tbool(bool(data.get('revisao_humana', True)))}")
+        lines.append("min_caracteres_texto_substantivo = 800")
+        lines.append("")
+
     lines.append("[atividade]")
     lines.append(f"curso = {tstr(data.get('curso', ''))}")
     lines.append(f"turma = {tstr(data.get('turma', ''))}")
@@ -3899,8 +4038,15 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append(f"city_name = {tstr(data.get('polo', 'Brasília'))}")
     lines.append(f"ano = {tstr(data.get('data', ''))}")
     lines.append(f"data = {tstr(data.get('data', ''))}")
-    papertype = "Resumo analítico de artigos" if preset.key == "resumo_artigos_local_fgv" else document_type_name(tipo)
-    perfil_redacao = "academico_analitico_comparativo" if preset.key == "resumo_artigos_local_fgv" else "academico_analitico"
+    if preset.key == "resumo_artigos_local_fgv":
+        papertype = "Resumo analítico de artigos"
+        perfil_redacao = "academico_analitico_comparativo"
+    elif preset.key == "fichamento_fgv":
+        papertype = "Fichamento de leitura"
+        perfil_redacao = "academico_critico_reflexivo"
+    else:
+        papertype = document_type_name(tipo)
+        perfil_redacao = "academico_analitico"
     lines.append(f"papertype = {tstr(papertype)}")
     lines.append(f"perfil_redacao = {tstr(perfil_redacao)}")
     lines.append("covernote = \"Trabalho acadêmico elaborado para a disciplina.\"")
@@ -4009,7 +4155,8 @@ def render_toml(data: dict[str, Any]) -> str:
     lines.append(f"research_paths = {tlist([bundle_rel(data, 'prompts/research/triagem_prompt.txt'), bundle_rel(data, 'prompts/research/diretivas_extras.txt')])}")
     for key in ("paper_paths", "atividade_paths", "resumo_artigos_paths", "dissertacao_paths", "prisma_paths"):
         lines.append(f"{key} = {tlist(prompt_groups[key])}")
-    lines.append("document_paths = []")
+    document_prompt_paths = [bundle_rel(data, "prompts/document/fichamento.txt")] if preset.key == "fichamento_fgv" else []
+    lines.append(f"document_paths = {tlist(document_prompt_paths)}")
     lines.append("")
 
     lines.append("[mapa_mental]")
@@ -4086,9 +4233,15 @@ def generate_interactive(non_interactive_profile: str | None = None, project_nam
         new_data = collect_common(preset)
         data.clear()
         data.update(new_data)
+        if preset.key == "fichamento_fgv":
+            data["tipo_conteudo"] = "fichamento"
+            data["genero_academico"] = "atividade"
+            data["layout"] = str(data.get("layout") or "atividade_fgv")
 
     if preset.key == "atividade_local_fgv":
         research_stage_title = "Dados da atividade"
+    elif preset.key == "fichamento_fgv":
+        research_stage_title = "Contrato do fichamento e corpus"
     elif preset.key == "relatorio_prisma_busca_orientada_fgv":
         research_stage_title = "Dados e protocolo da busca PRISMA"
     else:

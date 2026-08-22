@@ -116943,3 +116943,62 @@ semântica documental:
 
 Essa correção não altera o código do Academic Pipeline. Ela torna a documentação tecnicamente
 mais precisa e auditável.
+
+## Fichamento acadêmico
+
+### Finalidade e roteamento
+
+O Academic Pipeline oferece um fluxo especializado para fichamentos acadêmicos, com integração ao perfil institucional da FGV. A especialização é selecionada pelo preset `fichamento_fgv`, que materializa `document_type = "atividade"` e `content_type = "fichamento"` e utiliza o prompt canônico `app://prompts/document/fichamento.txt`.
+
+O fichamento é uma especialização de conteúdo da atividade acadêmica; não constitui um novo tipo estrutural independente de documento. O `document.json` permanece como autoridade semântica canônica entre a geração de conteúdo e as etapas de renderização para DOCX/PDF.
+
+### Modelo de atividade e contrato de conteúdo
+
+O modelo/orientação da atividade é tratado como autoridade de instrução para a geração do conteúdo, e não como `reference_docx` de renderização. O fluxo de fichamento exige a seguinte ordem semântica final:
+
+1. `REFERÊNCIAS BIBLIOGRÁFICAS`;
+2. `SÍNTESE DOS TEXTOS`;
+3. `PRINCIPAIS CONCEITOS E ARGUMENTOS`;
+4. `ANÁLISE CRÍTICA E REFLEXÕES PESSOAIS`;
+5. `CONEXÕES E DIÁLOGOS ENTRE OS TEXTOS`;
+6. `APLICAÇÕES EM POLÍTICAS PÚBLICAS E GOVERNO`;
+7. `QUESTÕES PARA APROFUNDAMENTO`.
+
+A etapa de construção do documento valida o perfil de fichamento, a presença mínima do corpus e a ordem das sete seções antes de considerar o conteúdo apto à renderização.
+
+### Seleção e aquisição do corpus
+
+O configurador suporta três modos canônicos de entrada para fichamento:
+
+- `documentos_locais`: utiliza documentos locais já fornecidos;
+- `corpus_externo`: pesquisa, seleciona e baixa corpus externo;
+- `corpus_hibrido`: combina documentos locais com corpus externo.
+
+O valor `busca_externa` permanece reservado à semântica terminal de busca/relatório PRISMA e não deve ser reutilizado como modo de aquisição do corpus do fichamento.
+
+A configuração de fichamento utiliza as seções `[selecao_corpus]` e `[fichamento]`. Os limites mínimo, alvo e máximo do corpus devem ser inteiros positivos e coerentes entre si. O mínimo operacional do fichamento é de três textos válidos.
+
+Somente documentos locais de texto integral efetivamente disponíveis e validados contam para o mínimo do corpus. Registros apenas descobertos, DOI/URL, metadados, resumos sem texto integral, downloads falhos ou documentos inválidos não satisfazem esse gate. A deduplicação permanece baseada no conteúdo e deve ser preservada.
+
+### Orquestração de corpus externo
+
+A aquisição de corpus externo é centralizada em `academic_pipeline/external_corpus_orchestration.py`, separada do gerenciador de corpus e do construtor de documentos. A orquestração reutiliza os componentes de busca, curadoria e aquisição existentes, incluindo as primitivas:
+
+- `run_external_prisma_search()`;
+- `load_candidates()`;
+- `try_download_candidate()`;
+- `discover_local_documents()`.
+
+O runtime padrão resolve o corpus por essa camada antes da construção do documento. A lógica de rede e de download não deve ser deslocada para `corpus_manager` nem para `document_builder`.
+
+Quando houver seleção/curadoria externa sujeita a revisão humana, a geração permanece bloqueada enquanto o gate de revisão não estiver satisfeito.
+
+### Configuração e execução
+
+O preset `fichamento_fgv` gera por padrão `fichamento_config.toml`. Para os modos `corpus_externo` e `corpus_hibrido`, o configurador exige tema e recorte de busca e registra os parâmetros de seleção do corpus. O prompt especializado é resolvido pelo perfil institucional FGV.
+
+A geração de conteúdo deve produzir redação acadêmica coerente, fiel às fontes e compatível com as orientações da atividade. Controles de voz, criticidade e reflexão pessoal pertencem à etapa de geração do conteúdo canônico; não devem ser introduzidos posteriormente por manipulação do DOCX/PDF.
+
+### Preservação de contratos
+
+A funcionalidade de fichamento não restaura entrypoints, módulos ou árvores predecessoras aposentadas. Contratos históricos permanecem como proveniência e não devem ser recriados para compatibilidade. O fluxo atual deve continuar usando nomes canônicos e as autoridades operacionais vigentes.
