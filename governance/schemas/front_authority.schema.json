@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.mppg/schemas/front_authority.schema.json",
+  "title": "MPPG Front Authority Ledger",
+  "type": "object",
+  "required": [
+    "front",
+    "front_class",
+    "front_baseline_head",
+    "passed_gates",
+    "user_acceptance_status"
+  ],
+  "properties": {
+    "front": {
+      "type": "string",
+      "minLength": 1
+    },
+    "front_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "front_baseline_head": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "current_operational_head": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "closure_applicability_matrix": {
+      "type": "object"
+    },
+    "artifact_role_map": {
+      "type": "object"
+    },
+    "test_universe_contract": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "technical_contract": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "product_acceptance_contract": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "user_acceptance_contract": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "scope": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "prehashes": {
+      "type": "object"
+    },
+    "posthashes": {
+      "type": "object"
+    },
+    "patch_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tree": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "commit_contract": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "publication_contract": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "passed_gates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "user_acceptance_status": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "PENDING",
+        "CHANGES_REQUESTED",
+        "APPROVED"
+      ]
+    },
+    "golden_artifact_or_specification": {
+      "type": [
+        "object",
+        "string",
+        "null"
+      ]
+    },
+    "prior_evidence_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "software_state_progress": {
+      "type": [
+        "string",
+        "number",
+        "null"
+      ]
+    },
+    "proof_closure_progress": {
+      "type": [
+        "string",
+        "number",
+        "null"
+      ]
+    },
+    "product_acceptance_progress": {
+      "type": [
+        "string",
+        "number",
+        "null"
+      ]
+    },
+    "front_closed": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

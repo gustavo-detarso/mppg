@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.mppg/schemas/ai_adjudication.schema.json",
+  "title": "MPPG AI Semantic Adjudication",
+  "type": "object",
+  "required": [
+    "finding_id",
+    "blocker_domain",
+    "classification",
+    "evidence_summary",
+    "mutation_required",
+    "next_gate"
+  ],
+  "properties": {
+    "finding_id": {
+      "type": "string"
+    },
+    "blocker_domain": {
+      "enum": [
+        "software",
+        "repository_state",
+        "environment",
+        "authorization",
+        "test",
+        "product_acceptance",
+        "user_acceptance",
+        "external_dependency",
+        "auditor_harness",
+        "evidence_packaging",
+        "authority_model",
+        "scanner_model",
+        "unknown"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "current_front_regression",
+        "preexisting_or_debt",
+        "separate_front_candidate",
+        "auditor_or_harness_defect",
+        "new_requirement",
+        "unknown"
+      ]
+    },
+    "evidence_summary": {
+      "type": "string"
+    },
+    "live_semantic_edge_proven": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "mutation_required": {
+      "type": "boolean"
+    },
+    "recommended_readonly_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposed_mutation_contract": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "next_gate": {
+      "type": "string"
+    },
+    "stop_for_user_authorization": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

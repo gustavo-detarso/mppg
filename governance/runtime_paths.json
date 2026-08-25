@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "normative_root": "/home/gustavodetarso/Documentos/mppg/governance",
+  "prompt_master": "/home/gustavodetarso/Documentos/mppg/governance/MPPG_PROMPT_MASTER_CANONICO.md",
+  "state_root": "~/.local/state/mppg-orchestrator",
+  "state_current": "~/.local/state/mppg-orchestrator/current",
+  "state_evidence": "~/.local/state/mppg-orchestrator/evidence",
+  "state_logs": "~/.local/state/mppg-orchestrator/logs",
+  "runtime_share": "~/.local/share/mppg-orchestrator",
+  "api_key_source": "environment:OPENAI_API_KEY",
+  "api_key_persistence_allowed": false
+}
