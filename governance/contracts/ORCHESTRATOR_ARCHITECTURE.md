@@ -101,3 +101,25 @@ Any blocker returns to read-only adjudication. A mutation-required remedy stops 
 ## Harness failure rule
 
 After two consecutive failures attributable exclusively to the auditor/harness, rebuild the harness from the last substantive PASS authorities instead of incremental patching.
+
+## Acceptance-policy guard — mandatory
+
+Before the first mutation, the deterministic controller must:
+
+1. validate `FRONT_CLASS` against the Prompt Master enum;
+2. inspect `ARTIFACT_ROLE_MAP`;
+3. derive `PRODUCT_ARTIFACT_REQUIRED`;
+4. derive `USER_ACCEPTANCE_REQUIRED` fail-closed;
+5. freeze the rationale and authority;
+6. create `PRODUCT_ACCEPTANCE_CONTRACT` and `USER_ACCEPTANCE_CONTRACT` when applicable.
+
+The controller must not rely on an LLM to decide final gate state. AI may propose
+classification, but deterministic policy validation adjudicates whether the
+result is structurally admissible.
+
+When `USER_ACCEPTANCE_REQUIRED=true`, the controller must place the user
+acceptance gate before staging unless a frozen contract explicitly marks
+`USER_ACCEPTANCE_DEFERRED_TO_PUBLISHED_RUNTIME=true`.
+
+`FRONT_CLOSED=true` is always computed from gate state. It must never be a
+hardcoded success line in an auditor or shell script.

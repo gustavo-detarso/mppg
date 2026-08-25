@@ -39,3 +39,12 @@ No governance artifact may contain the API token.
 ## Git governance
 
 Materializing this directory does not authorize staging, commit or publication. Those remain separate gates.
+
+## Acceptance guard
+
+`validators/acceptance_guard.py` is a deterministic policy guard for the future
+orchestrator. It validates `FRONT_CLASS`, derives product/user acceptance
+requirements fail-closed, blocks staging while required user acceptance is
+pending, and computes closure from gate state rather than hardcoded success.
+
+See `contracts/USER_ACCEPTANCE_DERIVATION.md`.
