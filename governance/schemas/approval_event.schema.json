@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.mppg/schemas/approval_event.schema.json",
+  "title": "MPPG Approval Event",
+  "type": "object",
+  "required": [
+    "front",
+    "gate",
+    "token",
+    "status",
+    "timestamp"
+  ],
+  "properties": {
+    "front": {
+      "type": "string"
+    },
+    "gate": {
+      "enum": [
+        "materialization",
+        "user_acceptance",
+        "staging",
+        "commit",
+        "publication",
+        "environment_mutation",
+        "persistent_data_mutation",
+        "other_explicit_mutation"
+      ]
+    },
+    "token": {
+      "type": "string",
+      "minLength": 16
+    },
+    "status": {
+      "enum": [
+        "AUTHORIZED",
+        "REJECTED",
+        "EXPIRED",
+        "SUPERSEDED"
+      ]
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "scope": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "authority_text_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

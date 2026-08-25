@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "policy_id": "software-mppg-governance",
+  "normative": false,
+  "derived_from": {
+    "path": "governance/MPPG_PROMPT_MASTER_CANONICO.md",
+    "sha256": "3f3997c771c0b579089598787b9cedd85ba6749a1dab1c3724e212f50052896d",
+    "rule": "The Prompt Master is authoritative. This JSON is only a machine-readable derivative and must never override it."
+  },
+  "repository": {
+    "root": "/home/gustavodetarso/Documentos/mppg",
+    "branch": "master",
+    "upstream": "origin/master",
+    "canonical_software_prefix": "software/academic_pipeline_mppg/",
+    "historical_structural_baseline": "4af458e969c672964f1d3043f95a41386f25c825",
+    "operational_head_rule": "resolve_readonly_each_front_never_hardcode"
+  },
+  "authority_order": [
+    "MPPG_PROMPT_MASTER_CANONICO.md",
+    "FRONT_AUTHORITY_LEDGER and frozen front contracts",
+    "front-specific prompt compatible with master",
+    "structured technical evidence",
+    "live repository state from read-only audit",
+    "live tests/entrypoints/config/imports/consumers/producers",
+    "explicit user approval for subjective product criteria when applicable",
+    "Git history",
+    "historical documentation"
+  ],
+  "automatic_readonly": [
+    "inventory",
+    "audit",
+    "evidence_reading",
+    "semantic_adjudication",
+    "reference_search",
+    "AST_analysis",
+    "lexical_analysis",
+    "reachability_analysis",
+    "blob_and_hash_comparison",
+    "solution_design",
+    "contract_freeze",
+    "read_only_script_preparation_and_validation",
+    "post_materialization_audit",
+    "post_commit_audit",
+    "post_publication_audit",
+    "global_closure_audit",
+    "safe_representative_preview_generation",
+    "objective_product_analysis",
+    "human_acceptance_preparation"
+  ],
+  "explicit_authorization_required": [
+    "real_file_mutation",
+    "tracked_file_creation",
+    "removal_or_retirement",
+    "rename_or_move",
+    ".env_mutation",
+    "persistent_database_mutation",
+    "git_add",
+    "commit",
+    "amend",
+    "push",
+    "tag",
+    "merge",
+    "rebase",
+    "cherry_pick",
+    "branch_or_worktree_mutation",
+    "reset",
+    "restore",
+    "clean",
+    "ref_mutation",
+    "publication"
+  ],
+  "git": {
+    "exact_staging_required": true,
+    "git_add_dot_prohibited_for_governed_flows": true,
+    "force_push_prohibited": true,
+    "force_with_lease_prohibited": true,
+    "publication_rule": "single_ref_fast_forward_non_force",
+    "stage_commit_publication_authorizations_are_separate": true,
+    "cached_diff_check_required": true,
+    "temporary_candidate_index_preferred_when_appropriate": true,
+    "byte_exact_index_rollback_on_post_staging_failure": true
+  },
+  "protected_state": {
+    "root_env": "byte_exact_preservation_unless_explicitly_authorized",
+    "canonical_software_untracked": "blocker",
+    "external_untracked": "preserve_and_compare_intra_run_with_byte_safe_fingerprint"
+  },
+  "front_required_contracts": [
+    "FRONT_CLASS",
+    "CLOSURE_APPLICABILITY_MATRIX",
+    "ARTIFACT_ROLE_MAP"
+  ],
+  "conditional_contracts": [
+    "TEST_UNIVERSE_CONTRACT",
+    "PRODUCT_ACCEPTANCE_CONTRACT",
+    "USER_ACCEPTANCE_CONTRACT"
+  ],
+  "blocker_domains": [
+    "software",
+    "repository_state",
+    "environment",
+    "authorization",
+    "test",
+    "product_acceptance",
+    "user_acceptance",
+    "external_dependency",
+    "auditor_harness",
+    "evidence_packaging",
+    "authority_model",
+    "scanner_model",
+    "unknown"
+  ],
+  "harness": {
+    "complex_auditors_self_contained": true,
+    "authority_manifest_required": true,
+    "self_test_required": true,
+    "syntax_or_ast_validation_required": true,
+    "sha256_required": true,
+    "copyable_command_required": true,
+    "closure_audits_non_fail_fast": true,
+    "rebuild_after_two_consecutive_harness_only_failures": true
+  },
+  "product_acceptance": {
+    "user_acceptance_required_for_user_perceptible_changes_by_default": true,
+    "sequence": [
+      "TECHNICAL_VALIDATION",
+      "MACHINE_PRODUCT_ACCEPTANCE",
+      "USER_ACCEPTANCE",
+      "FRONT_CLOSURE"
+    ],
+    "ai_must_not_self_approve_user_acceptance": true,
+    "product_acceptance_is_not_git_authorization": true
+  },
+  "progress": [
+    "SOFTWARE_STATE_PROGRESS",
+    "PROOF_CLOSURE_PROGRESS",
+    "PRODUCT_ACCEPTANCE_PROGRESS",
+    "USER_ACCEPTANCE_STATUS"
+  ],
+  "orchestrator": {
+    "design": "deterministic_controller_with_ai_semantic_adjudication",
+    "ai_role": [
+      "semantic_adjudication",
+      "root_cause_analysis",
+      "read_only_investigation",
+      "repair_design",
+      "structured_recommendations"
+    ],
+    "ai_direct_unrestricted_shell": false,
+    "ai_direct_git_mutation": false,
+    "api_key_source": "OPENAI_API_KEY environment variable only",
+    "api_key_must_never_be_logged_or_versioned": true,
+    "state_root": "~/.local/state/mppg-orchestrator",
+    "runtime_root": "~/.local/share/mppg-orchestrator"
+  }
+}

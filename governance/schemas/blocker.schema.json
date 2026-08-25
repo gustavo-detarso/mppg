@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.mppg/schemas/blocker.schema.json",
+  "title": "MPPG Blocker",
+  "type": "object",
+  "required": [
+    "id",
+    "domain",
+    "classification",
+    "mutation_required",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "software",
+        "repository_state",
+        "environment",
+        "authorization",
+        "test",
+        "product_acceptance",
+        "user_acceptance",
+        "external_dependency",
+        "auditor_harness",
+        "evidence_packaging",
+        "authority_model",
+        "scanner_model",
+        "unknown"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "current_front_regression",
+        "preexisting_or_debt",
+        "separate_front_candidate",
+        "auditor_or_harness_defect",
+        "new_requirement",
+        "unknown"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mutation_required": {
+      "type": "boolean"
+    },
+    "proposed_action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authorization_gate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OPEN",
+        "RESOLVED",
+        "DEFERRED",
+        "SEPARATE_FRONT"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
