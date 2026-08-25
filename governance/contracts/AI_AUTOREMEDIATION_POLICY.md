@@ -46,3 +46,13 @@ OpenAI:
 - no unrestricted shell tool
 - no direct Git mutation by AI
 - API key never printed, persisted or included in request body
+
+## Executable closed-loop policy
+
+The controller independently executes and validates allowlisted read-only/ephemeral actions. Model assertions cannot suppress a physically live repository-state blocker, waive a failed diff-check, authorize canonical mutation, approve USER_ACCEPTANCE, expand mutation scope, or reuse a consumed gate.
+
+A model-proposed shadow patch is non-authoritative until the controller validates exact scope, protected-path denial, patch application in a temporary clone, configured validation probes, and byte hashes. Canonical application requires an explicit MATERIALIZATION token.
+
+## Crash-resilient recovery
+
+Core read-only exceptions are promoted to blockers. Core process failures are supervised by the separate recovery kernel. AI recovery patches remain shadow-only until a fresh explicit materialization authorization. The kernel has no staging, commit or publication authority.

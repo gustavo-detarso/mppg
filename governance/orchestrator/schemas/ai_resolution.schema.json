@@ -68,6 +68,43 @@
         ]
       }
     },
+    "probe_requests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "git_status",
+          "governance_verify",
+          "software_status",
+          "git_diff_name_status",
+          "git_cached_name_status",
+          "runtime_source_equivalence",
+          "ignored_python_cache_inventory",
+          "external_untracked_fingerprint",
+          "current_scope_diff_check",
+          "python_compile_temp_copy",
+          "canonical_tree_clean",
+          "protected_state_summary",
+          "closed_loop_canary"
+        ]
+      }
+    },
+    "shadow_patch": {
+      "type": "string"
+    },
+    "shadow_validation_probes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "git_diff_check",
+          "python_compile_changed",
+          "governance_manifest",
+          "static_tests",
+          "orchestrator_self_test"
+        ]
+      }
+    },
     "mutation_required": {
       "type": "boolean"
     },
@@ -76,6 +113,9 @@
       "items": {
         "type": "string"
       }
+    },
+    "proposed_commit_subject": {
+      "type": "string"
     },
     "next_gate": {
       "type": "string",
@@ -101,8 +141,12 @@
     "summary",
     "semantic_evidence",
     "automatic_actions",
+    "probe_requests",
+    "shadow_patch",
+    "shadow_validation_probes",
     "mutation_required",
     "mutation_scope",
+    "proposed_commit_subject",
     "next_gate"
   ],
   "additionalProperties": false

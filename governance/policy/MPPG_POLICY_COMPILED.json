@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 5,
   "policy_id": "software-mppg-governance",
   "normative": false,
   "derived_from": {
@@ -178,7 +178,7 @@
     "USER_ACCEPTANCE_STATUS"
   ],
   "orchestrator": {
-    "design": "deterministic_controller_with_ai_semantic_adjudication",
+    "design": "deterministic_controller_with_resilient_ai_closed_loop_and_external_recovery_kernel",
     "ai_role": [
       "semantic_adjudication",
       "root_cause_analysis",
@@ -227,14 +227,39 @@
       ],
       "canonical_mutation_requires_authorization": true,
       "user_acceptance_never_auto_pass": true,
-      "harness_consecutive_defect_limit": 2
+      "harness_consecutive_defect_limit": 2,
+      "automatic_actions_are_executable": true,
+      "ephemeral_auditor_format": "declarative_probe_plan_only",
+      "shadow_patch_execution": "temporary_clone_only",
+      "max_autoremediation_cycles": 12,
+      "max_no_progress_cycles": 2
     },
     "harness_safety": {
       "host_interactive_shell_option_mutation": "PROHIBITED",
       "shell_strict_mode": "SUBPROCESS_OR_SUBSHELL_ONLY",
       "source_user_profile_in_parent_shell": "PROHIBITED",
       "profile_validation": "CHILD_SHELL_ONLY"
-    }
+    },
+    "normal_operator_workflow": "single_terminal_session_with_inline_authorization_gates",
+    "manual_external_chat_log_shuttling": "not_part_of_normal_runtime_contract",
+    "recovery_kernel": {
+      "enabled": true,
+      "separate_process": true,
+      "ai_unrestricted_shell": false,
+      "shadow_clone_required": true,
+      "canonical_materialization_requires_authorization": true,
+      "may_stage": false,
+      "may_commit": false,
+      "may_publish": false
+    },
+    "machine_product_acceptance": "real_multi_round_openai_closed_loop_canary",
+    "interactive_gate_input": "prefer_/dev/tty_then_stdin",
+    "machine_failure_rollback": "required_before_ai_reentry",
+    "real_index_readonly_policy": "shadow_index_only_until_explicit_staging",
+    "physical_index_stat_cache_is_not_staging": true,
+    "candidate_patch_authority": "host_derived_from_portable_blob_and_git_mode_contract",
+    "zip_extraction_mode_is_authority": false,
+    "target_git_mode_validation": true
   },
   "front_class_contract": {
     "allowed_values": [
