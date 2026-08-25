@@ -31,3 +31,26 @@ assert "exec python3 -S -u" in launcher
 print("PERMANENT_ORCHESTRATOR_STATIC_TEST=PASS")
 print("NO_UNRESTRICTED_SHELL_CANARY=PASS")
 print("PARENT_SHELL_SAFETY_CANARY=PASS")
+
+# Byte-safe Git I/O regression guards.
+for node in ast.walk(tree):
+    if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):
+        if isinstance(node.func.value, ast.Name) and node.func.value.id=="subprocess" and node.func.attr=="run":
+            for kw in node.keywords:
+                if kw.arg=="text" and isinstance(kw.value, ast.Constant) and kw.value.value is True:
+                    raise AssertionError("subprocess text=True forbidden in orchestrator")
+
+assert 'errors="surrogateescape"' in src
+assert 'GIT_OBJECT_DIRECTORY' in src
+assert 'GIT_ALTERNATE_OBJECT_DIRECTORIES' in src
+assert 'stdout_bytes' in src
+
+repo_root=ROOT.parents[1]
+attrs=(repo_root/".gitattributes").read_text(encoding="utf-8")
+for pattern in ["*.pdf binary","*.png binary","*.docx binary","*.odt binary","*.zip binary","*.sqlite binary","*.bin binary","*.qda binary"]:
+    assert pattern in attrs
+assert "* binary" not in attrs
+assert "* -diff" not in attrs
+
+print("BYTE_SAFE_GIT_IO_STATIC_CANARY=PASS")
+print("BINARY_ARTIFACT_SEMANTICS_STATIC_CANARY=PASS")

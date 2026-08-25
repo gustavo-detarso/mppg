@@ -29,6 +29,15 @@ SECRET_PATH=[
 class OrchestratorError(RuntimeError): pass
 def shab(b:bytes)->str:return hashlib.sha256(b).hexdigest()
 def shaf(p:Path)->str:return shab(p.read_bytes())
+def sbytes(s:str)->bytes:return s.encode("utf-8",errors="surrogateescape")
+
+class CommandResult:
+ def __init__(self,cp:subprocess.CompletedProcess):
+  self.returncode=cp.returncode
+  self.stdout_bytes=cp.stdout or b""
+  self.stderr_bytes=cp.stderr or b""
+  self.stdout=self.stdout_bytes.decode("utf-8",errors="surrogateescape")
+  self.stderr=self.stderr_bytes.decode("utf-8",errors="surrogateescape")
 
 def sanitize(s:str,limit:int=20000)->str:
  key=os.environ.get("OPENAI_API_KEY")
@@ -37,10 +46,11 @@ def sanitize(s:str,limit:int=20000)->str:
  return s if len(s)<=limit else s[:limit]+"\n...[TRUNCATED]..."
 
 def run(cmd:list[str],cwd:Path|None=None,check:bool=True,env:dict[str,str]|None=None):
- cp=subprocess.run(cmd,cwd=str(cwd) if cwd else None,env=env,text=True,capture_output=True)
- if check and cp.returncode!=0:
-  raise OrchestratorError(f"command_failed rc={cp.returncode} cmd={cmd!r} stdout={sanitize(cp.stdout,3000)!r} stderr={sanitize(cp.stderr,3000)!r}")
- return cp
+ cp=subprocess.run(cmd,cwd=str(cwd) if cwd else None,env=env,text=False,capture_output=True)
+ out=CommandResult(cp)
+ if check and out.returncode!=0:
+  raise OrchestratorError(f"command_failed rc={out.returncode} cmd={cmd!r} stdout={sanitize(out.stdout,3000)!r} stderr={sanitize(out.stderr,3000)!r}")
+ return out
 def git(*a:str,check:bool=True):return run(["git","-C",str(ROOT),*a],check=check)
 def remote()->str:
  f=git("ls-remote","origin","refs/heads/master").stdout.strip().split()
@@ -164,7 +174,7 @@ class AI:
    return u
   return PRODUCTION_API
  def post(self,payload):
-  body=json.dumps(payload,ensure_ascii=False).encode()
+  body=json.dumps(payload,ensure_ascii=True).encode()
   if self.key.encode() in body:raise OrchestratorError("API key leaked into request body")
   req=urllib.request.Request(self.endpoint(),data=body,method="POST",headers={"Authorization":"Bearer "+self.key,"Content-Type":"application/json","User-Agent":"mppg-orchestrator/1"})
   try:
@@ -183,7 +193,7 @@ class AI:
      try:a=json.loads(c.get("arguments","{}"))
      except Exception:a={}
      result=execute_tool(c.get("name",""),a)
-     items.append({"type":"function_call_output","call_id":c.get("call_id"),"output":sanitize(json.dumps(result,ensure_ascii=False,sort_keys=True))})
+     items.append({"type":"function_call_output","call_id":c.get("call_id"),"output":sanitize(json.dumps(result,ensure_ascii=True,sort_keys=True))})
     continue
    txt=outtext(resp)
    if not txt:raise OrchestratorError("AI returned no structured output")
@@ -207,7 +217,7 @@ def path_manifest(paths):
   m=metadata(rel);ent.append(m)
   if secret_path(rel):bl.append({"domain":"environment","code":"SECRET_LIKE_PATH","summary":rel})
   if m.get("kind")=="symlink":bl.append({"domain":"repository_state","code":"SYMLINK_REVIEW_REQUIRED","summary":rel})
- return ent,shab(json.dumps(ent,ensure_ascii=False,sort_keys=True).encode()),bl
+ return ent,shab(json.dumps(ent,ensure_ascii=True,sort_keys=True).encode()),bl
 
 def context():
  verify_governance();r=refs();b=[]
@@ -246,26 +256,47 @@ def gate(name,tok):
  if x==e:print("AUTHORIZATION_ACCEPTED="+name);return True
  print("AUTHORIZATION_ACCEPTED=false");print("GUIDED_RUN_STOPPED_AT_GATE="+name);return False
 
+def git_objects_dir()->str:
+ raw=git("rev-parse","--git-path","objects").stdout.strip();p=Path(raw)
+ return str((p if p.is_absolute() else ROOT/p).resolve())
+
 def exact_stage(paths,fp):
  if git("diff","--cached","--name-only").stdout.strip():raise OrchestratorError("staging non-empty")
  _,cur,b=path_manifest(paths)
  if b or cur!=fp:raise OrchestratorError("candidate drift/blocker")
- fd,tmp=tempfile.mkstemp(prefix="mppg-index-");os.close(fd);os.unlink(tmp);env=os.environ.copy();env["GIT_INDEX_FILE"]=tmp
- run(["git","-C",str(ROOT),"read-tree","HEAD"],env=env);run(["git","-C",str(ROOT),"add","--",*paths],env=env)
- if run(["git","-C",str(ROOT),"diff","--cached","--check","--no-ext-diff","HEAD"],env=env,check=False).returncode!=0:raise OrchestratorError("candidate diff-check failed")
- cp=run(["git","-C",str(ROOT),"diff","--cached","--binary","--full-index","--no-ext-diff","HEAD"],env=env).stdout;cn=run(["git","-C",str(ROOT),"diff","--cached","--name-only","-z"],env=env).stdout
- ir=git("rev-parse","--git-path","index").stdout.strip();idx=Path(ir);idx=idx if idx.is_absolute() else ROOT/idx;bak=Path(tempfile.mktemp(prefix="mppg-real-index-"));shutil.copy2(idx,bak);before=shaf(idx)
- try:
-  git("add","--",*paths)
-  if git("diff","--cached","--check","--no-ext-diff",check=False).returncode!=0:raise OrchestratorError("real diff-check failed")
-  rp=git("diff","--cached","--binary","--full-index","--no-ext-diff","HEAD").stdout;rn=git("diff","--cached","--name-only","-z").stdout
-  if shab(cp.encode())!=shab(rp.encode()) or shab(cn.encode())!=shab(rn.encode()):raise OrchestratorError("candidate/real index mismatch")
- except Exception:
-  shutil.copy2(bak,idx)
-  if shaf(idx)!=before:raise OrchestratorError("index rollback failed")
-  raise
- finally:
-  Path(tmp).unlink(missing_ok=True);bak.unlink(missing_ok=True)
+ with tempfile.TemporaryDirectory(prefix="mppg-candidate-") as td:
+  t=Path(td);candidate_idx=t/"index";candidate_obj=t/"objects";candidate_obj.mkdir()
+  env=os.environ.copy()
+  env["GIT_INDEX_FILE"]=str(candidate_idx)
+  env["GIT_OBJECT_DIRECTORY"]=str(candidate_obj)
+  env["GIT_ALTERNATE_OBJECT_DIRECTORIES"]=git_objects_dir()
+  run(["git","-C",str(ROOT),"read-tree","HEAD"],env=env)
+  run(["git","-C",str(ROOT),"add","--",*paths],env=env)
+  candidate_check=run(["git","-C",str(ROOT),"diff","--cached","--check","--no-ext-diff","HEAD"],env=env,check=False)
+  if candidate_check.returncode!=0:
+   raise OrchestratorError("candidate diff-check failed rc=%d stdout=%r stderr=%r" % (
+    candidate_check.returncode,sanitize(candidate_check.stdout,3000),sanitize(candidate_check.stderr,3000)))
+  candidate_patch=run(["git","-C",str(ROOT),"diff","--cached","--binary","--full-index","--no-ext-diff","HEAD"],env=env)
+  candidate_names=run(["git","-C",str(ROOT),"diff","--cached","--name-only","-z"],env=env)
+
+  ir=git("rev-parse","--git-path","index").stdout.strip();real_idx=Path(ir);real_idx=real_idx if real_idx.is_absolute() else ROOT/real_idx
+  bak=Path(tempfile.mktemp(prefix="mppg-real-index-"));shutil.copy2(real_idx,bak);before=shaf(real_idx)
+  try:
+   git("add","--",*paths)
+   real_check=git("diff","--cached","--check","--no-ext-diff",check=False)
+   if real_check.returncode!=0:
+    raise OrchestratorError("real diff-check failed rc=%d stdout=%r stderr=%r" % (
+     real_check.returncode,sanitize(real_check.stdout,3000),sanitize(real_check.stderr,3000)))
+   real_patch=git("diff","--cached","--binary","--full-index","--no-ext-diff","HEAD")
+   real_names=git("diff","--cached","--name-only","-z")
+   if shab(candidate_patch.stdout_bytes)!=shab(real_patch.stdout_bytes) or shab(candidate_names.stdout_bytes)!=shab(real_names.stdout_bytes):
+    raise OrchestratorError("candidate/real index mismatch")
+  except Exception:
+   shutil.copy2(bak,real_idx)
+   if shaf(real_idx)!=before:raise OrchestratorError("index rollback failed")
+   raise
+  finally:
+   bak.unlink(missing_ok=True)
  print("CANDIDATE_DIFF_CHECK=PASS");print("REAL_CACHED_DIFF_CHECK=PASS");print("EXACT_STAGING=PASS")
 
 def ingestion(ctx):
@@ -274,8 +305,8 @@ def ingestion(ctx):
  st=token("STAGING",{"paths":paths,"manifest_sha":fp})
  if not gate("STAGING",st):return 0
  exact_stage(paths,fp)
- patch=git("diff","--cached","--binary","--full-index","--no-ext-diff","HEAD").stdout;names=git("diff","--cached","--name-only","-z").stdout;sub=loadj(CFG)["content_ingestion_commit_subject"]
- ct=token("COMMIT",{"patch":shab(patch.encode()),"paths":shab(names.encode()),"subject":sub})
+ patch=git("diff","--cached","--binary","--full-index","--no-ext-diff","HEAD");names=git("diff","--cached","--name-only","-z");sub=loadj(CFG)["content_ingestion_commit_subject"]
+ ct=token("COMMIT",{"patch":shab(patch.stdout_bytes),"paths":shab(names.stdout_bytes),"subject":sub})
  if not gate("COMMIT",ct):return 0
  par=git("rev-parse","HEAD").stdout.strip()
  if remote()!=par:raise OrchestratorError("remote moved before commit")
@@ -294,21 +325,24 @@ def self_test():
  verify_governance();ast.parse(Path(__file__).read_text(encoding="utf-8"));c=loadj(CFG);s=loadj(AI_SCHEMA)
  assert c["api_endpoint"]==PRODUCTION_API and s["additionalProperties"] is False and set(s["required"])==set(s["properties"])
  assert all(t["strict"] and t["parameters"]["additionalProperties"] is False for t in TOOLS)
+ canary=CommandResult(subprocess.CompletedProcess(["canary"],0,b"\xe2\xff",b""))
+ assert canary.stdout.encode("utf-8",errors="surrogateescape")==b"\xe2\xff"
+ print("ORCHESTRATOR_BYTE_SAFE_IO_CANARY=PASS")
  print("ORCHESTRATOR_SELF_TEST=PASS")
 def main():
  p=argparse.ArgumentParser(prog="mppg-orchestrator");sp=p.add_subparsers(dest="cmd",required=True);sp.add_parser("self-test");sp.add_parser("status");rp=sp.add_parser("run");rp.add_argument("--dry-run",action="store_true");a=p.parse_args()
  try:
   if a.cmd=="self-test":return self_test() or 0
   ctx,b=context()
-  if a.cmd=="status":print(json.dumps({"context":ctx,"blockers":b,"openai_api_key_present":bool(os.environ.get("OPENAI_API_KEY"))},ensure_ascii=False,indent=2,sort_keys=True));return 0
+  if a.cmd=="status":print(json.dumps({"context":ctx,"blockers":b,"openai_api_key_present":bool(os.environ.get("OPENAI_API_KEY"))},ensure_ascii=True,indent=2,sort_keys=True));return 0
   rid=dt.datetime.now().strftime("%Y%m%dT%H%M%S")+"-"+uuid.uuid4().hex[:8];(RUN_ROOT/rid).mkdir(parents=True,exist_ok=True);print("RUN_ID="+rid);print("FRONT_BASELINE_HEAD="+ctx["refs"]["head"]);print("FRONT_KIND="+ctx["front"]["kind"])
   if b:
-   b,d=adjudicate(ctx,b);(RUN_ROOT/rid/"ai_decisions.json").write_text(sanitize(json.dumps(d,ensure_ascii=False,indent=2),50000),encoding="utf-8")
+   b,d=adjudicate(ctx,b);(RUN_ROOT/rid/"ai_decisions.json").write_text(sanitize(json.dumps(d,ensure_ascii=True,indent=2),50000),encoding="utf-8")
   if b:
    print("TOTAL_BLOCKERS="+str(len(b)))
    for x in b:print("BLOCKER_DOMAIN="+x["domain"]);print("BLOCKER_CODE="+x["code"]);print("BLOCKER_SUMMARY="+x["summary"])
    print("FRONT_CLOSED=false");return 2
-  if a.dry_run:print("DRY_RUN=PASS");print(json.dumps(ctx["profile"],ensure_ascii=False,indent=2,sort_keys=True));return 0
+  if a.dry_run:print("DRY_RUN=PASS");print(json.dumps(ctx["profile"],ensure_ascii=True,indent=2,sort_keys=True));return 0
   if ctx["front"]["kind"]=="repository_content_ingestion":return ingestion(ctx)
   if ctx["front"]["kind"]=="noop":print("NOOP=true");print("FRONT_CLOSED=true");return 0
   print("NEXT_GATE=MATERIALIZATION_AUTHORIZATION");print("FRONT_CLOSED=false");return 3
