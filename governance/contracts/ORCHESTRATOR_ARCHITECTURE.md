@@ -123,3 +123,20 @@ acceptance gate before staging unless a frozen contract explicitly marks
 
 `FRONT_CLOSED=true` is always computed from gate state. It must never be a
 hardcoded success line in an auditor or shell script.
+
+
+## Permanent AI orchestrator
+
+Canonical source: `governance/orchestrator/`
+
+Runtime copy: `~/.local/share/mppg-orchestrator/runtime/`
+
+Launcher: `~/.local/bin/mppg-orchestrator`
+
+Routine command: `mppg-orchestrator run`
+
+The deterministic controller owns all mutation gates. AI receives only strict
+allowlisted read-only tools and never receives unrestricted shell access.
+
+Harness safety requires subprocess/subshell containment for strict shell options
+and forbids sourcing user profiles in the parent interactive shell.

@@ -8,5 +8,8 @@
   "state_logs": "~/.local/state/mppg-orchestrator/logs",
   "runtime_share": "~/.local/share/mppg-orchestrator",
   "api_key_source": "environment:OPENAI_API_KEY",
-  "api_key_persistence_allowed": false
+  "api_key_persistence_allowed": false,
+  "orchestrator_runtime": "~/.local/share/mppg-orchestrator/runtime",
+  "orchestrator_launcher": "~/.local/bin/mppg-orchestrator",
+  "orchestrator_state": "~/.local/state/mppg-orchestrator"
 }

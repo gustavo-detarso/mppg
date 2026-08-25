@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "RESOLVED_READ_ONLY",
+        "MUTATION_REQUIRED",
+        "USER_REQUIRED",
+        "EXTERNAL_BLOCKED",
+        "UNRESOLVED"
+      ]
+    },
+    "blocker_domain": {
+      "type": "string",
+      "enum": [
+        "software",
+        "repository_state",
+        "environment",
+        "authorization",
+        "test",
+        "product_acceptance",
+        "user_acceptance",
+        "external_dependency",
+        "auditor_harness",
+        "evidence_packaging",
+        "authority_model",
+        "scanner_model",
+        "unknown"
+      ]
+    },
+    "finding_class": {
+      "type": "string",
+      "enum": [
+        "current_front_regression",
+        "preexisting_debt",
+        "separate_front_candidate",
+        "auditor_harness_defect",
+        "new_need",
+        "no_defect",
+        "unknown"
+      ]
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "semantic_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "automatic_actions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NOOP",
+          "RERUN_READONLY_PROBE",
+          "RECLASSIFY_FROM_EVIDENCE",
+          "REBUILD_EPHEMERAL_AUDITOR",
+          "RECOMPUTE_EPHEMERAL_EVIDENCE",
+          "RETRY_EXTERNAL_READONLY",
+          "SIMULATE_PATCH_IN_SHADOW"
+        ]
+      }
+    },
+    "mutation_required": {
+      "type": "boolean"
+    },
+    "mutation_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_gate": {
+      "type": "string",
+      "enum": [
+        "CONTINUE_READ_ONLY",
+        "MATERIALIZATION_AUTHORIZATION",
+        "ENVIRONMENT_AUTHORIZATION",
+        "DEPENDENCY_AUTHORIZATION",
+        "USER_ACCEPTANCE",
+        "STAGING_AUTHORIZATION",
+        "COMMIT_AUTHORIZATION",
+        "PUBLICATION_AUTHORIZATION",
+        "EXTERNAL_DEPENDENCY",
+        "BLOCKED"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "blocker_domain",
+    "finding_class",
+    "confidence",
+    "summary",
+    "semantic_evidence",
+    "automatic_actions",
+    "mutation_required",
+    "mutation_scope",
+    "next_gate"
+  ],
+  "additionalProperties": false
+}
