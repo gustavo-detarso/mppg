@@ -117002,3 +117002,39 @@ A geração de conteúdo deve produzir redação acadêmica coerente, fiel às f
 ### Preservação de contratos
 
 A funcionalidade de fichamento não restaura entrypoints, módulos ou árvores predecessoras aposentadas. Contratos históricos permanecem como proveniência e não devem ser recriados para compatibilidade. O fluxo atual deve continuar usando nomes canônicos e as autoridades operacionais vigentes.
+---
+
+## Layout canônico `fichamento_qualitativo`
+
+O perfil público `fichamento_fgv` preserva o contrato semântico:
+
+```text
+document_type = atividade
+content_type = fichamento
+layout = fichamento_qualitativo
+institution = fgv
+```
+
+`fichamento_qualitativo` é uma especialização visual do fichamento e não um novo `DocumentType`. O `document.json` permanece a autoridade semântica do conteúdo.
+
+O layout foi homologado pelo usuário antes da materialização no código e possui o seguinte contrato perceptível:
+
+- papel A4;
+- margens superior/esquerda/direita/inferior de 3/3/2/2 cm;
+- uma única faixa horizontal compacta no cabeçalho;
+- `FGV` à esquerda e `FICHAMENTO DE LEITURA` à direita;
+- zero faixas adicionais em degradê abaixo do cabeçalho;
+- Ficha Técnica dinâmica com Disciplina, Professor, Aluno(a) e Data, usando coluna de rótulos compacta de 3,1 cm — menor largura homologada que mantém o maior rótulo em uma linha — e 12,9 cm reservados aos valores;
+- corpo Times New Roman 12, justificado, espaçamento 1,5 e recuo inicial de 1,25 cm;
+- referências em espaço simples, sem recuo inicial;
+- sete seções primárias canônicas, cada uma iniciada em nova página.
+
+A primeira seção, `REFERÊNCIAS BIBLIOGRÁFICAS`, é materializada a partir do BIB final. As demais seções são projetadas do ORG final quando substantivo, com `document.json` como fallback conforme o renderer canônico.
+
+O renderer especializado é ativado exclusivamente quando o TOML efetivo declara `layout = "fichamento_qualitativo"`. Os demais layouts continuam no caminho genérico preexistente.
+
+A aprovação do desenho visual não substitui a homologação do artefato produzido pelo código. Antes de staging desta frente, um DOCX representativo gerado pelo renderer materializado deve ser apresentado ao usuário e receber aprovação explícita.
+
+#### Invariante cross-renderer do layout `fichamento_qualitativo`
+
+A Ficha Técnica usa a geometria final homologada de **3,1 cm | 12,9 cm**. O renderer materializa a autoridade OOXML de forma coerente antes da serialização do DOCX: `tblLayout=fixed`, `tblW=9071 dxa`, `tblGrid` e `tcW` com os mesmos valores canônicos. No cabeçalho, a grade é `1588 | 7483 dxa`; na Ficha Técnica, `1758 | 7313 dxa`. A validação do layout inspeciona também o OOXML bruto para impedir que consumidores diferentes recalcularem larguras contraditórias.

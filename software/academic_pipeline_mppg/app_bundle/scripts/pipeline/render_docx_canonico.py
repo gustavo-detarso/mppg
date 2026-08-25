@@ -1118,6 +1118,706 @@ def load_layout(compliance_json: dict[str, Any]) -> dict[str, Any]:
 
 
 
+FICHAMENTO_QUALITATIVO_LAYOUT = "fichamento_qualitativo"
+FICHAMENTO_QUALITATIVO_SECTIONS = [
+    "REFERÊNCIAS BIBLIOGRÁFICAS",
+    "SÍNTESE DOS TEXTOS",
+    "PRINCIPAIS CONCEITOS E ARGUMENTOS",
+    "ANÁLISE CRÍTICA E REFLEXÕES PESSOAIS",
+    "CONEXÕES E DIÁLOGOS ENTRE OS TEXTOS",
+    "APLICAÇÕES EM POLÍTICAS PÚBLICAS E GOVERNO",
+    "QUESTÕES PARA APROFUNDAMENTO",
+]
+FICHAMENTO_FGV_DARK = "003B70"
+FICHAMENTO_FGV_BLUE = "005CA9"
+FICHAMENTO_FGV_LIGHT = "DCEAF7"
+FICHAMENTO_GRAY = "666666"
+FICHAMENTO_LIGHT_GRAY = "F3F5F7"
+FICHAMENTO_WHITE = "FFFFFF"
+
+
+def selected_document_layout(toml_data: dict[str, Any]) -> str:
+    for section_name in ("documento", "document"):
+        section = toml_data.get(section_name)
+        if isinstance(section, dict):
+            value = clean_spaces(str(section.get("layout", "")))
+            if value:
+                return value
+    return clean_spaces(str(toml_data.get("layout", "")))
+
+
+def _fichamento_set_color(run: Any, color_hex: str) -> None:
+    color_hex = color_hex.strip().lstrip("#")
+    if not re.fullmatch(r"[0-9A-Fa-f]{6}", color_hex):
+        raise ValueError(f"cor RGB inválida: {color_hex!r}")
+    run.font.color.rgb = RGBColor(
+        int(color_hex[0:2], 16),
+        int(color_hex[2:4], 16),
+        int(color_hex[4:6], 16),
+    )
+
+
+def _fichamento_cell_shading(cell: Any, fill: str) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    shd = OxmlElement("w:shd")
+    shd.set(qn("w:fill"), fill)
+    tc_pr.append(shd)
+
+
+def _fichamento_cell_margins(
+    cell: Any, *, top: int = 40, start: int = 100, bottom: int = 40, end: int = 100
+) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    tc_mar = tc_pr.first_child_found_in("w:tcMar")
+    if tc_mar is None:
+        tc_mar = OxmlElement("w:tcMar")
+        tc_pr.append(tc_mar)
+    for name, value in (("top", top), ("start", start), ("bottom", bottom), ("end", end)):
+        node = tc_mar.find(qn(f"w:{name}"))
+        if node is None:
+            node = OxmlElement(f"w:{name}")
+            tc_mar.append(node)
+        node.set(qn("w:w"), str(value))
+        node.set(qn("w:type"), "dxa")
+
+
+def _fichamento_compact_row(row: Any) -> None:
+    tr_pr = row._tr.get_or_add_trPr()
+    height = OxmlElement("w:trHeight")
+    height.set(qn("w:val"), "300")
+    height.set(qn("w:hRule"), "exact")
+    tr_pr.append(height)
+
+
+def add_fichamento_qualitativo_header(doc: Any) -> None:
+    section = doc.sections[0]
+    section.header_distance = Cm(0.8)
+    header = section.header
+    table = header.add_table(rows=1, cols=2, width=Cm(16.0))
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    table.autofit = False
+    _fichamento_compact_row(table.rows[0])
+    table.columns[0].width = Cm(2.8)
+    table.columns[1].width = Cm(13.2)
+    left, right = table.rows[0].cells
+    _fichamento_cell_shading(left, FICHAMENTO_FGV_DARK)
+    _fichamento_cell_shading(right, FICHAMENTO_FGV_BLUE)
+    for cell in (left, right):
+        _fichamento_cell_margins(cell, top=20, bottom=20, start=100, end=100)
+        cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+    p = left.paragraphs[0]
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(0)
+    run = p.add_run("FGV")
+    set_run_font(run, name="Arial", size_pt=10, bold=True)
+    _fichamento_set_color(run, FICHAMENTO_WHITE)
+    p = right.paragraphs[0]
+    p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(0)
+    run = p.add_run("FICHAMENTO DE LEITURA")
+    set_run_font(run, name="Arial", size_pt=8, bold=True)
+    _fichamento_set_color(run, FICHAMENTO_WHITE)
+    _materialize_fichamento_header_geometry(table)
+
+
+def _fichamento_date(metadata: dict[str, str], toml_data: dict[str, Any]) -> str:
+    date_value = first_by_keys(toml_data, {"data", "date"})
+    return first_valid(date_value, metadata.get("year", ""), default="")
+
+
+def add_fichamento_qualitativo_front_matter(
+    doc: Any, metadata: dict[str, str], toml_data: dict[str, Any]
+) -> None:
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.space_before = Pt(14)
+    p.paragraph_format.space_after = Pt(2)
+    p.paragraph_format.first_line_indent = Cm(0)
+    run = p.add_run("FICHAMENTO DE LEITURA")
+    set_run_font(run, name="Arial", size_pt=20, bold=True)
+    _fichamento_set_color(run, FICHAMENTO_FGV_DARK)
+
+    subtitle = clean_spaces(metadata.get("title", ""))
+    if subtitle:
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.paragraph_format.space_after = Pt(16)
+        p.paragraph_format.first_line_indent = Cm(0)
+        run = p.add_run(subtitle)
+        set_run_font(run, name="Arial", size_pt=12, italic=True)
+        _fichamento_set_color(run, FICHAMENTO_GRAY)
+
+    p = doc.add_paragraph()
+    p.paragraph_format.space_after = Pt(6)
+    p.paragraph_format.first_line_indent = Cm(0)
+    run = p.add_run("FICHA TÉCNICA")
+    set_run_font(run, name="Arial", size_pt=11, bold=True)
+    _fichamento_set_color(run, FICHAMENTO_FGV_DARK)
+
+    rows = [
+        ("Disciplina", clean_spaces(metadata.get("discipline", ""))),
+        ("Professor", clean_spaces(metadata.get("professor", ""))),
+        ("Aluno(a)", clean_spaces(metadata.get("author", ""))),
+        ("Data", _fichamento_date(metadata, toml_data)),
+    ]
+    table = doc.add_table(rows=len(rows), cols=2)
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    table.autofit = False
+    table.columns[0].width = Cm(3.1)
+    table.columns[1].width = Cm(12.9)
+    for index, (label, value) in enumerate(rows):
+        left, right = table.rows[index].cells
+        _fichamento_cell_shading(left, FICHAMENTO_FGV_LIGHT)
+        _fichamento_cell_shading(right, FICHAMENTO_WHITE if index % 2 == 0 else FICHAMENTO_LIGHT_GRAY)
+        for cell in (left, right):
+            _fichamento_cell_margins(cell, top=80, bottom=80, start=120, end=120)
+            cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+        lp = left.paragraphs[0]
+        lp.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        lr = lp.add_run(label)
+        set_run_font(lr, name="Arial", size_pt=10, bold=True)
+        _fichamento_set_color(lr, FICHAMENTO_FGV_DARK)
+        rp = right.paragraphs[0]
+        rp.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        rr = rp.add_run(value)
+        set_run_font(rr, size_pt=11)
+    _materialize_fichamento_technical_geometry(table)
+
+
+def _fichamento_normalize_heading(text: str) -> str:
+    value = clean_spaces(str(text or ""))
+    value = re.sub(r"^\s*\d+(?:\.\d+)*(?:[\.\)])?\s+", "", value)
+    return strip_accents_for_sort(value)
+
+
+def add_fichamento_qualitativo_section_heading(doc: Any, number: int, title: str) -> Any:
+    doc.add_page_break()
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p.paragraph_format.first_line_indent = Cm(0)
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(10)
+    p.paragraph_format.keep_with_next = True
+    run = p.add_run(f"{number}. {title}")
+    set_run_font(run, name="Arial", size_pt=14, bold=True)
+    _fichamento_set_color(run, FICHAMENTO_FGV_DARK)
+    p_pr = p._p.get_or_add_pPr()
+    p_bdr = OxmlElement("w:pBdr")
+    bottom = OxmlElement("w:bottom")
+    bottom.set(qn("w:val"), "single")
+    bottom.set(qn("w:sz"), "10")
+    bottom.set(qn("w:space"), "3")
+    bottom.set(qn("w:color"), FICHAMENTO_FGV_BLUE)
+    p_bdr.append(bottom)
+    p_pr.append(p_bdr)
+    return p
+
+
+def add_fichamento_qualitativo_references(
+    doc: Any, entries: dict[str, dict[str, str]]
+) -> list[str]:
+    refs = [reference_line(value) for value in entries.values()]
+    refs = sorted([ref for ref in refs if ref], key=strip_accents_for_sort)
+    for ref in refs:
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        p.paragraph_format.first_line_indent = Cm(0)
+        p.paragraph_format.line_spacing = 1.0
+        p.paragraph_format.space_before = Pt(0)
+        p.paragraph_format.space_after = Pt(6)
+        run = p.add_run(ref)
+        set_run_font(run, size_pt=12)
+    return refs
+
+
+def render_fichamento_qualitativo_body(
+    doc: Any,
+    body_blocks: list[dict[str, Any]],
+    entries: dict[str, dict[str, str]],
+) -> tuple[list[str], list[str]]:
+    normalized = {
+        _fichamento_normalize_heading(title): (index, title)
+        for index, title in enumerate(FICHAMENTO_QUALITATIVO_SECTIONS, 1)
+    }
+    expected_index = 1
+    current_primary = 0
+    seen: list[str] = []
+    refs: list[str] = []
+    for block in body_blocks:
+        btype = block.get("type")
+        if btype == "heading":
+            level = int(block.get("level", 1))
+            text = clean_spaces(str(block.get("text", "")))
+            key = _fichamento_normalize_heading(text)
+            primary = normalized.get(key)
+            if primary is not None:
+                index, canonical = primary
+                if index != expected_index:
+                    die(
+                        "ERRO: ordem de seções do fichamento divergente. "
+                        f"Esperada seção {expected_index}; encontrada {index}: {canonical}"
+                    )
+                add_fichamento_qualitativo_section_heading(doc, index, canonical)
+                seen.append(canonical)
+                current_primary = index
+                expected_index += 1
+                if index == 1:
+                    refs = add_fichamento_qualitativo_references(doc, entries)
+                continue
+            if level == 1:
+                die(f"ERRO: seção primária inesperada no fichamento: {text}")
+            if current_primary > 1:
+                add_heading(doc, text, min(max(level, 2), 3))
+            continue
+        if current_primary == 0:
+            continue
+        if current_primary == 1:
+            continue
+        if btype == "paragraph":
+            text = clean_spaces(str(block.get("text", "")))
+            if text:
+                add_body_paragraph(doc, text, first_indent=True)
+        elif btype == "table":
+            rows = block.get("rows")
+            if isinstance(rows, list):
+                add_table(doc, rows)
+
+    if seen != FICHAMENTO_QUALITATIVO_SECTIONS:
+        missing = [title for title in FICHAMENTO_QUALITATIVO_SECTIONS if title not in seen]
+        die(f"ERRO: fichamento sem as sete seções canônicas: {missing}")
+    return refs, seen
+
+
+def _set_fixed_table_geometry(table: Any, total_width_dxa: int, column_widths_dxa: tuple[int, ...] | list[int]) -> None:
+    """Fix tblW, tblGrid and every tcW to one coherent OOXML geometry."""
+    widths = tuple(int(value) for value in column_widths_dxa)
+    total = int(total_width_dxa)
+    if not widths or sum(widths) != total:
+        raise ValueError(f"invalid fixed table geometry: total={total} widths={widths}")
+    if any(value <= 0 for value in widths):
+        raise ValueError(f"invalid non-positive table width: {widths}")
+    if len(table.columns) != len(widths):
+        raise ValueError(f"column count mismatch: observed={len(table.columns)} expected={len(widths)}")
+
+    tbl = table._tbl
+    tbl_pr = tbl.tblPr
+    tbl_w = tbl_pr.find(qn("w:tblW"))
+    if tbl_w is None:
+        tbl_w = OxmlElement("w:tblW")
+        tbl_pr.insert(0, tbl_w)
+    tbl_w.set(qn("w:type"), "dxa")
+    tbl_w.set(qn("w:w"), str(total))
+
+    layout = tbl_pr.find(qn("w:tblLayout"))
+    if layout is None:
+        layout = OxmlElement("w:tblLayout")
+        tbl_pr.append(layout)
+    layout.set(qn("w:type"), "fixed")
+
+    grid = tbl.find(qn("w:tblGrid"))
+    if grid is None:
+        grid = OxmlElement("w:tblGrid")
+        tbl.insert(1, grid)
+    for child in list(grid):
+        grid.remove(child)
+    for width in widths:
+        col = OxmlElement("w:gridCol")
+        col.set(qn("w:w"), str(width))
+        grid.append(col)
+
+    for row in table.rows:
+        if len(row.cells) != len(widths):
+            raise ValueError(
+                f"row cell count mismatch: observed={len(row.cells)} expected={len(widths)}"
+            )
+        for cell, width in zip(row.cells, widths):
+            tc_pr = cell._tc.get_or_add_tcPr()
+            tc_w = tc_pr.find(qn("w:tcW"))
+            if tc_w is None:
+                tc_w = OxmlElement("w:tcW")
+                tc_pr.insert(0, tc_w)
+            tc_w.set(qn("w:type"), "dxa")
+            tc_w.set(qn("w:w"), str(width))
+
+
+def _set_cell_margins_dxa(cell: Any, *, top: int, bottom: int, start: int, end: int) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    tc_mar = tc_pr.find(qn("w:tcMar"))
+    if tc_mar is None:
+        tc_mar = OxmlElement("w:tcMar")
+        tc_pr.append(tc_mar)
+    for name, value in (("top", top), ("bottom", bottom), ("start", start), ("end", end)):
+        node = tc_mar.find(qn(f"w:{name}"))
+        if node is None:
+            node = OxmlElement(f"w:{name}")
+            tc_mar.append(node)
+        node.set(qn("w:w"), str(int(value)))
+        node.set(qn("w:type"), "dxa")
+
+
+def _set_cell_nowrap(cell: Any) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    if tc_pr.find(qn("w:noWrap")) is None:
+        tc_pr.append(OxmlElement("w:noWrap"))
+
+
+def _materialize_fichamento_header_geometry(table: Any) -> None:
+    """Apply the golden header geometry directly in the live header builder."""
+    _set_fixed_table_geometry(table, 9071, (1588, 7483))
+    for cell in table.rows[0].cells:
+        _set_cell_margins_dxa(cell, top=20, bottom=20, start=100, end=100)
+    tr_pr = table.rows[0]._tr.get_or_add_trPr()
+    height = tr_pr.find(qn("w:trHeight"))
+    if height is None:
+        height = OxmlElement("w:trHeight")
+        tr_pr.append(height)
+    height.set(qn("w:val"), "300")
+    height.set(qn("w:hRule"), "exact")
+
+
+def _materialize_fichamento_technical_geometry(table: Any) -> None:
+    """Apply the golden technical-sheet geometry directly in the live builder."""
+    _set_fixed_table_geometry(table, 9071, (1758, 7313))
+    if len(table.rows) < 4:
+        raise ValueError(f"technical sheet row count mismatch: observed={len(table.rows)} expected>=4")
+    for row in table.rows[:4]:
+        _set_cell_margins_dxa(row.cells[0], top=20, bottom=20, start=30, end=30)
+        _set_cell_margins_dxa(row.cells[1], top=20, bottom=20, start=60, end=60)
+        _set_cell_nowrap(row.cells[0])
+
+
+def _table_cell_text(cell: Any) -> str:
+    return " ".join((paragraph.text or "").strip() for paragraph in cell.paragraphs).strip()
+
+
+def _iter_fichamento_tables(doc: Any) -> list[Any]:
+    tables = list(doc.tables)
+    seen: set[int] = {id(table._tbl) for table in tables}
+    for section in doc.sections:
+        for header in (section.header, section.first_page_header, section.even_page_header):
+            for table in header.tables:
+                marker = id(table._tbl)
+                if marker not in seen:
+                    tables.append(table)
+                    seen.add(marker)
+    return tables
+
+
+def _normalize_fichamento_qualitativo_table_geometry(doc: Any) -> dict[str, bool]:
+    """Materialize the user-approved cross-renderer geometry before DOCX serialization."""
+    header_applied = False
+    technical_applied = False
+    expected_labels = ("Disciplina", "Professor", "Aluno(a)", "Data")
+    for table in _iter_fichamento_tables(doc):
+        if len(table.columns) != 2 or not table.rows:
+            continue
+        first_row = tuple(_table_cell_text(cell) for cell in table.rows[0].cells)
+        if first_row == ("FGV", "FICHAMENTO DE LEITURA"):
+            _set_fixed_table_geometry(table, 9071, (1588, 7483))
+            for cell in table.rows[0].cells:
+                _set_cell_margins_dxa(cell, top=20, bottom=20, start=100, end=100)
+            tr_pr = table.rows[0]._tr.get_or_add_trPr()
+            height = tr_pr.find(qn("w:trHeight"))
+            if height is None:
+                height = OxmlElement("w:trHeight")
+                tr_pr.append(height)
+            height.set(qn("w:val"), "300")
+            height.set(qn("w:hRule"), "exact")
+            header_applied = True
+            continue
+        labels = tuple(_table_cell_text(row.cells[0]) for row in table.rows[:4]) if len(table.rows) >= 4 else ()
+        if labels == expected_labels:
+            _set_fixed_table_geometry(table, 9071, (1758, 7313))
+            for row in table.rows[:4]:
+                _set_cell_margins_dxa(row.cells[0], top=20, bottom=20, start=30, end=30)
+                _set_cell_margins_dxa(row.cells[1], top=20, bottom=20, start=60, end=60)
+                _set_cell_nowrap(row.cells[0])
+            technical_applied = True
+    # Generic layouts legitimately have neither table. In that case this helper is a no-op.
+    # A partial match, however, signals a broken fichamento geometry and must fail closed.
+    if not header_applied and not technical_applied:
+        return {"header": False, "technical": False}
+    if header_applied != technical_applied:
+        raise ValueError(
+            "partial fichamento cross-renderer geometry: "
+            f"header={header_applied} technical={technical_applied}"
+        )
+    return {"header": header_applied, "technical": technical_applied}
+
+
+def _validate_fichamento_cross_renderer_ooxml(docx_path: Path | str) -> dict[str, Any]:
+    """Validate raw OOXML authorities, not python-docx width abstractions alone."""
+    import xml.etree.ElementTree as _ET
+
+    path = Path(docx_path)
+    if not path.is_file():
+        raise ValueError(f"DOCX not found for OOXML validation: {path}")
+    ns = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+
+    def text_of(node: Any) -> str:
+        return "".join((part.text or "") for part in node.findall(".//" + ns + "t")).strip()
+
+    def attr(node: Any | None, name: str) -> str | None:
+        return None if node is None else node.attrib.get(ns + name)
+
+    def table_descriptor(tbl: Any) -> dict[str, Any]:
+        pr = tbl.find(ns + "tblPr")
+        layout = pr.find(ns + "tblLayout") if pr is not None else None
+        tbl_w = pr.find(ns + "tblW") if pr is not None else None
+        grid = tbl.find(ns + "tblGrid")
+        grid_widths = [int(col.attrib.get(ns + "w", "0")) for col in list(grid or []) if col.tag == ns + "gridCol"]
+        rows = tbl.findall(ns + "tr")
+        row_cells: list[list[dict[str, Any]]] = []
+        for row in rows:
+            cells: list[dict[str, Any]] = []
+            for tc in row.findall(ns + "tc"):
+                tc_pr = tc.find(ns + "tcPr")
+                tc_w = tc_pr.find(ns + "tcW") if tc_pr is not None else None
+                tc_mar = tc_pr.find(ns + "tcMar") if tc_pr is not None else None
+                margins: dict[str, int | None] = {}
+                for side in ("top", "bottom", "start", "end"):
+                    item = tc_mar.find(ns + side) if tc_mar is not None else None
+                    margins[side] = int(attr(item, "w")) if attr(item, "w") not in {None, ""} else None
+                cells.append({
+                    "text": text_of(tc),
+                    "tcW": int(attr(tc_w, "w")) if attr(tc_w, "w") not in {None, ""} else None,
+                    "tcW_type": attr(tc_w, "type"),
+                    "margins": margins,
+                    "noWrap": bool(tc_pr is not None and tc_pr.find(ns + "noWrap") is not None),
+                })
+            row_cells.append(cells)
+        return {
+            "layout": attr(layout, "type"),
+            "tblW": int(attr(tbl_w, "w")) if attr(tbl_w, "w") not in {None, ""} else None,
+            "tblW_type": attr(tbl_w, "type"),
+            "grid": grid_widths,
+            "rows": row_cells,
+            "row_height": (
+                {
+                    "val": int(attr(rows[0].find(ns + "trPr").find(ns + "trHeight"), "val")),
+                    "rule": attr(rows[0].find(ns + "trPr").find(ns + "trHeight"), "hRule"),
+                }
+                if rows and rows[0].find(ns + "trPr") is not None and rows[0].find(ns + "trPr").find(ns + "trHeight") is not None
+                else None
+            ),
+        }
+
+    descriptors: list[dict[str, Any]] = []
+    with zipfile.ZipFile(path) as zf:
+        members = ["word/document.xml"] + sorted(
+            name for name in zf.namelist() if re.fullmatch(r"word/header\d+\.xml", name)
+        )
+        for member in members:
+            root = _ET.fromstring(zf.read(member))
+            for tbl in root.findall(".//" + ns + "tbl"):
+                row = table_descriptor(tbl)
+                row["member"] = member
+                descriptors.append(row)
+
+    header = None
+    technical = None
+    for row in descriptors:
+        if row["rows"] and len(row["rows"][0]) >= 2:
+            first = tuple(cell["text"] for cell in row["rows"][0][:2])
+            if first == ("FGV", "FICHAMENTO DE LEITURA"):
+                header = row
+        labels = tuple(
+            r[0]["text"] for r in row["rows"][:4] if r
+        ) if len(row["rows"]) >= 4 else ()
+        if labels == ("Disciplina", "Professor", "Aluno(a)", "Data"):
+            technical = row
+
+    problems: list[str] = []
+    if header is None:
+        problems.append("header table not found in raw OOXML")
+    else:
+        if header["layout"] != "fixed": problems.append(f"header tblLayout={header['layout']!r}")
+        if header["tblW_type"] != "dxa" or header["tblW"] != 9071: problems.append(f"header tblW={header['tblW_type']}/{header['tblW']}")
+        if tuple(header["grid"]) != (1588, 7483): problems.append(f"header grid={header['grid']}")
+        if not header["rows"] or tuple(c["tcW"] for c in header["rows"][0][:2]) != (1588, 7483): problems.append("header tcW mismatch")
+        for cell in header["rows"][0][:2]:
+            if cell["margins"] != {"top": 20, "bottom": 20, "start": 100, "end": 100}:
+                problems.append(f"header padding={cell['margins']}")
+        if header["row_height"] != {"val": 300, "rule": "exact"}:
+            problems.append(f"header row height={header['row_height']}")
+        if sum(header["grid"]) != header["tblW"]:
+            problems.append("header tblW/grid sum conflict")
+    if technical is None:
+        problems.append("technical table not found in raw OOXML")
+    else:
+        if technical["layout"] != "fixed": problems.append(f"technical tblLayout={technical['layout']!r}")
+        if technical["tblW_type"] != "dxa" or technical["tblW"] != 9071: problems.append(f"technical tblW={technical['tblW_type']}/{technical['tblW']}")
+        if tuple(technical["grid"]) != (1758, 7313): problems.append(f"technical grid={technical['grid']}")
+        observed_labels = tuple(row[0]["text"] for row in technical["rows"][:4])
+        if observed_labels != ("Disciplina", "Professor", "Aluno(a)", "Data"):
+            problems.append(f"technical labels={observed_labels}")
+        for index, row in enumerate(technical["rows"][:4]):
+            if len(row) < 2 or tuple(cell["tcW"] for cell in row[:2]) != (1758, 7313):
+                problems.append(f"technical row {index} tcW mismatch")
+                continue
+            if row[0]["margins"] != {"top": 20, "bottom": 20, "start": 30, "end": 30}:
+                problems.append(f"technical label padding row {index}={row[0]['margins']}")
+            if row[1]["margins"] != {"top": 20, "bottom": 20, "start": 60, "end": 60}:
+                problems.append(f"technical value padding row {index}={row[1]['margins']}")
+            if not row[0]["noWrap"]:
+                problems.append(f"technical label noWrap missing row {index}")
+        if sum(technical["grid"]) != technical["tblW"]:
+            problems.append("technical tblW/grid sum conflict")
+    if problems:
+        raise ValueError("cross-renderer OOXML validation failed: " + "; ".join(problems))
+    return {"ok": True, "header": header, "technical": technical, "tables_scanned": len(descriptors)}
+
+def validate_fichamento_qualitativo_docx(path: Path) -> dict[str, Any]:
+    _cross_renderer_ooxml = _validate_fichamento_cross_renderer_ooxml(path)
+    report: dict[str, Any] = {"path": str(path), "ok": False, "warnings": [], "layout": FICHAMENTO_QUALITATIVO_LAYOUT}
+    if not path.exists() or path.stat().st_size < 1000:
+        report["warnings"].append("DOCX ausente ou muito pequeno.")
+        return report
+    try:
+        rendered = Document(str(path))
+        with zipfile.ZipFile(path) as zf:
+            document_xml = zf.read("word/document.xml").decode("utf-8", errors="ignore")
+            header_xml = "\n".join(
+                zf.read(name).decode("utf-8", errors="ignore")
+                for name in zf.namelist()
+                if name.startswith("word/header") and name.endswith(".xml")
+            )
+    except Exception as exc:
+        report["warnings"].append(f"DOCX inválido: {exc}")
+        return report
+
+    section = rendered.sections[0]
+    margins = {
+        "top": round(section.top_margin.cm, 3),
+        "left": round(section.left_margin.cm, 3),
+        "right": round(section.right_margin.cm, 3),
+        "bottom": round(section.bottom_margin.cm, 3),
+    }
+    report["margins_cm"] = margins
+    for key, expected in {"top": 3.0, "left": 3.0, "right": 2.0, "bottom": 2.0}.items():
+        if abs(margins[key] - expected) > 0.03:
+            report["warnings"].append(f"Margem {key} divergente: {margins[key]} cm != {expected} cm.")
+
+    header_tables = section.header.tables
+    report["header_table_count"] = len(header_tables)
+    if len(header_tables) != 1:
+        report["warnings"].append(f"Cabeçalho deve conter exatamente uma faixa/tabela; observado {len(header_tables)}.")
+    else:
+        table = header_tables[0]
+        shape = [len(table.rows), len(table.rows[0].cells) if table.rows else 0]
+        report["header_shape"] = shape
+        if shape != [1, 2]:
+            report["warnings"].append(f"Cabeçalho não é a faixa compacta 1x2 aprovada: {shape}.")
+    for token in ("FGV", "FICHAMENTO DE LEITURA"):
+        if token not in header_xml:
+            report["warnings"].append(f"Cabeçalho sem {token!r}.")
+
+    body_text = "\n".join(p.text for p in rendered.paragraphs)
+    for token in ("FICHAMENTO DE LEITURA", "FICHA TÉCNICA"):
+        if token not in body_text:
+            report["warnings"].append(f"Front matter sem {token!r}.")
+    for label in ("Disciplina", "Professor", "Aluno(a)", "Data"):
+        if label not in document_xml:
+            report["warnings"].append(f"Ficha Técnica sem campo {label!r}.")
+
+    body_tables = rendered.tables
+    report["technical_sheet_table_count"] = len(body_tables)
+    if len(body_tables) != 1:
+        report["warnings"].append(f"Esperada exatamente uma tabela de Ficha Técnica; observadas {len(body_tables)}.")
+    else:
+        technical_sheet = body_tables[0]
+        labels = [row.cells[0].text.strip() for row in technical_sheet.rows]
+        report["technical_sheet_labels"] = labels
+        expected_labels = ["Disciplina", "Professor", "Aluno(a)", "Data"]
+        if labels != expected_labels:
+            report["warnings"].append(f"Rótulos da Ficha Técnica divergentes: {labels!r}.")
+        if len(technical_sheet.columns) != 2:
+            report["warnings"].append(f"Ficha Técnica deve ter duas colunas; observadas {len(technical_sheet.columns)}.")
+        else:
+            label_width_cm = round(technical_sheet.columns[0].width.cm, 3)
+            value_width_cm = round(technical_sheet.columns[1].width.cm, 3)
+            report["technical_sheet_label_column_width_cm"] = label_width_cm
+            report["technical_sheet_value_column_width_cm"] = value_width_cm
+            if abs(label_width_cm - 3.1) > 0.03:
+                report["warnings"].append(f"Coluna de rótulos divergente: {label_width_cm} cm != 3.1 cm.")
+            if abs(value_width_cm - 12.9) > 0.03:
+                report["warnings"].append(f"Coluna de valores divergente: {value_width_cm} cm != 12.9 cm.")
+    for index, title in enumerate(FICHAMENTO_QUALITATIVO_SECTIONS, 1):
+        visible = f"{index}. {title}"
+        if visible not in body_text:
+            report["warnings"].append(f"Seção canônica ausente: {visible}")
+
+    page_breaks = document_xml.count('w:type="page"')
+    report["page_break_count"] = page_breaks
+    if page_breaks < 7:
+        report["warnings"].append(f"Esperadas ao menos 7 quebras de página para as seções; observadas {page_breaks}.")
+
+    for token, label in [
+        ("\\cite", "comando \\cite"), ("\\section", "comando \\section"),
+        ("\\printbibliography", "comando \\printbibliography"), ("\\textbf", "comando \\textbf"),
+        ("\\textit", "comando \\textit"), ("\\vspace", "comando \\vspace"),
+        ("academic_pipeline:", "marcador técnico academic_pipeline"),
+    ]:
+        if token in document_xml:
+            report["warnings"].append(f"Resíduo visível detectado: {label}.")
+
+    normal = rendered.styles["Normal"]
+    report["body_font"] = normal.font.name
+    report["body_font_size_pt"] = float(normal.font.size.pt) if normal.font.size is not None else None
+    if normal.font.name != "Times New Roman":
+        report["warnings"].append(f"Fonte Normal divergente: {normal.font.name!r}.")
+    if normal.font.size is None or abs(normal.font.size.pt - 12) > 0.1:
+        report["warnings"].append("Tamanho da fonte Normal divergente de 12 pt.")
+
+    report["gradient_bands_below_header"] = 0
+    report["compact_header"] = len(header_tables) == 1 and report.get("header_shape") == [1, 2]
+    report["font_color_policy"] = "approved_fichamento_fgv_palette"
+    report["size_bytes"] = path.stat().st_size
+    report["ok"] = not report["warnings"]
+    return report
+
+
+def render_fichamento_qualitativo(
+    *, paths: ArticlePaths, metadata: dict[str, str], body_blocks: list[dict[str, Any]],
+    entries: dict[str, dict[str, str]], layout: dict[str, Any], toml_data: dict[str, Any], quiet: bool,
+) -> Path:
+    doc = Document()
+    configure_doc_styles(doc, layout)
+    add_fichamento_qualitativo_header(doc)
+    add_fichamento_qualitativo_front_matter(doc, metadata, toml_data)
+    refs, primary_sections = render_fichamento_qualitativo_body(doc, body_blocks, entries)
+    backup(paths.docx, "docx_canonico", quiet=quiet)
+    doc.save(paths.docx)
+
+    canonical = {
+        "schema_version": "docx-canonico-v14",
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "paths": {key: str(value) if isinstance(value, Path) else value for key, value in asdict(paths).items()},
+        "metadata": metadata,
+        "layout": layout,
+        "document_layout": FICHAMENTO_QUALITATIVO_LAYOUT,
+        "primary_sections": primary_sections,
+        "body_blocks": len(body_blocks),
+        "bibliography_entries": len(entries),
+        "references_rendered": len(refs),
+        "source_priority": "ORG final quando substantivo; document.json como fallback; BIB final como autoridade da seção REFERÊNCIAS BIBLIOGRÁFICAS",
+    }
+    paths.canonical_json.write_text(json.dumps(canonical, ensure_ascii=False, indent=2), encoding="utf-8")
+    report = validate_fichamento_qualitativo_docx(paths.docx)
+    report_path = paths.output_dir / f"{paths.prefix}.docx_canonico_report.json"
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    if not report["ok"]:
+        message = "\n".join(f"- {warning}" for warning in report.get("warnings", []))
+        die("ERRO: DOCX fichamento_qualitativo gerado com problemas de validação:\n" f"{message}\nArquivo: {paths.docx}")
+    if not quiet:
+        print(f"[OK] JSON canônico enriquecido: {paths.canonical_json}")
+        print(f"[OK] Relatório DOCX canônico: {report_path}")
+        print(f"[OK] DOCX fichamento_qualitativo: {paths.docx}")
+    return paths.docx
+
+
 def force_ooxml_black_docx(path: Path) -> None:
     """Força todas as definições OOXML de cor de fonte para preto.
 
@@ -1230,6 +1930,17 @@ def render_docx_for_article(
         die("ERRO: não consegui extrair corpo textual do ORG/document.json.")
     layout = load_layout(compliance_json)
 
+    if selected_document_layout(toml_data) == FICHAMENTO_QUALITATIVO_LAYOUT:
+        return render_fichamento_qualitativo(
+            paths=paths,
+            metadata=metadata,
+            body_blocks=body_blocks,
+            entries=entries,
+            layout=layout,
+            toml_data=toml_data,
+            quiet=quiet,
+        )
+
     doc = Document()
     configure_doc_styles(doc, layout)
     add_cover(doc, metadata)
@@ -1261,6 +1972,7 @@ def render_docx_for_article(
 
     refs = add_references(doc, entries)
     backup(paths.docx, "docx_canonico", quiet=quiet)
+    _normalize_fichamento_qualitativo_table_geometry(doc)
     doc.save(paths.docx)
     force_ooxml_black_docx(paths.docx)
 

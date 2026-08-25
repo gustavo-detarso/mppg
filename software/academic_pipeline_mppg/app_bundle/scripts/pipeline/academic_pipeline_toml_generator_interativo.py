@@ -4236,7 +4236,7 @@ def generate_interactive(non_interactive_profile: str | None = None, project_nam
         if preset.key == "fichamento_fgv":
             data["tipo_conteudo"] = "fichamento"
             data["genero_academico"] = "atividade"
-            data["layout"] = str(data.get("layout") or "atividade_fgv")
+            data["layout"] = str(data.get("layout") or "fichamento_qualitativo")
 
     if preset.key == "atividade_local_fgv":
         research_stage_title = "Dados da atividade"
