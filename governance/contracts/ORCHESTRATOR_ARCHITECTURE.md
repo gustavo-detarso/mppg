@@ -160,3 +160,50 @@ or EOL semantics to PDF, DOCX, ODT, PNG, ZIP, SQLite, BIN and QDA containers.
 
 This is semantic file treatment, not a scanner exclusion. Text files remain
 subject to the normal cached diff check.
+
+## Closed-loop AI supervisor
+
+`mppg-orchestrator run` executes a bounded supervisor: detect blocker → AI adjudication → deterministic allowlisted action → evidence recomputation → AI re-adjudication. Automatic action labels are executable capabilities, not advisory text.
+
+Ephemeral auditor rebuilds are declarative JSON probe plans only. Shadow patches are applied only in temporary clones outside the canonical repository. If a validated shadow patch requires canonical materialization, the controller freezes its patch/scope/target hashes and requests an explicit MATERIALIZATION authorization inline.
+
+No-progress detection terminates fail-closed. Two consecutive harness-only failures force a clean declarative rebuild from the latest substantive PASS. Consumed mutation authorizations are never silently reused.
+
+The normal operator workflow is one terminal session. Routine diagnostic log shuttling to an external chat is not part of the runtime contract.
+
+## Resilient supervisor boundary
+
+The closed loop has two fault-containment layers. Core context/probe/action exceptions are normalized to blockers and fed back to AI. The launcher starts a separate `mppg_recovery_kernel.py`; if the core exits with a recoverable internal/harness event, the kernel performs read-only AI diagnosis, validates any candidate patch in a temporary clone, and requests fresh `KERNEL RECOVERY MATERIALIZATION` authorization before canonical writes. The kernel cannot stage, commit or publish.
+
+Machine acceptance uses `mppg-orchestrator acceptance-test`, a real OpenAI multi-round canary requiring at least two executed automatic probe cycles. Machine-acceptance failure after materialization rolls back before AI re-entry. Gates prefer `/dev/tty`.
+
+## Real-index opacity during read-only phases
+
+Before explicit STAGING authorization, `.git/index` is protected state.
+Worktree/status/diff inspection MUST use a disposable copy via `GIT_INDEX_FILE`.
+This prevents Git's worktree stat-cache refresh from changing physical index
+bytes and from being misclassified as staging.
+
+The real index is touched only by the explicit exact-staging transition.
+After staging, cached patch/path/blob identity is the semantic authority.
+
+
+## Portable host-derived candidate freeze
+
+A candidate cached-patch SHA MUST NOT be transported as a cross-host authority
+when the authoritative baseline is a Git commit in the canonical repository.
+
+The portable contract freezes:
+- baseline commit/ref identity;
+- exact target paths;
+- target file SHA-256;
+- target file size;
+- target Git mode;
+- expected presence/absence and mode of baseline paths.
+
+Immediately before MATERIALIZATION, the canonical host constructs a temporary
+index/object database, proves every candidate `(mode, blob, path)` against the
+portable target authority, requires `git diff --cached --check`, and only then
+freezes the candidate patch SHA for the materialization token.
+
+Filesystem permissions produced by ZIP extraction are never an authority.

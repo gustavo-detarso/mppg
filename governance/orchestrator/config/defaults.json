@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 5,
   "model": "gpt-5.6-luna",
   "api_endpoint": "https://api.openai.com/v1/responses",
   "store": false,
@@ -13,5 +13,21 @@
   "launcher": "~/.local/bin/mppg-orchestrator",
   "key_source": "OPENAI_API_KEY process environment only",
   "content_ingestion_commit_subject": "chore(content): ingest academic artifacts",
-  "harness_rebuild_threshold": 2
+  "harness_rebuild_threshold": 2,
+  "max_autoremediation_cycles": 12,
+  "max_no_progress_cycles": 2,
+  "max_probe_requests_per_resolution": 8,
+  "max_shadow_patch_bytes": 200000,
+  "ephemeral_auditor_format": "declarative_probe_plan_only",
+  "shadow_workspace_policy": "temporary_clone_outside_canonical_repository",
+  "generic_commit_subject": "fix(governance): apply AI-adjudicated remediation",
+  "max_ai_external_retries": 3,
+  "max_kernel_recovery_cycles": 6,
+  "max_kernel_no_progress_cycles": 2,
+  "max_kernel_patch_bytes": 200000,
+  "interactive_gate_input": "prefer_/dev/tty_then_stdin",
+  "machine_acceptance_command": "mppg-orchestrator acceptance-test",
+  "readonly_git_index_policy": "shadow_copy",
+  "candidate_patch_freeze": "canonical_host_readonly",
+  "portable_target_authority": "sha256_size_git_mode"
 }

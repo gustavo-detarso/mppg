@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "PATCH_READY",
+        "NO_PATCH",
+        "EXTERNAL_BLOCKED",
+        "UNRESOLVED"
+      ]
+    },
+    "finding_class": {
+      "type": "string",
+      "enum": [
+        "current_front_regression",
+        "preexisting_debt",
+        "auditor_harness_defect",
+        "new_need",
+        "unknown"
+      ]
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "semantic_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mutation_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "shadow_patch": {
+      "type": "string"
+    },
+    "shadow_validation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "git_diff_check",
+          "python_compile_changed",
+          "static_tests",
+          "core_self_test"
+        ]
+      }
+    },
+    "proposed_commit_subject": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "finding_class",
+    "confidence",
+    "summary",
+    "semantic_evidence",
+    "mutation_scope",
+    "shadow_patch",
+    "shadow_validation",
+    "proposed_commit_subject"
+  ],
+  "additionalProperties": false
+}
