@@ -1,0 +1,10 @@
+# Canonical binary semantics for academic/artifact formats used by Software MPPG.
+# This is semantic Git file treatment, not a scanner exclusion.
+*.pdf binary
+*.png binary
+*.docx binary
+*.odt binary
+*.zip binary
+*.sqlite binary
+*.bin binary
+*.qda binary

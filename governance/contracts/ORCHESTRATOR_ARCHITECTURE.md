@@ -140,3 +140,23 @@ allowlisted read-only tools and never receives unrestricted shell access.
 
 Harness safety requires subprocess/subshell containment for strict shell options
 and forbids sourcing user profiles in the parent interactive shell.
+
+## Byte-safe Git I/O and binary academic artifacts
+
+All Git subprocess output that may contain repository paths or academic content
+is captured as raw bytes first. String views use UTF-8 with `surrogateescape`;
+patch/path identity hashes use the raw Git bytes. JSON that may carry path data
+uses ASCII escaping.
+
+Candidate staging isolates both `GIT_INDEX_FILE` and `GIT_OBJECT_DIRECTORY`.
+The canonical object database is available only through
+`GIT_ALTERNATE_OBJECT_DIRECTORIES`.
+
+The repository-root `.gitattributes` is the canonical Git semantic authority
+for binary academic/artifact formats currently present in the ingestion
+universe. Those formats are marked `binary`; therefore the mandatory
+`git diff --cached --check` remains active without applying textual whitespace
+or EOL semantics to PDF, DOCX, ODT, PNG, ZIP, SQLite, BIN and QDA containers.
+
+This is semantic file treatment, not a scanner exclusion. Text files remain
+subject to the normal cached diff check.
