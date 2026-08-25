@@ -78,7 +78,23 @@
     "stage_commit_publication_authorizations_are_separate": true,
     "cached_diff_check_required": true,
     "temporary_candidate_index_preferred_when_appropriate": true,
-    "byte_exact_index_rollback_on_post_staging_failure": true
+    "byte_exact_index_rollback_on_post_staging_failure": true,
+    "persistent_gate_checkpoint_root": "~/.local/share/mppg-ai-supervisor/fronts/<front>/",
+    "checkpoint_format": "canonical_json_with_sha256_sidecar",
+    "checkpoint_chain": [
+      "STAGING",
+      "COMMIT",
+      "PUBLICATION",
+      "CLOSURE"
+    ],
+    "checkpoint_predecessor_required_after_staging": true,
+    "commit_requires_valid_staging_checkpoint": true,
+    "publication_requires_valid_commit_checkpoint": true,
+    "closure_requires_valid_publication_checkpoint": true,
+    "checkpoint_scope_and_token_match_required": true,
+    "checkpoint_tamper_policy": "block_fail_closed",
+    "restart_recovery_uses_existing_control_flow": true,
+    "restart_recovery_does_not_imply_authorization": true
   },
   "protected_state": {
     "root_env": "byte_exact_preservation_unless_explicitly_authorized",
@@ -265,7 +281,21 @@
     "physical_index_stat_cache_is_not_staging": true,
     "candidate_patch_authority": "host_derived_from_portable_blob_and_git_mode_contract",
     "zip_extraction_mode_is_authority": false,
-    "target_git_mode_validation": true
+    "target_git_mode_validation": true,
+    "git_proof_continuity": {
+      "persistent": true,
+      "tamper_evident": true,
+      "explicit_predecessor_hashes": true,
+      "missing_predecessor_policy": "block_fail_closed",
+      "scope_or_token_mismatch_policy": "block_fail_closed",
+      "separate_human_authorizations": [
+        "MATERIALIZATION",
+        "USER_ACCEPTANCE",
+        "STAGING",
+        "COMMIT",
+        "PUBLICATION"
+      ]
+    }
   },
   "front_class_contract": {
     "allowed_values": [

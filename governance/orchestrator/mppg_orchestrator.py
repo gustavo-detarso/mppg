@@ -15,6 +15,7 @@ MASTER_SHA="3f3997c771c0b579089598787b9cedd85ba6749a1dab1c3724e212f50052896d"
 PRODUCTION_API="https://api.openai.com/v1/responses"
 STATE_ROOT=Path(os.path.expanduser("~/.local/state/mppg-orchestrator"))
 RUN_ROOT=STATE_ROOT/"runs"
+CHECKPOINT_SEQUENCE=("STAGING","COMMIT","PUBLICATION","CLOSURE")
 AUTO_ACTIONS={"NOOP","RERUN_READONLY_PROBE","RECLASSIFY_FROM_EVIDENCE","REBUILD_EPHEMERAL_AUDITOR","RECOMPUTE_EPHEMERAL_EVIDENCE","RETRY_EXTERNAL_READONLY","SIMULATE_PATCH_IN_SHADOW"}
 PROBE_NAMES={"git_status","governance_verify","software_status","git_diff_name_status","git_cached_name_status","runtime_source_equivalence","ignored_python_cache_inventory","external_untracked_fingerprint","current_scope_diff_check","python_compile_temp_copy","canonical_tree_clean","protected_state_summary","closed_loop_canary"}
 SHADOW_PROBES={"git_diff_check","python_compile_changed","governance_manifest","static_tests","orchestrator_self_test"}
@@ -259,6 +260,58 @@ def context():
   p={"front":f["kind"],"front_class":"mixed","product_artifact_required":True,"user_acceptance_required":True,"representative_runtime_required":True};b.append({"domain":"authority_model","code":"SEMANTIC_FRONT_ADJUDICATION_REQUIRED","summary":f["kind"]})
  return {"refs":r,"front":f,"profile":p,"prompt_master_sha256":shaf(MASTER)},b
 def savej(p,o):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(sanitize(json.dumps(o,ensure_ascii=True,indent=2,sort_keys=True),250000),encoding="utf-8")
+def checkpoint_root():return Path(os.path.expanduser(os.environ.get("MPPG_CHECKPOINT_ROOT","~/.local/share/mppg-ai-supervisor/fronts")))
+def _checkpoint_front(front):
+ if not isinstance(front,str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,127}",front):raise OrchestratorError("invalid checkpoint front")
+ return front
+def _checkpoint_paths(front,gate_name):
+ front=_checkpoint_front(front);gate_name=gate_name.upper()
+ if gate_name not in CHECKPOINT_SEQUENCE:raise OrchestratorError("invalid checkpoint gate")
+ p=checkpoint_root()/front/(gate_name.lower()+".json");return p,Path(str(p)+".sha256")
+def _checkpoint_bytes(record):return (json.dumps(record,ensure_ascii=True,sort_keys=True,separators=(",",":"))+"\n").encode("utf-8")
+def _atomic_bytes(path,data):
+ path.parent.mkdir(parents=True,exist_ok=True);os.chmod(path.parent,0o700)
+ fd,tmp=tempfile.mkstemp(prefix=".checkpoint-",dir=str(path.parent))
+ try:
+  with os.fdopen(fd,"wb") as f:f.write(data);f.flush();os.fsync(f.fileno())
+  os.chmod(tmp,0o600);os.replace(tmp,path)
+ finally:
+  if os.path.exists(tmp):os.unlink(tmp)
+def validate_gate_checkpoint(front,gate_name,expected_scope=None,expected_token=None):
+ gate_name=gate_name.upper();p,side=_checkpoint_paths(front,gate_name)
+ if not p.is_file() or not side.is_file():raise OrchestratorError("missing "+gate_name+" checkpoint")
+ raw=p.read_bytes();actual=shab(raw)
+ try:declared=side.read_text(encoding="ascii").strip()
+ except Exception as e:raise OrchestratorError("invalid checkpoint sidecar") from e
+ if not re.fullmatch(r"[0-9a-f]{64}",declared) or declared!=actual:raise OrchestratorError("checkpoint SHA-256 mismatch")
+ try:record=json.loads(raw)
+ except Exception as e:raise OrchestratorError("invalid checkpoint JSON") from e
+ required={"format","front","gate","scope","gate_token","evidence","predecessor_sha256"}
+ if set(record)!=required or record["format"]!="mppg_git_gate_checkpoint" or record["front"]!=_checkpoint_front(front) or record["gate"]!=gate_name:raise OrchestratorError("checkpoint identity mismatch")
+ if not isinstance(record["scope"],list) or record["scope"]!=sorted(set(record["scope"])):raise OrchestratorError("checkpoint scope is not canonical")
+ if expected_scope is not None and record["scope"]!=sorted(set(expected_scope)):raise OrchestratorError("checkpoint scope mismatch")
+ if expected_token is not None and record["gate_token"]!=expected_token:raise OrchestratorError("checkpoint token mismatch")
+ pos=CHECKPOINT_SEQUENCE.index(gate_name)
+ if pos==0:
+  if record["predecessor_sha256"] is not None:raise OrchestratorError("STAGING checkpoint has predecessor")
+ else:
+  predecessor=validate_gate_checkpoint(front,CHECKPOINT_SEQUENCE[pos-1])
+  if record["predecessor_sha256"]!=predecessor["checkpoint_sha256"]:raise OrchestratorError("checkpoint predecessor mismatch")
+ return {**record,"checkpoint_sha256":actual}
+def write_gate_checkpoint(front,gate_name,scope,gate_token,evidence,predecessor_sha256=None):
+ gate_name=gate_name.upper();front=_checkpoint_front(front);scope=sorted(set(scope));pos=CHECKPOINT_SEQUENCE.index(gate_name)
+ if pos==0:
+  if predecessor_sha256 is not None:raise OrchestratorError("STAGING checkpoint predecessor prohibited")
+ else:
+  predecessor=validate_gate_checkpoint(front,CHECKPOINT_SEQUENCE[pos-1],expected_scope=scope)
+  if predecessor_sha256!=predecessor["checkpoint_sha256"]:raise OrchestratorError("missing or invalid checkpoint predecessor")
+ record={"format":"mppg_git_gate_checkpoint","front":front,"gate":gate_name,"scope":scope,"gate_token":gate_token,"evidence":evidence,"predecessor_sha256":predecessor_sha256}
+ raw=_checkpoint_bytes(record);digest=shab(raw);p,side=_checkpoint_paths(front,gate_name)
+ if p.exists() or side.exists():
+  existing=validate_gate_checkpoint(front,gate_name,expected_scope=scope,expected_token=gate_token)
+  if existing["checkpoint_sha256"]!=digest:raise OrchestratorError("checkpoint overwrite prohibited")
+  return existing
+ _atomic_bytes(p,raw);_atomic_bytes(side,(digest+"\n").encode("ascii"));return validate_gate_checkpoint(front,gate_name,expected_scope=scope,expected_token=gate_token)
 def validate_patch_scope(patch,scope):
  touched=[]
  for line in patch.splitlines():
@@ -440,14 +493,14 @@ def user_accept_materialization(scope,decision):
  if not gate("USER ACCEPTANCE",ua,verb="APPROVE"):return False
  print("USER_ACCEPTANCE=PASS");return True
 
-def exact_stage_scope(scope):
+def exact_stage_scope(front,scope,subject):
  if git_ro("diff","--cached","--name-only").stdout.strip():raise OrchestratorError("staging non-empty")
  with tempfile.TemporaryDirectory(prefix="mppg-stage-candidate-") as td:
   t=Path(td);idx=t/"idx";obj=t/"objects";obj.mkdir();env=os.environ.copy();env["GIT_INDEX_FILE"]=str(idx);env["GIT_OBJECT_DIRECTORY"]=str(obj);env["GIT_ALTERNATE_OBJECT_DIRECTORIES"]=git_objects_dir();run(["git","-C",str(ROOT),"read-tree","HEAD"],env=env);run(["git","-C",str(ROOT),"add","--",*scope],env=env)
   ck=run(["git","-C",str(ROOT),"diff","--cached","--check","HEAD"],env=env,check=False)
   if ck.returncode!=0:raise OrchestratorError("candidate staged diff-check failed")
   cp=run(["git","-C",str(ROOT),"diff","--cached","--binary","--full-index","HEAD"],env=env);cn=run(["git","-C",str(ROOT),"diff","--cached","--name-only","-z","HEAD"],env=env)
-  st=token("STAGING",{"scope":scope,"patch":shab(cp.stdout_bytes),"paths":shab(cn.stdout_bytes)})
+  payload={"scope":scope,"patch":shab(cp.stdout_bytes),"paths":shab(cn.stdout_bytes)};st=token("STAGING",payload)
   if not gate("STAGING",st):return False,None,None
   ip=Path(git("rev-parse","--git-path","index").stdout.strip());ip=ip if ip.is_absolute() else ROOT/ip;bak=Path(td)/"real-index";shutil.copy2(ip,bak);before=shaf(ip)
   try:
@@ -455,23 +508,57 @@ def exact_stage_scope(scope):
    if rc.returncode!=0:raise OrchestratorError("real staged diff-check failed")
    rp=git("diff","--cached","--binary","--full-index","HEAD");rn=git("diff","--cached","--name-only","-z","HEAD")
    if shab(rp.stdout_bytes)!=shab(cp.stdout_bytes) or shab(rn.stdout_bytes)!=shab(cn.stdout_bytes):raise OrchestratorError("candidate/real staged mismatch")
+   head=git("rev-parse","HEAD").stdout.strip();write_gate_checkpoint(front,"STAGING",scope,st,{"baseline_head":head,"patch_sha256":payload["patch"],"paths_sha256":payload["paths"],"subject":subject})
   except Exception:shutil.copy2(bak,ip);assert shaf(ip)==before;raise
   print("EXACT_STAGING=PASS");return True,cp.stdout_bytes,cn.stdout_bytes
-def commit_publish(scope,patch,names,subject):
- ct=token("COMMIT",{"scope":scope,"patch":shab(patch),"paths":shab(names),"subject":subject})
- if not gate("COMMIT",ct):return False
- par=git("rev-parse","HEAD").stdout.strip()
- if remote()!=par:raise OrchestratorError("remote moved before commit")
- git("commit","-m",subject);new=git("rev-parse","HEAD").stdout.strip()
- if git("rev-parse","HEAD^").stdout.strip()!=par:raise OrchestratorError("commit parent mismatch")
- print("ISOLATED_COMMIT=PASS");print("NEW_COMMIT="+new)
+def publish_from_checkpoint(front,commit_checkpoint):
+ scope=commit_checkpoint["scope"];evidence=commit_checkpoint["evidence"];par=evidence["old_remote"];new=evidence["new_head"]
+ current=validate_gate_checkpoint(front,"COMMIT",expected_scope=scope,expected_token=commit_checkpoint["gate_token"])
+ if current["checkpoint_sha256"]!=commit_checkpoint["checkpoint_sha256"]:raise OrchestratorError("COMMIT checkpoint changed")
+ if git("rev-parse","HEAD").stdout.strip()!=new or remote()!=par:raise OrchestratorError("refs do not match COMMIT checkpoint")
  pt=token("PUBLICATION",{"old_remote":par,"new_head":new})
  if not gate("PUBLICATION",pt):return False
+ current=validate_gate_checkpoint(front,"COMMIT",expected_scope=scope,expected_token=commit_checkpoint["gate_token"])
  if remote()!=par:raise OrchestratorError("remote moved before publication")
  if git("push","--porcelain","origin","refs/heads/master:refs/heads/master",check=False).returncode!=0:raise OrchestratorError("push failed")
  r=refs()
  if not r["head"]==r["tracking"]==r["remote"]==new:raise OrchestratorError("postpublication refs diverged")
+ publication=write_gate_checkpoint(front,"PUBLICATION",scope,pt,{"old_remote":par,"published_head":new},current["checkpoint_sha256"])
+ closure_token=token("CLOSURE",{"published_head":new,"publication_checkpoint_sha256":publication["checkpoint_sha256"]})
+ write_gate_checkpoint(front,"CLOSURE",scope,closure_token,{"published_head":new,"refs_converged":True},publication["checkpoint_sha256"])
  print("PUBLICATION=PASS");print("POST_PUBLICATION_CLOSURE=PASS");print("FRONT_CLOSED=true");return True
+def commit_publish(front,scope,patch,names,subject):
+ stage_payload={"scope":scope,"patch":shab(patch),"paths":shab(names)};st=token("STAGING",stage_payload)
+ staging=validate_gate_checkpoint(front,"STAGING",expected_scope=scope,expected_token=st)
+ evidence=staging["evidence"]
+ if evidence.get("patch_sha256")!=stage_payload["patch"] or evidence.get("paths_sha256")!=stage_payload["paths"] or evidence.get("subject")!=subject:raise OrchestratorError("STAGING checkpoint evidence mismatch")
+ ct=token("COMMIT",{"scope":scope,"patch":shab(patch),"paths":shab(names),"subject":subject})
+ if not gate("COMMIT",ct):return False
+ staging=validate_gate_checkpoint(front,"STAGING",expected_scope=scope,expected_token=st)
+ par=git("rev-parse","HEAD").stdout.strip()
+ if evidence.get("baseline_head")!=par or remote()!=par:raise OrchestratorError("refs do not match STAGING checkpoint")
+ git("commit","-m",subject);new=git("rev-parse","HEAD").stdout.strip()
+ if git("rev-parse","HEAD^").stdout.strip()!=par:raise OrchestratorError("commit parent mismatch")
+ committed=write_gate_checkpoint(front,"COMMIT",scope,ct,{"old_remote":par,"new_head":new,"patch_sha256":shab(patch),"paths_sha256":shab(names),"subject":subject},staging["checkpoint_sha256"])
+ print("ISOLATED_COMMIT=PASS");print("NEW_COMMIT="+new);return publish_from_checkpoint(front,committed)
+def resume_git_proof_continuity():
+ root=checkpoint_root()
+ if not root.is_dir():return None
+ for directory in sorted((x for x in root.iterdir() if x.is_dir()),key=lambda x:x.name):
+  front=directory.name
+  try:
+   if (directory/"commit.json").is_file() and not (directory/"publication.json").exists():
+    committed=validate_gate_checkpoint(front,"COMMIT");e=committed["evidence"]
+    if git("rev-parse","HEAD").stdout.strip()==e.get("new_head") and remote()==e.get("old_remote"):
+     print("GIT_PROOF_RESTART_RECOVERY=COMMIT");return 0 if publish_from_checkpoint(front,committed) else 0
+   if (directory/"staging.json").is_file() and not (directory/"commit.json").exists():
+    staging=validate_gate_checkpoint(front,"STAGING");e=staging["evidence"]
+    patch=git("diff","--cached","--binary","--full-index","HEAD").stdout_bytes;names=git("diff","--cached","--name-only","-z","HEAD").stdout_bytes;head=git("rev-parse","HEAD").stdout.strip()
+    if head==remote()==e.get("baseline_head") and shab(patch)==e.get("patch_sha256") and shab(names)==e.get("paths_sha256"):
+     print("GIT_PROOF_RESTART_RECOVERY=STAGING");return 0 if commit_publish(front,staging["scope"],patch,names,e["subject"]) else 0
+  except OrchestratorError:
+   continue
+ return None
 def ingestion(ctx):
  raise BlockerError("authority_model","EXPLICIT_INGESTION_FRONT_REQUIRED","repository content ingestion cannot be inferred from external untracked discovery; establish explicit semantic scope authority in a separate governed front before any staging")
 def fallback_context():
@@ -499,6 +586,9 @@ def self_test():
  verify_governance();ast.parse(Path(__file__).read_text(encoding="utf-8"));s=loadj(AI_SCHEMA);c=conf();assert s["additionalProperties"] is False and set(s["required"])==set(s["properties"]);assert all(t["strict"] and t["parameters"]["additionalProperties"] is False for t in TOOLS);assert c["api_endpoint"]==PRODUCTION_API;can=CommandResult(subprocess.CompletedProcess(["c"],0,b"\xe2\xff",b""));assert can.stdout.encode("utf-8",errors="surrogateescape")==b"\xe2\xff";pc=python_compile_temp_copy();assert pc["ok"] and not pc["canonical_pycache_exists"];print("ORCHESTRATOR_BYTE_SAFE_IO_CANARY=PASS");print("ORCHESTRATOR_TEMP_PYCOMPILE_CANARY=PASS");print("ORCHESTRATOR_CLOSED_LOOP_ACTION_REGISTRY=PASS");print("ORCHESTRATOR_SELF_TEST=PASS")
 def guided_run(dry=False):
  rid=dt.datetime.now().strftime("%Y%m%dT%H%M%S")+"-"+uuid.uuid4().hex[:8];run_dir=RUN_ROOT/rid;run_dir.mkdir(parents=True,exist_ok=True);print("RUN_ID="+rid);pending=None
+ if not dry:
+  recovered=resume_git_proof_continuity()
+  if recovered is not None:return recovered
  for cycle in range(1,int(conf().get("max_autoremediation_cycles",12))+1):
   ctx,b=safe_context()
   if pending:b=[pending]
@@ -513,10 +603,12 @@ def guided_run(dry=False):
     if state=="failed":pending=err;print("MACHINE_ACCEPTANCE_FAILURE_REENTERED_AI_LOOP=true");continue
     pending=None
     if not user_accept_materialization(d["mutation_scope"],d):return 0
-    try:staged,patch,names=exact_stage_scope(d["mutation_scope"])
+    subject=d["proposed_commit_subject"].strip() or conf()["generic_commit_subject"]
+    front=ctx["profile"]["front"]
+    try:staged,patch,names=exact_stage_scope(front,d["mutation_scope"],subject)
     except Exception as e:pending=exception_blocker(e,"exact_staging");print("STAGING_FAILURE_REENTERED_AI_LOOP=true");continue
     if not staged:return 0
-    subject=d["proposed_commit_subject"].strip() or conf()["generic_commit_subject"];return 0 if commit_publish(d["mutation_scope"],patch,names,subject) else 0
+    return 0 if commit_publish(front,d["mutation_scope"],patch,names,subject) else 0
    if rem:
     print("TOTAL_BLOCKERS="+str(len(rem)))
     for x in rem:print("BLOCKER_DOMAIN="+x.get("domain","unknown"));print("BLOCKER_CODE="+x.get("code","UNKNOWN"));print("BLOCKER_SUMMARY="+sanitize(x.get("summary",""),2000))

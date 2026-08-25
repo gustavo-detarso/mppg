@@ -195,6 +195,27 @@ bytes and from being misclassified as staging.
 The real index is touched only by the explicit exact-staging transition.
 After staging, cached patch/path/blob identity is the semantic authority.
 
+## Persistent Git proof continuity
+
+The live exact-staging, commit, publication, and closure transitions use one
+persistent checkpoint chain rooted at:
+
+`~/.local/share/mppg-ai-supervisor/fronts/<front>/`
+
+Checkpoint records are canonical JSON accompanied by `.sha256` sidecars. The
+records bind the front, gate, exact scope, gate token, transition evidence, and
+explicit predecessor SHA-256. `STAGING` has no predecessor; `COMMIT` requires
+and names `STAGING`; `PUBLICATION` requires and names `COMMIT`; `CLOSURE`
+requires and names `PUBLICATION`.
+
+The controller validates the JSON bytes against the sidecar and recursively
+validates predecessor continuity before performing the next Git mutation.
+Scope, token, ref, cached-patch, or cached-path mismatch fails closed. A valid
+staged or committed checkpoint may be recovered after process restart through
+the same mutation functions and authorization gates used by the uninterrupted
+flow. Checkpoint recovery does not make authorization transitive:
+MATERIALIZATION, USER_ACCEPTANCE, STAGING, COMMIT, and PUBLICATION continue to
+require their own human authorization.
 
 ## Portable host-derived candidate freeze
 
