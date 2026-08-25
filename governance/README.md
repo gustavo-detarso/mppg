@@ -48,3 +48,7 @@ requirements fail-closed, blocks staging while required user acceptance is
 pending, and computes closure from gate state rather than hardcoded success.
 
 See `contracts/USER_ACCEPTANCE_DERIVATION.md`.
+
+## Permanent AI orchestrator
+
+Routine command after closure: `mppg-orchestrator run`.

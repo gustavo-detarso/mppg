@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "model": "gpt-5.6-luna",
+  "api_endpoint": "https://api.openai.com/v1/responses",
+  "store": false,
+  "parallel_tool_calls": false,
+  "max_ai_rounds_per_blocker": 8,
+  "http_timeout_seconds": 90,
+  "canonical_repo": "/home/gustavodetarso/Documentos/mppg",
+  "canonical_software": "software/academic_pipeline_mppg",
+  "state_root": "~/.local/state/mppg-orchestrator",
+  "runtime_root": "~/.local/share/mppg-orchestrator/runtime",
+  "launcher": "~/.local/bin/mppg-orchestrator",
+  "key_source": "OPENAI_API_KEY process environment only",
+  "content_ingestion_commit_subject": "chore(content): ingest academic artifacts",
+  "harness_rebuild_threshold": 2
+}
