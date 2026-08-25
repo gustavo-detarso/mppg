@@ -236,8 +236,8 @@ class AI:
    o=json.loads(txt);validate_resolution(o);return o
   raise OrchestratorError("AI tool-loop round limit reached")
 def detect():
- items=status_items();staged=git("diff","--cached","--name-only").stdout.splitlines();tracked=git("diff","--name-only").stdout.splitlines();un=[x["path"] for x in items if x["status"]=="??"];sw=[x for x in un if x.startswith(SOFTWARE_REL+"/")];gov=[x for x in items if x["path"].startswith("governance/") or x["path"]==".gitattributes"];ext=[x for x in un if not x.startswith("governance/") and not x.startswith(SOFTWARE_REL+"/") and x!=".gitattributes"]
- k="preexisting_staging" if staged else "canonical_software_untracked" if sw else "governance_change" if gov else "tracked_change" if tracked else "repository_content_ingestion" if ext else "noop"
+ items=status_items();staged=git_ro("diff","--cached","--name-only").stdout.splitlines();tracked=git_ro("diff","--name-only").stdout.splitlines();un=[x["path"] for x in items if x["status"]=="??"];sw=[x for x in un if x.startswith(SOFTWARE_REL+"/")];gov=[x for x in items if x["path"].startswith("governance/") or x["path"]==".gitattributes"];ext=[x for x in un if not x.startswith("governance/") and not x.startswith(SOFTWARE_REL+"/") and x!=".gitattributes"]
+ k="preexisting_staging" if staged else "canonical_software_untracked" if sw else "governance_change" if gov else "tracked_change" if tracked else "external_untracked_preserved" if ext else "noop"
  return {"kind":k,"staged":staged,"tracked":tracked,"untracked":un,"software_untracked":sw,"external_untracked":ext,"items":items}
 def path_manifest(paths):
  ent=[];bl=[]
@@ -252,8 +252,8 @@ def context():
  f=detect()
  if f["staged"]:b.append({"domain":"repository_state","code":"PREEXISTING_STAGING","summary":"staging non-empty"})
  if f["software_untracked"]:b.append({"domain":"repository_state","code":"CANONICAL_SOFTWARE_UNTRACKED","summary":"canonical software has untracked content"})
- if f["kind"]=="repository_content_ingestion":
-  _,fp,x=path_manifest(f["external_untracked"]);b+=x;p={"front":"repository-content-ingestion","front_class":"other","product_artifact_required":False,"user_acceptance_required":False,"representative_runtime_required":False,"candidate_count":len(f["external_untracked"]),"candidate_manifest_sha256":fp}
+ if f["kind"]=="external_untracked_preserved":
+  x=external_fingerprint();p={"front":"external-untracked-preservation","front_class":"other","product_artifact_required":False,"user_acceptance_required":False,"representative_runtime_required":False,"external_untracked_count":x["count"],"external_untracked_fingerprint_sha256":x["sha256"],"external_untracked_paths":x["paths"],"external_untracked_policy":"preserve_out_of_scope"}
  elif f["kind"]=="noop":p={"front":"noop","front_class":"other","product_artifact_required":False,"user_acceptance_required":False,"representative_runtime_required":False}
  else:
   p={"front":f["kind"],"front_class":"mixed","product_artifact_required":True,"user_acceptance_required":True,"representative_runtime_required":True};b.append({"domain":"authority_model","code":"SEMANTIC_FRONT_ADJUDICATION_REQUIRED","summary":f["kind"]})
@@ -473,15 +473,7 @@ def commit_publish(scope,patch,names,subject):
  if not r["head"]==r["tracking"]==r["remote"]==new:raise OrchestratorError("postpublication refs diverged")
  print("PUBLICATION=PASS");print("POST_PUBLICATION_CLOSURE=PASS");print("FRONT_CLOSED=true");return True
 def ingestion(ctx):
- paths=ctx["front"]["external_untracked"];fp=ctx["profile"]["candidate_manifest_sha256"];print("FRONT=repository-content-ingestion");print("CANDIDATE_COUNT="+str(len(paths)));st=token("STAGING",{"paths":paths,"manifest_sha":fp})
- if not gate("STAGING",st):return 0
- # Existing ingestion exact staging behavior remains intentionally separate.
- _,cur,b=path_manifest(paths)
- if b or cur!=fp:raise OrchestratorError("candidate drift")
- with tempfile.TemporaryDirectory(prefix="mppg-ingestion-") as td:
-  t=Path(td);idx=t/"idx";obj=t/"objects";obj.mkdir();env=os.environ.copy();env["GIT_INDEX_FILE"]=str(idx);env["GIT_OBJECT_DIRECTORY"]=str(obj);env["GIT_ALTERNATE_OBJECT_DIRECTORIES"]=git_objects_dir();run(["git","-C",str(ROOT),"read-tree","HEAD"],env=env);run(["git","-C",str(ROOT),"add","--",*paths],env=env);ck=run(["git","-C",str(ROOT),"diff","--cached","--check","HEAD"],env=env,check=False)
-  if ck.returncode!=0:raise BlockerError("test","INGESTION_CANDIDATE_DIFF_CHECK_FAILED",sanitize(ck.stdout+ck.stderr,3000))
- git("add","--",*paths);print("EXACT_STAGING=PASS");patch=git("diff","--cached","--binary","--full-index","HEAD").stdout_bytes;names=git("diff","--cached","--name-only","-z","HEAD").stdout_bytes;return 0 if not commit_publish(paths,patch,names,conf()["content_ingestion_commit_subject"]) else 0
+ raise BlockerError("authority_model","EXPLICIT_INGESTION_FRONT_REQUIRED","repository content ingestion cannot be inferred from external untracked discovery; establish explicit semantic scope authority in a separate governed front before any staging")
 def fallback_context():
  r={"branch":"","head":"","tracking":"","remote":""}
  try:r.update(refs())
@@ -531,7 +523,11 @@ def guided_run(dry=False):
     print("FRONT_CLOSED=false");return 2
    pending=None;continue
   if dry:print("DRY_RUN=PASS");print(json.dumps(ctx["profile"],ensure_ascii=True,indent=2,sort_keys=True));return 0
-  if ctx["front"]["kind"]=="repository_content_ingestion":return ingestion(ctx)
+  if ctx["front"]["kind"]=="external_untracked_preserved":
+   now=external_fingerprint();stable=now["count"]==ctx["profile"]["external_untracked_count"] and now["sha256"]==ctx["profile"]["external_untracked_fingerprint_sha256"] and now["paths"]==ctx["profile"]["external_untracked_paths"]
+   print("FRONT=external-untracked-preservation");print("EXTERNAL_UNTRACKED_POLICY=PRESERVE_OUT_OF_SCOPE");print("EXTERNAL_UNTRACKED_COUNT="+str(now["count"]));print("EXTERNAL_UNTRACKED_INTRA_RUN_STABLE="+str(stable).lower())
+   if not stable:print("TOTAL_BLOCKERS=1");print("BLOCKER_DOMAIN=repository_state");print("BLOCKER_CODE=EXTERNAL_UNTRACKED_CHANGED_INTRA_RUN");print("FRONT_CLOSED=false");return 2
+   print("NOOP=true");print("FRONT_CLOSED=true");return 0
   if ctx["front"]["kind"]=="noop":print("NOOP=true");print("FRONT_CLOSED=true");return 0
   print("NEXT_GATE=MATERIALIZATION_AUTHORIZATION");print("FRONT_CLOSED=false");return 3
  print("AUTOREMEDIATION_CYCLE_BUDGET_EXHAUSTED=true");print("FRONT_CLOSED=false");return 2

@@ -161,6 +161,14 @@ or EOL semantics to PDF, DOCX, ODT, PNG, ZIP, SQLite, BIN and QDA containers.
 This is semantic file treatment, not a scanner exclusion. Text files remain
 subject to the normal cached diff check.
 
+## External untracked semantic boundary
+
+External untracked content outside `software/academic_pipeline_mppg/` is protected out-of-scope state by default. Discovery is evidence, not ingestion intent. `mppg-orchestrator run` may inventory and fingerprint that content intra-run, but it must not create a repository-content-ingestion front or reach staging merely because such files exist.
+
+When external untracked content is the only repository difference, the controller classifies the state as `external_untracked_preserved`, recomputes its byte-safe fingerprint before closure, reports `EXTERNAL_UNTRACKED_POLICY=PRESERVE_OUT_OF_SCOPE`, and exits without staging, commit or publication.
+
+The historical automatic ingestion path is fail-closed behind `EXPLICIT_INGESTION_FRONT_REQUIRED`. Any future intentional repository-content ingestion requires a separate governed front with explicit semantic scope authority before staging.
+
 ## Closed-loop AI supervisor
 
 `mppg-orchestrator run` executes a bounded supervisor: detect blocker → AI adjudication → deterministic allowlisted action → evidence recomputation → AI re-adjudication. Automatic action labels are executable capabilities, not advisory text.

@@ -83,7 +83,13 @@
   "protected_state": {
     "root_env": "byte_exact_preservation_unless_explicitly_authorized",
     "canonical_software_untracked": "blocker",
-    "external_untracked": "preserve_and_compare_intra_run_with_byte_safe_fingerprint"
+    "external_untracked": "preserve_and_compare_intra_run_with_byte_safe_fingerprint",
+    "repository_content_ingestion": {
+      "automatic_from_external_untracked_discovery": "prohibited",
+      "explicit_semantic_scope_authority_required": true,
+      "current_automatic_ingestion_status": "disabled_fail_closed",
+      "required_blocker_without_authority": "EXPLICIT_INGESTION_FRONT_REQUIRED"
+    }
   },
   "front_required_contracts": [
     "FRONT_CLASS",
