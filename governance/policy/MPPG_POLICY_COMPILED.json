@@ -129,7 +129,47 @@
       "FRONT_CLOSURE"
     ],
     "ai_must_not_self_approve_user_acceptance": true,
-    "product_acceptance_is_not_git_authorization": true
+    "product_acceptance_is_not_git_authorization": true,
+    "derivation": {
+      "mode": "fail_closed",
+      "perceptible_role_markers": [
+        "normative_authority",
+        "documentation_current",
+        "operational_contract_documentation",
+        "document",
+        "pdf",
+        "docx",
+        "html",
+        "dashboard",
+        "chart",
+        "report",
+        "interface",
+        "template",
+        "state_template",
+        "generation_prompt",
+        "prompt",
+        "ai_content",
+        "user_perceptible_output",
+        "product_artifact"
+      ],
+      "default_user_acceptance_required_when_perceptible": true,
+      "default_product_artifact_required_when_perceptible": true,
+      "false_override_requires_explicit_contractual_justification": true,
+      "false_override_requires_authority": true,
+      "ai_must_not_author_exception": true,
+      "ai_must_not_self_approve_user_acceptance": true
+    },
+    "staging_precondition": {
+      "when_user_acceptance_required": "TECHNICAL_POST_MATERIALIZATION=PASS AND MACHINE_PRODUCT_ACCEPTANCE=PASS AND USER_ACCEPTANCE=PASS",
+      "deferred_exception": "Only when USER_ACCEPTANCE_DEFERRED_TO_PUBLISHED_RUNTIME=true is explicitly justified and frozen in the front contract."
+    },
+    "closure_formula": "FRONT_CLOSED = TECHNICAL_CLOSURE_PASS AND MACHINE_PRODUCT_ACCEPTANCE_PASS AND USER_ACCEPTANCE_PASS_WHEN_REQUIRED AND ZERO_APPLICABLE_BLOCKERS",
+    "pending_disposition": {
+      "technical_gates": "PASS",
+      "user_acceptance": "PENDING",
+      "front_progress": "AWAITING_USER_ACCEPTANCE",
+      "front_closed": false
+    }
   },
   "progress": [
     "SOFTWARE_STATE_PROGRESS",
@@ -151,6 +191,27 @@
     "api_key_source": "OPENAI_API_KEY environment variable only",
     "api_key_must_never_be_logged_or_versioned": true,
     "state_root": "~/.local/state/mppg-orchestrator",
-    "runtime_root": "~/.local/share/mppg-orchestrator"
+    "runtime_root": "~/.local/share/mppg-orchestrator",
+    "mandatory_acceptance_guard": true,
+    "front_class_enum_validation": true,
+    "acceptance_derivation_must_precede_staging": true,
+    "closure_decision_must_be_computed_not_hardcoded": true,
+    "forbid_hardcoded_user_acceptance_not_applicable": true,
+    "forbid_hardcoded_front_closed_true": true
+  },
+  "front_class_contract": {
+    "allowed_values": [
+      "functional",
+      "structural",
+      "documentation",
+      "dependency",
+      "runtime",
+      "persistent_data",
+      "security_access",
+      "mixed",
+      "other"
+    ],
+    "unknown_value_policy": "block_fail_closed",
+    "governance_front_recommendation": "mixed"
   }
 }

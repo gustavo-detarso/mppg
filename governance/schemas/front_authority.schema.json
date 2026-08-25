@@ -8,7 +8,11 @@
     "front_class",
     "front_baseline_head",
     "passed_gates",
-    "user_acceptance_status"
+    "user_acceptance_status",
+    "user_acceptance_required",
+    "product_artifact_required",
+    "representative_runtime_required",
+    "front_closed"
   ],
   "properties": {
     "front": {
@@ -16,8 +20,17 @@
       "minLength": 1
     },
     "front_class": {
-      "type": "string",
-      "minLength": 1
+      "enum": [
+        "functional",
+        "structural",
+        "documentation",
+        "dependency",
+        "runtime",
+        "persistent_data",
+        "security_access",
+        "mixed",
+        "other"
+      ]
     },
     "front_baseline_head": {
       "type": "string",
@@ -148,6 +161,59 @@
       ]
     },
     "front_closed": {
+      "type": "boolean"
+    },
+    "user_acceptance_required": {
+      "type": "boolean"
+    },
+    "product_artifact_required": {
+      "type": "boolean"
+    },
+    "representative_runtime_required": {
+      "type": "boolean"
+    },
+    "user_acceptance_derivation_rationale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_acceptance_exception_justification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_acceptance_exception_authority": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_acceptance": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "PENDING",
+        "CHANGES_REQUESTED",
+        "PASS"
+      ]
+    },
+    "machine_product_acceptance": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "PENDING",
+        "PASS",
+        "BLOCKED"
+      ]
+    },
+    "technical_validation": {
+      "enum": [
+        "PENDING",
+        "PASS",
+        "BLOCKED"
+      ]
+    },
+    "user_acceptance_deferred_to_published_runtime": {
       "type": "boolean"
     }
   },

@@ -23,5 +23,15 @@
   "software_state_progress": "0_PERCENT",
   "proof_closure_progress": "0_PERCENT",
   "product_acceptance_progress": "NOT_APPLICABLE",
-  "front_closed": false
+  "front_closed": false,
+  "user_acceptance_required": false,
+  "product_artifact_required": false,
+  "representative_runtime_required": false,
+  "user_acceptance_derivation_rationale": null,
+  "user_acceptance_exception_justification": null,
+  "user_acceptance_exception_authority": null,
+  "user_acceptance_deferred_to_published_runtime": false,
+  "technical_validation": "PENDING",
+  "machine_product_acceptance": "NOT_APPLICABLE",
+  "user_acceptance": "NOT_APPLICABLE"
 }

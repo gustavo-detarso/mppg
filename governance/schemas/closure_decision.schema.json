@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.mppg/schemas/closure_decision.schema.json",
+  "title": "MPPG Closure Decision",
+  "type": "object",
+  "required": [
+    "technical_closure_pass",
+    "machine_product_acceptance",
+    "user_acceptance_required",
+    "user_acceptance",
+    "applicable_blockers",
+    "front_closed",
+    "front_progress"
+  ],
+  "properties": {
+    "technical_closure_pass": {
+      "type": "boolean"
+    },
+    "machine_product_acceptance": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "PENDING",
+        "PASS",
+        "BLOCKED"
+      ]
+    },
+    "user_acceptance_required": {
+      "type": "boolean"
+    },
+    "user_acceptance": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "PENDING",
+        "CHANGES_REQUESTED",
+        "PASS"
+      ]
+    },
+    "applicable_blockers": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "front_closed": {
+      "type": "boolean"
+    },
+    "front_progress": {
+      "type": "string"
+    },
+    "decision_reason": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
