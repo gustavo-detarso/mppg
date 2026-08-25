@@ -107,6 +107,14 @@ template = "profile://templates/template_atividade.org"
 validator = "profile://validators/atividade_rules.toml"
 description = "Atividade acadêmica FGV com Ficha Técnica, logo e barra degradê."
 
+[layouts.fichamento_qualitativo]
+genero_academico = "atividade"
+front_matter = "fichamento_qualitativo"
+classe_latex = "fgv-paper"
+template = "profile://templates/template_atividade.org"
+validator = "profile://validators/atividade_rules.toml"
+description = "Fichamento qualitativo FGV com Ficha Técnica e cabeçalho compacto aprovado."
+
 [layouts.paper_fgv]
 genero_academico = "paper"
 front_matter = "paper_fgv"
@@ -138,12 +146,12 @@ description = "Resumo analítico-comparativo de artigos do corpus local."
 [document_content_types.fichamento.documento]
 tipo_conteudo = "fichamento"
 genero_academico = "atividade"
-layout = "atividade_fgv"
+layout = "fichamento_qualitativo"
 papertype = "Fichamento de leitura"
 perfil_redacao = "academico_critico_reflexivo"
 
 [document_content_types.fichamento]
-default_layout = "atividade_fgv"
+default_layout = "fichamento_qualitativo"
 prompt = "app://prompts/document/fichamento.txt"
 description = "Fichamento acadêmico estruturado conforme roteiro de orientação, com análise crítica e reflexão pessoal baseada no corpus."
 
