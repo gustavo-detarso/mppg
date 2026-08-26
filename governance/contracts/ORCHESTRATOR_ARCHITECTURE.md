@@ -8,7 +8,7 @@ The normative authority is:
 
 Expected SHA-256 at bootstrap:
 
-`3f3997c771c0b579089598787b9cedd85ba6749a1dab1c3724e212f50052896d`
+`286e5ec9c27e8c9c895dbc956b861477bfae63277f9fa97033b1667c2ce50f79`
 
 `policy/MPPG_POLICY_COMPILED.json` is derivative and never overrides the Prompt Master.
 
