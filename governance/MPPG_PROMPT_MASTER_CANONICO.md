@@ -1,22 +1,65 @@
 # SOFTWARE MPPG / ACADEMIC PIPELINE
-## PROMPT MASTER CANÔNICO DE GOVERNANÇA, MANUTENÇÃO, EVOLUÇÃO E ACEITAÇÃO DE PRODUTO — V2
+## PROMPT MASTER CANÔNICO DE GOVERNANÇA, MANUTENÇÃO, EVOLUÇÃO, AUTORRECUPERAÇÃO E MATURIDADE — V3
 
 **Projeto:** Software MPPG / Academic Pipeline  
-**Versão normativa:** 2.0  
+**Versão normativa:** 3.0  
 **Status estrutural histórico:** refatoração/canonicalização estrutural encerrada em 100%  
-**Data de consolidação desta autoridade:** 22 de agosto de 2026  
+**Data de consolidação desta autoridade:** 26 de agosto de 2026  
 **Repositório canônico:** `/home/gustavodetarso/Documentos/mppg`  
 **Branch canônica:** `master`  
 **Upstream canônico:** `origin/master`  
 **Baseline histórico do fechamento estrutural:** `4af458e969c672964f1d3043f95a41386f25c825`  
 **HEAD operacional corrente:** resolver read-only de `origin/master` no início de cada frente; não hardcode neste Prompt Master  
-**HEAD publicado conhecido na consolidação v2:** `275727f28ead46e051af779fad3632daa1167ff6`  
+**HEAD operacional vivo conhecido na consolidação v3:** `fb128bf78f4227e37a80d96bfc5fac74de0b2b91` — resolver novamente read-only em toda nova frente; este valor é provenance, não baseline permanente  
 **Raiz canônica do software:** `/home/gustavodetarso/Documentos/mppg/software/academic_pipeline_mppg/`  
-**SHA-256 da autoridade anterior (v1):** `305963293c91636fd83cca9c5fb95eb7e65178d69324ae85a8e29f2f773deec5`
+**SHA-256 da autoridade imediatamente anterior (v2):** `3f3997c771c0b579089598787b9cedd85ba6749a1dab1c3724e212f50052896d`  
+**SHA-256 da autoridade histórica v1:** `305963293c91636fd83cca9c5fb95eb7e65178d69324ae85a8e29f2f773deec5`
 
 ---
 
 ## HISTÓRICO DE REVISÃO
+
+### v3.0 — 26/08/2026
+
+Revisão derivada dos aprendizados acumulados após a v2, em especial das frentes e adjudicações de governança, supervisão e continuidade probatória que culminaram no estado operacional vivo conhecido:
+
+```text
+fb128bf78f4227e37a80d96bfc5fac74de0b2b91
+feat(governance): harden git proof continuity
+```
+
+A v3 preserva integralmente a governança evidence-first/fail-closed da v2 e acrescenta como autoridade normativa permanente:
+
+- `STAGING_CHECKPOINT → COMMIT_CHECKPOINT → PUBLICATION_CHECKPOINT → CLOSURE_CHECKPOINT` como cadeia contemporânea de prova;
+- supervisor persistente e `RECOVERY_KERNEL` em closed loop;
+- `MANUAL_CHAT_LOG_SHUTTLING_REQUIRED=false` para blockers tecnicamente recuperáveis;
+- recuperação assistida por API com credencial somente no ambiente, sem hardcode, sem vazamento e sem autoridade de mutação;
+- structured output/schema, `store=false` quando suportado, whitelist de evidência e validator local independente;
+- distinção formal entre falha do software, falha do harness, falha de transporte e candidato de IA inválido;
+- falha do validator/harness não consome tentativa do candidato quando o candidato não é a causa;
+- reconstrução do harness após duas falhas consecutivas genuínas dos domínios de harness/authority/scanner/evidence packaging;
+- full shadow validation antes de materialização;
+- identidade de candidate patch incluindo arquivos novos por index temporário/shadow, nunca pelo index real antes de autorização de staging;
+- preservação explícita de file mode em escrita atômica/tempfile;
+- adjudicação read-only de estado já criado depois de commit/publicação, sem reset/amend/repush automático;
+- tratamento correto de `HEAD` remoto como pseudo-ref/symref separado de `refs/*` reais;
+- sessão SSH reutilizável com `ControlPath` curto sob `/tmp` e guardrail de comprimento;
+- timeout remoto como transport/harness recuperável até prova contrária;
+- evidence bundles de sucesso e falha autocontidos em `~/Downloads`, com histórico de tentativas e SHA-256;
+- `mppg-orchestrator run` como caminho operacional normal da arquitetura corrente e `mppg-orchestrator self-test` como forma correta de self-test, enquanto esses entrypoints permanecerem vivos e provados;
+- `MATURITY_DIAGNOSTIC_CONTRACT` read-only com análise via API, notas 1–5, confiança, evidências, gaps e roadmap priorizado;
+- separação entre `MANDATORY_NEW_FRONT_IDENTIFIED` e oportunidade opcional de roadmap;
+- regra de que maturidade abaixo de 5/5, ausência de execução no diagnóstico ou oportunidade de produto não provam defeito corrente;
+- machine acceptance da própria resposta da API antes de qualquer apresentação ao usuário;
+- `USER_ACCEPTANCE_REQUIRED=true` para relatórios/roadmaps perceptíveis, mesmo quando a frente é estritamente read-only.
+
+A v2 permanece autoridade histórica imediatamente anterior, com SHA-256:
+
+```text
+3f3997c771c0b579089598787b9cedd85ba6749a1dab1c3724e212f50052896d
+```
+
+---
 
 ### v2.0 — 22/08/2026
 
@@ -68,7 +111,7 @@ O estado estrutural encerrado em 21/08/2026 é o novo baseline canônico. Não r
 
 A existência de histórico Git, bundles antigos, logs ou artefatos de evidência não reabre uma fase encerrada.
 
-Esta versão v2 amplia a autoridade normativa em dois eixos:
+Esta versão v3 preserva esses eixos e amplia a autoridade normativa para closed loop, continuidade probatória, recuperação assistida por API e diagnóstico estratégico de maturidade.
 
 1. **eficiência de engenharia e auditoria**, reduzindo iterações causadas por universo mal classificado, harness defeituoso, autoridade ausente ou evidência redundante; e
 2. **aceitação real do produto**, distinguindo correção técnica de aprovação humana do resultado percebido.
@@ -168,7 +211,7 @@ freeze the converged current operational HEAD at front inception
 
 Se `HEAD`, tracking e remoto divergirem, a divergência deve ser adjudicada antes de qualquer mutação.
 
-Na consolidação desta v2, o descendente funcional publicado conhecido é:
+Na consolidação histórica da v2, o descendente funcional publicado então conhecido era:
 
 ```text
 275727f28ead46e051af779fad3632daa1167ff6
@@ -247,7 +290,7 @@ Não deve ser carregado desnecessariamente no nome operacional sobrevivente.
 
 Em qualquer nova frente, use esta ordem:
 
-1. **Este Prompt Master Canônico v2**.
+1. **Este Prompt Master Canônico v3**.
 2. `FRONT_AUTHORITY_LEDGER` e contratos congelados da frente, desde que compatíveis com este master.
 3. Prompt específico da frente, se criado, desde que não contradiga este master.
 4. Evidência técnica estruturada anexada à frente.
@@ -356,7 +399,7 @@ A governança deve preservar autorizações mutáveis separadas, mas **consolida
 Executar automaticamente, antes de qualquer escrita:
 
 ```text
-1. ler Prompt Master v2
+1. ler Prompt Master v3
 2. resolver estado Git vivo
 3. congelar FRONT_BASELINE_HEAD
 4. classificar a frente
@@ -1667,10 +1710,13 @@ test
 product_acceptance
 user_acceptance
 external_dependency
+transport
+api_candidate
 auditor_harness
 evidence_packaging
 authority_model
 scanner_model
+provenance_resolution
 unknown
 ```
 
@@ -1930,7 +1976,7 @@ Ordem de preferência:
 
 Ao receber uma nova tarefa técnica neste projeto:
 
-1. ler este Prompt Master v2;
+1. ler este Prompt Master v3;
 2. identificar o escopo exato;
 3. verificar evidências anexadas;
 4. resolver read-only `HEAD`, tracking e remoto;
@@ -1991,6 +2037,15 @@ feat(academic-pipeline): integrate fichamento workflow
 ```
 
 O commit `275727...` é o primeiro descendente funcional formalmente fechado sob a nova evolução pós-refatoração; não altera a autoridade histórica `4af458...` como marco do fechamento estrutural.
+
+Na consolidação v3, uma resolução read-only posterior provou convergência viva em:
+
+```text
+fb128bf78f4227e37a80d96bfc5fac74de0b2b91
+feat(governance): harden git proof continuity
+```
+
+Esse OID também é somente provenance histórica conhecida na data da v3. Toda nova frente deve resolver novamente o estado vivo e não pode hardcodá-lo como `FRONT_BASELINE_HEAD` permanente.
 
 Estado final provado:
 
@@ -2290,8 +2345,11 @@ USER_ACCEPTANCE_STATUS=
 CURRENT_PHASE=
 CURRENT_GATE=
 BLOCKER_DOMAIN=
+BLOCKER_ORIGIN=
+BLOCKER_RECOVERABILITY=
 BLOCKERS=
 WARNINGS=
+API_RECOVERY_STATUS=
 
 NEXT_SAFE_READONLY_ACTION=
 NEXT_MUTABLE_GATE=
@@ -2362,4 +2420,991 @@ Se qualquer componente aplicável estiver ausente, a frente ainda não está int
 **Prova sem produto aceito é insuficiente quando a aceitação humana é requisito.  
 Produto aceito sem prova técnica também é insuficiente.  
 O fechamento canônico exige ambos, no escopo aplicável.**
+
+---
+
+# 51. REFINAMENTOS NORMATIVOS V3 — PRECEDÊNCIA
+
+As seções 51 em diante são refinamentos normativos introduzidos pela v3.
+
+Elas **não revogam nem enfraquecem** os gates anteriores. Quando forem mais específicas sobre closed loop, API, checkpoints, transporte, evidence packaging ou maturidade, prevalece a regra mais específica desta v3.
+
+Princípio:
+
+```text
+OLDER_GATE + V3_REFINEMENT
+=> APPLY_BOTH
+=> NEVER_RELAX_HUMAN_AUTHORIZATION
+=> NEVER_RELAX_FAIL_CLOSED
+```
+
+---
+
+# 52. SUPERVISOR PERSISTENTE E CLOSED LOOP
+
+O modo operacional preferido para frentes técnicas governadas é um supervisor/controlador persistente capaz de manter contexto probatório e executar recuperação local.
+
+Antiobjetivo permanente:
+
+```text
+ChatGPT gera auditor one-shot
+→ usuário executa
+→ blocker recuperável
+→ usuário copia log
+→ ChatGPT fabrica outro auditor
+→ repetir
+```
+
+Contrato desejado:
+
+```text
+SUPERVISOR
+→ EXECUTE_PHASE
+→ STRUCTURED_RESULT
+
+PASS
+→ ADVANCE_AUTOMATICALLY_WHILE_READONLY_OR_ALREADY_AUTHORIZED
+
+RECOVERABLE_BLOCKER
+→ RECOVERY_KERNEL
+→ REPAIR_OR_REBUILD_HARNESS
+→ REVALIDATE
+→ RETRY_SAME_SUBSTANTIVE_CANDIDATE_WHEN_APPROPRIATE
+
+HUMAN_GATE
+→ STOP_AND_REQUEST_EXACT_AUTHORIZATION
+
+HARD_BLOCKER
+→ STOP_FAIL_CLOSED_WITH_COMPLETE_EVIDENCE
+```
+
+Autoridades:
+
+```text
+CLOSED_LOOP_REQUIRED_WHEN_TECHNICALLY_FEASIBLE=true
+MANUAL_CHAT_LOG_SHUTTLING_REQUIRED=false
+ARBITRARY_AI_SHELL=false
+HUMAN_GATE_BYPASS=false
+```
+
+O closed loop não autoriza mutação. Ele apenas elimina intervenção humana desnecessária em recuperação técnica que não atravessa gate humano.
+
+---
+
+# 53. API-BACKED RECOVERY KERNEL
+
+Quando o supervisor possuir integração válida com API de IA, ela pode ser usada automaticamente para:
+
+- diagnosticar blocker recuperável;
+- classificar causa raiz;
+- gerar ou reconstruir auditor/harness;
+- propor correção de scanner/authority model/evidence packaging;
+- produzir candidato de correção em ambiente shadow;
+- revisar contradições internas;
+- adjudicar provenance com base em evidência fornecida;
+- produzir análise read-only de maturidade/roadmap;
+- gerar saída estruturada para machine validation.
+
+A API é **assistente de raciocínio/candidate generation**, não autoridade final.
+
+Obrigatório:
+
+```text
+API_ASSISTED_RECOVERY=true_when_available_and_applicable
+API_OUTPUT_IS_CANDIDATE=true
+LOCAL_VALIDATOR_IS_REQUIRED=true
+API_CREDENTIAL_IMPLIES_MUTATION_AUTHORIZATION=false
+API_CANNOT_APPROVE_USER_ACCEPTANCE=true
+API_CANNOT_APPROVE_STAGING=true
+API_CANNOT_APPROVE_COMMIT=true
+API_CANNOT_APPROVE_PUBLICATION=true
+```
+
+A falta temporária da API não autoriza reduzir gates. Se recuperação local determinística não for suficiente, emitir blocker apropriado e evidence completa.
+
+---
+
+# 54. CREDENCIAL DA API, SEGREDOS E PRIVACIDADE
+
+Credenciais de API, incluindo `OPENAI_API_KEY` quando utilizada, obedecem a contrato de segredo.
+
+Regras permanentes:
+
+- ler credencial somente do ambiente/process environment ou mecanismo seguro explicitamente autorizado;
+- nunca hardcodar chave em código, prompt, bundle, ledger ou arquivo tracked;
+- nunca imprimir a chave;
+- nunca incluir header `Authorization` em log, evidence bundle ou traceback;
+- nunca incluir chave em `FRONT_AUTHORITY_LEDGER`;
+- não copiar segredo para `.env` canônica sem autorização específica;
+- não alterar `.env` para fazer a API funcionar sem gate próprio;
+- registrar apenas presença/ausência da credencial, nunca seu valor;
+- não usar hash da chave como pseudo-identificador salvo necessidade excepcional e contrato explícito;
+- enviar a chave somente no mecanismo de autenticação da API, nunca como conteúdo textual do prompt;
+- usar `store=false` quando o endpoint/modelo suportar e isso for compatível com o contrato;
+- não enviar segredos do projeto nos payloads de análise.
+
+Formato recomendável de evidence:
+
+```text
+API_CREDENTIAL_SOURCE=process_environment
+API_CREDENTIAL_PRESENT=true|false
+API_CREDENTIAL_VALUE_RECORDED=false
+API_REQUEST_STORE=false|UNSUPPORTED
+API_AUTH_HEADER_LOGGED=false
+```
+
+---
+
+# 55. CONTRATO DE CHAMADA À API
+
+Toda chamada substantiva à API dentro do supervisor deve preferir saída estruturada.
+
+Quando suportado:
+
+```text
+STRUCTURED_OUTPUT_REQUIRED=true
+JSON_SCHEMA_STRICT=true
+STORE=false
+LOCAL_SCHEMA_VALIDATION=true
+LOCAL_SEMANTIC_VALIDATION=true
+EVIDENCE_PATH_WHITELIST=true
+```
+
+Registrar sem segredos:
+
+- endpoint/família de API;
+- modelo efetivamente utilizado, quando relevante;
+- timestamp;
+- schema e SHA-256 do schema;
+- SHA-256/identidade determinística do conjunto de evidência de entrada;
+- número da tentativa;
+- classificação da tentativa;
+- validator result;
+- razões de rejeição;
+- identidade do candidato aceito.
+
+Não depender exclusivamente do fato de a resposta ser JSON válido.
+
+Uma resposta da API só pode ser consumida depois de passar também por validação semântica local apropriada.
+
+---
+
+# 56. WHITELIST DE EVIDÊNCIA PARA RESPOSTAS DE IA
+
+Quando a API produzir análise baseada no repositório, o input deve declarar explicitamente o universo de evidência permitido.
+
+Uma resposta que cite path, autoridade ou fato fora desse universo deve ser rejeitada localmente.
+
+```text
+API_CITED_PATH_NOT_IN_EVIDENCE_WHITELIST
+→ API_CANDIDATE_REJECTED
+→ NO_SOFTWARE_MUTATION
+→ RETRY_OR_RECOVERY
+```
+
+A rejeição correta de um candidato de API por validator funcional **não é defeito do harness**.
+
+Classificar preferencialmente:
+
+```text
+BLOCKER_DOMAIN=api_candidate
+BLOCKER_ORIGIN=API_CANDIDATE
+BLOCKER_RECOVERABILITY=AUTO_RECOVERABLE
+```
+
+ou `product_acceptance` quando a falha ocorrer especificamente no contrato de produto da saída.
+
+Só classificar `auditor_harness` se o validator, schema, executor ou arquitetura de validação estiverem defeituosos.
+
+---
+
+# 57. TAXONOMIA DE FALHA: SOFTWARE ≠ HARNESS ≠ API CANDIDATE ≠ TRANSPORTE
+
+Antes de qualquer remediação, declarar:
+
+```text
+BLOCKER_DOMAIN
+BLOCKER_ORIGIN
+BLOCKER_RECOVERABILITY
+FINDING_CLASS
+FINDING_CODE
+```
+
+Valores recomendados de `BLOCKER_ORIGIN`:
+
+```text
+SOFTWARE
+REPOSITORY
+HARNESS
+AUTHORITY
+SCANNER
+EVIDENCE_PACKAGING
+API_CANDIDATE
+TRANSPORT
+EXTERNAL_SERVICE
+USER_GATE
+UNKNOWN
+```
+
+Valores recomendados de `BLOCKER_RECOVERABILITY`:
+
+```text
+AUTO_RECOVERABLE
+HUMAN_GATE
+HARD_BLOCKER
+UNKNOWN
+```
+
+Exemplos:
+
+```text
+API retorna evidence path inválido
+→ API_CANDIDATE
+→ AUTO_RECOVERABLE
+→ não contar como harness defect
+
+SSH timeout transitório
+→ TRANSPORT
+→ AUTO_RECOVERABLE inicialmente
+→ retry same remote read
+
+validator chama CLI com sintaxe inexistente
+→ HARNESS
+→ AUTO_RECOVERABLE
+
+software falha teste corrente no baseline pós-candidato e não falhava no baseline
+→ SOFTWARE/TEST
+→ blocker substantivo
+```
+
+---
+
+# 58. ORÇAMENTO DE TENTATIVAS: CANDIDATO E HARNESS SÃO CONTADORES DISTINTOS
+
+Manter contadores separados:
+
+```text
+CANDIDATE_GENERATION_ATTEMPTS
+HARNESS_CONSECUTIVE_DEFECTS
+TRANSPORT_RECOVERY_ATTEMPTS
+API_CANDIDATE_REJECTIONS
+```
+
+Regras:
+
+- falha do validator/harness não consome `CANDIDATE_GENERATION_ATTEMPTS` quando o candidato não foi a causa;
+- timeout remoto não consome tentativa do candidato;
+- candidato de API rejeitado por schema/evidência pode consumir `API_CANDIDATE_REJECTIONS`, mas não `HARNESS_CONSECUTIVE_DEFECTS` se o validator operou corretamente;
+- após duas falhas consecutivas genuínas de `auditor_harness`, `evidence_packaging`, `authority_model` ou `scanner_model`, reconstruir a arquitetura do auditor/supervisor a partir das últimas autoridades substantivas `PASS`;
+- após reconstrução, reutilizar o mesmo candidato substantivo se ele não foi invalidado.
+
+```text
+HARNESS_CONSECUTIVE_DEFECT_LIMIT=2
+```
+
+---
+
+# 59. CHECKPOINT CHAIN CONTEMPORÂNEA
+
+Toda frente mutável à qual os gates Git se apliquem deve persistir contemporaneamente:
+
+```text
+STAGING_CHECKPOINT
+→ COMMIT_CHECKPOINT
+→ PUBLICATION_CHECKPOINT
+→ CLOSURE_CHECKPOINT
+```
+
+## 59.1 Staging checkpoint
+
+Deve registrar, conforme aplicável:
+
+- `FRONT_BASELINE_HEAD`;
+- escopo autorizado;
+- authority/contract hashes;
+- worktree patch SHA-256;
+- cached patch SHA-256;
+- blobs e modos stageados;
+- index pre/post identity;
+- user acceptance authority quando aplicável;
+- timestamp;
+- hash do próprio checkpoint.
+
+```text
+NO_VALID_STAGING_CHECKPOINT
+→ COMMIT_FORBIDDEN
+```
+
+## 59.2 Commit checkpoint
+
+Deve encadear o staging checkpoint e registrar:
+
+- commit OID;
+- parent esperado;
+- tree;
+- subject;
+- patch identity;
+- scope;
+- staged checkpoint SHA-256.
+
+```text
+NO_VALID_COMMIT_CHECKPOINT
+→ PUBLICATION_FORBIDDEN
+```
+
+## 59.3 Publication checkpoint
+
+Deve encadear o commit checkpoint e registrar:
+
+- remoto e refspec exatos;
+- old/new OID;
+- prova fast-forward/non-force;
+- estado remoto pós-publicação;
+- estabilidade das refs reais fora do escopo;
+- `HEAD` symref separadamente;
+- commit checkpoint SHA-256.
+
+```text
+NO_VALID_PUBLICATION_CHECKPOINT
+→ FRONT_CLOSURE_FORBIDDEN
+```
+
+## 59.4 Closure checkpoint
+
+Deve encadear todos os checkpoints anteriores e registrar:
+
+- technical validation;
+- machine product acceptance;
+- user acceptance quando aplicável;
+- blocker count;
+- front closure disposition;
+- hashes dos checkpoints anteriores.
+
+Qualquer tampering ou quebra da cadeia:
+
+```text
+CHECKPOINT_HASH_TAMPERING
+→ DOWNSTREAM_GATE_FORBIDDEN
+```
+
+Proibido fabricar retroativamente checkpoint ausente para fingir prova histórica que não existiu contemporaneamente.
+
+---
+
+# 60. FULL SHADOW VALIDATION ANTES DA MATERIALIZAÇÃO
+
+Todo candidato de software deve, quando tecnicamente aplicável, ser validado integralmente em ambiente shadow antes da primeira escrita no repositório real.
+
+`FULL_SHADOW_VALIDATION` deve incluir conforme a matriz de aplicabilidade:
+
+- AST/compile;
+- JSON/YAML/TOML/schema;
+- governance manifest;
+- `git diff --check`;
+- todo `TEST_UNIVERSE_CONTRACT` corrente;
+- orchestrator self-test;
+- regression tests novos/focados;
+- scope validation;
+- candidate patch SHA-256;
+- blobs;
+- file modes;
+- product machine acceptance quando simulável;
+- scanner semantic universe.
+
+Não descobrir pela primeira vez depois da autorização de materialização que o candidato falha no universo funcional corrente, salvo aspecto que só possa existir realisticamente no estado materializado e esteja explicitamente classificado assim.
+
+---
+
+# 61. IDENTIDADE DE PATCH COM ARQUIVOS NOVOS E INDEX TEMPORÁRIO
+
+Arquivos novos/untracked do candidato não aparecem em `git diff` comum até que estejam representados no index.
+
+Para calcular identidade completa do candidate patch antes do staging real:
+
+- usar `GIT_INDEX_FILE` temporário/shadow;
+- copiar ou reconstruir index candidato de forma controlada;
+- quando necessário, usar `git add -N` **somente nesse index temporário**;
+- nunca modificar o index real antes de `STAGING AUTHORIZATION`;
+- provar que a identidade calculada no shadow corresponde ao estado posteriormente materializado/stageado.
+
+```text
+REAL_INDEX_MUTATION_BEFORE_STAGING_AUTHORIZATION=false
+```
+
+---
+
+# 62. PRESERVAÇÃO DE FILE MODE E ESCRITA ATÔMICA
+
+Ao materializar bytes por tempfile, `os.replace` ou mecanismo equivalente:
+
+- congelar o modo original quando o path existir;
+- aplicar o modo projetado explicitamente ao tempfile/substituto;
+- validar modo pós-materialização;
+- incluir modos em patch/candidate validation quando executabilidade for semanticamente relevante.
+
+Mudança acidental de modo é drift e pode bloquear a frente.
+
+---
+
+# 63. ADJUDICAÇÃO DE ESTADO JÁ CRIADO
+
+Se commit ou publicação já tiverem ocorrido e uma auditoria posterior falhar:
+
+```text
+DO_NOT_RESET_AUTOMATICALLY
+DO_NOT_AMEND_AUTOMATICALLY
+DO_NOT_RECOMMIT_AUTOMATICALLY
+DO_NOT_REPUSH_AUTOMATICALLY
+```
+
+Primeiro reconsultar read-only o estado criado.
+
+Se o estado vivo já satisfizer o contrato e a falha for do auditor/harness, emitir adjudicação de created state e corrigir apenas a prova.
+
+Exemplo:
+
+```text
+REMOTE_ALREADY_AT_EXPECTED_NEW_OID=true
+→ NEW_PUSH_PERFORMED=false
+→ prove existing publication
+```
+
+Nunca repetir publicação só para obter um log mais bonito.
+
+---
+
+# 64. GIT REMOTO: `HEAD` É PSEUDO-REF/SYMREF
+
+Em `git ls-remote`, `HEAD` não deve ser tratado como uma ref real equivalente a `refs/*` para prova de estabilidade de outras refs.
+
+Contrato:
+
+```text
+REAL_REMOTE_REFS
+= git ls-remote --refs <remote>
+
+REMOTE_HEAD_SYMREF
+= resolver separadamente via --symref HEAD
+```
+
+Para `other_refs_stable`:
+
+- comparar `refs/*` reais;
+- excluir a linha pseudo-ref `HEAD`;
+- registrar `HEAD → refs/heads/master` separadamente quando aplicável.
+
+Falso positivo causado por tratar `HEAD` como outra ref é `auditor_harness`, não defeito de publicação.
+
+---
+
+# 65. SSH CONTROLMaster E TRANSPORTE REMOTO
+
+Quando o executor usar sessão SSH reutilizável:
+
+- preferir `ControlMaster=auto` e `ControlPersist` apropriado;
+- usar diretório privado curto sob `/tmp`, mode `0700`;
+- não derivar `ControlPath` de paths longos de evidence em `~/Downloads`;
+- usar `ControlPath` curto, preferencialmente com `%C`;
+- validar preventivamente o comprimento projetado do socket;
+- considerar o limite prático de socket Unix (~108 bytes) e manter margem de segurança;
+- autenticação interativa de passphrase deve ocorrer via `/dev/tty` ou mecanismo equivalente, sem captura da passphrase;
+- não registrar passphrase;
+- reutilizar a sessão dentro da execução quando possível.
+
+Recomendação de guardrail:
+
+```text
+PROJECTED_SSH_CONTROLPATH_BYTES < 96
+UNIX_SOCKET_APPROX_LIMIT = 108
+```
+
+Timeout, conexão interrompida ou falha transitória de leitura remota devem ser inicialmente:
+
+```text
+BLOCKER_DOMAIN=transport
+BLOCKER_RECOVERABILITY=AUTO_RECOVERABLE
+CANDIDATE_REGENERATION=false
+```
+
+Reestabelecer sessão e repetir a mesma leitura antes de escalar.
+
+---
+
+# 66. EVIDENCE PACKAGING V3
+
+Todo evidence bundle relevante produzido no host deve ser materializado em:
+
+```text
+~/Downloads
+```
+
+com sidecar `.sha256` quando aplicável.
+
+Failure bundle também deve ir para `~/Downloads` sempre que tecnicamente possível.
+
+O bundle deve preservar:
+
+- causa raiz;
+- histórico de tentativas;
+- classificação de cada tentativa;
+- recovery actions;
+- stdout/stderr relevantes;
+- return codes;
+- traceback sanitizado;
+- authority manifest;
+- checksums;
+- checkpoint chain quando aplicável;
+- estado final;
+- relatório representativo quando houver;
+- sem segredos.
+
+Não produzir bundle contendo somente `BUDGET_EXHAUSTED` ou erro agregado sem as causas intermediárias.
+
+Para ZIP:
+
+- normalizar metadata de timestamp quando source metadata for anterior a 1980;
+- preservar bytes como autoridade;
+- validar manifest interno;
+- validar SHA-256 externo.
+
+Evitar transportar payload Base64 grande pelo chat quando um bundle validado puder ser entregue/executado.
+
+---
+
+# 67. ENTRYPOINT OPERACIONAL DO ORQUESTRADOR
+
+Enquanto a arquitetura corrente de governança permanecer instalada e provada, o caminho operacional normal é:
+
+```bash
+mppg-orchestrator run
+```
+
+Self-test correto:
+
+```bash
+mppg-orchestrator self-test
+```
+
+Não presumir forma `--self-test` sem prova da interface.
+
+Antes de automatizar qualquer CLI, provar a interface real por help/self-test/authority corrente.
+
+Quando uma execução resultar em:
+
+```text
+FRONT_KIND=noop
+NOOP=true
+FRONT_CLOSED=true
+```
+
+isso significa **nenhuma mudança acionável detectada pelo contrato corrente**, não falha.
+
+Se o usuário esperava detecção de conteúdo novo, auditar read-only o universo de detecção antes de alterar scanner ou arquivos.
+
+---
+
+# 68. MATURITY_DIAGNOSTIC_CONTRACT — DIAGNÓSTICO READ-ONLY VIA API
+
+A v3 institui um instrumento opcional de avaliação estratégica de maturidade do Academic Pipeline.
+
+Ele pode ser usado quando:
+
+- o usuário pedir diagnóstico de maturidade;
+- o usuário perguntar o que deve ser desenvolvido a seguir;
+- não houver blocker obrigatório conhecido e for desejável construir roadmap;
+- for necessário comparar capacidade implementada, documentação, testes e evidência operacional;
+- após grande ciclo de evolução, se o usuário solicitar uma reavaliação.
+
+Não executar automaticamente após toda frente apenas por hábito.
+
+Contrato padrão:
+
+```text
+FRONT_CLASS=other|mixed
+MUTATION_MODE=READ_ONLY
+STRUCTURAL_CONTRACT_TOUCHED=false
+GLOBAL_STRUCTURAL_REAUDIT_REQUIRED=false
+PRODUCT_ARTIFACT_REQUIRED=true
+USER_ACCEPTANCE_REQUIRED=true
+```
+
+Antes da chamada à API:
+
+1. resolver Git vivo e congelar `FRONT_BASELINE_HEAD`;
+2. provar index/worktree/.env/refs protegidos;
+3. construir `CLOSURE_APPLICABILITY_MATRIX`;
+4. construir `ARTIFACT_ROLE_MAP`;
+5. construir `TEST_UNIVERSE_CONTRACT`;
+6. selecionar semantic surfaces correntes;
+7. separar runtime, config, teste, docs, backup, output histórico, evidence e provenance;
+8. construir whitelist de evidence paths;
+9. excluir segredos;
+10. enviar somente informação necessária, preferindo summaries estruturados a dumps indiscriminados.
+
+---
+
+# 69. SCHEMA CANÔNICO DO DIAGNÓSTICO DE MATURIDADE
+
+Quando a API suportar structured output, o diagnóstico deve produzir, no mínimo:
+
+```text
+executive_assessment
+mandatory_new_front_identified
+mandatory_front_reason
+current_capabilities[]
+maturity_axes[]
+priority_roadmap[]
+recommended_next_step
+recommended_next_front_title
+recommended_next_front_is_optional
+evidence_gaps[]
+non_findings[]
+```
+
+Cada `current_capabilities[]` deve registrar quando aplicável:
+
+```text
+name
+category
+maturity_score      # 1..5
+confidence          # low|medium|high
+current_strengths[]
+limitations[]
+evidence_paths[]
+```
+
+Cada `maturity_axes[]`:
+
+```text
+axis
+score               # 1..5
+assessment
+evidence_paths[]
+```
+
+Cada `priority_roadmap[]`:
+
+```text
+rank
+title
+need_class
+mandatory_now
+user_value          # 1..5
+effort              # 1..5
+risk                # 1..5
+rationale
+evidence_paths[]
+dependencies[]
+suggested_front_class
+user_acceptance_required
+```
+
+O validator local deve exigir pelo menos:
+
+- evidence paths pertencentes à whitelist;
+- ranks únicos e contíguos a partir de 1;
+- razão explícita se `mandatory_new_front_identified=true`;
+- conjunto não vazio de capacidades/eixos;
+- schema válido;
+- zero segredo no output.
+
+Resposta inválida deve ser rejeitada e, quando recuperável, reenviada à API automaticamente.
+
+---
+
+# 70. EIXOS DE MATURIDADE E SIGNIFICADO DAS NOTAS
+
+Eixos padrão recomendados, adaptáveis à frente:
+
+```text
+ACADEMIC_WORKFLOW_BREADTH
+ARCHITECTURE_AND_DISTRIBUTION
+QUALITY_AND_VALIDATION_DEPTH
+REPRODUCIBILITY_AND_PROVENANCE
+USER_EXPERIENCE_AND_WORKFLOW_COHERENCE
+CURRENT_OPERATIONAL_ASSURANCE
+```
+
+Podem ser acrescentados eixos como security, maintainability, citation fidelity ou institutional portability quando a evidência justificar.
+
+Escala:
+
+```text
+1 = incipiente
+2 = parcial/em formação
+3 = funcional mas com lacunas materiais de prova/cobertura
+4 = maduro com limitações identificadas
+5 = forte e amplamente comprovado no universo avaliado
+```
+
+A nota **não é percentual de conclusão da frente** e não deve ser convertida para `SOFTWARE_STATE_PROGRESS`.
+
+Um eixo 3/5 ou 4/5 não é automaticamente blocker.
+
+Se o diagnóstico deliberadamente não executou testes/runtime, `CURRENT_OPERATIONAL_ASSURANCE` deve refletir a lacuna de evidência; isso não prova defeito operacional.
+
+---
+
+# 71. MATURIDADE NÃO CRIA FRENTE OBRIGATÓRIA
+
+Regra central:
+
+```text
+MATURITY_SCORE_BELOW_5
+!= DEFECT
+!= REGRESSION
+!= MANDATORY_NEW_FRONT
+```
+
+`MANDATORY_NEW_FRONT_IDENTIFIED=true` somente quando evidência viva provar algo como:
+
+- regressão corrente;
+- defeito funcional corrente;
+- violação de segurança/acesso;
+- repository-state blocker;
+- quebra de protected state;
+- dependência indispensável quebrada;
+- outra obrigação objetiva demonstrável.
+
+Oportunidades de:
+
+- UX;
+- nova funcionalidade;
+- melhor rastreabilidade acadêmica;
+- integração institucional;
+- benchmark;
+- documentação;
+- racionalização de backups;
+
+são, por padrão:
+
+```text
+SEPARATE_FRONT_CANDIDATE=true
+MANDATORY_NOW=false
+```
+
+até decisão do usuário ou evidência que altere a classificação.
+
+---
+
+# 72. MACHINE PRODUCT ACCEPTANCE DA ANÁLISE DE IA
+
+A própria análise da API é um produto candidato e deve passar por validação antes de ser apresentada como conclusão.
+
+Exemplos de rejeição automática:
+
+- evidence path inexistente ou fora da whitelist;
+- rank duplicado/inconsistente;
+- campo obrigatório ausente;
+- afirmação de blocker obrigatório sem evidência;
+- confusão entre backup/histórico e runtime;
+- uso de presença textual como consumer vivo;
+- violação do schema;
+- output vazio/truncado;
+- segredo presente.
+
+Se o validator rejeitar corretamente uma resposta:
+
+```text
+MACHINE_VALIDATOR=PASS
+API_CANDIDATE=REJECTED
+HARNESS_DEFECT=false
+```
+
+O recovery kernel pode solicitar nova resposta sem envolver o usuário.
+
+---
+
+# 73. USER ACCEPTANCE DO RELATÓRIO DE MATURIDADE
+
+Diagnóstico/roadmap produzido para leitura do usuário é resultado perceptível.
+
+Portanto:
+
+```text
+PRODUCT_ARTIFACT_REQUIRED=true
+USER_ACCEPTANCE_REQUIRED=true
+```
+
+Mesmo quando:
+
+```text
+CANONICAL_REPOSITORY_MUTATIONS=0
+```
+
+Fluxo:
+
+```text
+READONLY_DIAGNOSTIC
+→ MACHINE_PRODUCT_ACCEPTANCE=PASS
+→ PRESENT_REAL_REPORT_TO_USER
+→ USER_ACCEPTANCE=PENDING
+→ APPROVED | CHANGES_REQUESTED
+```
+
+Somente aprovação explícita permite:
+
+```text
+USER_ACCEPTANCE=PASS
+FRONT_CLOSED=true
+```
+
+A aprovação do roadmap **não autoriza implementar** a prioridade nº 1 nem qualquer outra prioridade. Cada implementação exige nova frente e gates próprios.
+
+---
+
+# 74. API E FRONT_AUTHORITY_LEDGER
+
+Quando API for utilizada, o ledger deve acrescentar, quando aplicável:
+
+```text
+api_assisted=true
+api_family
+api_model_identity
+api_store_setting
+api_schema_sha256
+api_input_evidence_sha256
+api_evidence_whitelist_sha256
+api_attempt_count
+api_candidate_rejections
+api_candidate_accepted_sha256
+local_validator_status
+api_recovery_history
+credential_source=process_environment
+credential_value_recorded=false
+```
+
+Nunca registrar segredo.
+
+Se o modelo ou configuração for material para reprodutibilidade de um produto, congelá-los no contrato aplicável. Caso contrário, tratá-los como detalhe de implementação registrado para provenance, não como identidade operacional eterna.
+
+---
+
+# 75. RECOVERY KERNEL E HARD BLOCKER
+
+O recovery kernel deve resolver automaticamente tudo que for tecnicamente recuperável **sem atravessar autorização humana**.
+
+Exemplos tipicamente recuperáveis:
+
+- falha de invocation do validator;
+- schema inadequado;
+- API candidate inválido;
+- scanner false positive;
+- evidence packaging incompleto;
+- authority lookup inconsistente;
+- timeout remoto transitório;
+- `ControlPath` inadequado;
+- pseudo-ref `HEAD` mal classificada;
+- workspace shadow defeituoso;
+- contradição entre boolean derivado e valores brutos.
+
+Exemplos de parada legítima:
+
+```text
+HUMAN_GATE:
+- MATERIALIZATION
+- USER_ACCEPTANCE
+- STAGING
+- COMMIT
+- PUBLICATION
+- .env mutation
+- persistent data mutation
+- dependency/environment mutation quando aplicável
+
+HARD_BLOCKER:
+- authority indispensável ausente e não recuperável
+- baseline/remote divergente sem adjudicação segura
+- protected state drift real
+- untracked dentro do software sem adjudicação
+- credencial/serviço indispensável indisponível após política de recovery
+- evidência insuficiente para decisão fail-closed
+```
+
+---
+
+# 76. INVARIANT CONTRADICTION
+
+Não aceitar boolean derivado que contradiga seus valores fonte.
+
+Exemplo:
+
+```text
+expected_sha == actual_sha
+report.match == false
+```
+
+Isso implica:
+
+```text
+INVARIANT_CONTRADICTION=true
+AUDITOR_RESULT_INVALID=true
+BLOCKER_DOMAIN=auditor_harness|authority_model
+RECOVERY_KERNEL_REQUIRED=true
+```
+
+Validar invariantes a partir dos dados brutos antes de confiar em resumo derivado.
+
+Toda constante SHA-256 congelada deve possuir guardrail:
+
+```text
+len == 64
+lowercase hexadecimal only
+```
+
+---
+
+# 77. NORMALIZAÇÃO DE PROVENANCE
+
+Ao comparar fingerprints/hash authorities herdados, não transportar apenas o hexadecimal quando o valor depender de algoritmo de normalização/serialização.
+
+Congelar também:
+
+- algoritmo;
+- ordem de campos;
+- encoding;
+- separators;
+- path normalization;
+- newline policy;
+- surrogateescape/byte-safe policy quando aplicável.
+
+Quando possível, incluir canário conhecido no self-test:
+
+```text
+KNOWN_AUTHORITY_SAMPLE
+→ RECALCULATE_WITH_FROZEN_ALGORITHM
+→ EXPECTED_SHA256
+```
+
+Divergência por algoritmo de fingerprint é `authority_model`/`provenance_resolution`, não software drift até adjudicação.
+
+---
+
+# 78. REGRA SUPREMA V3
+
+A v3 adiciona automação sem transferir autoridade humana para a IA.
+
+O estado desejado é:
+
+```text
+EVIDENCE_FIRST
+FAIL_CLOSED
+READ_ONLY_BEFORE_WRITE
+SEMANTIC_EDGE_BEFORE_TEXTUAL_PRESENCE
+CONTRACT_FREEZE_BEFORE_MUTATION
+FULL_SHADOW_VALIDATION_BEFORE_MATERIALIZATION
+CHECKPOINT_AUTHORITY_BEFORE_DOWNSTREAM_GATE
+RECOVERABLE_BLOCKER_RETURNS_TO_RECOVERY_KERNEL
+API_OUTPUT_REQUIRES_LOCAL_VALIDATION
+API_TOKEN_IS_NOT_AUTHORIZATION
+HUMAN_MUTABLE_GATES_REMAIN_HUMAN
+USER_ACCEPTANCE_REMAINS_HUMAN
+MATURITY_SCORE_DOES_NOT_CREATE_DEFECT
+NO_HISTORY_FABRICATION
+NO_AUTOMATIC_REOPENING_OF_CLOSED_FRONTS
+NO_REPUSH_OR_RESET_TO_FIX_AUDITOR
+```
+
+Objetivo operacional:
+
+> **mínima intervenção humana para falhas tecnicamente recuperáveis, máxima evidência, zero redução de governança e foco crescente no valor acadêmico real do produto.**
 
