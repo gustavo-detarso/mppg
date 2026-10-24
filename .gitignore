@@ -57,3 +57,82 @@ __pycache__/
 /disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/99_historico/
 /disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_ENTREGA_FINAL_BUNDLE.zip
 # <<< MPPG ACERVO LOCAL PROTEGIDO END <<<
+
+# >>> MPPG PROTECAO COMPLEMENTAR BEGIN >>>
+# Métodos Qualitativos — históricos e entregas locais
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/00_governanca/99_historico/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/00_governanca/bundles/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP03/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/auditoria_pos_feedback/
+
+# EP04 — versões e produtos derivados
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/PROMPT_MASTER_ANALISE_QUALITATIVA_LICENCIAMENTO_AMBIENTAL.md
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/**/*.pdf
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/**/*.docx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/**/*.pptx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/**/*.xlsx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/**/*.log
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/**/*.zip
+
+# Orçamento — bundle histórico e fontes de terceiros
+/disciplinas/06_orcamento/src/BUNDLE_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO_2026_v1.0/
+/disciplinas/06_orcamento/src/*.zip
+/disciplinas/06_orcamento/src/*.pdf
+/disciplinas/06_orcamento/src/PROMPT_MASTER_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO_v1.3.md
+/disciplinas/06_orcamento/atividades/bbl/
+/disciplinas/06_orcamento/atividades/*.pdf
+/disciplinas/06_orcamento/atividades/*.docx
+/disciplinas/06_orcamento/atividades/*.pptx
+/disciplinas/06_orcamento/atividades/*.zip
+/disciplinas/06_orcamento/atividades/BUNDLE_CANONICO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO/02_FONTES_INSTITUCIONAIS/
+/disciplinas/06_orcamento/atividades/BUNDLE_CANONICO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO/03_REVISAO/*.pdf
+/disciplinas/06_orcamento/atividades/BUNDLE_CANONICO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO/03_REVISAO/tools/*.docx
+/disciplinas/06_orcamento/atividades/BUNDLE_CANONICO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO/05_ENTREGAS/*.pdf
+/disciplinas/06_orcamento/atividades/BUNDLE_CANONICO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO/05_ENTREGAS/*.docx
+
+# Métodos Quantitativos — materiais e produtos locais
+/disciplinas/07_metodos_quantitativos/Monitoria_1/backups/
+/disciplinas/07_metodos_quantitativos/Monitoria_1/*.html
+/disciplinas/07_metodos_quantitativos/Monitoria_1/*.log
+/disciplinas/07_metodos_quantitativos/Monitoria_1/*.xlsx
+/disciplinas/07_metodos_quantitativos/*.pdf
+/disciplinas/07_metodos_quantitativos/*.jpg
+/disciplinas/07_metodos_quantitativos/*.docx
+/disciplinas/07_metodos_quantitativos/*.txt
+
+# Política Tributária — bibliografia de terceiros
+/disciplinas/08_politica_tributaria/00_Originais/
+/disciplinas/08_politica_tributaria/00_Bibliografia_Basica/
+/disciplinas/08_politica_tributaria/**/PDFs/
+/disciplinas/08_politica_tributaria/**/Paginas_HTML/
+# <<< MPPG PROTECAO COMPLEMENTAR END <<<
+
+# >>> MPPG PROTECAO FINAL BEGIN >>>
+# Registros analíticos locais
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/00_analise/Categorizacao_tematizacao/*.txt
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/00_analise/Diario_de_decisoes/*.txt
+
+# Diretivas, modelos e pacotes da atividade
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/01_fontes/diretivas/*.docx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/01_fontes/modelos/*.xlsx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/01_fontes/pacotes/*.zip
+
+# Manifestos e produtos locais EP04
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/00_governanca/*.txt
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/*.txt
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/relatorio/*.txt
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/relatorio/media/*.png
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/relatorio/perfil/fgv_abnt_generated.sty
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/relatorio_simplificado/*.txt
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_entrega_bundle/relatorio_simplificado/perfil/fgv_abnt_generated.sty
+
+# Bibliografia, notas e temas da disciplina
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/01_metodologia/bibliografia_complementar/*.pdf
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/01_metodologia/notas/*.docx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/02_diretivas_disciplina/*.docx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/03_temas_de_pesquisa/*.docx
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/03_temas_de_pesquisa/*.html
+
+# Manifesto de integridade gerado em Orçamento
+/disciplinas/06_orcamento/atividades/BUNDLE_CANONICO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO/MANIFEST_SHA256.txt
+# <<< MPPG PROTECAO FINAL END <<<
