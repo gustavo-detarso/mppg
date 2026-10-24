@@ -1,0 +1,855 @@
+---
+title: "Monitoria 1 — Exercícios resolvidos (R e R Markdown)"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(error = FALSE, message = FALSE, warning = FALSE)
+```
+
+> **Versão resolvida:** todos os exercícios foram preenchidos. Execute os chunks na sequência para preservar os objetos criados anteriormente. No Emacs com Polymode, utilize `M-n v v` no chunk e `C-c r k` para renderizar; no RStudio, use `Ctrl + Enter`.
+
+------------------------------------------------------------------------
+
+# 0. Ambiente: atalhos que vamos usar
+
+| Ação no RStudio               | Windows/Linux              | macOS                                     |
+|-------------------------------|----------------------------|-------------------------------------------|
+| Executar linha/seleção        | `Ctrl + Enter`             | `Cmd + Return`                            |
+| Limpar o Console              | `Ctrl + L`                 | `Cmd + L`                                 |
+| Inserir `<-`                  | `Alt + -`                  | `Option + -`                              |
+| Inserir bloco (chunk)         | `Ctrl + Alt + I`           | `Option + Cmd + I`                        |
+| Comentar/descomentar          | `Ctrl + Shift + C`         | `Cmd + Shift + C`                         |
+| Definir diretório de trabalho | `Ctrl + Shift + H`         | — (use `Session > Set Working Directory`) |
+| Salvar                        | `Ctrl + S`                 | `Cmd + S`                                 |
+| Lista de atalhos              | `Alt + Shift + K`          | `Option + Shift + K`                      |
+| Ajuda da função               | `F1` (cursor sobre o nome) | `F1`                                      |
+| Autocompletar                 | `Tab`                      | `Tab`                                     |
+
+**No Emacs (ESS + Polymode):** `M-n v v` executa o chunk atual; `M-n v b` executa o buffer; `C-c r a` alinha a tabela Markdown e `C-c r k` renderiza o documento (atalhos da configuração personalizada).
+
+**Projeto × diretório de trabalho (RStudio):** use `File > New Project` e mantenha dados e scripts na mesma pasta. No Emacs, abra o arquivo a partir do diretório do projeto.
+
+```{r ambiente-diretorio}
+# Onde o R está trabalhando agora?
+getwd()
+R.version.string
+```
+
+------------------------------------------------------------------------
+
+# 1. Básico do R
+
+## 1.1 Aritmética
+
+O R funciona como uma calculadora.
+
+| Operação         | Operador   |
+|------------------|------------|
+| Adição           | `+`        |
+| Subtração        | `-`        |
+| Multiplicação    | `*`        |
+| Divisão          | `/`        |
+| Exponenciação    | `^` / `**` |
+| Resto da divisão | `%%`       |
+
+```{r aritmetica-divisao}
+10 / 2
+(8 + 4) * 3
+2 ** 3
+```
+
+Exemplos:
+
+```{r aritmetica-soma}
+5 + 5
+5 - 5
+3 * 5
+(5 + 5) / 2
+2^5
+28 %% 6
+```
+
+## 1.2 Atribuição de objetos
+
+`<-` guarda um valor com um nome. (Atalho: `Alt + -`)
+
+- **Padrões de escrita:**
+
+  - *snake_case*: `faturamento_mensal`;
+
+  - *camelCase*: `faturamentoMensal`.
+
+- **Acentos e Caracteres Especiais:**
+
+  - Errado: `faturamento_março`;
+
+  - Certo: `faturamento_marco`.
+
+- **Proibições:**
+
+  - Não começar com números: `1_modulo_vendas`;
+
+  - Não usar símbolos matemáticos: `valor-total`;
+
+  - Não usar palavras reservadas: `if`, `else`, `for`, `while`, `TRUE`, `FALSE`, `NULL` ou `NA`.
+
+```{r atribuicao-faturamento}
+faturamento_mensal <- 1500
+faturamentoMensal <- 1600
+c(faturamento_mensal, faturamentoMensal)
+```
+
+Exemplo:
+
+```{r atribuicao-exemplo}
+x <- 42
+x
+```
+
+## 1.3 Média "do zero"
+
+Média = soma dos valores ÷ número de valores.
+
+```{r media-manual}
+prova_1 <- 7.5
+prova_2 <- 9.0
+prova_3 <- 6.0
+
+media_final <- (prova_1 + prova_2 + prova_3) / 3
+media_final
+```
+
+## 1.4 Tipos básicos de dados
+
+| Classe      | Conteúdo                    |
+|-------------|-----------------------------|
+| `character` | Texto, entre aspas          |
+| `numeric`   | Números (decimal com ponto) |
+| `integer`   | Inteiros (sufixo `L`)       |
+| `logical`   | `TRUE` ou `FALSE`           |
+
+```{r tipos-classes}
+c(class("texto"), class(3.5), class(3L), class(FALSE))
+```
+
+Exemplo:
+
+```{r tipos-objetos}
+nome_aluna <- "Ana Sousa"
+nota_final <- 8.5
+matricula  <- 2025014L
+aprovada   <- TRUE
+
+# A função class() retorna o tipo da variável.
+
+class(nome_aluna)
+class(nota_final)
+class(matricula)
+class(aprovada)
+```
+
+## Operadores de comparação e lógicos
+
+| Operação               | Operador   |
+|------------------------|------------|
+| Maior e Maior ou Igual | `>` e `>=` |
+| Menor e Menor ou Igual | `<` e `<=` |
+| Igualdade              | `==`       |
+| Diferente              | `!=`       |
+| Contido em             | `%in%`     |
+| E (lógico)             | `&`        |
+| OU (lógico)            | `|`        |
+| Negação                | `!`        |
+
+```{r logica-expressao}
+(10 >= 10) & !(3 == 4)
+"R" %in% c("Python", "R")
+```
+
+Exemplo:
+
+```{r logica-comparacoes}
+5 > 3
+5 == 3
+5 != 3
+"A" %in% c("A", "B")
+(5 > 3) & (2 > 4)   # E
+(5 > 3) | (2 > 4)   # OU
+```
+
+## 1.6 Vetores
+
+Um vetor guarda vários valores **do mesmo tipo**.
+
+no R a função `c()` éa forma mais comum de criar vetores, com elementos separados por vírgulas `,` .
+
+```{r vetores-idades}
+idades <- c(20, 22, 25, 27)
+mean(idades)
+```
+
+Exemplo:
+
+```{r vetores-notas}
+notas <- c(7.5, 9.0, 6.0, 8.0)
+
+# Atribuindo rótulos (nomes) para cada elemento do vetor
+names(notas) <- c("P1", "P2", "P3", "P4")
+
+notas
+```
+
+Além do atributo `names`, qualquer vetor básico no R também possui implicitamente os atributos de **classe** (`class()`) e **tipo** (`mode()` ou `storage.mode()`). Além de funções aplicáveis como: `length()`, `sum()`, `mean()`.
+
+```{r vetores-comprimento}
+length(notas)
+```
+
+Seleção por posição, por nome e por comparação:
+
+```{r vetores-indice}
+notas[2]
+```
+
+```{r vetores-multiplos-indices}
+notas[c(1, 3)]
+```
+
+```{r vetores-indice-nome}
+notas["P4"]
+```
+
+```{r vetores-filtro}
+notas[notas >= 7]
+```
+
+```{r vetores-operacoes}
+notas + 0.5
+```
+
+## 1.7 Matrizes (resumo)
+
+Matriz: valores do mesmo tipo em linhas e colunas.
+
+A função **`matrix()`** no R serve para criar uma matriz bidimensional (linhas e colunas) onde **todos os dados precisam ser do mesmo tipo**.
+
+- `matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)`
+
+Exemplo:
+
+```{r matrizes-criacao}
+m <- matrix(1:6, nrow = 2, byrow = TRUE)
+rownames(m) <- c("linha_1", "linha_2")
+colnames(m) <- c("Coluna_1", "Coluna_2", "Coluna_3")
+
+m
+```
+
+```{r matrizes-imagem}
+# Cada número representa uma cor:
+# 0 = fundo, 1 = amarelo, 2 = olhos e boca
+
+pixels <- c(
+  "000011110000",
+  "001111111100",
+  "011111111110",
+  "011111111110",
+  "111211112111",
+  "111211112111",
+  "111111111111",
+  "112111111211",
+  "011211112110",
+  "011122221110",
+  "001111111100",
+  "000011110000"
+)
+
+# Transforma o desenho em uma matriz numérica
+m <- matrix(
+  as.integer(unlist(strsplit(pixels, split = ""))),
+  nrow = 12,
+  byrow = TRUE
+)
+
+rownames(m) <- paste0("L", 1:12)
+colnames(m) <- paste0("C", 1:12)
+
+# Desenha a matriz
+local({
+  parametros <- par(mar = c(0, 0, 0, 0))
+
+  image(
+    t(m[nrow(m):1, ]),
+    col = c("#FFFFFF", "#FFD43B", "#292929"),
+    breaks = c(-0.5, 0.5, 1.5, 2.5),
+    axes = FALSE,
+    asp = 1,
+    useRaster = TRUE
+  )
+
+  par(parametros)
+})
+```
+
+## 1.8 Fatores: variáveis categóricas
+
+Fator = categorias (níveis). Pode ser **nominal** ou **ordinal**.
+
+- `factor(x = character(), levels, labels = levels, exclude = NA, ordered = is.ordered(x), nmax = NA)`
+
+A função `factor` é utilizada para codificar um vetor como um fator. Se o argumento `ordered` for definido como `TRUE`, assume-se que os níveis do fator estão ordenados.
+
+- `is.factor`, `is.ordered`, `as.factor` e `as.ordered` são as funções de verificação de pertinência e de coerção para essas classes.
+
+Exemplos:
+
+```{r fatores-nominal}
+# Nominal
+frutas <- factor(c("Maçã", "Laranja", "Maçã", "Pera", "Laranja", "Maçã"))
+levels(frutas)
+```
+
+```{r fatores-frequencia}
+summary(frutas)
+```
+
+```{r fatores-ordinal}
+# Ordinal
+nivel <- factor(
+  c("baixo", "alto", "médio", "baixo"),
+  levels  = c("baixo", "médio", "alto"),
+  ordered = TRUE
+)
+nivel
+nivel[1] < nivel[2]
+```
+
+## 1.9 Data frame
+
+Linhas = observações; colunas = variáveis; cada coluna pode ter um tipo.
+
+A função `data.frame()` cria data frames, compartilha muitas das propriedades de matrizes e listas, os quais são utilizados como a **estrutura de dados fundamental pela maior parte dos softwares de modelagem no R**.
+
+Exemplo:
+
+```{r planetas-criacao}
+planetas <- data.frame(
+  planeta  = c("Mercúrio", "Vênus", "Terra", "Marte",
+               "Júpiter", "Saturno", "Urano", "Netuno"),
+  diametro = c(0.382, 0.949, 1.000, 0.532,
+               11.209, 9.449, 4.007, 3.883),   # relativo à Terra
+  aneis    = c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+)
+
+planetas
+```
+
+Agora que o objeto `planetas` foi criado, podemos consultar seu tamanho e estrutura:
+
+```{r planetas-comprimento}
+length(planetas$planeta)
+str(planetas)
+```
+
+A função **`str()`** (abreviação de *structure*) serve para exibir a estrutura interna de qualquer objeto no R de forma compacta e resumida.
+
+```{r planetas-estrutura}
+str(planetas)
+```
+
+Seleção: `dados[linhas, colunas]` e `dados$coluna`.
+
+```{r planetas-selecao}
+# Seleciona e extrai apenas a coluna 'diametro' como um vetor isolado
+planetas$diametro
+
+# Retorna as 3 primeiras linhas e TODAS as colunas do data frame
+planetas[1:3, ]
+
+# Retorna TODAS as linhas, mas apenas as colunas 'planeta' e 'diametro'
+planetas[, c("planeta", "diametro")]
+
+# Filtra o data frame para exibir apenas as linhas onde a coluna 'aneis' é TRUE
+planetas[planetas$aneis == FALSE, ]
+
+# Filtra as linhas usando duas condições lógicas:
+# Exibe planetas que possuem anéis E que têm diâmetro menor que 10
+planetas[planetas$aneis & planetas$diametro < 10, ]
+```
+
+Ordenação:
+
+A função `order` retorna uma permutação que reorganiza seu primeiro argumento em ordem crescente ou decrescente.
+
+- `order(..., na.last = TRUE, decreasing = FALSE, method = c("auto", "shell", "radix"))`
+
+```{r planetas-ordenacao-colunas}
+planetas[order(planetas$diametro), c("planeta", "diametro")]
+```
+
+Exemplo:
+
+```{r planetas-ordenacao-completa}
+planetas[order(planetas$diametro), ]
+planetas[order(planetas$diametro, decreasing = TRUE), ]
+```
+
+------------------------------------------------------------------------
+
+# 2. Teoria → variáveis e análise (ver slides)
+
+Antes de calcular, perguntamos: **que tipo de variável é esta?**
+
+| Teoria (Kleinbaum et al., 2013) | Como aparece no R       |
+|---------------------------------|-------------------------|
+| Contínua (sem lacunas)          | `numeric`               |
+| Discreta (contagens)            | `integer` ou `numeric`  |
+| Nominal                         | `factor` ou `character` |
+| Ordinal                         | `factor` ordenado       |
+| Resposta (Y) × preditora (X)    | `Y ~ X` em fórmulas     |
+| Média                           | `mean()`                |
+| Mediana                         | `median()`              |
+| Variância                       | `var()`                 |
+| Desvio Padrão                   | `sd()`                  |
+| Quartis                         | `quantile()`            |
+| Mínimo                          | `min()`                 |
+| Máximo                          | `max()`                 |
+
+------------------------------------------------------------------------
+
+# 3. Prática com a base `iris`
+
+## 3.1 Carregando e conhecendo a base
+
+```{r iris-carregamento}
+dados <- datasets::iris
+```
+
+```{r iris-primeiras-linhas}
+# Primeiras linhas
+head(dados)
+```
+
+```{r iris-dimensoes}
+# Número de linhas e colunas
+dim(dados)
+```
+
+**Resposta:** cada linha corresponde a uma flor observada; cada coluna corresponde a uma variável mensurada ou à espécie. A base possui 150 observações e cinco variáveis.
+
+Documentação da base:
+
+```{r iris-ajuda, eval=FALSE}
+?iris
+```
+
+## 3.2 Dicionário de variáveis
+
+| Coluna         | Significado                | Tipo estatístico |
+|----------------|----------------------------|------------------|
+| `Sepal.Length` | Comprimento da sépala (cm) | `numeric`        |
+| `Sepal.Width`  | Largura da sépala (cm)     | `numeric`        |
+| `Petal.Length` | Comprimento da pétala (cm) | `numeric`        |
+| `Petal.Width`  | Largura da pétala (cm)     | `numeric`        |
+| `Species`      | Espécie                    | `factor`         |
+
+## 3.3 Estrutura e tipos
+
+```{r iris-estrutura}
+# Exibe o nome de todas as colunas do data frame
+names(dados)
+
+# Exibe a estrutura interna do data frame
+str(dados)
+
+# Verifica a classe da coluna 'Species'
+class(dados$Species)
+
+# Verifica a classe da coluna 'Sepal.Length'
+class(dados$Sepal.Length)
+```
+
+## 3.4 Criar novas variáveis
+
+```{r iris-proporcao-sepala}
+# Queremos descobrir a proporção entre o comprimento e a largura da sépala
+dados$prop_sepala <- dados$Sepal.Length / dados$Sepal.Width
+```
+
+```{r iris-classificacao-sepala}
+# Se a proporção da sépala for MAIOR que mediana, será "Grande", caso contrário, "Pequeno"
+med_prop_sepala <- median(dados$prop_sepala)
+
+#Criando uma variável de CLASSE com a função ifelse
+dados$classe_prop_sepala <- ifelse(dados$prop_sepala > med_prop_sepala, "Grande", "Pequeno")
+
+# 3. Transformando a nova variável em um fator
+dados$classe_sepala <- factor(dados$classe_prop_sepala,
+                           levels  = c("Pequeno", "Grande"),
+                           ordered = TRUE)
+
+# 4. Verificando se as novas colunas foram criadas com sucesso
+str(dados)
+```
+
+## 3.5 Renomear coluna
+
+- `names(dados)[names(dados) == "nome_antigo"] <- "nome_novo"`
+
+```{r iris-renomear-coluna}
+# Demonstra a renomeação em uma cópia para preservar a base principal.
+dados_renomeados <- dados
+names(dados_renomeados)[names(dados_renomeados) == "Species"] <- "Especie"
+names(dados_renomeados)
+```
+
+## 3.6 Selecionando partes
+
+```{r iris-selecao}
+# Uma coluna
+dados$Sepal.Length
+
+# As 5 primeiras linhas
+dados[1:5, ]
+
+# Duas colunas
+dados[, c("Sepal.Length", "Species")]
+
+# Só a espécie setosa
+dados[dados$Species == "setosa", ]
+```
+
+## 3.7 Função, argumentos e documentação
+
+```{r iris-media-sepala}
+media_sepala <- mean(dados$Sepal.Length, na.rm = TRUE)
+media_sepala
+```
+
+## 3.8 Método: o `summary()` muda conforme o objeto
+
+`summary` é uma função genérica utilizada para gerar resumos dos resultados de diversas funções de ajuste de modelos. A função invoca métodos específicos que dependem da classe do primeiro argumento.
+
+```{r iris-resumo}
+summary(dados)
+summary(dados$Species)
+summary(dados$Sepal.Length)
+```
+
+## 3.9 Variável categórica: frequência e percentual
+
+```{r iris-frequencias}
+freq <- table(dados$Species)
+freq
+100 * prop.table(freq)
+```
+
+## 3.10 Tendência central
+
+```{r iris-tendencia-central}
+x <- dados$Sepal.Length
+
+mean(x)
+median(x)
+
+# Efeito de um valor extremo
+y <- c(4, 5, 5, 6, 30)
+mean(y)
+median(y)
+```
+
+**Resposta:** a mediana (`5`) representa melhor o centro de `y`, porque o valor extremo `30` eleva a média (`10`) e torna-a pouco representativa dos demais valores.
+
+## 3.11 Medidas de Dispersão
+
+Exemplo:
+
+```{r dispersao-exemplo}
+a <- c(4, 4, 4)
+b <- c(0, 4, 8)
+
+mean(a); mean(b)
+sd(a);   sd(b)
+```
+
+**Resolução:**
+
+```{r dispersao-iris}
+x <- dados$Sepal.Length
+
+diff(range(x))      # amplitude
+var(x)              # variância (unidade ao quadrado)
+sd(x)              # desvio-padrão (mesma unidade)
+IQR(x)              # intervalo interquartil
+```
+
+## 3.12 Quartis
+
+```{r iris-quartis}
+quantile(x, probs = c(0.25, 0.50, 0.75))
+```
+
+## 3.13 Valores ausentes (`NA`)
+
+```{r dados-ausentes}
+v <- c(4.8, 5.1, NA, 5.7)
+
+mean(v)
+mean(v, na.rm = TRUE)
+
+sum(is.na(v))     # quantos NA
+sum(!is.na(v))    # quantos válidos
+
+# Há NA na base?
+colSums(is.na(dados))
+```
+
+## 3.14 Subset
+
+```{r iris-subset}
+# Opção A: Usando a função subset
+subset_setosa <- subset(dados, Species == "setosa")
+
+# Opção B: Usando colchetes
+subset_setosa <- dados[dados$Species == "setosa", ]
+
+```
+
+## 3.15 Histograma
+
+A função **`hist()`** no R é usada para criar histogramas, que servem para visualizar a distribuição (frequência) de um vetor de dados numéricos.
+
+```{r iris-renomeacao-proporcao}
+names(dados)[names(dados) == "prop_sepala"] <- "proporcao_sepala"
+names(dados)[names(dados) == "proporcao_sepala"] <- "prop_sepala"
+```
+
+**Resolução:**
+
+```{r iris-histograma}
+hist(
+  dados$Sepal.Length,
+  breaks = 10,
+  col    = "#56B4E9",
+  border = "white",
+  main   = "Distribuição do comprimento da sépala",
+  xlab   = "Comprimento da sépala (cm)",
+  ylab   = "Frequência"
+)
+```
+
+**Resposta:** `breaks` controla a divisão dos dados em classes do histograma. Mais classes mostram detalhes finos, mas podem criar uma aparência irregular; menos classes suavizam a distribuição e podem ocultar padrões.
+
+## 3.16 Boxplot
+
+A função `boxplot()` no R é usada para visualizar a distribuição de dados numéricos, destacando a mediana, quartis, valores máximos, mínimos e possíveis *outliers*.
+
+```{r iris-histograma-exemplo}
+hist(dados$Sepal.Length, breaks = 10, col = "#56B4E9", main = "Exemplo de histograma", xlab = "cm")
+```
+
+**Resolução:**
+
+```{r iris-boxplot}
+boxplot(
+  dados$Sepal.Length,
+  horizontal = TRUE,
+  col  = "#56B4E9",
+  main = "Comprimento da sépala",
+  xlab = "Comprimento da sépala (cm)"
+)
+```
+
+A linha central é a **mediana**. Pontos fora dos bigodes são valores sinalizados, não necessariamente erros.
+
+## 3.17 Comparando grupos
+
+Leitura da fórmula: *comprimento da sépala em função da espécie*.
+
+```{r iris-boxplot-grupos}
+boxplot(
+  Sepal.Length ~ Species,
+  data = dados,
+  col  = c("#E69F00", "#56B4E9", "#009E73"),
+  main = "Comprimento da sépala por espécie",
+  xlab = "Espécie",
+  ylab = "Comprimento da sépala (cm)"
+)
+```
+
+**Estatísticas por grupo:**
+
+A função `aggregate()` divide os dados em subconjuntos, calcula estatísticas resumidas para cada um.
+
+- `aggregate(x, by, FUN, ..., simplify = TRUE, drop = TRUE)`
+
+```{r iris-boxplot-horizontal}
+boxplot(dados$Sepal.Length, horizontal = TRUE, main = "Exemplo de boxplot")
+```
+
+Exemplo:
+
+```{r iris-media-grupos}
+aggregate(Sepal.Length ~ Species, data = dados, FUN = mean)
+aggregate(Sepal.Length ~ Species, data = dados, FUN = sd)
+tapply(dados$Sepal.Length, dados$Species, median)
+```
+
+------------------------------------------------------------------------
+
+# 4. Tabela descritiva
+
+## 4.1 Construindo uma tabela "na mão"
+
+```{r tabela-manual}
+x <- dados$Sepal.Length
+
+resumo <- data.frame(
+  variavel = "Comprimento da sépala (cm)",
+  n        = length(x),
+  minimo   = min(x),
+  Q1       = unname(quantile(x, probs = 0.25)),
+  media    = mean(x),
+  mediana  = median(x),
+  Q3       = unname(quantile(x, probs = 0.75)),
+  dp       = sd(x),
+  maximo   = max(x)
+)
+
+resumo
+```
+
+## 4.2 Resumo de todas as variáveis numéricas
+
+A função principal é `sapply()`, que aplica uma função a cada coluna numérica de `dados` e retorna os resultados em um vetor. Já `quantile()`, `mean()`, `median()`, `sd()`, `min()` e `max()` calculam as estatísticas descritivas; `sum(!is.na(v))` conta as observações não ausentes.
+
+```{r tabela-variaveis-numericas}
+vars_num <- names(dados)[sapply(dados, is.numeric)]
+
+tabela_manual <- data.frame(
+  variavel = vars_num,
+  n       = sapply(dados[vars_num], function(v) sum(!is.na(v))),
+  mínimo  = sapply(dados[vars_num], min, na.rm = TRUE),
+  q1      = sapply(dados[vars_num], quantile, probs = 0.25, na.rm = TRUE),
+  media   = sapply(dados[vars_num], mean, na.rm = TRUE),
+  mediana = sapply(dados[vars_num], median, na.rm = TRUE),
+  dp      = sapply(dados[vars_num], sd,   na.rm = TRUE),
+  q3      = sapply(dados[vars_num], quantile, probs = 0.75, na.rm = TRUE),
+  máximo  = sapply(dados[vars_num], max, na.rm = TRUE),
+  row.names = NULL
+)
+
+tabela_manual[ , -1] <- round(tabela_manual[ , -1], 2)
+tabela_manual
+```
+
+## 4.3 Salvando com `openxlsx`
+
+**`install.packages()`** é a "*App Store*"/"Play Store": Você só precisa rodar esse comando **uma vez** no computador. O R vai até a internet, baixa os arquivos do pacote e instala no seu disco rígido.
+
+```{r instalar-openxlsx, eval=FALSE}
+install.packages("openxlsx")
+```
+
+**`library()` é "abrir o aplicativo":** Toda vez que você fechar e abrir o R de novo, os aplicativos estão guardados no seu computador, mas fechados.
+
+Você usa `library(nome_do_pacote)` para abrir e começar a usar as funções dele naquela sessão.
+
+```{r carregar-openxlsx}
+# Carregamento condicional: a análise funciona sem openxlsx.
+tem_openxlsx <- requireNamespace("openxlsx", quietly = TRUE)
+if (!tem_openxlsx) {
+  message("Pacote openxlsx ausente; instale-o para exportar: install.packages('openxlsx')")
+}
+```
+
+`write.xlsx()` grava um data.frame ou uma lista de data.frames em um arquivo .xlsx
+
+- `write.xlsx(x, file, asTable = FALSE, overwrite = TRUE, ...)`
+
+```{r exportar-tabela-excel}
+# Salva a sua tabela gerada no passo anterior direto em um arquivo Excel
+if (tem_openxlsx) {
+  openxlsx::write.xlsx(tabela_manual, file = "tabela.xlsx", overwrite = TRUE)
+  message("Arquivo tabela.xlsx gerado no diretório de trabalho")
+} else {
+  message("Exportação Excel não executada: pacote openxlsx não instalado")
+}
+```
+
+# 5. IA como apoio à programação
+
+**Fluxo Iterativo:** Planejar o que quer → Criar o Prompt → Executar em ambiente seguro → Debugar/Refinar → Documentar.
+
+#### A. Como pedir (Engenharia de Prompt)
+
+- **Pedido vago:** "Analise meus dados."
+- **Pedido útil (modelo):** "Aja como um analista de dados. Tenho um data.frame chamado `dados` com as colunas `Sepal.Length` (numeric) e `Species` (factor). Quero a média, o desvio-padrão e o número de valores válidos de `Sepal.Length` agrupados por `Species`. Use apenas **R base**. Retorne o código comentado e explique a lógica."
+- **Não cole seus dados inteiros:** Cole apenas a estrutura da base.
+  - Em R: rode `dput(head(dados, 5))` ou `str(dados)` e cole a saída na IA
+
+#### B. Como resolver erros (Debugging com IA)
+
+A IA frequentemente erra sintaxe ou usa funções desatualizadas. Quando o código falhar, siga a regra do contexto duplo:
+
+- **Ruim:** "Deu erro: *object 'x' not found*".
+- **Bom:** "Ao rodar o código que você gerou, a linha `mean(x)` retornou o erro *'object x not found'*. Como corrijo isso mantendo a estrutura dos meus dados originais?"
+
+#### C. Critérios de verificação antes de usar código gerado:
+
+- **Privacidade:** Compartilhei apenas dados públicos/simulados, sem senhas, chaves de API ou dados sensíveis?
+- **Integridade:** O código sobrescreve ou deleta os dados originais? (Sempre crie um objeto novo para os resultados, ex: `dados_resumo <- ...`).
+- **Aderência:** O pacote/função sugerido ainda existe e é a melhor prática atual (ex: `dplyr`)?
+- **Validação:** O resultado bate com uma conferência mental simples ou um teste rápido com poucas linhas?
+
+```{r checklist-validacao-ia}
+# Exemplo de conferência antes de utilizar uma resposta gerada por IA.
+stopifnot(is.data.frame(dados), "Species" %in% names(dados))
+aggregate(Sepal.Length ~ Species, data = dados, FUN = mean)
+```
+
+------------------------------------------------------------------------
+
+# 6. Atividade final
+
+Com `Sepal.Width`:
+
+```{r atividade-classificacao}
+# 1. Classe da variável
+class(dados$Sepal.Width)
+
+# 2. Média por tipo de espécie.
+aggregate(
+  Sepal.Width ~ Species,
+  data = dados,
+  FUN = mean
+)
+
+
+# 3. Boxplot por espécie
+boxplot(Sepal.Width ~ Species, data = dados, xlab = "Espécie", ylab = "cm")
+```
+
+**Resultados numéricos da atividade:**
+
+```{r atividade-boxplot-especies}
+media_largura <- aggregate(Sepal.Width ~ Species, data = dados, FUN = mean)
+dp_largura <- aggregate(Sepal.Width ~ Species, data = dados, FUN = sd)
+media_largura
+dp_largura
+```
+
+**Interpretação (3 frases):**
+
+1. A variável `Sepal.Width` representa a largura da sépala, medida em centímetros, e é quantitativa contínua.
+2. Seu centro e sua dispersão podem ser descritos pela média (aproximadamente 3,06 cm) e pelo desvio-padrão (aproximadamente 0,44 cm).
+3. Ao separar por espécie, observamos largura média maior em *setosa* (aproximadamente 3,43 cm), seguida de *virginica* (2,97 cm) e *versicolor* (2,77 cm).
+
+------------------------------------------------------------------------
+
+# Referências
+
+KLEINBAUM, D. G.; KUPPER, L. L.; NIZAM, A.; ROSENBERG, E. B. **Applied regression analysis and other multivariable methods**. 5. ed. Boston: Cengage Learning, 2014.
+
+R CORE TEAM. **R: A language and environment for statistical computing**. Vienna: R Foundation for Statistical Computing. Documentação do conjunto `iris`: `?iris`.
