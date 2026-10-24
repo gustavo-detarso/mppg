@@ -1,0 +1,79 @@
+** Controle interno
+
+*Definição:* sistema de controle mantido no interior de cada Poder para acompanhar legalidade, metas, execução de programas e resultados da gestão pública, inclusive quanto à eficácia e à eficiência.
+
+*Base legal/conceitual:* Constituição Federal de 1988, art. 74; Lei nº 4.320/1964, no regime de controle da execução orçamentária.
+
+*Não confundir com:* controle externo. O controle interno integra a própria estrutura estatal controlada e também deve apoiar o controle externo.
+
+** Controle externo (TCU)
+
+*Definição:* fiscalização exercida pelo Poder Legislativo sobre a gestão contábil, financeira, orçamentária, operacional e patrimonial, com auxílio dos Tribunais de Contas; no plano federal, o Congresso Nacional exerce o controle externo com auxílio do TCU.
+
+*Base legal/conceitual:* Constituição Federal de 1988, arts. 70 e 71.
+
+*Não confundir com:* auditoria isolada ou controle interno. O TCU auxilia o Congresso no controle externo e dispõe de competências constitucionais próprias, mas não substitui o sistema de controle interno de cada Poder.
+
+** Auditoria
+
+*Definição:* procedimento sistemático de obtenção e avaliação de evidências para examinar conformidade, controles, desempenho ou resultados de órgãos, programas, operações e políticas públicas.
+
+*Base legal/conceitual:* Constituição Federal de 1988, arts. 70–74, e referenciais de controle e auditoria do Tribunal de Contas da União.
+
+*Não confundir com:* fiscalização em sentido amplo. Auditoria é uma técnica estruturada de controle; o controle público também utiliza monitoramento, inspeção, levantamento, acompanhamento e outras modalidades.
+
+** Controle social
+
+*Definição:* atuação de cidadãos e organizações da sociedade no acompanhamento, fiscalização, deliberação ou cobrança sobre decisões, gastos e resultados do poder público.
+
+*Base legal/conceitual:* Constituição Federal de 1988, art. 74, § 2º; Lei de Responsabilidade Fiscal, art. 48, no que se refere à transparência e à participação popular na gestão fiscal.
+
+*Não confundir com:* controle estatal. Controle social é exercido pela sociedade, ainda que possa utilizar canais institucionais criados ou reconhecidos pelo Estado.
+
+** Conselho gestor
+
+*Definição:* instância colegiada vinculada a determinada política pública, formada segundo regras próprias de composição e competências, que pode exercer funções de deliberação, acompanhamento, participação, fiscalização ou controle social.
+
+*Base legal/conceitual:* a base jurídica varia conforme a política setorial; não existe um único regime geral aplicável a todos os conselhos gestores.
+
+*Não confundir com:* mera audiência pública ou consulta. O conselho é uma instituição relativamente permanente, enquanto audiências e consultas podem ser eventos ou mecanismos pontuais.
+
+** Orçamento participativo
+
+*Definição:* arranjo de participação por meio do qual cidadãos discutem, priorizam ou influenciam decisões sobre a alocação de recursos públicos e podem acompanhar sua transformação em dotação e execução.
+
+*Base legal/conceitual:* Estatuto da Cidade, arts. 43 e 44, quanto à gestão democrática e à gestão orçamentária participativa no âmbito municipal; Lei de Responsabilidade Fiscal, art. 48, quanto à participação e transparência fiscal.
+
+*Não confundir com:* toda forma de consulta sobre orçamento. Um processo de orçamento participativo pressupõe algum mecanismo estruturado de incidência sobre prioridades ou alocação, ainda que o grau de poder decisório varie entre experiências.
+
+** Indicadores de desempenho
+
+*Definição:* medidas utilizadas para acompanhar produtos, resultados, eficiência, eficácia ou outras dimensões relevantes do desempenho de programas, políticas e organizações públicas.
+
+*Base legal/conceitual:* Constituição Federal de 1988, art. 74, II, e art. 37, § 16, na redação introduzida pela EC nº 109/2021; Referencial de Controle de Políticas Públicas do TCU.
+
+*Não confundir com:* meta. A meta expressa um nível de desempenho pretendido; o indicador é a medida utilizada para acompanhar ou avaliar esse desempenho.
+
+** Avaliação de políticas públicas
+
+*Definição:* análise sistemática do desenho, implementação, desempenho, resultados ou impactos de uma política para produzir evidências úteis à decisão, ao aperfeiçoamento e à prestação de contas.
+
+*Base legal/conceitual:* Constituição Federal de 1988, art. 37, § 16, introduzido pela EC nº 109/2021; Decreto nº 11.558/2023, no âmbito do Conselho de Monitoramento e Avaliação de Políticas Públicas; Referencial de Controle de Políticas Públicas do TCU.
+
+*Não confundir com:* monitoramento. O monitoramento acompanha continuamente indicadores e execução; a avaliação responde perguntas analíticas sobre desenho, implementação, resultados ou efeitos.
+
+** Ciclo de políticas públicas
+
+*Definição:* modelo analítico que organiza a política pública em etapas inter-relacionadas, como formação da agenda, formulação, decisão, implementação, monitoramento, avaliação e retroalimentação.
+
+*Base legal/conceitual:* trata-se de uma ferramenta analítica da literatura de políticas públicas, e não de uma sequência jurídica única e obrigatória para todas as políticas.
+
+*Não confundir com:* ciclo orçamentário. O ciclo de políticas públicas descreve o desenvolvimento da política; o ciclo orçamentário organiza elaboração, apreciação, execução e controle dos instrumentos e recursos orçamentários.
+
+** Risco fiscal
+
+*Definição:* evento ou condição incerta capaz de alterar receitas, despesas, dívida ou outros componentes das contas públicas em relação ao cenário fiscal utilizado no planejamento.
+
+*Base legal/conceitual:* Lei Complementar nº 101/2000 (Lei de Responsabilidade Fiscal), art. 4º, § 3º, que exige Anexo de Riscos Fiscais na LDO.
+
+*Não confundir com:* déficit fiscal. O risco é uma possibilidade ou exposição; o déficit é um resultado fiscal efetivamente apurado ou projetado segundo determinado conceito.

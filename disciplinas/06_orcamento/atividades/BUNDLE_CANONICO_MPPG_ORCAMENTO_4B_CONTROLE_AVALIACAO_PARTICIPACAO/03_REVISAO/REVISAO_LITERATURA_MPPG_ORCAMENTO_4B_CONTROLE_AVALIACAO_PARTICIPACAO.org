@@ -1,0 +1,377 @@
+#+TITLE: Revisão de literatura sobre controle, avaliação e participação social
+#+AUTHOR: Gustavo M. Mendes de Tarso
+#+DATE: 2026
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:t title:nil html-postamble:nil ^:{}
+#+LATEX_CLASS: fgv-paper
+#+LATEX_HEADER: % Bibliografia controlada exclusivamente pelo arquivo BibTeX principal, conforme Academic Pipeline MPPG.
+#+LATEX_HEADER: \usepackage[backend=biber,style=abnt,language=brazil,sorting=nyt,giveninits=true,uniquename=false,uniquelist=false]{biblatex}
+#+LATEX_HEADER: \addbibresource{REVISAO_LITERATURA_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO.bib}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{needspace}
+#+LATEX_HEADER: \setlength{\headheight}{14.5pt}
+
+#+LATEX_HEADER: \usepapercover
+#+LATEX_HEADER: \institution{Fundação Getulio Vargas}
+#+LATEX_HEADER: \programname{}
+#+LATEX_HEADER: \coursename{Mestrado em Políticas Públicas e Governo}
+#+LATEX_HEADER: \disciplinename{Orçamento Público}
+#+LATEX_HEADER: \professorname{Hadassah Laís S. Santana}
+#+LATEX_HEADER: \cityname{Brasília}
+#+LATEX_HEADER: \papertype{Revisão estruturada de literatura}
+#+LATEX_HEADER: \covernote{Trabalho acadêmico elaborado para a disciplina Orçamento Público — 2026.2.}
+
+#+LATEX: \hypersetup{pageanchor=false}
+#+LATEX: \makemytitle
+#+LATEX: \hypersetup{pageanchor=true}
+
+* DELIMITAÇÃO
+
+Esta revisão examina como controle, avaliação e participação social se combinam na governança orçamentária brasileira. O ponto de partida é simples: abrir informações ou criar arenas participativas não basta, por si só, para alterar prioridades públicas. O interesse está nos mecanismos que transformam voz social em consequência institucional — orçamento participativo, conselhos gestores, sistemas de controle interno e externo, auditoria, indicadores de desempenho e avaliação de políticas públicas — e na forma como esses mecanismos alcançam o processo orçamentário, a execução e a prestação de contas.
+
+Como os mecanismos de participação social e de controle público se conectam à governança orçamentária e à avaliação da ação estatal no Brasil, e quais fatores condicionam sua efetividade?
+
+O recorte concentra-se no Brasil. Para as instituições participativas, a ênfase é municipal, porque é nesse nível que orçamento participativo e conselhos gestores permitem observar com maior nitidez a passagem da deliberação para a decisão orçamentária. Para controle e avaliação, entram também os arranjos federais quando estruturam o ciclo de políticas públicas. Transparência orçamentária em sentido amplo, execução da despesa como técnica contábil, emendas parlamentares e arquitetura das regras fiscais não constituem objetos autônomos desta revisão; aparecem apenas quando condicionam participação, controle, avaliação ou responsabilização pública (accountability).
+
+A hipótese de leitura é que transparência e institucionalização criam condições para o controle, mas não o garantem. A efetividade depende de desenho institucional, capacidade administrativa, informação compreensível, margem orçamentária realmente disponível para escolha, monitoramento e resposta estatal. A análise, por isso, acompanha uma sequência: escuta e abertura; deliberação; definição de prioridades; dotação; execução; monitoramento e avaliação; e prestação de contas. O que importa é identificar em quais pontos dessa sequência a influência social ganha densidade — ou se perde.
+
+* CORPUS
+
+** Como o corpus foi montado
+
+O corpus acadêmico principal foi fechado em 21 de agosto de 2026 a partir de busca dirigida e triagem inspirada no PRISMA 2020. A SciELO foi a principal fonte de recuperação, com conferência de texto integral e metadados; DOAJ, Redalyc, CESOP/Unicamp, USP e páginas editoriais foram usados para confirmar autoria, DOI, licença ou acesso. A unidade de análise foi o artigo científico de acesso aberto, com o Brasil como objeto principal. Estudos comparativos foram admitidos quando o caso brasileiro permanecia central. A busca cobriu o período de 2000 a 2026, em português e inglês.
+
+Os descritores combinaram “orçamento participativo” com controle, avaliação, accountability e participação social; “controle social” com políticas públicas e conselhos; “participação cidadã” com conselhos e governança; accountability com controle social e Brasil; “avaliação de políticas públicas” com participação; e “governança orçamentária” com participação e municípios. Foram localizados 29 registros; seis duplicatas foram removidas; 23 registros únicos seguiram à triagem; sete foram excluídos por baixa aderência; 16 textos integrais foram avaliados; quatro foram excluídos por redundância temática ou vínculo insuficiente; e 12 artigos compuseram o corpus final.
+
+#+begin_export latex
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.60\textwidth}
+\centering
+{\small\bfseries Figura 1 – Fluxo de seleção do corpus da revisão\par}
+\vspace{0.20em}
+\includegraphics[width=\linewidth]{assets/FLUXOGRAMA_CORPUS_PRISMA.png}
+\vspace{-0.10em}
+\par\noindent\begin{minipage}{\linewidth}
+\scriptsize Fonte: elaboração própria a partir do protocolo de busca e triagem da revisão, com inspiração no PRISMA 2020.
+\end{minipage}
+\end{minipage}
+\end{figure}
+\vspace{0.18em}
+#+end_export
+
+O critério de inclusão exigiu aderência direta a pelo menos dois dos seguintes eixos: participação orçamentária, controle social, avaliação e efetividade, accountability e integridade, e governança orçamentária. Obras previstas no Plano de Ensino, como \textcite{avritzer2008}, foram utilizadas como referências complementares quando ajudavam a interpretar o corpus, sem alterar silenciosamente o conjunto fechado de 12 artigos.
+
+** O que entrou e por que cinco estudos recebem maior peso
+
+Os cinco estudos centrais foram escolhidos porque iluminam momentos diferentes do mesmo problema, e não porque esgotem o debate. \textcite{silva_carvalho2006} abrem a questão ao transformar as promessas do orçamento participativo em dimensões que podem ser avaliadas. Essa chave encontra em \textcite{novaes_santos2014} um teste concreto: uma experiência participativa pode durar, mobilizar atores e ainda assim encontrar dificuldade para converter deliberação em execução. \textcite{gurgel_justen2013} deslocam a mesma tensão para os conselhos gestores, mostrando por que desenho legal e funcionamento efetivo não se confundem. \textcite{peres2020} acrescenta o limite material do orçamento — receitas, despesas setorializadas e crise fiscal — e obriga a perguntar quanto da decisão está realmente aberto à negociação. \textcite{vieira2023}, por sua vez, aproxima participação de um desfecho observável ao estimar o efeito de conselhos operacionais sobre corrupção municipal. Lidos em conjunto, esses trabalhos permitem seguir a passagem entre abertura institucional, capacidade de decisão, restrição orçamentária e consequência pública.
+
+#+begin_export latex
+\medskip
+\Needspace{0.70\textheight}
+\begin{center}\small\textbf{Quadro 1 – Cinco estudos centrais e sua função analítica}\end{center}\vspace{-0.4em}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.14}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Obra} & \textbf{Desenho / evidência} & \textbf{Contribuição para a revisão} & \textbf{Cautela de interpretação} \\
+\midrule
+\textcite{silva_carvalho2006} & Ensaio teórico; quatro eixos de avaliação do orçamento participativo. & Transforma promessas normativas em perguntas verificáveis sobre democracia, cidadania, gasto e desenvolvimento. & Não estima efeito causal; oferece um quadro de avaliação. \\
+\textcite{gurgel_justen2013} & Revisão de estudos e investigação empírica sobre conselhos gestores. & Mostra a distância entre desenho legal e exercício concreto do controle social. & A heterogeneidade dos conselhos impede generalizações simples. \\
+\textcite{novaes_santos2014} & Estudo de caso; documentos, entrevistas, observação e 262 questionários válidos. & Evidencia ruptura entre participação, prioridade, capacidade financeira e execução. & Um caso municipal não representa automaticamente outras experiências. \\
+\textcite{peres2020} & Dados do Siconfi, 2005--2018, por porte e categorias de receita e despesa. & Explica como rigidez, setorialização e crise fiscal reduzem a margem negociável do orçamento. & Associação estrutural; não identifica isoladamente o efeito de uma instituição participativa. \\
+\textcite{vieira2023} & Quase-experimento; 1.223 municípios auditados entre 2006 e 2015. & Liga conselhos operacionais a menor ocorrência de corrupção e aproxima participação de um desfecho substantivo. & O desfecho é integridade/corrupção; não cobre toda a cadeia orçamentária. \\
+\bottomrule
+\end{tabularx}
+\endgroup
+#+end_export
+
+#+begin_export latex
+\par\vspace{0.25em}\noindent\begin{minipage}{\textwidth}
+\scriptsize Fonte: elaboração própria com base em \textcite{silva_carvalho2006}, \textcite{gurgel_justen2013}, \textcite{novaes_santos2014}, \textcite{peres2020} e \textcite{vieira2023}.
+\end{minipage}\par\vspace{0.9em}
+#+end_export
+
+Em torno desse núcleo, os demais trabalhos ampliam ou tensionam pontos específicos da análise. \textcite{faria2006} aproxima fóruns participativos de controle democrático; \textcite{gomes2015} pergunta sob quais condições conselhos conseguem combinar controle e eficiência; \textcite{souza_silva2017} seguem a responsividade no orçamento participativo de Ceilândia; \textcite{barddal_torres2020} examinam a efetividade de conselhos municipais; e \textcite{luchmann_bogo2022} lembram que experiências de orçamento participativo também podem perder densidade ou desaparecer. Em outro plano, \textcite{teixeira_sena_silva2024} discutem a promoção de accountability social pela Controladoria-Geral da União, enquanto \textcite{torrezan_paiva2025} conectam dimensões fiscais, programáticas, participativas e de accountability na governança orçamentária municipal. O efeito desse conjunto é menos o de acrescentar exemplos do que o de mostrar onde a cadeia entre participação, decisão e resposta pública pode se romper.
+
+** O que ficou de fora, e por quê
+
+Ficaram fora do núcleo artigos de participação sem conexão com decisão pública, orçamento, controle ou avaliação; estudos setoriais cuja contribuição dependesse de peculiaridades pouco transferíveis ao problema de governança; e textos que apenas registrassem a existência de conselhos ou audiências sem investigar funcionamento, incidência ou resultado. Normas, manuais, decisões e bases administrativas também não foram tratados como “literatura acadêmica”: eles entram nas Seções 4 e 5 com função própria. Essa separação é importante para não confundir três perguntas distintas — o que a literatura sustenta, o que a norma exige e o que os dados permitem observar.
+
+* MAPA DAS POSIÇÕES
+
+O corpus converge sobre uma intuição e diverge justamente no ponto mais difícil: criar canais de participação e controle importa, mas não diz, sozinho, o que esses canais conseguem produzir. A controvérsia começa depois da abertura institucional. Três tensões organizam o debate: a distância entre institucionalização formal e incidência substantiva; o peso relativo do desenho institucional diante de condições políticas, administrativas e fiscais; e o critério pelo qual se decide que participação e controle foram, de fato, efetivos.
+
+** Institucionalização formal ou incidência substantiva?
+
+\textcite{silva_carvalho2006} recusam um atalho frequente: tratar participação como resultado. Se “avaliar os resultados do Orçamento Participativo é tarefa complexa” \parencite[424]{silva_carvalho2006}, não basta registrar que houve “a participação direta dos cidadãos” \parencite[424]{silva_carvalho2006}. A terceira formulação dos autores — “cobrar a divulgação dos resultados” \parencite[424]{silva_carvalho2006} — é importante porque desloca o olhar da abertura do processo para aquilo que vem depois dele. A pergunta passa a ser se a deliberação alterou prioridades, se a despesa correspondente foi executada e se os resultados foram devolvidos ao público. É nesse percurso, e não no simples número de reuniões ou participantes, que a promessa participativa pode ser confrontada com evidência.
+
+\textcite{gurgel_justen2013} pressionam esse critério a partir dos conselhos gestores. O artigo se propõe a “avaliar o exercício do controle social” \parencite[357]{gurgel_justen2013} e encontra uma prática que, em vários aspectos, “distancia-se daquilo que se prevê em lei” \parencite[357]{gurgel_justen2013}. Isso não leva os autores a abandonar a ambição dos conselhos; eles a situam em um “patamar elevado e necessário de democratização” \parencite[357]{gurgel_justen2013}. A tensão é mais produtiva do que uma conclusão binária. A norma cria a arena, mas informação, representação, autonomia, capacidade de ação e relações com a burocracia condicionam o que essa arena consegue fazer. Por isso, “existência de conselho” é um indicador de institucionalização, não de controle substantivo.
+
+É em Vitória da Conquista que essa diferença deixa de ser abstrata. \textcite{novaes_santos2014} estudam o orçamento participativo municipal com documentação, entrevistas, observação direta e questionários; dos 530 delegados eleitos para o IX Congresso de 2011, 262 questionários válidos entraram na análise. A questão empírica era saber se o arranjo conseguia “interferir efetivamente na destinação de recursos municipais” \parencite[797]{novaes_santos2014}. O balanço é ambivalente: o processo “contribuiu parcialmente com a democratização da gestão municipal” \parencite[797]{novaes_santos2014}, mas, em dimensões relevantes, “não consistiu em fórum de efetiva participação” \parencite[797]{novaes_santos2014}. A fricção aparece em problemas financeiros, atrasos de obras, ausência de critérios técnicos claros para ordenar demandas e informação insuficiente sobre custos e capacidade de realização. Nada disso apaga a participação ocorrida. Mostra, porém, que ouvir, priorizar e entregar são operações institucionais diferentes — e que a credibilidade do processo depende de conectá-las.
+
+Essa leitura reaparece, com ênfases distintas, em \textcite{souza_silva2017}, \textcite{barddal_torres2020} e \textcite{torrezan_paiva2025}. A consequência para esta revisão é clara: uma leitura procedimental pergunta se havia canal, regra e reunião; uma leitura substantiva pergunta se houve influência sobre decisão, execução, avaliação e resposta pública. Para a governança orçamentária, a segunda pergunta é mais difícil. Também é a que realmente importa.
+
+** Quanto o desenho institucional consegue superar limites políticos, administrativos e fiscais?
+
+A explicação para resultados diferentes não cabe apenas dentro da arena participativa. Regras de entrada, representação, deliberação, competência decisória, acesso a informação e mecanismos de responsabilização importam, mas operam em contextos que não são neutros. \textcite{gomes2015} sustenta que conselhos podem aprofundar a democracia e contribuir para a eficiência quando representação, deliberação e consequência decisória funcionam em conjunto. \textcite{avritzer2008} amplia o argumento: desenho institucional, organização da sociedade civil e vontade política se combinam. Copiar a forma de uma instituição, portanto, não reproduz automaticamente as condições que sustentaram sua efetividade em outro lugar ou momento.
+
+\textcite{peres2020} desloca o debate para uma restrição que a literatura participativa nem sempre coloca no centro: a própria estrutura do orçamento. A autora enquadra o problema como “participação e conflito distributivo inerente ao orçamento público” \parencite[1]{peres2020}. Seus dados municipais do Siconfi, entre 2005 e 2018, evidenciam uma “crescente setorialização de gastos” \parencite[1]{peres2020} e ajudam a explicar as “dificuldades para a construção de uma arena coletiva” \parencite[1]{peres2020}. A implicação é incômoda, mas decisiva: pode haver uma arena participativa bem desenhada e, ainda assim, pouca margem fiscal sobre a qual deliberar. A institucionalização de políticas setoriais e de seus conselhos pode fortalecer decisões em áreas específicas ao mesmo tempo que estreita o espaço transversal no qual o orçamento participativo disputa prioridades entre políticas.
+
+Responsabilidade fiscal, nesse quadro, não aparece como antagonista da participação. O problema é ocultar a restrição. Um processo que explicite custos, vinculações e recursos efetivamente negociáveis antes da deliberação pode parecer menos aberto, mas oferece ao participante uma noção mais realista do que está em disputa. A continuidade política também pesa. \textcite{luchmann_bogo2022} mostram que experiências de orçamento participativo podem perder densidade quando mudam os incentivos e as condições de sustentação. A efetividade, portanto, nasce menos de um desenho isolado do que da combinação entre regras, capacidade estatal, organização social, compromisso político e espaço fiscal.
+
+#+begin_export latex
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.94\textwidth}
+\centering
+{\small\bfseries Gráfico 1 – Espaço fiscal e margem de escolha na LOA 2026: fotografia contextual\par}
+\vspace{0.45em}
+\includegraphics[width=0.84\linewidth,height=0.18\textheight,keepaspectratio]{assets/GRAFICO_MARGEM_LOA2026.png}
+\vspace{0.35em}
+\par\noindent\begin{minipage}{\linewidth}
+\scriptsize Fonte: elaboração própria a partir do \textit{Raio X do Orçamento 2026} \parencite{camara_raiox2026}. Valores federais; uso exclusivamente contextual.
+\end{minipage}
+\end{minipage}
+\end{figure}
+\vspace{0.45em}
+#+end_export
+
+O gráfico cumpre uma função modesta: não mede participação e não deve ser transportado para os municípios. Ele apenas torna visível o tipo de restrição discutido por \textcite{peres2020}. Na LOA federal de 2026 pós-vetos, as despesas obrigatórias representam 90,2% das despesas primárias líquidas e as discricionárias 9,8%. \parencite{camara_raiox2026} É uma fotografia de outro nível federativo, usada apenas como contexto, mas ajuda a formular uma pergunta que qualquer desenho participativo precisa responder: qual parcela do orçamento está, de fato, aberta à escolha?
+
+** Como medir efetividade: presença, responsividade, integridade ou resultado?
+
+Quando se chega à mensuração, a divergência reaparece. Contar participantes, reuniões ou instituições é relativamente simples; demonstrar consequência pública é muito mais difícil. \textcite{silva_carvalho2006} já advertiam que intensidade participativa não basta para avaliar o orçamento participativo. \textcite{souza_silva2017} deslocam a atenção para responsividade: a manifestação de preferências perde densidade quando a cadeia entre demanda, processamento governamental, execução e resposta é interrompida. \textcite{torrezan_paiva2025}, por sua vez, lembram que indicadores só geram aprendizagem quando entram no processo de decisão e correção. Meta formal não é sinônimo de avaliação utilizada.
+
+\textcite{vieira2023} oferece um contraste metodológico importante porque trabalha com um desfecho substantivo: corrupção. O artigo “estima o impacto do controle social” \parencite[24]{vieira2023} por meio de um “desenho de pesquisa quase-experimental” \parencite[24]{vieira2023} e encontra “redução estatisticamente significativa na ocorrência dos casos de corrupção” \parencite[24]{vieira2023}. A análise usa amostra aleatória de 1.223 municípios auditados independentemente entre 2006 e 2015 pela Controladoria-Geral da União e combina regressão, pareamento e variáveis instrumentais. O interesse do estudo para esta revisão não está apenas no resultado; está na diferença entre ter um conselho formalmente existente e ter um conselho cuja operação pode ser relacionada a um desfecho observável.
+
+Esse achado não encerra o debate. Reduzir corrupção não equivale a melhorar alocação, qualidade do gasto ou entrega de uma política, e um desenho quase-experimental sobre conselhos não responde sozinho pelo orçamento participativo. Ainda assim, ele mostra que controle social pode produzir consequência mensurável quando a instituição funciona. Isso muda a exigência feita aos indicadores: é preciso observar diferentes pontos da cadeia — abertura e representatividade, poder de agenda, margem decisória, conversão em dotação, execução, entrega, resultado e resposta pública — em vez de condensar tudo em uma única medida de “participação”.
+
+** Síntese do mapa: quando transparência se transforma em controle?
+
+Publicar não é controlar. Também não basta abrir uma arena participativa para que a decisão pública mude. O corpus sugere que transparência reduz assimetrias informacionais, mas só ganha consequência quando a informação é compreensível, há atores capazes de utilizá-la, existem canais institucionais de ação e o poder público responde. A participação enfrenta exigência semelhante: torna-se governança quando consegue atravessar as etapas que separam escuta de consequência orçamentária. A figura abaixo resume essa lógica e situa os principais pontos de ruptura.
+
+#+begin_export latex
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.94\textwidth}
+\centering
+{\small\bfseries Figura 2 – Cadeia analítica da participação à responsabilização pública\par}
+\vspace{0.45em}
+\includegraphics[width=0.90\linewidth,height=0.17\textheight,keepaspectratio]{assets/FIG_CADEIA_ANALITICA.png}
+\vspace{0.35em}
+\par\noindent\begin{minipage}{\linewidth}
+\scriptsize Fonte: elaboração própria a partir do corpus da revisão. A sequência é uma síntese analítica do trabalho, não proposição textual de um único autor.
+\end{minipage}
+\end{minipage}
+\end{figure}
+\vspace{0.45em}
+#+end_export
+
+A cadeia ajuda a evitar uma conclusão apressada de sucesso ou fracasso. Abertura sem deliberação produz consulta; deliberação sem capacidade de alterar prioridades tende à ritualização; prioridade sem dotação gera expectativa sem compromisso; dotação sem execução rompe a responsividade; execução sem avaliação permite confundir gasto com resultado; e avaliação sem prestação de contas transforma evidência em informação sem consequência. Um desenho institucional coerente com a literatura precisa, portanto, mostrar a margem decisória antes da deliberação, ligar prioridades a ações orçamentárias, acompanhar execução e resultados e explicar publicamente o destino das decisões.
+
+* ESTADO DA NORMATIZAÇÃO
+
+** A base constitucional e legal
+
+O núcleo constitucional do controle orçamentário está nos arts. 70 a 75 da Constituição Federal. O art. 70 submete a fiscalização contábil, financeira, orçamentária, operacional e patrimonial aos critérios de legalidade, legitimidade e economicidade, articulando o controle externo exercido pelo Congresso Nacional com os sistemas de controle interno. O art. 71 atribui ao Tribunal de Contas da União funções de apreciação, julgamento, fiscalização e auditoria. O art. 74 exige sistemas integrados de controle interno e determina, entre outras funções, a avaliação do cumprimento das metas do Plano Plurianual, da execução dos programas e dos resultados da gestão quanto à eficácia e à eficiência. O § 2º do mesmo artigo legitima cidadão, partido político, associação ou sindicato a denunciar irregularidades ou ilegalidades ao Tribunal de Contas da União. A Constituição, portanto, combina controle técnico institucional e uma porta explícita para controle social. \parencite{brasil_cf1988}
+
+A Lei nº 4.320, de 17 de março de 1964, preserva uma camada operacional importante. Seus arts. 75 a 79 tratam do controle da execução orçamentária, incluindo legalidade dos atos de receita e despesa, fidelidade funcional dos agentes e cumprimento do programa de trabalho em termos monetários e de realização de obras e serviços. A linguagem é anterior ao vocabulário contemporâneo de avaliação, mas já aproxima execução financeira e realização física — conexão que seria ampliada posteriormente pela agenda de desempenho e resultados. \parencite{brasil_lei4320_1964}
+
+No plano municipal, a Constituição prevê cooperação de associações representativas no planejamento municipal e organiza a fiscalização pelo controle externo do Legislativo e pelo controle interno do Executivo. No âmbito da política urbana, o Estatuto da Cidade (Lei nº 10.257, de 10 de julho de 2001) densifica a gestão democrática. O art. 43 prevê órgãos colegiados, debates, audiências e consultas públicas; e o art. 44 determina, para a gestão orçamentária participativa municipal, debates, audiências e consultas sobre as propostas do Plano Plurianual, da Lei de Diretrizes Orçamentárias e do orçamento anual como condição para aprovação pela Câmara Municipal. O dispositivo é relevante porque trata participação como parte da formação da decisão, e não apenas como acesso posterior à informação. \parencite{brasil_cf1988,brasil_lei10257_2001}
+
+A Lei de Responsabilidade Fiscal completa essa base ao vincular transparência fiscal e participação. O art. 48 identifica planos, orçamentos, diretrizes orçamentárias, prestações de contas e relatórios fiscais como instrumentos de transparência. Com a Lei Complementar nº 131, de 27 de maio de 2009, reforçou-se tanto a disponibilização tempestiva de informações sobre execução quanto o incentivo à participação popular e às audiências públicas durante elaboração e discussão dos planos e orçamentos. A norma aumenta a possibilidade de escrutínio, mas não elimina o problema empírico identificado na literatura: informação disponível não é sinônimo de informação utilizada nem de resposta estatal. \parencite{brasil_lc101_2000,brasil_lc131_2009}
+
+** O que mudou recentemente
+
+A Emenda Constitucional nº 109, de 15 de março de 2021, aproximou de forma explícita avaliação de políticas e processo orçamentário. O § 16 do art. 37 determina que órgãos e entidades da administração pública realizem avaliação de políticas públicas, com divulgação do objeto avaliado e dos resultados alcançados. O § 16 do art. 165 estabelece que Plano Plurianual, Lei de Diretrizes Orçamentárias e Lei Orçamentária Anual devem observar, no que couber, resultados do monitoramento e da avaliação. A mudança retira a avaliação do campo exclusivo das boas práticas gerenciais e a insere na arquitetura constitucional do planejamento e orçamento. \parencite{brasil_ec109_2021}
+
+No Executivo federal, o Decreto nº 11.558, de 13 de junho de 2023, disciplina o Conselho de Monitoramento e Avaliação de Políticas Públicas. Entre suas diretrizes estão a promoção de eficácia, efetividade e eficiência, o uso da avaliação como aprendizagem institucional e a articulação entre avaliação, planejamento e orçamento federal. O Conselho avalia políticas selecionadas, acompanha propostas de aprimoramento e apoia o monitoramento. O desenho institucionaliza um ciclo avaliativo, embora a literatura ainda deixe aberta a pergunta sobre quanto as recomendações efetivamente alteram desenho, alocação ou execução posteriores. \parencite{brasil_decreto11558_2023}
+
+A Lei Complementar nº 224, de 26 de dezembro de 2025, introduziu exigências mais específicas para incentivos e benefícios tributários. Entre outras mudanças na Lei de Responsabilidade Fiscal, o novo art. 14-A exige, em determinadas proposições que concedam, ampliem ou prorroguem benefício tributário a pessoa jurídica, metas objetivas e quantificáveis, mecanismos de transparência e monitoramento e avaliação dos resultados. A alteração é setorial, não uma regra geral de avaliação de toda política pública, mas ilustra a tendência de conectar decisão fiscal, metas verificáveis e avaliação. \parencite{brasil_lc224_2025}
+
+Em 2026, a Emenda Constitucional nº 139 alterou os arts. 31 e 75 da Constituição para estabelecer os Tribunais de Contas como órgãos permanentes e essenciais ao controle externo da administração pública. A alteração reforça a estabilidade institucional do controle externo. Para o problema desta revisão, entretanto, sua importância é complementar: um aparato de controle robusto pode coexistir com baixa incidência participativa; o desafio continua sendo conectar controle técnico, avaliação e controle social. \parencite{brasil_ec139_2026}
+
+** O que os órgãos de controle dizem sobre políticas públicas
+
+O Referencial de Controle de Políticas Públicas do Tribunal de Contas da União, publicado em 2020, estabelece critérios comuns para avaliar o nível de maturidade de políticas públicas e orientar ações de controle sobre formulação, implementação e avaliação. Seu efeito analítico é relevante porque desloca o controle de uma leitura estritamente de conformidade para uma leitura que inclui desempenho e resultados. O documento aproxima, assim, controle externo e avaliação de políticas — exatamente uma das conexões centrais do subtema. \parencite{tcu_referencial2020}
+
+Não foi adotada jurisprudência do Supremo Tribunal Federal como eixo estruturante desta revisão porque, para o nexo específico entre orçamento participativo, avaliação e controle social, não foi identificada decisão única com função equivalente à que a ADPF 854 exerce no tema das emendas parlamentares. Isso não significa ausência de decisões relacionadas à transparência, participação ou controle. Significa apenas que, no recorte aqui utilizado, a densidade normativa principal decorre da Constituição, da Lei de Responsabilidade Fiscal, do Estatuto da Cidade, da legislação de avaliação e dos referenciais do Tribunal de Contas da União.
+
+* DADOS DISPONÍVEIS
+
+Esta seção mapeia fontes, e não pretende atribuir causalidade. A pergunta é o que cada base registra, em qual escala, e qual inferência seria indevida se ela fosse usada isoladamente. Para o subtema 4B, três fontes são particularmente úteis porque observam dimensões diferentes da cadeia: a estrutura participativa municipal, a atividade do controle externo e a produção institucional de avaliações. O Raio X do Orçamento 2026 entra apenas como fotografia do contexto fiscal federal.
+
+#+begin_export latex
+\medskip
+\Needspace{0.56\textheight}
+\begin{center}\small\textbf{Quadro 2 – Fontes de dados para controle, avaliação e participação social}\end{center}\vspace{-0.4em}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.14}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Fonte} & \textbf{O que contém} & \textbf{O que permite investigar} & \textbf{O que não permite afirmar sozinha} \\
+\midrule
+MUNIC / IBGE & Estrutura e funcionamento municipal; módulos e variáveis sobre conselhos, planejamento e instituições participativas em diferentes edições. & Presença institucional, distribuição territorial, diferenças por porte e, quando comparável, mudança temporal. & Qualidade deliberativa, representatividade ou influência sobre dotação e execução. \\
+Tribunal de Contas da União & Dados abertos, fiscalizações, acórdãos e jurisprudência. & Volume e foco do controle externo; temas, órgãos, tipos de decisão e padrões temporais. & Que maior volume de acórdãos signifique maior efetividade ou menor irregularidade. \\
+CMAP / MPO & Avaliações por ciclo, métodos, achados, recomendações e acompanhamento. & O que é avaliado, com quais perguntas, e como recomendações são formuladas. & Que a recomendação tenha causado mudança orçamentária ou que represente todas as políticas federais. \\
+Raio X do Orçamento 2026 / CONOF & Fotografia da LOA 2026 pós-vetos: obrigatórias, discricionárias, limites, emendas e outros agregados. & Contextualizar o espaço fiscal e a margem de escolha no exercício de 2026. & Participação, qualidade do controle ou causalidade; não é série histórica nem retrato municipal. \\
+\bottomrule
+\end{tabularx}
+\endgroup
+#+end_export
+
+#+begin_export latex
+\par\vspace{0.25em}\noindent\begin{minipage}{\textwidth}
+\scriptsize Fonte: elaboração própria a partir das bases institucionais \parencite{ibge_munic2024,tcu_dados2026,mpo_cmap2025,camara_raiox2026}.
+\end{minipage}\par\vspace{0.9em}
+#+end_export
+
+** Pesquisa de Informações Básicas Municipais – IBGE
+
+A Pesquisa de Informações Básicas Municipais (MUNIC) é um levantamento nacional sobre estrutura, dinâmica e funcionamento das instituições públicas municipais, realizado desde 1999. Em diferentes edições, seus módulos registram conselhos, instrumentos de planejamento, características de políticas e mecanismos participativos. A base permite descrever presença institucional e distribuição territorial e, quando uma variável é repetida de forma comparável, estudar mudança ao longo do tempo. O limite é decisivo: os questionários e módulos variam entre edições. Por isso, não se deve tratar automaticamente toda variável como série anual contínua. Além disso, a MUNIC registra estruturas e atributos declarados pela administração municipal; não demonstra, sem combinação com outras fontes, qualidade deliberativa, incidência sobre dotação ou execução, nem resultado de política. \parencite{ibge_munic2024}
+
+** Tribunal de Contas da União – dados abertos, fiscalizações e acórdãos
+
+O Tribunal de Contas da União disponibiliza dados abertos e bases de jurisprudência que permitem pesquisar decisões, fiscalizações e acórdãos. Esse material é adequado para mapear intensidade e foco do controle externo, selecionar decisões sobre programas ou políticas, identificar órgãos recorrentes e acompanhar mudanças de ênfase ao longo do tempo. A rastreabilidade documental é uma vantagem importante, especialmente para auditorias operacionais e temas de governança. \parencite{tcu_dados2026}
+
+A base, contudo, mede atividade institucional de controle externo, não efetividade do controle social. Mais acórdãos podem significar maior fiscalização, mudança de foco, nova classificação ou aumento de problemas. A inferência depende do desenho de pesquisa. Para aproximar participação de integridade ou irregularidades, é necessário conectar exposição participativa, funcionamento do controle e desfechos — estratégia semelhante à adotada por \textcite{vieira2023} com os dados de auditorias da Controladoria-Geral da União.
+
+** Conselho de Monitoramento e Avaliação de Políticas Públicas – avaliações e recomendações
+
+O Ministério do Planejamento e Orçamento publica avaliações e relatórios do Conselho de Monitoramento e Avaliação de Políticas Públicas. No ciclo 2024–2025, foram avaliadas oito políticas públicas finalísticas do Plano Plurianual 2024–2027 — quatro pelo Comitê de Monitoramento e Avaliação de Gastos Diretos e quatro pelo Comitê de Monitoramento e Avaliação dos Subsídios da União —, resultando em 22 recomendações encaminhadas aos órgãos responsáveis. A fonte permite observar seleção de políticas, perguntas avaliativas, métodos, achados e recomendações, além de parte do acompanhamento institucional. \parencite{mpo_cmap2025}
+
+O limite é de atribuição e representatividade. O Conselho não mede participação social e o conjunto das políticas avaliadas é selecionado, não uma amostra aleatória de todas as políticas federais. Tampouco a publicação de uma recomendação prova que ela determinou uma mudança posterior. Para estudar uso de evidência, seria preciso seguir a recomendação até decisões de desenho, alocação, implementação e nova avaliação.
+
+* LACUNAS E CONTROVÉRSIAS ABERTAS
+
+A primeira lacuna é causal e longitudinal: em que medida instituições participativas alteram de fato a sequência prioridade → dotação → execução → resultado, e como esse efeito varia com a margem fiscal disponível? O corpus documenta incidência limitada em alguns casos, restrições de discricionariedade e efeitos potenciais sobre integridade, mas raramente acompanha uma mesma decisão desde a deliberação até a entrega e o resultado. Resolver essa questão exige integrar dados sobre desenho participativo, prioridades escolhidas, orçamento aprovado, execução física e financeira, avaliação e prestação de contas.
+
+A segunda lacuna é de mensuração: qual combinação de indicadores consegue distinguir participação meramente procedimental de participação substantiva? A literatura usa presença, qualidade deliberativa, responsividade, execução, eficiência, integridade e desenvolvimento. Nenhuma medida isolada cobre toda a cadeia. Um avanço seria medir separadamente abertura, representatividade, poder de agenda, margem decisória, conversão em dotação, execução, resultado e resposta pública.
+
+A terceira controvérsia é institucional: que desenho maximiza participação sem perder responsabilidade fiscal, eficiência e accountability? \textcite{peres2020} mostra que o espaço decisório é limitado pela estrutura fiscal; \textcite{novaes_santos2014} mostram o custo de deliberar sem informação suficiente sobre capacidade financeira e execução; \textcite{vieira2023} demonstra que instituições participativas efetivamente operacionais podem gerar consequência substantiva. Falta, porém, evidência comparativa que permita identificar quais combinações de informação de custos, margem negociável, vínculo com ações orçamentárias e dever de devolutiva funcionam melhor em contextos administrativos distintos.
+
+Por fim, permanece aberta a pergunta que articula o seminário: quando transparência produz controle? A normatização ampliou a disponibilidade de informações, mas o corpus não permite tratar publicação de dados como sinônimo de accountability. A questão empírica é identificar quais combinações de inteligibilidade, capacidade social de análise, acesso a canais de denúncia ou deliberação e resposta estatal transformam informação em consequência institucional. Em síntese, participação sem orçamento tende ao rito; orçamento sem controle tende à opacidade; e controle sem avaliação tende ao procedimento sem aprendizagem.
+
+* FICHAMENTO DAS CINCO OBRAS CENTRAIS
+
+** Obra 1 — Silva e Carvalho (2006)
+
+Referência: \fullcite{silva_carvalho2006}.
+
+Tese central: O potencial transformador atribuído ao orçamento participativo não deve ser presumido; precisa ser convertido em dimensões passíveis de avaliação.
+
+Argumento: Os autores organizam as promessas atribuídas ao orçamento participativo em quatro eixos — radicalização da democracia, nova cidadania, aperfeiçoamento do gasto público e desenvolvimento local — e usam três perspectivas teóricas para transformá-las em perguntas avaliáveis. O movimento é importante porque retira o debate do terreno da adesão normativa: participar mais não prova, por si só, que houve melhor gasto, maior democratização ou desenvolvimento. A obra fixa, assim, o primeiro cuidado analítico do trabalho: intensidade participativa e efetividade não são a mesma coisa.
+
+Evidência utilizada: Ensaio teórico e revisão crítica da literatura sobre orçamento participativo, com construção de um quadro mínimo de avaliação.
+
+*Três citações literais:*
+
+“avaliar os resultados do Orçamento Participativo é tarefa complexa” \parencite[424]{silva_carvalho2006}.
+
+“a participação direta dos cidadãos” \parencite[424]{silva_carvalho2006}.
+
+“cobrar a divulgação dos resultados” \parencite[424]{silva_carvalho2006}.
+
+** Obra 2 — Gurgel e Justen (2013)
+
+Referência: \fullcite{gurgel_justen2013}.
+
+Tese central: A institucionalização de conselhos gestores não garante exercício substantivo do controle social; o funcionamento concreto pode se afastar do desenho legal.
+
+Argumento: O artigo reconstrói a trajetória de institucionalização dos conselhos e confronta a promessa democrática do desenho legal com seu funcionamento empírico. Poder decisório, autonomia, informação, representação e relações com a burocracia aparecem como condições variáveis, não como atributos garantidos pela norma. Aqui, a contribuição decisiva é dar conteúdo à diferença entre presença institucional e consequência: o conselho pode existir formalmente sem exercer controle na intensidade que seu desenho sugere.
+
+Evidência utilizada: Revisão de pesquisas sobre conselhos gestores nos três níveis de governo e investigação empírica do exercício do controle social.
+
+*Três citações literais:*
+
+“avaliar o exercício do controle social” \parencite[357]{gurgel_justen2013}.
+
+“distancia-se daquilo que se prevê em lei” \parencite[357]{gurgel_justen2013}.
+
+“patamar elevado e necessário de democratização” \parencite[357]{gurgel_justen2013}.
+
+** Obra 3 — Novaes e Santos (2014)
+
+Referência: \fullcite{novaes_santos2014}.
+
+Tese central: O orçamento participativo de Vitória da Conquista contribuiu apenas parcialmente para democratizar a gestão, porque a existência da arena participativa não se converteu em influência equivalente sobre políticas e recursos.
+
+Argumento: O estudo acompanha uma experiência duradoura e mostra que continuidade institucional e mobilização social podem coexistir com dificuldades de execução. Restrições financeiras e administrativas, atraso de obras, critérios pouco claros de priorização e informação insuficiente sobre custos fragilizam a passagem entre deliberação e entrega. No argumento deste trabalho, o caso é especialmente útil porque torna visível onde a responsividade pode se romper: entre a prioridade escolhida, sua tradução orçamentária e a realização concreta.
+
+Evidência utilizada: Estudo de caso com pesquisa documental, entrevistas, observação direta e questionários a delegados do IX Congresso do orçamento participativo de 2011; 262 questionários foram considerados válidos.
+
+*Três citações literais:*
+
+“interferir efetivamente na destinação de recursos municipais” \parencite[797]{novaes_santos2014}.
+
+“contribuiu parcialmente com a democratização da gestão municipal” \parencite[797]{novaes_santos2014}.
+
+“não consistiu em fórum de efetiva participação” \parencite[797]{novaes_santos2014}.
+
+** Obra 4 — Peres (2020)
+
+Referência: \fullcite{peres2020}.
+
+Tese central: A efetividade do orçamento participativo depende da estrutura econômica e institucional do orçamento municipal; setorialização, estrutura das receitas e crise fiscal reduzem o espaço de negociação.
+
+Argumento: A autora insere a participação dentro do conflito distributivo próprio do orçamento. A expansão de sistemas setoriais pode fortalecer conselhos e direitos em áreas específicas, mas também estreitar o espaço transversal em que diferentes prioridades disputam recursos. A contribuição para esta revisão é mudar a pergunta: antes de avaliar apenas o desenho participativo, é preciso saber quanto do orçamento é realmente discricionário e negociável.
+
+Evidência utilizada: Dados orçamentários municipais do Siconfi entre 2005 e 2018, organizados por porte e por categorias de receitas e despesas, articulados à discussão institucional e federativa.
+
+*Três citações literais:*
+
+“participação e conflito distributivo inerente ao orçamento público” \parencite[1]{peres2020}.
+
+“crescente setorialização de gastos” \parencite[1]{peres2020}.
+
+“dificuldades para a construção de uma arena coletiva” \parencite[1]{peres2020}.
+
+** Obra 5 — Vieira (2023)
+
+Referência: \fullcite{vieira2023}.
+
+Tese central: Conselhos municipais que operam de modo efetivo podem produzir consequência substantiva sobre integridade pública, reduzindo a ocorrência de corrupção.
+
+Argumento: O estudo trata controle social como mecanismo capaz de alterar incentivos por monitoramento, regulação, consulta e decisão. Em vez de tomar a existência formal do conselho como evidência de eficácia, constrói uma medida de funcionamento e estima sua relação causal com corrupção. Dentro do conjunto analisado, é o teste mais forte da hipótese de que operação efetiva importa mais do que forma jurídica, embora o desfecho observado — integridade — não cubra toda a cadeia orçamentária.
+
+Evidência utilizada: Desenho quase-experimental com regressão, pareamento e variáveis instrumentais em amostra aleatória de 1.223 municípios auditados independentemente entre 2006 e 2015 no programa de fiscalização da Controladoria-Geral da União.
+
+*Três citações literais:*
+
+“estima o impacto do controle social” \parencite[24]{vieira2023}.
+
+“desenho de pesquisa quase-experimental” \parencite[24]{vieira2023}.
+
+“redução estatisticamente significativa na ocorrência dos casos de corrupção” \parencite[24]{vieira2023}.
+
+* REFERÊNCIAS
+
+#+LATEX: \printbibliography[heading=none]
+
+
+#+LATEX: \clearpage
+
+* APÊNDICE A — GLOSSÁRIO ORÇAMENTÁRIO DO SUBTEMA 4B
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+Este apêndice reproduz o glossário obrigatório do subtema 4B. A fonte canônica dos dez verbetes é compartilhada com o arquivo autônomo do glossário.
+
+#+INCLUDE: "glossario/GLOSSARIO_CONTEUDO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO.org"
+
+#+LATEX: \clearpage
+
+* DECLARAÇÃO DE USO DE INTELIGÊNCIA ARTIFICIAL
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+Declaro que utilizei a ferramenta ChatGPT, da OpenAI, como apoio à organização da revisão, busca exploratória e verificação de fontes acadêmicas, normativas e institucionais, consolidação do texto e revisão formal. As citações literais e respectivas páginas foram preservadas a partir das fontes conferidas no corpus; as referências e afirmações normativas foram verificadas em fontes acessíveis e oficiais. A responsabilidade pela escrita, raciocínio e concatenação de ideias, gerando o conteúdo final é integralmente do autor.

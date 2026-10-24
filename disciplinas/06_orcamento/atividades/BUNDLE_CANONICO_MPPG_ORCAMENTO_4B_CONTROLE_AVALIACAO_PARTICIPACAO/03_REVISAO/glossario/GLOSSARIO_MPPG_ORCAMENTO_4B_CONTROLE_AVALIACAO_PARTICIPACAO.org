@@ -1,0 +1,33 @@
+#+TITLE: Glossário orçamentário — 4B: Controle, avaliação e participação social
+#+AUTHOR: Gustavo M. Mendes de Tarso
+#+DATE: 2026
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:nil title:nil html-postamble:nil ^:{}
+#+LATEX_CLASS: fgv-paper
+#+LATEX_HEADER: \usepackage[backend=biber,style=abnt,language=brazil,sorting=nyt,giveninits=true,uniquename=false,uniquelist=false]{biblatex}
+#+LATEX_HEADER: \addbibresource{../REVISAO_LITERATURA_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO.bib}
+#+LATEX_HEADER: \setlength{\headheight}{14.5pt}
+#+LATEX_HEADER: \usepapercover
+#+LATEX_HEADER: \institution{Fundação Getulio Vargas}
+#+LATEX_HEADER: \programname{}
+#+LATEX_HEADER: \coursename{Mestrado em Políticas Públicas e Governo}
+#+LATEX_HEADER: \disciplinename{Orçamento Público}
+#+LATEX_HEADER: \professorname{Hadassah Laís S. Santana}
+#+LATEX_HEADER: \cityname{Brasília}
+#+LATEX_HEADER: \papertype{Glossário orçamentário}
+#+LATEX_HEADER: \covernote{Subtema 4B — Controle, avaliação e participação social.}
+
+#+LATEX: \hypersetup{pageanchor=false}
+#+LATEX: \makemytitle
+#+LATEX: \hypersetup{pageanchor=true}
+
+* GLOSSÁRIO ORÇAMENTÁRIO DO SUBTEMA 4B
+
+Este glossário reúne os dez termos definidos para o subtema 4B no Roteiro de Produção da disciplina. Cada verbete apresenta definição em linguagem própria, base legal ou conceitual quando aplicável e uma distinção mínima para evitar confusões terminológicas.
+
+#+INCLUDE: "GLOSSARIO_CONTEUDO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO.org"
+
+* REFERÊNCIAS
+
+#+LATEX: \nocite{brasil_cf1988,brasil_lc101_2000,brasil_lei4320_1964,brasil_lei10257_2001,brasil_ec109_2021,brasil_decreto11558_2023,tcu_referencial2020}
+#+LATEX: \printbibliography[heading=none]
