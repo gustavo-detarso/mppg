@@ -1,0 +1,48 @@
+#+OPTIONS: toc:nil num:nil ^:nil
+#+LANGUAGE: pt-BR
+
+*PUIA — Protocolo de Declaração de Uso de IA Generativa*
+*Tema 5.1 — Licenciamento Ambiental*
+
+| Campo | Informação declarada |
+|-------+----------------------|
+| Discente | Gustavo Magalhães Mendes de Tarso |
+| Disciplina | Métodos Qualitativos de Pesquisa em Ciência Política |
+| Atividade | Exercício Programado 04 — relatório final de análise temática |
+| Data | 26/09/2026 |
+| Ferramenta utilizada | ChatGPT — OpenAI |
+
+*1. Declaração objetiva de uso*
+
+Declaro que utilizei IA generativa no EP04 e em etapas anteriores cujos resultados foram reutilizados nesta entrega. O ChatGPT atuou como apoio metodológico, organizacional, redacional, técnico e, em operações delimitadas, interpretativo. As decisões finais permaneceram sob minha responsabilidade.
+
+*2. Em que momentos a IA foi utilizada*
+
+- apoio à delimitação de indicadores empíricos, comparação com o codebook e sugestões de criação, reutilização ou revisão de códigos e critérios de exclusão;
+- organização de Coding reports, comparação de segmentos, busca de contraevidência e apoio à formulação ou revisão de categorias e temas;
+- seleção e contextualização de excertos e revisão do relatório;
+- reconciliação dos Coding Frequency pré e pós-merge e apoio a scripts e visualizações descritivas;
+- materialização e auditoria de planilhas, apresentação, PUIA e bundles de entrega, incluindo a revisão pós-feedback do professor, a divisão de um tema residual, a auditoria dos 21 temas e a atualização do Prompt Master.
+
+*3. Como a IA afetou meu processo analítico*
+
+A IA aumentou sistematicidade e rastreabilidade, mas podia induzir ancoragem ou confirmação. Por isso, confrontei propostas com segmentos literais, codebook, Coding reports, Journals e exportações reais do QualCoder, buscando contraevidência e interpretações alternativas.
+
+*4. Responsabilidade do pesquisador*
+
+| Dimensão | Declaração |
+|----------------------+----------------------|
+| Indicadores | A IA sugeriu delimitações; eu decidi registrar ou não cada indicador. |
+| Codificação | A IA sugeriu alternativas; eu decidi códigos, aplicações e mudanças no codebook. |
+| Categorias e temas | A IA organizou evidências e propôs formulações; eu decidi as categorias, a revisão pós-feedback e os 21 temas finais. |
+| Contagens e artefatos | As contagens vieram do QualCoder; a IA apoiou reconciliação, scripts, gráficos e materialização. |
+| Conclusões e submissão | Eu mantive responsabilidade pela interpretação final e pela versão submetida, incluindo a incorporação do feedback do professor. |
+
+*5. Limites declarados*
+
+O corpus é didático e fictício, com 10 entrevistas, cinco perguntas e analista único. Frequência não foi tratada como importância nem como base de generalização estatística.
+
+Declaro que o uso de IA foi informado de modo compatível com sua participação real e assumo responsabilidade final pelo conteúdo submetido.
+
+Assinatura: Gustavo Magalhães Mendes de Tarso
+Data: 26/09/2026

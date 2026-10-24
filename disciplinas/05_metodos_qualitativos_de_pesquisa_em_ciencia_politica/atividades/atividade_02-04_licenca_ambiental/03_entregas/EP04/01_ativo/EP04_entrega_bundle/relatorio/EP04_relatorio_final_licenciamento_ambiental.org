@@ -1,0 +1,136 @@
+*Relatório final — Análise temática pelo procedimento de Adu (2019)*
+
+| *Curso*      | Mestrado em Políticas Públicas e Governo - MPPG/EPPG-FGV |
+|--------------+----------------------------------------------------------|
+| *Disciplina* | Métodos Qualitativos de Pesquisa em Ciência Política     |
+| *Professor*  | Julio Cesar de Aguiar, PhD                               |
+| *Discente*   | Gustavo Magalhães Mendes de Tarso                        |
+| *Tema*       | 5.1 - Licenciamento Ambiental                            |
+| *Data*       | 26 de setembro de 2026                                   |
+
+* 1. INTRODUÇÃO
+O tema desta pesquisa é o licenciamento ambiental. O relatório apresenta uma análise temática de entrevistas fictícias com analistas ambientais, com foco nas contradições entre celeridade e rigor técnico e na avaliação da efetividade do licenciamento como instrumento de proteção ambiental e desenvolvimento sustentável.
+
+A pergunta geral foi: como os analistas ambientais percebem os desafios e as contradições do licenciamento ambiental no Brasil? A RQ1 investigou as tensões entre pressões por celeridade e necessidade de rigor técnico. A RQ2 investigou a avaliação da efetividade do licenciamento. Como a RQ2 reunia dimensões distintas, subdividi-a operacionalmente em quatro objetos: contribuições, limites, relações/participação dos atores e aperfeiçoamento do licenciamento.
+
+Os dados são fictícios, criados para fins didáticos no âmbito da disciplina de Métodos Qualitativos de Pesquisa em Ciência Política do MPPG/EPPG-FGV. Não representam opiniões reais e não devem ser utilizados como dados empíricos sobre o licenciamento ambiental. O objetivo do exercício é demonstrar domínio do procedimento analítico.
+
+* 2. METODOLOGIA
+** 2.1 Dados e corpus
+Analisei 10 entrevistas fictícias com analistas ambientais. Cada entrevista possuía cinco perguntas abertas e foi tratada como um caso no QualCoder 3.8.2. O corpus incluiu Ricardo, Fernanda, Marcos, Luciana, Carlos Eduardo, Patrícia, André, Juliana, Roberto Carlos e Débora. A variação entre órgãos, funções e trajetórias foi considerada como contexto interpretativo, sem produzir inferências populacionais.
+
+** 2.2 Perguntas de pesquisa e anchor codes
+Criei os anchor codes como Categories de topo no QualCoder. A RQ1 permaneceu com um anchor. A RQ2 foi subdividida em quatro anchors operacionais porque a análise mostrou que suas respostas tratavam de contribuições, limites, relações e propostas de aperfeiçoamento.
+
+- RQ1 — Celeridade e rigor técnico: 34 códigos; 5 temas.
+- RQ2 — Contribuições do licenciamento: 10 códigos; 2 temas.
+- RQ2 — Limites da efetividade: 22 códigos; 5 temas.
+- RQ2 — Relações e participação dos atores: 20 códigos; 4 temas.
+- RQ2 — Aperfeiçoamento do licenciamento: 20 códigos; 5 temas.
+
+** 2.3 Estratégia de codificação
+Adotei estratégia interpretativa porque as perguntas perguntavam como os entrevistados percebiam, avaliavam e explicavam o licenciamento. O procedimento foi misto: dedutivo nos anchor codes, derivados das perguntas de pesquisa, e indutivo nos códigos substantivos, criados a partir do corpus. A codificação não buscou mensurar uma população; as contagens foram usadas como descrição do corpus e como apoio à auditoria.
+
+** 2.4 O procedimento emacD
+Executei o emacD separando cinco operações: selecionar o indicador empírico; determinar seu significado; formular a resposta à pergunta de pesquisa; criar o código; desenvolver a descrição e o critério de exclusão. Essa separação evitou confundir significado com resposta à RQ e permitiu que trechos próximos recebessem códigos diferentes quando respondiam de forma distinta às perguntas.
+
+Exemplo: no trecho de Roberto Carlos “esse projeto vai destruir a floresta, vocês têm que negar”, o indicador não registra simples cobrança por rigor. O significado é a tentativa de orientar previamente o resultado decisório ao indeferimento. A resposta à RQ1 é que a pressão externa também pode disputar o resultado no sentido oposto à aprovação ou celeridade. O código aplicado foi `Pressão externa por indeferimento`.
+
+** 2.5 Livro de códigos e compilação
+O codebook pré-merge terminou com 106 códigos substantivos e 306 aplicações. Cada código possuía Description com descrição e critério de exclusão. Após a transposição temática, o projeto registrou 21 temas e 303 aplicações temáticas únicas. A diferença entre 306 e 303 decorre de três exact matches internos entre códigos destinados ao mesmo tema, sem perda empírica.
+
+** 2.6 Desenvolvimento dos temas
+Desenvolvi os temas por anchor code. Listei os códigos com Count e Cases, usei os códigos dominantes como sementes de comparação e agrupei os demais por padrão de significado. O dominante não foi tratado como tema automático nem como medida de importância. Cada agrupamento recebeu rótulo nominal e descrição. No QualCoder, cada tema foi criado como Code com sufixo (T); no Description registrei a definição e a lista dos códigos constituintes. Em seguida, mesclei cada código substantivo no tema correspondente.
+
+Após o feedback do professor sobre o EP03, reexaminei a arquitetura temática. O primeiro tema de RQ1 foi renomeado de modo a representar o padrão compartilhado por todos os códigos, inclusive déficits, barreiras e restrições. O antigo tema residual de Limites da efetividade foi dividido em dois temas porque reunia mecanismos distintos: problemas de escala/desenho federativo e problemas cuja complexidade cumulativa, histórica, sistêmica ou difusa excede a lógica individualizada do empreendimento. Essa revisão aumentou a estrutura final de 20 para 21 temas, sem alterar códigos, aplicações pré-merge, Count total pós-merge ou Cases.
+
+** 2.7 Consistência, sistematicidade e transparência
+A consistência foi preservada pela adoção da Codebook Thematic Analysis ensinada na disciplina, sem misturar a execução com Reflexive TA ou Coding Reliability TA. A sistematicidade foi garantida pela sequência fixa de indicadores, emacD, codebook, revisão global, agrupamento por anchor, transposição temática e auditoria pós-merge. A transparência foi documentada nos Journals, nas exportações do QualCoder, no QDC pós-feedback, nos Memos dos temas e na declaração de uso de IA.
+
+** 2.8 Nota metodológica sobre uso de IA generativa
+Usei IA generativa em operações de apoio e em interlocução interpretativa controlada. Como apoio, a IA organizou checkpoints, revisou redação, estruturou planilhas, scripts e slides. Como interlocutora interpretativa, ajudou a comparar códigos, explicitar fronteiras, formular rótulos, preservar contrapontos, planejar os merges e auditar a correspondência 106 códigos -> 21 temas. Verifiquei as propostas contra trechos codificados, codebook, Journals, Coding reports, exportações reais e QDC. A decisão analítica final permaneceu minha.
+
+* 3. RESULTADOS E DISCUSSÃO
+** 3.1 Formato de apresentação
+Apresento os resultados por temas, organizados pelos cinco anchor codes. Count e Cases descrevem a distribuição do corpus, mas não indicam importância substantiva nem autorizam generalização.
+
+*** Celeridade e rigor técnico
+- *Condições e restrições da análise técnica* — Count 19; Cases 10. Reúne condições, déficits e restrições materiais, humanas, territoriais e temporais que condicionam a produção da análise técnica rigorosa. Códigos: Atualização técnica contínua (1); Barreiras territoriais à vistoria (3); Complexidade técnica dos processos (5); Déficit de especialização técnica (1); Déficit de pessoal (4); Exigência de preparação técnica (1); Infraestrutura operacional precária (1); Sobrecarga de processos (1); Tempo para análise técnica (2).
+- *Pressões sobre ritmo, decisão e legitimidade* — Count 37; Cases 10. Reúne pressões heterogêneas sobre prazos, exigências, resultados decisórios e legitimidade do licenciamento. Códigos: Licenciamento como entrave (3); Pressão burocrática indireta (2); Pressão econômica setorial (2); Pressão externa por celeridade (7); Pressão política personalizada (1); Pressão política setorial (4); Pressão por viabilização (4); Pressão velada (3); Proteção ambiental como entrave (1); Pressão externa por indeferimento (1).
+- *Práticas e apoios ao rigor* — Count 36; Cases 10. Reúne práticas e apoios que permitem sustentar tecnicamente decisões ambientais diante de pressões e contestações. Códigos: Cobrança externa por rigor (5); Fundamentação técnica do parecer (8); Manutenção do rigor sob pressão (8); Proteção institucional do analista (3); Reconhecimento externo do trabalho técnico (1); Registro documental (6).
+- *Responsabilização, autonomia e decisão* — Count 7; Cases 4. Reúne efeitos ambivalentes da responsabilização e da autonomia sobre a tomada e sustentação de decisões técnicas. Códigos: Insegurança jurídica decisória (1); Paralisia por responsabilização (1); Responsabilidade ética e jurídica (2); Responsabilização sem autonomia (1); Reversão da análise técnica (1); Rigor por responsabilização (1).
+- *Custos e consequências das pressões* — Count 11; Cases 7. Reúne custos profissionais, comportamentais e substantivos associados à incidência ou prevalência de pressões sobre a análise técnica. Códigos: Aprovação defensiva (3); Consequências da prevalência da pressão (2); Desgaste profissional (5).
+
+*** Contribuições do licenciamento
+- *Institucionalização da consideração ambiental* — Count 9; Cases 7. Reúne funções preventivas pelas quais o licenciamento obriga a consideração prévia de impactos, produz informação e estabelece patamar mínimo de proteção. Códigos: Análise prévia como avanço (5); Cultura de consideração ambiental (1); Produção de informação técnica (2); Licenciamento como proteção mínima (1).
+- *Mecanismos de controle e proteção* — Count 11; Cases 7. Reúne mecanismos que tornam a proteção ambiental operável por condicionantes, exigibilidade, rastreabilidade, compensação e responsabilização. Códigos: Efetividade em fontes pontuais (4); Condicionantes como proteção (2); Exigibilidade das condicionantes (2); Medidas compensatórias efetivas (1); Possibilidade de responsabilização (1); Rastreabilidade documental (1).
+
+*** Limites da efetividade
+- *Insuficiência de controle e conformidade* — Count 15; Cases 8. Reúne fragilidades de fiscalização, auditoria, enforcement e conformidade que distanciam obrigações formais de cumprimento efetivo. Códigos: Auditorias como formalidade (1); Dependência da via judicial (1); Descumprimento impune de condicionantes (1); Efetividade condicionada à conformidade (2); Fiscalização insuficiente (8).
+- *Capacidade e integridade institucionais* — Count 15; Cases 8. Reúne condições institucionais de capacidade, estabilidade, integridade e desempenho que condicionam a efetividade do licenciamento. Códigos: Captura política institucional (7); Efetividade condicionada à capacidade institucional (3); Instabilidade institucional (2); Lentidão processual (2).
+- *Escala e desenho federativo* — Count 9; Cases 6. Reúne desajustes de escala, escopo, competência, desenho federativo e contexto territorial que limitam o alcance do licenciamento. Códigos: Compatibilização de usos territoriais (1); Descompasso federativo do licenciamento (1); Fragmentação do escopo do licenciamento (1); Fragmentação federativa do licenciamento (1); Inadequação contextual do licenciamento (1); Tensão entre desenvolvimento e proteção (2).
+- *Limites diante de problemas complexos* — Count 17; Cases 9. Reúne limites diante de problemas cumulativos, históricos, sistêmicos, difusos ou não resolvíveis pela lógica individualizada do empreendimento. Códigos: Insuficiência do licenciamento (6); Limites da avaliação cumulativa (5); Limites diante de passivos ambientais (2); Limites diante de problemas sistêmicos (2); Limites em atividades difusas (1).
+- *Fragilidade da base de evidências* — Count 4; Cases 3. Reúne problemas de qualidade, suficiência e independência da evidência usada para avaliar impactos ambientais. Códigos: Conflito de interesse nos estudos (2); Estudos ambientais superficiais (2).
+
+*** Relações e participação dos atores
+- *Heterogeneidade das relações com empreendedores* — Count 14; Cases 8. Reúne formas distintas de relação com empreendedores, variando entre interação técnica, contestação, assimetria, adversarialidade e formalismo. Códigos: Assimetria de capacidade (5); Interação técnica com empreendedores (3); Relação adversarial com empreendedores (3); Relação profissional sob contestação (1); Licenciamento como formalidade (1).
+- *Participação formal e influência substantiva* — Count 15; Cases 6. Reúne condições que diferenciam participação formal de influência substantiva sobre as decisões. Códigos: Assimetria de poder (3); Capacidade comunitária desigual (1); Diálogo comunitário insuficiente (3); Dificuldade de inclusão comunitária (1); Espaços de participação social (2); Linguagem técnica como barreira (2); Participação social pouco efetiva (2).
+- *Limites da proteção e relações comunitárias* — Count 7; Cases 5. Reúne tensões comunitárias associadas a proteção insuficiente, compensações, confiança estatal e distribuição desigual de riscos. Códigos: Cobrança comunitária além da capacidade (3); Compensações insuficientes (1); Desconfiança comunitária no Estado (2); Distribuição desigual de riscos (1).
+- *Papéis dos atores externos* — Count 10; Cases 5. Reúne papéis de instituições de controle, organizações externas e comunidades como fontes de apoio, informação, proteção e também dificuldades de interlocução. Códigos: Apoio de instituições de controle (4); Contribuição informacional de atores externos (3); Comunidades aliadas à proteção (2); Dificuldade de diálogo com ONGs (1).
+
+*** Aperfeiçoamento do licenciamento
+- *Preservação preventiva e fortalecimento do controle* — Count 17; Cases 8. Reúne propostas de preservação do núcleo preventivo do licenciamento e reforço de controle, auditoria, fiscalização e responsabilização. Códigos: Preservação dos pilares preventivos (8); Auditorias independentes (2); Eliminação do automonitoramento (1); Fortalecimento da fiscalização pós-licença (4); Fortalecimento da responsabilização (2).
+- *Capacidade estatal de implementação* — Count 18; Cases 9. Reúne propostas para ampliar a capacidade estatal de implementar o licenciamento de modo substantivo. Códigos: Ampliação do quadro de pessoal (5); Autonomia institucional (5); Modernização e integração tecnológica (8); Valorização das carreiras (2).
+- *Governança territorial e coordenação institucional* — Count 16; Cases 8. Reúne propostas de articulação entre escalas territoriais, entes federativos, políticas públicas, biomas e avaliação cumulativa. Códigos: Aprimoramento da avaliação cumulativa (2); Fortalecimento da cooperação técnica interfederativa (2); Fortalecimento federal do licenciamento (2); Gestão territorial do licenciamento (4); Integração entre licenciamento e políticas (3); Licenciamento diferenciado por bioma (3).
+- *Participação e influência substantiva* — Count 9; Cases 6. Reúne propostas para qualificar a participação social e ampliar a influência ou o poder decisório de comunidades afetadas. Códigos: Aprimoramento da participação social (6); Poder decisório das comunidades (2).
+- *Conciliação entre proteção e viabilidade* — Count 7; Cases 4. Reúne propostas de compatibilização entre proteção ambiental, viabilidade econômica, apoio à adequação e proporcionalidade regulatória. Códigos: Conciliação ambiental e econômica (3); Apoio à adequação ambiental (2); Licenciamento proporcional ao risco (2).
+
+
+** 3.2 Leitura analítica por anchor code
+*** Celeridade e rigor técnico
+A RQ1 produziu cinco temas. A revisão pós-feedback mostrou que o primeiro tema não poderia ser formulado como se seus códigos comprovassem apenas a existência de condições que sustentam o rigor. Eles também registram déficits de pessoal, de especialização, infraestrutura precária, sobrecarga e barreiras territoriais. Por isso, o tema final é `Condições e restrições da análise técnica`.
+
+*** Contribuições do licenciamento
+As contribuições aparecem em dois planos: institucionalização da consideração ambiental e mecanismos de controle e proteção. O corpus não sustenta a leitura de que o licenciamento seja inútil; sustenta uma avaliação condicional de suas funções positivas.
+
+*** Limites da efetividade
+Os limites finais foram organizados em cinco temas. A principal alteração pós-feedback foi separar `Escala e desenho federativo` de `Limites diante de problemas complexos`. A fronteira é metodológica: o primeiro reúne problemas de escala, competência, escopo, desenho federativo e adequação territorial; o segundo reúne problemas cuja natureza cumulativa, histórica, sistêmica ou difusa excede a lógica do empreendimento individual.
+
+*** Relações e participação dos atores
+As relações entre atores aparecem como heterogêneas. Empreendedores podem atuar em interação técnica, contestação profissional, adversarialidade ou formalismo. A participação social não é ausente, mas sua existência formal não garante influência substantiva.
+
+*** Aperfeiçoamento do licenciamento
+As propostas de aperfeiçoamento indicam preservar o núcleo preventivo e fortalecer controle, capacidade estatal, governança territorial, participação substantiva e conciliação entre proteção e viabilidade. O corpus sugere reformas orientadas a implementação e adequação.
+
+** 3.3 Temas em destaque
+*** Pressões sobre ritmo, decisão e legitimidade
+Esse tema mostra que pressões externas e internas disputam mais do que prazos. Elas incidem sobre ritmo, exigências, resultado decisório e legitimidade do licenciamento. O contraponto `Pressão externa por indeferimento` impede reduzir pressões externas a demandas por aprovação ou flexibilização. Count 37; Cases 10.
+
+*** Escala e desenho federativo
+Esse tema foi separado após o feedback do professor. Ele reúne limites ligados à correspondência entre competência administrativa, escala territorial dos impactos, escopo do objeto licenciado e contexto territorial. A fronteira entre `Fragmentação federativa do licenciamento` e `Descompasso federativo do licenciamento` foi explicitada: o primeiro trata de lacunas ou sobreposições entre esferas; o segundo, da inadequação entre esfera licenciadora e escala dos impactos. Count 9; Cases 6.
+
+*** Limites diante de problemas complexos
+Esse tema reúne limites cuja causa não é primariamente a repartição federativa ou o desenho institucional, mas a natureza do próprio problema ambiental: efeitos cumulativos, passivos históricos, problemas sistêmicos e fontes difusas. A divisão evita que um tema residual apenas enumere limites heterogêneos. Count 17; Cases 9.
+
+*** Participação formal e influência substantiva
+Esse tema mostra que mecanismos participativos podem existir sem produzir influência efetiva. A variação interna envolve assimetria de poder, capacidade comunitária desigual, barreiras de linguagem, diálogo insuficiente e pouca efetividade. Count 15; Cases 6.
+
+*** Capacidade estatal de implementação
+Esse tema reúne propostas de pessoal, autonomia, valorização das carreiras e modernização tecnológica. O corpus indica que aperfeiçoar o licenciamento exige capacidade de implementação, e não apenas mudança normativa. Count 18; Cases 9.
+
+
+* 4. CONCLUSÃO
+A RQ1 é respondida pelo corpus como uma tensão institucional e profissional complexa: o rigor técnico depende de condições concretas de análise e é disputado por pressões sobre ritmo, exigências, resultado decisório e legitimidade. Os analistas mobilizam práticas de documentação, fundamentação, resistência e apoios institucionais, mas essas estratégias têm custos e operam sob limites de autonomia e responsabilização.
+
+A RQ2 é respondida de modo condicional. O licenciamento é reconhecido como instrumento necessário por institucionalizar a consideração ambiental e tornar a proteção operável por mecanismos de controle. Sua efetividade, porém, depende de fiscalização, conformidade, capacidade institucional, qualidade da evidência, escala adequada, enfrentamento de problemas complexos e participação substantiva. As propostas de aperfeiçoamento apontam para fortalecimento, coordenação e adaptação do instrumento.
+
+As limitações decorrem do caráter didático e fictício do corpus, do roteiro de cinco perguntas, da análise por um único pesquisador e da participação declarada de IA generativa. O exercício descreve o corpus e o percurso metodológico; não produz conhecimento empírico generalizável sobre analistas ambientais reais.
+
+* 5. REFERÊNCIAS
+ADU, Philip. A step-by-step guide to qualitative data coding. Abingdon: Routledge, 2019.
+
+BRAUN, Virginia; CLARKE, Victoria. One size fits all? What counts as quality practice in (reflexive) thematic analysis? Qualitative Research in Psychology, v. 18, n. 3, p. 328-352, 2021.
+
+GREENHALGH, Trisha. Reflexive qualitative research and generative AI: a call to go beyond the binary. Qualitative Inquiry, online first, 2026. DOI: 10.1177/10778004261429383.
+
+QUALCODER. QualCoder: qualitative data analysis software. Versão 3.8.2. [S. l.], 2026. Software.

@@ -1,0 +1,230 @@
+#+TITLE: EP04 — Apresentação do relatório final — Licenciamento Ambiental
+#+AUTHOR: Gustavo Magalhães Mendes de Tarso
+#+LANGUAGE: pt-br
+#+OPTIONS: toc:nil num:nil
+
+# Fonte canônica da apresentação do EP04.
+# Este Org é compilado por ./compilar_beamer_org.sh.
+
+#+begin_src json :exports none
+{
+  "metadata": {
+    "tema": "Tema 5.1 — Licenciamento Ambiental",
+    "footer": "Tema 5.1 — Licenciamento Ambiental",
+    "date_line": "MPPG/EPPG-FGV · Turma 2026.2 · Aula IX · 09/10/2026",
+    "data_note": "Dados fictícios, criados para fins didáticos"
+  },
+  "slides": [
+    {
+      "kind": "cover",
+      "time": "0:15",
+      "eyebrow": "RELATÓRIO FINAL · EXERCÍCIO PROGRAMADO 4",
+      "title": "Licenciamento\nAmbiental",
+      "subtitle": "Análise temática pelo procedimento de Adu (2019), executada no QualCoder 3.8.2",
+      "author_block": "Gustavo Magalhães Mendes de Tarso\nTema 5.1 · Métodos Qualitativos de Pesquisa em Ciência Política\nMPPG/EPPG-FGV · Turma 2026.2 · Aula IX · 09/10/2026",
+      "note": "[0:15] Apresente o tema, o método e o caráter didático dos dados."
+    },
+    {
+      "kind": "theme_questions",
+      "time": "0:40",
+      "title": "Tema, perguntas e corpus",
+      "subtitle": "O tema é como analistas ambientais percebem desafios e contradições do licenciamento ambiental no Brasil",
+      "questions": [
+        [
+          "RQ1",
+          "Celeridade e rigor técnico",
+          "Quais tensões vivenciam entre pressões por celeridade e necessidade de rigor técnico?"
+        ],
+        [
+          "RQ2",
+          "Contribuições e limites",
+          "Como avaliam contribuições e limites do licenciamento para proteção ambiental?"
+        ],
+        [
+          "RQ2",
+          "Relações e participação",
+          "Como avaliam relações entre atores e participação social no processo?"
+        ],
+        [
+          "RQ2",
+          "Aperfeiçoamento do licenciamento",
+          "Que mudanças sugerem para aumentar a efetividade sem esvaziar a função preventiva?"
+        ]
+      ],
+      "corpus_block": "10\nentrevistas fictícias com analistas ambientais\n \n5\nperguntas abertas no roteiro, que delimitam o que o corpus permite dizer",
+      "bottom_note": "A RQ1 permaneceu em um anchor; a RQ2 foi subdividida em quatro objetos analíticos, resultando em cinco anchor codes.",
+      "note": "[0:40] Explique a subdivisão da RQ2 em quatro objetos analíticos."
+    },
+    {
+      "kind": "method_path",
+      "time": "1:00",
+      "title": "Percurso analítico",
+      "subtitle": "Codebook Thematic Analysis: anchors dedutivos, códigos indutivos e emacD",
+      "metrics": [
+        [
+          "5",
+          "anchor codes",
+          "derivados das RQs"
+        ],
+        [
+          "106",
+          "códigos",
+          "descrição + exclusão"
+        ],
+        [
+          "303",
+          "aplicações temáticas",
+          "pós-merge auditado"
+        ],
+        [
+          "21",
+          "temas",
+          "pós-feedback"
+        ]
+      ],
+      "table": [
+        [
+          "Anchor code",
+          "Códigos",
+          "Temas"
+        ],
+        [
+          "Celeridade e rigor técnico",
+          "34",
+          "5"
+        ],
+        [
+          "Contribuições do licenciamento",
+          "10",
+          "2"
+        ],
+        [
+          "Limites da efetividade",
+          "22",
+          "5"
+        ],
+        [
+          "Relações e participação",
+          "20",
+          "4"
+        ],
+        [
+          "Aperfeiçoamento do licenciamento",
+          "20",
+          "5"
+        ]
+      ],
+      "example_title": "Exemplo de código\nPressão externa por indeferimento",
+      "example_body": "Pressão de ator externo para obter ou favorecer o indeferimento.\nNão se confunde com cobrança por rigor, celeridade ou viabilização.",
+      "note": "[1:00] Destaque 106 códigos, 21 temas e 303 aplicações temáticas únicas."
+    },
+    {
+      "kind": "theme_map",
+      "time": "0:45",
+      "title": "Mapa dos temas",
+      "subtitle": "Vinte e um temas, organizados pelos cinco anchor codes",
+      "anchors": [
+        [
+          "Celeridade e rigor técnico",
+          [
+            "Condições e restrições da análise técnica",
+            "Pressões sobre ritmo, decisão e legitimidade",
+            "Práticas e apoios ao rigor",
+            "Responsabilização, autonomia e decisão",
+            "Custos e consequências das pressões"
+          ]
+        ],
+        [
+          "Contribuições do licenciamento",
+          [
+            "Institucionalização da consideração ambiental",
+            "Mecanismos de controle e proteção"
+          ]
+        ],
+        [
+          "Limites da efetividade",
+          [
+            "Insuficiência de controle e conformidade",
+            "Capacidade e integridade institucionais",
+            "Escala e desenho federativo",
+            "Limites diante de problemas complexos",
+            "Fragilidade da base de evidências"
+          ]
+        ],
+        [
+          "Relações e participação dos atores",
+          [
+            "Heterogeneidade das relações com empreendedores",
+            "Participação formal e influência substantiva",
+            "Limites da proteção e relações comunitárias",
+            "Papéis dos atores externos"
+          ]
+        ],
+        [
+          "Aperfeiçoamento do licenciamento",
+          [
+            "Preservação preventiva e fortalecimento do controle",
+            "Capacidade estatal de implementação",
+            "Governança territorial e coordenação institucional",
+            "Participação e influência substantiva",
+            "Conciliação entre proteção e viabilidade"
+          ]
+        ]
+      ],
+      "note": "[0:45] Mostre que a revisão pós-feedback transformou 20 temas em 21 pela divisão de Limites da efetividade."
+    },
+    {
+      "kind": "theme_detail",
+      "time": "1:30",
+      "title": "Pressões sobre ritmo, decisão e legitimidade",
+      "subtitle": "Anchor code: Celeridade e rigor técnico (RQ1)",
+      "description_title": "Descrição (campo Description)",
+      "description_body": "Pressões heterogêneas disputam tempo, exigências, resultado decisório e legitimidade do licenciamento. Incluem aceleração, viabilização, flexibilização e, como contraponto, indeferimento.",
+      "chart_categories": [
+        "Pressão externa por celeridade",
+        "Pressão por viabilização",
+        "Pressão política setorial",
+        "Licenciamento como entrave",
+        "Pressão velada"
+      ],
+      "chart_values": [
+        7,
+        4,
+        4,
+        3,
+        3
+      ],
+      "excerpts_title": "Excertos: funções distintas",
+      "excerpts": [
+        [
+          "Caso típico · André, IMASUL/MS, 24 anos",
+          "“o meio ambiente não pode atrapalhar o progresso do estado”",
+          "Pressão por celeridade/viabilização e disputa de legitimidade."
+        ],
+        [
+          "Contraponto · Roberto Carlos, SEMA/AM, 20 anos",
+          "“esse projeto vai destruir a floresta, vocês têm que negar”",
+          "Pressão externa também pode buscar indeferimento."
+        ],
+        [
+          "Fronteira · Carlos Eduardo, INEA/RJ, 18 anos",
+          "“documento tudo, exijo que os estudos estejam completos”",
+          "A pressão não determina automaticamente perda de rigor."
+        ]
+      ],
+      "bottom_note": "Tema com 37 aplicações em 10 das 10 entrevistas; os códigos mais transversais indicam celeridade/viabilização, preservando contraponto por indeferimento.",
+      "note": "[1:30] Desenvolva o tema selecionado e use os excertos por função argumentativa."
+    },
+    {
+      "kind": "answers",
+      "time": "0:50",
+      "title": "Respostas às perguntas",
+      "rq1": "A tensão celeridade × rigor emerge como disputa por tempo, decisão e legitimidade, condicionada por capacidade, autonomia, responsabilização, apoios institucionais e custos profissionais.",
+      "rq2": "O licenciamento torna a proteção ambiental institucionalmente operável, mas sua efetividade depende de controle, capacidade estatal, qualidade da evidência, escala do problema e participação com influência.",
+      "limitations": "Dados fictícios; roteiro de cinco perguntas; 10 casos; analista único. Contagens descrevem o corpus e não medem importância.",
+      "ai": "Apoio em organização, redação, planilhas, visualizações e auditoria; resultados verificados contra codebook, Coding reports e exportações do QualCoder.",
+      "note": "[0:50] Feche com respostas às RQs, limitações e declaração de IA."
+    }
+  ]
+}
+#+end_src
