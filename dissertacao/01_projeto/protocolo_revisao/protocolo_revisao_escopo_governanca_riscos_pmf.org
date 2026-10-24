@@ -1,0 +1,254 @@
+#+TITLE: Protocolo de revisão de escopo — Governança de riscos na PMF
+#+AUTHOR: Gustavo M. Mendes de Tarso
+#+DATE: Outubro de 2026
+#+LANGUAGE: pt_BR
+#+OPTIONS: toc:nil num:nil title:nil ^:{}
+#+STARTUP: indent
+#+LATEX_COMPILER: lualatex
+#+LATEX_CLASS: fgv-paper
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LATEX_HEADER: \geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=58pt,headsep=18pt,footskip=1.2cm}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{longtable}
+#+LATEX_HEADER: \usepackage{ltablex}
+#+LATEX_HEADER: \keepXColumns
+#+LATEX_HEADER: \setlength{\emergencystretch}{3em}
+#+LATEX_HEADER: \sloppy
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueDark}{HTML}{003B71}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueMid}{HTML}{006BB6}
+#+LATEX_HEADER: \definecolor{FGVHeaderBlueLight}{HTML}{8FD3F4}
+#+LATEX_HEADER: \setlength{\headheight}{58pt}
+#+LATEX_HEADER: \setlength{\headsep}{18pt}
+#+LATEX_HEADER: \newcommand{\FGVHeaderLogoInclude}{\IfFileExists{fgv.png}{\includegraphics[height=1.05cm]{fgv.png}}{}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderGradientRule}{\begin{tikzpicture}[baseline=(current bounding box.center)]\shade[left color=FGVHeaderBlueDark,middle color=FGVHeaderBlueMid,right color=FGVHeaderBlueLight] (0pt,0pt) rectangle (\headwidth,2pt);\end{tikzpicture}}
+#+LATEX_HEADER: \newcommand{\FGVHeaderBlock}{\makebox[\headwidth][l]{\begin{minipage}[t]{\headwidth}\FGVHeaderLogoInclude\\[-1pt]\FGVHeaderGradientRule\end{minipage}}}
+#+LATEX_HEADER: \fancypagestyle{fgvreportstyle}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{plain}{%
+#+LATEX_HEADER: \fancyhf{}%
+#+LATEX_HEADER: \fancyhead[L]{\FGVHeaderBlock}%
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \AtBeginDocument{\pagestyle{fgvreportstyle}\thispagestyle{fgvreportstyle}}
+
+
+
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \titlespacing*{\section}{0pt}{6pt}{3pt}
+#+LATEX_HEADER: \titlespacing*{\subsection}{0pt}{4pt}{2pt}
+#+LATEX_HEADER: \titlespacing*{\subsubsection}{0pt}{3pt}{2pt}
+# MPPG_MINUTA_TITULOS_V23
+# MPPG_MINUTA_LOGO_PADRAO_V24
+#+begin_export latex
+\vspace*{6pt}
+\begingroup
+\setlength{\parindent}{0pt}
+\begin{tcolorbox}[colback=FGVHeaderBlueLight!9,colframe=FGVHeaderBlueDark,colbacktitle=FGVHeaderBlueDark,coltitle=white,title={IDENTIFICAÇÃO ACADÊMICA --- FGV},fonttitle=\bfseries,toptitle=5pt,bottomtitle=4pt,boxrule=0.55pt,sharp corners,arc=0pt,left=7pt,right=7pt,top=5pt,bottom=5pt,boxsep=0pt,before skip=0pt,after skip=13pt]
+\begingroup\fontsize{10}{12}\selectfont
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{4.0cm}X@{}}
+Curso / programa & Mestrado Profissional em Políticas Públicas e Governo \\
+Mestrando & Gustavo M. Mendes de Tarso \\
+Professor orientador & Bernardo Buta \\
+Documento & Protocolo de revisão de escopo \\
+Data & Outubro de 2026 \\
+\end{tabularx}
+\endgroup
+\end{tcolorbox}
+\endgroup
+#+end_export
+
+* 1. IDENTIFICAÇÃO E JUSTIFICATIVA
+
+*Título provisório:* Governança dos riscos decisórios em benefícios por incapacidade e proteção social: protocolo de revisão de escopo.
+
+*Área:* políticas públicas, administração pública, governança de riscos e proteção social.
+
+A avaliação da elegibilidade a benefícios envolve decisões sob incerteza. Uma concessão indevida pode produzir pagamento inadequado e risco de integridade; uma negativa indevida pode impedir o acesso de uma pessoa elegível à proteção social. Os dois problemas demandam mecanismos institucionais de prevenção, correção, revisão e responsabilização. Não se assume que fraude seja equivalente a erro administrativo, nem que indeferimento ou deferimento, por si só, indiquem decisão equivocada.
+
+A revisão mapeará referências teóricas e evidências empíricas que expliquem como sistemas de proteção social identificam e governam esses riscos, incluindo os desafios introduzidos por processos digitais e por diferentes modalidades de avaliação. O contexto brasileiro da Perícia Médica Federal (PMF) funcionará como campo de aplicação analítica, não como requisito de que todos os estudos tratem especificamente do Brasil ou do ATESTMED.
+
+*Situação do protocolo:* versão preliminar para apreciação do orientador. Estratégias finais, datas de execução e eventuais desvios serão registrados antes das buscas definitivas. Nenhuma busca ou triagem é apresentada como já realizada.
+
+* 2. OBJETIVOS E QUESTÕES
+
+** 2.1. Objetivo geral
+
+Mapear referenciais teóricos, conceitos, mecanismos institucionais e experiências de governança de riscos relacionados a decisões de concessão e negativa de benefícios de proteção social, especialmente os benefícios por incapacidade, identificando como são tratados os riscos fiscais e de desproteção social.
+
+** 2.2. Objetivos específicos
+
+- Identificar definições de erro decisório, pagamento indevido, negativa indevida, fraude, elegibilidade e proteção social, distinguindo seus usos e métricas.
+- Examinar modelos de governança e decisão sob incerteza que considerem consequências assimétricas dos erros.
+- Mapear mecanismos de controle, auditoria, revisão administrativa, supervisão e prestação de contas.
+- Examinar barreiras de acesso, custos administrativos, equidade e efeitos da digitalização.
+- Identificar experiências e avaliações institucionais que permitam discutir a organização das modalidades documental, remota e presencial de avaliação de incapacidade.
+
+** 2.3. Questão principal
+
+Quais referenciais teóricos, mecanismos de governança e experiências institucionais são descritos na literatura para identificar, avaliar e tratar riscos de concessões e negativas indevidas de benefícios de proteção social, preservando integridade, equidade e acesso à proteção?
+
+*Questões secundárias:* como os estudos definem e mensuram os erros? Que consequências e grupos afetados consideram? Como articulam riscos fiscais e riscos de exclusão? Que papéis atribuem a auditoria, mecanismos de recurso, transparência, supervisão humana e decisão digital? Quais condições delimitam a transferibilidade ao caso da PMF?
+
+* 3. REFERENCIAIS E DELIMITAÇÃO CONCEITUAL
+
+*Referencial central — governança de riscos:* processo institucional de identificar, analisar, avaliar, tratar, monitorar e comunicar riscos, incluindo definição de responsabilidades e mecanismos de controle. Referências gerenciais (por exemplo, estruturas de gestão de riscos) serão distinguidas de teorias explicativas em administração pública.
+
+*Abordagens complementares:* decisão sob incerteza e classificação; custos administrativos e barreiras de acesso; integridade pública; governança digital, transparência, discricionariedade e responsabilização. A revisão não pressupõe inteligência artificial nem automatização de decisões.
+
+*Distinção essencial:* falso positivo e falso negativo são termos analíticos para decisões equivocadas somente quando existe um estado ou critério de referência definido. A denominação erro tipo I/tipo II depende da hipótese nula adotada e não será empregada sem explicitação. Taxas históricas de deferimento/indeferimento e frequências por CID-10 não medem isoladamente erros. Conclusões médico-periciais e decisões administrativas de benefício serão diferenciadas.
+
+* 4. ESTRUTURA PCC E CRITÉRIOS DE ELEGIBILIDADE
+
+** 4.1. População, conceito e contexto (PCC)
+
+- *População:* pessoas que solicitam ou recebem benefícios públicos de proteção social; organizações e agentes públicos encarregados de avaliar elegibilidade, concessão, indeferimento, revisão ou auditoria.
+- *Conceito:* governança de riscos decisórios; concessão indevida e negativa indevida; incerteza, qualidade da decisão, integridade, justiça, acesso, controle, auditoria, custos administrativos e supervisão.
+- *Contexto:* sistemas de seguridade e proteção social e avaliação administrativa ou médico-pericial de benefícios, em diferentes países; incluem-se serviços digitais e remotos quando associados ao problema decisório.
+
+** 4.2. Fontes elegíveis
+
+- Artigos teóricos e empíricos, pesquisas qualitativas e quantitativas, revisões, estudos de caso, análises comparativas e avaliações institucionais com relevância substantiva para ao menos uma questão da revisão.
+- Relatórios públicos, auditorias governamentais, orientações institucionais e documentos técnicos com autoria e fonte identificáveis.
+- Estudos sobre proteção social em geral poderão ser incluídos quando discutirem o dilema ou um mecanismo transferível às decisões sobre incapacidade. Essa transferência será avaliada criticamente na síntese.
+
+** 4.3. Exclusões
+
+- Estudos exclusivamente clínicos sobre diagnóstico, tratamento ou prognóstico, sem relação com elegibilidade, decisão administrativa ou governança.
+- Estudos puramente técnicos de algoritmos sem discussão de consequências, risco decisório, equidade, controle ou responsabilização.
+- Opiniões sem fundamentação ou origem verificável, notícias isoladas e duplicatas.
+- Estudos sem texto suficiente para verificar a elegibilidade, após tentativa documentada de obtenção.
+
+*Recorte:* prioritariamente publicações de janeiro de 2019 até a data de execução da busca em 2026; textos fundacionais anteriores poderão ser incluídos mediante justificativa registrada. Idiomas português, inglês e espanhol. A data exata da última busca será reportada no produto final.
+
+* 5. FONTES DE INFORMAÇÃO E BUSCA
+
+** 5.1. Fontes acadêmicas e institucionais
+
+Scopus, Web of Science, PubMed e SciELO. Literatura cinzenta: OCDE, Organização Internacional do Trabalho (OIT), Tribunal de Contas da União (TCU), Controladoria-Geral da União (CGU), Ministério da Previdência Social (MPS), Instituto Nacional do Seguro Social (INSS) e fontes internacionais de seguridade e auditoria pública pertinentes. Serão registradas URL, data da consulta, filtros e identificadores de cada busca institucional.
+
+** 5.2. Eixos de busca
+
+- *A — governança e integridade:* risk governance; risk management; public integrity; accountability; public administration; decision-making under uncertainty; audit; oversight.
+- *B — benefícios e proteção:* disability benefits; sickness benefits; social protection; social security; benefit eligibility; disability assessment; medical assessment; incapacity assessment.
+- *C — erros e acesso:* improper payments; wrongful denial; denial errors; inclusion errors; exclusion errors; false positives; false negatives; administrative burden; procedural justice; appeals.
+- *D — organização de avaliações:* document-based assessment; remote assessment; teleassessment; medical examination; digital government; case triage; human oversight; ATESTMED.
+
+*Estratégia de sensibilidade:* executar linhas de busca complementares, não exigir que todos os quatro eixos apareçam no mesmo registro. Serão testadas principalmente as combinações (A E B), (B E C), (A E C) e (B E D); uma busca adicional específica por Brasil/PMF/ATESTMED será conduzida separadamente. Essa estratégia reduz o risco de perder estudos teóricos importantes que não mencionem perícia médica.
+
+** 5.3. Expressões iniciais para pilotagem
+
+*Scopus — eixo governança e proteção (ajustar após busca-piloto):*
+
+#+begin_example
+TITLE-ABS-KEY(
+  ("risk governance" OR "risk management" OR
+   "public integrity" OR accountability OR audit)
+  AND
+  ("social protection" OR "social security" OR
+   "disability benefit*" OR "sickness benefit*" OR
+   "benefit eligibility")
+)
+#+end_example
+
+*Scopus — eixo erros decisórios e proteção:*
+
+#+begin_example
+TITLE-ABS-KEY(
+  ("improper payment*" OR "wrongful denial" OR
+   "inclusion error*" OR "exclusion error*" OR
+   "administrative burden" OR "procedural justice")
+  AND
+  ("social protection" OR "social security" OR
+   "disability benefit*" OR "public benefit*" OR welfare)
+)
+#+end_example
+
+*PubMed — linha de avaliação de incapacidade (expressão-piloto):*
+
+#+begin_example
+("disability assessment"[tiab] OR "medical assessment"[tiab]
+ OR "disability benefits"[tiab] OR "sickness benefits"[tiab])
+AND
+("decision making"[tiab] OR "risk"[tiab] OR
+ "administrative burden"[tiab] OR "audit"[tiab] OR
+ "eligibility"[tiab] OR "appeals"[tiab])
+#+end_example
+
+*SciELO — expressão inicial em português:*
+
+#+begin_example
+("benefício por incapacidade" OR "proteção social" OR
+ "seguridade social" OR "perícia médica")
+AND
+("gestão de riscos" OR "governança" OR "indeferimento" OR
+ "integridade" OR "auditoria" OR "custos administrativos")
+#+end_example
+
+*Observação:* as expressões são rascunhos de pilotagem. Para Web of Science, SciELO e bases com vocabulários controlados serão produzidas versões próprias. Sintaxe, campos, operadores, singular/plural, equivalências em espanhol e filtros serão testados e documentados antes da execução definitiva.
+
+** 5.4. Busca complementar e saturação conceitual
+
+Verificar referências dos estudos incluídos e obras teóricas relevantes. A inclusão de textos anteriores a 2019 será motivada pela contribuição conceitual, e não por conveniência de seleção. Registrar as estratégias e resultados das buscas complementares separadamente.
+
+* 6. SELEÇÃO DOS ESTUDOS
+
+Exportar referências e metadados disponíveis, preservando o identificador da origem. Deduplicar por DOI, título, autoria, ano e inspeção de casos ambíguos; conservar registro de quantos itens foram removidos e por qual regra.
+
+Realizar triagem de títulos e resumos, seguida da avaliação integral dos textos potencialmente elegíveis. Documentar critérios de exclusão na etapa de texto completo. Sempre que viável, utilizar dois revisores independentes, com calibração inicial e resolução de divergências; se a revisão for conduzida por um único pesquisador, declarar essa limitação e estabelecer verificação amostral ou consultoria com o orientador, sem alegar dupla revisão inexistente.
+
+O fluxo será descrito conforme PRISMA-ScR, incluindo as quantidades de registros identificados, removidos, triados, excluídos e incluídos. Ferramentas de IA, se utilizadas para pré-triagem, não substituirão decisões humanas e terão uso, critérios e limitações documentados.
+
+* 7. EXTRAÇÃO E ORGANIZAÇÃO DAS EVIDÊNCIAS
+
+Preparar formulário-piloto de extração, revisar com base em amostra dos estudos e registrar alterações. Campos mínimos:
+
+- Identificação: referência, ano, país, tipo de publicação e fonte.
+- Contexto: programa social, benefício, população atendida e instituição decisória.
+- Teoria/conceito: referencial empregado; definição de risco, erro e qualidade decisória.
+- Consequências: risco fiscal, desproteção, equidade, custos administrativos e outras dimensões explicitadas.
+- Evidências/métodos: desenho de estudo, dados, indicador, comparador ou critério de referência utilizado para avaliar erro.
+- Respostas institucionais: mecanismos de auditoria, prevenção, recurso, transparência, revisão e supervisão.
+- Organização do processo: modalidades documental, remota, presencial, triagem e requisitos para encaminhamento.
+- Limitações, transferibilidade e relação com a PMF brasileira.
+
+Sempre distinguir afirmações empíricas documentadas, interpretações dos autores e inferências realizadas pelo pesquisador nesta revisão. A extração não pressupõe acesso a microdados.
+
+* 8. SÍNTESE E PRODUTO ANALÍTICO
+
+Realizar mapeamento descritivo por ano, país, tipo de programa, desenho dos estudos e abordagem de governança; proceder à síntese temática e comparativa, sem pressupor metanálise.
+
+Organizar a síntese em uma matriz de governança contendo: (i) natureza do risco; (ii) fatores geradores e incerteza; (iii) grupos e valores públicos afetados; (iv) instrumentos preventivos e corretivos; (v) mecanismos de controle e responsabilização; e (vi) implicações e limites para a PMF.
+
+*Aplicação ao caso brasileiro:* examinar como os referenciais podem informar a governança de ATESTMED, teleperícia e perícia presencial. A hipótese de organização escalonada poderá ser discutida à luz das condições técnicas, normativas e de equidade, sem presumir que a avaliação presencial seja sempre dispensável ou que a avaliação documental seja sempre suficiente.
+
+*Produto principal:* referencial teórico-analítico de governança dos riscos decisórios, e não manual operacional, modelo preditivo treinado ou demonstração de redução de erros e filas. Se alguma estatística agregada for utilizada, ela servirá à contextualização do problema, não à mensuração de concessões/negativas indevidas sem critério independente de correção da decisão.
+
+* 9. TRANSPARÊNCIA, LIMITAÇÕES E ÉTICA
+
+Conservar protocolo datado, histórico de alterações, strings e datas das buscas, arquivos de exportação, registros de triagem, critérios de inclusão, extrações e versões da síntese. O registro público do protocolo, por exemplo em repositório aberto, será avaliado antes da busca definitiva; não se afirmará registro que não tenha ocorrido.
+
+A revisão trabalhará com literatura publicada e fontes públicas. Caso se utilize posteriormente base administrativa agregada ou dados restritos, serão observadas as autorizações, normas éticas aplicáveis e proteção de dados. Riscos de viés de publicação, cobertura desigual de países, limitações linguísticas e ausência de verificação independente serão explicitados. A avaliação crítica formal da qualidade das fontes não é requisito automático de revisão de escopo; se adotada, seus critérios serão definidos antes da aplicação.
+
+* 10. REFERÊNCIAS METODOLÓGICAS E PONTOS DE PARTIDA
+
+- JBI. /JBI Manual for Evidence Synthesis/, capítulo 10: /Scoping Reviews/. Disponível em: [[https://jbi-global.atlassian.net/wiki/spaces/MANUAL/pages/355862497][manual JBI]]. Acesso e versão específica serão registrados na execução.
+- TRICCO, A. C. et al. PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation. /Annals of Internal Medicine/, 169(7), 467–473, 2018. DOI: [[https://doi.org/10.7326/M18-0850][10.7326/M18-0850]].
+- MOYNIHAN, D.; HERD, P.; HARVEY, H. Administrative Burden: Learning, Psychological, and Compliance Costs in Citizen-State Interactions. /Journal of Public Administration Research and Theory/, 25(1), 43–69, 2015. DOI: [[https://doi.org/10.1093/jopart/muu009][10.1093/jopart/muu009]].
+- OECD. /Countering Fraud in Social Benefit Programmes: Taking Stock of Current Measures and Future Directions/. Paris: OECD Publishing, 2020. DOI: [[https://doi.org/10.1787/71df2657-en][10.1787/71df2657-en]].
+
+Estas referências fornecem pontos de partida, não constituem resultados da revisão. A bibliografia definitiva será formada a partir das buscas documentadas, com verificação dos dados bibliográficos e formatação exigida pelo curso.
