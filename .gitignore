@@ -35,3 +35,25 @@ __pycache__/
 
 # Logs locais da reorganização
 /dissertacao/.organizacao_logs/
+
+# >>> MPPG ACERVO LOCAL PROTEGIDO BEGIN >>>
+# EP01 — fontes, renderizações e cópias locais
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_01_fichamento/01_entradas/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_01_fichamento/03_renderizacoes/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_01_fichamento/04_puia/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_01_fichamento/99_historico/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_01_fichamento/Bundle_Completo_Fichamento_Chat_2026-08-20.zip
+
+# EP02–EP04 — corpus e bancos QualCoder
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/01_fontes/entrevistados/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/02_qualcoder/
+
+# Materiais institucionais e bibliográficos
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/01_metodologia/aulas/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/01_metodologia/bibliografia_indicada/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/99_pacotes_origem/
+
+# Pacotes históricos da EP04
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/99_historico/
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/atividades/atividade_02-04_licenca_ambiental/03_entregas/EP04/01_ativo/EP04_ENTREGA_FINAL_BUNDLE.zip
+# <<< MPPG ACERVO LOCAL PROTEGIDO END <<<
