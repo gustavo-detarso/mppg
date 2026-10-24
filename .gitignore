@@ -16,3 +16,22 @@ __pycache__/
 /disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/bbl-indicada/documentos/*.docx
 /disciplinas/03_politicas_publicas-teorias_e_analises/atividades/atividade_final/output/atividade_atestmed_matriz_decisoria/
 # <<< MPPG POST-ADJUDICATION LOCAL IGNORE END <<<
+
+# === MPPG — Exclusões locais adicionais ===
+
+# Backups locais do Academic Pipeline
+/software/academic_pipeline_mppg/.minuta_*_backups/
+/software/academic_pipeline_mppg/.mppg_recompile_backups/
+/software/academic_pipeline_mppg/.patch_backups/
+/software/academic_pipeline_mppg/backups/
+
+# Backup integral da dissertação
+/dissertacao_backup_*.tar.gz
+
+# Arquivos bibliográficos acima do limite do GitHub
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/01_metodologia/bibliografia_indicada/dados/bbl.zip
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/99_pacotes_origem/bbl.zip
+/disciplinas/05_metodos_qualitativos_de_pesquisa_em_ciencia_politica/src/01_metodologia/bibliografia_indicada/fontes/livros/adu_2019_step_by_step_guide_qualitative_data_coding.pdf
+
+# Logs locais da reorganização
+/dissertacao/.organizacao_logs/

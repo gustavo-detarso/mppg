@@ -575,7 +575,7 @@ def render_activity_front_matter(doc: AcademicDocument, bib_filename: str, cfg: 
     - sem \maketitle automático do Org;
     - logo FGV no cabeçalho;
     - barra fina em degradê azul escuro → azul claro;
-    - Ficha Técnica em tcolorbox/tblr;
+    - Ficha Técnica em quadro institucional azul tcolorbox/tabularx;
     - quebra de página antes do corpo textual.
     """
     meta = doc.metadata
@@ -604,6 +604,7 @@ def render_activity_front_matter(doc: AcademicDocument, bib_filename: str, cfg: 
         "#+LATEX_HEADER: \\usepackage{tikz}",
         "#+LATEX_HEADER: \\usepackage{tcolorbox}",
         "#+LATEX_HEADER: \\usepackage{tabularray}",
+        "#+LATEX_HEADER: \\usepackage{tabularx}",
         "#+LATEX_HEADER: \\usepackage{ltablex}",
         "#+LATEX_HEADER: \\keepXColumns",
         "#+LATEX_HEADER: \\setlength{\\emergencystretch}{3em}",
@@ -639,18 +640,24 @@ def render_activity_front_matter(doc: AcademicDocument, bib_filename: str, cfg: 
         "#+begin_export latex",
         "\\begingroup",
         "\\linespread{1}\\selectfont",
-        "\\begin{tcolorbox}[title=Ficha Técnica,",
-        "  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]",
-        "\\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}",
-        rf"\textbf{{Curso}}                   & {latex_escape(curso)} \\",
-        rf"\textbf{{Turma}}                   & {latex_escape(turma)} \\",
-        rf"\textbf{{Pólo}}                    & {latex_escape(polo)} \\",
-        rf"\textbf{{Disciplina}}              & {latex_escape(disciplina)} \\",
-        rf"\textbf{{Professor}}               & {latex_escape(professor)} \\",
-        rf"\textbf{{Aluno(s)}}                & {latex_escape(aluno)} \\",
-        rf"\textbf{{Data}}                    & {latex_escape(data)} \\",
-        rf"\textbf{{Título do trabalho}}      & {latex_escape(titulo)} \\",
-        "\\end{tblr}",
+        "\\vspace*{6pt}",
+        "\\setlength{\\parindent}{0pt}",
+        "\\begin{tcolorbox}[colback=FGVHeaderBlueLight!9,colframe=FGVHeaderBlueDark,",
+        "colbacktitle=FGVHeaderBlueDark,coltitle=white,title={Ficha Técnica},",
+        "fonttitle=\\bfseries,toptitle=5pt,bottomtitle=4pt,boxrule=0.55pt,sharp corners,arc=0pt,",
+        "left=7pt,right=7pt,top=5pt,bottom=5pt,boxsep=0pt,before skip=0pt,after skip=13pt]",
+        "\\begingroup\\fontsize{10}{12}\\selectfont",
+        "\\begin{tabularx}{\\linewidth}{@{}>{\\bfseries}p{4.0cm}X@{}}",
+        rf"Curso & {latex_escape(curso)} \\",
+        rf"Turma & {latex_escape(turma)} \\",
+        rf"Pólo & {latex_escape(polo)} \\",
+        rf"Disciplina & {latex_escape(disciplina)} \\",
+        rf"Professor & {latex_escape(professor)} \\",
+        rf"Aluno(s) & {latex_escape(aluno)} \\",
+        rf"Data & {latex_escape(data)} \\",
+        rf"Título do trabalho & {latex_escape(titulo)} \\",
+        "\\end{tabularx}",
+        "\\endgroup",
         "\\end{tcolorbox}",
         "\\endgroup",
         "#+end_export",

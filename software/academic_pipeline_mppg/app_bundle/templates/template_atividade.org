@@ -49,20 +49,25 @@
 #+BIBLIOGRAPHY: referencias.bib
 
 #+begin_export latex
+\vspace*{6pt}
 \begingroup
-\linespread{1}\selectfont
-\begin{tcolorbox}[title=Ficha Técnica,
-  colback=gray!5,colframe=gray!40,boxrule=0.4pt,sharp corners]
-\begin{tblr}{rowsep=1pt,stretch=1, rows={t}, colspec={Q[l,2.8cm] X[l]}}
-\textbf{Curso}                   & {{CURSO}} \\
-\textbf{Turma}                   & {{TURMA}} \\
-\textbf{Pólo}                    & {{POLO}} \\
-\textbf{Disciplina}              & {{DISCIPLINA}} \\
-\textbf{Professor}               & {{PROFESSOR}} \\
-\textbf{Aluno(s)}                & {{ALUNO}} \\
-\textbf{Data}                    & {{DATA}} \\
-\textbf{Título do trabalho}      & {{TITULO_TRABALHO}} \\
-\end{tblr}
+\setlength{\parindent}{0pt}
+\begin{tcolorbox}[colback=FGVHeaderBlueLight!9,colframe=FGVHeaderBlueDark,
+colbacktitle=FGVHeaderBlueDark,coltitle=white,title={Ficha Técnica},
+fonttitle=\bfseries,toptitle=5pt,bottomtitle=4pt,boxrule=0.55pt,sharp corners,arc=0pt,
+left=7pt,right=7pt,top=5pt,bottom=5pt,boxsep=0pt,before skip=0pt,after skip=13pt]
+\begingroup\fontsize{10}{12}\selectfont
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{4.0cm}X@{}}
+Curso & {{CURSO}} \\
+Turma & {{TURMA}} \\
+Pólo & {{POLO}} \\
+Disciplina & {{DISCIPLINA}} \\
+Professor & {{PROFESSOR}} \\
+Aluno(s) & {{ALUNO}} \\
+Data & {{DATA}} \\
+Título do trabalho & {{TITULO_TRABALHO}} \\
+\end{tabularx}
+\endgroup
 \end{tcolorbox}
 \endgroup
 #+end_export

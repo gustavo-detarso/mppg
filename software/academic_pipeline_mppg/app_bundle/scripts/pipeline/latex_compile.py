@@ -20,6 +20,59 @@ def _safe_engine(raw: str | None) -> str:
     return engine
 
 
+
+
+# MPPG_FGV_RECOMPILE_AUTO_RESOURCES_V1
+# Para o comando --recompile sem --config, reutilizar os assets da distribuição.
+# Não reescreve Org/TOML e não se aplica a classes não institucionais.
+def _auto_fgv_org_resources(
+    org_path: Path,
+    academic_writing: Path | None,
+    latex_extra_path: Path | None,
+) -> tuple[Path | None, Path | None]:
+    if academic_writing is not None and latex_extra_path is not None:
+        return academic_writing, latex_extra_path
+
+    latex_class = None
+    # Apenas o cabeçalho do Org; nunca interpretar exemplos no corpo do texto.
+    with org_path.open("r", encoding="utf-8", errors="replace") as stream:
+        for index, line in enumerate(stream):
+            if index >= 256 or line.startswith("* "):
+                break
+            match = re.match(r"^\s*#\+LATEX_CLASS:\s*([^\s#]+)", line, flags=re.IGNORECASE)
+            if match:
+                latex_class = match.group(1).strip().lower()
+                break
+
+    if latex_class not in {"fgv-paper", "fgv-dissertacao"}:
+        return academic_writing, latex_extra_path
+
+    # latex_compile.py => pipeline/scripts/app_bundle/<raiz do software>.
+    root = Path(__file__).resolve().parents[3]
+    if academic_writing is None:
+        candidate = root / "app_bundle" / "misc" / "academic-writing.el"
+        if not candidate.is_file():
+            raise FileNotFoundError(
+                f"Classe {latex_class}: academic-writing.el não encontrado: {candidate}. "
+                "Informe --academic-writing explicitamente."
+            )
+        academic_writing = candidate
+    if latex_extra_path is None:
+        candidate_dir = root / "app_bundle" / "institutions" / "fgv" / "latex"
+        candidate_style = candidate_dir / f"{latex_class}.sty"
+        if not candidate_style.is_file():
+            raise FileNotFoundError(
+                f"Classe {latex_class}: estilo não encontrado: {candidate_style}. "
+                "Informe --latex-extra-path explicitamente."
+            )
+        latex_extra_path = candidate_dir
+
+    print(
+        f"[MPPG/FGV] Recursos LaTeX: classe={latex_class}; "
+        f"academic-writing={academic_writing}; latex-extra-path={latex_extra_path}"
+    )
+    return academic_writing, latex_extra_path
+
 def run_compile_sequence(
     org_path: Path,
     academic_writing: Path | None = None,
@@ -34,6 +87,9 @@ def run_compile_sequence(
     org_path = org_path.resolve()
     if not org_path.exists():
         raise FileNotFoundError(org_path)
+    academic_writing, latex_extra_path = _auto_fgv_org_resources(
+        org_path, academic_writing, latex_extra_path
+    )
     emacs = shutil.which("emacs")
     if not emacs:
         raise RuntimeError("Emacs não encontrado no PATH.")

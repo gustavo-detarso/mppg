@@ -1,0 +1,18 @@
+#+LANGUAGE: pt-BR
+#+OPTIONS: toc:nil num:nil title:nil
+
+* 1. TEMA
+
+*Redesenho da Perícia Médica Federal orientado por evidências* na análise de benefícios por incapacidade, com integração entre avaliação documental (ATESTMED), teleperícia, perícia presencial e auditoria. O foco é otimizar a capacidade instalada, aperfeiçoar indicadores, modelos quantitativos, governança e integridade. A inteligência artificial será considerada apenas como possibilidade de apoio, sem pressupor sua adoção no ATESTMED.
+
+* 2. PROBLEMA
+
+Como reorganizar, com os recursos disponíveis, o fluxo médico-pericial para reduzir exames presenciais evitáveis e tempos de espera, ampliar a resolutividade e as auditorias e preservar qualidade decisória, equidade, integridade e direitos dos segurados?
+
+*Resultados esperados:* indicadores de acesso, produtividade ajustada à complexidade, qualidade e integridade; modelos de filas, dimensionamento e otimização de capacidade, com simulação de cenários; critérios de auditoria amostral e orientada por risco; e mecanismos de controle, responsabilização e supervisão humana.
+
+* 3. PROTOCOLO DA REVISÃO
+
+*Delineamento:* revisão de escopo segundo JBI, com relato PRISMA-ScR. *Busca:* Scopus, Web of Science, PubMed e SciELO, complementadas por documentos de TCU, CGU, MPS, INSS e OCDE; período inicial de 2019 a 2026, em português, inglês e espanhol, admitindo referências anteriores fundamentais. Serão combinados descritores de avaliação médico-pericial, benefícios por incapacidade e ATESTMED com filas, capacidade, otimização, indicadores, auditoria, governança e inteligência artificial.
+
+*Seleção e síntese:* estudos empíricos, revisões, modelos matemático-estatísticos e documentos institucionais pertinentes; buscas, triagem e motivos de exclusão registrados. A síntese temática identificará indicadores, parâmetros, alternativas operacionais e riscos. *Viabilidade empírica:* discutir acesso autorizado a dados PMF/INSS e salvaguardas éticas e de proteção de dados; na ausência de acesso, utilizar dados públicos e simulações, sem alegar eficácia observada.

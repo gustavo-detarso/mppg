@@ -1,0 +1,24 @@
+[projeto]
+nome = "minuta_pmf_buta"
+
+[instituicao]
+perfil = "fgv"
+
+[documento]
+tipo_documento = "minuta"
+titulo_trabalho = "Minuta inicial de dissertação"
+autor = "Gustavo M. Mendes de Tarso"
+orientador = "Bernardo Buta"
+data = "Outubro de 2026"
+curso = "Mestrado Profissional em Políticas Públicas e Governo"
+
+[paths]
+org_conteudo = "conteudo.org"
+document_output_dir = "saida"
+
+[minuta]
+max_paginas = 0
+
+[saidas]
+exportar_pdf = true
+exportar_docx = true

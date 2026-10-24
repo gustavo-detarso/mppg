@@ -1,0 +1,36 @@
+# Controle de versão acadêmico: somente fontes textuais e scripts.
+# Arquivos pessoais, planilhas e originais administrativos ficam LOCAIS.
+/03_dados/originais/
+/03_dados/tratados/
+/00_gestao/solicitacoes_lai/
+/90_historico/
+/06_entregas/
+/.migracao_mppg/
+/**/saida/
+/**/entrega_final/
+**/*.pdf
+**/*.docx
+**/*.odt
+**/*.xlsx
+**/*.xls
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.zip
+**/*.aux
+**/*.bbl
+**/*.bcf
+**/*.blg
+**/*.log
+**/*.run.xml
+**/*.synctex.gz
+**/*.fls
+**/*.fdb_latexmk
+**/*.tex~
+**/*_export_pdf.el
+**/__pycache__/
+**/.pytest_cache/
+*.swp
+*~
+.env
+.env.*
