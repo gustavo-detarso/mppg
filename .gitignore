@@ -136,3 +136,6 @@ __pycache__/
 # Manifesto de integridade gerado em Orçamento
 /disciplinas/06_orcamento/atividades/BUNDLE_CANONICO_MPPG_ORCAMENTO_4B_CONTROLE_AVALIACAO_PARTICIPACAO/MANIFEST_SHA256.txt
 # <<< MPPG PROTECAO FINAL END <<<
+
+# Manual FGV integral — uso local, sem versionamento
+/software/academic_pipeline_mppg/app_bundle/institutions/fgv/manuals/formatacao-de-trabalhos-academicos-manual-fgv-impressao-2025.pdf
