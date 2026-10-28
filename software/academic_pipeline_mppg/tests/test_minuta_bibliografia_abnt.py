@@ -204,5 +204,44 @@ class TestMinutaBibliografiaABNT(unittest.TestCase):
         )
 
 
+    def test_08_rejeita_parenteses_nao_resolvidos(self):
+        with self.assertRaisesRegex(
+            RuntimeError, "PDF sem bibliografia"
+        ):
+            self.validar(
+                "Texto com citacao (??).\n"
+                "REFERÊNCIAS\n"
+                "SILVA, Ana. Obra demonstrativa.\n"
+            )
+
+    def test_09_rejeita_colchetes_nao_resolvidos(self):
+        with self.assertRaisesRegex(
+            RuntimeError, "PDF sem bibliografia"
+        ):
+            self.validar(
+                "Texto com citacao [??].\n"
+                "REFERÊNCIAS\n"
+                "SILVA, Ana. Obra demonstrativa.\n"
+            )
+
+    def test_10_rejeita_org_cite_literal(self):
+        with self.assertRaisesRegex(
+            RuntimeError, "PDF sem bibliografia"
+        ):
+            self.validar(
+                "Texto [cite:@silva2026].\n"
+                "REFERÊNCIAS\n"
+                "SILVA, Ana. Obra demonstrativa.\n"
+            )
+
+    def test_11_preserva_perguntas_normais(self):
+        self.validar(
+            "Qual é o problema de pesquisa?\n"
+            "Segundo Silva (2026), existe uma resposta.\n"
+            "REFERÊNCIAS\n"
+            "SILVA, Ana. Obra demonstrativa.\n"
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

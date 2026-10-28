@@ -220,10 +220,42 @@ def _mppg_finalize_bib_pdf(pdf: Path, root: Path):
             "bibliography",
         }
 
-        return any(
-            line.strip().casefold() in headings
+        lines = [
+            line.strip().casefold()
             for line in text.splitlines()
+        ]
+
+        reference_positions = [
+            index
+            for index, line in enumerate(lines)
+            if line in headings
+        ]
+
+        if not reference_positions:
+            return False
+
+        body = "\n".join(
+            lines[:reference_positions[0]]
         )
+
+        # Rejeita marcadores conhecidos de citações
+        # não resolvidas antes da bibliografia.
+        if re.search(
+            r"\(\s*\?{2,}\s*\)|\[\s*\?{2,}\s*\]",
+            body,
+        ):
+            return False
+
+        # Uma diretiva Org-cite não pode aparecer
+        # literalmente no texto do PDF.
+        if re.search(
+            r"\[cite(?:/[a-z0-9_-]+)?:",
+            body,
+            flags=re.IGNORECASE,
+        ):
+            return False
+
+        return True
 
     if valid():
         return
