@@ -546,6 +546,37 @@ def _mppg_docx_page_numbers(doc) -> None:
         field_character("end")
 
 
+def _mppg_docx_ensure_bibliography_style(doc) -> None:
+    """Declara o estilo Bibliography quando referenciado e ausente.
+
+    Evita a interpretação incorreta de links bibliográficos
+    pelo LibreOffice, sem remover hiperlinks clicáveis.
+    """
+    from docx.enum.style import WD_STYLE_TYPE
+    from docx.oxml.ns import qn
+
+    referenced = any(
+        node.get(qn("w:val")) == "Bibliography"
+        for node in doc._element.xpath(".//w:pPr/w:pStyle")
+    )
+
+    if not referenced:
+        return
+
+    try:
+        existing = doc.styles["Bibliography"]
+    except KeyError:
+        style = doc.styles.add_style(
+            "Bibliography", WD_STYLE_TYPE.PARAGRAPH
+        )
+        style.base_style = doc.styles["Normal"]
+    else:
+        if existing.type != WD_STYLE_TYPE.PARAGRAPH:
+            raise ValueError(
+                "Bibliography deve ser estilo de paragrafo"
+            )
+
+
 def _docx(org: Path, logo: Path, dest: Path, root: Path, log: Path, cfg: dict) -> None:
     from docx import Document
     from docx.shared import Cm, Pt
@@ -608,6 +639,7 @@ def _docx(org: Path, logo: Path, dest: Path, root: Path, log: Path, cfg: dict) -
             border.append(bottom)
             para._p.get_or_add_pPr().append(border)
     _insert_identity_docx(doc, cfg)
+    _mppg_docx_ensure_bibliography_style(doc)
     _mppg_docx_page_numbers(doc)
     # Espaço vertical entre a ficha azul e a primeira seção do texto.
     first_content = next((p for p in doc.paragraphs if p.text.strip()), None)
