@@ -489,6 +489,63 @@ def _insert_identity_docx(doc, cfg: dict) -> None:
         table._tbl.addprevious(spacer._p)
 
 
+def _mppg_docx_page_numbers(doc) -> None:
+    """Adiciona campo PAGE somente ao DOCX de minutas."""
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+    from docx.shared import Pt
+
+    for section in doc.sections:
+        footer = section.footer
+
+        # Preserva campos PAGE preexistentes.
+        fields = footer._element.xpath(".//w:instrText")
+        simple_fields = footer._element.xpath(".//w:fldSimple")
+
+        if any(
+            "PAGE" in (item.text or "").split()
+            for item in fields
+        ):
+            continue
+
+        if any(
+            "PAGE" in (item.get(qn("w:instr"), "")).split()
+            for item in simple_fields
+        ):
+            continue
+
+        if footer.paragraphs and not footer.paragraphs[0].text.strip():
+            paragraph = footer.paragraphs[0]
+        else:
+            paragraph = footer.add_paragraph()
+
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        paragraph.paragraph_format.space_after = Pt(0)
+
+        def field_character(kind):
+            run = paragraph.add_run()
+            node = OxmlElement("w:fldChar")
+            node.set(qn("w:fldCharType"), kind)
+            run._r.append(node)
+
+        field_character("begin")
+
+        run = paragraph.add_run()
+        instruction = OxmlElement("w:instrText")
+        instruction.set(qn("xml:space"), "preserve")
+        instruction.text = " PAGE "
+        run._r.append(instruction)
+
+        field_character("separate")
+
+        run = paragraph.add_run("1")
+        run.font.name = "Times New Roman"
+        run.font.size = Pt(10)
+
+        field_character("end")
+
+
 def _docx(org: Path, logo: Path, dest: Path, root: Path, log: Path, cfg: dict) -> None:
     from docx import Document
     from docx.shared import Cm, Pt
@@ -551,6 +608,7 @@ def _docx(org: Path, logo: Path, dest: Path, root: Path, log: Path, cfg: dict) -
             border.append(bottom)
             para._p.get_or_add_pPr().append(border)
     _insert_identity_docx(doc, cfg)
+    _mppg_docx_page_numbers(doc)
     # Espaço vertical entre a ficha azul e a primeira seção do texto.
     first_content = next((p for p in doc.paragraphs if p.text.strip()), None)
     if first_content is not None:
