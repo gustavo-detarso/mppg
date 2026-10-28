@@ -955,12 +955,31 @@ def _semantic_scholar(query: str, config: dict[str, Any]) -> tuple[list[dict[str
     }
 
 
+def _scopus_query_expression(query: str) -> str:
+    """Prepara consulta Scopus sem alterar seus operadores booleanos.
+
+    Consultas genericas recebem TITLE-ABS-KEY. Consultas que
+    ja comecam por um campo Scopus sao preservadas integralmente.
+    A validade da sintaxe especifica deve ser testada na base.
+    """
+    expression = str(query or "").strip()
+    if not expression:
+        raise ValueError("Consulta Scopus vazia.")
+
+    if re.match(
+        r"(?i)^(?:TITLE-ABS-KEY|TITLE|ABS|KEY|AUTHKEY|SRCTITLE|DOI)\s*\(",
+        expression,
+    ):
+        return expression
+
+    return f"TITLE-ABS-KEY({expression})"
+
+
 def _scopus(query: str, config: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     key = _env("SCOPUS_API_KEY")
     if not key:
         raise RuntimeError("SCOPUS_API_KEY não configurada; a fonte foi ignorada.")
-    terms = [part.strip().replace('"', '') for part in re.split(r"\s*;\s*|\s+OR\s+", query, flags=re.I) if part.strip()]
-    scopus_query = "TITLE-ABS-KEY(" + " OR ".join(f'"{term}"' for term in terms) + ")"
+    scopus_query = _scopus_query_expression(query)
     params: dict[str, Any] = {"query": scopus_query, "count": min(int(config["per_base"]), int(config.get("scopus_per_query") or 10)), "httpAccept": "application/json"}
     url = "https://api.elsevier.com/content/search/scopus?" + urlencode(params)
     headers = {"X-ELS-APIKey": key}
