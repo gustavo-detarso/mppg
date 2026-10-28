@@ -1961,6 +1961,14 @@ except ImportError:
 _mppg_install_coverage(globals())
 del _mppg_install_coverage
 
+# MPPG_LEGACY_PAGING_V2 — Paginação auditada opcional, sem alterar padrão.
+try:
+    from .prisma_paginacao_legada import install_hooks as _mppg_install_legacy_paging
+except ImportError:
+    from prisma_paginacao_legada import install_hooks as _mppg_install_legacy_paging
+_mppg_install_legacy_paging(globals())
+del _mppg_install_legacy_paging
+
 
 def _prisma_org_text(value: Any) -> str:
     """Normaliza texto de metadados para uso seguro em linhas ORG."""
