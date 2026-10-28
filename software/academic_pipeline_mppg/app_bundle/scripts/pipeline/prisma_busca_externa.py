@@ -1000,6 +1000,11 @@ def _wos(query: str, config: dict[str, Any]) -> tuple[list[dict[str, Any]], dict
 
 
 def _pubmed(query: str, config: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    # MPPG_PUBMED_EFETCH_V1_5
+    try:
+        from .prisma_pubmed_abstracts import fetch_pubmed_abstracts, ncbi_wait
+    except ImportError:
+        from prisma_pubmed_abstracts import fetch_pubmed_abstracts, ncbi_wait
     params: dict[str, Any] = {"db": "pubmed", "term": query, "retmax": config["per_base"], "retmode": "json", "sort": "relevance", "tool": "AcademicPipelinePRISMA"}
     if config["year_start"] or config["year_end"]:
         params["datetype"] = "pdat"
@@ -1013,6 +1018,7 @@ def _pubmed(query: str, config: dict[str, Any]) -> tuple[list[dict[str, Any]], d
     if _env("NCBI_API_KEY"):
         params["api_key"] = _env("NCBI_API_KEY")
     search_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?" + urlencode(params)
+    ncbi_wait(bool(_env("NCBI_API_KEY")))
     result = (_request_json(search_url) or {}).get("esearchresult") or {}
     ids = [str(item) for item in result.get("idlist") or [] if str(item)]
     if not ids:
@@ -1023,8 +1029,12 @@ def _pubmed(query: str, config: dict[str, Any]) -> tuple[list[dict[str, Any]], d
     if _env("NCBI_API_KEY"):
         summary_params["api_key"] = _env("NCBI_API_KEY")
     summary_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?" + urlencode(summary_params)
+    ncbi_wait(bool(_env("NCBI_API_KEY")))
     payload = _request_json(summary_url) or {}
     summary = payload.get("result") or {}
+    abstracts, efetch_warnings = fetch_pubmed_abstracts(
+        ids, request_text=_request_text, email=email, api_key=_env("NCBI_API_KEY")
+    )
     records: list[dict[str, Any]] = []
     for idx, uid in enumerate(ids, 1):
         item = summary.get(uid) or {}
@@ -1033,8 +1043,8 @@ def _pubmed(query: str, config: dict[str, Any]) -> tuple[list[dict[str, Any]], d
         authors = item.get("authors") or []
         pubdate = str(item.get("pubdate") or item.get("sortpubdate") or "")
         year_match = re.search(r"\b(19|20)\d{2}\b", pubdate)
-        records.append(_record("pubmed", uid, title=item.get("title"), authors=authors, year=year_match.group(0) if year_match else "", venue=item.get("fulljournalname") or item.get("source"), doi=doi, url=f"https://pubmed.ncbi.nlm.nih.gov/{uid}/", kind=item.get("pubtype")))
-    return records, {"provider": "pubmed", "url": _safe_url(search_url), "retrieved": len(records), "error": ""}
+        records.append(_record("pubmed", uid, title=item.get("title"), authors=authors, year=year_match.group(0) if year_match else "", venue=item.get("fulljournalname") or item.get("source"), doi=doi, url=f"https://pubmed.ncbi.nlm.nih.gov/{uid}/", abstract=abstracts.get(uid, ""), kind=item.get("pubtype")))
+    return records, {"provider": "pubmed", "url": _safe_url(search_url), "retrieved": len(records), "error": "", "status_detail": "; ".join(efetch_warnings)}
 
 
 def _europe_pmc(query: str, config: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
@@ -1922,6 +1932,15 @@ def run_external_prisma_search(
 # Relatório PRISMA em ORG (prévio e consolidado)
 # Restaurado pela correção v15.2.
 # ---------------------------------------------------------------------------
+
+
+# MPPG_PRISMA_COBERTURA_V1_6
+try:
+    from .prisma_cobertura import install_hooks as _mppg_install_coverage
+except ImportError:
+    from prisma_cobertura import install_hooks as _mppg_install_coverage
+_mppg_install_coverage(globals())
+del _mppg_install_coverage
 
 
 def _prisma_org_text(value: Any) -> str:
