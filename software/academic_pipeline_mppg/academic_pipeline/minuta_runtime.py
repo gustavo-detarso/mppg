@@ -79,6 +79,8 @@ def _load(path: Path) -> tuple[dict, Path, Path, Path]:
     for chave in ("exportar_pdf", "exportar_docx"):
         if not isinstance(cfg.get("saidas", {}).get(chave, True), bool):
             raise ValueError(f"[saidas].{chave} deve ser true ou false (booleano TOML)")
+    _mppg_bib_config(cfg, base)
+    cfg.setdefault("_internal", {})["minuta_base"] = str(base)
     cfg.setdefault("_internal", {})["nome"] = name
     return cfg, base, source, output
 
@@ -97,6 +99,178 @@ def _latex_escape(s: str) -> str:
                "~": r"\textasciitilde{}", "^": r"\textasciicircum{}"}
     return "".join(escapes.get(c, c) for c in s.replace("\n", " ").replace("\r", " "))
 
+
+
+def _mppg_bib_config(cfg: dict, base: Path):
+    # MPPG_MINUTA_BIB_ABNT_2026_01: bibliografia configurada por TOML (apenas minutas).
+    info = cfg.get("bibliografia", {})
+    if not isinstance(info, dict):
+        raise ValueError("[bibliografia] deve ser uma tabela TOML")
+    active = info.get("habilitada", False)
+    if not isinstance(active, bool):
+        raise ValueError("[bibliografia].habilitada deve ser booleano")
+    if not active:
+        return None
+    if info.get("estilo") != "abnt" or info.get("backend") != "biber":
+        raise ValueError("[bibliografia]: esperado estilo=abnt e backend=biber")
+    def bibliographic_path(name: str, default: str) -> Path:
+        value = info.get(name, default)
+
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(
+                f"[bibliografia].{name} deve ser caminho não vazio"
+            )
+
+        raw = Path(value).expanduser()
+        candidate = raw if raw.is_absolute() else base / raw
+
+        # Verifica links antes de Path.resolve(), inclusive
+        # nos componentes intermediários do caminho.
+        current = candidate
+
+        while True:
+            if current.is_symlink():
+                raise ValueError(
+                    f"[bibliografia].{name} não aceita "
+                    f"link simbólico: {current}"
+                )
+
+            if current == base or current == current.parent:
+                break
+
+            current = current.parent
+
+        # Preserva a proteção existente contra caminhos
+        # que escapem da pasta do projeto.
+        return _path_in_project(
+            base, value, field=f"bibliografia.{name}"
+        )
+
+    bib = bibliographic_path("arquivo", "referencias.bib")
+    csl = bibliographic_path("csl", "abnt-autor-data-mppg.csl")
+    for path in (bib, csl):
+        if not path.is_file() or path.is_symlink():
+            raise FileNotFoundError(f"Arquivo bibliográfico ausente/inseguro: {path}")
+    if bib.suffix.lower() != ".bib" or csl.suffix.lower() != ".csl":
+        raise ValueError("Extensões bibliográficas inválidas")
+    return bib, csl
+
+
+def _mppg_finalize_bib_pdf(pdf: Path, root: Path):
+    # Não aceita falso sucesso quando o PDF ainda contém citações não processadas.
+    def valid():
+        import unicodedata
+
+        org = pdf.with_suffix(".org")
+        bbl = pdf.with_suffix(".bbl")
+
+        if not pdf.is_file() or not org.is_file() or not bbl.is_file():
+            return False
+
+        org_text = org.read_text(encoding="utf-8")
+
+        citation_groups = re.findall(
+            r"\[cite(?:/[A-Za-z0-9_-]+)?:([^\]]*)\]",
+            org_text,
+            flags=re.IGNORECASE,
+        )
+
+        requested = set()
+        for group in citation_groups:
+            requested.update(
+                re.findall(r"@([A-Za-z0-9_:./+\\-]+)", group)
+            )
+
+        if not requested:
+            return False
+
+        bbl_text = bbl.read_text(
+            encoding="utf-8", errors="replace"
+        )
+
+        generated = set(
+            re.findall(r"\\entry\{([^}]+)\}", bbl_text)
+        )
+
+        if not requested.issubset(generated):
+            return False
+
+        check = subprocess.run(
+            ["pdftotext", str(pdf), "-"],
+            text=True,
+            capture_output=True,
+        )
+
+        if check.returncode:
+            raise RuntimeError(
+                "pdftotext falhou ao validar bibliografia"
+            )
+
+        text = unicodedata.normalize("NFKD", check.stdout)
+        text = "".join(
+            c for c in text
+            if not unicodedata.combining(c)
+        )
+
+        headings = {
+            "referencias",
+            "referencias bibliograficas",
+            "bibliografia",
+            "references",
+            "bibliography",
+        }
+
+        lines = [
+            line.strip().casefold()
+            for line in text.splitlines()
+        ]
+
+        reference_positions = [
+            index
+            for index, line in enumerate(lines)
+            if line in headings
+        ]
+
+        if not reference_positions:
+            return False
+
+        body = "\n".join(
+            lines[:reference_positions[0]]
+        )
+
+        # Rejeita marcadores conhecidos de citações
+        # não resolvidas antes da bibliografia.
+        if re.search(
+            r"\(\s*\?{2,}\s*\)|\[\s*\?{2,}\s*\]",
+            body,
+        ):
+            return False
+
+        # Uma diretiva Org-cite não pode aparecer
+        # literalmente no texto do PDF.
+        if re.search(
+            r"\[cite(?:/[a-z0-9_-]+)?:",
+            body,
+            flags=re.IGNORECASE,
+        ):
+            return False
+
+        return True
+
+    if valid():
+        return
+    tex = pdf.with_suffix(".tex")
+    if not tex.is_file() or not shutil.which("latexmk"):
+        raise RuntimeError("PDF sem bibliografia automática e sem .tex/latexmk para finalizar Biber. Consulte compilacao_mppg.log")
+    import os
+    env = os.environ.copy()
+    env["TEXINPUTS"] = str(root / "app_bundle/institutions/fgv/latex") + os.pathsep + env.get("TEXINPUTS", "")
+    args = ["latexmk", "-lualatex", "-interaction=nonstopmode", "-halt-on-error", "-file-line-error", tex.name]
+    run = subprocess.run(args, cwd=tex.parent, text=True, stdout=subprocess.PIPE,
+                         stderr=subprocess.STDOUT, env=env)
+    (tex.parent / "compilacao_biber_mppg.log").write_text(run.stdout, encoding="utf-8")
+    if run.returncode or not valid():
+        raise RuntimeError("BibLaTeX/Biber falhou. Consulte compilacao_biber_mppg.log")
 
 def _identity_rows(cfg: dict) -> list[tuple[str, str]]:
     curso = _value(cfg, "documento", "curso", "Mestrado Profissional em Políticas Públicas e Governo")
@@ -165,6 +339,16 @@ def _render(cfg: dict, source: Path, dest: Path) -> tuple[Path, Path]:
         if placeholder not in texto:
             raise ValueError(f"Placeholder obrigatório não encontrado: {placeholder}")
         texto = texto.replace(placeholder, val)
+    bib_cfg = _mppg_bib_config(cfg, source.parent)
+    if bib_cfg:
+        # Usa o exportador nativo Org-cite -> BibLaTeX/Biber, sem referências digitadas à mão.
+        heading = re.search(r"(?im)^\*[ \t]+(?:1[. \t]+)?TEMA[ \t]*$", texto)
+        if not heading:
+            raise ValueError("Cabeçalho TEMA não localizado no Org renderizado")
+        meta_bib = ("#+CITE_EXPORT: biblatex abnt,backend=biber\n"
+                    "#+BIBLIOGRAPHY: "+bib_cfg[0].name+"\n")
+        texto = texto[:heading.start()] + meta_bib + "\n" + texto[heading.start():]
+        texto = texto.rstrip() + "\n\n#+PRINT_BIBLIOGRAPHY:\n"
     if re.search(r"{{[A-Z_]+}}", texto):
         raise ValueError("Modelo contém placeholders não resolvidos")
     dest.mkdir(parents=True, exist_ok=True)
@@ -172,6 +356,10 @@ def _render(cfg: dict, source: Path, dest: Path) -> tuple[Path, Path]:
     result_org.write_text(texto.rstrip() + "\n", encoding="utf-8")
     result_logo = dest / "fgv.png"
     shutil.copy2(logo, result_logo)
+    bib_cfg = _mppg_bib_config(cfg, source.parent)
+    if bib_cfg:
+        for resource in bib_cfg:
+            shutil.copy2(resource, dest / resource.name)
     return result_org, result_logo
 
 
@@ -316,7 +504,17 @@ def _docx(org: Path, logo: Path, dest: Path, root: Path, log: Path, cfg: dict) -
         clean_org = Path(tmp) / "fonte_pandoc.org"
         clean_org.write_text(_org_for_pandoc(org.read_text(encoding="utf-8")), encoding="utf-8")
         args = ["pandoc", str(clean_org), "--from=org", "--to=docx", "--reference-doc", str(reference), "--output", str(dest)]
-        proc = subprocess.run(args, text=True, capture_output=True)
+        bib_cfg = _mppg_bib_config(cfg, Path(cfg["_internal"]["minuta_base"]))
+        if bib_cfg:
+            # Pandoc reconhece citações Org-cite; CSL autor-data no DOCX.
+            args.extend(["--citeproc", "--bibliography=" + str(bib_cfg[0]),
+                         "--csl=" + str(bib_cfg[1]),
+                         "--metadata=lang:pt-BR",
+                         "--metadata=reference-section-title:REFERÊNCIAS"])
+        import os
+        env = os.environ.copy()
+        env["LC_ALL"] = "C.UTF-8"
+        proc = subprocess.run(args, text=True, capture_output=True, env=env)
         log.write_text("$ " + " ".join(args) + "\n\n" + proc.stdout + "\n" + proc.stderr, encoding="utf-8")
         if proc.returncode:
             raise RuntimeError(f"Falha na exportação DOCX pelo Pandoc. Consulte {log}")
@@ -420,6 +618,8 @@ def _build(config: Path, overwrite: bool) -> int:
         try:
             if want_pdf:
                 pdf = _run_pdf(org, _root(), candidate / "compilacao_mppg.log")
+                if _mppg_bib_config(cfg, source.parent):
+                    _mppg_finalize_bib_pdf(pdf, _root())
                 pages, paper = _pdf_pages(pdf)
                 meta.update({"pdf_paginas": pages, "pdf_papel": paper})
             if want_docx:
