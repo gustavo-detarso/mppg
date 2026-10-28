@@ -577,6 +577,54 @@ def _mppg_docx_ensure_bibliography_style(doc) -> None:
             )
 
 
+def _mppg_docx_harmonize_text(doc) -> None:
+    """Harmoniza o corpo e a bibliografia DOCX das minutas FGV.
+
+    Nao altera tabelas, cabecalhos, rodapes ou estilos globais
+    de corpo de texto. Preserva os hyperlinks preexistentes.
+    """
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.oxml.ns import qn
+    from docx.shared import Cm, Pt, RGBColor
+
+    for name in ("Heading 1", "Heading 2"):
+        style = doc.styles[name]
+        style.font.name = "Times New Roman"
+        style.font.color.rgb = RGBColor(0, 0, 0)
+        style.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        style.paragraph_format.first_line_indent = Cm(0)
+
+        fonts = style._element.get_or_add_rPr().rFonts
+        if fonts is not None:
+            for attr in ("asciiTheme", "hAnsiTheme"):
+                fonts.attrib.pop(qn("w:" + attr), None)
+
+    for paragraph in doc.paragraphs:
+        if not paragraph.text.strip():
+            continue
+
+        name = paragraph.style.name
+        fmt = paragraph.paragraph_format
+
+        if name in ("Normal", "Body Text"):
+            paragraph.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+            fmt.first_line_indent = Cm(1.25)
+            fmt.line_spacing = Pt(18)
+            fmt.space_before = Pt(0)
+            fmt.space_after = Pt(0)
+
+        elif name == "Bibliography":
+            paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            fmt.first_line_indent = Cm(0)
+            fmt.line_spacing = Pt(15)
+            fmt.space_before = Pt(0)
+            fmt.space_after = Pt(4)
+
+        elif name.startswith("Heading"):
+            paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            fmt.first_line_indent = Cm(0)
+
+
 def _docx(org: Path, logo: Path, dest: Path, root: Path, log: Path, cfg: dict) -> None:
     from docx import Document
     from docx.shared import Cm, Pt
@@ -640,6 +688,7 @@ def _docx(org: Path, logo: Path, dest: Path, root: Path, log: Path, cfg: dict) -
             para._p.get_or_add_pPr().append(border)
     _insert_identity_docx(doc, cfg)
     _mppg_docx_ensure_bibliography_style(doc)
+    _mppg_docx_harmonize_text(doc)
     _mppg_docx_page_numbers(doc)
     # Espaço vertical entre a ficha azul e a primeira seção do texto.
     first_content = next((p for p in doc.paragraphs if p.text.strip()), None)
