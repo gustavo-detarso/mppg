@@ -1,0 +1,300 @@
+/* FGV / MPPG — identidade visual acadêmica para R Markdown e prévia autônoma.
+   Referência cromática do Academic Pipeline: #003B71 → #006BB6 → #8FD3F4.
+   Estilos responsivos e impressão A4. */
+:root {
+  --fgv-marinho:#003B71;
+  --fgv-azul:#00579A;
+  --fgv-azul-vivo:#006BB6;
+  --fgv-celeste:#8FD3F4;
+  --fgv-neve:#F2F7FC;
+  --fgv-cinza:#566B7F;
+  --fgv-tinta:#19324B;
+  --fgv-borda:#CCDCEB;
+  --fgv-alerta:#C67931;
+}
+html {scroll-behavior:smooth}
+body {background:#edf3f8 !important;color:var(--fgv-tinta);font-size:16px;line-height:1.67;font-family:Inter,"Segoe UI",Arial,Helvetica,sans-serif}
+.main-container, main.preview-container {max-width:1110px !important;margin:0 auto;background:#fff;min-height:100vh;padding:34px 53px 75px !important;box-shadow:0 16px 65px rgba(0,59,113,.10)}
+#header, header.hero-preview {background:linear-gradient(120deg,#003B71 0%,#00599e 70%,#006BB6 100%);color:#fff;padding:34px 39px 31px;border-radius:11px 11px 0 0;position:relative;overflow:hidden;margin-bottom:0}
+#header:after, header.hero-preview:after {content:"";display:block;height:6px;position:absolute;bottom:0;left:0;right:0;background:linear-gradient(90deg,#003B71,#006BB6 48%,#8FD3F4)}
+#header h1.title, header.hero-preview h1{color:#fff !important;border:none !important;font-size:clamp(30px,4vw,44px);font-weight:800;line-height:1.12;margin:7px 0 12px;padding:0;letter-spacing:-.8px}
+#header .subtitle, #header h4.author, #header h4.date, header.hero-preview p {color:#dfedfb !important;font-weight:400}
+#header .subtitle{font-size:17px;line-height:1.4;margin:5px 0 14px}
+#header h4.author, #header h4.date{font-size:12px;display:inline-block;margin:7px 15px 0 0}
+.hero-eyebrow{color:#c6eafc;font-size:11px;font-weight:800;letter-spacing:2.1px;text-transform:uppercase}
+/* Quadro azul: replica a ideia da Identificação Acadêmica FGV do Software MPPG. */
+.fgv-identificacao {border:1.5px solid var(--fgv-azul);border-top:0;border-radius:0 0 10px 10px;margin:0 0 26px;background:linear-gradient(180deg,#f0f7ff,#fff);box-shadow:0 4px 16px rgba(0,59,113,.055);overflow:hidden}
+.fgv-identificacao__heading {display:flex;gap:17px;align-items:center;padding:16px 23px;background:#e0effc;border-bottom:1px solid #b4d4f0}
+.fgv-identificacao__brand {font-size:29px;letter-spacing:-2.6px;line-height:1;font-weight:900;color:var(--fgv-marinho);min-width:62px}
+.fgv-identificacao__title {font-size:15px;font-weight:900;color:var(--fgv-marinho);letter-spacing:.8px;text-transform:uppercase}
+.fgv-identificacao__subtitle{color:#486b88;font-size:12px;letter-spacing:.35px;margin-top:2px}
+.fgv-identificacao__grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;padding:10px 18px 13px}
+.fgv-campo {display:flex;gap:8px;align-items:baseline;min-width:0;padding:9px 8px;border-bottom:1px solid #dce8f3}
+.fgv-campo:nth-last-child(-n+2){border-bottom:none}
+.fgv-campo--full {grid-column:1/-1}
+.fgv-campo__nome {flex:0 0 104px;color:#52718e;font-size:11px;letter-spacing:.6px;text-transform:uppercase;font-weight:800}
+.fgv-campo__valor {color:#123e66;font-size:13px;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.fgv-campo__valor--pendente {color:#8b5b20;font-style:italic;font-weight:500}
+.fgv-identificacao__barra{height:5px;background:linear-gradient(90deg,#003B71 12%,#006BB6 64%,#8FD3F4 100%)}
+.kicker {font-weight:800;color:var(--fgv-azul-vivo);font-size:11px;text-transform:uppercase;letter-spacing:1.5px}
+h1,h2,h3,h4{color:var(--fgv-marinho)}
+h1:not(.title){color:var(--fgv-marinho)}
+h1:not(.title):not(.preview-title){margin-top:43px;border-bottom:2px solid #ccdfef;padding-bottom:12px;font-weight:800}
+h2{color:var(--fgv-marinho);border-bottom:1px solid var(--fgv-borda);padding-bottom:7px;margin-top:34px;font-weight:750}
+h3{color:var(--fgv-azul);font-weight:750}
+.kpis {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:21px 0 25px}
+.kpi {background:#f1f7fd;border:1px solid #c9e1f5;border-top:4px solid var(--fgv-azul-vivo);border-radius:8px;padding:15px 17px;min-width:0}
+.kpi .numero,.kpi b{display:block;font-size:30px;line-height:1.2;font-weight:850;color:var(--fgv-marinho)}
+.kpi .rotulo,.kpi span{display:block;font-size:12px;line-height:1.45;color:var(--fgv-cinza)}
+.nota,.callout{border-left:5px solid var(--fgv-azul-vivo);background:#edf5fe;padding:16px 21px;border-radius:0 9px 9px 0;margin:20px 0}
+.alerta,.warning{border-left:5px solid var(--fgv-alerta);background:#fff8ee;padding:16px 21px;border-radius:0 9px 9px 0;margin:20px 0}
+.decisao,.decision{background:linear-gradient(115deg,#003B71,#005b9d);color:white;border-radius:10px;padding:21px 26px;margin:24px 0;box-shadow:0 8px 21px rgba(0,59,113,.13)}
+.decisao strong,.decision b:first-child{color:#d1edff}
+.table,.table table,table {font-size:13.5px}
+table>thead>tr>th,.table>thead>tr>th,th{background:var(--fgv-marinho) !important;color:#fff !important;border:none;padding:11px}
+.table-striped>tbody>tr:nth-of-type(odd),tr:nth-child(even) td{background:#f4f8fc}
+td {border-bottom:1px solid #dce7f0;padding:9px 11px}
+a{color:var(--fgv-azul-vivo)}
+pre{border-radius:8px !important}
+.figure{margin:18px 0}.figure .caption,figcaption{font-size:12px;color:var(--fgv-cinza)}
+blockquote{border-left:4px solid var(--fgv-azul-vivo);background:#f4f8fc;padding:11px 21px;margin:19px 0}
+/* ===============================================================
+   EQUACOES EM R MARKDOWN / MATHJAX — SEM ROLAGEM
+   Pandoc gera <span class="math display"> e <span class="math inline">.
+   Nao aplicar overflow:auto, altura fixa ou caixas rolaveis nesses
+   spans: isso gera scrollbars na formula, inclusive verticalmente.
+   =============================================================== */
+span.math.display {
+  display: block !important;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 1.35em auto 1.5em;
+  padding: 7px 0;
+  background: transparent;
+  color: var(--fgv-marinho);
+  font-size: 1em;
+  line-height: 1.55;
+  text-align: center;
+  border: 0;
+  border-radius: 0;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
+span.math.inline {
+  display: inline !important;
+  width: auto !important;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  text-align: inherit;
+  overflow: visible !important;
+}
+
+/* Renderizacao MathJax 2 (R Markdown tradicional) e MathJax 3. */
+span.math.display .MathJax_Display,
+.MathJax_Display,
+span.math.display mjx-container[display="true"],
+mjx-container[display="true"] {
+  max-width: 100% !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  text-align: center !important;
+}
+
+/* Nao aplicar o estilo de formulas da previa aos spans do Pandoc.
+   O seletor abaixo vale apenas para o bloco de previa explicita. */
+.preview-container div.math {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 16px auto;
+  padding: 14px;
+  background: #f2f7fb;
+  border-radius: 8px;
+  color: var(--fgv-marinho);
+  font-family: Georgia, Cambria, serif;
+  font-size: 22px;
+  text-align: center;
+  overflow: visible;
+}
+
+.preview-container figure{margin:18px 0}.preview-container figure img{width:100%;height:auto;border:1px solid #e0eaf2;border-radius:7px}
+.preview-container figcaption{color:var(--fgv-cinza);font-size:12px;text-align:center}
+.preview-container h2{font-size:24px;margin-top:37px}.preview-container h3{font-size:18px}
+.preview-container p{margin:11px 0 16px}.preview-container li{margin:6px 0}
+.preview-container footer{font-size:12px;color:var(--fgv-cinza);border-top:1px solid #cedfec;margin-top:45px;padding-top:15px}
+@media(max-width:850px){
+  .main-container,main.preview-container{padding:14px 21px 50px !important}
+  #header,header.hero-preview{padding:28px 22px}
+  .fgv-identificacao__grid{grid-template-columns:1fr}
+  .fgv-campo:nth-last-child(2){border-bottom:1px solid #dce8f3}
+  .fgv-campo__nome{flex-basis:104px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:540px){
+  .main-container,main.preview-container{padding:8px 12px 32px !important}
+  .fgv-identificacao__heading{padding:14px}
+  .fgv-identificacao__grid{padding:9px 7px}
+  .fgv-campo{flex-direction:column;gap:2px}
+  .fgv-campo__nome{flex:initial}
+  .kpi{padding:11px}
+  .kpi .numero,.kpi b{font-size:26px}
+}
+@media print{
+  @page{size:A4;margin:17mm 14mm}
+  body{background:white !important;font-size:11pt}
+  .main-container,main.preview-container{max-width:100% !important;box-shadow:none !important;padding:0 !important}
+  #header,header.hero-preview,.fgv-identificacao,.decisao,.decision,.kpi,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2,h3{break-after:avoid}
+  .fgv-identificacao,.kpis,figure{break-inside:avoid}
+  .tocify,.tocify-wrapper{display:none !important}
+}
+
+
+/* ===============================================================
+   MPPG / FGV — ÍNDICE RECOLHÍVEL (R Markdown toc_float: true)
+   Desktop com mouse: mostra apenas a aba de 22px na borda esquerda;
+   hover ou foco por teclado: abre o sumário por inteiro.
+   Touch / telas estreitas: índice visível antes do texto, sem hover.
+   =============================================================== */
+.main-container > .row {
+  display: block;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.main-container > .row > .toc-content {
+  float: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+}
+
+@media screen and (min-width: 768px) and (hover: hover) {
+  .main-container > .row > .col-xs-12.col-sm-4.col-md-3 {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1200;
+    float: none !important;
+    width: 292px !important;
+    max-width: none !important;
+    height: 100vh;
+    height: 100dvh;
+    padding: 58px 30px 20px 12px !important;
+    background: #f1f7fd;
+    border-right: 2px solid var(--fgv-azul-vivo);
+    box-shadow: 4px 0 18px rgba(0,59,113,.11);
+    transform: translateX(calc(-100% + 22px));
+    transition: transform 230ms ease;
+  }
+  .main-container > .row > .col-xs-12.col-sm-4.col-md-3:hover,
+  .main-container > .row > .col-xs-12.col-sm-4.col-md-3:focus-within {
+    transform: translateX(0);
+  }
+  .main-container > .row > .col-xs-12.col-sm-4.col-md-3::after {
+    content: "SUMÁRIO";
+    position: absolute;
+    top: 79px;
+    right: 1px;
+    writing-mode: vertical-rl;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: var(--fgv-marinho);
+    font-weight: 800;
+    pointer-events: none;
+  }
+  #TOC.tocify {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: calc(100vh - 85px) !important;
+    max-height: calc(100dvh - 85px) !important;
+    margin: 0 !important;
+    padding: 7px 0 10px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #TOC.tocify::before {
+    content: "NAVEGAÇÃO DO RELATÓRIO";
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: var(--fgv-marinho);
+    margin: 0 4px 13px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--fgv-borda);
+  }
+  #TOC.tocify .tocify-item a {
+    color: #274766;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.35;
+  }
+  #TOC.tocify .tocify-focus a,
+  #TOC.tocify .tocify-item:hover a {
+    color: #003B71;
+  }
+}
+
+/* Toque não possui hover. Em celular/tablet o índice fica disponível
+   como painel compacto, em posição normal, com rolagem interna. */
+@media screen and (max-width: 767px), screen and (hover: none) {
+  .main-container > .row > .col-xs-12.col-sm-4.col-md-3 {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    padding: 0 0 18px !important;
+    transform: none !important;
+  }
+  #TOC.tocify {
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    max-height: 190px !important;
+    margin: 0 !important;
+    border: 1px solid var(--fgv-borda) !important;
+    border-radius: 8px !important;
+    background: #f1f7fd !important;
+    overflow-y: auto;
+  }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .main-container > .row > .col-xs-12.col-sm-4.col-md-3 {
+    transition: none !important;
+  }
+}
+
+@media print {
+  .main-container > .row > .col-xs-12.col-sm-4.col-md-3,
+  #TOC.tocify { display: none !important; }
+}
+
+/* Memoria de calculo, Caso 1: tabelas e operacoes intermediarias. */
+.memoria-tabela{max-width:100%;margin:1.1em 0 1.7em;}
+.memoria-matematica{width:100%;font-size:12px!important;table-layout:auto;}
+.memoria-matematica th,.memoria-matematica td{text-align:center!important;padding:7px 6px!important;white-space:normal!important;}
+.memoria-matematica th:first-child,.memoria-matematica td:first-child{text-align:left!important;}
+.memoria-matematica .linha-total td{font-weight:800;color:#003B71;border-top:2px solid #006BB6;}
+.memoria-matematica caption{caption-side:top;text-align:left;color:#566B7F;font-weight:600;padding:7px 0;}
+@media(max-width:750px){.memoria-matematica{font-size:10px!important}.memoria-matematica th,.memoria-matematica td{padding:4px 3px!important}}

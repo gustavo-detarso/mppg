@@ -1,0 +1,790 @@
+---
+title: "Caso 2 — Quais municípios devem receber apoio educacional primeiro?"
+subtitle: "Caso 2 — Resolução com R | Métodos Quantitativos"
+author: "Gustavo M. Mendes de Tarso"
+date: "28/10/2026"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    self_contained: true
+    css: fgv-mppg.css
+params:
+  aluno: "Gustavo M. Mendes de Tarso"
+  curso: "Mestrado em Políticas Públicas e Governo"
+  disciplina: "Métodos Quantitativos de Pesquisa em Ciência Política"
+  professor: "Weeberb Réquia"
+  dados: "dados/ideb_municipal_2019_2023.csv"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, fig.width=10, fig.height=6)
+pacotes <- c('ggplot2','dplyr','knitr','readr','scales')
+faltam <- pacotes[!vapply(pacotes, requireNamespace, logical(1), quietly=TRUE)]
+if(length(faltam)) stop('Instale os pacotes: ',paste(faltam,collapse=', '))
+library(ggplot2); library(dplyr); library(knitr); library(readr)
+cor_fgv <- '#00579A'
+```
+
+```{=html}
+<div class="fgv-identificacao" aria-label="Identificação acadêmica FGV">
+<div class="fgv-identificacao__heading">
+<span class="fgv-identificacao__brand" aria-label="FGV">FGV</span>
+<div>
+<div class="fgv-identificacao__title">IDENTIFICAÇÃO ACADÊMICA — FGV</div>
+<div class="fgv-identificacao__subtitle">Metadados do trabalho · MPPG / EPPG-FGV</div>
+</div>
+</div>
+<div class="fgv-identificacao__grid">
+<div class="fgv-campo fgv-campo--full"><span class="fgv-campo__nome">Instituição</span><span class="fgv-campo__valor">Fundação Getulio Vargas (FGV) · Escola de Políticas Públicas e Governo</span></div>
+<div class="fgv-campo fgv-campo--full"><span class="fgv-campo__nome">Curso / programa</span><span class="fgv-campo__valor">Mestrado Profissional em Políticas Públicas e Governo (MPPG)</span></div>
+<div class="fgv-campo"><span class="fgv-campo__nome">Turma</span><span class="fgv-campo__valor">2026.1</span></div>
+<div class="fgv-campo"><span class="fgv-campo__nome">Polo</span><span class="fgv-campo__valor">Brasília</span></div>
+<div class="fgv-campo"><span class="fgv-campo__nome">Disciplina</span><span class="fgv-campo__valor">Métodos Quantitativos de Pesquisa em Ciência Política</span></div>
+<div class="fgv-campo"><span class="fgv-campo__nome">Professor(a)</span><span class="fgv-campo__valor">Weeberb Réquia</span></div>
+<div class="fgv-campo"><span class="fgv-campo__nome">Aluno</span><span class="fgv-campo__valor">Gustavo M. Mendes de Tarso</span></div>
+<div class="fgv-campo"><span class="fgv-campo__nome">Data</span><span class="fgv-campo__valor">28/10/2026</span></div>
+<div class="fgv-campo fgv-campo--full"><span class="fgv-campo__nome">Documento</span><span class="fgv-campo__valor">Caso 2 — Quais municípios devem receber apoio educacional primeiro? · Resolução analítica em R</span></div>
+</div>
+<div class="fgv-identificacao__barra"></div>
+</div>
+```
+
+# Objetivo e fonte
+
+Selecionar exatamente **50 redes municipais** para um programa de apoio de doze meses. Unidade de análise: município/rede municipal, não aluno. Edições **2019 e 2023**, anos iniciais, ensino fundamental regular, **dependência administrativa Municipal**. Não incluir a categoria Pública, redes estaduais ou escolas.
+
+**Fonte oficial:** [Inep — Ideb](https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/ideb). O ZIP original, preservado em `dados/original/`, é a **fonte primária e permanente**. Em **toda renderização**, o R verifica seu SHA-256, extrai a planilha XLSX, seleciona `REDE = Municipal` e os campos **VL_OBSERVADO_2019** e **VL_OBSERVADO_2023**, reconstrói o CSV e valida a cobertura. O CSV incluído no pacote é apenas uma saída intermediária substituível; não é fonte autônoma. A documentação detalhada está em `dados/FONTE.txt`. **Não há download nem dependência de TLS/SSL durante a compilação.**
+
+## Reprodutibilidade — reconstrução automática da base oficial
+
+A primeira operação substantiva de `C-c r k` é executar o script auditável `preparar_dados_inep.R` sobre o ZIP local, **mesmo que já exista um CSV antigo**. Assim é possível apagar o CSV antes de compilar e obter novamente o mesmo universo municipal. A verificação SHA-256 impede que uma fonte diferente seja aceita silenciosamente.
+
+```{r reconstruir-do-zip, echo=TRUE}
+# Preparação obrigatória: nenhuma análise usa um CSV antigo sem reconstrução.
+stopifnot(file.exists("preparar_dados_inep.R"))
+source("preparar_dados_inep.R", local = TRUE, echo = FALSE)
+stopifnot(file.exists(resultado_preparacao$arquivo),
+          normalizePath(resultado_preparacao$arquivo) ==
+            normalizePath(params$dados))
+knitr::kable(data.frame(
+  verificacao = c("Fonte primária", "Municípios reconstruídos",
+                  "Pares completos", "SHA-256 do ZIP"),
+  resultado = c(resultado_preparacao$origem,
+                resultado_preparacao$municipios,
+                resultado_preparacao$pares,
+                resultado_preparacao$zip_sha256)),
+  caption = "Rastreabilidade da reconstrução executada nesta renderização")
+```
+
+# Preparação e validação da base
+
+O CSV é reconstruído obrigatoriamente no bloco anterior; deve conter as colunas `codigo_municipio`, `municipio`, `uf`, `ideb_2019`, `ideb_2023`. O código municipal é texto e a ausência de nota é mantida como `NA`. As verificações abaixo testam novamente unicidade, escala e comparabilidade.
+
+```{r importar-validar}
+# A fonte já foi reextraída do ZIP local no bloco precedente.
+if (!file.exists(params$dados)) stop("CSV não produzido pela preparação obrigatória.")
+base <- readr::read_csv(params$dados, col_types=readr::cols(
+  codigo_municipio=readr::col_character(), municipio=readr::col_character(),
+  uf=readr::col_character(), ideb_2019=readr::col_double(),
+  ideb_2023=readr::col_double()), na=c('','NA'))
+stopifnot(all(c('codigo_municipio','municipio','uf','ideb_2019','ideb_2023') %in% names(base)))
+stopifnot(!anyNA(base$codigo_municipio), !anyDuplicated(base$codigo_municipio))
+stopifnot(all(is.na(base$ideb_2019) | (base$ideb_2019>=0 & base$ideb_2019<=10)))
+stopifnot(all(is.na(base$ideb_2023) | (base$ideb_2023>=0 & base$ideb_2023<=10)))
+validos <- base %>% filter(!is.na(ideb_2019), !is.na(ideb_2023)) %>%
+  mutate(mudanca=ideb_2023-ideb_2019)
+stopifnot(nrow(validos)>=50)
+cobertura <- data.frame(indicador=c('Municípios na base Municipal','Nota válida em 2019','Nota válida em 2023','Notas válidas nas duas edições','Sem par completo'),
+ quantidade=c(nrow(base),sum(!is.na(base$ideb_2019)),sum(!is.na(base$ideb_2023)),nrow(validos),nrow(base)-nrow(validos)))
+knitr::kable(cobertura, caption='Cobertura e disponibilidade das notas')
+```
+
+## Memória de cálculo 1 — cobertura nacional
+
+**Passo 1 — definir o denominador.** A unidade é o **município com rede Municipal**, identificado pelo código IBGE. Contar linhas de municípios, não alunos nem escolas. Antes de qualquer estatística, a base é verificada para duplicidades de códigos.
+
+**Passo 2 — contar notas divulgadas.** Uma nota é válida quando não é `NA` e pertence ao intervalo de 0 a 10. Notas não divulgadas **não equivalem a zero**.
+
+**Passo 3 — definir as observações comparáveis.** Usamos a interseção dos conjuntos com Ideb válido em 2019 e em 2023:
+
+$$N_{\mathrm{comparavel}} = \sum_{i=1}^{N} \mathbf{1}(I_{i,2019}\ne NA\;\land\; I_{i,2023}\ne NA).$$
+
+Substituindo as contagens reais obtidas pelo script: **`r nrow(base)` municípios** identificados; **`r sum(!is.na(base$ideb_2019))`** com nota em 2019; **`r sum(!is.na(base$ideb_2023))`** com nota em 2023; **`r nrow(validos)`** com ambas as notas. Os sem par completo são **`r nrow(base)` − `r nrow(validos)` = `r nrow(base)-nrow(validos)`**.
+
+**Passo 4 — calcular a cobertura percentual.**
+
+$$\mathrm{Cobertura}=100\times\frac{N_{\mathrm{comparavel}}}{N_{\mathrm{municipal}}}.$$
+
+Substituição: $100\times\frac{`r nrow(validos)`}{`r nrow(base)`} = `r sprintf('%.2f',100*nrow(validos)/nrow(base))`\%$.
+
+```{r memoria-cobertura}
+memoria_cob <- data.frame(
+  etapa=c('Municípios identificados','Com nota em 2019','Com nota em 2023',
+          'Com notas nas duas edições','Sem par completo','Cobertura (%)'),
+  expressao=c('nrow(base)','sum(!is.na(ideb_2019))','sum(!is.na(ideb_2023))',
+             'sum(2019 válida E 2023 válida)','N total − N comparável','100 × N comparável / N total'),
+  resultado=c(nrow(base),sum(!is.na(base$ideb_2019)),sum(!is.na(base$ideb_2023)),
+              nrow(validos),nrow(base)-nrow(validos),round(100*nrow(validos)/nrow(base),2)))
+knitr::kable(memoria_cob,caption='Memória de cálculo da cobertura',align=c('l','l','r'))
+```
+
+
+### Código R e conferência — cobertura e elegibilidade
+
+Este bloco **recalcula as contagens diretamente da base**, sem utilizar a tabela `cobertura` previamente montada. A função `stopifnot()` verifica a equivalência dos resultados e protege a reprodutibilidade.
+
+```{r codigo-cobertura-conferencia, echo=TRUE}
+# 1. Recontar todos os municípios da rede Municipal.
+total_municipal <- length(unique(base$codigo_municipio))
+
+# 2. Contar os municípios com notas observadas divulgadas em cada edição.
+com_2019 <- sum(!is.na(base$ideb_2019))
+com_2023 <- sum(!is.na(base$ideb_2023))
+
+# 3. Obter a interseção: apenas notas válidas simultaneamente.
+pares_completos <- sum(complete.cases(base[, c('ideb_2019', 'ideb_2023')]))
+sem_par <- total_municipal - pares_completos
+cobertura_pct <- 100 * pares_completos / total_municipal
+
+# 4. Conferir com a tabela e com a população de análise.
+stopifnot(total_municipal == nrow(base), pares_completos == nrow(validos),
+          identical(as.integer(cobertura$quantidade[1:5]),
+                    as.integer(c(total_municipal, com_2019, com_2023,
+                                   pares_completos, sem_par))))
+knitr::kable(data.frame(
+  passo = c('Municípios Municipal', 'Nota 2019', 'Nota 2023',
+            'Par completo', 'Sem par completo', 'Cobertura (%)'),
+  resultado = c(total_municipal, com_2019, com_2023, pares_completos,
+                sem_par, round(cobertura_pct, 2))),
+  caption = 'Código R: contagem independente e conferência de cobertura')
+```
+
+Municípios sem par completo permanecem no levantamento de cobertura, mas não participam de nenhuma das três classificações. O programa deverá submetê-los a uma **triagem complementar**, verificando causas da ausência, outras evidências e capacidade de atendimento, sem imputar zero.
+
+# Estatística descritiva
+
+Para $t\in\{2019,2023\}$, $\bar I_t=\frac{1}{n}\sum_{i=1}^n I_{it}$. A mudança individual é $\Delta_i=I_{i,2023}-I_{i,2019}$.
+
+```{r descritivas}
+resumo <- data.frame(edicao=c(2019,2023),
+ media=c(mean(validos$ideb_2019),mean(validos$ideb_2023)),
+ mediana=c(median(validos$ideb_2019),median(validos$ideb_2023)))
+knitr::kable(resumo, digits=3, caption='Média e mediana municipal, mesma população nas duas edições')
+movimentos <- data.frame(situacao=c('Melhoraram','Mantiveram','Pioraram'),
+ municipios=c(sum(validos$mudanca>0),sum(validos$mudanca==0),sum(validos$mudanca<0)))
+knitr::kable(movimentos)
+```
+
+## Memória de cálculo 2 — média, mediana e mudança
+
+Defina $x_i=I_{i,2019}$, $y_i=I_{i,2023}$ e $n=`r nrow(validos)`$. **As médias são calculadas sobre os mesmos municípios** para evitar que mudanças de cobertura contaminem a comparação.
+
+**Passo 1 — somar as notas de cada ano:** $S_x=\sum x_i$ e $S_y=\sum y_i$.
+
+**Passo 2 — dividir cada soma por $n$:**
+
+$$\bar x=\frac{S_x}{n},\qquad \bar y=\frac{S_y}{n}.$$
+
+**Passo 3 — calcular a diferença de médias:** $\bar y-\bar x$. Trata-se de variação **em pontos de Ideb**, não de percentual de estudantes.
+
+**Passo 4 — mediana:** ordenar as $n$ notas; se $n$ for ímpar, usar a posição $(n+1)/2$; se par, a média das duas posições centrais.
+
+```{r memoria-media-mediana}
+n <- nrow(validos)
+sx <- sum(validos$ideb_2019); sy <- sum(validos$ideb_2023)
+xbar <- sx/n; ybar <- sy/n
+mediana_detalhe <- function(v) {
+  o <- sort(v); k <- length(o)
+  if(k %% 2 == 1) data.frame(posicao=as.character((k+1)/2),valores=as.character(o[(k+1)/2]),mediana=o[(k+1)/2])
+  else data.frame(posicao=paste0(k/2,' e ',k/2+1),valores=paste(o[k/2],o[k/2+1],sep=' e '),mediana=mean(o[c(k/2,k/2+1)]))
+}
+knitr::kable(data.frame(
+  etapa=c('Soma 2019','N','Média 2019 = soma / N','Soma 2023','N',
+          'Média 2023 = soma / N','Diferença de médias'),
+  resultado=c(sx,n,xbar,sy,n,ybar,ybar-xbar)),digits=5,
+  caption='Somas, denominadores e resultados intermediários')
+meds <- rbind(cbind(ano='2019',mediana_detalhe(validos$ideb_2019)),
+              cbind(ano='2023',mediana_detalhe(validos$ideb_2023)))
+knitr::kable(meds,caption='Posição central e mediana em cada edição')
+```
+
+**Passo 5 — mudança municipal:** para cada código, $\Delta_i=y_i-x_i$. O sinal classifica cada rede: positivo = melhorou, zero = manteve, negativo = piorou.
+
+**Exemplo auditável com uma observação real:** a primeira linha da tabela seguinte usa um município existente no CSV oficial.
+
+```{r exemplo-mudanca}
+ex <- validos %>% arrange(codigo_municipio) %>% slice(1)
+knitr::kable(data.frame(municipio=ex$municipio,uf=ex$uf,codigo=ex$codigo_municipio,
+  ideb_2019=ex$ideb_2019,ideb_2023=ex$ideb_2023,
+  subtracao=sprintf('%.1f − %.1f = %+.1f',ex$ideb_2023,ex$ideb_2019,ex$mudanca),
+  classificacao=ifelse(ex$mudanca>0,'Melhorou',ifelse(ex$mudanca<0,'Piorou','Manteve'))),
+  caption='Aplicação numérica da fórmula a um município da base')
+stopifnot(sum(movimentos$municipios)==n)
+knitr::kable(transform(movimentos,percentual=round(100*municipios/n,2)),
+ caption='Contagem e percentual dos três sinais de mudança')
+```
+
+
+### Código R e conferência — média, mediana e mudanças
+
+O primeiro método usa operações matemáticas explícitas; o segundo usa `mean()` e `median()`. Os valores precisam coincidir. Na mesma etapa, comparamos a classificação por sinais da mudança municipal.
+
+```{r codigo-descritiva-conferencia, echo=TRUE}
+# 1. Calcular médias a partir das somas e do número de pares completos.
+n_validos <- nrow(validos)
+media_2019_manual <- sum(validos$ideb_2019) / n_validos
+media_2023_manual <- sum(validos$ideb_2023) / n_validos
+
+# 2. Calcular as medianas ordenando as notas de cada edição.
+mediana_manual <- function(v) {
+  valores <- sort(v)
+  n <- length(valores)
+  if (n %% 2L == 1L) valores[(n + 1L) / 2L]
+  else (valores[n / 2L] + valores[n / 2L + 1L]) / 2
+}
+med_2019_manual <- mediana_manual(validos$ideb_2019)
+med_2023_manual <- mediana_manual(validos$ideb_2023)
+
+# 3. Obter a mudança município a município (sem arredondar antes).
+delta_manual <- validos$ideb_2023 - validos$ideb_2019
+classificacao <- c(melhoraram = sum(delta_manual > 0),
+                   mantiveram = sum(delta_manual == 0),
+                   pioraram = sum(delta_manual < 0))
+
+# 4. Verificar os resultados pelas funções nativas do R.
+stopifnot(isTRUE(all.equal(media_2019_manual, mean(validos$ideb_2019))),
+          isTRUE(all.equal(media_2023_manual, mean(validos$ideb_2023))),
+          isTRUE(all.equal(med_2019_manual, median(validos$ideb_2019))),
+          isTRUE(all.equal(med_2023_manual, median(validos$ideb_2023))),
+          isTRUE(all.equal(delta_manual, validos$mudanca)),
+          sum(classificacao) == n_validos)
+
+knitr::kable(data.frame(
+  calculo = c('Média 2019', 'Mediana 2019', 'Média 2023',
+              'Mediana 2023', 'Variação média (pontos)'),
+  valor = c(media_2019_manual, med_2019_manual, media_2023_manual,
+            med_2023_manual, media_2023_manual - media_2019_manual)),
+  digits = 5, caption = 'Conferência de médias, medianas e variação')
+knitr::kable(data.frame(situacao = names(classificacao),
+                        municipios = as.integer(classificacao)),
+             caption = 'Conferência da classificação das mudanças')
+```
+
+A média municipal atribui o mesmo peso a cada município; **não** é o Ideb oficial brasileiro nem uma média ponderada por estudantes. As duas edições não necessariamente acompanham os mesmos alunos.
+
+```{r distribuicao, fig.cap='Distribuição das notas observadas do Ideb nas duas edições'}
+longa <- data.frame(ideb=c(validos$ideb_2019,validos$ideb_2023),
+ edicao=rep(c('2019','2023'),each=nrow(validos)))
+ggplot(longa,aes(ideb,fill=edicao))+geom_histogram(binwidth=.25,position='identity',alpha=.55)+
+ scale_fill_manual(values=c('#8FD3F4','#003B71'))+labs(x='Ideb observado (pontos)',y='Municípios',fill='Edição')+theme_minimal(base_size=13)
+```
+
+```{r mudanca, fig.cap='Distribuição da variação do Ideb entre 2019 e 2023'}
+ggplot(validos,aes(mudanca))+geom_histogram(binwidth=.2,fill=cor_fgv,color='white')+
+ geom_vline(xintercept=0,linetype='dashed')+labs(x='Mudança em pontos (2023 − 2019)',y='Municípios')+theme_minimal(base_size=13)
+```
+
+# Correlação e regressão linear
+
+A correlação de Pearson mede associação linear, não melhora. Ajustamos por mínimos quadrados ordinários (OLS):
+
+$$I_{i,2023}=\beta_0+\beta_1 I_{i,2019}+\varepsilon_i.$$
+
+```{r regressao}
+correlacao <- cor(validos$ideb_2019,validos$ideb_2023,method='pearson')
+modelo <- lm(ideb_2023~ideb_2019,data=validos)
+b0 <- unname(coef(modelo)[1]); b1 <- unname(coef(modelo)[2]); r2 <- summary(modelo)$r.squared
+cat(sprintf('Correlação de Pearson: %.4f\nEquação ajustada: Ideb2023 = %.4f %+.4f × Ideb2019\nR² = %.4f\n',correlacao,b0,b1,r2))
+validos$ajustado <- predict(modelo,newdata=validos)
+validos$residuo <- validos$ideb_2023-validos$ajustado
+stopifnot(max(abs(validos$residuo-residuals(modelo)))<1e-8)
+```
+
+## Memória de cálculo 3 — correlação de Pearson e OLS
+
+As fórmulas seguintes são aplicadas **às `r nrow(validos)` redes com pares completos**. Os totais intermediários são efetivamente calculados na renderização, e não digitados a partir de uma estimativa.
+
+**Passo 1 — calcular os desvios em relação às médias:** $d_{xi}=x_i-\bar x$ e $d_{yi}=y_i-\bar y$.
+
+**Passo 2 — obter as três somas centradas:**
+
+$$S_{xx}=\sum_{i=1}^n d_{xi}^2,\qquad S_{yy}=\sum_{i=1}^n d_{yi}^2,\qquad S_{xy}=\sum_{i=1}^n d_{xi}d_{yi}.$$
+
+**Passo 3 — calcular Pearson:**
+
+$$r=\frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.$$
+
+**Passo 4 — estimar a inclinação e o intercepto OLS:**
+
+$$\hat\beta_1=\frac{S_{xy}}{S_{xx}},\qquad \hat\beta_0=\bar y-\hat\beta_1\bar x.$$
+
+**Passo 5 — calcular previsões e resíduos:** $\hat y_i=\hat\beta_0+\hat\beta_1x_i$ e $e_i=y_i-\hat y_i$.
+
+**Passo 6 — calcular $R^2$:** primeiro, $SSE=\sum e_i^2$ e $SST=\sum(y_i-\bar y)^2$; depois $R^2=1-SSE/SST$. Para regressão simples com intercepto também vale $R^2=r^2$.
+
+```{r memoria-correlacao-ols}
+dx <- validos$ideb_2019 - xbar
+dy <- validos$ideb_2023 - ybar
+Sxx <- sum(dx^2); Syy <- sum(dy^2); Sxy <- sum(dx*dy)
+r_manual <- Sxy/sqrt(Sxx*Syy)
+b1_manual <- Sxy/Sxx
+b0_manual <- ybar-b1_manual*xbar
+SSE <- sum(validos$residuo^2)
+SST <- sum((validos$ideb_2023-ybar)^2)
+r2_manual <- 1-SSE/SST
+stopifnot(isTRUE(all.equal(r_manual,as.numeric(correlacao),tolerance=1e-10)),
+          isTRUE(all.equal(b0_manual,b0,tolerance=1e-10)),
+          isTRUE(all.equal(b1_manual,b1,tolerance=1e-10)),
+          isTRUE(all.equal(r2_manual,r2,tolerance=1e-10)),
+          isTRUE(all.equal(r2_manual,r_manual^2,tolerance=1e-10)))
+memoria_reg <- data.frame(
+  operacao=c('n','Média x','Média y','Sxx = Σ(x − x̄)²',
+             'Syy = Σ(y − ȳ)²','Sxy = Σ(x − x̄)(y − ȳ)',
+             'r = Sxy / √(Sxx Syy)','Inclinação = Sxy / Sxx',
+             'Intercepto = média y − inclinação × média x',
+             'SSE = Σ(resíduo²)','SST = Σ(y − média y)²',
+             'R² = 1 − SSE/SST','Conferência R² = r²'),
+  valor=c(n,xbar,ybar,Sxx,Syy,Sxy,r_manual,b1_manual,b0_manual,SSE,SST,r2_manual,r_manual^2))
+knitr::kable(memoria_reg,digits=6,caption='Memória numérica completa de Pearson e mínimos quadrados')
+knitr::kable(data.frame(
+  codigo=validos$codigo_municipio[1:6],
+  x=validos$ideb_2019[1:6],y=validos$ideb_2023[1:6],
+  x_menos_media=dx[1:6],y_menos_media=dy[1:6],
+  produto=dx[1:6]*dy[1:6],quadrado_x=dx[1:6]^2,
+  ajustado=validos$ajustado[1:6],residuo=validos$residuo[1:6]),
+  digits=5,caption='Primeiras seis contribuições individuais às somas e aos resíduos')
+```
+
+Substituição dos valores obtidos:
+
+- $r=\frac{`r sprintf('%.6f',Sxy)`}{\sqrt{`r sprintf('%.6f',Sxx)`\times `r sprintf('%.6f',Syy)`}}=`r sprintf('%.6f',r_manual)`$.
+- $\hat\beta_1=\frac{`r sprintf('%.6f',Sxy)`}{`r sprintf('%.6f',Sxx)`}=`r sprintf('%.6f',b1_manual)`$.
+- $\hat\beta_0=`r sprintf('%.6f',ybar)`-(`r sprintf('%.6f',b1_manual)`\times `r sprintf('%.6f',xbar)`) = `r sprintf('%.6f',b0_manual)`$.
+- $R^2=1-\frac{`r sprintf('%.6f',SSE)`}{`r sprintf('%.6f',SST)`}=`r sprintf('%.6f',r2_manual)`$.
+
+### Código R e conferência — Pearson, regressão OLS e R²
+
+Este bloco confronta duas implementações independentes: (a) somatórios matemáticos explícitos; (b) funções `cor()` e `lm()`. Também verifica os resíduos com `residuals()` e o coeficiente de determinação com `summary(modelo)`.
+
+```{r codigo-regressao-conferencia, echo=TRUE}
+# 1. Construir os vetores da comparação, sem notas ausentes.
+x <- validos$ideb_2019
+y <- validos$ideb_2023
+xc <- x - mean(x)
+yc <- y - mean(y)
+
+# 2. Pearson calculado diretamente pela fórmula.
+Sxx_check <- sum(xc^2)
+Sxy_check <- sum(xc * yc)
+Syy_check <- sum(yc^2)
+r_check <- Sxy_check / sqrt(Sxx_check * Syy_check)
+
+# 3. Coeficientes da regressão por mínimos quadrados.
+inclinacao_check <- Sxy_check / Sxx_check
+intercepto_check <- mean(y) - inclinacao_check * mean(x)
+y_ajustado_check <- intercepto_check + inclinacao_check * x
+residuos_check <- y - y_ajustado_check
+
+# 4. R² pela fração da soma de quadrados explicada pelo modelo.
+SQ_residuos <- sum(residuos_check^2)
+SQ_total <- sum((y - mean(y))^2)
+r2_check <- 1 - SQ_residuos / SQ_total
+
+# 5. Conferência independente com cor(), lm(), predict() e residuals().
+stopifnot(isTRUE(all.equal(r_check, as.numeric(cor(x, y)), tolerance=1e-10)),
+          isTRUE(all.equal(intercepto_check, unname(coef(modelo)[1]),
+                           tolerance=1e-10)),
+          isTRUE(all.equal(inclinacao_check, unname(coef(modelo)[2]),
+                           tolerance=1e-10)),
+          isTRUE(all.equal(y_ajustado_check, as.numeric(predict(modelo)),
+                           tolerance=1e-10)),
+          isTRUE(all.equal(residuos_check, as.numeric(residuals(modelo)),
+                           tolerance=1e-10)),
+          isTRUE(all.equal(r2_check, summary(modelo)$r.squared,
+                           tolerance=1e-10)))
+
+knitr::kable(data.frame(
+  parametro = c('Sxx', 'Sxy', 'Syy', 'Pearson (r)',
+                'Intercepto', 'Inclinação', 'SSE', 'SST', 'R²'),
+  valor = c(Sxx_check, Sxy_check, Syy_check, r_check,
+            intercepto_check, inclinacao_check, SQ_residuos, SQ_total,
+            r2_check)), digits = 7,
+  caption = 'Conferência matemática independente de Pearson e OLS')
+```
+
+A inclinação **não** é uma estimativa causal. O intercepto é uma extrapolação matemática quando o Ideb 2019 é zero, e não deve ser interpretado como resultado efetivamente esperado de uma rede sem desempenho.
+
+
+O coeficiente $\hat\beta_1$ expressa a variação média **associada** no Ideb 2023 para um ponto adicional em 2019. $R^2$ descreve a fração da variação observada em 2023 explicada linearmente pelo Ideb 2019 **nesta base**. Não há inferência causal.
+
+```{r dispersao, fig.cap='Ideb 2019 versus Ideb 2023, com reta OLS e linha de igualdade'}
+ggplot(validos,aes(ideb_2019,ideb_2023))+geom_point(alpha=.24,color='#00579A')+
+ geom_smooth(method='lm',se=FALSE,color='#003B71',linewidth=1.1)+
+ geom_abline(intercept=0,slope=1,linetype='dashed',color='#A34A45')+
+ coord_equal(xlim=c(0,10),ylim=c(0,10))+labs(x='Ideb 2019 (pontos)',y='Ideb 2023 (pontos)')+theme_minimal(base_size=13)
+```
+
+# Três listas de 50 municípios
+
+- **Necessidade atual:** Ideb 2023 crescente.
+- **Deterioração:** $\Delta_i$ crescente.
+- **Distância da reta:** $e_i=I_{i,2023}-\widehat I_{i,2023}$ crescente.
+
+## Memória de cálculo 4 — aplicação individual dos três critérios
+
+Para cada município elegível, construímos as três quantidades:
+
+$$\begin{aligned}
+\text{Necessidade atual:}&\quad y_i=I_{i,2023};\\
+\text{Deterioração:}&\quad \Delta_i=y_i-x_i;\\
+\text{Distância da reta:}&\quad e_i=y_i-(\hat\beta_0+\hat\beta_1x_i).
+\end{aligned}$$
+
+**Passo 1:** calcular as três colunas para todos os municípios elegíveis, sem arredondar os resíduos antes da ordenação.
+
+**Passo 2:** ordenar de forma crescente pela variável de cada critério.
+
+**Passo 3:** quando houver igualdade exata, ordenar pelo código municipal crescente (critério operacional e não substantivo).
+
+**Passo 4:** tomar as primeiras 50 posições de cada lista, sem duplicar códigos. Depois, para a decisão final, aplicar o critério escolhido.
+
+**Exemplo numérico auditável** de um município real da base:
+
+```{r exemplo-residuo}
+exr <- validos %>% arrange(codigo_municipio) %>% slice(1)
+knitr::kable(data.frame(
+ codigo=exr$codigo_municipio, municipio=exr$municipio, UF=exr$uf,
+ observado_2019=exr$ideb_2019, observado_2023=exr$ideb_2023,
+ delta=sprintf('%.2f − %.2f = %+.2f',exr$ideb_2023,exr$ideb_2019,exr$mudanca),
+ previsao=sprintf('%.5f + %.5f × %.2f = %.5f',b0,b1,exr$ideb_2019,exr$ajustado),
+ residuo=sprintf('%.2f − %.5f = %+.5f',exr$ideb_2023,exr$ajustado,exr$residuo)),
+ caption='Substituição integral dos números em mudança, previsão e resíduo')
+```
+
+
+### Código R e conferência — mudança, previsão e resíduo individual
+
+A tabela anterior substitui valores reais nas fórmulas. Aqui o código recalcula os três componentes e verifica que a previsão e o resíduo coincidem com `predict()` e `residuals()` do modelo.
+
+```{r codigo-residuo-conferencia, echo=TRUE}
+# 1. Selecionar o município com menor código IBGE.
+municipio_exemplo <- validos[order(validos$codigo_municipio), ][1, ]
+
+# 2. Aplicar cada fórmula às notas observadas no município.
+delta_exemplo <- as.numeric(municipio_exemplo$ideb_2023) -
+  as.numeric(municipio_exemplo$ideb_2019)
+previsto_exemplo <- as.numeric(b0) + as.numeric(b1) *
+  as.numeric(municipio_exemplo$ideb_2019)
+residuo_exemplo <- as.numeric(municipio_exemplo$ideb_2023) - previsto_exemplo
+
+# 3. Conferir a predição por duas vias: equação e predict().
+#    Comparar valores, não nomes nem atributos dos vetores retornados pelo R.
+previsto_modelo <- as.numeric(predict(modelo, newdata=municipio_exemplo))
+conferencia <- data.frame(
+  quantidade = c('Mudança', 'Previsão pela equação', 'Previsão por predict()',
+                 'Resíduo'),
+  calculado = c(delta_exemplo, previsto_exemplo, previsto_modelo, residuo_exemplo),
+  referencia = c(as.numeric(municipio_exemplo$mudanca),
+                 as.numeric(municipio_exemplo$ajustado),
+                 as.numeric(municipio_exemplo$ajustado),
+                 as.numeric(municipio_exemplo$residuo))
+)
+conferencia$diferenca_absoluta <- abs(conferencia$calculado - conferencia$referencia)
+knitr::kable(conferencia, digits=12,
+  caption='Conferência numérica independente: diferenças absolutas')
+
+# 4. Exigir concordância dentro da tolerância numérica da aritmética de ponto flutuante.
+#    Divergências reais interrompem a compilação e ficam identificáveis na tabela.
+tolerancia <- 1e-8
+if (any(!is.finite(conferencia$diferenca_absoluta)) ||
+    any(conferencia$diferenca_absoluta > tolerancia)) {
+  stop('Divergência na conferência do município ', municipio_exemplo$codigo_municipio,
+       '. Consulte a tabela de diferenças absolutas acima.')
+}
+
+knitr::kable(data.frame(
+  municipio = municipio_exemplo$municipio,
+  uf = municipio_exemplo$uf,
+  operacao = c('Mudança = 2023 − 2019',
+               'Previsto = intercepto + inclinação × 2019',
+               'Resíduo = observado − previsto'),
+  resultado = c(delta_exemplo, previsto_exemplo, residuo_exemplo)),
+  digits = 6, caption = 'Cálculo municipal: três fórmulas conferidas')
+```
+
+Empates são resolvidos por código municipal crescente, exclusivamente para reprodução.
+
+```{r listas}
+lista_atual <- validos %>% arrange(ideb_2023,codigo_municipio) %>% slice_head(n=50)
+lista_queda <- validos %>% arrange(mudanca,codigo_municipio) %>% slice_head(n=50)
+lista_residuo <- validos %>% arrange(residuo,codigo_municipio) %>% slice_head(n=50)
+stopifnot(nrow(lista_atual)==50,nrow(lista_queda)==50,nrow(lista_residuo)==50)
+compara <- validos %>% mutate(
+ atual=codigo_municipio %in% lista_atual$codigo_municipio,
+ queda=codigo_municipio %in% lista_queda$codigo_municipio,
+ reta=codigo_municipio %in% lista_residuo$codigo_municipio,
+ quantos=as.integer(atual)+as.integer(queda)+as.integer(reta))
+knitr::kable(data.frame(
+ par=c('Atual × Deterioração','Atual × Reta','Deterioração × Reta','Nas três','Em apenas uma'),
+ municipios=c(sum(compara$atual & compara$queda),sum(compara$atual & compara$reta),
+ sum(compara$queda & compara$reta),sum(compara$quantos==3),sum(compara$quantos==1))))
+```
+
+```{r listas-completas}
+campos <- c('codigo_municipio','municipio','uf','ideb_2019','ideb_2023','mudanca','ajustado','residuo')
+knitr::kable(lista_atual[,campos],digits=3,caption='Lista 1 — 50 menores Ideb de 2023')
+knitr::kable(lista_queda[,campos],digits=3,caption='Lista 2 — 50 maiores deteriorações')
+knitr::kable(lista_residuo[,campos],digits=3,caption='Lista 3 — 50 resíduos mais negativos')
+```
+
+```{r cortes}
+ver_corte <- function(dados,variavel){
+ z <- dados[[variavel]]
+ data.frame(criterio=variavel,valor_50=z[50],valor_51=z[51],diferenca=z[51]-z[50],empate=z[50]==z[51])
+}
+knitr::kable(bind_rows(ver_corte(validos %>% arrange(ideb_2023,codigo_municipio),'ideb_2023'),
+ ver_corte(validos %>% arrange(mudanca,codigo_municipio),'mudanca'),
+ ver_corte(validos %>% arrange(residuo,codigo_municipio),'residuo')),digits=5,
+ caption='Sensibilidade do corte: posições 50 e 51')
+```
+
+## Memória de cálculo 5 — interseções, empates e fronteira da seleção
+
+**Passo 1 — interseção de duas listas:** contar os códigos que pertencem simultaneamente a ambas, isto é, $|A\cap B|$. Na implementação, a condição lógica é `atual & queda` (e analogamente para os demais pares).
+
+**Passo 2 — interseção tripla:** contar códigos que aparecem nas três listas, $|A\cap B\cap C|$.
+
+**Passo 3 — exclusividade:** para cada município, somar os indicadores binários de entrada nas listas. Contar os municípios com exatamente uma entrada (`quantos == 1`).
+
+**Passo 4 — verificar a fronteira:** examinar os valores nas posições 50 e 51 de cada ranking. A diferença é $v_{51}-v_{50}$. Se for zero, o desempate por código determina o último selecionado. Se for muito pequena, o corte é sensível à precisão da nota/resíduo.
+
+```{r memoria-intersecoes}
+A <- lista_atual$codigo_municipio
+B <- lista_queda$codigo_municipio
+C <- lista_residuo$codigo_municipio
+knitr::kable(data.frame(
+ operacao=c('|A|','|B|','|C|','|A ∩ B|','|A ∩ C|','|B ∩ C|',
+           '|A ∩ B ∩ C|','|A ∪ B ∪ C|','Exatamente uma lista'),
+ resultado=c(length(A),length(B),length(C),length(intersect(A,B)),
+             length(intersect(A,C)),length(intersect(B,C)),
+             length(Reduce(intersect,list(A,B,C))),
+             length(Reduce(union,list(A,B,C))),sum(compara$quantos==1))),
+ caption='Conjuntos calculados por código municipal')
+stopifnot(length(Reduce(union,list(A,B,C))) ==
+          length(A)+length(B)+length(C)-length(intersect(A,B))-
+          length(intersect(A,C))-length(intersect(B,C))+
+          length(Reduce(intersect,list(A,B,C))))
+```
+
+### Código R e conferência — conjuntos e regra dos 50 primeiros
+
+Este bloco reconstrói **as três seleções a partir de `validos`**, confere os 50 códigos de cada lista e calcula os cruzamentos por funções de conjuntos, sem depender apenas dos indicadores lógicos criados anteriormente.
+
+```{r codigo-rankings-conferencia, echo=TRUE}
+# 1. Ordenar integralmente a base pelas três regras do professor.
+ranking_atual_check <- validos[order(validos$ideb_2023,
+                                     validos$codigo_municipio), ]
+ranking_queda_check <- validos[order(validos$mudanca,
+                                     validos$codigo_municipio), ]
+ranking_reta_check <- validos[order(validos$residuo,
+                                    validos$codigo_municipio), ]
+
+# 2. Selecionar os 50 primeiros de cada ordenação.
+A_check <- head(ranking_atual_check$codigo_municipio, 50)
+B_check <- head(ranking_queda_check$codigo_municipio, 50)
+C_check <- head(ranking_reta_check$codigo_municipio, 50)
+
+# 3. Conferir as listas produzidas por dplyr::arrange() e slice_head().
+stopifnot(identical(A_check, lista_atual$codigo_municipio),
+          identical(B_check, lista_queda$codigo_municipio),
+          identical(C_check, lista_residuo$codigo_municipio),
+          length(unique(A_check)) == 50L,
+          length(unique(B_check)) == 50L,
+          length(unique(C_check)) == 50L)
+
+# 4. Calcular interseções e união com funções da base R.
+AB <- length(intersect(A_check, B_check))
+AC <- length(intersect(A_check, C_check))
+BC <- length(intersect(B_check, C_check))
+ABC <- length(Reduce(intersect, list(A_check, B_check, C_check)))
+uniao_real <- length(Reduce(union, list(A_check, B_check, C_check)))
+uniao_formula <- 150 - AB - AC - BC + ABC
+stopifnot(uniao_real == uniao_formula)
+
+knitr::kable(data.frame(
+  verificacao = c('Cada lista tem', 'Interseção A/B', 'Interseção A/C',
+                  'Interseção B/C', 'Interseção tripla',
+                  'União por conjuntos', 'União por inclusão-exclusão'),
+  resultado = c(length(A_check), AB, AC, BC, ABC,
+                uniao_real, uniao_formula)),
+  caption = 'Reconstrução dos rankings e conferência por conjuntos')
+```
+
+O princípio da inclusão-exclusão permite conferir o tamanho da união: $|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|$.
+
+```{r memoria-fronteiras}
+fronteira <- function(d,variavel,criterio){
+  z <- d %>% arrange(.data[[variavel]],codigo_municipio)
+  data.frame(criterio=criterio, posicao=c(50,51),codigo=z$codigo_municipio[c(50,51)],
+             municipio=z$municipio[c(50,51)],uf=z$uf[c(50,51)],
+             valor=z[[variavel]][c(50,51)])
+}
+knitr::kable(dplyr::bind_rows(
+  fronteira(validos,'ideb_2023','Necessidade atual'),
+  fronteira(validos,'mudanca','Deterioração'),
+  fronteira(validos,'residuo','Distância da reta')),
+  digits=6,caption='Municípios nas posições 50 e 51, sem omitir os empates')
+```
+
+
+# Recomendação para Mariana
+
+**Regra escolhida:** selecionar os 50 menores valores observados do Ideb 2023, entre os municípios com notas válidas nas duas edições; desempatar por código municipal crescente. Essa regra prioriza dificuldades educacionais presentes, que são o objeto imediato do programa. A seleção não pressupõe que o apoio terá maior efeito nesses municípios.
+
+**Principal desvantagem:** uma fotografia do desempenho pode deixar de fora municípios com deterioração acelerada, inclusive aqueles ainda com notas intermediárias. Além disso, o filtro de completude exclui redes sem dados comparáveis.
+
+```{r alternativa-excluida}
+alternativas <- compara %>% filter(!atual,queda | reta) %>%
+ arrange(mudanca,codigo_municipio)
+if(nrow(alternativas)>0){
+ exemplo <- alternativas[1,campos]
+ knitr::kable(exemplo,digits=3,caption='Exemplo concreto: entraria por outro critério, mas ficou fora da seleção')
+} else cat('Nenhum município exclusivo dos critérios alternativos neste conjunto.\n')
+```
+
+```{r recomendacao-final}
+recomendados <- lista_atual[,campos]
+knitr::kable(recomendados,digits=3,caption='RECOMENDAÇÃO FINAL — exatamente 50 municípios')
+stopifnot(nrow(recomendados)==50, !anyDuplicated(recomendados$codigo_municipio))
+```
+
+## Auditoria do empate na fronteira dos 50 municípios
+
+**Limitação decisória relevante.** Quando o 50º e o 51º municípios apresentam **a mesma nota observada de Ideb 2023**, não há diferença mensurável nesse indicador que sustente a prioridade de um sobre o outro. O código do município é usado exclusivamente como **critério administrativo de desempate**, previamente declarado, para cumprir a restrição de exatamente 50 vagas. **Ele não representa maior necessidade, maior capacidade de resposta ou benefício educacional esperado.**
+
+A nota do Ideb é divulgada com precisão limitada. Por isso, a comparação pelo valor publicado também não estabelece diferenças substantivas entre todos os municípios de uma mesma faixa de nota. Uma política pública poderia complementar a decisão com indicadores previamente acordados, como vulnerabilidade social, tamanho da rede e capacidade de implementação; tais indicadores **não estão nesta base** e, portanto, não foram inventados nem usados para alterar o ranking.
+
+### Código R e conferência — todos os empatados no corte
+
+```{r auditoria-empate-fronteira, echo=TRUE}
+# Classificação determinística já adotada: menor Ideb e menor código IBGE.
+ordem_auditada <- order(validos$ideb_2023, validos$codigo_municipio)
+ordenados_auditados <- validos[ordem_auditada, ]
+limiar_50 <- ordenados_auditados$ideb_2023[50]
+limiar_51 <- ordenados_auditados$ideb_2023[51]
+empatados_limiar <- ordenados_auditados[
+  ordenados_auditados$ideb_2023 == limiar_50,
+  c("codigo_municipio", "municipio", "uf", "ideb_2023")]
+empatados_limiar$selecionado <- empatados_limiar$codigo_municipio %in%
+  ordenados_auditados$codigo_municipio[seq_len(50)]
+
+stopifnot(identical(ordenados_auditados$codigo_municipio[seq_len(50)],
+                    recomendados$codigo_municipio))
+knitr::kable(data.frame(
+  Indicador = c("Ideb do 50º", "Ideb do 51º", "Empate entre 50º e 51º",
+                "Total de municípios na nota-limiar",
+                "Selecionados na nota-limiar", "Não selecionados na nota-limiar"),
+  Resultado = c(as.character(limiar_50), as.character(limiar_51),
+    as.character(limiar_50 == limiar_51), as.character(nrow(empatados_limiar)),
+    as.character(sum(empatados_limiar$selecionado)),
+    as.character(sum(!empatados_limiar$selecionado)))),
+  caption = "Auditoria completa da fronteira da seleção")
+knitr::kable(empatados_limiar,
+  caption = "Municípios com a mesma nota da fronteira e efeito do desempate")
+```
+
+**Interpretação:** se a coluna `selecionado` divergir entre municípios com o mesmo Ideb, a distinção resulta **somente** da regra operacional para limitar a lista a 50, e não de um gradiente demonstrado de necessidade. Essa restrição deve acompanhar a recomendação enviada à gestora.
+
+## Memória de cálculo 6 — decisão final e exemplo excluído
+
+**Passo 1 — regra de decisão:** priorizar o menor Ideb observado em 2023; aplicar desempate crescente por código municipal.
+
+**Passo 2 — elegibilidade:** manter somente municípios com 2019 e 2023 válidos. A recomendação não inclui municípios ausentes nem interpreta ausência como nota zero.
+
+**Passo 3 — verificar o total:** exatamente 50 linhas e 50 códigos distintos.
+
+**Passo 4 — demonstrar custo de oportunidade:** localizar pelo menos um município fora da seleção principal que esteja entre os 50 em deterioração ou distância da reta; mostrar seus indicadores para evidenciar o efeito da regra escolhida.
+
+```{r memoria-decisao}
+cat('Total recomendado:',nrow(recomendados),'\n')
+cat('Códigos únicos:',length(unique(recomendados$codigo_municipio)),'\n')
+cat('Menor Ideb 2023 na seleção:',min(recomendados$ideb_2023),'\n')
+cat('Maior Ideb 2023 na seleção:',max(recomendados$ideb_2023),'\n')
+stopifnot(nrow(recomendados)==50, length(unique(recomendados$codigo_municipio))==50)
+if(nrow(alternativas)>0){
+  alt <- alternativas[1,]
+  knitr::kable(data.frame(
+    municipio=alt$municipio,uf=alt$uf,codigo=alt$codigo_municipio,
+    ideb_2019=alt$ideb_2019,ideb_2023=alt$ideb_2023,
+    mudanca=alt$mudanca,ajustado=alt$ajustado,residuo=alt$residuo,
+    entra_deterioracao=alt$queda,entra_distancia_reta=alt$reta,
+    entra_recomendacao=alt$atual),digits=5,
+    caption='Alternativa real excluída pela priorização do Ideb atual')
+}
+```
+
+### Código R e conferência — decisão, desempate e alternativa excluída
+
+O critério final é programado novamente a partir da base de pares completos. Essa conferência preserva a regra **Ideb 2023 crescente; código municipal crescente** e identifica uma rede concreta que seria selecionada por critério alternativo, mas não pela prioridade atual.
+
+```{r codigo-decisao-conferencia, echo=TRUE}
+# 1. Reconstruir a decisão com R base: sem pesos nem cotas regionais.
+ordem_final <- order(validos$ideb_2023, validos$codigo_municipio)
+selecionados_check <- validos$codigo_municipio[ordem_final][seq_len(50)]
+
+# 2. Conferir que a recomendação é exatamente a Lista A.
+stopifnot(length(selecionados_check) == 50L,
+          length(unique(selecionados_check)) == 50L,
+          identical(selecionados_check, recomendados$codigo_municipio))
+
+# 3. Examinar o corte entre o 50º e o 51º municípios.
+corte <- validos[ordem_final[c(50, 51)],
+                 c('codigo_municipio', 'municipio', 'uf', 'ideb_2023')]
+corte$posicao <- c(50L, 51L)
+knitr::kable(corte[, c('posicao', 'codigo_municipio', 'municipio',
+                      'uf', 'ideb_2023')],
+             caption = 'Auditoria do desempate e das posições 50/51')
+
+# 4. Demonstrar uma rede excluída por A e contemplada por B ou C.
+excluidos_alternativos <- validos[
+  !(validos$codigo_municipio %in% selecionados_check) &
+  (validos$codigo_municipio %in% c(B_check, C_check)), ]
+if (nrow(excluidos_alternativos) > 0L) {
+  excluidos_alternativos <- excluidos_alternativos[
+    order(excluidos_alternativos$mudanca,
+          excluidos_alternativos$codigo_municipio), ]
+  knitr::kable(head(excluidos_alternativos[, c(
+    'codigo_municipio', 'municipio', 'uf', 'ideb_2019',
+    'ideb_2023', 'mudanca', 'residuo')], 1), digits = 5,
+    caption = 'Exemplo real de município excluído pelo critério escolhido')
+}
+```
+
+**Interpretação crítica:** a classificação indica níveis ou trajetórias de desempenho, não o efeito causal de um programa de formação e acompanhamento. Não há dados no enunciado para calcular benefício esperado, atribuir a mudança à pandemia ou garantir que esses 50 municípios apresentarão a maior resposta ao apoio.
+
+
+# Questões para debate
+
+1. **Necessidade atendida:** baixo desempenho atual; a prioridade é enfrentar dificuldades educacionais observadas, não premiar ou punir trajetórias.
+2. **Correlação versus melhora:** correlação alta significa associação entre posições relativas, não aumento das notas. A linha de igualdade e $\Delta_i$ revelam direção e magnitude das mudanças.
+3. **Melhoria e queda:** um município de Ideb muito baixo não perde prioridade apenas por estar melhorando; uma queda expressiva em nível intermediário merece acompanhamento e pode fundamentar outro desenho de política.
+4. **Resíduos:** identificam resultados abaixo do padrão linear condicional a 2019, mas dependem da especificação, ignoram fatores socioeconômicos e não identificam má gestão ou efeitos do programa.
+5. **Empates e ausência:** código municipal é desempate operacional transparente, não diferença substantiva. Municípios sem nota exigem triagem adicional; ausência não significa desempenho zero.
+
+# Limitações e reprodutibilidade
+
+A comparação é descritiva, não causal. Não identifica por que o desempenho mudou, não atribui mudanças automaticamente à pandemia e não estima resultados potenciais do programa. A escolha dos 50 depende da base nacional correta e da elegibilidade de pares completos. Não extrapolar a média municipal para a população estudantil.
+
+```{r exportar}
+dir.create('resultados',showWarnings=FALSE,recursive=TRUE)
+readr::write_csv(recomendados,'resultados/recomendacao_50.csv',na='')
+readr::write_csv(lista_queda[,campos],'resultados/lista_deterioracao_50.csv',na='')
+readr::write_csv(lista_residuo[,campos],'resultados/lista_residuos_50.csv',na='')
+readr::write_csv(cobertura,'resultados/cobertura.csv')
+readr::write_csv(compara[,c(campos,'atual','queda','reta','quantos')],'resultados/comparacao_completa.csv',na='')
+cat('Arquivos CSV exportados para resultados/.\n')
+print(sessionInfo())
+```

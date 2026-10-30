@@ -1,0 +1,725 @@
+---
+title: "Antes do turno da tarde"
+subtitle: "Caso 1 — Resolução com R | Métodos Quantitativos"
+author: "Gustavo M. Mendes de Tarso"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+lang: pt-BR
+params:
+  instituicao: "Fundação Getulio Vargas (FGV) · Escola de Políticas Públicas e Governo"
+  curso: "Mestrado Profissional em Políticas Públicas e Governo (MPPG)"
+  turma: "2026.1"
+  polo: "Brasília"
+  disciplina: "Métodos Quantitativos"
+  professor: "Weeberb João Réquia Júnior"
+  aluno: "Gustavo M. Mendes de Tarso"
+  documento: "Caso 1 — Antes do turno da tarde"
+  tipo: "Resolução analítica de estudo de caso com R"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    fig_caption: true
+    self_contained: true
+    css: fgv-mppg.css
+    theme: flatly
+    highlight: tango
+---
+
+<!-- Identidade visual centralizada em fgv-mppg.css,
+     incorporada automaticamente ao HTML standalone pelo rmarkdown. -->
+
+```{r configuracao, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.align = "center", fig.width = 13.5,
+                      fig.height = 9.4, dpi = 160, out.width = "100%")
+source("analise_caso1.R", local = TRUE, encoding = "UTF-8")
+fmt <- function(x, casas = 2) formatC(x, format = "f", digits = casas, decimal.mark = ",")
+fmt_real <- function(x) paste0("R$ ", format(x, big.mark = ".", decimal.mark = ",",
+                                            scientific = FALSE, trim = TRUE))
+coef_inclinacao <- unname(coef(modelo_lm)["temperatura"])
+if (abs(coef_inclinacao) < 1e-10) coef_inclinacao <- 0
+```
+
+```{=html}
+<div class="fgv-identificacao" aria-label="Identificação acadêmica FGV">
+  <div class="fgv-identificacao__heading">
+    <span class="fgv-identificacao__brand" aria-label="FGV">FGV</span>
+    <div><div class="fgv-identificacao__title">IDENTIFICAÇÃO ACADÊMICA — FGV</div>
+      <div class="fgv-identificacao__subtitle">Metadados do trabalho · MPPG / EPPG-FGV</div></div>
+  </div>
+  <div class="fgv-identificacao__grid">
+    <div class="fgv-campo fgv-campo--full"><span class="fgv-campo__nome">Instituição</span><span class="fgv-campo__valor">`r params$instituicao`</span></div>
+    <div class="fgv-campo fgv-campo--full"><span class="fgv-campo__nome">Curso / programa</span><span class="fgv-campo__valor">`r params$curso`</span></div>
+    <div class="fgv-campo"><span class="fgv-campo__nome">Turma</span><span class="fgv-campo__valor">`r params$turma`</span></div>
+    <div class="fgv-campo"><span class="fgv-campo__nome">Polo</span><span class="fgv-campo__valor">`r params$polo`</span></div>
+    <div class="fgv-campo"><span class="fgv-campo__nome">Disciplina</span><span class="fgv-campo__valor">`r params$disciplina`</span></div>
+    <div class="fgv-campo"><span class="fgv-campo__nome">Professor(a)</span><span class="fgv-campo__valor">`r params$professor`</span></div>
+    <div class="fgv-campo"><span class="fgv-campo__nome">Aluno</span><span class="fgv-campo__valor">`r params$aluno`</span></div>
+    <div class="fgv-campo"><span class="fgv-campo__nome">Data</span><span class="fgv-campo__valor">`r format(Sys.Date(), '%d/%m/%Y')`</span></div>
+    <div class="fgv-campo fgv-campo--full"><span class="fgv-campo__nome">Documento</span><span class="fgv-campo__valor">`r params$documento` · `r params$tipo`</span></div>
+  </div>
+  <div class="fgv-identificacao__barra"></div>
+</div>
+```
+
+<div class="kicker">Decisão pública • análise quantitativa • gestão do risco</div>
+
+<div class="kpis">
+ <div class="kpi"><span class="numero">`r n_turnos`</span><span class="rotulo">turnos registrados</span></div>
+ <div class="kpi"><span class="numero">`r total_atendimentos`</span><span class="rotulo">atendimentos somados</span></div>
+ <div class="kpi"><span class="numero">`r fmt(media_atendimentos, 1)`</span><span class="rotulo">atendimentos / turno</span></div>
+ <div class="kpi"><span class="numero">`r fmt(unname(teste_pearson$estimate), 2)`</span><span class="rotulo">correlação linear (r)</span></div>
+</div>
+
+<div class="decisao"><strong>RECOMENDAÇÃO CENTRAL</strong><br/>
+Reorganizar as rotas, com avaliação imediata da saúde ocupacional, controles de exposição ao calor,
+critérios de interrupção e prioridade aos locais com maior risco sanitário. A opção custa R$ 32 mil,
+cabe na autonomia de R$ 40 mil e permite concluir, segundo a estimativa informada, 60% das rotas hoje.
+Isso não comprova uma redução quantificada de risco; depende de validação técnica e monitoramento contínuo.
+</div>
+
+# Pergunta decisória
+
+Marina deve definir, até **12h45**, a operação das **14h às 18h**, com previsão de **35°C**, umidade elevada e pouco vento. Há **100 trabalhadores** realizando esforço físico relevante em coleta domiciliar. Os interesses contrapostos são proteção da saúde, continuidade do serviço público, riscos sanitários dos resíduos e limites orçamentários.
+
+A pergunta estatística *"há associação linear observada?"* é distinta da pergunta decisória *"é seguro manter a exposição nesta tarde?"*. Uma resposta negativa à primeira **não** implica resposta afirmativa à segunda.
+
+# Base de dados e desenho
+
+
+## Memória de cálculo 1 — transcrição e verificação da base
+
+**Código R — entrada dos dados.** Assim como no Caso 2, o código que representa os dados efetivamente utilizados deve aparecer no corpo do relatório. A execução inicial de `analise_caso1.R` continua responsável pelos objetos analíticos e pelo painel gráfico; o bloco abaixo repete a transcrição dos dez turnos e **confere sua identidade** com a base da execução, para evitar resultados obtidos com uma tabela diferente da mostrada ao leitor.
+
+```{r codigo-base-dados, echo=TRUE}
+dados_visiveis <- data.frame(
+  turno = c("D02", "D11", "D14", "D15", "D16",
+            "D18", "D20", "D21", "D22", "D23"),
+  temperatura = c(33, 28, 33, 35, 31, 32, 34, 34, 26, 32),
+  atendimentos = c(1, 2, 3, 2, 2, 3, 1, 3, 2, 1),
+  trabalhadores = rep(100L, 10L),
+  stringsAsFactors = FALSE
+)
+stopifnot(isTRUE(all.equal(dados, dados_visiveis)),
+          nrow(dados) == 10L,
+          sum(dados$atendimentos) == 20L)
+```
+
+O bloco seguinte imprime a base que entrou nos modelos, sem precisar abrir outro arquivo.
+
+```{r tabela-dados}
+knitr::kable(dados[, c("turno", "temperatura", "atendimentos", "trabalhadores")],
+  col.names = c("Turno", "Temperatura (°C)", "Atendimentos", "Trabalhadores"),
+  caption = "Dados transcritos da página 2 do Caso 1.", format = "html",
+  table.attr = 'class="table table-striped table-condensed"')
+```
+
+
+**Conferência aritmética da base:** `r sum(dados$temperatura)`°C acumulados nos dez turnos (soma de temperaturas, não temperatura física média), `r sum(dados$atendimentos)` atendimentos, `r sum(dados$trabalhadores)` turnos-trabalhador e média de `r fmt(mean(dados$temperatura),1)`°C. Esses somatórios serão reutilizados na memória de cálculo abaixo.
+
+**Unidade de observação:** turno de quatro horas, com 100 trabalhadores. A amostra contém `r n_turnos` turnos, cobrindo temperaturas de `r min(dados$temperatura)` a `r max(dados$temperatura)`°C. Foram registrados `r total_atendimentos` atendimentos em `r total_turnos_trabalhador` **turnos-trabalhador**, equivalentes a `r fmt(100*proporcao_turnos_trabalhador,1)`% desses registros. Esse percentual **não** é uma taxa de incidência entre pessoas distintas no mês: um trabalhador pode reaparecer em vários dias.
+
+A variável dependente é o **número de atendimentos por tontura, náusea ou desmaio**; não há confirmação de que todos sejam eventos causados pelo calor. A exposição foi medida somente por temperatura máxima do ar, sem medições individuais de carga térmica, umidade por turno, radiação, intensidade ou pausas efetivas.
+
+
+## Memória de cálculo 2 — medidas descritivas
+
+**Código R — médias, dispersão, totais e denominador de exposição.** O denominador `sum(trabalhadores)` representa *turnos-trabalhador*, não necessariamente pessoas distintas. A variância é amostral (`var()`, denominador `n-1`).
+
+```{r codigo-estatistica-descritiva, echo=TRUE}
+resumo_descritivo <- data.frame(
+  indicador = c("Turnos", "Temperatura média (°C)",
+                "Temperatura: variância amostral", "Atendimentos somados",
+                "Atendimentos: média por turno", "Atendimentos: variância amostral",
+                "Turnos-trabalhador", "Atendimentos / 100 turnos-trabalhador"),
+  resultado = c(nrow(dados), mean(dados$temperatura),
+                var(dados$temperatura), sum(dados$atendimentos),
+                mean(dados$atendimentos), var(dados$atendimentos),
+                sum(dados$trabalhadores),
+                100 * sum(dados$atendimentos) / sum(dados$trabalhadores))
+)
+knitr::kable(resumo_descritivo, digits = 4,
+             caption = "Memória de cálculo: descritivas e exposição")
+```
+
+A média das temperaturas é `r fmt(mean(dados$temperatura), 1)` °C; a média das contagens é `r fmt(mean(dados$atendimentos), 1)` por turno. A proporção agregada de atendimentos por turnos-trabalhador não pode ser interpretada diretamente como risco individual de adoecimento.
+
+# Visualização: quatro diagnósticos
+
+```{r painel, fig.cap="Painel analítico construído com ggplot2 e patchwork. A banda do terceiro gráfico é um intervalo de confiança para a média ajustada, não uma previsão do número de atendimentos em um novo turno."}
+print(painel)
+```
+
+<div class="nota"><strong>Detalhe decisivo.</strong> As médias dos atendimentos em cada temperatura registrada são idênticas: 2 por turno. Por isso, a reta ajustada fica horizontal. Isso descreve os dados disponíveis — não demonstra que aumentar a exposição térmica seja seguro.</div>
+
+## Código R de referência — construção dos gráficos
+
+A composição original do painel está no arquivo `analise_caso1.R` (seções 8 e 9). O relatório apresenta o comando executável `print(painel)` no bloco `painel` e, para inspeção independente de cada gráfico, os comandos abaixo reproduzem os componentes **sem recalcular os coeficientes**. Os objetos `g1`, `g2`, `g3`, `g4` e `painel` foram criados pelo script auditável carregado na configuração do documento.
+
+```{r codigo-inspecao-graficos, eval=FALSE, echo=TRUE}
+# Execute no ESS/R após carregar analise_caso1.R.
+source("analise_caso1.R", encoding = "UTF-8")
+print(g1)       # Dispersão temperatura × atendimentos
+print(g2)       # Número de turnos por temperatura
+print(g3)       # Modelo Poisson + IC para a média
+print(g4)       # Custos adicionais e teto orçamentário
+print(painel)   # Painel consolidado do relatório
+```
+
+**Instalação dos pacotes usados pelo Caso 1:**
+
+```{r pacotes-instalacao-referencia, eval=FALSE, echo=TRUE}
+install.packages(c("rmarkdown", "knitr", "ggplot2", "dplyr",
+                   "patchwork", "scales"),
+                 repos = "https://cloud.r-project.org")
+```
+
+# Inferência estatística: interpretação exploratória
+
+A inferência aqui é **exploratória**, baseada em apenas dez turnos. O resultado de Pearson é o centro da resposta quantitativa ao argumento da empresa; as regressões são **complementos metodológicos**, não provas independentes de segurança. Os intervalos dependem de hipóteses de amostragem e independência difíceis de verificar com estes registros. A variável observada é contagem de **atendimentos**, não diagnóstico de adoecimento atribuído ao calor.
+
+
+**Leitura dos códigos.** Os blocos a seguir deixam visíveis as operações efetivamente verificadas no R; o cálculo manual é comparado com a função estatística correspondente. A seção matemática mostra as mesmas operações por substituição numérica.
+
+## Correlação de Pearson
+
+$$
+r=\frac{\sum_{t=1}^n(T_t-\bar{T})(Y_t-\bar{Y})}
+{\sqrt{\sum_{t=1}^n(T_t-\bar{T})^2}\sqrt{\sum_{t=1}^n(Y_t-\bar{Y})^2}}
+$$
+
+
+
+**Memória de cálculo — correlação de Pearson.** Em vez de apenas aceitar o valor devolvido pelo R, calculamos as somas e centralizamos os dez pares observados. Os índices \(T\) e \(Y\) indicam, respectivamente, temperatura máxima em °C e quantidade de atendimentos no turno.
+
+```{r memoria-centro-calculo, echo=TRUE}
+memoria <- transform(
+  dados[, c("turno", "temperatura", "atendimentos")],
+  desvio_T = temperatura - mean(dados$temperatura),
+  desvio_Y = atendimentos - mean(dados$atendimentos)
+)
+memoria$quadrado_T <- memoria$desvio_T^2
+memoria$quadrado_Y <- memoria$desvio_Y^2
+memoria$produto <- memoria$desvio_T * memoria$desvio_Y
+memoria <- rbind(memoria, data.frame(
+  turno = "Total",
+  temperatura = sum(dados$temperatura),
+  atendimentos = sum(dados$atendimentos),
+  desvio_T = round(sum(memoria$desvio_T), 9),
+  desvio_Y = sum(memoria$desvio_Y),
+  quadrado_T = sum(memoria$quadrado_T),
+  quadrado_Y = sum(memoria$quadrado_Y),
+  produto = round(sum(memoria$produto), 9)
+))
+knitr::kable(
+  memoria,
+  format = "html", digits = 1,
+  col.names = c("Turno", "T", "Y", "T − 31,8", "Y − 2", "(T − 31,8)²", "(Y − 2)²", "Produto"),
+  caption = "Planilha de conferência das parcelas da correlação e da regressão.",
+  table.attr = 'class="table table-striped table-condensed memoria-matematica"'
+)
+```
+
+**Passo 1 — somatórios brutos:**
+
+$$
+\begin{aligned}
+n &= 10\\
+\sum_{i=1}^{10} T_i &= 318\\
+\sum_{i=1}^{10} Y_i &= 20\\
+\sum_{i=1}^{10} T_i^2 &= 10\,184\\
+\sum_{i=1}^{10} Y_i^2 &= 46\\
+\sum_{i=1}^{10} T_iY_i &= 636
+\end{aligned}
+$$
+
+**Passo 2 — médias observadas:**
+
+$$
+\begin{aligned}
+\bar T &= \frac{318}{10}=31{,}8\;^\circ\mathrm{C}\\
+\bar Y &= \frac{20}{10}=2\text{ atendimentos/turno}
+\end{aligned}
+$$
+
+**Passo 3 — somas de quadrados e de produtos centrados:**
+
+$$
+\begin{aligned}
+S_{TT}&=\sum T_i^2-\frac{(\sum T_i)^2}{n}\\
+&=10\,184-\frac{318^2}{10}=71{,}6\\[5pt]
+S_{YY}&=46-\frac{20^2}{10}=6\\[5pt]
+S_{TY}&=636-\frac{318\times20}{10}=0
+\end{aligned}
+$$
+
+**Passo 4 — substituição na fórmula de Pearson:**
+
+$$
+\begin{aligned}
+r&=\frac{S_{TY}}{\sqrt{S_{TT}S_{YY}}}\\
+ &=\frac{0}{\sqrt{71{,}6\times6}}=\boxed{0}
+\end{aligned}
+$$
+
+**Passo 5 — teste bilateral da hipótese \(H_0\!:\rho=0\):** com \(n-2=8\) graus de liberdade, a estatística é \(t=r\sqrt{(n-2)/(1-r^2)}=0\). Logo, o valor-*p* bilateral é **1,000**. Não rejeitar \(H_0\) é diferente de provar que a exposição ao calor não produz efeitos.
+
+Resultado: **\(r = `r fmt(unname(teste_pearson$estimate), 3)`\)** e **\(p = `r fmt(teste_pearson$p.value, 3)`\)**. Não há correlação linear observada nesses dez turnos. Um valor-*p* alto não prova equivalência e não atesta ausência de risco.
+
+
+### Código R e conferência — Pearson
+
+O código reconstrói as três somas centradas e compara o coeficiente manual com `cor.test()`. A correspondência é verificada automaticamente.
+
+```{r codigo-pearson-conferencia, echo=TRUE}
+desvio_T <- dados$temperatura - mean(dados$temperatura)
+desvio_Y <- dados$atendimentos - mean(dados$atendimentos)
+S_TT <- sum(desvio_T^2)
+S_YY <- sum(desvio_Y^2)
+S_TY <- sum(desvio_T * desvio_Y)
+r_manual <- S_TY / sqrt(S_TT * S_YY)
+teste_pearson_ref <- cor.test(dados$temperatura, dados$atendimentos,
+                             method = "pearson")
+stopifnot(isTRUE(all.equal(r_manual,
+          unname(teste_pearson_ref$estimate), tolerance = 1e-10)))
+knitr::kable(data.frame(
+  etapa = c("S_TT", "S_YY", "S_TY", "Pearson manual", "Pearson cor.test", "Valor-p"),
+  valor = c(S_TT, S_YY, S_TY, r_manual,
+            unname(teste_pearson_ref$estimate), teste_pearson_ref$p.value)),
+  digits = 6, caption = "Conferência independente do coeficiente de Pearson")
+```
+
+**Interpretação:** a soma dos produtos centrados é zero, mas isso não é um teste de equivalência e não estabelece ausência de risco relacionado ao calor.
+
+## Regressão linear simples: complemento didático
+
+$$
+Y_t = \beta_0 + \beta_1 T_t + \varepsilon_t
+$$
+
+$$
+\widehat Y_t = `r fmt(unname(coef(modelo_lm)["(Intercept)"]), 2)`
++ (`r fmt(coef_inclinacao, 3)`)\,T_t
+$$
+
+
+
+**Memória de cálculo — mínimos quadrados ordinários (MQO).**
+
+**Passo 1 — coeficiente angular (inclinação):**
+
+$$
+\hat\beta_1=\frac{S_{TY}}{S_{TT}}
+=\frac{0}{71{,}6}=\boxed{0}
+$$
+
+**Passo 2 — intercepto e equação ajustada:**
+
+$$
+\begin{aligned}
+\hat\beta_0&=\bar Y-\hat\beta_1\bar T\\
+&=2-0\times31{,}8=2\\
+\widehat Y_i&=2+0\times T_i=\boxed{2}
+\end{aligned}
+$$
+
+**Passo 3 — variância residual e erro-padrão da inclinação:** como a previsão é sempre 2, a soma dos quadrados dos resíduos vale \(\mathrm{SQE}=\sum(Y_i-2)^2=6\). Com dois parâmetros estimados e dez turnos, restam oito graus de liberdade:
+
+$$
+\begin{aligned}
+\hat\sigma^2&=\frac{\mathrm{SQE}}{n-2}
+=\frac{6}{8}=0{,}75\\[4pt]
+EP(\hat\beta_1)&=\sqrt{\frac{\hat\sigma^2}{S_{TT}}}\\
+&=\sqrt{\frac{0{,}75}{71{,}6}}
+\approx0{,}10235
+\end{aligned}
+$$
+
+**Passo 4 — intervalo de confiança de 95%:** o quantil da distribuição \(t\) com 8 graus de liberdade é \(t_{0{,}975;8}\approx2{,}306\).
+
+$$
+\begin{aligned}
+IC_{95\%}(\beta_1)
+&=\hat\beta_1\pm t_{0{,}975;8}EP(\hat\beta_1)\\
+&=0\pm(2{,}306\times0{,}10235)\\
+&=\boxed{[-0{,}236;\;0{,}236]}
+\end{aligned}
+$$
+
+**Interpretação:** o ajuste estimado é horizontal, mas a amplitude do intervalo ainda permite inclinações positivas e negativas. Esses limites dependem das hipóteses usuais da regressão linear e de sua aplicação a uma amostra de apenas dez turnos.
+
+A inclinação estimada é **`r fmt(coef_inclinacao, 3)` atendimentos por grau Celsius**. Seu intervalo de confiança de 95% é **[`r fmt(ic_lm["temperatura", 1], 3)`; `r fmt(ic_lm["temperatura", 2], 3)`]** atendimentos/°C. O intervalo inclui inclinações positivas e negativas de magnitude potencialmente relevante; a amostra é insuficiente para concluir *ausência de efeito*.
+
+
+### Código R e conferência — regressão linear
+
+A reta, o erro-padrão e os limites do intervalo de confiança são reproduzidos a partir das somas manuais. O resultado é cotejado com `lm()` e `confint()`.
+
+```{r codigo-regressao-linear-conferencia, echo=TRUE}
+beta1_manual <- S_TY / S_TT
+beta0_manual <- mean(dados$atendimentos) -
+                beta1_manual * mean(dados$temperatura)
+residuos_manuais <- dados$atendimentos -
+                     (beta0_manual + beta1_manual * dados$temperatura)
+SQE_manual <- sum(residuos_manuais^2)
+variancia_residual <- SQE_manual / (nrow(dados) - 2L)
+erro_padrao_beta1 <- sqrt(variancia_residual / S_TT)
+t_critico <- qt(0.975, df = nrow(dados) - 2L)
+IC_manual_lm <- beta1_manual + c(-1, 1) * t_critico * erro_padrao_beta1
+modelo_lm_ref <- lm(atendimentos ~ temperatura, data = dados)
+stopifnot(isTRUE(all.equal(IC_manual_lm,
+          as.numeric(confint(modelo_lm_ref)["temperatura", ]),
+          tolerance = 1e-8)))
+knitr::kable(data.frame(
+  etapa = c("Intercepto", "Inclinação por °C", "Soma de quadrados residual",
+            "Variância residual", "Erro-padrão da inclinação",
+            "IC95% inferior", "IC95% superior"),
+  valor = c(beta0_manual, beta1_manual, SQE_manual,
+            variancia_residual, erro_padrao_beta1, IC_manual_lm)),
+  digits = 6, caption = "Regressão linear: cálculo manual versus lm()")
+```
+
+## Regressão de Poisson: análise exploratória secundária
+
+Para contagens, Poisson é uma opção usual, mas **não constitui evidência adicional independente** dos mesmos dez registros. O propósito aqui é ilustrar a modelagem da contagem, com pressupostos que não podem ser testados de forma conclusiva nesta amostra:
+
+$$
+Y_t\sim\operatorname{Poisson}(\lambda_t),\qquad
+\log(\lambda_t) = \log(N_t) + \alpha + \beta T_t
+$$
+
+O termo \(\log(N_t)\) ajusta a exposição pelo número de trabalhadores (100 em todos os turnos). A quantidade \(\exp(\beta)\) representa a **razão multiplicativa de taxas** por aumento de 1°C, sob as hipóteses do modelo.
+
+
+
+**Memória de cálculo — modelo de Poisson com exposição.**
+
+**Passo 1 — estrutura da taxa:** para cada turno com \(N_i=100\) trabalhadores, \(Y_i\sim\operatorname{Poisson}(\mu_i)\) e \(\mu_i=100\exp(\alpha+\beta T_i)\). O fator 100 entra como *offset* \(\log(100)\); ele não é um coeficiente livre.
+
+**Passo 2 — obter a estimativa com inclinação nula:** como os dez turnos totalizam 20 atendimentos, a média ajustada constante é \(20/10=2\). Assim:
+
+$$
+\begin{aligned}
+\hat\mu_i&=2\\
+\hat\alpha&=\log\!\left(\frac{2}{100}\right)
+=\log(0{,}02)\approx-3{,}91202\\
+\hat\beta&=0
+\end{aligned}
+$$
+
+**Passo 3 — verificar as equações de escore:** quando \(\hat\mu_i=2\), ambas as somas que definem os coeficientes se anulam:
+
+$$
+\begin{aligned}
+\sum_i(Y_i-\hat\mu_i)&=20-10\times2=0\\
+\sum_i T_i(Y_i-\hat\mu_i)
+ &=636-2\times318=0
+\end{aligned}
+$$
+
+O modelo de Poisson possui função de log-verossimilhança côncava; por isso, essa solução é o máximo sob as hipóteses adotadas.
+
+**Passo 4 — erro-padrão da inclinação:** considerando conjuntamente o intercepto, a informação ajustada para \(\beta\) é \(\sum_i\hat\mu_i(T_i-\bar T)^2=2\times71{,}6=143{,}2\). Portanto:
+
+$$
+\begin{aligned}
+EP(\hat\beta)&=\frac{1}{\sqrt{143{,}2}}
+\approx0{,}08357\\
+IC_{95\%}(\beta)&=0\pm1{,}96\times0{,}08357\\
+&\approx[-0{,}16379;\;0{,}16379].
+\end{aligned}
+$$
+
+**Passo 5 — transformar para a razão de taxas:** a exponencial permite interpretar a variação multiplicativa esperada a cada 1°C adicional.
+
+$$
+\begin{aligned}
+RT&=\exp(\hat\beta)=\exp(0)=\boxed{1{,}000}\\
+IC_{95\%}(RT)&=\left[\exp(-0{,}16379);\;\exp(0{,}16379)\right]\\
+&\approx\boxed{[0{,}849;\;1{,}178]}
+\end{aligned}
+$$
+
+**Passo 6 — avaliar a dispersão observada:** sob Poisson simples, a média condicional e a variância condicional são iguais. Aqui, a média observada é 2 e a variância amostral das contagens é \(6/9\approx0{,}667\). A estatística de Pearson do modelo e a razão de dispersão são:
+
+$$
+\begin{aligned}
+X^2_P&=\sum_{i=1}^{10}\frac{(Y_i-\hat\mu_i)^2}{\hat\mu_i}
+=\frac{6}{2}=3\\[4pt]
+\hat\phi_P&=\frac{X^2_P}{n-2}
+=\frac{3}{8}=\boxed{0{,}375}
+\end{aligned}
+$$
+
+Essa razão **sugere subdispersão** em relação à Poisson simples. Contudo, com somente dez turnos, é um diagnóstico exploratório, não uma demonstração conclusiva de violação do modelo. O intervalo apresentado é do tipo **Wald**, baseado na aproximação normal dos coeficientes e na hipótese de Poisson; portanto, sua cobertura efetiva é incerta neste contexto. Não substituí automaticamente por binomial negativa, normalmente proposta para *sobredispersão*, que não é o padrão observado aqui.
+
+Além disso, os mesmos trabalhadores podem participar de turnos diferentes e os registros não permitem verificar independência. Por essas razões, a Poisson permanece **secundária** e não deve ser utilizada para atestar ausência de risco.
+
+A razão de taxas estimada é **`r fmt(razao_taxas,3)`**, IC95% aproximado **[`r fmt(ic_razao_taxas[1],3)`; `r fmt(ic_razao_taxas[2],3)`]**. O intervalo inclui tanto possíveis diminuições quanto aumentos dos atendimentos; a ausência de tendência pontual não elimina efeitos plausíveis.
+
+
+### Código R e conferência — Poisson e dispersão
+
+O trecho executável obtém a razão de taxas, o intervalo aproximado de Wald e a razão de dispersão. A mesma base e o mesmo *offset* utilizados no script principal são usados aqui.
+
+```{r codigo-poisson-conferencia, echo=TRUE}
+# O cálculo didático pela informação de Fisher é preservado.
+# Para o intervalo efetivamente reportado, usamos a matriz de
+# covariância do próprio glm(), como faz confint.default().
+modelo_poisson_ref <- glm(
+  atendimentos ~ temperatura, data = dados,
+  family = poisson(link = "log"),
+  offset = log(trabalhadores)
+)
+mu_pois <- as.numeric(fitted(modelo_poisson_ref))
+media_T_ponderada <- weighted.mean(dados$temperatura, w = mu_pois)
+informacao_beta <- sum(mu_pois *
+  (dados$temperatura - media_T_ponderada)^2)
+EP_beta_pois_manual <- 1 / sqrt(informacao_beta)
+
+beta_pois <- unname(coef(modelo_poisson_ref)["temperatura"])
+EP_beta_pois <- sqrt(as.numeric(
+  vcov(modelo_poisson_ref)["temperatura", "temperatura"]))
+RT_pois <- exp(beta_pois)
+z_pois <- qnorm(0.975)
+IC_RT_pois <- as.numeric(exp(
+  beta_pois + c(-1, 1) * z_pois * EP_beta_pois))
+IC_RT_pois_ref <- as.numeric(exp(
+  confint.default(modelo_poisson_ref, level = 0.95)["temperatura", ]))
+
+X2_pearson <- sum((dados$atendimentos - mu_pois)^2 / mu_pois)
+phi_pois <- X2_pearson / df.residual(modelo_poisson_ref)
+
+# Comparação na escala numérica, não de atributos de vetores.
+# Uma discordância maior que 1e-6 é um erro material e gera mensagem diagnóstica.
+if (!is.finite(EP_beta_pois_manual) || !is.finite(EP_beta_pois) ||
+    abs(EP_beta_pois_manual - EP_beta_pois) > 1e-6 ||
+    max(abs(IC_RT_pois - IC_RT_pois_ref)) > 1e-6 ||
+    abs(RT_pois - razao_taxas) > 1e-6 ||
+    max(abs(IC_RT_pois - as.numeric(ic_razao_taxas))) > 1e-6 ||
+    abs(phi_pois - dispersao_pearson_poisson) > 1e-6) {
+  stop(sprintf(
+    "Divergência Poisson: EP(manual)=%.10f; EP(glm)=%.10f; diferença IC=%.10g; diferença RT=%.10g; diferença dispersão=%.10g",
+    EP_beta_pois_manual, EP_beta_pois,
+    max(abs(IC_RT_pois - IC_RT_pois_ref)),
+    abs(RT_pois - razao_taxas),
+    abs(phi_pois - dispersao_pearson_poisson)
+  ))
+}
+
+knitr::kable(data.frame(
+  indicador = c("Inclinação (escala log)", "Erro-padrão: informação de Fisher",
+                "Erro-padrão: vcov(glm)", "Razão de taxas",
+                "IC95% RT inferior", "IC95% RT superior",
+                "Qui-quadrado de Pearson", "Graus de liberdade residuais",
+                "Dispersão de Pearson"),
+  valor = c(beta_pois, EP_beta_pois_manual, EP_beta_pois, RT_pois,
+            IC_RT_pois, X2_pearson,
+            df.residual(modelo_poisson_ref), phi_pois)),
+  digits = 6, caption = "Regressão de Poisson: memória de cálculo, intervalo de Wald e diagnóstico")
+```
+
+A dispersão estimada inferior a um é apenas um **indício exploratório de subdispersão**; os intervalos inferenciais do modelo dependem de hipóteses que os dez turnos não permitem verificar integralmente.
+
+## Sensibilidade: exclusão de um turno por vez
+
+A amostra tem apenas dez turnos. Para avaliar se o coeficiente de correlação é muito dependente de alguma observação, recalculamos \(r\) **dez vezes**, cada uma omitindo um turno distinto (*leave-one-out*). Não se trata de dez novas amostras independentes, nem de intervalo de confiança, mas de um diagnóstico descritivo de influência.
+
+```{r sensibilidade-exclusao-turno, echo=TRUE}
+sensibilidade <- data.frame(
+  turno_omitido = dados$turno,
+  temperatura_omitida = dados$temperatura,
+  atendimentos_omitidos = dados$atendimentos,
+  r_sem_turno = vapply(seq_len(nrow(dados)), function(i) {
+    cor(dados$temperatura[-i], dados$atendimentos[-i], method = "pearson")
+  }, numeric(1))
+)
+sensibilidade_exibicao <- sensibilidade
+sensibilidade_exibicao$r_sem_turno <- fmt(sensibilidade$r_sem_turno, 3)
+knitr::kable(
+  sensibilidade_exibicao, format = "html",
+  col.names = c("Turno omitido", "Temperatura (°C)", "Atendimentos", "Pearson sem o turno"),
+  caption = "Sensibilidade de Pearson à retirada de cada um dos dez turnos.",
+  table.attr = 'class="table table-striped table-condensed"'
+)
+```
+
+**Memória de cálculo — exemplo de retirada do turno D20** (temperatura 34°C, um atendimento): a nova amostra tem \(n'=9\), com \(\sum T_i'=284\), \(\sum Y_i'=19\), \(\sum T_iY_i'=602\), \(\sum (T_i')^2=9\,028\) e \(\sum (Y_i')^2=45\). Logo:
+
+$$
+\begin{aligned}
+S'_{TY}&=602-\frac{284\times19}{9}=\frac{22}{9}\approx2{,}4444\\
+S'_{TT}&=9\,028-\frac{284^2}{9}=\frac{644}{9}\approx71{,}5556\\
+S'_{YY}&=45-\frac{19^2}{9}=\frac{44}{9}\approx4{,}8889\\
+r_{(-D20)}&=\frac{S'_{TY}}{\sqrt{S'_{TT}S'_{YY}}}\approx\boxed{0{,}136}
+\end{aligned}
+$$
+
+Os dez coeficientes variam entre **`r fmt(min(sensibilidade$r_sem_turno),3)` e `r fmt(max(sensibilidade$r_sem_turno),3)`**. O sinal muda conforme a observação retirada. Isso recomenda **prudência na interpretação**, mesmo quando as estimativas continuam próximas de zero; não estabelece equivalência nem ausência de risco.
+
+## O que a análise **não** identifica
+
+- **Causalidade:** temperatura e atendimentos não foram randomizados; não há ajuste para umidade, carga física, radiação solar, idade, comorbidades, pausas ou aclimatação.
+- **Risco clínico de calor:** atendimentos são sintomas inespecíficos; não há diagnóstico confirmado de doença relacionada ao calor.
+- **Independência longitudinal:** os mesmos trabalhadores podem participar de vários turnos e reaparecer nos registros.
+- **Precisão e generalização:** são apenas dez turnos selecionados do relatório, com um único registro a 35°C; os dias ausentes não podem ser tratados como observações com zero atendimentos.
+- **Equivalência:** não foi definida margem de equivalência nem realizado teste concebido para demonstrar efeito suficientemente pequeno.
+- **Benefício da mitigação:** o caso não mede quanto a reorganização reduz o risco à saúde.
+
+# Alternativas operacionais e restrição orçamentária
+
+```{r tabela-alternativas}
+alternativas <- data.frame(
+  Alternativa = c("Manter 14h–18h", "Reorganizar equipes, rotas e horários",
+                  "Suspender o turno", "Serviço substituto"),
+  `Custo adicional conhecido` = c("R$ 0 programado", "R$ 32.000", "Não informado", "R$ 45.000"),
+  `Consequência conhecida` = c(
+    "Risco não quantificado; custos de saúde não incluídos",
+    "60% das rotas hoje; 40% amanhã (estimativa)",
+    "Maior parte das rotas sem atendimento hoje",
+    "Exige autorização adicional; possivelmente apenas amanhã"
+  ), check.names = FALSE
+)
+knitr::kable(alternativas, format = "html",
+             table.attr = 'class="table table-striped table-condensed"')
+```
+
+- Autonomia de Marina: **`r fmt_real(teto_orcamento)`**.
+- Desembolso para reorganização: **`r fmt_real(32000)`**.
+- Saldo dentro da autonomia: **`r fmt_real(saldo_reorganizacao)`**.
+- O custo do serviço substituto excede a autonomia em **`r fmt_real(45000 - teto_orcamento)`** e depende de autorização adicional.
+
+**Memória de cálculo — restrição orçamentária:**
+
+$$
+\begin{aligned}
+\text{Saldo de autonomia}&=40\,000-32\,000=\boxed{8\,000\text{ reais}}\\
+\text{Uso da autonomia}&=\frac{32\,000}{40\,000}\times100=\boxed{80\%}\\
+\text{Excedente do substituto}&=45\,000-40\,000=\boxed{5\,000\text{ reais}}
+\end{aligned}
+$$
+
+<div class="nota">Não é possível calcular uma análise custo-benefício ou custo-efetividade clínica confiável: faltam probabilidades de eventos de saúde em cada alternativa, eficácia das medidas e custos/desfechos de saúde. O gráfico de custos contém apenas valores explicitamente informados no caso.</div>
+
+
+## Memória de cálculo 3 — viabilidade financeira em R
+
+O código abaixo reproduz a comparação de custos apresentada no Caso 1. Não há valores inventados para custos de suspensão, nem estimativa de benefício clínico.
+
+```{r codigo-orcamento-conferencia, echo=TRUE}
+teto <- 40000
+custo_reorganizacao <- 32000
+custo_substituto <- 45000
+saldo <- teto - custo_reorganizacao
+percentual_utilizado <- 100 * custo_reorganizacao / teto
+excedente_substituto <- custo_substituto - teto
+stopifnot(saldo == saldo_reorganizacao)
+knitr::kable(data.frame(
+  indicador = c("Limite disponível (R$)", "Reorganização (R$)",
+                "Saldo (R$)", "Limite utilizado (%)",
+                "Excedente do substituto (R$)"),
+  resultado = c(teto, custo_reorganizacao, saldo,
+                percentual_utilizado, excedente_substituto)),
+  digits = 2, caption = "Memória de cálculo financeira")
+```
+
+Os 60% de rotas estimados para o mesmo dia são uma **informação do enunciado**, não uma estimativa estatística produzida pelo código.
+
+# Recomendação e plano de execução
+
+## Decisão recomendada
+
+**Autorizar a reorganização condicionada à avaliação ocupacional imediata.** A motivação é gerencial e preventiva, **não** a alegação de que o modelo estatístico demonstrou uma redução de risco. Preserva-se parte do atendimento à cidade, dentro da competência financeira existente, sem tratar falta de evidência de aumento de atendimentos como prova de segurança.
+
+## Antes das 12h45
+
+1. Reunir imediatamente a responsável por saúde ocupacional e a direção operacional; rever sintomas, ocorrências e controles já existentes.
+2. Avaliar a carga térmica ocupacional de maneira apropriada (por exemplo, IBUTG quando aplicável), intensidade do trabalho, umidade, sol, disponibilidade de sombra, hidratação e pausas; não usar a temperatura máxima isoladamente como critério técnico suficiente.
+3. Definir as rotas essenciais prioritárias — em especial, aquelas com resíduos orgânicos expostos próximos de residências e feiras — e remanejar parte do trabalho para o início da noite, conforme a proposta orçada.
+4. Formalizar supervisão, sinais de alarme, comunicação, resfriamento, acesso a atendimento e **critérios de interrupção**; designar responsáveis pela execução e pelo acompanhamento.
+
+## Durante e depois da operação
+
+Verificar continuamente sintomas, condições térmicas, execução das pausas e segurança. Se a avaliação indicar exposição inadequada mesmo com as medidas propostas, **não iniciar ou interromper as tarefas expostas**, priorizando proteção dos trabalhadores e o reagendamento/arranjo alternativo. Registrar atendimentos e quase-acidentes por trabalhador e exposição, com proteção de dados pessoais.
+
+## O que mudaria a decisão?
+
+A decisão poderia mudar diante de **evidência técnica de exposição insegura**, incapacidade operacional de implementar as pausas e os remanejamentos, agravamento meteorológico, sintomas de alarme, ou nova autorização/solução com maior proteção e cobertura. Poderia também ser revista para ampliar rotas quando medições e avaliação ocupacional sustentassem operação com controles eficazes. Nenhuma dessas possibilidades é quantitativamente demonstrada pela amostra atual.
+
+# Fundamentação da Decisão e Análise Crítica das Alternativas
+
+> A correlação amostral entre temperatura máxima e número de atendimentos é zero, com reta linear horizontal. Isso descreve dez turnos, mas não estabelece que o calor seja seguro. O desfecho é inespecífico, existe somente uma observação a 35°C e não dispomos de medidas adequadas da carga térmica ou de risco individual. Diante da incerteza e dos custos de interromper integralmente a coleta, recomendo reorganizar as rotas por R$ 32 mil, concluir prioritariamente as rotas essenciais estimadas em 60% e condicionar a execução à avaliação e ao monitoramento da saúde ocupacional, com regras claras para suspender atividades expostas se necessário.
+
+**Pergunta para quem propõe manter tudo:** *qual é a evidência de segurança em 35°C, se a base contém um único turno a essa temperatura e não mede a carga térmica ocupacional?*
+
+**Pergunta para quem propõe suspender tudo:** *quais condições medidas justificam a suspensão integral e como serão mitigados os efeitos sanitários de deixar a maioria das rotas sem atendimento?*
+
+# Aprimoramento futuro da base
+
+A coleta de dados deveria incluir, por turno e idealmente por rota: IBUTG (ou método de avaliação tecnicamente apropriado), umidade e radiação, horas de exposição, carga metabólica, pausas realmente executadas, trabalhadores expostos, episódios sintomáticos e diagnósticos confirmados, afastamentos, gravidade e mudanças nos procedimentos. Com dados de exposição adequados, seria possível estimar taxas ajustadas e explorar dependência por trabalhador, sempre observando a adequação de modelo e tamanho amostral.
+
+```{r codigo-futuro, eval=FALSE, echo=TRUE}
+# EXEMPLO CONCEITUAL: não executar sem dados novos e revisão do desenho.
+# futuro <- glm(eventos ~ ibutg + carga_metabolica + pausas + umidade,
+#               offset = log(horas_trabalhador), family = poisson(),
+#               data = base_ampliada)
+```
+
+
+# Fontes, método e reprodutibilidade
+
+- **Fonte primária:** documento fornecido no exercício, *Antes do turno da tarde*, páginas 1–2 (n = 10 turnos, 100 trabalhadores/turno, custos e consequências).
+- **Referência ocupacional:** Fundacentro, *NHO 06 — Avaliação da exposição ocupacional ao calor*, 3ª edição, publicada em 2025: <https://www.gov.br/fundacentro/pt-br/centrais-de-conteudo/biblioteca/nhos>.
+- **Cálculos reproduzidos:** ver seções 4.1–4.4, 5 e o apêndice metodológico, tabela de parcelas e script adicional `verificar_calculos_passo_a_passo.R` (base R, sem pacotes adicionais).
+- **Ferramentas:** R; `ggplot2`, `dplyr`, `patchwork`, `scales`, `knitr` e `rmarkdown`.
+
+```{r reproducibilidade, echo=TRUE}
+sessionInfo()
+```
+
+# Apêndice metodológico — intervalo binomial ilustrativo a 35°C
+
+**Este cálculo foi retirado da análise decisória principal.** Há apenas um turno registrado a 35°C, com **dois atendimentos entre cem trabalhadores**. Não sabemos se esses dois atendimentos correspondem a dois trabalhadores distintos, nem dispomos de diagnóstico causal ou da probabilidade de ocorrência individual. Portanto, o modelo binomial a seguir é **uma demonstração didática sob hipóteses adicionais**, não uma estimativa validada do risco de adoecimento naquela temperatura.
+
+Se, *hipoteticamente*, os dois registros fossem eventos de duas pessoas distintas, cada trabalhador constituísse uma observação independente com a mesma probabilidade \(p\), e houvesse apenas um evento possível por pessoa, poderíamos usar \(X\sim\operatorname{Binomial}(100,p)\). Essas hipóteses **não foram verificadas na base de dados**.
+
+**Passo 1 — proporção de eventos hipoteticamente atribuídos a pessoas distintas:**
+
+$$
+\hat p=\frac{2}{100}=0{,}02=\boxed{2\%}
+$$
+
+**Passo 2 — limites exatos de Clopper–Pearson**, calculados por quantis da distribuição beta, com os parâmetros separados por ponto e vírgula (não vírgula decimal):
+
+$$
+\begin{aligned}
+L&=B^{-1}(0{,}025;\;2;\;99)\approx0{,}002431\\
+U&=B^{-1}(0{,}975;\;3;\;98)\approx0{,}070384
+\end{aligned}
+$$
+
+**Passo 3 — converter em percentuais:** o intervalo ilustrativo é de **0,24% a 7,04%**. No R, os limites podem ser reproduzidos com `qbeta(0.025, 2, 99)` e `qbeta(0.975, 3, 98)`; equivalem ao intervalo de `binom.test(2, 100)`, sob o modelo binomial.
+
+**Limite de interpretação:** sem comprovação das hipóteses, esses percentuais **não descrevem validamente a incidência de adoecimento por calor** e **não devem embasar a decisão operacional**. A observação válida para o caso é apenas: **dois atendimentos registrados no único turno observado a 35°C**.
+
+
+
+
+### Código R — intervalo binomial ilustrativo
+
+O código permite verificar os quantis beta usados na memória de cálculo, sem transformar o exercício condicional em estimativa validada de risco ocupacional.
+
+```{r codigo-binomial-ilustrativo, echo=TRUE}
+limite_inferior <- qbeta(0.025, shape1 = 2, shape2 = 99)
+limite_superior <- qbeta(0.975, shape1 = 3, shape2 = 98)
+ic_exato <- binom.test(2, 100)$conf.int
+stopifnot(isTRUE(all.equal(c(limite_inferior, limite_superior),
+          as.numeric(ic_exato), tolerance = 1e-9)))
+knitr::kable(data.frame(
+  limite = c("Inferior", "Superior"),
+  proporcao = c(limite_inferior, limite_superior),
+  percentual = 100 * c(limite_inferior, limite_superior)),
+  digits = 5, caption = "Clopper–Pearson: exemplo didático sob hipóteses adicionais")
+```
